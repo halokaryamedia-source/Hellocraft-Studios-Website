@@ -179,11 +179,20 @@ Any such feature must be justified by a real current responsibility.
 
 ## Technical architecture
 
-The frontend framework is **SvelteKit**, explicitly selected by the project owner.
+The approved frontend baseline is:
 
-This approval fixes the frontend framework family, not the entire stack. The following remain unresolved and must be decided separately from actual requirements:
+```text
+frontend framework = SvelteKit
+package manager    = Bun
+```
 
-- exact Svelte/SvelteKit package versions;
+SvelteKit is explicitly selected by the project owner as the frontend framework. Bun is explicitly selected as the package/dependency manager, lockfile owner, and normal project command runner.
+
+These approvals do **not** fix the entire stack. In particular, selecting Bun does not mean replacing SvelteKit/Vite with Bun's standalone bundler, requiring Bun-specific server APIs, or automatically choosing Bun's test runner for every testing layer.
+
+The following remain unresolved and must be decided separately from actual requirements:
+
+- exact Svelte/SvelteKit/Bun package versions;
 - rendering strategy per route (prerender/static, SSR, or hybrid);
 - SvelteKit deployment adapter and hosting provider;
 - TypeScript/project-language conventions;
@@ -193,9 +202,10 @@ This approval fixes the frontend framework family, not the entire stack. The fol
 - CMS/content source;
 - database/backend requirements;
 - analytics provider;
-- form provider and delivery model.
+- form provider and delivery model;
+- unit/component/E2E testing boundaries and tooling.
 
-Prefer SvelteKit/Svelte native capabilities before introducing overlapping dependencies. Do not create a generic framework-specialist skill merely because SvelteKit is selected; project-specific skill creation still follows the recurring-responsibility gate.
+Prefer SvelteKit/Svelte native capabilities before introducing overlapping dependencies. Prefer Bun for package installation and project commands according to the approved baseline, while preserving the framework's normal Vite/SvelteKit ownership. Do not create a generic framework/package-manager specialist skill merely because SvelteKit + Bun are selected; project-specific skill creation still follows the recurring-responsibility gate.
 
 ## Evidence / acceptance requirements
 
@@ -229,6 +239,9 @@ performance
 SvelteKit build/type correctness
 → matching Svelte/SvelteKit build/check tooling
 
+Bun dependency/tooling correctness
+→ lockfile + install/run proof using the approved Bun workflow
+
 deployment readiness
 → deployed-target proof, not source/config presence alone
 ```
@@ -239,4 +252,4 @@ Repository presence alone is not proof of visual, browser, deployment, integrati
 
 Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-For the current frontend-planning track, the next high-impact unknowns are the SvelteKit development conventions/tooling baseline, styling approach, rendering boundary, and quality gates. These may be defined independently of the deferred portfolio content as long as they do not invent page structure or public claims.
+For the current frontend-planning track, the next high-impact unknowns are the SvelteKit + Bun development conventions/tooling baseline, styling approach, rendering boundary, asset/media strategy, and quality gates. These may be defined independently of the deferred portfolio content as long as they do not invent page structure or public claims.
