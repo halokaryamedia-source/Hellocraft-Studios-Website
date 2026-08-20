@@ -1,3 +1,9 @@
-# Context7 is development tooling only. Do not store API keys or other secrets here.
+# Agent development tooling only. Do not store API keys, credentials, or machine-specific secrets here.
+
 [mcp_servers.context7]
 url = "https://mcp.context7.com/mcp"
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest", "--no-usage-statistics"]
+startup_timeout_ms = 20_000

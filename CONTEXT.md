@@ -95,13 +95,32 @@ separate backend     = none initially
 database             = none initially
 ```
 
-Bun is currently selected as the package/dependency manager, lockfile owner, and command runner. This does not by itself require Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner for every layer.
+Bun is selected as package/dependency manager, lockfile owner, and normal project command runner. This does not require Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner for every layer.
 
-SvelteKit owns both the frontend application and the initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
+SvelteKit owns both the frontend application and initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
 
 A page with a SvelteKit form action requires server handling, so form routes and static/prerender-only routes must not be conflated.
 
-The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit/Bun/backend architecture.
+## Development validation baseline
+
+The repository uses one project-specific visual specialist plus narrowly scoped support/evidence skills.
+
+```text
+project specialist
+→ web-ui-design-development
+
+support/evidence
+→ context7-documentation-validation
+→ svelte-development-validation
+→ web-accessibility-validation
+→ chrome-devtools-validation
+```
+
+These support skills do not redefine product semantics and do not consume the one-project-specialist-per-task budget.
+
+Context7 supplies current/version-aware external documentation evidence. Svelte validation supplies official Svelte 5/SvelteKit correctness guidance and autofixer workflow. Accessibility validation is grounded in current W3C WCAG 2.2/WAI-ARIA guidance. Chrome DevTools supplies rendered browser, console, network, interaction, and performance evidence.
+
+Context7 and Chrome DevTools are wired as project-scoped Codex development tooling in `.codex/config.toml`; they are not Hellocraft website runtime dependencies.
 
 ## Performance requirement
 
@@ -113,7 +132,7 @@ Treat this as a core architectural constraint:
 - minimal client-side JavaScript/hydration;
 - deliberate image/video/font optimization;
 - native Svelte/SvelteKit/CSS/browser capabilities before heavy dependencies;
-- performance measured in built/deployed output, not assumed from source;
+- performance measured in built/deployed/browser output, not assumed from source;
 - current Core Web Vitals `good` thresholds used as an external performance baseline;
 - project-specific transfer/JavaScript/media budgets defined only after a representative visual prototype exists.
 
@@ -138,7 +157,7 @@ The following are intentionally unresolved:
 - CMS/content-management requirements;
 - SEO/analytics implementation;
 - form/email/storage providers;
-- testing/tooling boundaries;
+- repeatable automated testing boundaries such as Vitest/Playwright;
 - deployment adapter, hosting, and remaining release architecture.
 
 ## Current boundary
@@ -147,7 +166,7 @@ The project owner explicitly deferred project/portfolio inventory and will provi
 
 Do not recover old project names from chat history and automatically treat them as Hellocraft portfolio. Do not design final taxonomy around guessed examples.
 
-Do not add a separate backend, database, CMS, auth system, or admin layer unless an approved product responsibility earns it.
+Do not add a separate backend, database, CMS, auth system, admin layer, test framework, component library, or motion library unless an approved current responsibility earns it.
 
 ## Development readiness
 
@@ -160,7 +179,8 @@ rendering direction        = static/prerender-first
 separate backend           = none initially
 database                   = none initially
 performance constraint     = visual quality + lightweight approved
-frontend skill baseline    = ready
+project visual specialist  = ready
+support validation layers  = Context7 + Svelte + accessibility + Chrome ready
 portfolio evidence         = pending user-supplied list
 content architecture       = not ready
 visual direction           = not ready
@@ -168,6 +188,6 @@ technical architecture     = partial; core full-stack direction approved
 full implementation        = not authorized by current definition
 ```
 
-A bounded content-agnostic technical scaffold may become development-ready after its remaining language/styling/quality/media conventions are approved.
+A bounded content-agnostic technical scaffold may become development-ready after remaining language/styling/quality/media conventions are approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.

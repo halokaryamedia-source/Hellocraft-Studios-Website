@@ -7,15 +7,15 @@ This repository is the current project memory and development authority for the 
 - `Local` is the working/development authority.
 - Current user instruction owns new intent and explicit decisions.
 - `docs/foundation/` owns durable project/product meaning.
-- Current source plus matching proof will own implemented behavior once implementation exists.
+- Current source plus matching proof owns implemented behavior once implementation exists.
 - `docs/knowledge/next-action.md` owns active continuation only.
 - `CONTEXT.md` owns compact stable orientation.
 - Material GitHub execution follows `GITHUB_RULES.md`.
-- External documentation retrieved through Context7 is supporting technical evidence, not project authority.
+- External documentation/tool output is supporting evidence, not project authority.
 
 ## Cross-cutting rule
 
-Use the **smallest sufficient path**. Do not add structure, files, architecture, taxonomies, skills, workflows, or implementation merely because a mature website might have them.
+Use the **smallest sufficient path**. Do not add structure, files, architecture, taxonomies, skills, workflows, dependencies, or implementation merely because a mature website might have them.
 
 Each current responsibility should have one canonical owner. Git history owns ordinary history; do not create `_old`, `_new`, `legacy`, `v2`, backup, or parallel-current owners without a concrete external requirement.
 
@@ -75,6 +75,7 @@ AGENTS.md
 → .agents/skills/development-brief/SKILL.md
 → smallest affected Foundation/source/contract set
 → zero or one already-earned matching project specialist
+→ only the support/evidence skills materially required
 → implementation
 → matching proof
 → STOP
@@ -82,28 +83,76 @@ AGENTS.md
 
 If implementation requires inventing product meaning, return to Project Definition.
 
-### External technical documentation validation
+## Support / evidence routing
 
-Use `.agents/skills/context7-documentation-validation/SKILL.md` whenever a material implementation or recommendation depends on current/version-sensitive external framework, library, package, API, CLI, adapter, provider, or configuration documentation.
+Support skills improve correctness/proof but do not own Hellocraft product semantics and do not consume the one-project-specialist budget.
+
+### External technical documentation — Context7
+
+Use `.agents/skills/context7-documentation-validation/SKILL.md` whenever a material recommendation or implementation depends on current/version-sensitive external framework, library, package, API, CLI, adapter, provider, or configuration documentation.
 
 ```text
-exact external technology + current question
+exact technology + current question
 → current declared/installed version when known
-→ context7-documentation-validation
-→ Context7 MCP current/version-aware docs when available
-→ official primary docs when required by the skill
+→ Context7 current/version-aware docs when available
+→ official primary docs when required
 → current source / package.json / bun.lock
 → implementation
 → matching check/build/runtime proof
 ```
 
-This is a **support/evidence skill**, not a project-specific specialist. It may accompany `development-brief` and the one allowed project specialist because it does not own Hellocraft product/domain semantics.
+Context7 validates how an external technology currently works. It does **not** decide whether Hellocraft should adopt that technology.
 
-Do not let Context7 choose whether Hellocraft needs a dependency, architecture, CMS, backend, provider, or visual approach. It validates how external technology currently works; normal project owners decide whether that technology belongs in Hellocraft.
+If Context7 is unavailable, use current official primary documentation directly and do not claim Context7 evidence.
 
-If Context7 MCP is unavailable, use current official primary documentation directly and do not claim Context7 proof.
+### Svelte / SvelteKit source validation
 
-### Visual frontend Developing
+Use `.agents/skills/svelte-development-validation/SKILL.md` whenever work materially creates, edits, reviews, or diagnoses Svelte/SvelteKit source.
+
+```text
+current Svelte/SvelteKit version
+→ official Svelte guidance + Context7 when version-sensitive
+→ modern Svelte 5/runes implementation
+→ official Svelte autofixer when available for changed .svelte files
+→ project format/lint/svelte-check/build proof as configured
+→ browser proof when behavior requires it
+```
+
+This support skill owns Svelte correctness/validation only. It does not choose visual direction, product architecture, package adoption, hosting, or content.
+
+### Accessibility validation
+
+Use `.agents/skills/web-accessibility-validation/SKILL.md` when a change materially affects semantics, keyboard/focus, forms/errors/status, media alternatives, reflow/zoom, assistive-technology-facing names/roles/values, or reduced-motion behavior.
+
+```text
+native HTML semantics first
+→ applicable WCAG 2.2 / WAI-ARIA APG guidance
+→ source semantic review
+→ keyboard/rendered browser proof
+→ state remaining assistive-technology/human-testing limits honestly
+```
+
+This is not a second visual specialist. `web-ui-design-development` still owns visual accessibility and art direction; this support skill owns semantic/operability accessibility validation.
+
+Do not make formal WCAG/legal claims merely because this support skill was used.
+
+### Browser/runtime validation — Chrome DevTools
+
+Use `.agents/skills/chrome-devtools-validation/SKILL.md` when a claim materially requires a real browser: rendered appearance, responsive layout, console/runtime behavior, network requests, interaction debugging, or performance tracing.
+
+```text
+build/run target
+→ reproduce exact browser state/path
+→ inspect snapshot/screenshot/console/network/performance as applicable
+→ compare against the active acceptance criteria
+→ return evidence to the correct owner
+```
+
+Chrome DevTools MCP is exploratory/runtime proof tooling, not a replacement for future repeatable Playwright CI/E2E tests when such tests are later earned.
+
+Do not expose sensitive browser/account data merely to obtain proof.
+
+## Visual frontend Developing
 
 When a bounded frontend task materially depends on visual hierarchy, reference analysis, composition, typography, responsive behavior, visible interaction states, motion craft, visual accessibility, or rendered visual acceptance:
 
@@ -115,9 +164,30 @@ development-brief
 
 Use the specialist only for the visual/frontend-craft boundary. It does not decide product structure, content, framework, CMS, SEO strategy, backend, or deployment.
 
-Normal frontend engineering that does not need this recurring visual judgment uses `development-brief` alone.
+Normal frontend engineering that does not need recurring visual judgment uses `development-brief` alone.
 
-When visual frontend work also depends on version-sensitive external APIs/configuration, add `context7-documentation-validation` as the support/evidence layer without increasing the project-specialist count.
+Add only the support/evidence layers that the actual task needs. Examples:
+
+```text
+Svelte component work
+→ development-brief + svelte-development-validation
+
+visual Svelte component work
+→ development-brief + web-ui-design-development + svelte-development-validation
+
+interactive accessible visual Svelte component
+→ development-brief + web-ui-design-development
+  + svelte-development-validation
+  + web-accessibility-validation
+
+browser/performance claim
+→ add chrome-devtools-validation for runtime proof
+
+version-sensitive external API/config
+→ add context7-documentation-validation
+```
+
+Support skills may coexist because they validate different evidence layers; do not invoke all of them by habit.
 
 ## Hellocraft-specific definition guards
 
@@ -130,7 +200,7 @@ Current approved facts:
 - Recruitment is important; talent categories currently include builders/level-design talent, developers, and 3D art/modeling/texturing/animation talent. Final role titles are not yet fixed.
 - General visitors include Minecraft players, creators, and community members.
 
-Do **not** silently convert these into a final page structure, service taxonomy, portfolio taxonomy, homepage layout, or technical architecture.
+Do **not** silently convert these into a final page structure, service taxonomy, portfolio taxonomy, homepage layout, or unapproved technical architecture.
 
 ### Explicit deferred boundary
 
@@ -140,7 +210,7 @@ Until that evidence exists:
 
 - do not invent project entries;
 - do not promote old chat/project history into Hellocraft portfolio automatically;
-- do not lock categories such as Marketplace, Server, Brand, Event, or Exhibition as final portfolio taxonomy;
+- do not lock Marketplace / Server / Brand / Event / Exhibition as final portfolio taxonomy merely because those markets exist;
 - do not make `Game Development`, `Level Design`, `3D Art`, or other internal disciplines into top-level services without evidence that this helps the client-facing structure;
 - do not create a Services page by default.
 
@@ -165,16 +235,30 @@ Current project-specific specialist count: **one**.
 
 ```text
 web-ui-design-development
-→ visual frontend design/craft + rendered acceptance only
+→ visual frontend design/craft + rendered visual acceptance only
 ```
 
-The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills plus the `context7-documentation-validation` support/evidence skill.
+Current support/evidence skills:
 
-Per bounded Developing task, use at most **one project-specific specialist**. Support/evidence tooling such as Context7 does not count toward that budget because it does not own project-specific semantics.
+```text
+context7-documentation-validation
+→ current/version-aware external technical documentation
 
-Do not stack Design DNA, Taste, Genjutsu, motion, accessibility, framework, SEO, or other external/project skills on top of `web-ui-design-development`; their useful visual principles have been distilled into the Hellocraft specialist where appropriate.
+svelte-development-validation
+→ Svelte/SvelteKit source correctness + official Svelte tooling
 
-Do not create additional frontend, framework, SEO, CMS, portfolio, testing, security, or delivery specialists merely because those topics exist. Use `.agents/skills/project-skill-planner/SKILL.md` only when another distinct recurring semantic/acceptance boundary is actually proven or genuinely ambiguous.
+web-accessibility-validation
+→ semantic/operability accessibility validation
+
+chrome-devtools-validation
+→ rendered browser/runtime/network/performance evidence
+```
+
+The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills.
+
+Per bounded Developing task, use at most **one project-specific specialist**. Support/evidence skills do not count toward that budget because they do not own Hellocraft-specific product semantics.
+
+Do not create separate project specialists for Svelte, Bun, accessibility, browser testing, performance, Context7, motion, SEO, CMS, or security merely because those topics/tools exist. Re-run `project-skill-planner` only when a genuinely distinct recurring Hellocraft semantic/acceptance responsibility is proven.
 
 ## Completion
 
