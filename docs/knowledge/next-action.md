@@ -4,7 +4,8 @@
 
 ```text
 FOUNDATION_BASELINE_ESTABLISHED
-PORTFOLIO_EVIDENCE_PENDING
+PORTFOLIO_EVIDENCE_DEFERRED
+STUDIO_PROFILE_DEFINITION_NEXT
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
@@ -42,16 +43,31 @@ Do not currently lock:
 
 These may become useful later only if real Hellocraft evidence supports them.
 
-## Deferred by project owner
+## Portfolio evidence — deferred by project owner
 
-Project & Evidence Inventory is intentionally paused. The project owner will provide the authoritative project/portfolio list later.
+Project & Evidence Inventory remains required before final portfolio taxonomy, case-study selection, client/partner proof, and any claims that depend on specific projects.
 
-Do not recover or fill that list from old chats, MIVUBI history, client history, or assumptions.
+The project owner has explicitly chosen to **skip this step temporarily because preparing the authoritative project list is time-consuming**.
+
+Therefore:
+
+- do not block all project-definition work on the missing inventory;
+- do not recover or fill the portfolio list from old chats, MIVUBI history, client history, or assumptions;
+- do not finalize portfolio categories, case studies, clients/partners, or evidence-backed service claims until the supplied inventory exists;
+- return to Project & Evidence Inventory later before those dependent surfaces are finalized.
+
+## Current safe continuation
+
+Definition work that does not require the project inventory may continue.
+
+The next independent responsibility is the **Hellocraft Studio Profile / About definition**: establish the factual company-profile content that should be communicated about the studio, including only project-owner supplied or otherwise authoritative facts such as studio identity, origin/history, location/operating model, team shape, working focus, and any other material company-profile information.
+
+This is content definition, not final webpage copy or page-layout design.
 
 ## Development boundary
 
-Do not begin website implementation yet. Current missing definition can materially change content architecture, design, functionality, and technical choices.
+Do not begin website implementation yet. Current missing definition can still materially change content architecture, design, functionality, and technical choices.
 
 ## Next Step
 
-**When the project owner provides the project/portfolio list, perform Project & Evidence Inventory from that supplied authority only; then derive the portfolio/showcase model and natural content groupings from the evidence instead of inventing categories beforehand.**
+**Define the Hellocraft Studio Profile / About from factual studio information supplied by the project owner. Keep portfolio-dependent claims deferred. After the studio profile is coherent, continue with another independent definition area such as Careers or Contact before returning to portfolio evidence when the project owner is ready.**
