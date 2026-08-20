@@ -7,6 +7,8 @@ FOUNDATION_BASELINE_ESTABLISHED
 PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
 FRONTEND_TECHNICAL_PLANNING_ACTIVE
+WEB_UI_DESIGN_SPECIALIST_READY
+FRONTEND_SKILL_BASELINE_READY
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
@@ -55,6 +57,30 @@ These remain required before their dependent public claims and final page conten
 
 Do not fill either area from old chats, MIVUBI history, client history, or assumptions.
 
+## Frontend skill baseline
+
+The uploaded/frontend reference set has been fully inventoried in `docs/knowledge/frontend-reference-inventory.md`.
+
+A single project-specific visual specialist now owns the recurring visual frontend boundary:
+
+```text
+.agents/skills/web-ui-design-development/SKILL.md
+```
+
+It consolidates the useful parts of the curated reference set and prior skill lineage, including reference-grounded design, Design DNA decomposition, Genjutsu establish-vs-align thinking, Taste anti-generic judgment, motion-design principles, mature design-system research, responsive/accessibility craft, and source-vs-rendered proof discipline.
+
+It intentionally does **not** choose or prescribe a framework, styling library, component kit, animation library, CMS, SEO strategy, backend, or deployment architecture.
+
+Normal frontend engineering uses `development-brief` alone. Visual frontend work uses:
+
+```text
+development-brief
++
+web-ui-design-development
+```
+
+No second project-specific frontend specialist is currently justified.
+
 ## Current safe continuation — Frontend Technical Foundation
 
 The active discussion is frontend engineering. Resolve only technical choices that remain valid even while final content and visual direction are incomplete.
@@ -84,4 +110,4 @@ The repository is not yet ready for full website implementation. A bounded front
 
 ## Next Step
 
-**Choose and approve the smallest frontend stack and rendering model suitable for a visual, content-heavy studio/portfolio website. Then define the minimal content-agnostic project scaffold and quality gates before writing page-specific UI.**
+**Continue frontend technical planning from the now-settled skill baseline. First evaluate the smallest suitable frontend stack/rendering model and the corresponding quality/tooling requirements without committing to page-specific UI or content.**
