@@ -72,10 +72,10 @@ Only after the affected project definition is ready:
 AGENTS.md
 → CONTEXT.md
 → docs/knowledge/next-action.md
-→ .agents/skills/development-brief/SKILL.md
+→ development-brief
 → smallest affected Foundation/source/contract set
-→ zero or one already-earned matching project specialist
-→ only the support/evidence skills materially required
+→ zero or one matching project specialist
+→ only materially required support/evidence skills
 → implementation
 → matching proof
 → STOP
@@ -83,16 +83,76 @@ AGENTS.md
 
 If implementation requires inventing product meaning, return to Project Definition.
 
+## Development conductor and handoff contract
+
+`development-brief` is the conductor for non-trivial implementation. Support skills do not call each other as autonomous owners; the active development brief selects them, consumes their findings, and returns decisions to the correct owner.
+
+Every materially used support/evidence skill should hand back the same compact contract:
+
+```text
+FINDING
+→ what was discovered or validated
+
+AUTHORITY
+→ source/version/runtime evidence supporting it
+
+ACTION
+→ what the active owner should change or preserve
+
+PROOF
+→ cheapest evidence that can falsify the claim
+
+BLOCKER
+→ anything still unproven or unavailable; omit when none
+```
+
+Support output is evidence, not an instruction to broaden scope.
+
+## Authority hierarchy
+
+When evidence conflicts, use the nearest authority for the type of claim.
+
+### Product / architecture authority
+
+```text
+current user instruction
+→ Hellocraft Foundation / approved architecture
+→ current source/contracts
+→ external docs/tool guidance
+→ model judgement last
+```
+
+### External API/config authority
+
+```text
+exact installed/declared version + current source/lockfile
+→ official primary documentation/release notes for that version
+→ Context7-retrieved documentation
+→ secondary examples
+→ model memory last
+```
+
+### Runtime/browser authority
+
+```text
+source intent
+→ check/build proof
+→ actual runtime/browser evidence
+→ deployed-target evidence when production behavior is claimed
+```
+
+If documentation says a pattern is valid but the current project check/build/runtime fails, the implementation is **not accepted**.
+
 ## Support / evidence routing
 
 Support skills improve correctness/proof but do not own Hellocraft product semantics and do not consume the one-project-specialist budget.
 
 ### External technical documentation — Context7
 
-Use `.agents/skills/context7-documentation-validation/SKILL.md` whenever a material recommendation or implementation depends on current/version-sensitive external framework, library, package, API, CLI, adapter, provider, or configuration documentation.
+Use `.agents/skills/context7-documentation-validation/SKILL.md` when a material recommendation or implementation depends on current/version-sensitive external framework, library, package, API, CLI, adapter, provider, or configuration documentation.
 
 ```text
-exact technology + current question
+exact technology + question
 → current declared/installed version when known
 → Context7 current/version-aware docs when available
 → official primary docs when required
@@ -101,9 +161,7 @@ exact technology + current question
 → matching check/build/runtime proof
 ```
 
-Context7 validates how an external technology currently works. It does **not** decide whether Hellocraft should adopt that technology.
-
-If Context7 is unavailable, use current official primary documentation directly and do not claim Context7 evidence.
+Context7 validates how external technology currently works. It does **not** decide whether Hellocraft should adopt that technology.
 
 ### Svelte / SvelteKit source validation
 
@@ -113,28 +171,22 @@ Use `.agents/skills/svelte-development-validation/SKILL.md` whenever work materi
 current Svelte/SvelteKit version
 → official Svelte guidance + Context7 when version-sensitive
 → modern Svelte 5/runes implementation
-→ official Svelte autofixer when available for changed .svelte files
-→ project format/lint/svelte-check/build proof as configured
+→ official Svelte autofixer when available
+→ project format/lint/svelte-check/build proof
 → browser proof when behavior requires it
 ```
 
-This support skill owns Svelte correctness/validation only. It does not choose visual direction, product architecture, package adoption, hosting, or content.
-
 ### Accessibility validation
 
-Use `.agents/skills/web-accessibility-validation/SKILL.md` when a change materially affects semantics, keyboard/focus, forms/errors/status, media alternatives, reflow/zoom, assistive-technology-facing names/roles/values, or reduced-motion behavior.
+Use `.agents/skills/web-accessibility-validation/SKILL.md` when a change materially affects semantics, keyboard/focus, forms/errors/status, media alternatives, reflow/zoom, names/roles/values, or reduced-motion behavior.
 
 ```text
-native HTML semantics first
+native HTML first
 → applicable WCAG 2.2 / WAI-ARIA APG guidance
 → source semantic review
 → keyboard/rendered browser proof
-→ state remaining assistive-technology/human-testing limits honestly
+→ state remaining human/assistive-technology limits honestly
 ```
-
-This is not a second visual specialist. `web-ui-design-development` still owns visual accessibility and art direction; this support skill owns semantic/operability accessibility validation.
-
-Do not make formal WCAG/legal claims merely because this support skill was used.
 
 ### Browser/runtime validation — Chrome DevTools
 
@@ -144,13 +196,55 @@ Use `.agents/skills/chrome-devtools-validation/SKILL.md` when a claim materially
 build/run target
 → reproduce exact browser state/path
 → inspect snapshot/screenshot/console/network/performance as applicable
-→ compare against the active acceptance criteria
-→ return evidence to the correct owner
+→ compare against acceptance criteria
+→ return evidence to the active owner
 ```
 
 Chrome DevTools MCP is exploratory/runtime proof tooling, not a replacement for future repeatable Playwright CI/E2E tests when such tests are later earned.
 
-Do not expose sensitive browser/account data merely to obtain proof.
+## Trigger matrix
+
+Use this matrix as a routing default, not as a reason to invoke tools unnecessarily.
+
+| Work | Context7 | Svelte validation | UI specialist | Accessibility | Chrome DevTools |
+| --- | --- | --- | --- | --- | --- |
+| SvelteKit/tool config | when version-sensitive | yes | no | no | only if runtime-dependent |
+| Svelte component logic | when external/current docs matter | yes | no | if interaction/semantics affected | if runtime proof needed |
+| Visual Svelte component | when external/current docs matter | yes | yes | when applicable | yes for rendered acceptance |
+| Navigation/menu/filter | when external/current docs matter | yes | yes | yes | yes |
+| Form/UI submission | yes when API/config matters | yes | when visual work matters | yes | yes for runtime behavior |
+| Server action/endpoint | yes | yes | no | form-dependent | runtime-dependent |
+| Performance investigation | when API/tool docs matter | maybe | visual-cost decisions only | maybe | yes |
+| Static content-only change | usually no | only if Svelte source changes | if visual hierarchy changes | semantic/media-dependent | optional |
+
+## Stage order
+
+Support skills are not all active at the same time by default.
+
+### During implementation
+
+```text
+Context7
+→ only for external/current documentation
+
+Svelte validation
+→ when Svelte/SvelteKit source is touched
+
+web-ui-design-development
+→ only when visual judgement is material
+```
+
+### During acceptance
+
+```text
+web-accessibility-validation
+→ when semantics/operability/media/forms require it
+
+chrome-devtools-validation
+→ when browser/runtime/network/performance proof is required
+```
+
+A support skill may reveal a blocker, but the active development owner decides the next action.
 
 ## Visual frontend Developing
 
@@ -164,9 +258,7 @@ development-brief
 
 Use the specialist only for the visual/frontend-craft boundary. It does not decide product structure, content, framework, CMS, SEO strategy, backend, or deployment.
 
-Normal frontend engineering that does not need recurring visual judgment uses `development-brief` alone.
-
-Add only the support/evidence layers that the actual task needs. Examples:
+Examples:
 
 ```text
 Svelte component work
@@ -181,13 +273,21 @@ interactive accessible visual Svelte component
   + web-accessibility-validation
 
 browser/performance claim
-→ add chrome-devtools-validation for runtime proof
+→ add chrome-devtools-validation
 
 version-sensitive external API/config
 → add context7-documentation-validation
 ```
 
 Support skills may coexist because they validate different evidence layers; do not invoke all of them by habit.
+
+## Skill ownership boundaries
+
+- `context7-documentation-validation` may say how an API/config currently works; it may not choose the architecture or dependency.
+- `svelte-development-validation` may correct Svelte implementation patterns; it may not choose visual direction or product structure.
+- `web-ui-design-development` may decide visual hierarchy/craft; it may not install dependencies or redefine business behavior by itself.
+- `web-accessibility-validation` may require semantic/keyboard/focus corrections; it may not invent legal claims or redesign the brand without an accessibility reason.
+- `chrome-devtools-validation` may report browser/runtime/network/performance evidence; it may not choose the product or architecture by itself.
 
 ## Hellocraft-specific definition guards
 
@@ -197,7 +297,7 @@ Current approved facts:
 - The website is an official company profile, portfolio, discoverability/client-acquisition surface, and a way for relevant visitors to understand what Hellocraft provides.
 - Primary business audiences include Marketplace publishers/partners, server/platform operators, brands seeking Minecraft experiences, and public/cultural/event clients such as museums, galleries/exhibitions, and festivals.
 - Collaboration audiences include Minecraft creators, publishers, agencies, and production partners.
-- Recruitment is important; talent categories currently include builders/level-design talent, developers, and 3D art/modeling/texturing/animation talent. Final role titles are not yet fixed.
+- Recruitment is important; current talent categories include builders/level-design talent, developers, and 3D art/modeling/texturing/animation talent. Final role titles are not fixed.
 - General visitors include Minecraft players, creators, and community members.
 
 Do **not** silently convert these into a final page structure, service taxonomy, portfolio taxonomy, homepage layout, or unapproved technical architecture.
@@ -242,23 +342,14 @@ Current support/evidence skills:
 
 ```text
 context7-documentation-validation
-→ current/version-aware external technical documentation
-
 svelte-development-validation
-→ Svelte/SvelteKit source correctness + official Svelte tooling
-
 web-accessibility-validation
-→ semantic/operability accessibility validation
-
 chrome-devtools-validation
-→ rendered browser/runtime/network/performance evidence
 ```
-
-The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills.
 
 Per bounded Developing task, use at most **one project-specific specialist**. Support/evidence skills do not count toward that budget because they do not own Hellocraft-specific product semantics.
 
-Do not create separate project specialists for Svelte, Bun, accessibility, browser testing, performance, Context7, motion, SEO, CMS, or security merely because those topics/tools exist. Re-run `project-skill-planner` only when a genuinely distinct recurring Hellocraft semantic/acceptance responsibility is proven.
+Do not create separate project specialists for Svelte, Bun, accessibility, browser testing, performance, Context7, motion, SEO, CMS, or security merely because those topics/tools exist.
 
 ## Completion
 

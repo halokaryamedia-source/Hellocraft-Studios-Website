@@ -17,10 +17,13 @@ CONTEXT7_DOCUMENTATION_VALIDATION_READY
 SVELTE_DEVELOPMENT_VALIDATION_READY
 WEB_ACCESSIBILITY_VALIDATION_READY
 CHROME_DEVTOOLS_VALIDATION_READY
+SUPPORT_SKILL_HANDOFF_CONTRACT_READY
+SUPPORT_SKILL_TRIGGER_MATRIX_READY
+AUTHORITY_PROOF_HIERARCHY_READY
+DRY_RUN_ACCEPTANCE_GATE_DEFINED
 CODEX_CONTEXT7_MCP_WIRED
 CODEX_CHROME_DEVTOOLS_MCP_WIRED
 WEB_UI_DESIGN_SPECIALIST_READY
-FRONTEND_SKILL_BASELINE_READY
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
@@ -30,39 +33,19 @@ NOT DEVELOPMENT READY
 
 Working authority: **`Local`**.
 
-## Completed definition
+## Approved technical baseline
 
-Current approved baseline:
+```text
+full-stack framework = SvelteKit
+package manager      = Bun
+architecture         = static/prerender-first, server-where-needed
+backend boundary     = SvelteKit server functionality when required
+separate backend     = none initially
+database             = none initially
+performance          = strong visual quality + lightweight delivery
+```
 
-- Hellocraft Studios is a **game studio focused on Minecraft**.
-- The website serves company-profile, portfolio, discoverability/client-acquisition, and client-understanding purposes.
-- Primary audiences are Marketplace publishers/partners, server/platform operators, brands seeking Minecraft experiences, and public/cultural/event clients including museums, galleries/exhibitions, and festivals.
-- Collaboration audiences include Minecraft creators, publishers, agencies, and production partners.
-- Recruitment is important; current talent scope includes builders/level-design talent, developers, and 3D art/modeling/texturing/animation talent.
-- General visitors include Minecraft players, creators, and community members.
-- The site must communicate clearly to both Minecraft-native and non-Minecraft-native visitors.
-- Industry studio websites are reference evidence only; Hellocraft must not inherit their claims/taxonomy automatically.
-- **SvelteKit is the approved full-stack website framework.**
-- **Bun is the approved package manager / dependency installer and project command runner.**
-- **Architecture is static/prerender-first and server-where-needed.**
-- **Initial backend uses SvelteKit server capabilities; no separate backend service is justified.**
-- **No database is justified initially.**
-- **Strong visual quality and lightweight/fast delivery are equal product constraints.**
-- **Current/version-sensitive external documentation is validated through Context7/official sources.**
-- **Svelte source work has a dedicated support validation workflow based on official Svelte tooling.**
-- **Accessibility validation is a support responsibility grounded in WCAG 2.2/WAI-ARIA rather than a separate project specialist.**
-- **Chrome DevTools MCP is the browser/runtime/network/performance evidence layer when source/build proof is insufficient.**
-
-## Content definition — deferred by project owner
-
-The project owner has explicitly postponed:
-
-- Project & Evidence Inventory / portfolio content;
-- Studio Profile / About content.
-
-Do not fill either area from old chats, MIVUBI history, client history, or assumptions.
-
-Do not currently lock portfolio/service taxonomy or final navigation merely because common studio sites use them.
+Portfolio/project inventory and Studio/About content remain intentionally deferred by the project owner. Do not recover them from old chats or infer final taxonomy/navigation from reference sites.
 
 ## Skill / tooling baseline
 
@@ -85,34 +68,78 @@ web-ui-design-development
 
 ```text
 context7-documentation-validation
-→ external framework/library/API/config documentation freshness + version evidence
+→ external framework/library/API/config freshness + version evidence
 
 svelte-development-validation
-→ Svelte/SvelteKit source correctness + official Svelte docs/autofixer workflow
+→ Svelte/SvelteKit correctness + official Svelte docs/autofixer workflow
 
 web-accessibility-validation
-→ semantic/keyboard/form/media/reflow/reduced-motion accessibility validation
+→ semantic/keyboard/form/media/reflow/reduced-motion validation
 
 chrome-devtools-validation
 → real browser rendering + console + network + interaction + performance proof
 ```
 
-Support skills do **not** consume the one-project-specialist budget because they do not own Hellocraft-specific product semantics.
+Support skills do not consume the one-project-specialist budget.
 
-Typical routing:
+## Synchronized handoff contract
+
+Every materially used support/evidence layer now returns the same shape:
 
 ```text
-normal engineering
-→ development-brief
-→ add only materially relevant support skills
-
-visual frontend engineering
-→ development-brief
-+ web-ui-design-development
-+ only materially relevant support skills
+FINDING
+AUTHORITY
+ACTION
+PROOF
+BLOCKER (only when something remains unproven)
 ```
 
-Do not create `svelte-expert`, `bun-expert`, `backend-expert`, `accessibility-expert`, `performance-expert`, `context7-expert`, or `browser-testing-expert` project specialists merely because those technical concerns exist.
+`development-brief` is the conductor. Support skills do not autonomously broaden scope or hand control to each other.
+
+## Authority / proof rule
+
+```text
+product / architecture
+→ user instruction → Foundation → current source/contracts
+
+external API / config
+→ installed/declared version → official docs → Context7 → secondary examples
+
+compatibility
+→ source intent → format/lint/svelte-check/build
+
+runtime/browser
+→ build/check → actual browser/runtime → deployed target for production claims
+```
+
+A documented API is not accepted if the current project check/build/runtime fails.
+
+## Trigger routing summary
+
+```text
+SvelteKit/tool config
+→ Context7 when version-sensitive + Svelte validation
+
+Svelte component logic
+→ Svelte validation; add accessibility/browser only when affected
+
+visual Svelte component
+→ UI specialist + Svelte validation; add accessibility as needed; Chrome for rendered acceptance
+
+navigation/menu/filter
+→ UI specialist + Svelte validation + accessibility + Chrome
+
+form/submission
+→ Svelte validation + accessibility + Chrome; Context7 when API/config matters
+
+server action/endpoint
+→ Svelte validation + Context7 when current API/config matters; runtime proof when behavior is claimed
+
+performance investigation
+→ Chrome; Context7 only for current tool/API docs
+```
+
+Do not invoke all support skills by habit.
 
 ## Development-tool wiring
 
@@ -124,97 +151,27 @@ Project-scoped Codex configuration:
 └── Chrome DevTools MCP
 ```
 
-Both are development tooling only and must not become Hellocraft application/runtime dependencies.
+These are agent/development tooling only and must not become application runtime dependencies.
 
-Context7:
+## Remaining technical foundation decisions
 
-```text
-https://mcp.context7.com/mcp
-```
-
-Chrome DevTools:
-
-```text
-npx -y chrome-devtools-mcp@latest --no-usage-statistics
-```
-
-Do not commit API keys, credentials, or machine-specific paths. If a particular Windows Codex installation cannot launch generic `npx`, use the current official Chrome DevTools MCP user/local Windows override rather than hard-coding one machine's paths into shared source.
-
-## Approved full-stack boundary
-
-```text
-SvelteKit
-├── public content routes
-│   └── prerender/static whenever request-time behavior is unnecessary
-│
-├── client interaction
-│   └── hydrate only the interaction actually needed
-│
-└── SvelteKit server
-    ├── form actions when normal form submission needs a server
-    ├── +server endpoints only for real HTTP/API/webhook boundaries
-    ├── validation / anti-abuse / private secrets
-    └── external integrations when later defined
-```
-
-Do not add Express, NestJS, Fastify, another API service, database, CMS, authentication, or admin infrastructure by default.
-
-## Lightweight-performance boundary
-
-The project owner requires a visually strong site that remains lightweight to open and use.
-
-Before adding a dependency/effect:
-
-```text
-real user value
-→ can native Svelte/SvelteKit/CSS/browser capability solve it?
-→ current docs confirm any external API/config actually needed
-→ what JS/media/network/runtime cost is added?
-→ is the result still worth that cost?
-→ measure representative built/browser output
-```
-
-Use current Core Web Vitals `good` thresholds as an external experience baseline. Do not invent permanent JS/image/media budgets until representative Hellocraft visual pages exist.
-
-Chrome DevTools provides exploratory performance/network evidence; a future repeatable Playwright/CI layer is added only after real critical flows earn it.
-
-## Critical corrections retained
-
-Do **not** preinstall merely because common:
-
-- Vitest — add when real reusable logic/component behavior benefits from unit/component tests;
-- Playwright — add when real critical browser flows require repeatable regression proof;
-- component library — add only for a concrete primitive/problem that native implementation should not own;
-- motion library — add only when approved motion exceeds CSS/Svelte/native-browser capabilities;
-- CMS/database/auth — add only when an approved operational workflow earns them;
-- image helper/package — choose after asset/media policy and representative media are known;
-- accessibility scanners — add only when recurring automated accessibility testing is justified.
-
-## Current safe continuation — finish technical foundation
-
-Before page-specific implementation, decide the smallest remaining conventions in this order.
+Before production/page-specific implementation, lock these in order:
 
 ### 1. Language / Svelte convention
-
-Decide:
 
 - TypeScript as project default or not;
 - modern Svelte 5/runes convention for new code;
 - server-only/private-environment ownership.
 
-Use `svelte-development-validation` + current official/Context7 documentation for version-sensitive decisions.
-
 ### 2. Styling / design-token implementation
 
-Decide:
-
 - native scoped Svelte CSS + global CSS/custom properties versus another justified layer;
-- where durable global tokens live;
-- how duplicate style systems are prevented.
+- durable global token ownership;
+- duplicate-style-system prevention.
 
-### 3. Mandatory code-quality gate
+### 3. Mandatory quality gate
 
-Curate the minimum always-on checks, likely:
+Likely baseline:
 
 ```text
 format
@@ -223,36 +180,61 @@ format
 → build
 ```
 
-Validate exact configuration against SvelteKit + Bun before scaffolding.
+Validate exact tooling/config against current SvelteKit + Bun guidance before scaffolding.
 
 ### 4. Asset / media / performance policy
 
-Define:
-
 - image/video/font ownership and folder boundaries;
 - responsive image/crop rules;
-- lazy-loading and poster behavior;
+- lazy-loading/poster behavior;
 - large-media handling;
-- representative performance prototype and measured budget calibration.
+- measured budget calibration after representative content exists.
 
-Use Chrome DevTools once representative rendered media exists.
+## Dry-run gate before page implementation
 
-### 5. Minimal backend contracts
+Once the minimal content-agnostic SvelteKit scaffold exists, run one deliberately small integration slice before building real pages.
 
-Define only server responsibilities actually needed first. Business contact is the likely first candidate; career submission follows only after real fields/file requirements are defined.
+The slice must stay non-product and include only enough to exercise the workflow:
 
-Do not choose database/storage until persistence is actually required.
+```text
+one Svelte component
++ one small interactive control
++ one representative image/media element
++ responsive behavior
+```
 
-### 6. Rendering + deployment boundary
+Run:
 
-Once server/form requirements are known, choose route rendering, adapter, hosting, and required providers. Only then should `website-release-development` be reconsidered.
+```text
+development-brief
+→ Context7 only if docs/config are material
+→ svelte-development-validation
+→ implementation
+→ web-accessibility-validation
+→ format/lint/svelte-check/build
+→ chrome-devtools-validation
+→ overlap/gap review
+```
 
-## Development boundary
+Pass conditions:
 
-The repository is not yet ready for full page implementation.
+- support handoffs are clear and non-duplicative;
+- no support skill takes over product/architecture/visual authority;
+- technical checks/build pass;
+- keyboard/rendered behavior works;
+- no material browser console/network defect is introduced;
+- no new skill is needed merely to complete the dry-run.
 
-A bounded content-agnostic SvelteKit scaffold becomes development-ready after language, styling, mandatory quality gate, and media/performance conventions are approved. Backend/provider/deployment choices only need to be fixed far enough to support the first real server responsibility.
+Do not turn this into a homepage, portfolio, or final visual prototype.
+
+## Backend / release boundary retained
+
+Do not choose database, CMS, auth, storage, hosting, or separate backend until a real product responsibility earns them.
+
+Business contact is the likely first server responsibility; career submission follows only after its actual fields/file/storage needs are defined.
+
+`website-release-development` remains blocked until hosting/deployment and material production integrations are known.
 
 ## Next Step
 
-**Lock the remaining code-level foundation in order: (1) TypeScript + modern Svelte 5 convention, (2) styling/design-token approach, (3) mandatory format/lint/svelte-check/build gate, and (4) media/performance policy. Use the new support validation layers during those decisions. Then create the minimal content-agnostic SvelteKit + Bun scaffold.**
+**Lock the four remaining code-level foundation decisions: (1) TypeScript + modern Svelte 5 convention, (2) styling/design-token approach, (3) mandatory format/lint/svelte-check/build gate, and (4) media/performance policy. Then create the minimal content-agnostic SvelteKit + Bun scaffold and immediately run the defined integration dry-run before any page-specific implementation.**
