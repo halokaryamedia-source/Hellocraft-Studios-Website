@@ -12,6 +12,10 @@ TYPESCRIPT_DEFAULT_APPROVED
 SVELTE5_RUNES_FIRST_APPROVED
 SERVER_PRIVATE_BOUNDARY_APPROVED
 BUN_PACKAGE_MANAGER_APPROVED
+NATIVE_SVELTE_CSS_APPROVED
+CSS_CUSTOM_PROPERTY_TOKENS_APPROVED
+NO_CSS_FRAMEWORK_INITIAL_APPROVED
+LOGO_BRAND_ANCHOR_RECORDED
 STATIC_FIRST_SERVER_WHERE_NEEDED_APPROVED
 NO_SEPARATE_BACKEND_INITIAL_APPROVED
 NO_DATABASE_INITIAL_APPROVED
@@ -27,12 +31,11 @@ DRY_RUN_ACCEPTANCE_GATE_DEFINED
 CODEX_CONTEXT7_MCP_WIRED
 CODEX_CHROME_DEVTOOLS_MCP_WIRED
 WEB_UI_DESIGN_SPECIALIST_READY
-STYLING_BASELINE_NOT_DEFINED
 QUALITY_GATE_NOT_DEFINED
 MEDIA_POLICY_NOT_DEFINED
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
-VISUAL_DIRECTION_NOT_DEFINED
+VISUAL_DIRECTION_CANDIDATE_NOT_FINAL
 TECHNICAL_ARCHITECTURE_PARTIAL
 NOT DEVELOPMENT READY
 ```
@@ -46,6 +49,8 @@ full-stack framework = SvelteKit
 UI/runtime language   = Svelte 5 + TypeScript
 Svelte convention     = modern runes-first for new code
 package manager       = Bun
+styling               = native CSS + Svelte scoped styles
+shared design tokens  = CSS Custom Properties
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -88,6 +93,57 @@ route server behavior
 ```
 
 Client-facing code must not import private/server-only values.
+
+### Styling / design-token boundary — approved
+
+```text
+src/app.css
+→ small application-wide foundation only
+→ minimal reset/base/document defaults
+→ durable semantic CSS custom properties
+
+*.svelte <style>
+→ component-specific appearance
+→ Svelte-scoped by default
+
+CSS custom properties
+→ repeated semantic values
+→ intentional parent/child styling contracts
+```
+
+Initial negative decisions:
+
+```text
+Tailwind / utility framework = no
+SCSS / Sass                  = no
+CSS-in-JS                    = no
+CSS Modules                  = no
+CSS preprocessor             = none initially
+component style framework    = none initially
+```
+
+Do not create a token for every literal value. Shared tokens must represent durable repeated semantic roles; one-off visual values may remain local.
+
+### Logo / brand anchor — recorded
+
+The supplied Hellocraft logo is authoritative visual evidence.
+
+Observed direction:
+
+```text
+palette   → cyan + white + charcoal/black
+form      → rounded star/hand mascot + small star accents
+wordmark  → chunky / irregular / friendly uppercase
+character → playful + energetic + approachable
+```
+
+Current leading thesis for later visual-direction exploration:
+
+> **Playful editorial game studio**
+
+This is not yet final art direction. Do not automatically turn the website into Minecraft pixel/voxel UI, neon/cyberpunk gaming UI, glassmorphism, or repeated star decoration.
+
+Exact production palette values should come from authoritative logo/vector assets when available, not a compressed raster sample.
 
 ## Content boundary retained
 
@@ -179,21 +235,11 @@ Do not invent permanent JS/image/media budgets until representative Hellocraft v
 
 ## Remaining technical foundation decisions
 
-### 1. Styling / design-token implementation — NEXT
+### 1. Mandatory quality gate — NEXT
 
-Decide:
+Curate and lock the minimum always-on development checks.
 
-- native scoped Svelte CSS + global CSS/custom properties versus another justified styling layer;
-- where durable global design tokens live;
-- how component-local styles consume shared tokens;
-- how to prevent duplicate/parallel style systems;
-- whether any CSS preprocessor is actually needed.
-
-Do not choose Tailwind, SCSS, component libraries, or CSS-in-JS merely because they are common.
-
-### 2. Mandatory quality gate
-
-Curate the minimum always-on checks, likely:
+Leading baseline:
 
 ```text
 format
@@ -202,9 +248,18 @@ format
 → build
 ```
 
-Validate exact tooling/config against the approved SvelteKit + Bun baseline before scaffolding.
+Decide:
 
-### 3. Asset / media / performance policy
+- exact Prettier/Svelte formatting integration;
+- exact ESLint/Svelte configuration;
+- package scripts and Bun command convention;
+- whether checks run as separate commands and/or one aggregate command;
+- which failures block completion;
+- what is intentionally not installed yet (Vitest/Playwright remain earned later).
+
+Validate exact tooling/config against current SvelteKit + Bun guidance before scaffolding.
+
+### 2. Asset / media / performance policy
 
 Define:
 
@@ -254,4 +309,4 @@ Business contact is the likely first server responsibility; career submission fo
 
 ## Next Step
 
-**Decide the styling/design-token implementation. The current leading candidate is native Svelte scoped CSS + one global CSS foundation + CSS custom properties for durable shared tokens, with no preprocessor or utility framework unless a concrete requirement proves it is needed. After styling is locked, define the mandatory format/lint/svelte-check/build gate, then the media/performance policy, then create the minimal SvelteKit + Bun scaffold and run the integration dry-run.**
+**Define and lock the mandatory code-quality gate: Prettier formatting, ESLint, `svelte-check`, SvelteKit build, the Bun scripts that run them, and the exact failure/acceptance rule. Keep Vitest/Playwright deferred until real test responsibilities exist. After quality tooling is approved, define the media/performance policy, create the minimal SvelteKit + Bun scaffold, and run the integration dry-run before page-specific UI.**
