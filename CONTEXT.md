@@ -67,6 +67,8 @@ The site should explain Hellocraft concretely without jargon-heavy or inflated a
 
 Industry examples such as Noxcrew, Blockworks, Spark Universe, Blockception, Cyclone, Shapescape, Everbloom Games, Gamemode One, and Oreville Studios were reviewed as references for common studio-site patterns.
 
+The current Mivubi public website is also an internal behavior/content-architecture benchmark, not a technical-stack authority.
+
 Current working lesson:
 
 ```text
@@ -80,31 +82,40 @@ identity
 
 This is a reference pattern, **not an approved final information architecture**.
 
-## Frontend technical baseline
+## Approved technical baseline
 
 The project owner has explicitly selected:
 
 ```text
-frontend framework = SvelteKit
-package manager    = Bun
+full-stack framework = SvelteKit
+package manager      = Bun
+architecture         = static/prerender-first, server-where-needed
+backend boundary     = SvelteKit server functionality when required
+separate backend     = none initially
+database             = none initially
 ```
 
-Bun is currently selected as the package/dependency manager and command runner for the frontend project. This does not by itself require using Bun-specific server APIs, Bun's bundler instead of SvelteKit/Vite, or Bun's test runner for every test layer.
+Bun is currently selected as the package/dependency manager, lockfile owner, and command runner. This does not by itself require Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner for every layer.
 
-These decisions do **not** yet fix:
+SvelteKit owns both the frontend application and the initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
 
-- exact Svelte/SvelteKit/Bun package versions;
-- rendering strategy per route (prerender/static, SSR, or hybrid);
-- deployment adapter or hosting provider;
-- TypeScript/project-language conventions;
-- styling system;
-- component library;
-- animation library;
-- CMS/content source;
-- analytics/form providers;
-- unit/component/E2E test tooling beyond the approved Bun package-management baseline.
+A page with a SvelteKit form action requires server handling, so form routes and static/prerender-only routes must not be conflated.
 
-The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit/Bun architecture.
+The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit/Bun/backend architecture.
+
+## Performance requirement
+
+The project owner explicitly requires a website that is **visually strong but still lightweight and fast to open**.
+
+Treat this as a core architectural constraint:
+
+- static/prerender-first where appropriate;
+- minimal client-side JavaScript/hydration;
+- deliberate image/video/font optimization;
+- native Svelte/SvelteKit/CSS/browser capabilities before heavy dependencies;
+- performance measured in built/deployed output, not assumed from source;
+- current Core Web Vitals `good` thresholds used as an external performance baseline;
+- project-specific transfer/JavaScript/media budgets defined only after a representative visual prototype exists.
 
 ## Deferred decisions
 
@@ -120,9 +131,15 @@ The following are intentionally unresolved:
 - visual direction/design system;
 - business inquiry fields;
 - careers structure and exact job titles;
+- TypeScript/project-language conventions;
+- styling/design-token implementation;
+- exact content source/format;
+- component and animation dependencies;
 - CMS/content-management requirements;
 - SEO/analytics implementation;
-- rendering strategy, deployment adapter, hosting, database, and remaining technical-stack choices beyond SvelteKit + Bun.
+- form/email/storage providers;
+- testing/tooling boundaries;
+- deployment adapter, hosting, and remaining release architecture.
 
 ## Current boundary
 
@@ -130,21 +147,27 @@ The project owner explicitly deferred project/portfolio inventory and will provi
 
 Do not recover old project names from chat history and automatically treat them as Hellocraft portfolio. Do not design final taxonomy around guessed examples.
 
+Do not add a separate backend, database, CMS, auth system, or admin layer unless an approved product responsibility earns it.
+
 ## Development readiness
 
 ```text
 foundation baseline       = established
-frontend framework        = SvelteKit approved
-package manager           = Bun approved
-frontend skill baseline   = ready
-portfolio evidence        = pending user-supplied list
-content architecture      = not ready
-visual direction          = not ready
-functional requirements   = not ready
-technical architecture    = partial; SvelteKit + Bun chosen, remaining decisions open
-full implementation       = not authorized by current definition
+framework                  = SvelteKit approved
+package manager            = Bun approved
+backend model              = SvelteKit server, only where needed
+rendering direction        = static/prerender-first
+separate backend           = none initially
+database                   = none initially
+performance constraint     = visual quality + lightweight approved
+frontend skill baseline    = ready
+portfolio evidence         = pending user-supplied list
+content architecture       = not ready
+visual direction           = not ready
+technical architecture     = partial; core full-stack direction approved
+full implementation        = not authorized by current definition
 ```
 
-A bounded content-agnostic frontend foundation may become development-ready after its remaining technical/tooling decisions are approved.
+A bounded content-agnostic technical scaffold may become development-ready after its remaining language/styling/quality/media conventions are approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.
