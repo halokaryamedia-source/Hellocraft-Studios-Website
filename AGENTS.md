@@ -81,6 +81,20 @@ AGENTS.md
 
 If implementation requires inventing product meaning, return to Project Definition.
 
+### Visual frontend Developing
+
+When a bounded frontend task materially depends on visual hierarchy, reference analysis, composition, typography, responsive behavior, visible interaction states, motion craft, visual accessibility, or rendered visual acceptance:
+
+```text
+development-brief
++
+.agents/skills/web-ui-design-development/SKILL.md
+```
+
+Use the specialist only for the visual/frontend-craft boundary. It does not decide product structure, content, framework, CMS, SEO strategy, backend, or deployment.
+
+Normal frontend engineering that does not need this recurring visual judgment uses `development-brief` alone.
+
 ## Hellocraft-specific definition guards
 
 Current approved facts:
@@ -123,11 +137,18 @@ If no material responsibility is earned, do not create it.
 
 ## Specialist budget
 
-Current project-specific specialist count: **zero**.
+Current project-specific specialist count: **one**.
 
-The repository retains only the generic project-definition, development-brief, and project-skill-planner kernel skills. Do not create website-design, frontend, SEO, CMS, portfolio, testing, or framework specialists just because those topics may later appear.
+```text
+web-ui-design-development
+→ visual frontend design/craft + rendered acceptance only
+```
 
-Use `.agents/skills/project-skill-planner/SKILL.md` only when recurring project-specific semantic judgment is actually proven or genuinely ambiguous.
+The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills.
+
+Per bounded Developing task, use at most **one project-specific specialist**. Do not stack Design DNA, Taste, Genjutsu, motion, accessibility, framework, SEO, or other external/project skills on top of `web-ui-design-development`; their useful visual principles have been distilled into the Hellocraft specialist where appropriate.
+
+Do not create additional frontend, framework, SEO, CMS, portfolio, testing, security, or delivery specialists merely because those topics exist. Use `.agents/skills/project-skill-planner/SKILL.md` only when another distinct recurring semantic/acceptance boundary is actually proven or genuinely ambiguous.
 
 ## Completion
 
