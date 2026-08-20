@@ -8,6 +8,9 @@ PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
 TECHNICAL_FOUNDATION_PLANNING_ACTIVE
 SVELTEKIT_FULLSTACK_APPROVED
+TYPESCRIPT_DEFAULT_APPROVED
+SVELTE5_RUNES_FIRST_APPROVED
+SERVER_PRIVATE_BOUNDARY_APPROVED
 BUN_PACKAGE_MANAGER_APPROVED
 STATIC_FIRST_SERVER_WHERE_NEEDED_APPROVED
 NO_SEPARATE_BACKEND_INITIAL_APPROVED
@@ -24,6 +27,9 @@ DRY_RUN_ACCEPTANCE_GATE_DEFINED
 CODEX_CONTEXT7_MCP_WIRED
 CODEX_CHROME_DEVTOOLS_MCP_WIRED
 WEB_UI_DESIGN_SPECIALIST_READY
+STYLING_BASELINE_NOT_DEFINED
+QUALITY_GATE_NOT_DEFINED
+MEDIA_POLICY_NOT_DEFINED
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
@@ -37,15 +43,57 @@ Working authority: **`Local`**.
 
 ```text
 full-stack framework = SvelteKit
-package manager      = Bun
-architecture         = static/prerender-first, server-where-needed
-backend boundary     = SvelteKit server functionality when required
-separate backend     = none initially
-database             = none initially
-performance          = strong visual quality + lightweight delivery
+UI/runtime language   = Svelte 5 + TypeScript
+Svelte convention     = modern runes-first for new code
+package manager       = Bun
+architecture          = static/prerender-first, server-where-needed
+backend boundary      = SvelteKit server functionality when required
+separate backend      = none initially
+database              = none initially
+performance           = strong visual quality + lightweight delivery
 ```
 
-Portfolio/project inventory and Studio/About content remain intentionally deferred by the project owner. Do not recover them from old chats or infer final taxonomy/navigation from reference sites.
+### Language / Svelte convention — approved
+
+TypeScript is the default project language where TypeScript applies.
+
+For new Svelte source:
+
+```text
+Svelte 5 runes-first
+→ $state only for actual reactive state
+→ $derived for computed values
+→ $effect only for real side effects
+→ $props for component props
+→ modern event attributes / snippets when applicable
+→ legacy Svelte syntax only when current source/version requires it
+```
+
+Exact package versions are owned by the scaffold and `bun.lock` once created rather than guessed in planning documents.
+
+### Server/private boundary — approved
+
+```text
+private build-time env
+→ $env/static/private
+
+private runtime env
+→ $env/dynamic/private
+
+shared server-only modules
+→ $lib/server/** or *.server.*
+
+route server behavior
+→ +page.server.ts / +layout.server.ts / +server.ts as appropriate
+```
+
+Client-facing code must not import private/server-only values.
+
+## Content boundary retained
+
+Portfolio/project inventory and Studio/About content remain intentionally deferred by the project owner.
+
+Do not recover those from old chats or infer final taxonomy/navigation from reference sites.
 
 ## Skill / tooling baseline
 
@@ -64,27 +112,27 @@ web-ui-design-development
 → visual frontend design/craft + rendered visual acceptance
 ```
 
-### Support / evidence skills
+### Support / evidence
 
 ```text
 context7-documentation-validation
-→ external framework/library/API/config freshness + version evidence
+→ external API/config/version evidence
 
 svelte-development-validation
-→ Svelte/SvelteKit correctness + official Svelte docs/autofixer workflow
+→ Svelte/SvelteKit correctness + official Svelte tooling
 
 web-accessibility-validation
-→ semantic/keyboard/form/media/reflow/reduced-motion validation
+→ semantic/keyboard/form/media/reflow accessibility validation
 
 chrome-devtools-validation
-→ real browser rendering + console + network + interaction + performance proof
+→ browser/rendering/console/network/performance proof
 ```
 
 Support skills do not consume the one-project-specialist budget.
 
-## Synchronized handoff contract
+## Synchronized handoff rule
 
-Every materially used support/evidence layer now returns the same shape:
+Every materially used support layer returns:
 
 ```text
 FINDING
@@ -94,9 +142,9 @@ PROOF
 BLOCKER (only when something remains unproven)
 ```
 
-`development-brief` is the conductor. Support skills do not autonomously broaden scope or hand control to each other.
+`development-brief` remains the conductor. Support skills do not autonomously broaden scope or take over architecture/product/visual ownership.
 
-## Authority / proof rule
+## Authority / proof hierarchy
 
 ```text
 product / architecture
@@ -112,66 +160,40 @@ runtime/browser
 → build/check → actual browser/runtime → deployed target for production claims
 ```
 
-A documented API is not accepted if the current project check/build/runtime fails.
+A documented API is not accepted if current project checks or runtime behavior fail.
 
-## Trigger routing summary
+## Lightweight-performance boundary
 
-```text
-SvelteKit/tool config
-→ Context7 when version-sensitive + Svelte validation
-
-Svelte component logic
-→ Svelte validation; add accessibility/browser only when affected
-
-visual Svelte component
-→ UI specialist + Svelte validation; add accessibility as needed; Chrome for rendered acceptance
-
-navigation/menu/filter
-→ UI specialist + Svelte validation + accessibility + Chrome
-
-form/submission
-→ Svelte validation + accessibility + Chrome; Context7 when API/config matters
-
-server action/endpoint
-→ Svelte validation + Context7 when current API/config matters; runtime proof when behavior is claimed
-
-performance investigation
-→ Chrome; Context7 only for current tool/API docs
-```
-
-Do not invoke all support skills by habit.
-
-## Development-tool wiring
-
-Project-scoped Codex configuration:
+Before adding a dependency/effect:
 
 ```text
-.codex/config.toml
-├── Context7 MCP
-└── Chrome DevTools MCP
+real user value
+→ can native Svelte/SvelteKit/CSS/browser capability solve it?
+→ current docs confirm any external API/config actually needed
+→ what JS/media/network/runtime cost is added?
+→ is the result still worth that cost?
+→ measure representative built/browser output
 ```
 
-These are agent/development tooling only and must not become application runtime dependencies.
+Do not invent permanent JS/image/media budgets until representative Hellocraft visual pages exist.
 
 ## Remaining technical foundation decisions
 
-Before production/page-specific implementation, lock these in order:
+### 1. Styling / design-token implementation — NEXT
 
-### 1. Language / Svelte convention
+Decide:
 
-- TypeScript as project default or not;
-- modern Svelte 5/runes convention for new code;
-- server-only/private-environment ownership.
+- native scoped Svelte CSS + global CSS/custom properties versus another justified styling layer;
+- where durable global design tokens live;
+- how component-local styles consume shared tokens;
+- how to prevent duplicate/parallel style systems;
+- whether any CSS preprocessor is actually needed.
 
-### 2. Styling / design-token implementation
+Do not choose Tailwind, SCSS, component libraries, or CSS-in-JS merely because they are common.
 
-- native scoped Svelte CSS + global CSS/custom properties versus another justified layer;
-- durable global token ownership;
-- duplicate-style-system prevention.
+### 2. Mandatory quality gate
 
-### 3. Mandatory quality gate
-
-Likely baseline:
+Curate the minimum always-on checks, likely:
 
 ```text
 format
@@ -180,21 +202,23 @@ format
 → build
 ```
 
-Validate exact tooling/config against current SvelteKit + Bun guidance before scaffolding.
+Validate exact tooling/config against the approved SvelteKit + Bun baseline before scaffolding.
 
-### 4. Asset / media / performance policy
+### 3. Asset / media / performance policy
+
+Define:
 
 - image/video/font ownership and folder boundaries;
 - responsive image/crop rules;
 - lazy-loading/poster behavior;
 - large-media handling;
-- measured budget calibration after representative content exists.
+- representative performance prototype and measured budget calibration.
+
+Use Chrome DevTools once representative rendered media exists.
 
 ## Dry-run gate before page implementation
 
-Once the minimal content-agnostic SvelteKit scaffold exists, run one deliberately small integration slice before building real pages.
-
-The slice must stay non-product and include only enough to exercise the workflow:
+Once the minimal content-agnostic SvelteKit scaffold exists, run one deliberately small non-product integration slice:
 
 ```text
 one Svelte component
@@ -203,7 +227,7 @@ one Svelte component
 + responsive behavior
 ```
 
-Run:
+Run the smallest relevant chain:
 
 ```text
 development-brief
@@ -216,16 +240,9 @@ development-brief
 → overlap/gap review
 ```
 
-Pass conditions:
+Pass only when support handoffs are clear, checks/build pass, keyboard/rendered behavior works, no material console/network defect is introduced, and no new skill is required merely to complete the dry-run.
 
-- support handoffs are clear and non-duplicative;
-- no support skill takes over product/architecture/visual authority;
-- technical checks/build pass;
-- keyboard/rendered behavior works;
-- no material browser console/network defect is introduced;
-- no new skill is needed merely to complete the dry-run.
-
-Do not turn this into a homepage, portfolio, or final visual prototype.
+Do not turn the dry-run into a homepage, portfolio, or final visual prototype.
 
 ## Backend / release boundary retained
 
@@ -237,4 +254,4 @@ Business contact is the likely first server responsibility; career submission fo
 
 ## Next Step
 
-**Lock the four remaining code-level foundation decisions: (1) TypeScript + modern Svelte 5 convention, (2) styling/design-token approach, (3) mandatory format/lint/svelte-check/build gate, and (4) media/performance policy. Then create the minimal content-agnostic SvelteKit + Bun scaffold and immediately run the defined integration dry-run before any page-specific implementation.**
+**Decide the styling/design-token implementation. The current leading candidate is native Svelte scoped CSS + one global CSS foundation + CSS custom properties for durable shared tokens, with no preprocessor or utility framework unless a concrete requirement proves it is needed. After styling is locked, define the mandatory format/lint/svelte-check/build gate, then the media/performance policy, then create the minimal SvelteKit + Bun scaffold and run the integration dry-run.**
