@@ -8,6 +8,7 @@ PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
 FRONTEND_TECHNICAL_PLANNING_ACTIVE
 SVELTEKIT_FRONTEND_APPROVED
+BUN_PACKAGE_MANAGER_APPROVED
 WEB_UI_DESIGN_SPECIALIST_READY
 FRONTEND_SKILL_BASELINE_READY
 SERVICES_TAXONOMY_NOT_DEFINED
@@ -32,6 +33,7 @@ Current approved baseline:
 - The site must communicate clearly to both Minecraft-native and non-Minecraft-native visitors.
 - Industry studio websites are reference evidence only; Hellocraft must not inherit their claims/taxonomy automatically.
 - **SvelteKit is the approved frontend framework.**
+- **Bun is the approved package manager / dependency installer and project command runner.**
 
 ## Corrected planning boundary
 
@@ -71,7 +73,7 @@ A single project-specific visual specialist owns the recurring visual frontend b
 
 It consolidates reference-grounded design, Design DNA decomposition, Genjutsu establish-vs-align thinking, Taste anti-generic judgment, motion-design principles, mature design-system research, responsive/accessibility craft, and source-vs-rendered proof discipline.
 
-It remains intentionally separate from framework architecture. Selecting SvelteKit does not turn the visual specialist into a generic Svelte expert.
+It remains intentionally separate from framework architecture. Selecting SvelteKit and Bun does not turn the visual specialist into a generic Svelte/Bun expert.
 
 Normal frontend engineering uses `development-brief` alone. Visual frontend work uses:
 
@@ -81,13 +83,20 @@ development-brief
 web-ui-design-development
 ```
 
-## Approved frontend framework boundary
+## Approved frontend framework/tooling boundary
 
-**SvelteKit is selected.**
+Approved:
 
-This does not yet decide:
+```text
+framework       = SvelteKit
+package manager = Bun
+```
 
-- exact Svelte/SvelteKit versions;
+Bun is approved for package installation, lockfile ownership, and normal project commands. Do not infer from this that Hellocraft must use Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner where SvelteKit/Vite or another approved test layer is the better owner.
+
+Still undecided:
+
+- exact Svelte/SvelteKit/Bun versions;
 - TypeScript/project-language conventions;
 - rendering strategy (prerender/static, SSR, hybrid);
 - adapter/hosting provider;
@@ -95,33 +104,51 @@ This does not yet decide:
 - UI/component library;
 - animation dependency;
 - CMS;
-- analytics/forms.
+- analytics/forms;
+- test boundaries/tooling.
 
-Those decisions must be curated separately and should use SvelteKit's native capabilities before adding dependencies.
+These decisions must be curated separately and should use SvelteKit/Svelte native capabilities before adding dependencies.
+
+## Mivubi website benchmark — observed, not copied
+
+The current Mivubi public website is a useful internal benchmark for behavior and content architecture, but its exact framework/library source is not available in the connected GitHub repositories and should not be guessed.
+
+Observed public patterns worth considering for Hellocraft:
+
+- a straightforward public route structure with reusable navigation/footer;
+- portfolio and long-form project/editorial content;
+- year/slug-style content routes such as `/blog/<year>/<slug>`;
+- lightweight client-side category/filter interaction such as Goodies categories;
+- Careers as a first-class public surface;
+- media-heavy presentation using direct local asset paths and WebP imagery;
+- content pages that remain crawlable/readable without requiring an app-like dashboard architecture.
+
+Use these as implementation/UX evidence only. Do not import Mivubi's information architecture, copy, project taxonomy, or unverified technology stack into Hellocraft automatically.
 
 ## Current safe continuation — SvelteKit frontend foundation
 
-The next technical work is not page implementation. First curate the smallest SvelteKit development/tooling baseline that will govern future coding.
+The next technical work is not page implementation. First curate the smallest SvelteKit + Bun development/tooling baseline that will govern future coding.
 
 Evaluate:
 
-- Svelte/SvelteKit project conventions that materially prevent recurring errors;
-- whether TypeScript is the project default;
+- Svelte 5 / SvelteKit conventions that materially prevent recurring errors;
+- TypeScript as the likely default language;
+- Bun lockfile/command conventions;
 - formatter/linter/type-checking setup;
 - unit/component/E2E test boundaries;
 - styling and design-token approach;
-- image/video/static-asset handling;
+- image/video/static-asset handling, taking the media-heavy Mivubi benchmark into account;
 - Svelte-native state/component/motion patterns before third-party libraries;
 - accessibility and rendered-browser proof workflow;
 - rendering/prerender strategy only far enough to avoid blocking the scaffold;
 - adapter/hosting only when deployment requirements justify it.
 
-Do **not** create a generic `svelte-expert` skill merely because SvelteKit is selected. Add project-specific Svelte guidance only when it represents recurring Hellocraft development rules that official documentation and source-local ownership cannot cover cleanly.
+Do **not** create a generic `svelte-expert` or `bun-expert` skill merely because these technologies are selected. Add project-specific guidance only when it represents recurring Hellocraft development rules that official documentation and source-local ownership cannot cover cleanly.
 
 ## Development boundary
 
-The repository is still not ready for full website implementation. A bounded content-agnostic SvelteKit foundation can become development-ready after the remaining tooling/convention decisions are approved.
+The repository is still not ready for full website implementation. A bounded content-agnostic SvelteKit + Bun foundation can become development-ready after the remaining tooling/convention decisions are approved.
 
 ## Next Step
 
-**Curate the SvelteKit-specific development baseline and determine what should live in project routing/source rules versus what, if anything, deserves a reusable SvelteKit-oriented skill or helper workflow. Do this before scaffolding page-specific UI.**
+**Use the Mivubi site as a behavior/content-architecture benchmark while curating the SvelteKit + Bun development baseline. Decide TypeScript, code-quality tooling, testing boundary, styling approach, and asset/media strategy before scaffolding page-specific UI.**
