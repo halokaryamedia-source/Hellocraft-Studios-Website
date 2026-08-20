@@ -112,6 +112,7 @@ Svelte convention     = modern runes-first for new code
 package manager       = Bun
 styling               = native CSS + Svelte scoped styles
 shared design tokens  = CSS Custom Properties
+quality gate          = Prettier + ESLint + svelte-check + SvelteKit/Vite build
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -123,6 +124,8 @@ Bun is selected as package/dependency manager, lockfile owner, and normal projec
 TypeScript is the default project language where TypeScript applies. New Svelte source should use current Svelte 5 runes-mode patterns instead of legacy syntax. Exact package versions are owned by the scaffold and lockfile once created rather than guessed in planning documents.
 
 Styling uses one deliberately small global CSS foundation plus Svelte component-scoped CSS. Durable repeated semantic values use CSS Custom Properties. Tailwind, SCSS/Sass, CSS-in-JS, CSS Modules, and a CSS preprocessor are not part of the initial baseline; they may be reconsidered only if real implementation needs prove native Svelte/CSS ownership insufficient.
+
+The mandatory quality gate is `bun run validate`, which must run non-mutating `format:check`, ESLint, `svelte-check`, and the SvelteKit/Vite build. `format` may rewrite source as a developer convenience but is not acceptance proof. Vitest and Playwright remain deferred until real unit/component or critical browser-flow responsibilities earn them.
 
 SvelteKit owns both the frontend application and initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
 
@@ -184,7 +187,7 @@ The following are intentionally unresolved:
 - CMS/content-management requirements;
 - SEO/analytics implementation;
 - form/email/storage providers;
-- repeatable automated testing boundaries such as Vitest/Playwright;
+- repeatable automated testing beyond the mandatory quality gate, such as Vitest/Playwright;
 - deployment adapter, hosting, and remaining release architecture.
 
 ## Current boundary
@@ -205,6 +208,7 @@ Svelte convention          = Svelte 5 runes-first approved
 package manager            = Bun approved
 styling                    = native Svelte/CSS baseline approved
 design-token mechanism     = CSS Custom Properties approved
+quality gate               = Prettier + ESLint + svelte-check + build approved
 server/private boundary    = SvelteKit protected server modules approved
 backend model              = SvelteKit server, only where needed
 rendering direction        = static/prerender-first
@@ -217,10 +221,10 @@ support validation layers  = Context7 + Svelte + accessibility + Chrome ready
 portfolio evidence         = pending user-supplied list
 content architecture       = not ready
 visual direction           = candidate exists; not final
-technical architecture     = partial; language + styling baseline approved
+technical architecture     = partial; language + styling + quality baseline approved
 full implementation        = not authorized by current definition
 ```
 
-A bounded content-agnostic technical scaffold may become development-ready after remaining quality/media conventions are approved.
+A bounded content-agnostic technical scaffold may become development-ready after the remaining asset/media/performance convention is approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.

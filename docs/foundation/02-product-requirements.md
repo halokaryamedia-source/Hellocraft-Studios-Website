@@ -228,6 +228,7 @@ Svelte convention     = modern runes-first for new code
 package manager       = Bun
 styling               = native CSS + Svelte scoped styles
 shared design tokens  = CSS Custom Properties
+quality gate          = Prettier + ESLint + svelte-check + SvelteKit/Vite build
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -291,6 +292,60 @@ component style framework    = none initially
 ```
 
 These are not permanent ideological bans. Reconsider only if real source/workflow needs demonstrate that native Svelte/CSS ownership is insufficient and the added layer has a measurable maintenance/quality benefit.
+
+### Mandatory code-quality gate
+
+Use the official Svelte ecosystem integrations for Prettier and ESLint when the scaffold is created, including their Svelte-aware configuration. Inspect the generated current configuration rather than hand-writing legacy config from memory.
+
+The project command contract is:
+
+```text
+format
+→ Prettier write convenience
+→ may mutate source
+→ not an acceptance gate
+
+format:check
+→ Prettier non-mutating format validation
+
+lint
+→ ESLint non-mutating static-rule validation
+
+check
+→ svelte-kit sync + svelte-check using the project tsconfig
+
+build
+→ SvelteKit/Vite production build
+
+validate
+→ format:check → lint → check → build
+```
+
+Expected package scripts once the scaffold exists:
+
+```json
+{
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "build": "vite build",
+    "validate": "bun run format:check && bun run lint && bun run check && bun run build"
+  }
+}
+```
+
+Acceptance rules:
+
+- `bun run validate` is the mandatory technical gate once the scaffold exists;
+- `format:check`, `lint`, `check`, and `build` must all pass; any failure blocks technical completion;
+- the acceptance gate must not use `prettier --write`, ESLint `--fix`, or another source-mutating fixer merely to manufacture a pass;
+- `format` and `check:watch` are developer convenience commands, not completion proof;
+- exact package versions are locked by the actual scaffold and `bun.lock`, not hardcoded in Foundation;
+- the official Svelte autofixer remains supplemental Svelte review evidence and does not replace `validate`;
+- Vitest and Playwright are not part of the initial mandatory gate. Add them only when real reusable logic or critical browser flows earn those testing responsibilities.
 
 ### Server-only / private environment ownership
 
@@ -358,7 +413,7 @@ These approvals do **not** fix the entire stack. In particular, selecting Bun do
 
 The following remain unresolved and must be decided separately from actual requirements:
 
-- exact Svelte/SvelteKit/Bun/TypeScript package versions until the scaffold is created;
+- exact Svelte/SvelteKit/Bun/TypeScript/quality-tool package versions until the scaffold is created;
 - SvelteKit deployment adapter and hosting provider;
 - final visual direction and exact design-token values;
 - component/UI libraries if a real need later earns one;
@@ -366,7 +421,7 @@ The following remain unresolved and must be decided separately from actual requi
 - exact content source/format;
 - analytics provider;
 - form/email/storage providers;
-- unit/component/E2E testing boundaries and tooling;
+- unit/component/E2E testing layers beyond the approved mandatory quality gate;
 - route-specific rendering choices beyond the approved static-first rule.
 
 Prefer SvelteKit/Svelte/native CSS/browser capabilities before introducing overlapping dependencies. Prefer Bun for package installation and project commands according to the approved baseline, while preserving the framework's normal Vite/SvelteKit ownership. Do not create a generic framework/package-manager/backend specialist skill merely because SvelteKit + Bun are selected; project-specific skill creation still follows the recurring-responsibility gate.
@@ -406,6 +461,9 @@ SvelteKit build/type correctness
 Bun dependency/tooling correctness
 → lockfile + install/run proof using the approved Bun workflow
 
+mandatory technical quality
+→ `bun run validate` with format:check + lint + svelte-check + build all passing
+
 server/backend correctness
 → matching server/form/API execution proof; source presence alone is insufficient
 
@@ -419,4 +477,4 @@ Repository presence alone is not proof of visual, browser, deployment, integrati
 
 Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-For the current technical-foundation track, TypeScript + modern Svelte 5 conventions and the native CSS/design-token ownership model are now approved. The next high-impact unknowns are mandatory quality tooling, asset/media handling, final visual direction/token values, and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
+For the current technical-foundation track, TypeScript + modern Svelte 5 conventions, native CSS/design-token ownership, and the mandatory quality gate are approved. The next high-impact unknown is the asset/media/performance policy, followed by final visual-direction/token values and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
