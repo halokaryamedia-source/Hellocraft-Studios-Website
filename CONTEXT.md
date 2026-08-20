@@ -82,6 +82,25 @@ identity
 
 This is a reference pattern, **not an approved final information architecture**.
 
+## Brand / visual anchor
+
+The project owner supplied the current Hellocraft logo as authoritative brand evidence.
+
+Observed characteristics:
+
+```text
+palette      → bright cyan + white + charcoal/black
+symbol       → rounded star with hand motif + two small star accents
+wordmark     → chunky, irregular, friendly uppercase lettering
+character    → playful, energetic, approachable
+```
+
+The current leading visual thesis to explore later is **playful editorial game studio**: enough personality to match the logo, but structured/media-led enough for professional client credibility.
+
+This is not yet a final art-direction approval. Do not automatically turn the site into pixel/voxel Minecraft UI, neon/cyberpunk gaming UI, glassmorphism, or a literal repetition of the logo shapes.
+
+Exact production brand color values should come from authoritative logo/vector assets when available, not permanently from a compressed raster sample.
+
 ## Approved technical baseline
 
 The project owner has explicitly selected:
@@ -91,6 +110,8 @@ full-stack framework = SvelteKit
 UI/runtime language   = Svelte 5 + TypeScript
 Svelte convention     = modern runes-first for new code
 package manager       = Bun
+styling               = native CSS + Svelte scoped styles
+shared design tokens  = CSS Custom Properties
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -100,6 +121,8 @@ database              = none initially
 Bun is selected as package/dependency manager, lockfile owner, and normal project command runner. This does not require Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner for every layer.
 
 TypeScript is the default project language where TypeScript applies. New Svelte source should use current Svelte 5 runes-mode patterns instead of legacy syntax. Exact package versions are owned by the scaffold and lockfile once created rather than guessed in planning documents.
+
+Styling uses one deliberately small global CSS foundation plus Svelte component-scoped CSS. Durable repeated semantic values use CSS Custom Properties. Tailwind, SCSS/Sass, CSS-in-JS, CSS Modules, and a CSS preprocessor are not part of the initial baseline; they may be reconsidered only if real implementation needs prove native Svelte/CSS ownership insufficient.
 
 SvelteKit owns both the frontend application and initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
 
@@ -153,12 +176,11 @@ The following are intentionally unresolved:
 - final information architecture and navigation;
 - homepage section order;
 - final marketing copy/tagline;
-- visual direction/design system;
+- final visual direction and exact design-token values;
 - business inquiry fields;
 - careers structure and exact job titles;
-- styling/design-token implementation;
 - exact content source/format;
-- component and animation dependencies;
+- component and animation dependencies if later required;
 - CMS/content-management requirements;
 - SEO/analytics implementation;
 - form/email/storage providers;
@@ -171,7 +193,7 @@ The project owner explicitly deferred project/portfolio inventory and will provi
 
 Do not recover old project names from chat history and automatically treat them as Hellocraft portfolio. Do not design final taxonomy around guessed examples.
 
-Do not add a separate backend, database, CMS, auth system, admin layer, test framework, component library, or motion library unless an approved current responsibility earns it.
+Do not add a separate backend, database, CMS, auth system, admin layer, test framework, component library, motion library, CSS framework, or preprocessor unless an approved current responsibility earns it.
 
 ## Development readiness
 
@@ -181,21 +203,24 @@ framework                  = SvelteKit approved
 language                   = TypeScript approved
 Svelte convention          = Svelte 5 runes-first approved
 package manager            = Bun approved
+styling                    = native Svelte/CSS baseline approved
+design-token mechanism     = CSS Custom Properties approved
 server/private boundary    = SvelteKit protected server modules approved
 backend model              = SvelteKit server, only where needed
 rendering direction        = static/prerender-first
 separate backend           = none initially
 database                   = none initially
 performance constraint     = visual quality + lightweight approved
+brand logo anchor          = supplied / recorded
 project visual specialist  = ready
 support validation layers  = Context7 + Svelte + accessibility + Chrome ready
 portfolio evidence         = pending user-supplied list
 content architecture       = not ready
-visual direction           = not ready
-technical architecture     = partial; language/runtime baseline now approved
+visual direction           = candidate exists; not final
+technical architecture     = partial; language + styling baseline approved
 full implementation        = not authorized by current definition
 ```
 
-A bounded content-agnostic technical scaffold may become development-ready after remaining styling/quality/media conventions are approved.
+A bounded content-agnostic technical scaffold may become development-ready after remaining quality/media conventions are approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.
