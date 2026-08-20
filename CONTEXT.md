@@ -88,16 +88,22 @@ The project owner has explicitly selected:
 
 ```text
 full-stack framework = SvelteKit
-package manager      = Bun
-architecture         = static/prerender-first, server-where-needed
-backend boundary     = SvelteKit server functionality when required
-separate backend     = none initially
-database             = none initially
+UI/runtime language   = Svelte 5 + TypeScript
+Svelte convention     = modern runes-first for new code
+package manager       = Bun
+architecture          = static/prerender-first, server-where-needed
+backend boundary      = SvelteKit server functionality when required
+separate backend      = none initially
+database              = none initially
 ```
 
 Bun is selected as package/dependency manager, lockfile owner, and normal project command runner. This does not require Bun-specific server APIs, Bun's standalone bundler, or Bun's test runner for every layer.
 
+TypeScript is the default project language where TypeScript applies. New Svelte source should use current Svelte 5 runes-mode patterns instead of legacy syntax. Exact package versions are owned by the scaffold and lockfile once created rather than guessed in planning documents.
+
 SvelteKit owns both the frontend application and initial server/backend boundary. Public content should remain static/prerendered where possible; server behavior is added only for real responsibilities such as form submission, validation, abuse protection, private secrets, or external integrations.
+
+Private environment values and server-only utilities must remain inside SvelteKit-protected server boundaries such as `$env/*/private`, `$lib/server`, `.server.*`, and route server modules. Client-facing code must not import private/server-only values.
 
 A page with a SvelteKit form action requires server handling, so form routes and static/prerender-only routes must not be conflated.
 
@@ -150,7 +156,6 @@ The following are intentionally unresolved:
 - visual direction/design system;
 - business inquiry fields;
 - careers structure and exact job titles;
-- TypeScript/project-language conventions;
 - styling/design-token implementation;
 - exact content source/format;
 - component and animation dependencies;
@@ -173,7 +178,10 @@ Do not add a separate backend, database, CMS, auth system, admin layer, test fra
 ```text
 foundation baseline       = established
 framework                  = SvelteKit approved
+language                   = TypeScript approved
+Svelte convention          = Svelte 5 runes-first approved
 package manager            = Bun approved
+server/private boundary    = SvelteKit protected server modules approved
 backend model              = SvelteKit server, only where needed
 rendering direction        = static/prerender-first
 separate backend           = none initially
@@ -184,10 +192,10 @@ support validation layers  = Context7 + Svelte + accessibility + Chrome ready
 portfolio evidence         = pending user-supplied list
 content architecture       = not ready
 visual direction           = not ready
-technical architecture     = partial; core full-stack direction approved
+technical architecture     = partial; language/runtime baseline now approved
 full implementation        = not authorized by current definition
 ```
 
-A bounded content-agnostic technical scaffold may become development-ready after remaining language/styling/quality/media conventions are approved.
+A bounded content-agnostic technical scaffold may become development-ready after remaining styling/quality/media conventions are approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.
