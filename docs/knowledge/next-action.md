@@ -7,12 +7,13 @@ FOUNDATION_BASELINE_ESTABLISHED
 PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
 FRONTEND_TECHNICAL_PLANNING_ACTIVE
+SVELTEKIT_FRONTEND_APPROVED
 WEB_UI_DESIGN_SPECIALIST_READY
 FRONTEND_SKILL_BASELINE_READY
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
-TECHNICAL_ARCHITECTURE_NOT_FINAL
+TECHNICAL_ARCHITECTURE_PARTIAL
 NOT DEVELOPMENT READY
 ```
 
@@ -30,6 +31,7 @@ Current approved baseline:
 - General visitors include Minecraft players, creators, and community members.
 - The site must communicate clearly to both Minecraft-native and non-Minecraft-native visitors.
 - Industry studio websites are reference evidence only; Hellocraft must not inherit their claims/taxonomy automatically.
+- **SvelteKit is the approved frontend framework.**
 
 ## Corrected planning boundary
 
@@ -61,15 +63,15 @@ Do not fill either area from old chats, MIVUBI history, client history, or assum
 
 The uploaded/frontend reference set has been fully inventoried in `docs/knowledge/frontend-reference-inventory.md`.
 
-A single project-specific visual specialist now owns the recurring visual frontend boundary:
+A single project-specific visual specialist owns the recurring visual frontend boundary:
 
 ```text
 .agents/skills/web-ui-design-development/SKILL.md
 ```
 
-It consolidates the useful parts of the curated reference set and prior skill lineage, including reference-grounded design, Design DNA decomposition, Genjutsu establish-vs-align thinking, Taste anti-generic judgment, motion-design principles, mature design-system research, responsive/accessibility craft, and source-vs-rendered proof discipline.
+It consolidates reference-grounded design, Design DNA decomposition, Genjutsu establish-vs-align thinking, Taste anti-generic judgment, motion-design principles, mature design-system research, responsive/accessibility craft, and source-vs-rendered proof discipline.
 
-It intentionally does **not** choose or prescribe a framework, styling library, component kit, animation library, CMS, SEO strategy, backend, or deployment architecture.
+It remains intentionally separate from framework architecture. Selecting SvelteKit does not turn the visual specialist into a generic Svelte expert.
 
 Normal frontend engineering uses `development-brief` alone. Visual frontend work uses:
 
@@ -79,35 +81,47 @@ development-brief
 web-ui-design-development
 ```
 
-No second project-specific frontend specialist is currently justified.
+## Approved frontend framework boundary
 
-## Current safe continuation — Frontend Technical Foundation
+**SvelteKit is selected.**
 
-The active discussion is frontend engineering. Resolve only technical choices that remain valid even while final content and visual direction are incomplete.
+This does not yet decide:
 
-Current planning subjects may include:
+- exact Svelte/SvelteKit versions;
+- TypeScript/project-language conventions;
+- rendering strategy (prerender/static, SSR, hybrid);
+- adapter/hosting provider;
+- styling system;
+- UI/component library;
+- animation dependency;
+- CMS;
+- analytics/forms.
 
-- frontend framework and rendering model;
-- TypeScript / project conventions;
-- styling strategy and design-token foundation;
-- component and layout architecture;
-- responsive implementation rules;
+Those decisions must be curated separately and should use SvelteKit's native capabilities before adding dependencies.
+
+## Current safe continuation — SvelteKit frontend foundation
+
+The next technical work is not page implementation. First curate the smallest SvelteKit development/tooling baseline that will govern future coding.
+
+Evaluate:
+
+- Svelte/SvelteKit project conventions that materially prevent recurring errors;
+- whether TypeScript is the project default;
+- formatter/linter/type-checking setup;
+- unit/component/E2E test boundaries;
+- styling and design-token approach;
 - image/video/static-asset handling;
-- motion/interaction integration boundary;
-- accessibility baseline;
-- SEO/metadata technical baseline where independent of final copy;
-- separation between content data and presentation;
-- testing/lint/build quality gates;
-- deployment-neutral build requirements.
+- Svelte-native state/component/motion patterns before third-party libraries;
+- accessibility and rendered-browser proof workflow;
+- rendering/prerender strategy only far enough to avoid blocking the scaffold;
+- adapter/hosting only when deployment requirements justify it.
 
-Do **not** use frontend planning as permission to invent final page taxonomy, homepage composition, portfolio data, About copy, service categories, brand visual direction, CMS need, backend/database, or hosting provider.
-
-A minimal frontend scaffold may begin only after the framework/tooling choice is explicitly accepted. Initial implementation should be content-agnostic and avoid locking undefined page structure.
+Do **not** create a generic `svelte-expert` skill merely because SvelteKit is selected. Add project-specific Svelte guidance only when it represents recurring Hellocraft development rules that official documentation and source-local ownership cannot cover cleanly.
 
 ## Development boundary
 
-The repository is not yet ready for full website implementation. A bounded frontend foundation can become development-ready after its technical decisions are approved because that foundation can be kept independent from deferred content decisions.
+The repository is still not ready for full website implementation. A bounded content-agnostic SvelteKit foundation can become development-ready after the remaining tooling/convention decisions are approved.
 
 ## Next Step
 
-**Continue frontend technical planning from the now-settled skill baseline. First evaluate the smallest suitable frontend stack/rendering model and the corresponding quality/tooling requirements without committing to page-specific UI or content.**
+**Curate the SvelteKit-specific development baseline and determine what should live in project routing/source rules versus what, if anything, deserves a reusable SvelteKit-oriented skill or helper workflow. Do this before scaffolding page-specific UI.**
