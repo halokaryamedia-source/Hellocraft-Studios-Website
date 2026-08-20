@@ -179,9 +179,23 @@ Any such feature must be justified by a real current responsibility.
 
 ## Technical architecture
 
-No framework, runtime, database, CMS, hosting provider, analytics provider, form provider, deployment model, or frontend/backend architecture is currently approved.
+The frontend framework is **SvelteKit**, explicitly selected by the project owner.
 
-Technology selection must follow approved content, functional, operational, and acceptance requirements rather than precede them.
+This approval fixes the frontend framework family, not the entire stack. The following remain unresolved and must be decided separately from actual requirements:
+
+- exact Svelte/SvelteKit package versions;
+- rendering strategy per route (prerender/static, SSR, or hybrid);
+- SvelteKit deployment adapter and hosting provider;
+- TypeScript/project-language conventions;
+- styling and design-token implementation;
+- component/UI libraries;
+- animation libraries;
+- CMS/content source;
+- database/backend requirements;
+- analytics provider;
+- form provider and delivery model.
+
+Prefer SvelteKit/Svelte native capabilities before introducing overlapping dependencies. Do not create a generic framework-specialist skill merely because SvelteKit is selected; project-specific skill creation still follows the recurring-responsibility gate.
 
 ## Evidence / acceptance requirements
 
@@ -211,12 +225,18 @@ SEO/metadata implementation
 
 performance
 → measured runtime evidence
+
+SvelteKit build/type correctness
+→ matching Svelte/SvelteKit build/check tooling
+
+deployment readiness
+→ deployed-target proof, not source/config presence alone
 ```
 
 Repository presence alone is not proof of visual, browser, deployment, integration, or human-acceptance quality.
 
 ## Current blockers / high-impact unknowns
 
-The immediate unresolved input is the project/portfolio list that the project owner will provide later.
+Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-After that, remaining definition should proceed through portfolio model, credibility evidence, client-facing offering, About, Careers, Contact, final information architecture, homepage/content architecture, visual direction, functional requirements, and technical architecture before non-trivial implementation begins.
+For the current frontend-planning track, the next high-impact unknowns are the SvelteKit development conventions/tooling baseline, styling approach, rendering boundary, and quality gates. These may be defined independently of the deferred portfolio content as long as they do not invent page structure or public claims.
