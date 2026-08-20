@@ -5,11 +5,12 @@
 ```text
 FOUNDATION_BASELINE_ESTABLISHED
 PORTFOLIO_EVIDENCE_DEFERRED
-STUDIO_PROFILE_DEFINITION_NEXT
+STUDIO_PROFILE_DEFERRED
+FRONTEND_TECHNICAL_PLANNING_ACTIVE
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_NOT_DEFINED
-TECHNICAL_ARCHITECTURE_NOT_DEFINED
+TECHNICAL_ARCHITECTURE_NOT_FINAL
 NOT DEVELOPMENT READY
 ```
 
@@ -43,31 +44,44 @@ Do not currently lock:
 
 These may become useful later only if real Hellocraft evidence supports them.
 
-## Portfolio evidence — deferred by project owner
+## Content definition — deferred by project owner
 
-Project & Evidence Inventory remains required before final portfolio taxonomy, case-study selection, client/partner proof, and any claims that depend on specific projects.
+The project owner has explicitly chosen to postpone both:
 
-The project owner has explicitly chosen to **skip this step temporarily because preparing the authoritative project list is time-consuming**.
+- Project & Evidence Inventory / portfolio content;
+- Studio Profile / About content.
 
-Therefore:
+These remain required before their dependent public claims and final page content are locked, but they are **not blockers for frontend technical planning that can be made independently of those contents**.
 
-- do not block all project-definition work on the missing inventory;
-- do not recover or fill the portfolio list from old chats, MIVUBI history, client history, or assumptions;
-- do not finalize portfolio categories, case studies, clients/partners, or evidence-backed service claims until the supplied inventory exists;
-- return to Project & Evidence Inventory later before those dependent surfaces are finalized.
+Do not fill either area from old chats, MIVUBI history, client history, or assumptions.
 
-## Current safe continuation
+## Current safe continuation — Frontend Technical Foundation
 
-Definition work that does not require the project inventory may continue.
+The active discussion is frontend engineering. Resolve only technical choices that remain valid even while final content and visual direction are incomplete.
 
-The next independent responsibility is the **Hellocraft Studio Profile / About definition**: establish the factual company-profile content that should be communicated about the studio, including only project-owner supplied or otherwise authoritative facts such as studio identity, origin/history, location/operating model, team shape, working focus, and any other material company-profile information.
+Current planning subjects may include:
 
-This is content definition, not final webpage copy or page-layout design.
+- frontend framework and rendering model;
+- TypeScript / project conventions;
+- styling strategy and design-token foundation;
+- component and layout architecture;
+- responsive implementation rules;
+- image/video/static-asset handling;
+- motion/interaction integration boundary;
+- accessibility baseline;
+- SEO/metadata technical baseline where independent of final copy;
+- separation between content data and presentation;
+- testing/lint/build quality gates;
+- deployment-neutral build requirements.
+
+Do **not** use frontend planning as permission to invent final page taxonomy, homepage composition, portfolio data, About copy, service categories, brand visual direction, CMS need, backend/database, or hosting provider.
+
+A minimal frontend scaffold may begin only after the framework/tooling choice is explicitly accepted. Initial implementation should be content-agnostic and avoid locking undefined page structure.
 
 ## Development boundary
 
-Do not begin website implementation yet. Current missing definition can still materially change content architecture, design, functionality, and technical choices.
+The repository is not yet ready for full website implementation. A bounded frontend foundation can become development-ready after its technical decisions are approved because that foundation can be kept independent from deferred content decisions.
 
 ## Next Step
 
-**Define the Hellocraft Studio Profile / About from factual studio information supplied by the project owner. Keep portfolio-dependent claims deferred. After the studio profile is coherent, continue with another independent definition area such as Careers or Contact before returning to portfolio evidence when the project owner is ready.**
+**Choose and approve the smallest frontend stack and rendering model suitable for a visual, content-heavy studio/portfolio website. Then define the minimal content-agnostic project scaffold and quality gates before writing page-specific UI.**
