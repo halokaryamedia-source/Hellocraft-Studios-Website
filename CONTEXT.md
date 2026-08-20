@@ -82,11 +82,18 @@ This is a reference pattern, **not an approved final information architecture**.
 
 ## Frontend technical baseline
 
-The project owner has explicitly selected **SvelteKit** as the frontend framework.
+The project owner has explicitly selected:
 
-This decision fixes the frontend framework family only. It does **not** yet fix:
+```text
+frontend framework = SvelteKit
+package manager    = Bun
+```
 
-- exact Svelte/SvelteKit package versions;
+Bun is currently selected as the package/dependency manager and command runner for the frontend project. This does not by itself require using Bun-specific server APIs, Bun's bundler instead of SvelteKit/Vite, or Bun's test runner for every test layer.
+
+These decisions do **not** yet fix:
+
+- exact Svelte/SvelteKit/Bun package versions;
 - rendering strategy per route (prerender/static, SSR, or hybrid);
 - deployment adapter or hosting provider;
 - TypeScript/project-language conventions;
@@ -94,9 +101,10 @@ This decision fixes the frontend framework family only. It does **not** yet fix:
 - component library;
 - animation library;
 - CMS/content source;
-- analytics/form providers.
+- analytics/form providers;
+- unit/component/E2E test tooling beyond the approved Bun package-management baseline.
 
-The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit architecture.
+The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit/Bun architecture.
 
 ## Deferred decisions
 
@@ -114,7 +122,7 @@ The following are intentionally unresolved:
 - careers structure and exact job titles;
 - CMS/content-management requirements;
 - SEO/analytics implementation;
-- rendering strategy, deployment adapter, hosting, database, and remaining technical-stack choices beyond the approved SvelteKit frontend framework.
+- rendering strategy, deployment adapter, hosting, database, and remaining technical-stack choices beyond SvelteKit + Bun.
 
 ## Current boundary
 
@@ -127,12 +135,13 @@ Do not recover old project names from chat history and automatically treat them 
 ```text
 foundation baseline       = established
 frontend framework        = SvelteKit approved
+package manager           = Bun approved
 frontend skill baseline   = ready
 portfolio evidence        = pending user-supplied list
 content architecture      = not ready
 visual direction          = not ready
 functional requirements   = not ready
-technical architecture    = partial; SvelteKit chosen, remaining decisions open
+technical architecture    = partial; SvelteKit + Bun chosen, remaining decisions open
 full implementation       = not authorized by current definition
 ```
 
