@@ -205,14 +205,46 @@ The approved full-stack baseline is:
 
 ```text
 full-stack framework = SvelteKit
-package manager      = Bun
-architecture         = static/prerender-first, server-where-needed
-backend boundary     = SvelteKit server functionality when required
-separate backend     = none initially
-database             = none initially
+UI/runtime language   = Svelte 5 + TypeScript
+Svelte convention     = modern runes-first for new code
+package manager       = Bun
+architecture          = static/prerender-first, server-where-needed
+backend boundary      = SvelteKit server functionality when required
+separate backend      = none initially
+database              = none initially
 ```
 
-SvelteKit is explicitly selected by the project owner as the website framework. Bun is explicitly selected as the package/dependency manager, lockfile owner, and normal project command runner.
+SvelteKit is explicitly selected by the project owner as the website framework. Bun is explicitly selected as the package/dependency manager, lockfile owner, and normal project command runner. TypeScript is the default project language for application and Svelte source where TypeScript applies.
+
+### Svelte / TypeScript convention
+
+For new source:
+
+- use Svelte 5 modern runes-mode patterns rather than legacy Svelte syntax;
+- prefer `$state`, `$derived`, `$props`, snippets/rendering, and modern event attributes according to current Svelte guidance;
+- treat `$effect` as a side-effect escape hatch rather than general derived-state plumbing;
+- use TypeScript type-only features directly in Svelte `<script lang="ts">` blocks;
+- do not add extra TypeScript preprocessing merely by default; only add preprocessing if a real language feature requires code transformation beyond Svelte/Vite's supported baseline;
+- keep the generated/project `tsconfig` aligned with the SvelteKit scaffold rather than inventing an independent TypeScript architecture.
+
+Exact package versions are fixed by the scaffold/lockfile when it is created, not guessed in Foundation.
+
+### Server-only / private environment ownership
+
+Private secrets and server-only utilities must use SvelteKit's protected server boundaries:
+
+```text
+private environment values
+→ $env/static/private or $env/dynamic/private as appropriate
+
+shared server-only modules
+→ $lib/server/** or *.server.*
+
+route-specific server behavior
+→ +page.server.ts / +layout.server.ts / +server.ts as appropriate
+```
+
+Do not import server-only modules or private environment values into client-facing code. Secrets must not be stored in public source or exposed through public environment prefixes.
 
 ### Frontend / rendering boundary
 
@@ -263,8 +295,7 @@ These approvals do **not** fix the entire stack. In particular, selecting Bun do
 
 The following remain unresolved and must be decided separately from actual requirements:
 
-- exact Svelte/SvelteKit/Bun package versions;
-- TypeScript/project-language conventions;
+- exact Svelte/SvelteKit/Bun/TypeScript package versions until the scaffold is created;
 - SvelteKit deployment adapter and hosting provider;
 - styling and design-token implementation;
 - component/UI libraries;
@@ -325,4 +356,4 @@ Repository presence alone is not proof of visual, browser, deployment, integrati
 
 Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-For the current technical-foundation track, the next high-impact unknowns are TypeScript/project-language conventions, styling/design-token approach, media handling, quality/testing tooling, and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
+For the current technical-foundation track, TypeScript + modern Svelte 5 conventions are now approved. The next high-impact unknowns are styling/design-token implementation, mandatory quality tooling, asset/media handling, and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
