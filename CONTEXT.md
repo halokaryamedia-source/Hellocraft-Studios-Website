@@ -80,6 +80,24 @@ identity
 
 This is a reference pattern, **not an approved final information architecture**.
 
+## Frontend technical baseline
+
+The project owner has explicitly selected **SvelteKit** as the frontend framework.
+
+This decision fixes the frontend framework family only. It does **not** yet fix:
+
+- exact Svelte/SvelteKit package versions;
+- rendering strategy per route (prerender/static, SSR, or hybrid);
+- deployment adapter or hosting provider;
+- TypeScript/project-language conventions;
+- styling system;
+- component library;
+- animation library;
+- CMS/content source;
+- analytics/form providers.
+
+The existing `web-ui-design-development` specialist remains framework-neutral and owns visual frontend craft, not SvelteKit architecture.
+
 ## Deferred decisions
 
 The following are intentionally unresolved:
@@ -96,7 +114,7 @@ The following are intentionally unresolved:
 - careers structure and exact job titles;
 - CMS/content-management requirements;
 - SEO/analytics implementation;
-- framework, runtime, hosting, database, deployment, or other technical stack choices.
+- rendering strategy, deployment adapter, hosting, database, and remaining technical-stack choices beyond the approved SvelteKit frontend framework.
 
 ## Current boundary
 
@@ -108,12 +126,16 @@ Do not recover old project names from chat history and automatically treat them 
 
 ```text
 foundation baseline       = established
+frontend framework        = SvelteKit approved
+frontend skill baseline   = ready
 portfolio evidence        = pending user-supplied list
 content architecture      = not ready
 visual direction          = not ready
 functional requirements   = not ready
-technical architecture    = not ready
-implementation            = not authorized by current definition
+technical architecture    = partial; SvelteKit chosen, remaining decisions open
+full implementation       = not authorized by current definition
 ```
+
+A bounded content-agnostic frontend foundation may become development-ready after its remaining technical/tooling decisions are approved.
 
 The next current step is owned by `docs/knowledge/next-action.md`.
