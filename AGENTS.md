@@ -11,6 +11,7 @@ This repository is the current project memory and development authority for the 
 - `docs/knowledge/next-action.md` owns active continuation only.
 - `CONTEXT.md` owns compact stable orientation.
 - Material GitHub execution follows `GITHUB_RULES.md`.
+- External documentation retrieved through Context7 is supporting technical evidence, not project authority.
 
 ## Cross-cutting rule
 
@@ -81,6 +82,27 @@ AGENTS.md
 
 If implementation requires inventing product meaning, return to Project Definition.
 
+### External technical documentation validation
+
+Use `.agents/skills/context7-documentation-validation/SKILL.md` whenever a material implementation or recommendation depends on current/version-sensitive external framework, library, package, API, CLI, adapter, provider, or configuration documentation.
+
+```text
+exact external technology + current question
+→ current declared/installed version when known
+→ context7-documentation-validation
+→ Context7 MCP current/version-aware docs when available
+→ official primary docs when required by the skill
+→ current source / package.json / bun.lock
+→ implementation
+→ matching check/build/runtime proof
+```
+
+This is a **support/evidence skill**, not a project-specific specialist. It may accompany `development-brief` and the one allowed project specialist because it does not own Hellocraft product/domain semantics.
+
+Do not let Context7 choose whether Hellocraft needs a dependency, architecture, CMS, backend, provider, or visual approach. It validates how external technology currently works; normal project owners decide whether that technology belongs in Hellocraft.
+
+If Context7 MCP is unavailable, use current official primary documentation directly and do not claim Context7 proof.
+
 ### Visual frontend Developing
 
 When a bounded frontend task materially depends on visual hierarchy, reference analysis, composition, typography, responsive behavior, visible interaction states, motion craft, visual accessibility, or rendered visual acceptance:
@@ -94,6 +116,8 @@ development-brief
 Use the specialist only for the visual/frontend-craft boundary. It does not decide product structure, content, framework, CMS, SEO strategy, backend, or deployment.
 
 Normal frontend engineering that does not need this recurring visual judgment uses `development-brief` alone.
+
+When visual frontend work also depends on version-sensitive external APIs/configuration, add `context7-documentation-validation` as the support/evidence layer without increasing the project-specialist count.
 
 ## Hellocraft-specific definition guards
 
@@ -144,9 +168,11 @@ web-ui-design-development
 → visual frontend design/craft + rendered acceptance only
 ```
 
-The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills.
+The repository also retains the generic `project-definition`, `development-brief`, and `project-skill-planner` kernel skills plus the `context7-documentation-validation` support/evidence skill.
 
-Per bounded Developing task, use at most **one project-specific specialist**. Do not stack Design DNA, Taste, Genjutsu, motion, accessibility, framework, SEO, or other external/project skills on top of `web-ui-design-development`; their useful visual principles have been distilled into the Hellocraft specialist where appropriate.
+Per bounded Developing task, use at most **one project-specific specialist**. Support/evidence tooling such as Context7 does not count toward that budget because it does not own project-specific semantics.
+
+Do not stack Design DNA, Taste, Genjutsu, motion, accessibility, framework, SEO, or other external/project skills on top of `web-ui-design-development`; their useful visual principles have been distilled into the Hellocraft specialist where appropriate.
 
 Do not create additional frontend, framework, SEO, CMS, portfolio, testing, security, or delivery specialists merely because those topics exist. Use `.agents/skills/project-skill-planner/SKILL.md` only when another distinct recurring semantic/acceptance boundary is actually proven or genuinely ambiguous.
 

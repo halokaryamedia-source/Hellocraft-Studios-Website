@@ -13,6 +13,8 @@ STATIC_FIRST_SERVER_WHERE_NEEDED_APPROVED
 NO_SEPARATE_BACKEND_INITIAL_APPROVED
 NO_DATABASE_INITIAL_APPROVED
 LIGHTWEIGHT_PERFORMANCE_REQUIREMENT_APPROVED
+CONTEXT7_DOCUMENTATION_VALIDATION_READY
+CODEX_CONTEXT7_MCP_WIRED
 WEB_UI_DESIGN_SPECIALIST_READY
 FRONTEND_SKILL_BASELINE_READY
 SERVICES_TAXONOMY_NOT_DEFINED
@@ -42,6 +44,7 @@ Current approved baseline:
 - **Initial backend uses SvelteKit server capabilities; no separate backend service is justified.**
 - **No database is justified initially.**
 - **Strong visual quality and lightweight/fast delivery are equal product constraints.**
+- **Context7 is the approved support/evidence layer for current/version-sensitive external technical documentation.**
 
 ## Corrected planning boundary
 
@@ -77,15 +80,62 @@ A single project-specific visual specialist owns the recurring visual frontend b
 .agents/skills/web-ui-design-development/SKILL.md
 ```
 
-It remains intentionally separate from framework/backend architecture. Selecting SvelteKit + Bun does not create a need for `svelte-expert`, `bun-expert`, or `backend-expert` project skills.
+A separate support/evidence skill owns external technical documentation validation:
 
-Normal engineering uses `development-brief`; visual frontend work uses:
+```text
+.agents/skills/context7-documentation-validation/SKILL.md
+```
+
+The Context7 skill is **not** a project-specific specialist and does not consume the one-specialist-per-task budget. It may accompany normal engineering or visual frontend work when a material decision depends on current/version-sensitive external framework/library/API/configuration documentation.
+
+Normal engineering:
+
+```text
+development-brief
++
+context7-documentation-validation when external docs materially matter
+```
+
+Visual frontend engineering:
 
 ```text
 development-brief
 +
 web-ui-design-development
++
+context7-documentation-validation when external docs materially matter
 ```
+
+Selecting SvelteKit + Bun and adding Context7 does not create a need for `svelte-expert`, `bun-expert`, `backend-expert`, or `context7-expert` project specialists.
+
+## Context7 documentation-validation boundary
+
+Context7 is development tooling only. It is not part of the website bundle/runtime and must not be added to Hellocraft application dependencies merely to satisfy agent workflow.
+
+Project-scoped Codex MCP wiring is present at:
+
+```text
+.codex/config.toml
+→ https://mcp.context7.com/mcp
+```
+
+No Context7 API key/credential should be committed to the repository.
+
+For external technical questions:
+
+```text
+exact package/library + current question
+→ current declared/installed version when known
+→ Context7 current/version-aware documentation
+→ official primary docs when Context7 is unavailable, ambiguous, high-impact, or conflicts with the project
+→ current source / package.json / bun.lock
+→ implementation
+→ matching check/build/runtime proof
+```
+
+Context7 validates documented API/configuration behavior. It does not decide whether Hellocraft should adopt a package, architecture, CMS, provider, backend, visual effect, or other technology.
+
+If Context7 is unavailable in a particular host/session, use current official primary documentation directly and do not claim Context7 evidence.
 
 ## Approved full-stack boundary
 
@@ -117,6 +167,7 @@ Apply this before adding dependencies or effects:
 ```text
 real user value
 → can native Svelte/SvelteKit/CSS/browser capability solve it?
+→ Context7/official docs confirm any external API/config we actually need
 → what client JS/media/runtime cost is added?
 → is the result still worth that cost?
 → measure the built/deployed output
@@ -154,7 +205,7 @@ Mandatory quality gates and optional testing layers are different responsibiliti
 
 ## Current safe continuation — finish the technical foundation
 
-Before page-specific implementation, decide the smallest remaining conventions in this order:
+Before page-specific implementation, decide the smallest remaining conventions in this order. Use Context7/official documentation whenever a listed choice depends on current Svelte/SvelteKit/Bun/tooling APIs or configuration.
 
 ### 1. Language / Svelte convention
 
@@ -183,7 +234,7 @@ format
 → build
 ```
 
-Choose exact tools/config only after confirming compatibility with the approved SvelteKit + Bun baseline.
+Choose exact tools/config only after validating compatibility with the approved SvelteKit + Bun baseline through Context7 and/or current official documentation.
 
 ### 4. Asset / media / performance policy
 
@@ -220,4 +271,4 @@ A bounded content-agnostic SvelteKit scaffold becomes development-ready after th
 
 ## Next Step
 
-**Decide the remaining code-level foundation in order: (1) TypeScript + modern Svelte 5 convention, (2) styling/design-token approach, (3) mandatory format/lint/svelte-check/build gate, then (4) media/performance policy. After those are locked, create the minimal content-agnostic SvelteKit + Bun scaffold. Define the first SvelteKit server/form contract only when the corresponding Contact/Careers requirement is concrete.**
+**Use Context7-backed current documentation while deciding the remaining code-level foundation in order: (1) TypeScript + modern Svelte 5 convention, (2) styling/design-token approach, (3) mandatory format/lint/svelte-check/build gate, then (4) media/performance policy. After those are locked, create the minimal content-agnostic SvelteKit + Bun scaffold. Define the first SvelteKit server/form contract only when the corresponding Contact/Careers requirement is concrete.**

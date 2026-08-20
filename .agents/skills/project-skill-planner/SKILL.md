@@ -1,13 +1,13 @@
 ---
 name: project-skill-planner
-description: Use only when Hellocraft Studios Website work shows a plausible recurring project-specific semantic responsibility that Foundation, AGENTS, development-brief, and the current specialist set cannot cover sufficiently, or when existing project-specific specialists need overlap/pruning review. The current baseline contains one earned specialist; additional skills must pass the full creation gate.
+description: Use only when Hellocraft Studios Website work shows a plausible recurring project-specific semantic responsibility that Foundation, AGENTS, development-brief, and the current specialist set cannot cover sufficiently, or when existing project-specific specialists need overlap/pruning review. The current baseline contains one earned specialist; additional project-specific skills must pass the full creation gate.
 ---
 
 # Project Skill Planner
 
 Determine the **minimum justified reusable project-specific specialist set**.
 
-This is not a mandatory bootstrap step and is not a mechanism for turning every technical topic into a skill.
+This is not a mandatory bootstrap step and is not a mechanism for turning every technical topic or support tool into a project specialist.
 
 ## Current baseline
 
@@ -22,6 +22,22 @@ web-ui-design-development
 
 Its existence does **not** justify adjacent frontend/framework/SEO/testing skills.
 
+## Support/tooling skills are not project specialists
+
+A reusable support skill that only improves evidence retrieval, documentation freshness, tool usage, or generic verification does not automatically become a project-specific specialist.
+
+Current example:
+
+```text
+context7-documentation-validation
+→ external technical documentation/version evidence support
+→ project-specific specialist count impact = 0
+```
+
+Context7 does not own Hellocraft product semantics, architecture choice, package adoption, visual design, or release policy. It therefore stays outside the project-specialist budget.
+
+Do not run this planner merely because a support/tooling skill is added or removed unless that skill starts owning a recurring Hellocraft-specific semantic/acceptance boundary.
+
 ## Activate only when
 
 At least one current condition is true:
@@ -30,7 +46,7 @@ At least one current condition is true:
 - specialist need is genuinely ambiguous;
 - an existing project-specific specialist set needs overlap, sufficiency, routing, or pruning review.
 
-Do not activate merely because the website may use design, frontend code, SEO, CMS, analytics, deployment, testing, a framework, animation, accessibility work, 3D, or a difficult technical task.
+Do not activate merely because the website may use design, frontend code, SEO, CMS, analytics, deployment, testing, a framework, animation, accessibility work, 3D, external documentation tooling, or a difficult technical task.
 
 ## What qualifies
 
@@ -40,13 +56,14 @@ A project-specific specialist must represent a distinct recurring semantic or ac
 Foundation
 + AGENTS.md
 + development-brief
++ support/evidence tooling
 + current project specialists
 + nearest source/module rules
 ```
 
 Technology names and job roles alone are not specialist boundaries.
 
-Examples that do **not** automatically justify another skill:
+Examples that do **not** automatically justify another project specialist:
 
 - frontend expert;
 - React / Next / Astro / Svelte expert;
@@ -59,7 +76,8 @@ Examples that do **not** automatically justify another skill:
 - CMS expert;
 - deployment expert;
 - security expert;
-- Three.js / WebGL expert.
+- Three.js / WebGL expert;
+- Context7 expert.
 
 A future project responsibility may justify a specialist only after its recurring semantic/acceptance boundary is real and distinct.
 
@@ -90,10 +108,10 @@ NO SKILL
 → generic/current owners are sufficient
 
 USE EXISTING
-→ `web-ui-design-development` or another current owner already covers it
+→ a current project specialist or support owner already covers it
 
 CREATE
-→ a distinct recurring responsibility passes the full gate
+→ a distinct recurring project-specific responsibility passes the full gate
 
 REFINE / MERGE
 → current specialist boundary is wrong or overlapping
@@ -114,7 +132,7 @@ Create only when all material conditions are supported:
 - real current semantic/acceptance responsibility;
 - recurring use proven by current scope or repeated work;
 - distinct reusable judgment/procedure;
-- Foundation + development-brief + current specialists are insufficient;
+- Foundation + development-brief + support tooling + current specialists are insufficient;
 - nearest source/module rules do not already own it;
 - clear non-overlapping boundary;
 - current approved consumer/use exists;
@@ -144,8 +162,6 @@ It must **not** own visual layout, portfolio UI, CMS mechanics, general company 
 Create only after the project owner supplies enough portfolio inventory to prove this workflow is recurring. Until then the candidate remains blocked, not installed.
 
 ### `website-release-development` — BLOCKED / likely future
-
-This replaces the earlier, overly broad `website-delivery-development` name.
 
 Potential boundary:
 
@@ -190,7 +206,7 @@ Project/page messaging and portfolio claims remain content/product responsibilit
 
 ## Candidate set after curation
 
-Only two future candidates remain worth tracking:
+Only two future project-specific candidates remain worth tracking:
 
 ```text
 portfolio-content-production
@@ -228,6 +244,8 @@ Normal bounded Developing uses:
 development-brief
 +
 zero or one matching project-specific specialist
++
+any narrowly justified support/evidence skill that does not own project semantics
 ```
 
 Do not stack multiple project specialists merely because one task touches several technical topics. If two genuinely independent acceptance boundaries are both material, split/reframe the work.
@@ -236,7 +254,8 @@ Do not stack multiple project specialists merely because one task touches severa
 
 Skill planning is complete when:
 
-- every current specialist has one justified distinct responsibility;
+- every current project specialist has one justified distinct responsibility;
+- support/tooling skills are not miscounted as domain specialists;
 - no unnecessary candidate skills remain;
 - overlap is removed rather than routed around;
 - routing remains the smallest sufficient mechanism;
