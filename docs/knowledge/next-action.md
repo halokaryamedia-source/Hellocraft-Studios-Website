@@ -6,7 +6,6 @@
 FOUNDATION_BASELINE_ESTABLISHED
 PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
-TECHNICAL_FOUNDATION_PLANNING_ACTIVE
 SVELTEKIT_FULLSTACK_APPROVED
 TYPESCRIPT_DEFAULT_APPROVED
 SVELTE5_RUNES_FIRST_APPROVED
@@ -21,6 +20,11 @@ ESLINT_GATE_APPROVED
 SVELTE_CHECK_GATE_APPROVED
 BUILD_GATE_APPROVED
 QUALITY_GATE_APPROVED
+MEDIA_POLICY_APPROVED
+ENHANCED_IMG_LOCAL_RASTER_PIPELINE_APPROVED
+VIDEO_POSTER_FIRST_POLICY_APPROVED
+SELF_HOSTED_WOFF2_FONT_POLICY_APPROVED
+PERFORMANCE_MEASUREMENT_POLICY_APPROVED
 STATIC_FIRST_SERVER_WHERE_NEEDED_APPROVED
 NO_SEPARATE_BACKEND_INITIAL_APPROVED
 NO_DATABASE_INITIAL_APPROVED
@@ -36,130 +40,79 @@ DRY_RUN_ACCEPTANCE_GATE_DEFINED
 CODEX_CONTEXT7_MCP_WIRED
 CODEX_CHROME_DEVTOOLS_MCP_WIRED
 WEB_UI_DESIGN_SPECIALIST_READY
-MEDIA_POLICY_NOT_DEFINED
+TECHNICAL_FOUNDATION_READY_FOR_SCAFFOLD
+CONTENT_AGNOSTIC_SCAFFOLD_NOT_CREATED
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 VISUAL_DIRECTION_CANDIDATE_NOT_FINAL
-TECHNICAL_ARCHITECTURE_PARTIAL
-NOT DEVELOPMENT READY
+PAGE_IMPLEMENTATION_NOT_READY
 ```
 
 Working authority: **`Local`**.
 
-## Approved technical baseline
+## Approved content-agnostic technical baseline
 
 ```text
-full-stack framework = SvelteKit
-UI/runtime language   = Svelte 5 + TypeScript
-Svelte convention     = modern runes-first for new code
-package manager       = Bun
-styling               = native CSS + Svelte scoped styles
-shared design tokens  = CSS Custom Properties
-quality gate          = Prettier + ESLint + svelte-check + SvelteKit/Vite build
-architecture          = static/prerender-first, server-where-needed
-backend boundary      = SvelteKit server functionality when required
-separate backend      = none initially
-database              = none initially
-performance           = strong visual quality + lightweight delivery
+framework              = SvelteKit
+UI/runtime             = Svelte 5 + TypeScript
+Svelte convention      = modern runes-first
+package manager        = Bun
+styling                = native CSS + Svelte scoped styles
+shared tokens          = CSS Custom Properties
+quality gate           = bun run validate
+local raster pipeline  = Vite imports + @sveltejs/enhanced-img
+rendering              = static/prerender-first, server-where-needed
+backend                = SvelteKit server only when needed
+separate backend       = none initially
+database               = none initially
 ```
 
-### Language / Svelte convention — approved
+The technical baseline is now sufficient to build a **minimal content-agnostic scaffold**. It is not sufficient to invent final pages, portfolio structure, services taxonomy, navigation, or final art direction.
 
-TypeScript is the default project language where TypeScript applies.
-
-For new Svelte source:
+## Canonical media owner
 
 ```text
-Svelte 5 runes-first
-→ $state only for actual reactive state
-→ $derived for computed values
-→ $effect only for real side effects
-→ $props for component props
-→ modern event attributes / snippets when applicable
-→ legacy Svelte syntax only when current source/version requires it
+docs/foundation/03-media-performance-policy.md
 ```
 
-Exact package versions are owned by the scaffold and `bun.lock` once created rather than guessed in planning documents.
-
-### Server/private boundary — approved
+Key policy:
 
 ```text
-private build-time env
-→ $env/static/private
+source-imported local assets
+→ Vite-hashed/build-processed by default
 
-private runtime env
-→ $env/dynamic/private
+static/
+→ exact stable public URL / passthrough only
 
-shared server-only modules
-→ $lib/server/** or *.server.*
+local raster page media
+→ @sveltejs/enhanced-img when responsive/build-time optimization helps
 
-route server behavior
-→ +page.server.ts / +layout.server.ts / +server.ts as appropriate
+SVG
+→ keep vector when the source is vector
+
+LCP image
+→ not lazy + high fetch priority only when genuinely the LCP candidate
+
+below-fold images
+→ native lazy loading when appropriate
+
+video
+→ poster-first + preload="none" + user-initiated by default
+
+fonts
+→ self-hosted WOFF2 + one family by default; second only if art direction earns it
 ```
 
-Client-facing code must not import private/server-only values.
+Do not install an image CDN, media CDN, font CDN, or video platform now.
 
-### Styling / design-token boundary — approved
+## Quality gate retained
 
-```text
-src/app.css
-→ small application-wide foundation only
-→ minimal reset/base/document defaults
-→ durable semantic CSS custom properties
-
-*.svelte <style>
-→ component-specific appearance
-→ Svelte-scoped by default
-
-CSS custom properties
-→ repeated semantic values
-→ intentional parent/child styling contracts
-```
-
-Initial negative decisions:
-
-```text
-Tailwind / utility framework = no
-SCSS / Sass                  = no
-CSS-in-JS                    = no
-CSS Modules                  = no
-CSS preprocessor             = none initially
-component style framework    = none initially
-```
-
-Do not create a token for every literal value. Shared tokens must represent durable repeated semantic roles; one-off visual values may remain local.
-
-### Logo / brand anchor — recorded
-
-The supplied Hellocraft logo is authoritative visual evidence.
-
-Observed direction:
-
-```text
-palette   → cyan + white + charcoal/black
-form      → rounded star/hand mascot + small star accents
-wordmark  → chunky / irregular / friendly uppercase
-character → playful + energetic + approachable
-```
-
-Current leading thesis for later visual-direction exploration:
-
-> **Playful editorial game studio**
-
-This is not yet final art direction. Do not automatically turn the website into Minecraft pixel/voxel UI, neon/cyberpunk gaming UI, glassmorphism, or repeated star decoration.
-
-Exact production palette values should come from authoritative logo/vector assets when available, not a compressed raster sample.
-
-### Mandatory quality gate — approved
-
-Use the official Svelte ecosystem Prettier and ESLint integrations when the scaffold is created. Keep the gate non-mutating with respect to application source.
-
-Expected package-script contract:
+Expected script contract once the scaffold exists:
 
 ```text
 format
 → prettier --write .
-→ developer convenience; mutates source; not proof
+→ convenience only
 
 format:check
 → prettier --check .
@@ -169,9 +122,6 @@ lint
 
 check
 → svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
-
-check:watch
-→ developer convenience only
 
 build
 → vite build
@@ -183,184 +133,130 @@ validate
 → bun run build
 ```
 
-Expected scripts once the scaffold exists:
+Any `validate` failure blocks technical completion. Source-mutating fixers must not run inside the acceptance gate.
 
-```json
-{
-  "scripts": {
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "lint": "eslint .",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "build": "vite build",
-    "validate": "bun run format:check && bun run lint && bun run check && bun run build"
-  }
-}
-```
+## Skill routing for the scaffold
 
-Acceptance rule:
+The scaffold is a non-trivial development task, so use:
 
 ```text
-bun run validate
-→ format:check PASS
-→ lint PASS
-→ check PASS
-→ build PASS
-→ technical gate PASS
-```
-
-Any failure blocks technical completion. Do not put Prettier write mode, ESLint `--fix`, or another source-mutating fixer inside `validate` merely to manufacture a pass.
-
-The Svelte autofixer remains supplemental Svelte review evidence, not a replacement for the project gate. Exact package versions/config are owned by the scaffold and `bun.lock` after creation.
-
-Vitest and Playwright remain deferred. Add them only when real reusable logic/component behavior or critical browser flows earn repeatable automated-test responsibilities.
-
-## Content boundary retained
-
-Portfolio/project inventory and Studio/About content remain intentionally deferred by the project owner.
-
-Do not recover those from old chats or infer final taxonomy/navigation from reference sites.
-
-## Skill / tooling baseline
-
-### Kernel
-
-```text
-project-definition
 development-brief
-project-skill-planner
++ context7-documentation-validation for current scaffold/tool config
++ svelte-development-validation for Svelte/SvelteKit source
 ```
 
-### Project-specific specialist count = 1
+Use `web-ui-design-development` only for the tiny dry-run presentation needed to make the responsive slice inspectable; do not turn the scaffold into final art direction.
+
+Use `web-accessibility-validation` for the dry-run control/media semantics and `chrome-devtools-validation` for rendered/browser/network evidence.
+
+## Next Step — create minimal scaffold
+
+Create the **minimal SvelteKit + Bun + TypeScript scaffold** on branch `Local` with only the approved technical dependencies/configuration.
+
+Required initial responsibilities:
 
 ```text
-web-ui-design-development
-→ visual frontend design/craft + rendered visual acceptance
+SvelteKit + Svelte 5 + TypeScript
+Bun lockfile / scripts
+Prettier + Svelte-aware formatting
+ESLint + current Svelte-aware config
+svelte-check
+native app.css foundation
+@sveltejs/enhanced-img build integration
+minimal root layout/page only
 ```
 
-### Support / evidence
+Do **not** add:
+
+- Tailwind/SCSS/CSS-in-JS/component library;
+- Vitest/Playwright;
+- CMS/database/auth;
+- animation library;
+- analytics;
+- form provider;
+- hosting adapter beyond the minimal scaffold default/current requirement;
+- invented project/portfolio content.
+
+Exact dependency versions must be selected from current official Svelte/SvelteKit tooling at scaffold time and then owned by `package.json` + `bun.lock`.
+
+## Immediate scaffold proof
+
+After creation:
 
 ```text
-context7-documentation-validation
-→ external API/config/version evidence
-
-svelte-development-validation
-→ Svelte/SvelteKit correctness + official Svelte tooling
-
-web-accessibility-validation
-→ semantic/keyboard/form/media/reflow accessibility validation
-
-chrome-devtools-validation
-→ browser/rendering/console/network/performance proof
+bun install
+→ bun run validate
 ```
 
-Support skills do not consume the one-project-specialist budget.
+The scaffold itself must pass before adding the dry-run slice.
 
-## Synchronized handoff rule
+## Integration dry-run after scaffold PASS
 
-Every materially used support layer returns:
-
-```text
-FINDING
-AUTHORITY
-ACTION
-PROOF
-BLOCKER (only when something remains unproven)
-```
-
-`development-brief` remains the conductor. Support skills do not autonomously broaden scope or take over architecture/product/visual ownership.
-
-## Authority / proof hierarchy
-
-```text
-product / architecture
-→ user instruction → Foundation → current source/contracts
-
-external API / config
-→ installed/declared version → official docs → Context7 → secondary examples
-
-compatibility
-→ source intent → bun run validate
-
-runtime/browser
-→ build/check → actual browser/runtime → deployed target for production claims
-```
-
-A documented API is not accepted if current project checks or runtime behavior fail.
-
-## Lightweight-performance boundary
-
-Before adding a dependency/effect:
-
-```text
-real user value
-→ can native Svelte/SvelteKit/CSS/browser capability solve it?
-→ current docs confirm any external API/config actually needed
-→ what JS/media/network/runtime cost is added?
-→ is the result still worth that cost?
-→ measure representative built/browser output
-```
-
-Do not invent permanent JS/image/media budgets until representative Hellocraft visual pages exist.
-
-## Remaining technical foundation decision
-
-### Asset / media / performance policy — NEXT
-
-Define the minimum durable policy for a media-heavy studio website:
-
-- which assets belong in `static/` versus source-processed/imported media;
-- image ownership/folder naming without creating a premature content taxonomy;
-- responsive image generation and `srcset`/sizes behavior;
-- when AVIF/WebP/source formats are appropriate;
-- crop/aspect-ratio/focal-point rules for portfolio media;
-- above-the-fold versus below-the-fold loading behavior;
-- lazy loading and layout-space reservation;
-- video poster/autoplay/preload rules and when video should not load initially;
-- font formats, number of families/weights, loading, and subsetting strategy;
-- whether SvelteKit's `@sveltejs/enhanced-img` is actually earned or native/static handling is sufficient;
-- representative Chrome DevTools measurement procedure;
-- how project-specific JS/image/video/font budgets will be calibrated after representative visual media exists.
-
-Do not install an image/CDN/media package merely to prepare for hypothetical needs.
-
-## Dry-run gate before page implementation
-
-Once the media policy is approved, create the minimal content-agnostic SvelteKit + Bun scaffold and run one deliberately small non-product integration slice:
+Add one deliberately small non-product slice containing only enough to exercise the synchronized support layers:
 
 ```text
 one Svelte component
-+ one small interactive control
-+ one representative image/media element
++ one small interactive native control
++ one representative local raster image
 + responsive behavior
 ```
 
-Run the smallest relevant chain:
+Use the local raster through the approved enhanced-image pipeline. Do not use real portfolio claims/media merely to populate the test.
+
+Then run:
 
 ```text
-development-brief
-→ Context7 only if docs/config are material
-→ svelte-development-validation
-→ implementation
+svelte-development-validation
 → web-accessibility-validation
 → bun run validate
 → chrome-devtools-validation
 → overlap/gap review
 ```
 
-Pass only when support handoffs are clear, `bun run validate` passes, keyboard/rendered behavior works, no material console/network defect is introduced, and no new skill is required merely to complete the dry-run.
+Dry-run PASS requires:
 
-Do not turn the dry-run into a homepage, portfolio, or final visual prototype.
+- `bun run validate` passes;
+- image output has appropriate intrinsic/responsive delivery behavior;
+- interactive control is keyboard-usable;
+- responsive layout is stable;
+- no material browser console/network defect is introduced;
+- below-fold/priority loading behavior matches the test's actual placement;
+- support-skill handoffs remain non-duplicative;
+- no new skill/dependency is needed merely to finish the test.
+
+Do not turn the dry-run into a homepage, portfolio, navigation system, or final visual prototype.
+
+## Performance budget timing
+
+The dry-run proves the **measurement workflow**, not final Hellocraft byte budgets.
+
+Permanent JS/image/video/font budgets are calibrated only after a representative visual prototype contains real project-like media and typography. Continue using current Core Web Vitals good thresholds as the external experience baseline meanwhile.
+
+## Content / visual boundary retained
+
+The project owner will provide portfolio/project evidence later. Studio/About content is also deferred.
+
+Therefore the scaffold must not infer:
+
+- portfolio entries/categories;
+- services taxonomy;
+- final navigation;
+- homepage content order;
+- client claims;
+- final typography;
+- exact production brand color values;
+- final project image ratios/focal points.
+
+The current visual thesis remains **playful editorial game studio** as a candidate, not a final design system.
 
 ## Backend / release boundary retained
 
-Do not choose database, CMS, auth, storage, hosting, or separate backend until a real product responsibility earns them.
+Business contact is the likely first future server responsibility, but its fields/provider are not defined yet. Careers submission follows only after its real fields/file/storage needs are known.
 
-Business contact is the likely first server responsibility; career submission follows only after its actual fields/file/storage needs are defined.
+Do not choose database, CMS, auth, storage, hosting, or a separate backend now.
 
 `website-release-development` remains blocked until hosting/deployment and material production integrations are known.
 
 ## Next Step
 
-**Define and lock the asset/media/performance policy. After that, create the minimal content-agnostic SvelteKit + Bun scaffold with the approved quality scripts and immediately run the integration dry-run before any page-specific UI.**
+**Create the minimal content-agnostic SvelteKit + Bun scaffold using the approved language, styling, quality, and media policies. First make the empty scaffold pass `bun run validate`; then run the defined non-product integration dry-run before any page-specific implementation.**

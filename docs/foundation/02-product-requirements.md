@@ -195,6 +195,12 @@ Apply this as an architectural constraint:
 
 A visually simpler implementation that communicates better and loads materially faster is preferable to decorative complexity with weak user value.
 
+The durable implementation contract for asset ownership, responsive raster delivery, video, fonts, and performance proof is owned by:
+
+```text
+docs/foundation/03-media-performance-policy.md
+```
+
 ## Functional requirements
 
 Current functional requirements are intentionally minimal because content architecture is not complete.
@@ -229,6 +235,8 @@ package manager       = Bun
 styling               = native CSS + Svelte scoped styles
 shared design tokens  = CSS Custom Properties
 quality gate          = Prettier + ESLint + svelte-check + SvelteKit/Vite build
+local raster pipeline = Vite imports + @sveltejs/enhanced-img
+media policy owner    = docs/foundation/03-media-performance-policy.md
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -347,6 +355,23 @@ Acceptance rules:
 - the official Svelte autofixer remains supplemental Svelte review evidence and does not replace `validate`;
 - Vitest and Playwright are not part of the initial mandatory gate. Add them only when real reusable logic or critical browser flows earn those testing responsibilities.
 
+### Media implementation boundary
+
+Local raster media that is available at build time and benefits from responsive optimization uses the approved `@sveltejs/enhanced-img` build pipeline. This is a development/build dependency, not a client runtime library.
+
+The detailed media rules are intentionally not duplicated here. Use `03-media-performance-policy.md` for:
+
+- `src/lib/assets` versus `static/` ownership;
+- responsive `sizes`/generated widths;
+- AVIF/WebP delivery;
+- LCP priority and lazy-loading rules;
+- crop/focal-point/layout-stability rules;
+- video poster/preload/autoplay rules;
+- self-hosted WOFF2 font rules;
+- Chrome DevTools measurement and later byte-budget calibration.
+
+Do not add image/video/font CDNs before a real need earns them.
+
 ### Server-only / private environment ownership
 
 Private secrets and server-only utilities must use SvelteKit's protected server boundaries:
@@ -413,9 +438,10 @@ These approvals do **not** fix the entire stack. In particular, selecting Bun do
 
 The following remain unresolved and must be decided separately from actual requirements:
 
-- exact Svelte/SvelteKit/Bun/TypeScript/quality-tool package versions until the scaffold is created;
+- exact Svelte/SvelteKit/Bun/TypeScript/quality/media-tool package versions until the scaffold is created;
 - SvelteKit deployment adapter and hosting provider;
 - final visual direction and exact design-token values;
+- actual font families/weights and portfolio crop/focal-point values;
 - component/UI libraries if a real need later earns one;
 - animation libraries if native motion becomes insufficient;
 - exact content source/format;
@@ -464,6 +490,9 @@ Bun dependency/tooling correctness
 mandatory technical quality
 → `bun run validate` with format:check + lint + svelte-check + build all passing
 
+local responsive media
+→ build output + rendered/network inspection according to `03-media-performance-policy.md`
+
 server/backend correctness
 → matching server/form/API execution proof; source presence alone is insufficient
 
@@ -477,4 +506,4 @@ Repository presence alone is not proof of visual, browser, deployment, integrati
 
 Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-For the current technical-foundation track, TypeScript + modern Svelte 5 conventions, native CSS/design-token ownership, and the mandatory quality gate are approved. The next high-impact unknown is the asset/media/performance policy, followed by final visual-direction/token values and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
+For the current technical-foundation track, the language/Svelte convention, native CSS/design-token model, mandatory quality gate, and asset/media/performance policy are approved. The repository is now ready for a **minimal content-agnostic technical scaffold and integration dry-run**. Final visual direction/token values, real project media/crops, the first concrete form/server contract, adapter/hosting, and production providers remain intentionally unresolved until their corresponding responsibilities are defined.

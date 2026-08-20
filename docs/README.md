@@ -20,7 +20,7 @@ Current documentation describes current truth. Git history owns ordinary histori
 |---|---|
 | `README.md` | human project entrypoint |
 | `CONTEXT.md` | compact stable cross-session orientation |
-| `docs/foundation/` | durable project/product definition |
+| `docs/foundation/` | durable project/product/technical definition |
 | `docs/knowledge/` | current development navigation/continuation |
 | `.agents/skills/` | reusable project-definition/development procedures |
 | source | actual website behavior once implementation exists |
@@ -41,15 +41,27 @@ Owns:
 
 ### `docs/foundation/02-product-requirements.md`
 
-Owns current observable requirements, including communication, content, portfolio evidence, client acquisition, recruitment, quality, accessibility/compatibility requirements when later defined, and acceptance/proof boundaries.
+Owns current observable requirements, including communication, content, portfolio evidence, client acquisition, recruitment, quality, accessibility/compatibility requirements when later defined, the approved core stack/quality gate, and acceptance/proof boundaries.
 
-Keep responsibilities together while one owner remains clear. Split only when a distinct durable responsibility actually appears.
+### `docs/foundation/03-media-performance-policy.md`
+
+Owns the durable technical contract for:
+
+- imported/build-processed assets versus `static/` passthrough assets;
+- local responsive raster-image delivery;
+- `@sveltejs/enhanced-img` usage boundary;
+- image loading/crop/layout-stability rules;
+- video poster/preload/autoplay rules;
+- font hosting/format/loading rules;
+- media performance measurement and later budget calibration.
+
+This owner is justified because media delivery is a recurring independent technical responsibility for a visual studio portfolio and cannot remain a short paragraph inside general Product Requirements without hiding implementation/acceptance rules.
 
 ## Foundation expansion gate
 
-Create another Foundation file only when keeping the responsibility inside Overview or Requirements would mix distinct jobs, hide an independent contract, or make several project areas depend on unclear rules.
+Create another Foundation file only when keeping the responsibility inside an existing owner would mix distinct jobs, hide an independent contract, or make several project areas depend on unclear rules.
 
-Possible future owners are **not pre-approved**. Architecture, content model, visual standard, SEO, analytics, security/privacy, deployment, or validation documents must be earned by actual project requirements.
+Possible future owners are **not pre-approved**. Content model, final visual standard, SEO, analytics, security/privacy, deployment, or other architecture documents must be earned by actual project requirements.
 
 ## Knowledge navigation
 
@@ -83,6 +95,6 @@ DO NOT IMPLEMENT THAT BEHAVIOR
 
 ## Current Hellocraft boundary
 
-The user will provide the project/portfolio list later. Until then, project inventory, project attribution, portfolio taxonomy, case-study model, services/capabilities taxonomy, final IA, visual direction, and technical architecture remain unresolved.
+The user will provide the project/portfolio list later. Until then, project inventory, project attribution, portfolio taxonomy, case-study model, services/capabilities taxonomy, final IA, and final visual direction remain unresolved.
 
-Do not create placeholder documents for those future topics.
+The content-agnostic technical foundation now has approved SvelteKit/Bun/TypeScript, Svelte 5, native CSS/token, quality-gate, and media/performance policies. That is sufficient to create and validate the **minimal technical scaffold only**. It does not authorize inventing page content, portfolio structure, final navigation, or final art direction.
