@@ -147,17 +147,35 @@ The homepage should eventually prioritize the strongest available Hellocraft evi
 
 ## Visual quality
 
-Visual direction is not yet defined.
+Final visual direction is not yet locked, but the supplied Hellocraft logo is now an authoritative brand input.
+
+Observed logo characteristics:
+
+- bright cyan, white, and charcoal/black as the core brand palette;
+- a large rounded star/hand symbol with two small star accents;
+- chunky, irregular, friendly uppercase wordmark;
+- energetic, playful, approachable character rather than corporate-tech or luxury-minimal styling.
+
+Use those characteristics as evidence when establishing visual direction, not as a requirement to repeat the logo shapes everywhere.
+
+Current leading visual thesis to explore during the visual-direction phase:
+
+> **Playful editorial game studio** — bold and characterful enough to match the logo, but structured, media-led, and professional enough for client/partner credibility.
+
+This thesis is a recommended direction, not yet a final page/design-system approval.
 
 Future design must:
 
 - feel appropriate for a professional game studio focused on Minecraft;
+- preserve the friendliness/energy of the logo without making the site feel childish;
 - support project imagery rather than overpower it;
 - remain readable and usable across relevant screen sizes;
 - avoid visual gimmicks that make company information or work harder to understand;
 - preserve the lightweight-performance requirement rather than treating heavy effects as the price of looking premium.
 
-Do not decide a Minecraft/voxel visual language, editorial style, motion system, typography, or design system before the visual-direction phase.
+Do not default to Minecraft pixel UI, voxel borders, inventory-slot interfaces, grass/dirt textures, neon gaming/cyberpunk, generic purple-blue gradients, or glassmorphism merely because the studio works with Minecraft/games. Any Minecraft-specific visual language must be earned by the later art-direction decision.
+
+The raster logo supplied in conversation can help estimate palette relationships, but exact production color values must come from an authoritative logo/vector/brand source when available rather than being permanently sampled from a compressed JPEG.
 
 ## Performance / lightweight requirement
 
@@ -208,6 +226,8 @@ full-stack framework = SvelteKit
 UI/runtime language   = Svelte 5 + TypeScript
 Svelte convention     = modern runes-first for new code
 package manager       = Bun
+styling               = native CSS + Svelte scoped styles
+shared design tokens  = CSS Custom Properties
 architecture          = static/prerender-first, server-where-needed
 backend boundary      = SvelteKit server functionality when required
 separate backend      = none initially
@@ -228,6 +248,49 @@ For new source:
 - keep the generated/project `tsconfig` aligned with the SvelteKit scaffold rather than inventing an independent TypeScript architecture.
 
 Exact package versions are fixed by the scaffold/lockfile when it is created, not guessed in Foundation.
+
+### Styling / design-token convention
+
+Use the smallest native styling ownership model:
+
+```text
+src/app.css
+→ true application-wide foundation only
+→ minimal reset/base behavior
+→ global document/body defaults
+→ durable semantic CSS custom properties
+
+*.svelte <style>
+→ component-specific appearance
+→ scoped by Svelte by default
+
+CSS custom properties
+→ shared semantic values / intentional parent-child styling contracts
+```
+
+Rules:
+
+- import the global stylesheet once from the root layout/application shell;
+- keep global CSS deliberately small; component appearance stays local unless the rule is genuinely application-wide;
+- create a design token only for a durable repeated semantic role, not for every literal pixel/color/value;
+- prefer semantic names such as `--surface-primary`, `--text-muted`, `--page-gutter`, or `--space-section` rather than prematurely generating large numeric scales;
+- exact token values are established during visual-direction work from authoritative brand evidence and rendered testing;
+- use CSS custom properties for deliberate parent-to-child styling contracts before reaching for broad global selector overrides;
+- use `:global(...)` only when scope must intentionally be crossed; do not use it as a normal styling path;
+- do not maintain parallel current systems such as global utility classes + a second token theme + local component overrides without a real requirement.
+
+Initial negative decisions:
+
+```text
+Tailwind / utility framework = no
+SCSS / Sass                  = no
+CSS-in-JS                    = no
+CSS Modules                  = no
+CSS preprocessor             = none initially
+component style framework    = none initially
+```
+
+These are not permanent ideological bans. Reconsider only if real source/workflow needs demonstrate that native Svelte/CSS ownership is insufficient and the added layer has a measurable maintenance/quality benefit.
 
 ### Server-only / private environment ownership
 
@@ -297,16 +360,16 @@ The following remain unresolved and must be decided separately from actual requi
 
 - exact Svelte/SvelteKit/Bun/TypeScript package versions until the scaffold is created;
 - SvelteKit deployment adapter and hosting provider;
-- styling and design-token implementation;
-- component/UI libraries;
-- animation libraries;
+- final visual direction and exact design-token values;
+- component/UI libraries if a real need later earns one;
+- animation libraries if native motion becomes insufficient;
 - exact content source/format;
 - analytics provider;
 - form/email/storage providers;
 - unit/component/E2E testing boundaries and tooling;
 - route-specific rendering choices beyond the approved static-first rule.
 
-Prefer SvelteKit/Svelte native capabilities before introducing overlapping dependencies. Prefer Bun for package installation and project commands according to the approved baseline, while preserving the framework's normal Vite/SvelteKit ownership. Do not create a generic framework/package-manager/backend specialist skill merely because SvelteKit + Bun are selected; project-specific skill creation still follows the recurring-responsibility gate.
+Prefer SvelteKit/Svelte/native CSS/browser capabilities before introducing overlapping dependencies. Prefer Bun for package installation and project commands according to the approved baseline, while preserving the framework's normal Vite/SvelteKit ownership. Do not create a generic framework/package-manager/backend specialist skill merely because SvelteKit + Bun are selected; project-specific skill creation still follows the recurring-responsibility gate.
 
 ## Evidence / acceptance requirements
 
@@ -356,4 +419,4 @@ Repository presence alone is not proof of visual, browser, deployment, integrati
 
 Portfolio evidence and studio-profile content remain intentionally deferred by the project owner.
 
-For the current technical-foundation track, TypeScript + modern Svelte 5 conventions are now approved. The next high-impact unknowns are styling/design-token implementation, mandatory quality tooling, asset/media handling, and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
+For the current technical-foundation track, TypeScript + modern Svelte 5 conventions and the native CSS/design-token ownership model are now approved. The next high-impact unknowns are mandatory quality tooling, asset/media handling, final visual direction/token values, and the first concrete form/server requirements. Adapter/hosting and production providers should be chosen only after those responsibilities are sufficiently defined.
