@@ -20,6 +20,8 @@ ENHANCED_IMG_LOCAL_RASTER_PIPELINE_APPROVED
 VISUAL_DIRECTION_BASELINE_ESTABLISHED
 DISCOVERABILITY_METADATA_POLICY_APPROVED
 DEPLOYMENT_REQUIREMENTS_APPROVED
+DEPLOYMENT_PROVIDER_SHORTLIST_READY
+CLOUDFLARE_PROVISIONAL_PREFERRED_NOT_LOCKED
 PRODUCTION_PROVIDER_NOT_SELECTED
 PRODUCTION_ADAPTER_NOT_SELECTED
 WEBSITE_RELEASE_SPECIALIST_BLOCKED
@@ -43,6 +45,8 @@ SCAFFOLD_RUNTIME_VALIDATION_PENDING
 LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 NON_LOCAL_DEFINITION_TRACK_ACTIVE
 INTEGRATION_DRY_RUN_DEFERRED
+BUSINESS_INQUIRY_WORKFLOW_NOT_DEFINED
+CAREERS_APPLICATION_WORKFLOW_NOT_DEFINED
 SERVICES_TAXONOMY_NOT_DEFINED
 INFORMATION_ARCHITECTURE_NOT_DEFINED
 PAGE_IMPLEMENTATION_NOT_READY
@@ -66,112 +70,139 @@ Chrome/runtime dry-run
 
 Do not fabricate install/build/browser proof. Resume only after explicit re-authorization.
 
-## Non-local foundations now established
-
-### Visual direction
+## Non-local foundations established
 
 ```text
 docs/foundation/04-visual-direction.md
-```
+→ Playful editorial game studio visual baseline
 
-Adopted thesis: **Playful editorial game studio**.
-
-### Discoverability / metadata
-
-```text
 docs/foundation/05-discoverability-metadata-policy.md
-```
+→ native Svelte metadata/canonical/sitemap/structured-data policy
 
-Native Svelte head ownership is the default; no SEO or sitemap package is required initially.
-
-### Content intake / audit
-
-```text
 docs/knowledge/content-intake-contract.md
-```
+→ authoritative project/studio evidence intake and audit contract
 
-Every future supplied project/studio item is logged before selection, including duplicates, rejected/deferred items, internal-only facts, and unresolved evidence.
-
-### Deployment / production requirements
-
-```text
 docs/foundation/06-deployment-production-requirements.md
+→ provider-neutral deployment requirements
+
+docs/knowledge/deployment-provider-comparison.md
+→ time-sensitive hosting shortlist and tradeoffs
 ```
 
-Provider-neutral requirements are now defined.
+## Deployment shortlist
 
-Two production modes remain intentionally possible:
+Current time-sensitive research indicates:
 
 ```text
-A. fully/static-prerendered site + external dynamic boundaries
-B. hybrid SvelteKit: static/prerender where possible + server actions/routes where needed
+1. Cloudflare
+   → strongest provisional fit
+   → NOT LOCKED
+
+2. Netlify
+   → strong balanced alternative
+
+3. Vercel Pro
+   → strong DX alternative
+   → Vercel Hobby is not suitable for Hellocraft production under current non-commercial-only terms
+
+4. Managed Node / adapter-node
+   → control/compatibility fallback
+
+Fully static adapter
+   → potentially simplest mode if all dynamic submission moves to external boundaries
 ```
 
-`adapter-auto` remains scaffold-only. Once a real target is chosen, replace it with the explicit matching adapter.
+Cloudflare currently leads provisionally because it combines strong static delivery, an official SvelteKit full-stack path, low paid-plan entry, and current Workers pricing without bandwidth/egress charges. This preference is deliberately not actionable yet.
 
-No provider is selected yet.
+Do **not**:
 
-## Production selection criteria
+- replace `adapter-auto`;
+- install Cloudflare/Vercel/Netlify tooling;
+- create a provider account/project;
+- deploy;
+- activate `website-release-development`.
 
-A future provider comparison must score real candidates against:
-
-```text
-SvelteKit adapter maturity
-static/prerender delivery
-future server/form compatibility
-custom domain + TLS
-redirect/canonical handling
-env/secrets
-asset caching/compression
-security-header/CSP control
-preview workflow
-logs/diagnostics when server features exist
-rollback/release safety
-cost/maintenance
-lock-in / migration difficulty
-```
-
-Do not choose a provider from popularity alone.
+Provider selection must be revisited once form/server responsibilities are known.
 
 ## Content boundary retained
 
-The project owner still has not supplied the authoritative portfolio/project inventory or Studio/About facts.
+The project owner still has not supplied authoritative Portfolio/Project inventory or Studio/About facts.
 
-Do not infer:
+Do not infer project names, clients, services taxonomy, metrics, final IA, or company facts from old conversations.
 
-- project names from old chats;
-- client/publisher/partner relationships;
-- services taxonomy;
-- case-study depth;
-- final IA/navigation;
-- homepage order;
-- metrics/testimonials;
-- company/team/legal facts.
+## Next non-local decision — business inquiry and careers workflow
 
-## Next non-local track
-
-The next useful non-runtime step is a **provider comparison / shortlist**, not deployment.
-
-Compare current realistic SvelteKit hosting targets against `06-deployment-production-requirements.md` while preserving both Mode A and Mode B.
-
-The comparison may include official SvelteKit-supported targets such as:
+The next architecture decision that can materially change hosting/server mode is the real submission responsibility for:
 
 ```text
-Cloudflare
-Vercel
-Netlify
-Node-hosted deployment
-static-only hosting where Mode A remains viable
+A. Business Inquiry / Contact
+B. Careers / Application
 ```
 
-Rules:
+Do not start by designing fields. First define the required outcome and minimum data flow.
 
-- use current official provider/SvelteKit documentation;
-- compare concrete capabilities/cost/limits relevant to Hellocraft;
-- do not pick a winner if unresolved Contact/Careers requirements materially affect the result;
-- distinguish `best now`, `best if server forms remain SvelteKit`, and `best if site becomes fully static` when those differ;
-- do not install or change adapters during research;
-- do not activate `website-release-development` yet.
+### Business Inquiry choices to resolve
+
+Possible architecture classes:
+
+```text
+1. direct channel only
+   → email / approved external contact channel
+   → no website form server responsibility
+
+2. external hosted/serverless form boundary
+   → website remains fully static-capable
+
+3. SvelteKit form action
+   → server runtime + validation + secrets + anti-spam/provider integration
+```
+
+Questions that materially change the decision:
+
+- Is a website form actually required, or is a direct business email/channel enough?
+- If a form exists, what minimum information must a potential client provide?
+- Does submission need acknowledgement/notification only, or persistent tracking/storage?
+- Is file upload ever required for business inquiry?
+- What abuse/spam level is acceptable?
+
+Do not assume CRM, scheduling, database, account creation, phone number, budget, or timeline fields.
+
+### Careers choices to resolve
+
+Possible architecture classes:
+
+```text
+1. careers information + external application link/email
+   → static-capable
+
+2. simple website application form without files
+   → external form or SvelteKit action
+
+3. application form with CV/portfolio file upload
+   → storage/upload/security/privacy responsibility becomes real
+```
+
+Questions that materially change the decision:
+
+- Are job openings listed individually or is there also a general application?
+- Is CV/resume file upload required, or are links sufficient?
+- Is portfolio URL enough for creative roles?
+- Is persistent applicant tracking required?
+- Which submitted personal data is truly necessary?
+
+Do not create storage/database/applicant-tracking architecture before those answers exist.
+
+## Why this is the next decision
+
+The answer directly determines whether Hellocraft should eventually prefer:
+
+```text
+fully static deployment
+vs
+hybrid SvelteKit deployment with server actions/routes
+```
+
+It also changes provider evaluation, privacy/security scope, and whether `website-release-development` becomes earned.
 
 ## Deferred runtime gate
 
@@ -188,4 +219,4 @@ bun install
 
 ## Next Step
 
-**Continue non-locally by comparing realistic SvelteKit deployment targets against the approved provider-neutral deployment requirements. Produce a shortlist with tradeoffs, but do not select/install a production adapter or activate release tooling until the unresolved server/form requirements are sufficiently known.**
+**Define the minimum Business Inquiry and Careers/Application outcomes before choosing form fields or providers. Use those decisions to determine whether the final production mode should stay fully-static-capable or require SvelteKit server actions. Keep provider/adapter selection and all local/runtime testing deferred until the project owner authorizes them.**
