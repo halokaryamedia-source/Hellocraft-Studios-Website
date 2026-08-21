@@ -1,9 +1,9 @@
-import { demoCareerOpenings, demoProofItems, demoStudioProofItems } from './demo-data';
+import { demoAboutProofItems, demoCareerOpenings, demoProofItems } from './demo-data';
 import type { LinkItem } from './types';
 
 // TEMPORARY DEVELOPMENT COPY
 // These strings exist to make page hierarchy, typography, spacing, and content rhythm buildable now.
-// Replace them with approved Hellocraft copy later without changing route architecture.
+// Replace them with approved Hellocraft copy later without changing the page structure.
 
 export const homeCopy = {
 	hero: {
@@ -13,13 +13,13 @@ export const homeCopy = {
 			'Hellocraft brings world design, gameplay thinking, and production together to shape clear, playable experiences.',
 		primaryActionLabel: 'View portfolio'
 	},
-	work: {
+	portfolio: {
 		title: 'Featured projects',
 		body: 'A development selection exploring atmosphere, play, and production detail across different Minecraft experiences.',
-		emptyState: 'Approved Hellocraft projects will appear here when the portfolio inventory is supplied.',
+		emptyState: 'Approved Hellocraft projects will appear here when the portfolio information is supplied.',
 		viewAllLabel: 'View portfolio'
 	},
-	studio: {
+	about: {
 		eyebrow: 'About',
 		title: 'Creative direction and production, kept close from the start.',
 		body:
@@ -27,13 +27,13 @@ export const homeCopy = {
 		actionLabel: 'About Hellocraft'
 	},
 	capabilities: {
-		eyebrow: 'How we think',
+		eyebrow: 'What we do',
 		title: 'From world design to playable systems.',
 		body:
 			'Each project can ask for a different mix of creative and technical work. The structure stays flexible so the experience, not a fixed service menu, leads the process.'
 	},
 	proof: {
-		title: 'A place for real proof'
+		title: 'Experience and results'
 	},
 	contact: {
 		eyebrow: 'Contact',
@@ -53,9 +53,6 @@ export const portfolioCopy = {
 	emptyState: 'Approved projects will appear here.'
 } as const;
 
-// Legacy internal alias while old /work redirect remains in source.
-export const workCopy = portfolioCopy;
-
 export const aboutCopy = {
 	hero: {
 		eyebrow: 'About',
@@ -64,14 +61,14 @@ export const aboutCopy = {
 			'Hellocraft brings creative and technical production together around the experience players actually see, understand, and play.'
 	},
 	capabilities: {
-		eyebrow: 'Capabilities',
-		title: 'Different projects need different combinations of craft.',
+		eyebrow: 'What we do',
+		title: 'Different projects need different combinations of skills.',
 		body:
-			'Worlds, gameplay, art, and production can overlap in different ways. The final capability language will be grounded in the real project portfolio.'
+			'Worlds, gameplay, art, and production can overlap in different ways. The final description will be based on the real project portfolio.'
 	},
 	approach: {
 		eyebrow: 'How we work',
-		title: 'Keep the idea clear while the production gets real.',
+		title: 'Keep the idea clear while production moves forward.',
 		body:
 			'We prefer practical decisions, direct communication, and a close connection between what is being built and how it should feel to play.'
 	},
@@ -81,12 +78,9 @@ export const aboutCopy = {
 	contact: {
 		title: 'Build something with Hellocraft.',
 		body: 'If the project needs Minecraft thinking from the start, we can begin with the idea and the constraints around it.',
-		actionLabel: 'Get in touch'
+		actionLabel: 'Contact us'
 	}
 } as const;
-
-// Legacy internal alias while old /studio redirect remains in source.
-export const studioCopy = aboutCopy;
 
 export const careersCopy = {
 	hero: {
@@ -96,12 +90,12 @@ export const careersCopy = {
 			'This page is being prepared for future Hellocraft openings across the creative and technical work behind Minecraft experiences.'
 	},
 	openings: {
-		title: 'Open roles',
-		emptyState: 'No approved openings have been published yet.'
+		title: 'Open positions',
+		emptyState: 'There are no current job openings.'
 	},
 	general: {
-		eyebrow: 'Work with us',
-		title: 'A place for people who care about craft, play, and collaboration.',
+		eyebrow: 'Join our team',
+		title: 'For people who care about quality, play, and teamwork.',
 		body:
 			'We value people who can think clearly about their part of the work while staying connected to the experience the whole team is building.'
 	},
@@ -117,10 +111,10 @@ export const contactCopy = {
 		eyebrow: 'Contact',
 		title: 'Tell us what you want to build.',
 		body:
-			'Share the idea, audience, scope, or production problem. The approved public contact route will live here when it is ready.'
+			'Share the idea, audience, scope, or production problem. The approved public contact details will be listed here when they are ready.'
 	},
 	methods: {
-		title: 'Contact channels',
+		title: 'Contact information',
 		emptyState: 'Public Hellocraft contact details are being prepared.'
 	},
 	inquiry: {
@@ -135,7 +129,7 @@ export const footerCopy = {
 } as const;
 
 export const proofItems = demoProofItems;
-export const studioProofItems = demoStudioProofItems;
+export const aboutProofItems = demoAboutProofItems;
 export const careerOpenings = demoCareerOpenings;
 
 // Public links are intentionally not fabricated. Add only approved real contact channels.
