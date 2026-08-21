@@ -1,105 +1,83 @@
-# Documentation Architecture
+# Project Documentation
 
-Current documentation ownership for the Hellocraft Studios Website.
+This folder contains the current project guides for the Hellocraft Studios Website.
 
-## Principle
+## Main files
 
 ```text
-real current responsibility
-→ one current owner
+README.md
+→ project overview for people opening the repository
 
-no current responsibility
-→ no file
+CONTEXT.md
+→ current project state
+
+docs/knowledge/next-action.md
+→ immediate next steps
 ```
 
-Git history owns ordinary historical versions. Current files describe current truth.
-
-## Layers
-
-| Layer | Responsibility |
-|---|---|
-| `README.md` | human project entrypoint |
-| `CONTEXT.md` | stable cross-session orientation |
-| `docs/foundation/` | durable project/product/technical/design architecture |
-| `docs/knowledge/` | current operational evidence, audits, references, and continuation |
-| `.agents/skills/` | reusable project development/validation procedures |
-| `src/` | current website source behavior/presentation |
-
-## Current Foundation owners
+## Foundation guides
 
 ```text
 docs/foundation/01-project-overview.md
-→ purpose, positioning, audience, scope, evidence boundaries
+→ website purpose, audience, and scope
 
 docs/foundation/02-product-requirements.md
-→ observable product/technical requirements and acceptance boundaries
+→ product and technical requirements
 
 docs/foundation/03-media-performance-policy.md
-→ asset/media ownership, image/video/font delivery, performance proof
+→ image, video, font, and performance rules
 
 docs/foundation/04-visual-direction.md
-→ durable Playful Editorial Game Studio art-direction baseline
+→ approved visual direction
 
 docs/foundation/05-discoverability-metadata-policy.md
-→ title/meta/canonical/sitemap/robots/structured-data rules
+→ page titles, metadata, robots, sitemap, and search rules
 
 docs/foundation/06-deployment-production-requirements.md
-→ provider-neutral future deployment requirements; hosting track currently deferred
+→ deployment requirements for later
 
-docs/foundation/07-information-content-architecture.md
-→ routes, navigation, page responsibilities, demo-content boundary, content-source ownership
+docs/foundation/07-page-structure.md
+→ public pages, navigation, and page responsibilities
 ```
 
-## Current Knowledge owners
+## Working guides
 
 ```text
-docs/knowledge/next-action.md
-→ active continuation and current deferred/ready state
+docs/knowledge/content-review-guide.md
+→ how incoming project/company/media information should be checked
 
-docs/knowledge/frontend-reference-inventory.md
-→ complete supplied frontend/design reference audit
+docs/knowledge/content-inventory.md
+→ what real content/media is currently available or missing
 
-docs/knowledge/content-intake-contract.md
-→ authoritative content evidence/publication/editorial intake rules
-
-docs/knowledge/visual-source-implementation.md
-→ current source-level visual implementation notes
+docs/knowledge/content-update-guide.md
+→ where to replace temporary content with final content
 
 docs/knowledge/accessibility-source-audit.md
-→ current non-runtime semantic/accessibility source audit
+→ source-level accessibility review
 
 docs/knowledge/deployment-provider-comparison.md
-→ time-sensitive provider research only; not current hosting authority
+→ hosting research for later; not a final provider decision
+
+docs/knowledge/frontend-reference-inventory.md
+→ design references that were reviewed earlier
 ```
 
-Do not create generic worklogs/backlogs/review archives as parallel owners.
+Historical design notes may remain in `docs/knowledge/` for context, but current work should follow `CONTEXT.md`, `next-action.md`, and the current source.
 
-## Current implementation boundary
-
-The project owner currently wants:
+## Current workflow
 
 ```text
-architecture + presentation first
-→ temporary clearly-labelled demo content allowed
-→ real text/data/media later
+approved pages
+→ collect real content/media
+→ review and organize it
+→ update website content
+→ final responsive/accessibility/performance review
+→ build/browser testing
+→ deployment
 ```
 
-The project owner currently defers:
+## Demo content
 
-```text
-local/runtime testing
-bun install / bun.lock generation
-browser acceptance
-hosting/provider selection
-production adapter selection
-```
+Temporary content is allowed only for development and must not be mistaken for real Hellocraft information.
 
-Source-level work may continue where correctness can be established from current project authority and source inspection. Do not relabel source inspection as build/browser/runtime proof.
-
-## Demo-content rule
-
-Temporary demo content may be used to shape layout only when it is clearly separated from real Hellocraft evidence.
-
-Real-looking clients, metrics, testimonials, public contact details, or other factual claims must never be fabricated.
-
-`contentIsDemo = true` remains the publication guard until real public content replaces development content.
+`contentIsDemo = true` remains enabled until the public content is ready.
