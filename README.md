@@ -4,37 +4,81 @@ Official website project for **Hellocraft Studios**, a game studio focused on Mi
 
 ## Current purpose
 
-The website is intended to serve as Hellocraft Studios' official web presence and to:
+The website is intended to:
 
-- present the studio clearly and credibly;
-- show real work through a portfolio;
+- present Hellocraft Studios clearly and credibly;
+- show approved real work through a portfolio;
 - help relevant visitors understand what Hellocraft can provide;
-- improve discoverability and support client acquisition;
-- provide a clear route for business inquiries, collaboration, and recruitment when those surfaces are later defined.
+- support discoverability and client acquisition;
+- provide business, collaboration, and recruitment paths when those product surfaces are defined.
 
 ## Current positioning
 
 > **Hellocraft Studios is a game studio focused on Minecraft.**
 
-This is the current positioning baseline, not final marketing copy or a final homepage tagline.
+This is the positioning baseline, not final homepage copy.
 
 ## Current project state
 
 ```text
 FOUNDATION_BASELINE_ESTABLISHED
+TECHNICAL_FOUNDATION_APPROVED
+CONTENT_AGNOSTIC_SCAFFOLD_SOURCE_CREATED
+BUN_INSTALL_AND_LOCK_PENDING
+SCAFFOLD_VALIDATION_PENDING
 PORTFOLIO_EVIDENCE_PENDING
-NOT DEVELOPMENT READY
+PAGE_IMPLEMENTATION_NOT_READY
 ```
 
-The project is still in definition. Portfolio/project inventory is intentionally deferred until the project owner supplies the list. Services/capability taxonomy, final information architecture, homepage structure, visual direction, functional requirements, and technical stack are not yet approved.
+The repository now contains the minimal SvelteKit technical scaffold. It intentionally does **not** contain final page architecture, portfolio content, services taxonomy, navigation, or final visual design.
+
+The first verified Bun install still needs to generate `bun.lock`, after which the mandatory technical gate must pass before the integration dry-run or page-specific implementation begins.
+
+## Approved technical baseline
+
+```text
+framework              = SvelteKit
+UI/runtime             = Svelte 5 + TypeScript
+Svelte convention      = modern runes-first
+package manager        = Bun
+styling                = native CSS + Svelte scoped styles
+shared tokens          = CSS Custom Properties
+quality gate           = bun run validate
+local raster pipeline  = @sveltejs/enhanced-img
+rendering              = static/prerender-first, server-where-needed
+backend                = SvelteKit server only when needed
+database               = none initially
+```
+
+## Local commands
+
+After Bun is available:
+
+```bash
+bun install
+bun run dev
+bun run validate
+```
+
+`bun run validate` is the mandatory non-mutating acceptance gate:
+
+```text
+format:check
+→ lint
+→ svelte-check
+→ build
+```
+
+Do not treat `bun run format` or another source-mutating fixer as completion proof.
 
 ## Repository authority
 
 - Working/development authority: `Local`.
 - Do not silently use the repository default branch or another ref for current work.
-- Current project truth belongs in `docs/foundation/`.
+- Durable product/technical policy belongs in `docs/foundation/`.
 - Active continuation belongs in `docs/knowledge/next-action.md`.
 - Stable cross-session orientation belongs in `CONTEXT.md`.
+- Detailed task/skill routing belongs in `AGENTS.md`.
 
 ## Current documentation
 
@@ -43,10 +87,13 @@ docs/foundation/01-project-overview.md
 → durable project purpose, audience, positioning, scope, and unknowns
 
 docs/foundation/02-product-requirements.md
-→ current observable website requirements and negative requirements
+→ current website requirements, technical baseline, and negative requirements
+
+docs/foundation/03-media-performance-policy.md
+→ image/video/font ownership, delivery, and performance-proof policy
 
 docs/knowledge/next-action.md
 → one active continuation point
 ```
 
-Do not create source code, speculative architecture, service taxonomies, placeholder pages, or project-specific specialist skills merely to make the repository look complete.
+Do not invent project content, services, product behavior, dependencies, or additional architecture merely to make the repository look complete.
