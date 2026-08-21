@@ -12,20 +12,25 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="home-title">
 		<div class="shell hero__inner">
-			<div class="hero__masthead">
+			<div class="hero__statement">
 				<div class="hero__heading">
 					<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
 					<h1 id="home-title">{homeCopy.hero.title}</h1>
 				</div>
 
-				<div class="hero__aside">
+				<div class="hero__support">
 					<p>{homeCopy.hero.body}</p>
 					<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
 				</div>
 			</div>
 
-			<div class="hero__media" aria-hidden="true">
-				<ProjectMediaPlaceholder variant="hero" tone="dark" />
+			<div class="hero__visual" aria-hidden="true">
+				<div class="hero__visual-main">
+					<ProjectMediaPlaceholder tone="dark" />
+				</div>
+				<div class="hero__visual-brand">
+					<ProjectMediaPlaceholder tone="brand" />
+				</div>
 			</div>
 		</div>
 	</section>
@@ -43,9 +48,11 @@
 			{#if featuredProjects[0]}
 				{@const project = featuredProjects[0]}
 				<article class="lead-project">
-					<a class="project-media-link" href={`/work/${project.slug}`} aria-label={`View ${project.title}`}>
-						<ProjectMediaPlaceholder tone="dark" />
-					</a>
+					<div class="lead-project__media">
+						<a class="project-media-link" href={`/work/${project.slug}`} aria-label={`View ${project.title}`}>
+							<ProjectMediaPlaceholder tone="dark" />
+						</a>
+					</div>
 
 					<div class="lead-project__caption">
 						<h3><a href={`/work/${project.slug}`}>{project.title}</a></h3>
@@ -117,11 +124,11 @@
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(3.5rem, 7vw, 6.5rem);
-		padding-block: clamp(4.5rem, 8vw, 7.5rem) clamp(3rem, 5vw, 4.5rem);
+		gap: clamp(4rem, 8vw, 7rem);
+		padding-block: clamp(5rem, 8vw, 7.5rem) clamp(4.5rem, 7vw, 6.5rem);
 	}
 
-	.hero__masthead {
+	.hero__statement {
 		display: grid;
 		grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.55fr);
 		gap: clamp(3rem, 8vw, 8rem);
@@ -134,14 +141,14 @@
 	}
 
 	.hero h1 {
-		max-width: 12.5ch;
+		max-width: 11.5ch;
 		margin: 0;
-		font-size: clamp(3.8rem, 6.4vw, 6.35rem);
+		font-size: clamp(4rem, 6.8vw, 6.8rem);
 		font-weight: 700;
-		line-height: 0.94;
+		line-height: 0.92;
 	}
 
-	.hero__aside {
+	.hero__support {
 		display: grid;
 		gap: 1.5rem;
 		align-content: end;
@@ -149,7 +156,7 @@
 		padding-bottom: 0.35rem;
 	}
 
-	.hero__aside p {
+	.hero__support p {
 		max-width: 30rem;
 		margin: 0;
 		color: var(--text-muted);
@@ -157,13 +164,24 @@
 		line-height: 1.6;
 	}
 
-	.hero__media {
+	.hero__visual {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.28fr);
+		gap: clamp(1rem, 2.5vw, 2.25rem);
+		align-items: end;
+	}
+
+	.hero__visual-main,
+	.hero__visual-brand {
 		overflow: hidden;
-		background: var(--ink);
+	}
+
+	.hero__visual-brand {
+		margin-bottom: clamp(1.25rem, 3vw, 3rem);
 	}
 
 	.work-section {
-		padding-block: clamp(5.5rem, 9vw, 9rem);
+		padding-block: clamp(6rem, 10vw, 10rem);
 		background: var(--paper);
 	}
 
@@ -172,7 +190,7 @@
 		grid-template-columns: minmax(10rem, 0.55fr) minmax(18rem, 0.45fr);
 		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: start;
-		margin-bottom: clamp(3.5rem, 7vw, 6rem);
+		margin-bottom: clamp(4rem, 8vw, 7rem);
 	}
 
 	.work-heading h2 {
@@ -203,7 +221,11 @@
 
 	.lead-project {
 		display: grid;
-		gap: clamp(1.75rem, 3vw, 2.5rem);
+		gap: clamp(2rem, 4vw, 3rem);
+	}
+
+	.lead-project__media {
+		width: min(100%, 75rem);
 	}
 
 	.lead-project__caption {
@@ -220,8 +242,8 @@
 
 	.lead-project h3 {
 		max-width: 15ch;
-		font-size: clamp(2.6rem, 4.7vw, 4.6rem);
-		line-height: 0.98;
+		font-size: clamp(2.65rem, 4.8vw, 4.7rem);
+		line-height: 0.97;
 	}
 
 	.lead-project h3 a,
@@ -259,52 +281,47 @@
 
 	.secondary-project {
 		display: grid;
-		grid-template-columns: minmax(18rem, 0.7fr) minmax(0, 1.3fr);
-		gap: clamp(3rem, 8vw, 8rem);
+		grid-template-columns: minmax(18rem, 0.68fr) minmax(0, 1.32fr);
+		gap: clamp(3.5rem, 9vw, 9rem);
 		align-items: center;
-		padding-top: clamp(5rem, 9vw, 8.5rem);
+		padding-top: clamp(6.5rem, 11vw, 11rem);
 	}
 
 	.secondary-project h3 {
 		max-width: 13ch;
-		font-size: clamp(2.2rem, 3.4vw, 3.35rem);
-		line-height: 1;
+		font-size: clamp(2.25rem, 3.5vw, 3.45rem);
+		line-height: 0.99;
 	}
 
 	.studio-section {
-		padding-block: clamp(6rem, 10vw, 10rem);
-		background: var(--ink);
-		color: var(--surface);
+		padding-block: clamp(6rem, 10vw, 9.5rem);
+		background: var(--surface-secondary);
+		color: var(--ink);
 	}
 
 	.studio-grid {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: start;
 	}
 
 	.studio-heading {
 		display: grid;
-		gap: 1.2rem;
-	}
-
-	.studio-heading .eyebrow,
-	.capability-note .eyebrow {
-		color: rgb(255 253 248 / 58%);
+		gap: 1.1rem;
 	}
 
 	.studio-heading h2 {
 		max-width: 13.5ch;
 		margin: 0;
-		font-size: clamp(3rem, 5.3vw, 5.25rem);
+		font-size: clamp(2.9rem, 4.9vw, 4.8rem);
 		font-weight: 680;
 		line-height: 0.98;
 	}
 
 	.studio-copy {
 		display: grid;
-		gap: clamp(2.5rem, 5vw, 4.5rem);
+		gap: clamp(2.75rem, 5vw, 4.5rem);
 		padding-top: 0.4rem;
 	}
 
@@ -312,39 +329,31 @@
 	.capability-note > p:last-child {
 		max-width: var(--measure);
 		margin: 0;
-		color: rgb(255 253 248 / 72%);
+		color: var(--text-muted);
 	}
 
 	.studio-intro {
-		font-size: clamp(1.08rem, 1.45vw, 1.25rem);
-		line-height: 1.55;
+		font-size: clamp(1.08rem, 1.4vw, 1.22rem);
+		line-height: 1.58;
 	}
 
 	.capability-note {
 		display: grid;
 		gap: 0.9rem;
+		padding-top: 1.75rem;
+		border-top: 1px solid var(--border);
 	}
 
 	.capability-note h3 {
 		max-width: 18ch;
 		margin: 0;
-		font-size: clamp(1.8rem, 2.8vw, 2.65rem);
+		font-size: clamp(1.75rem, 2.7vw, 2.55rem);
 		font-weight: 640;
 		line-height: 1.05;
 	}
 
-	.studio-section .text-link {
-		color: var(--surface);
-		text-decoration-color: rgb(255 253 248 / 38%);
-	}
-
-	.studio-section .text-link:hover,
-	.studio-section .text-link:focus-visible {
-		text-decoration-color: currentColor;
-	}
-
 	.contact-section {
-		padding-block: clamp(5.5rem, 9vw, 8.5rem);
+		padding-block: clamp(6rem, 10vw, 9rem);
 		background: var(--surface);
 	}
 
@@ -363,7 +372,7 @@
 	.contact-heading h2 {
 		max-width: 13ch;
 		margin: 0;
-		font-size: clamp(2.8rem, 5vw, 4.8rem);
+		font-size: clamp(2.75rem, 4.7vw, 4.6rem);
 		font-weight: 680;
 		line-height: 0.99;
 	}
@@ -399,7 +408,7 @@
 	}
 
 	@media (max-width: 64rem) {
-		.hero__masthead,
+		.hero__statement,
 		.work-heading,
 		.lead-project__caption,
 		.secondary-project,
@@ -408,19 +417,23 @@
 			grid-template-columns: 1fr;
 		}
 
-		.hero__masthead,
+		.hero__statement,
 		.studio-grid {
 			gap: 2.75rem;
 		}
 
-		.hero__aside,
+		.hero__support,
 		.work-heading__aside,
 		.contact-copy {
 			max-width: 38rem;
 		}
 
+		.hero__visual {
+			grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.34fr);
+		}
+
 		.secondary-project {
-			gap: 2rem;
+			gap: 2.25rem;
 		}
 
 		.secondary-project__copy {
@@ -434,22 +447,38 @@
 
 	@media (max-width: 46rem) {
 		.hero__inner {
-			gap: 3rem;
+			gap: 3.5rem;
 			padding-top: 3.75rem;
 		}
 
 		.hero h1 {
-			font-size: clamp(3.05rem, 13vw, 4.6rem);
-			line-height: 0.96;
+			font-size: clamp(3.1rem, 13.5vw, 4.75rem);
+			line-height: 0.95;
+		}
+
+		.hero__visual {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.hero__visual-brand {
+			width: 58%;
+			margin-top: -1.75rem;
+			margin-bottom: 0;
+			justify-self: end;
 		}
 
 		.lead-project h3 {
 			font-size: clamp(2.45rem, 11vw, 3.6rem);
 		}
 
+		.secondary-project {
+			padding-top: 6rem;
+		}
+
 		.studio-heading h2,
 		.contact-heading h2 {
-			font-size: clamp(2.7rem, 11.5vw, 3.75rem);
+			font-size: clamp(2.65rem, 11.5vw, 3.7rem);
 		}
 	}
 </style>
