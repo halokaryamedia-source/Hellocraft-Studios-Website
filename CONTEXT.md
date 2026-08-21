@@ -51,7 +51,7 @@ Adopted characteristics:
 ```text
 concise confident hero statements
 game/project media as primary visual evidence
-large project surfaces
+large project surfaces where project evidence warrants them
 content-led hierarchy rather than decorative systems
 clear studio and capability credibility
 minimal decorative UI around game work
@@ -64,46 +64,57 @@ Rejected patterns:
 ```text
 numbered chapter progression
 repeated editorial chapter treatments
-uniform card grids when project hierarchy differs
+uniform card grids when content hierarchy differs
 fake KPI strips
 glassmorphism / bento-by-default / pill-heavy UI
 manufactured asymmetry
 fake HUD / coordinates / inventory UI
 Minecraft pixel UI as global site chrome
 literal copying of Hazelight or Blind Squirrel layouts/assets
+fabricated client, award, team-size, contact, or recruitment claims
 ```
 
-## Approved / accepted route baselines
+## Accepted route baselines
 
-The project owner has approved the current direction sufficiently to continue through:
+The project owner has accepted the direction sufficiently to continue propagation through:
 
 ```text
 Homepage
 Work
 Project Detail
+Studio
 ```
 
-Homepage remains the primary visual grammar. Work is the approved portfolio-index interpretation. Project Detail is accepted as the current project-detail interpretation for continued propagation.
+Homepage remains the primary visual grammar. Work, Project Detail, and Studio are route-specific interpretations of that grammar.
 
-Do not redesign these routes from model taste while propagating later pages.
+Do not redesign accepted routes from model taste while finishing the remaining pages.
 
-## Current Studio state
+## Current Careers state
 
-`src/routes/studio/+page.svelte` has now been visually propagated from the accepted route grammar.
+`src/routes/careers/+page.svelte` has now been visually propagated.
 
-Current Studio composition:
+Current Careers composition:
 
 ```text
-restrained Studio introduction
-→ capability narrative on the paper surface
-→ working approach on a neutral secondary surface
-→ optional verified proof only outside demo mode
-→ simple Contact closing
+restrained Careers introduction
+→ studio/culture statement on neutral secondary surface
+→ compact Open roles section
+→ approved real openings render as editorial rows
+→ simple How to apply closing
 ```
 
-The old Studio route used a title up to 10rem and repeated large split sections with a dark chapter block. Those chapter-like patterns have been removed.
+Important publication safety:
 
-Studio is implemented and pending project-owner review. Careers and Contact have not yet been visually propagated.
+```text
+contentIsDemo = true
+→ demoCareerOpenings remain development data only
+→ demo roles are NOT rendered as public vacancies
+→ Careers shows the approved empty state instead
+```
+
+Careers is implemented and pending project-owner visual approval.
+
+Contact remains the only route not yet visually propagated.
 
 ## Brand / content state
 
@@ -132,7 +143,7 @@ src/lib/content/demo-data.ts
 → temporary proof and careers data
 
 src/lib/content/site.ts
-→ site identity, navigation, approved public/social links
+→ site identity, navigation, approved public/social/contact values
 
 src/lib/components/brand/BrandLockup.svelte
 src/lib/components/brand/BrandSymbol.svelte
@@ -200,8 +211,6 @@ chrome-devtools-validation
 
 Source-level accessibility foundations are present. Rendered keyboard, reflow, contrast, final visual hierarchy, build, and performance proof remain pending.
 
-Project Detail and Studio layout-proxy screenshot attempts stalled in the current Chromium environment; do not treat source inspection as rendered/runtime proof.
-
 ## Current project-owner boundary
 
 The project owner explicitly deferred:
@@ -228,13 +237,13 @@ dummy content mode                   = active
 Hazelight + Blind Squirrel direction = approved
 Homepage visual baseline             = APPROVED
 Work visual baseline                 = APPROVED
-Project Detail route baseline        = accepted to continue
-Studio visual propagation            = implemented / review-ready
-Careers visual propagation           = pending
+Project Detail direction             = accepted to continue
+Studio direction                     = accepted to continue
+Careers visual propagation           = implemented / review-ready
 Contact visual propagation           = pending
 brand replacement surface            = ready
 real text/data/media                 = pending
 hosting/runtime proof                = deferred
 ```
 
-The project is now primarily a **route propagation → production content/media → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
+The project is now primarily a **finish route propagation → production content/media → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
