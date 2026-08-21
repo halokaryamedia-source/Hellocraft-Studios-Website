@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { contentIsDemo } from '$lib/content/demo';
 	import { careerOpenings, careersCopy } from '$lib/content/pages';
 </script>
 
@@ -10,116 +11,168 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="careers-title">
 		<div class="shell hero__inner">
-			<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
-			<h1 id="careers-title">{careersCopy.hero.title}</h1>
-			<p class="hero__body">{careersCopy.hero.body}</p>
+			<div class="hero__heading">
+				<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
+				<h1 id="careers-title">{careersCopy.hero.title}</h1>
+			</div>
+
+			<div class="hero__support">
+				<p>{careersCopy.hero.body}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="general" aria-labelledby="careers-general-title">
+		<div class="shell section-layout">
+			<div class="section-heading">
+				<p class="eyebrow">{careersCopy.general.eyebrow}</p>
+				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
+			</div>
+
+			<div class="section-copy section-copy--lead">
+				<p>{careersCopy.general.body}</p>
+			</div>
 		</div>
 	</section>
 
 	<section class="openings" aria-labelledby="career-openings-title">
 		<div class="shell openings__inner">
-			<div class="section-heading">
+			<div class="openings__heading">
 				<p class="eyebrow">Roles</p>
 				<h2 id="career-openings-title">{careersCopy.openings.title}</h2>
 			</div>
 
-			{#if careerOpenings.length > 0}
-				<div class="opening-list">
-					{#each careerOpenings as opening (opening.id)}
-						<article class="opening">
-							<div class="opening__copy">
-								<h3>{opening.title}</h3>
-								<p>{opening.summary}</p>
-							</div>
-							<div class="opening__meta">
-								{#if opening.location || opening.engagement}
-									<p>{opening.location ?? ''}{opening.location && opening.engagement ? ' · ' : ''}{opening.engagement ?? ''}</p>
-								{/if}
-								{#if opening.href}<a class="text-link" href={opening.href}>View role</a>{/if}
-							</div>
-						</article>
-					{/each}
-				</div>
-			{:else}
-				<p class="pending-state">{careersCopy.openings.emptyState}</p>
-			{/if}
-		</div>
-	</section>
+			<div class="openings__content">
+				{#if !contentIsDemo && careerOpenings.length > 0}
+					<div class="opening-list">
+						{#each careerOpenings as opening (opening.id)}
+							<article class="opening">
+								<div class="opening__main">
+									<h3>{opening.title}</h3>
+									<p>{opening.summary}</p>
+								</div>
 
-	<section class="general" aria-labelledby="careers-general-title">
-		<div class="shell split">
-			<div>
-				<p class="eyebrow">{careersCopy.general.eyebrow}</p>
-				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
+								<div class="opening__aside">
+									{#if opening.location || opening.engagement}
+										<p class="opening__meta">
+											{opening.location ?? ''}{opening.location && opening.engagement ? ' · ' : ''}{opening.engagement ?? ''}
+										</p>
+									{/if}
+									{#if opening.href}<a class="text-link" href={opening.href}>View role</a>{/if}
+								</div>
+							</article>
+						{/each}
+					</div>
+				{:else}
+					<p class="pending-state">{careersCopy.openings.emptyState}</p>
+				{/if}
 			</div>
-			<p>{careersCopy.general.body}</p>
 		</div>
 	</section>
 
 	<section class="application" aria-labelledby="careers-application-title">
-		<div class="shell split">
-			<div>
+		<div class="shell application__inner">
+			<div class="application__heading">
 				<p class="eyebrow">Application</p>
 				<h2 id="careers-application-title">{careersCopy.application.title}</h2>
 			</div>
-			<p>{careersCopy.application.body}</p>
+
+			<div class="application__copy">
+				<p>{careersCopy.application.body}</p>
+			</div>
 		</div>
 	</section>
 </main>
 
 <style>
 	.hero {
-		border-bottom: 1px solid var(--border);
-		background: var(--paper);
+		background: var(--surface);
 	}
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(1.5rem, 4vw, 3rem);
-		padding-block: clamp(5rem, 10vw, 10rem);
+		grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+		gap: clamp(3rem, 8vw, 8rem);
+		align-items: end;
+		padding-block: clamp(5rem, 8vw, 7.5rem) clamp(5.5rem, 9vw, 8rem);
+	}
+
+	.hero__heading,
+	.section-heading,
+	.openings__heading,
+	.application__heading {
+		display: grid;
+		gap: 1rem;
 	}
 
 	h1 {
 		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(4.5rem, 10vw, 10rem);
-		line-height: 0.84;
+		font-size: clamp(3.6rem, 6vw, 6rem);
+		line-height: 0.94;
 	}
 
-	.hero__body {
-		max-width: 43rem;
+	.hero__support {
+		display: grid;
+		align-content: end;
+		padding-bottom: 0.35rem;
+	}
+
+	.hero__support p,
+	.section-copy p,
+	.application__copy p {
+		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.openings,
-	.general,
-	.application {
-		padding-block: var(--space-section);
+	.hero__support p,
+	.section-copy--lead p {
+		font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+		line-height: 1.58;
+	}
+
+	.general {
+		padding-block: clamp(6rem, 10vw, 9.5rem);
+		background: var(--surface-secondary);
+	}
+
+	.section-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
+		gap: clamp(4rem, 10vw, 10rem);
+		align-items: start;
+	}
+
+	.section-heading h2,
+	.openings__heading h2,
+	.application__heading h2 {
+		max-width: 15ch;
+		margin: 0;
+		font-size: clamp(2.75rem, 4.7vw, 4.6rem);
+		font-weight: 680;
+		line-height: 0.98;
+	}
+
+	.section-copy {
+		padding-top: 0.3rem;
 	}
 
 	.openings {
-		background: var(--surface);
+		padding-block: clamp(6rem, 10vw, 9rem);
+		background: var(--paper);
 	}
 
 	.openings__inner {
 		display: grid;
-		grid-template-columns: minmax(0, 0.65fr) minmax(18rem, 1.35fr);
-		gap: clamp(2rem, 8vw, 8rem);
+		grid-template-columns: minmax(12rem, 0.48fr) minmax(0, 1.52fr);
+		gap: clamp(4rem, 10vw, 10rem);
+		align-items: start;
 	}
 
-	.section-heading,
-	.split > div {
-		display: grid;
-		align-content: start;
-		gap: 0.8rem;
-	}
-
-	h2 {
-		max-width: 12ch;
-		margin: 0;
-		font-size: clamp(3rem, 6.5vw, 6.5rem);
-		line-height: 0.9;
+	.openings__heading h2 {
+		font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+		line-height: 1.02;
 	}
 
 	.opening-list {
@@ -128,82 +181,118 @@
 
 	.opening {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(11rem, 0.35fr);
-		gap: clamp(1rem, 4vw, 3rem);
+		grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.3fr);
+		gap: clamp(2rem, 5vw, 5rem);
 		align-items: start;
-		padding-block: clamp(1.5rem, 3vw, 2.5rem);
+		padding-block: clamp(2rem, 3.5vw, 3rem);
 		border-bottom: 1px solid var(--border);
 	}
 
-	.opening__copy {
+	.opening__main,
+	.opening__aside {
 		display: grid;
-		gap: 0.7rem;
+		align-content: start;
+		justify-items: start;
+	}
+
+	.opening__main {
+		gap: 0.9rem;
+	}
+
+	.opening__aside {
+		gap: 1rem;
 	}
 
 	.opening h3 {
+		max-width: 17ch;
 		margin: 0;
-		font-size: clamp(1.8rem, 3.6vw, 3.6rem);
-		line-height: 0.92;
+		font-size: clamp(1.8rem, 3vw, 2.9rem);
+		font-weight: 670;
+		line-height: 1;
 	}
 
-	.opening__copy p,
-	.opening__meta p {
+	.opening__main p,
+	.opening__meta {
+		max-width: 38rem;
 		margin: 0;
 		color: var(--text-muted);
 	}
 
 	.opening__meta {
-		display: grid;
-		gap: 0.75rem;
-		justify-items: start;
-	}
-
-	.opening__meta .text-link {
-		font-size: 0.7rem;
+		font-size: 0.86rem;
+		font-weight: 600;
 	}
 
 	.pending-state {
-		padding-block: 2rem;
+		margin: 0;
+		padding-block: clamp(2rem, 4vw, 3rem);
 		border-block: 1px solid var(--border);
 		color: var(--text-muted);
-	}
-
-	.general {
-		background: var(--paper);
+		font-size: clamp(1rem, 1.3vw, 1.1rem);
 	}
 
 	.application {
-		background: var(--ink);
-		color: var(--surface);
+		padding-block: clamp(5.5rem, 8vw, 7.5rem);
+		background: var(--surface);
 	}
 
-	.split {
+	.application__inner {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
-		gap: clamp(2rem, 8vw, 8rem);
-		align-items: start;
+		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+		gap: clamp(3rem, 9vw, 9rem);
+		align-items: end;
+		padding-top: clamp(2rem, 4vw, 3rem);
+		border-top: 1px solid var(--border);
 	}
 
-	.split > p {
-		max-width: var(--measure);
-		margin: 0;
-		color: var(--text-muted);
+	.application__copy {
+		display: grid;
+		align-content: end;
+		padding-bottom: 0.3rem;
 	}
 
-	.application .split > p {
-		color: rgb(255 255 255 / 58%);
+	.application__copy p {
+		font-size: clamp(1rem, 1.25vw, 1.1rem);
 	}
 
 	@media (max-width: 64rem) {
+		.hero__inner,
+		.section-layout,
 		.openings__inner,
-		.split {
+		.application__inner {
 			grid-template-columns: 1fr;
+		}
+
+		.hero__inner,
+		.section-layout {
+			gap: 2.75rem;
+		}
+
+		.hero__support,
+		.section-copy,
+		.application__copy {
+			max-width: 38rem;
+		}
+
+		.openings__inner {
+			gap: 2.75rem;
 		}
 	}
 
 	@media (max-width: 46rem) {
+		h1 {
+			font-size: clamp(3.1rem, 13.5vw, 4.75rem);
+			line-height: 0.95;
+		}
+
+		.section-heading h2,
+		.application__heading h2 {
+			font-size: clamp(2.6rem, 11vw, 3.7rem);
+		}
+
 		.opening {
 			grid-template-columns: 1fr;
+			gap: 1.3rem;
 		}
 	}
 </style>
