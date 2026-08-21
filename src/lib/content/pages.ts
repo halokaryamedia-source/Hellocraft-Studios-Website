@@ -11,16 +11,16 @@ export const homeCopy = {
 		title: 'We build Minecraft experiences worth exploring.',
 		body:
 			'Hellocraft brings world design, gameplay thinking, and production together to shape clear, playable experiences.',
-		primaryActionLabel: 'See selected work'
+		primaryActionLabel: 'View portfolio'
 	},
 	work: {
-		title: 'Selected work',
+		title: 'Featured projects',
 		body: 'A development selection exploring atmosphere, play, and production detail across different Minecraft experiences.',
 		emptyState: 'Approved Hellocraft projects will appear here when the portfolio inventory is supplied.',
-		viewAllLabel: 'View all work'
+		viewAllLabel: 'View portfolio'
 	},
 	studio: {
-		eyebrow: 'The studio',
+		eyebrow: 'About',
 		title: 'Creative direction and production, kept close from the start.',
 		body:
 			'We treat the player experience and the production reality as one problem, so ideas stay clear as they move toward something playable.',
@@ -36,27 +36,30 @@ export const homeCopy = {
 		title: 'A place for real proof'
 	},
 	contact: {
-		eyebrow: 'Start a conversation',
+		eyebrow: 'Contact',
 		title: 'Have a Minecraft project in mind?',
 		body: 'Share the idea, the audience, or the problem you are trying to solve. We can start from there.',
 		actionLabel: 'Contact Hellocraft'
 	}
 } as const;
 
-export const workCopy = {
+export const portfolioCopy = {
 	hero: {
-		eyebrow: 'Work',
-		title: 'Minecraft work shaped around play, place, and purpose.',
+		eyebrow: 'Portfolio',
+		title: 'Minecraft projects shaped around play, place, and purpose.',
 		body:
 			'This development selection is being used to establish how Hellocraft projects will be presented before the final portfolio is supplied.'
 	},
-	emptyState: 'Approved project work will appear here.'
+	emptyState: 'Approved projects will appear here.'
 } as const;
 
-export const studioCopy = {
+// Legacy internal alias while old /work redirect remains in source.
+export const workCopy = portfolioCopy;
+
+export const aboutCopy = {
 	hero: {
-		eyebrow: 'Studio',
-		title: 'A focused studio building for Minecraft.',
+		eyebrow: 'About',
+		title: 'A focused team building for Minecraft.',
 		body:
 			'Hellocraft brings creative and technical production together around the experience players actually see, understand, and play.'
 	},
@@ -73,7 +76,7 @@ export const studioCopy = {
 			'We prefer practical decisions, direct communication, and a close connection between what is being built and how it should feel to play.'
 	},
 	proof: {
-		title: 'Studio proof and credibility'
+		title: 'Experience and credibility'
 	},
 	contact: {
 		title: 'Build something with Hellocraft.',
@@ -81,6 +84,9 @@ export const studioCopy = {
 		actionLabel: 'Get in touch'
 	}
 } as const;
+
+// Legacy internal alias while old /studio redirect remains in source.
+export const studioCopy = aboutCopy;
 
 export const careersCopy = {
 	hero: {
