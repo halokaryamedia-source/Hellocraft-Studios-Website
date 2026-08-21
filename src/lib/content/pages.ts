@@ -1,4 +1,4 @@
-import { demoAboutProofItems, demoCareerOpenings, demoProofItems } from './demo-data';
+import { demoAboutExperienceItems, demoCareerOpenings, demoExperienceItems } from './demo-data';
 import type { LinkItem } from './types';
 
 // TEMPORARY DEVELOPMENT COPY
@@ -26,13 +26,13 @@ export const homeCopy = {
 			'We treat the player experience and the production reality as one problem, so ideas stay clear as they move toward something playable.',
 		actionLabel: 'About Hellocraft'
 	},
-	capabilities: {
+	whatWeDo: {
 		eyebrow: 'What we do',
 		title: 'From world design to playable systems.',
 		body:
 			'Each project can ask for a different mix of creative and technical work. The structure stays flexible so the experience, not a fixed service menu, leads the process.'
 	},
-	proof: {
+	experience: {
 		title: 'Experience and results'
 	},
 	contact: {
@@ -60,19 +60,19 @@ export const aboutCopy = {
 		body:
 			'Hellocraft brings creative and technical production together around the experience players actually see, understand, and play.'
 	},
-	capabilities: {
+	whatWeDo: {
 		eyebrow: 'What we do',
 		title: 'Different projects need different combinations of skills.',
 		body:
 			'Worlds, gameplay, art, and production can overlap in different ways. The final description will be based on the real project portfolio.'
 	},
-	approach: {
+	howWeWork: {
 		eyebrow: 'How we work',
 		title: 'Keep the idea clear while production moves forward.',
 		body:
 			'We prefer practical decisions, direct communication, and a close connection between what is being built and how it should feel to play.'
 	},
-	proof: {
+	experience: {
 		title: 'Experience and credibility'
 	},
 	contact: {
@@ -128,8 +128,8 @@ export const footerCopy = {
 	statement: 'Hellocraft Studios — a game studio focused on Minecraft.'
 } as const;
 
-export const proofItems = demoProofItems;
-export const aboutProofItems = demoAboutProofItems;
+export const experienceItems = demoExperienceItems;
+export const aboutExperienceItems = demoAboutExperienceItems;
 export const careerOpenings = demoCareerOpenings;
 
 // Public links are intentionally not fabricated. Add only approved real contact channels.
