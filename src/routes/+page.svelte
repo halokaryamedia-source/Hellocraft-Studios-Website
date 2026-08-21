@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectMediaPlaceholder from '$lib/components/work/ProjectMediaPlaceholder.svelte';
+	import ProjectMediaPlaceholder from '$lib/components/portfolio/ProjectMediaPlaceholder.svelte';
 	import { homeCopy } from '$lib/content/pages';
 	import { featuredProjects } from '$lib/content/projects';
 </script>
@@ -20,7 +20,7 @@
 
 				<div class="hero__support">
 					<p>{homeCopy.hero.body}</p>
-					<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
+					<a class="text-link" href="/portfolio">{homeCopy.hero.primaryActionLabel}</a>
 				</div>
 			</div>
 
@@ -35,13 +35,13 @@
 		</div>
 	</section>
 
-	<section class="work-section" aria-labelledby="home-work-title">
+	<section class="portfolio-section" aria-labelledby="home-portfolio-title">
 		<div class="shell">
-			<header class="work-heading">
-				<h2 id="home-work-title">{homeCopy.work.title}</h2>
-				<div class="work-heading__aside">
-					<p>{homeCopy.work.body}</p>
-					<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
+			<header class="portfolio-heading">
+				<h2 id="home-portfolio-title">{homeCopy.portfolio.title}</h2>
+				<div class="portfolio-heading__aside">
+					<p>{homeCopy.portfolio.body}</p>
+					<a class="text-link" href="/portfolio">{homeCopy.portfolio.viewAllLabel}</a>
 				</div>
 			</header>
 
@@ -49,16 +49,16 @@
 				{@const project = featuredProjects[0]}
 				<article class="lead-project">
 					<div class="lead-project__media">
-						<a class="project-media-link" href={`/work/${project.slug}`} aria-label={`View ${project.title}`}>
+						<a class="project-media-link" href={`/portfolio/${project.slug}`} aria-label={`View ${project.title}`}>
 							<ProjectMediaPlaceholder tone="dark" />
 						</a>
 					</div>
 
 					<div class="lead-project__caption">
-						<h3><a href={`/work/${project.slug}`}>{project.title}</a></h3>
+						<h3><a href={`/portfolio/${project.slug}`}>{project.title}</a></h3>
 						<div class="project-description">
 							<p>{project.summary}</p>
-							<a class="project-action" href={`/work/${project.slug}`}>View project</a>
+							<a class="project-action" href={`/portfolio/${project.slug}`}>View project</a>
 						</div>
 					</div>
 				</article>
@@ -68,12 +68,12 @@
 				{@const project = featuredProjects[1]}
 				<article class="secondary-project">
 					<div class="secondary-project__copy">
-						<h3><a href={`/work/${project.slug}`}>{project.title}</a></h3>
+						<h3><a href={`/portfolio/${project.slug}`}>{project.title}</a></h3>
 						<p>{project.summary}</p>
-						<a class="project-action" href={`/work/${project.slug}`}>View project</a>
+						<a class="project-action" href={`/portfolio/${project.slug}`}>View project</a>
 					</div>
 
-					<a class="project-media-link" href={`/work/${project.slug}`} aria-label={`View ${project.title}`}>
+					<a class="project-media-link" href={`/portfolio/${project.slug}`} aria-label={`View ${project.title}`}>
 						<ProjectMediaPlaceholder tone="neutral" />
 					</a>
 				</article>
@@ -81,23 +81,23 @@
 		</div>
 	</section>
 
-	<section class="studio-section" aria-labelledby="home-studio-title">
-		<div class="shell studio-grid">
-			<div class="studio-heading">
-				<p class="eyebrow">{homeCopy.studio.eyebrow}</p>
-				<h2 id="home-studio-title">{homeCopy.studio.title}</h2>
+	<section class="about-section" aria-labelledby="home-about-title">
+		<div class="shell about-grid">
+			<div class="about-heading">
+				<p class="eyebrow">{homeCopy.about.eyebrow}</p>
+				<h2 id="home-about-title">{homeCopy.about.title}</h2>
 			</div>
 
-			<div class="studio-copy">
-				<p class="studio-intro">{homeCopy.studio.body}</p>
+			<div class="about-copy">
+				<p class="about-intro">{homeCopy.about.body}</p>
 
-				<div class="capability-note">
-					<p class="eyebrow">{homeCopy.capabilities.eyebrow}</p>
-					<h3>{homeCopy.capabilities.title}</h3>
-					<p>{homeCopy.capabilities.body}</p>
+				<div class="what-we-do">
+					<p class="eyebrow">{homeCopy.whatWeDo.eyebrow}</p>
+					<h3>{homeCopy.whatWeDo.title}</h3>
+					<p>{homeCopy.whatWeDo.body}</p>
 				</div>
 
-				<a class="text-link" href="/studio">{homeCopy.studio.actionLabel}</a>
+				<a class="text-link" href="/about">{homeCopy.about.actionLabel}</a>
 			</div>
 		</div>
 	</section>
@@ -183,12 +183,12 @@
 		overflow: hidden;
 	}
 
-	.work-section {
+	.portfolio-section {
 		padding-block: clamp(6rem, 10vw, 10rem);
 		background: var(--paper);
 	}
 
-	.work-heading {
+	.portfolio-heading {
 		display: grid;
 		grid-template-columns: minmax(10rem, 0.55fr) minmax(18rem, 0.45fr);
 		gap: clamp(2.5rem, 8vw, 8rem);
@@ -196,7 +196,7 @@
 		margin-bottom: clamp(4rem, 8vw, 7rem);
 	}
 
-	.work-heading h2 {
+	.portfolio-heading h2 {
 		margin: 0;
 		font-size: clamp(1.7rem, 2.5vw, 2.3rem);
 		font-weight: 680;
@@ -204,13 +204,13 @@
 		letter-spacing: -0.025em;
 	}
 
-	.work-heading__aside {
+	.portfolio-heading__aside {
 		display: grid;
 		gap: 1rem;
 		justify-items: start;
 	}
 
-	.work-heading__aside > p {
+	.portfolio-heading__aside > p {
 		max-width: 32rem;
 		margin: 0;
 		color: var(--text-muted);
@@ -296,25 +296,25 @@
 		line-height: 0.99;
 	}
 
-	.studio-section {
+	.about-section {
 		padding-block: clamp(6rem, 10vw, 9.5rem);
 		background: var(--surface-secondary);
 		color: var(--ink);
 	}
 
-	.studio-grid {
+	.about-grid {
 		display: grid;
 		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: start;
 	}
 
-	.studio-heading {
+	.about-heading {
 		display: grid;
 		gap: 1.1rem;
 	}
 
-	.studio-heading h2 {
+	.about-heading h2 {
 		max-width: 13.5ch;
 		margin: 0;
 		font-size: clamp(2.9rem, 4.9vw, 4.8rem);
@@ -322,32 +322,32 @@
 		line-height: 0.98;
 	}
 
-	.studio-copy {
+	.about-copy {
 		display: grid;
 		gap: clamp(2.75rem, 5vw, 4.5rem);
 		padding-top: 0.4rem;
 	}
 
-	.studio-intro,
-	.capability-note > p:last-child {
+	.about-intro,
+	.what-we-do > p:last-child {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.studio-intro {
+	.about-intro {
 		font-size: clamp(1.08rem, 1.4vw, 1.22rem);
 		line-height: 1.58;
 	}
 
-	.capability-note {
+	.what-we-do {
 		display: grid;
 		gap: 0.9rem;
 		padding-top: 1.75rem;
 		border-top: 1px solid var(--border);
 	}
 
-	.capability-note h3 {
+	.what-we-do h3 {
 		max-width: 18ch;
 		margin: 0;
 		font-size: clamp(1.75rem, 2.7vw, 2.55rem);
@@ -411,20 +411,20 @@
 
 	@media (max-width: 64rem) {
 		.hero__statement,
-		.work-heading,
+		.portfolio-heading,
 		.lead-project__caption,
 		.secondary-project,
-		.studio-grid {
+		.about-grid {
 			grid-template-columns: 1fr;
 		}
 
 		.hero__statement,
-		.studio-grid {
+		.about-grid {
 			gap: 2.75rem;
 		}
 
 		.hero__support,
-		.work-heading__aside {
+		.portfolio-heading__aside {
 			max-width: 38rem;
 		}
 
@@ -479,7 +479,7 @@
 			padding-top: 6rem;
 		}
 
-		.studio-heading h2,
+		.about-heading h2,
 		.contact-heading h2 {
 			font-size: clamp(2.65rem, 11.5vw, 3.7rem);
 		}
