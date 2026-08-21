@@ -12,7 +12,7 @@
 </script>
 
 <article class="project-card">
-	<a href={`/work/${project.slug}`}>
+	<a href={`/portfolio/${project.slug}`}>
 		<ProjectMediaPlaceholder tone={project.featured ? 'dark' : 'neutral'} />
 
 		<div class="project-card__caption">
