@@ -1,13 +1,7 @@
 import type { CareerOpening } from './types';
 
-export const demoExperienceItems = [
-	'Demo experience item — replace with a verified client, partner, result, testimonial, or award.',
-	'Demo experience item — this item exists only to establish list rhythm and spacing.',
-	'Demo experience item — final credibility content must pass the evidence review process.'
-];
-
 export const demoAboutExperienceItems = [
-	'Demo About experience item — replace with an approved company fact or credibility signal.',
+	'Demo About experience item — replace with an approved company fact or result.',
 	'Demo About experience item — temporary content for layout development only.'
 ];
 
