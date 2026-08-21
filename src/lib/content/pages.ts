@@ -15,7 +15,7 @@ export const homeCopy = {
 	},
 	work: {
 		title: 'Selected work',
-		body: 'Development studies for the portfolio layout, shaped around atmosphere, play, and production detail.',
+		body: 'A development selection exploring atmosphere, play, and production detail across different Minecraft experiences.',
 		emptyState: 'Approved Hellocraft projects will appear here when the portfolio inventory is supplied.',
 		viewAllLabel: 'View all work'
 	},
@@ -46,9 +46,9 @@ export const homeCopy = {
 export const workCopy = {
 	hero: {
 		eyebrow: 'Work',
-		title: 'Projects, experiments, and playable experiences.',
+		title: 'Minecraft work shaped around play, place, and purpose.',
 		body:
-			'The entries currently shown are clearly labeled demo projects. They exist only to develop the portfolio architecture before the real Hellocraft project inventory arrives.'
+			'This development selection is being used to establish how Hellocraft projects will be presented before the final portfolio is supplied.'
 	},
 	emptyState: 'Approved project work will appear here.'
 } as const;
@@ -56,28 +56,28 @@ export const workCopy = {
 export const studioCopy = {
 	hero: {
 		eyebrow: 'Studio',
-		title: 'A focused team building for Minecraft.',
+		title: 'A focused studio building for Minecraft.',
 		body:
-			'Temporary About copy used to establish the studio page structure. The final story, team context, and company facts will be supplied separately.'
+			'Hellocraft brings creative and technical production together around the experience players actually see, understand, and play.'
 	},
 	capabilities: {
 		eyebrow: 'Capabilities',
-		title: 'Creative, technical, and production disciplines working together.',
+		title: 'Different projects need different combinations of craft.',
 		body:
-			'This section currently uses neutral demo language so the page can be designed before the final capability wording is derived from verified projects.'
+			'Worlds, gameplay, art, and production can overlap in different ways. The final capability language will be grounded in the real project portfolio.'
 	},
 	approach: {
 		eyebrow: 'How we work',
-		title: 'Clear ideas, practical production, and attention to the player experience.',
+		title: 'Keep the idea clear while the production gets real.',
 		body:
-			'Temporary process copy. The final working approach will be rewritten from Hellocraft’s actual production practice rather than from generic agency language.'
+			'We prefer practical decisions, direct communication, and a close connection between what is being built and how it should feel to play.'
 	},
 	proof: {
 		title: 'Studio proof and credibility'
 	},
 	contact: {
 		title: 'Build something with Hellocraft.',
-		body: 'Temporary studio call-to-action copy. Final business wording will replace this later.',
+		body: 'If the project needs Minecraft thinking from the start, we can begin with the idea and the constraints around it.',
 		actionLabel: 'Get in touch'
 	}
 } as const;
@@ -87,7 +87,7 @@ export const careersCopy = {
 		eyebrow: 'Careers',
 		title: 'Build things people want to play.',
 		body:
-			'Temporary recruitment copy used to prepare the careers experience. Role names and hiring details below are development-only examples.'
+			'This page is being prepared for future Hellocraft openings across the creative and technical work behind Minecraft experiences.'
 	},
 	openings: {
 		title: 'Open roles',
@@ -97,30 +97,30 @@ export const careersCopy = {
 		eyebrow: 'Work with us',
 		title: 'A place for people who care about craft, play, and collaboration.',
 		body:
-			'This temporary paragraph gives the page a realistic reading length. Final culture and recruitment messaging will be based on approved studio information.'
+			'We value people who can think clearly about their part of the work while staying connected to the experience the whole team is building.'
 	},
 	application: {
 		title: 'How to apply',
 		body:
-			'The final application path is still being defined. This section reserves the correct place for application instructions without forcing a form, upload system, or backend yet.'
+			'Application details will be published with each approved opening. The current structure is ready without assuming a form or upload workflow yet.'
 	}
 } as const;
 
 export const contactCopy = {
 	hero: {
 		eyebrow: 'Contact',
-		title: 'Let’s make something worth exploring.',
+		title: 'Tell us what you want to build.',
 		body:
-			'Temporary business-contact copy. The final public channel and inquiry wording will be added after approval.'
+			'Share the idea, audience, scope, or production problem. The approved public contact route will live here when it is ready.'
 	},
 	methods: {
 		title: 'Contact channels',
-		emptyState: 'Public Hellocraft contact channels will be added here after approval.'
+		emptyState: 'Public Hellocraft contact details are being prepared.'
 	},
 	inquiry: {
 		title: 'Project inquiries',
 		body:
-			'This area is reserved for the final business-inquiry path. It remains structurally ready without assuming a website form, file upload, CRM, or hosting-specific implementation.'
+			'A useful project conversation can start with the goal, the audience, the expected experience, and the constraints already known.'
 	}
 } as const;
 

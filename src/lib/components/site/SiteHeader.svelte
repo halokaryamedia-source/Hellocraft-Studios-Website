@@ -45,13 +45,13 @@
 		gap: 1.25rem 2.5rem;
 		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
 		margin-inline: auto;
-		padding-block: 1.15rem;
+		padding-block: 0.9rem;
 	}
 
 	.brand {
 		display: inline-flex;
 		align-items: center;
-		min-height: 2.75rem;
+		min-height: 3rem;
 		text-decoration: none;
 	}
 
@@ -72,7 +72,7 @@
 		align-items: center;
 		min-height: 2.75rem;
 		color: var(--text-muted);
-		font-size: 0.88rem;
+		font-size: 0.9rem;
 		font-weight: 600;
 		text-decoration: none;
 		transition: color var(--motion-fast) ease-out;
@@ -80,14 +80,14 @@
 
 	nav a::after {
 		position: absolute;
-		bottom: 0.18rem;
-		left: 50%;
-		width: 0.28rem;
-		height: 0.28rem;
-		border-radius: 50%;
-		background: var(--brand);
+		right: 0;
+		bottom: 0.3rem;
+		left: 0;
+		height: 1px;
+		background: currentColor;
 		content: '';
-		transform: translateX(-50%) scale(0);
+		transform: scaleX(0);
+		transform-origin: left;
 		transition: transform var(--motion-fast) ease-out;
 	}
 
@@ -97,17 +97,21 @@
 		color: var(--ink);
 	}
 
-	nav a:hover::after,
-	nav a:focus-visible::after,
 	nav a[aria-current='page']::after {
-		transform: translateX(-50%) scale(1);
+		transform: scaleX(1);
+	}
+
+	@media (hover: hover) {
+		nav a:hover::after {
+			transform: scaleX(1);
+		}
 	}
 
 	@media (max-width: 46rem) {
 		.site-header__inner {
 			align-items: flex-start;
 			flex-direction: column;
-			padding-block: 0.95rem 0.7rem;
+			padding-block: 0.85rem 0.6rem;
 		}
 
 		nav {

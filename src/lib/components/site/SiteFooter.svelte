@@ -7,7 +7,9 @@
 <footer class="site-footer">
 	<div class="shell footer-main">
 		<div class="footer-brand">
-			<a class="brand" href={siteIdentity.homeHref}><BrandLockup scale="large" /></a>
+			<a class="brand" href={siteIdentity.homeHref} aria-label="Hellocraft Studios home">
+				<BrandLockup scale="large" tone="white" />
+			</a>
 			<p>{footerCopy.statement}</p>
 		</div>
 
@@ -60,28 +62,25 @@
 	.footer-brand {
 		display: grid;
 		align-content: start;
-		gap: 1.25rem;
+		gap: 1.5rem;
 	}
 
 	.brand {
 		width: fit-content;
-		color: var(--surface);
 		text-decoration: none;
 	}
 
 	.footer-brand p {
 		max-width: 28rem;
 		margin: 0;
-		color: rgb(255 255 255 / 56%);
+		color: rgb(255 255 255 / 58%);
 	}
 
 	.footer-label {
 		margin: 0 0 1rem;
-		color: rgb(255 255 255 / 42%);
-		font-size: 0.68rem;
-		font-weight: 800;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
+		color: rgb(255 255 255 / 44%);
+		font-size: 0.8rem;
+		font-weight: 600;
 	}
 
 	ul {
@@ -96,9 +95,9 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 2rem;
-		color: rgb(255 255 255 / 76%);
-		font-size: 0.9rem;
-		font-weight: 700;
+		color: rgb(255 255 255 / 78%);
+		font-size: 0.92rem;
+		font-weight: 600;
 		text-decoration: none;
 	}
 
@@ -118,10 +117,8 @@
 		justify-content: space-between;
 		gap: 1rem;
 		padding-block: 1.15rem;
-		color: rgb(255 255 255 / 38%);
-		font-size: 0.68rem;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
+		color: rgb(255 255 255 / 40%);
+		font-size: 0.72rem;
 	}
 
 	@media (max-width: 60rem) {

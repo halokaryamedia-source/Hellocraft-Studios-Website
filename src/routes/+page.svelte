@@ -24,17 +24,14 @@
 				</div>
 			</div>
 
-			<ProjectMediaPlaceholder variant="hero" tone="brand" index="Demo" label="Featured work" />
+			<ProjectMediaPlaceholder variant="hero" tone="brand" />
 		</div>
 	</section>
 
 	<section class="work-section" aria-labelledby="home-work-title">
 		<div class="shell">
 			<header class="work-heading">
-				<div class="work-heading__title">
-					<p class="eyebrow">Portfolio preview</p>
-					<h2 id="home-work-title">{homeCopy.work.title}</h2>
-				</div>
+				<h2 id="home-work-title">{homeCopy.work.title}</h2>
 				<div class="work-heading__aside">
 					<p>{homeCopy.work.body}</p>
 					<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
@@ -45,15 +42,12 @@
 				{@const project = featuredProjects[0]}
 				<article class="featured-project">
 					<a href={`/work/${project.slug}`}>
-						<ProjectMediaPlaceholder tone="dark" index="01" label="Development study" />
+						<ProjectMediaPlaceholder tone="dark" />
 						<div class="featured-project__caption">
-							<div class="featured-project__title">
-								<p class="project-meta">Featured study</p>
-								<h3>{project.title}</h3>
-							</div>
+							<h3>{project.title}</h3>
 							<div class="project-description">
 								<p>{project.summary}</p>
-								<span>View project ↗</span>
+								<span>View project</span>
 							</div>
 						</div>
 					</a>
@@ -64,12 +58,11 @@
 				{@const project = featuredProjects[1]}
 				<article class="secondary-project">
 					<a href={`/work/${project.slug}`}>
-						<ProjectMediaPlaceholder tone="neutral" index="02" label="Development study" />
+						<ProjectMediaPlaceholder tone="neutral" />
 						<div class="secondary-project__caption">
-							<p class="project-meta">Selected study</p>
 							<h3>{project.title}</h3>
 							<p>{project.summary}</p>
-							<span>View project ↗</span>
+							<span>View project</span>
 						</div>
 					</a>
 				</article>
@@ -99,16 +92,14 @@
 	</section>
 
 	<section class="contact-section" aria-labelledby="home-contact-title">
-		<div class="shell">
-			<div class="contact-panel">
-				<div class="contact-heading">
-					<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
-					<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
-				</div>
-				<div class="contact-copy">
-					<p>{homeCopy.contact.body}</p>
-					<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
-				</div>
+		<div class="shell contact-grid">
+			<div class="contact-heading">
+				<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
+				<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
+			</div>
+			<div class="contact-copy">
+				<p>{homeCopy.contact.body}</p>
+				<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
 			</div>
 		</div>
 	</section>
@@ -116,7 +107,6 @@
 
 <style>
 	.hero {
-		border-bottom: 1px solid var(--border);
 		background: var(--paper);
 	}
 
@@ -171,17 +161,11 @@
 		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: end;
 		margin-bottom: clamp(3rem, 6vw, 5rem);
-		padding-bottom: 1.5rem;
-		border-bottom: 1px solid var(--border);
 	}
 
-	.work-heading__title,
 	.work-heading__aside {
 		display: grid;
 		gap: 0.8rem;
-	}
-
-	.work-heading__aside {
 		justify-items: start;
 	}
 
@@ -197,20 +181,18 @@
 		line-height: 0.96;
 	}
 
-	.featured-project,
-	.secondary-project {
-		border-bottom: 1px solid var(--border);
+	.featured-project a,
+	.secondary-project a {
+		text-decoration: none;
+	}
+
+	.featured-project a {
+		display: grid;
+		gap: 1.65rem;
 	}
 
 	.featured-project {
 		padding-bottom: clamp(4.5rem, 8vw, 7rem);
-	}
-
-	.featured-project a,
-	.secondary-project a {
-		display: grid;
-		gap: 1.65rem;
-		text-decoration: none;
 	}
 
 	.featured-project__caption {
@@ -220,20 +202,6 @@
 		align-items: start;
 	}
 
-	.featured-project__title,
-	.secondary-project__caption,
-	.project-description {
-		display: grid;
-		gap: 0.75rem;
-	}
-
-	.project-meta {
-		margin: 0;
-		color: var(--text-muted);
-		font-size: 0.84rem;
-		font-weight: 600;
-	}
-
 	.featured-project h3 {
 		max-width: 13ch;
 		margin: 0;
@@ -241,37 +209,40 @@
 		line-height: 0.95;
 	}
 
-	.project-description {
-		gap: 1.15rem;
+	.project-description,
+	.secondary-project__caption {
+		display: grid;
+		gap: 1.1rem;
+		align-content: start;
 	}
 
 	.project-description p,
-	.secondary-project__caption > p:not(.project-meta) {
+	.secondary-project__caption p {
 		max-width: 31rem;
 		margin: 0;
 		color: var(--text-muted);
 	}
 
 	.project-description span,
-	.secondary-project__caption > span {
+	.secondary-project__caption span {
 		width: fit-content;
 		font-size: 0.9rem;
 		font-weight: 650;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.28em;
 	}
 
 	.secondary-project {
-		width: min(70%, 61rem);
-		margin-left: auto;
-		padding-block: clamp(4.5rem, 8vw, 7rem);
+		padding-top: clamp(4.5rem, 8vw, 7rem);
+		border-top: 1px solid var(--border);
 	}
 
-	.secondary-project__caption {
-		grid-template-columns: minmax(0, 1.05fr) minmax(15rem, 0.8fr);
-		column-gap: clamp(1.5rem, 5vw, 4rem);
-	}
-
-	.secondary-project__caption .project-meta {
-		grid-column: 1 / -1;
+	.secondary-project a {
+		display: grid;
+		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+		gap: clamp(2rem, 7vw, 7rem);
+		align-items: start;
 	}
 
 	.secondary-project h3 {
@@ -283,7 +254,6 @@
 
 	.studio-section {
 		padding-block: clamp(5.5rem, 9vw, 8.5rem);
-		border-top: 1px solid var(--border);
 		background: var(--surface-secondary);
 	}
 
@@ -336,29 +306,22 @@
 	}
 
 	.contact-section {
-		padding-block: clamp(4.5rem, 8vw, 7rem);
+		padding-block: clamp(5rem, 8vw, 7rem);
 		background: var(--paper);
 	}
 
-	.contact-panel {
+	.contact-grid {
 		display: grid;
 		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
 		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: end;
-		padding: clamp(2.25rem, 5vw, 4.5rem);
-		border-top: 3px solid var(--brand);
-		background: var(--ink);
-		color: var(--surface);
+		padding-top: clamp(2rem, 4vw, 3.5rem);
+		border-top: 1px solid var(--border);
 	}
 
 	.contact-heading {
 		display: grid;
 		gap: 0.8rem;
-	}
-
-	.contact-heading .eyebrow,
-	.contact-copy p {
-		color: rgb(255 255 255 / 62%);
 	}
 
 	.contact-heading h2 {
@@ -374,24 +337,13 @@
 		justify-items: start;
 	}
 
-	.contact-copy .text-link {
-		color: var(--surface);
-	}
-
 	@media (max-width: 64rem) {
 		.hero__grid,
 		.work-heading,
 		.featured-project__caption,
+		.secondary-project a,
 		.studio-grid,
-		.contact-panel {
-			grid-template-columns: 1fr;
-		}
-
-		.secondary-project {
-			width: 100%;
-		}
-
-		.secondary-project__caption {
+		.contact-grid {
 			grid-template-columns: 1fr;
 		}
 	}

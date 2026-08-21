@@ -1,26 +1,25 @@
 :root {
-	font-family: 'Aptos', 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-	color: #151617;
-	background: #f2efe8;
+	font-family: Aptos, 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #161719;
+	background: #f3f0e8;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	color-scheme: light;
 
-	/* Temporary development cyan. Replace from the authoritative Hellocraft brand asset later. */
+	/* Temporary development cyan. Replace from the authoritative vector brand asset later. */
 	--brand: #29abe2;
 	--brand-strong: #006c92;
-	--ink: #151617;
-	--ink-soft: #222427;
-	--paper: #f2efe8;
-	--surface: #fbfaf7;
-	--surface-secondary: #e8e4dc;
-	--surface-cool: #dde4e5;
-	--text-muted: #686a6d;
-	--border: rgb(21 22 23 / 14%);
+	--ink: #161719;
+	--ink-soft: #202225;
+	--paper: #f3f0e8;
+	--surface: #fffdf8;
+	--surface-secondary: #e5e1d8;
+	--text-muted: #65686d;
+	--border: rgb(22 23 25 / 15%);
 	--inverse-border: rgb(255 255 255 / 18%);
-	--page-gutter: clamp(1.25rem, 3.2vw, 3.5rem);
-	--content-max: 90rem;
-	--measure: 39rem;
+	--page-gutter: clamp(1.25rem, 3.2vw, 3.25rem);
+	--content-max: 88rem;
+	--measure: 38rem;
 	--space-section: clamp(5rem, 8vw, 8rem);
 	--motion-fast: 150ms;
 	--motion-medium: 260ms;
@@ -45,7 +44,7 @@ body {
 	background: var(--paper);
 	color: var(--ink);
 	font-size: 1rem;
-	line-height: 1.58;
+	line-height: 1.55;
 }
 
 img,
@@ -74,9 +73,9 @@ h1,
 h2,
 h3 {
 	margin-top: 0;
-	font-family: 'Aptos Display', 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
-	font-weight: 700;
-	letter-spacing: -0.04em;
+	font-family: 'Aptos Display', 'Segoe UI Variable Display', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: 720;
+	letter-spacing: -0.038em;
 	overflow-wrap: anywhere;
 }
 
@@ -104,32 +103,28 @@ li {
 .eyebrow {
 	margin: 0;
 	color: var(--text-muted);
-	font-size: 0.85rem;
-	font-weight: 600;
-	letter-spacing: 0;
+	font-size: 0.82rem;
+	font-weight: 650;
+	letter-spacing: 0.01em;
 }
 
 .text-link {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.5rem;
 	width: fit-content;
 	min-height: 2.75rem;
-	font-size: 0.92rem;
+	font-size: 0.9rem;
 	font-weight: 650;
 	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
-	text-underline-offset: 0.3em;
+	text-underline-offset: 0.28em;
+	text-decoration-color: rgb(22 23 25 / 42%);
+	transition: text-decoration-color var(--motion-fast) ease-out;
 }
 
-.text-link::after {
-	content: '↗';
-	transition: transform var(--motion-fast) ease-out;
-}
-
-.text-link:hover::after,
-.text-link:focus-visible::after {
-	transform: translate(0.16rem, -0.16rem);
+.text-link:hover,
+.text-link:focus-visible {
+	text-decoration-color: currentColor;
 }
 
 .skip-link {

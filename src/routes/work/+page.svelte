@@ -16,7 +16,7 @@
 			<h1 id="work-title">{workCopy.hero.title}</h1>
 			<div class="hero__intro">
 				<p>{workCopy.hero.body}</p>
-				<span class="count">{String(projects.length).padStart(2, '0')} projects</span>
+				<span class="count">{projects.length} projects</span>
 			</div>
 		</div>
 	</section>
@@ -25,8 +25,8 @@
 		<div class="shell">
 			{#if projects.length > 0}
 				<div class="project-list">
-					{#each projects as project, index (project.slug)}
-						<ProjectCard {project} headingLevel={2} index={index + 1} />
+					{#each projects as project (project.slug)}
+						<ProjectCard {project} headingLevel={2} />
 					{/each}
 				</div>
 			{:else}
@@ -38,21 +38,20 @@
 
 <style>
 	.hero {
-		border-bottom: 1px solid var(--border);
 		background: var(--paper);
 	}
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2rem, 5vw, 4rem);
-		padding-block: clamp(5rem, 10vw, 10rem);
+		gap: clamp(1.75rem, 4vw, 3.5rem);
+		padding-block: clamp(5rem, 9vw, 8rem);
 	}
 
 	h1 {
-		max-width: 11ch;
+		max-width: 13ch;
 		margin: 0;
-		font-size: clamp(4.5rem, 11vw, 11rem);
-		line-height: 0.82;
+		font-size: clamp(3.8rem, 7vw, 7.2rem);
+		line-height: 0.93;
 	}
 
 	.hero__intro {
@@ -60,8 +59,6 @@
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: 2rem;
 		align-items: end;
-		padding-top: 1.25rem;
-		border-top: 1px solid var(--border);
 	}
 
 	.hero__intro > p {
@@ -71,18 +68,14 @@
 	}
 
 	.count {
-		font-size: 0.7rem;
-		font-weight: 800;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+		color: var(--text-muted);
+		font-size: 0.86rem;
+		font-weight: 600;
 	}
 
 	.projects {
-		padding-block: clamp(2rem, 5vw, 5rem) var(--space-section);
-	}
-
-	.project-list {
-		border-bottom: 1px solid var(--border);
+		padding-block: clamp(2rem, 4vw, 4rem) var(--space-section);
+		background: var(--surface);
 	}
 
 	.pending-state {
@@ -98,7 +91,7 @@
 		}
 
 		h1 {
-			font-size: clamp(3.8rem, 19vw, 6rem);
+			font-size: clamp(3.1rem, 14vw, 4.7rem);
 		}
 	}
 </style>
