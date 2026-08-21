@@ -74,47 +74,38 @@ literal copying of Hazelight or Blind Squirrel layouts/assets
 fabricated client, award, team-size, contact, or recruitment claims
 ```
 
-## Accepted route baselines
+## Route visual state
 
-The project owner has accepted the direction sufficiently to continue propagation through:
-
-```text
-Homepage
-Work
-Project Detail
-Studio
-```
-
-Homepage remains the primary visual grammar. Work, Project Detail, and Studio are route-specific interpretations of that grammar.
-
-Do not redesign accepted routes from model taste while finishing the remaining pages.
-
-## Current Careers state
-
-`src/routes/careers/+page.svelte` has now been visually propagated.
-
-Current Careers composition:
+The accepted visual grammar has now been propagated in source across the full route set:
 
 ```text
-restrained Careers introduction
-→ studio/culture statement on neutral secondary surface
-→ compact Open roles section
-→ approved real openings render as editorial rows
-→ simple How to apply closing
+Homepage       = APPROVED
+Work           = APPROVED
+Project Detail = accepted / propagated
+Studio         = accepted / propagated
+Careers        = APPROVED
+Contact        = implemented / pending final project-owner approval
 ```
 
-Important publication safety:
+Homepage remains the primary visual grammar. Each later route is a content-specific interpretation rather than a cloned layout.
+
+Do not reopen visual-direction research or casually redesign accepted routes while replacing production content/media.
+
+## Current Contact state
+
+`src/routes/contact/+page.svelte` is the final route-level visual propagation.
+
+Current Contact composition:
 
 ```text
-contentIsDemo = true
-→ demoCareerOpenings remain development data only
-→ demo roles are NOT rendered as public vacancies
-→ Careers shows the approved empty state instead
+restrained Contact introduction
+→ honest channel surface
+→ real approved contact links render as direct typographic rows
+→ empty state when no public contact channels are supplied
+→ concise Project inquiries guidance on neutral secondary surface
 ```
 
-Careers is implemented and pending project-owner visual approval.
-
-Contact remains the only route not yet visually propagated.
+No fake form, fabricated contact method, backend, CRM, or new dependency was added.
 
 ## Brand / content state
 
@@ -128,7 +119,13 @@ contentIsDemo = true
 
 While demo mode remains active, the site retains a development notice and `noindex, nofollow` guard.
 
-Real public contact channels are not fabricated.
+Publication safety currently includes:
+
+```text
+demo career openings do not render as public vacancies
+real public contact channels are not fabricated
+demo proof remains hidden where the route requires verified evidence
+```
 
 ## Content replacement owners
 
@@ -235,15 +232,13 @@ content owner model                  = approved
 content replacement guide            = ready
 dummy content mode                   = active
 Hazelight + Blind Squirrel direction = approved
-Homepage visual baseline             = APPROVED
-Work visual baseline                 = APPROVED
-Project Detail direction             = accepted to continue
-Studio direction                     = accepted to continue
-Careers visual propagation           = implemented / review-ready
-Contact visual propagation           = pending
-brand replacement surface            = ready
-real text/data/media                 = pending
+route-level visual propagation       = complete in source
+Contact visual approval              = pending
+real portfolio evidence/media        = pending
+final public copy                    = pending
+production logo / typography         = pending
+responsive/accessibility/performance QA = pending
 hosting/runtime proof                = deferred
 ```
 
-The project is now primarily a **finish route propagation → production content/media → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
+After Contact approval, the project becomes primarily a **production content/media replacement → final QA → deployment workflow**, not a route-design or architecture-planning workflow.
