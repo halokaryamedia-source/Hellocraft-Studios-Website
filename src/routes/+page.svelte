@@ -1,8 +1,6 @@
 <script lang="ts">
-	import ProjectCard from '$lib/components/work/ProjectCard.svelte';
 	import ProjectMediaPlaceholder from '$lib/components/work/ProjectMediaPlaceholder.svelte';
-	import { contentIsDemo } from '$lib/content/demo';
-	import { homeCopy, proofItems } from '$lib/content/pages';
+	import { homeCopy } from '$lib/content/pages';
 	import { featuredProjects } from '$lib/content/projects';
 </script>
 
@@ -14,88 +12,94 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="home-title">
 		<div class="shell hero__inner">
-			<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
-			<h1 id="home-title">{homeCopy.hero.title}</h1>
+			<div class="hero__heading">
+				<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
+				<h1 id="home-title">{homeCopy.hero.title}</h1>
+			</div>
 
 			<div class="hero__intro">
 				<p>{homeCopy.hero.body}</p>
 				<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
 			</div>
 
-			<ProjectMediaPlaceholder variant="hero" index="01" label="Featured work preview" />
+			<ProjectMediaPlaceholder variant="hero" index="Demo" label="Featured work" />
 		</div>
 	</section>
 
 	<section class="work-section" aria-labelledby="home-work-title">
 		<div class="shell">
-			<header class="section-heading">
+			<header class="work-heading">
 				<div>
-					<p class="eyebrow">Selected work</p>
+					<p class="eyebrow">Portfolio preview</p>
 					<h2 id="home-work-title">{homeCopy.work.title}</h2>
 				</div>
-				<p>{homeCopy.work.body}</p>
+				<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
 			</header>
 
-			{#if featuredProjects.length > 0}
-				<div class="project-list">
-					{#each featuredProjects as project, index (project.slug)}
-						<ProjectCard {project} headingLevel={3} index={index + 1} />
-					{/each}
-				</div>
-			{:else}
-				<p class="pending-state">{homeCopy.work.emptyState}</p>
+			{#if featuredProjects[0]}
+				{@const project = featuredProjects[0]}
+				<article class="featured-project">
+					<a href={`/work/${project.slug}`}>
+						<ProjectMediaPlaceholder index="01" label="Demo project" />
+						<div class="featured-project__caption">
+							<div>
+								<p class="project-meta">Development study</p>
+								<h3>{project.title}</h3>
+							</div>
+							<div class="project-description">
+								<p>{project.summary}</p>
+								<span>View project ↗</span>
+							</div>
+						</div>
+					</a>
+				</article>
 			{/if}
 
-			<div class="section-action">
-				<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
-			</div>
+			{#if featuredProjects[1]}
+				{@const project = featuredProjects[1]}
+				<article class="secondary-project">
+					<a href={`/work/${project.slug}`}>
+						<ProjectMediaPlaceholder index="02" label="Demo project" />
+						<div class="secondary-project__caption">
+							<p class="project-meta">Development study</p>
+							<h3>{project.title}</h3>
+							<p>{project.summary}</p>
+							<span>View project ↗</span>
+						</div>
+					</a>
+				</article>
+			{/if}
 		</div>
 	</section>
 
 	<section class="studio-section" aria-labelledby="home-studio-title">
-		<div class="shell studio-section__inner">
-			<p class="eyebrow">{homeCopy.studio.eyebrow}</p>
-			<div class="studio-section__main">
+		<div class="shell studio-grid">
+			<div class="studio-heading">
+				<p class="eyebrow">{homeCopy.studio.eyebrow}</p>
 				<h2 id="home-studio-title">{homeCopy.studio.title}</h2>
-				<div>
-					<p>{homeCopy.studio.body}</p>
-					<a class="text-link" href="/studio">{homeCopy.studio.actionLabel}</a>
+			</div>
+
+			<div class="studio-copy">
+				<p class="studio-intro">{homeCopy.studio.body}</p>
+
+				<div class="capability-note">
+					<p class="eyebrow">{homeCopy.capabilities.eyebrow}</p>
+					<h3>{homeCopy.capabilities.title}</h3>
+					<p>{homeCopy.capabilities.body}</p>
 				</div>
+
+				<a class="text-link" href="/studio">{homeCopy.studio.actionLabel}</a>
 			</div>
 		</div>
 	</section>
-
-	<section class="capabilities-section" aria-labelledby="home-capabilities-title">
-		<div class="shell capabilities-section__inner">
-			<p class="eyebrow">{homeCopy.capabilities.eyebrow}</p>
-			<div class="capabilities-section__main">
-				<h2 id="home-capabilities-title">{homeCopy.capabilities.title}</h2>
-				<p>{homeCopy.capabilities.body}</p>
-			</div>
-		</div>
-	</section>
-
-	{#if !contentIsDemo && proofItems.length > 0}
-		<section class="proof-section" aria-labelledby="home-proof-title">
-			<div class="shell proof-section__inner">
-				<div>
-					<p class="eyebrow">Proof</p>
-					<h2 id="home-proof-title">{homeCopy.proof.title}</h2>
-				</div>
-				<ol class="proof-list">
-					{#each proofItems as item (item)}
-						<li>{item}</li>
-					{/each}
-				</ol>
-			</div>
-		</section>
-	{/if}
 
 	<section class="contact-section" aria-labelledby="home-contact-title">
-		<div class="shell contact-section__inner">
-			<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
-			<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
-			<div class="contact-section__footer">
+		<div class="shell contact-grid">
+			<div>
+				<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
+				<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
+			</div>
+			<div class="contact-copy">
 				<p>{homeCopy.contact.body}</p>
 				<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
 			</div>
@@ -111,15 +115,21 @@
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2rem, 5vw, 4rem);
-		padding-block: clamp(5rem, 9vw, 9rem) clamp(3.5rem, 7vw, 6rem);
+		gap: clamp(2.5rem, 5vw, 4.5rem);
+		padding-block: clamp(4.5rem, 8vw, 7.5rem) clamp(3.5rem, 6vw, 5.5rem);
+	}
+
+	.hero__heading {
+		display: grid;
+		gap: 1.1rem;
 	}
 
 	.hero h1 {
-		max-width: 12ch;
+		max-width: 18ch;
 		margin: 0;
-		font-size: clamp(4.2rem, 10vw, 10rem);
-		line-height: 0.84;
+		font-size: clamp(3.7rem, 6.6vw, 6.65rem);
+		font-weight: 730;
+		line-height: 0.93;
 	}
 
 	.hero__intro {
@@ -127,179 +137,239 @@
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: 2rem;
 		align-items: end;
+		max-width: 70rem;
 	}
 
 	.hero__intro p {
-		max-width: 36rem;
+		max-width: 37rem;
 		margin: 0;
 		color: var(--text-muted);
-		font-size: clamp(1rem, 1.5vw, 1.1rem);
+		font-size: clamp(1.02rem, 1.5vw, 1.16rem);
 	}
 
-	.work-section,
-	.capabilities-section,
-	.proof-section {
-		padding-block: var(--space-section);
+	.work-section {
+		padding-block: clamp(5rem, 9vw, 9rem);
 	}
 
-	.section-heading {
-		display: grid;
-		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.7fr);
-		gap: clamp(2rem, 7vw, 7rem);
+	.work-heading {
+		display: flex;
 		align-items: end;
-		margin-bottom: clamp(2rem, 4vw, 4rem);
-		padding-bottom: 1.5rem;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+		padding-bottom: 1.3rem;
 		border-bottom: 1px solid var(--border);
 	}
 
-	.section-heading > div {
+	.work-heading > div {
 		display: grid;
-		gap: 0.8rem;
+		gap: 0.6rem;
 	}
 
-	.section-heading h2,
-	.studio-section h2,
-	.capabilities-section h2,
-	.proof-section h2,
-	.contact-section h2 {
+	.work-heading h2 {
 		margin: 0;
-		font-size: clamp(3rem, 6.5vw, 6.5rem);
-		line-height: 0.9;
+		font-size: clamp(2.6rem, 5vw, 4.7rem);
+		line-height: 0.96;
 	}
 
-	.section-heading > p,
-	.studio-section__main p,
-	.capabilities-section__main > p,
-	.contact-section__footer p {
+	.featured-project,
+	.secondary-project {
+		border-bottom: 1px solid var(--border);
+	}
+
+	.featured-project {
+		padding-bottom: clamp(4rem, 8vw, 7rem);
+	}
+
+	.featured-project a,
+	.secondary-project a {
+		display: grid;
+		gap: 1.5rem;
+		text-decoration: none;
+	}
+
+	.featured-project__caption {
+		display: grid;
+		grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+		gap: clamp(2rem, 7vw, 7rem);
+		align-items: start;
+	}
+
+	.featured-project__caption > div:first-child,
+	.secondary-project__caption {
+		display: grid;
+		gap: 0.65rem;
+	}
+
+	.project-meta {
+		margin: 0;
+		color: var(--text-muted);
+		font-size: 0.8rem;
+	}
+
+	.featured-project h3 {
+		max-width: 12ch;
+		margin: 0;
+		font-size: clamp(2.7rem, 5vw, 5rem);
+		line-height: 0.94;
+	}
+
+	.project-description {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.project-description p,
+	.secondary-project__caption > p:not(.project-meta) {
+		max-width: 32rem;
+		margin: 0;
+		color: var(--text-muted);
+	}
+
+	.project-description span,
+	.secondary-project__caption > span {
+		width: fit-content;
+		font-size: 0.88rem;
+		font-weight: 650;
+	}
+
+	.secondary-project {
+		width: min(78%, 68rem);
+		margin-left: auto;
+		padding-block: clamp(4rem, 7vw, 6rem);
+	}
+
+	.secondary-project__caption {
+		grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.8fr);
+		column-gap: clamp(1.5rem, 5vw, 4rem);
+	}
+
+	.secondary-project__caption .project-meta {
+		grid-column: 1 / -1;
+	}
+
+	.secondary-project h3 {
+		max-width: 12ch;
+		margin: 0;
+		font-size: clamp(2.1rem, 4vw, 3.7rem);
+		line-height: 0.96;
+	}
+
+	.studio-section {
+		padding-block: clamp(5rem, 9vw, 9rem);
+		border-top: 1px solid var(--border);
+		background: var(--surface);
+	}
+
+	.studio-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+		gap: clamp(3rem, 9vw, 9rem);
+		align-items: start;
+	}
+
+	.studio-heading {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.studio-heading h2 {
+		max-width: 13ch;
+		margin: 0;
+		font-size: clamp(2.8rem, 5.4vw, 5.2rem);
+		line-height: 0.94;
+	}
+
+	.studio-copy {
+		display: grid;
+		gap: 2.2rem;
+		padding-top: 0.2rem;
+	}
+
+	.studio-intro,
+	.capability-note > p:last-child,
+	.contact-copy p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.project-list {
-		border-bottom: 1px solid var(--border);
-	}
-
-	.section-action {
-		display: flex;
-		justify-content: flex-end;
-		padding-top: 2rem;
-	}
-
-	.pending-state {
-		padding-block: 2rem;
-		border-block: 1px solid var(--border);
-		color: var(--text-muted);
-	}
-
-	.studio-section {
-		padding-block: var(--space-section);
-		background: var(--ink);
-		color: var(--surface);
-	}
-
-	.studio-section__inner {
+	.capability-note {
 		display: grid;
-		gap: 2rem;
-	}
-
-	.studio-section__main,
-	.capabilities-section__main {
-		display: grid;
-		grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
-		gap: clamp(2rem, 7vw, 7rem);
-		align-items: end;
-	}
-
-	.studio-section__main > div {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.studio-section__main p {
-		color: rgb(255 255 255 / 58%);
-	}
-
-	.studio-section .text-link {
-		color: var(--surface);
-	}
-
-	.capabilities-section {
-		background: var(--surface);
-	}
-
-	.capabilities-section__inner {
-		display: grid;
-		gap: 2rem;
-	}
-
-	.proof-section {
+		gap: 0.65rem;
+		padding-top: 1.4rem;
 		border-top: 1px solid var(--border);
 	}
 
-	.proof-section__inner {
-		display: grid;
-		grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-		gap: clamp(2rem, 8vw, 8rem);
-	}
-
-	.proof-list {
+	.capability-note h3 {
+		max-width: 18ch;
 		margin: 0;
-		padding: 0;
-		border-top: 1px solid var(--border);
-		list-style: none;
-	}
-
-	.proof-list li {
-		padding-block: 1.25rem;
-		border-bottom: 1px solid var(--border);
-		font-size: clamp(1.1rem, 2vw, 1.5rem);
-		font-weight: 700;
+		font-size: clamp(1.5rem, 2.7vw, 2.35rem);
+		font-weight: 650;
+		line-height: 1.08;
 	}
 
 	.contact-section {
-		padding-block: var(--space-section);
+		padding-block: clamp(4rem, 7vw, 6rem);
+		border-top: 1px solid var(--border);
 		background: var(--paper);
-		border-top: 1px solid var(--border);
 	}
 
-	.contact-section__inner {
+	.contact-grid {
 		display: grid;
-		gap: clamp(1.5rem, 4vw, 3rem);
-	}
-
-	.contact-section h2 {
-		max-width: 12ch;
-		font-size: clamp(3.5rem, 8vw, 8rem);
-	}
-
-	.contact-section__footer {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		gap: 2rem;
+		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: end;
-		padding-top: 1.25rem;
-		border-top: 1px solid var(--border);
+	}
+
+	.contact-grid > div:first-child {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.contact-grid h2 {
+		max-width: 14ch;
+		margin: 0;
+		font-size: clamp(2.6rem, 5vw, 4.8rem);
+		line-height: 0.97;
+	}
+
+	.contact-copy {
+		display: grid;
+		gap: 1.4rem;
+		justify-items: start;
 	}
 
 	@media (max-width: 64rem) {
-		.section-heading,
-		.studio-section__main,
-		.capabilities-section__main,
-		.proof-section__inner {
+		.featured-project__caption,
+		.studio-grid,
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.secondary-project {
+			width: 100%;
+		}
+
+		.secondary-project__caption {
 			grid-template-columns: 1fr;
 		}
 	}
 
 	@media (max-width: 46rem) {
 		.hero__intro,
-		.contact-section__footer {
+		.work-heading {
+			align-items: flex-start;
 			grid-template-columns: 1fr;
-			align-items: start;
+		}
+
+		.work-heading {
+			display: grid;
 		}
 
 		.hero h1 {
-			font-size: clamp(3.4rem, 17vw, 5.5rem);
+			font-size: clamp(3.05rem, 13vw, 4.45rem);
+			line-height: 0.95;
 		}
 	}
 </style>

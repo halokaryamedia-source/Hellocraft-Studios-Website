@@ -7,41 +7,39 @@ import type { LinkItem } from './types';
 
 export const homeCopy = {
 	hero: {
-		eyebrow: 'Game studio focused on Minecraft',
-		title: 'We create worlds, gameplay, and experiences made to be explored.',
+		eyebrow: 'Minecraft game studio',
+		title: 'We build Minecraft experiences people want to explore.',
 		body:
-			'Temporary demo copy for the Hellocraft website. This space will later carry the final studio message while keeping the same page structure.',
-		primaryActionLabel: 'Explore our work'
+			'Hellocraft Studios focuses on Minecraft worlds, gameplay, and production, turning clear ideas into polished experiences for players and partners.',
+		primaryActionLabel: 'View our work'
 	},
 	work: {
 		title: 'Selected work',
-		body:
-			'A temporary selection of demo projects used to shape portfolio pacing, card hierarchy, and the project-detail experience.',
+		body: 'A closer look at how different Minecraft ideas can become worlds, systems, and playable experiences.',
 		emptyState: 'Approved Hellocraft projects will appear here when the portfolio inventory is supplied.',
-		viewAllLabel: 'View all work'
+		viewAllLabel: 'See all projects'
 	},
 	studio: {
-		eyebrow: 'The studio',
-		title: 'Creative craft and technical thinking in one place.',
+		eyebrow: 'Studio',
+		title: 'Good Minecraft work has to look right, play clearly, and hold together.',
 		body:
-			'This temporary studio introduction is here to establish reading length and composition. Final About content will replace it after the studio facts are approved.',
-		actionLabel: 'Meet the studio'
+			'Hellocraft brings creative direction and practical production into the same process, from the first idea through a playable result.',
+		actionLabel: 'About the studio'
 	},
 	capabilities: {
 		eyebrow: 'What we do',
-		title: 'From an idea to a playable Minecraft experience.',
+		title: 'Creative and technical work, treated as one experience.',
 		body:
-			'This is representative development copy only. The final capability narrative will be derived from real Hellocraft work instead of forcing a permanent services taxonomy too early.'
+			'We keep creative decisions and technical constraints close together, so the finished experience feels coherent from the player’s point of view.'
 	},
 	proof: {
 		title: 'A place for real proof'
 	},
 	contact: {
-		eyebrow: 'Start a project',
-		title: 'Have something in mind?',
-		body:
-			'Temporary call-to-action copy. The final business message and public contact channel will be added after they are approved.',
-		actionLabel: 'Contact us'
+		eyebrow: 'Start a conversation',
+		title: 'Tell us what you want to build.',
+		body: 'Share the idea, scope, or problem. We can start from there.',
+		actionLabel: 'Contact Hellocraft'
 	}
 } as const;
 

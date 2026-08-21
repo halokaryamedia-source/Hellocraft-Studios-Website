@@ -45,7 +45,7 @@
 		gap: 1.25rem 2.5rem;
 		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
 		margin-inline: auto;
-		padding-block: 1.15rem;
+		padding-block: 1rem;
 	}
 
 	.brand {
@@ -60,7 +60,7 @@
 		align-items: center;
 		justify-content: flex-end;
 		flex-wrap: wrap;
-		gap: clamp(1.1rem, 2.6vw, 2.25rem);
+		gap: clamp(1.15rem, 2.5vw, 2.2rem);
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -72,18 +72,16 @@
 		align-items: center;
 		min-height: 2.75rem;
 		color: var(--text-muted);
-		font-size: 0.76rem;
-		font-weight: 800;
-		letter-spacing: 0.06em;
+		font-size: 0.88rem;
+		font-weight: 600;
 		text-decoration: none;
-		text-transform: uppercase;
 		transition: color var(--motion-fast) ease-out;
 	}
 
 	nav a::after {
 		position: absolute;
 		right: 0;
-		bottom: 0.35rem;
+		bottom: 0.3rem;
 		left: 0;
 		height: 2px;
 		background: var(--brand);
@@ -109,14 +107,21 @@
 		.site-header__inner {
 			align-items: flex-start;
 			flex-direction: column;
-			padding-block: 1rem 0.7rem;
+			padding-block: 0.9rem 0.65rem;
 		}
 
 		nav {
 			width: 100%;
+			overflow-x: auto;
+			scrollbar-width: none;
+		}
+
+		nav::-webkit-scrollbar {
+			display: none;
 		}
 
 		ul {
+			width: max-content;
 			justify-content: flex-start;
 			gap: 1.4rem;
 		}

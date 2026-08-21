@@ -9,26 +9,23 @@ INFORMATION_ARCHITECTURE_APPROVED
 ROUTE_ARCHITECTURE_APPROVED
 CONTENT_OWNER_MODEL_APPROVED
 TEMPORARY_DEMO_CONTENT_APPROVED
-DUMMY_PAGE_COPY_POPULATED
 DEMO_PROJECTS_POPULATED
 DEMO_CAREER_ITEMS_POPULATED
 PUBLIC_CONTACT_CHANNELS_STILL_REAL_ONLY
 BLIND_SQUIRREL_PRIMARY_REFERENCE_ADOPTED
 PROFESSIONAL_GAME_STUDIO_DIRECTION_ADOPTED
 DE_AI_RESTRAINT_PASS_IMPLEMENTED
-EDITORIAL_RAIL_REMOVED
-CUT_CORNER_MEDIA_REMOVED
-PRODUCTION_HUD_STYLING_REMOVED
-INVENTED_SIGNATURE_GRAMMAR_REJECTED
+HOMEPAGE_HUMAN_COMPOSITION_AUDIT_COMPLETED
+CONTROLLED_HOMEPAGE_REBUILD_IMPLEMENTED
+GLOBAL_BALANCED_HEADING_WRAP_REMOVED
+DEFAULT_INTER_ARIAL_PRESENTATION_REMOVED
+SENTENCE_CASE_UI_LANGUAGE_ADOPTED
+HOMEPAGE_FEATURED_WORK_HIERARCHY_IMPLEMENTED
+HOMEPAGE_STUDIO_CAPABILITY_CHAPTER_MERGED
+HOMEPAGE_COMPACT_CONTACT_CLOSE_IMPLEMENTED
+VISIBLE_HOMEPAGE_DUMMY_COPY_REWRITTEN_AS_PUBLIC_DRAFT
 FAKE_PROOF_HIDDEN_DURING_DEMO
-PROJECT_FIRST_PRESENTATION_RETAINED
-SITE_SHELL_SIMPLIFIED
-HOME_SIMPLIFIED
-WORK_SIMPLIFIED
-PROJECT_DETAIL_SIMPLIFIED
-STUDIO_SIMPLIFIED
-CAREERS_SIMPLIFIED
-CONTACT_SIMPLIFIED
+OTHER_PAGE_ROUTE_ARCHITECTURE_HELD_STABLE
 SOURCE_ACCESSIBILITY_BASELINE_RETAINED
 BRAND_LOCKUP_REPLACEMENT_SURFACE_READY
 PROJECT_MEDIA_REPLACEMENT_SURFACE_READY
@@ -38,7 +35,7 @@ REAL_PORTFOLIO_EVIDENCE_PENDING
 REAL_STUDIO_PROFILE_PENDING
 REAL_CONTACT_CHANNELS_PENDING
 REAL_CAREER_OPENINGS_PENDING
-RENDERED_VISUAL_ACCEPTANCE_DEFERRED
+RENDERED_VISUAL_ACCEPTANCE_PENDING_PROJECT_OWNER_REVIEW
 BUN_LOCK_PENDING_INSTALL
 SCAFFOLD_RUNTIME_VALIDATION_PENDING
 LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
@@ -52,11 +49,11 @@ Working authority: **`Local`**.
 
 Keep improving the presentation until it feels professional and convincingly human-designed. Final Hellocraft text/data/media will be supplied later.
 
-The project owner selected **Blind Squirrel Games** as the primary external reference but rejected the previous Hellocraft refinement because the editorial rail/cut-corner/signature treatment looked more AI-generated.
+The project owner selected **Blind Squirrel Games** as the primary external maturity reference. Previous attempts that manufactured uniqueness through editorial rails, cut corners, repeated huge headings, or other signature devices were rejected.
 
 Do not resume hosting/provider selection or local/runtime testing until explicitly re-authorized.
 
-## Current visual correction
+## Current visual thesis
 
 Canonical owner:
 
@@ -64,73 +61,90 @@ Canonical owner:
 docs/foundation/04-visual-direction.md
 ```
 
-Implementation record:
+Current working rule:
+
+> **Professional game studio with confident restraint. Content hierarchy, real Hellocraft branding, and project media should create the personality; layout gimmicks should not.**
+
+## Homepage audit
+
+Canonical audit record:
 
 ```text
-docs/knowledge/visual-source-implementation.md
+docs/knowledge/homepage-human-composition-audit.md
 ```
 
-Current thesis:
-
-> **Professional game studio with confident restraint. Distinctiveness should come from the real Hellocraft logo and real project media, not invented design gimmicks.**
-
-## Removed from the previous source pass
+Material findings from the rejected preview:
 
 ```text
-editorial section rails
-cut-corner media grammar
-coordinate / production-HUD labels
-large decorative project indices
-cyan structural rails
-fabricated star symbol in the development lockup
-fake proof promoted during demo mode
+headline scale/line-break shape too poster-like
++ too many display-size headings
++ Inter body / Arial-Helvetica display fallback
++ global balanced heading wrapping
++ all-caps micro-label/action language
++ repeated mathematical section rhythm
++ equal project presentation
++ visible internal dummy copy
++ oversized blank media fields
 ```
 
-## Current source presentation
+The Taste Skill and redesign-existing-projects skill were audited as external reference evidence only. No new Hellocraft project specialist was created because `web-ui-design-development` already owns those responsibilities.
+
+## Current Homepage composition
 
 ```text
-Header
-→ light, quiet brand/navigation shell
+Hero
+→ one sentence-case studio label
+→ one dominant headline with calmer desktop line shape
+→ concise body + one text action
+→ one lower, wider development media field
 
-Home
-→ light headline-led hero
-→ one large media surface
-→ stacked project showcases
-→ dark Studio statement
-→ simple capability section
-→ proof hidden while demo
-→ restrained contact close
-
-Work
-→ light oversized intro
-→ one vertical project sequence
-
-Project detail
-→ light identity hero
-→ large media
-→ straightforward contribution/detail sections
+Selected Work
+→ compact section heading
+→ one primary featured project
+→ one clearly secondary project
+→ no repeating equal card/grid rhythm
 
 Studio
-→ light identity hero
-→ simple capability section
-→ one dark approach section
-→ proof hidden while demo
-→ simple contact close
-
-Careers
-→ light recruitment hero
-→ straightforward role rows
-→ context
-→ dark application section
+→ one main studio statement
+→ supporting copy
+→ capability narrative nested as a smaller sub-section
 
 Contact
-→ light contact hero
-→ real-only channel list
-→ dark inquiry section
-
-Footer
-→ compact dark information footer
+→ compact closing statement + one action
 ```
+
+Proof remains hidden while demo content is active.
+
+## Typography correction
+
+Current source no longer uses Inter + Arial as the primary presentation pair.
+
+Development audition baseline now prefers:
+
+```text
+body
+→ Segoe UI Variable Text / Segoe UI / system fallback
+
+display
+→ Segoe UI Variable Display / Segoe UI / system fallback
+```
+
+This is still a development audition, not a final licensed brand-font decision. The final production font remains pending real logo/brand fit and later rendered acceptance.
+
+Global `text-wrap: balance` on headings was removed. Labels/actions now default to sentence case instead of automatic uppercase treatment.
+
+## Development content presentation
+
+Visible Homepage copy now reads like draft public copy. Demo status remains protected through:
+
+```text
+contentIsDemo = true
++ development notice
++ noindex,nofollow
++ source comments
+```
+
+Project names remain development-only studies, not portfolio claims.
 
 ## Content replacement remains stable
 
@@ -149,7 +163,7 @@ src/lib/content/demo-data.ts
 src/lib/content/site.ts
 → public site/social/navigation values
 
-BrandLockup / BrandSymbol
+BrandLockup
 → authoritative logo replacement
 
 Project media owner
@@ -157,10 +171,6 @@ Project media owner
 ```
 
 Do not rewrite route architecture merely because final text arrives.
-
-## Demo/publication guard
-
-`contentIsDemo` remains true. The root `noindex, nofollow` guard must remain until demo content is fully replaced and approved.
 
 ## Deferred proof
 
@@ -180,4 +190,4 @@ Preview-only visual rendering is allowed when requested, but it is not technical
 
 ## Next Step
 
-**Preview the restraint-first homepage/source correction. Review typography scale, whitespace, project-media proportion, and overall professional tone. Make only small targeted visual changes from that preview; do not add another signature design system.**
+**Review the controlled Homepage preview. If the composition is accepted, propagate only the proven typography/hierarchy principles to Work, Studio, Careers, Contact, and Footer. If it is not accepted, revise Homepage only; do not redesign the whole site again.**

@@ -7,9 +7,9 @@ import type { ProjectEntry } from './types';
 export const projects: ProjectEntry[] = [
 	{
 		slug: 'demo-project-01',
-		title: 'Demo Project 01',
+		title: 'Concept World Study',
 		summary:
-			'A temporary project entry used to establish card proportions, title hierarchy, summary length, and the selected-work rhythm.',
+			'A story-led Minecraft concept shaped around exploration, environmental storytelling, and clear player progression.',
 		featured: true,
 		contribution: [
 			'Demo contribution item — replace with Hellocraft’s verified role.',
@@ -36,9 +36,9 @@ export const projects: ProjectEntry[] = [
 	},
 	{
 		slug: 'demo-project-02',
-		title: 'Demo Project 02 — Longer Working Title',
+		title: 'Multiplayer Gameplay Study',
 		summary:
-			'A longer temporary project summary used to test card wrapping, different title lengths, and portfolio pacing across responsive layouts.',
+			'A multiplayer-focused development concept exploring readable objectives, replayable rounds, and clear player feedback.',
 		featured: true,
 		contribution: ['Demo contribution — replace with a verified project responsibility.'],
 		sections: [
@@ -53,9 +53,9 @@ export const projects: ProjectEntry[] = [
 	},
 	{
 		slug: 'demo-project-03',
-		title: 'Demo Project 03',
+		title: 'Environment Study',
 		summary:
-			'A compact development-only project entry used to make the full Work index feel populated before real portfolio data is available.',
+			'A world-design concept focused on memorable landmarks, traversal, atmosphere, and a clear sense of place.',
 		featured: false,
 		sections: [
 			{
