@@ -6,11 +6,11 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Careers implementation commit:
+Latest Contact implementation commit:
 
 ```text
-aac6f662bb6b6f08587c75e0747ab26be2c87e91
-refine(careers): align careers page with approved visual baseline
+18daf9dddcb2b095fb497689852b0700f29bafcb
+refine(contact): align contact page with approved visual baseline
 ```
 
 ## Current Status
@@ -27,15 +27,18 @@ HOMEPAGE_VISUAL_BASELINE_APPROVED
 WORK_VISUAL_BASELINE_APPROVED
 PROJECT_DETAIL_ROUTE_BASELINE_APPROVED_TO_CONTINUE
 STUDIO_ROUTE_BASELINE_APPROVED_TO_CONTINUE
-CAREERS_VISUAL_PROPAGATION_IMPLEMENTED
-CAREERS_PROJECT_OWNER_APPROVAL_PENDING
-CONTACT_VISUAL_PROPAGATION_PENDING
+CAREERS_ROUTE_BASELINE_APPROVED
+CONTACT_VISUAL_PROPAGATION_IMPLEMENTED
+CONTACT_PROJECT_OWNER_APPROVAL_PENDING
+ROUTE_LEVEL_VISUAL_PROPAGATION_COMPLETE_IN_SOURCE
 REAL_PROJECT_MEDIA_PENDING
 REAL_PORTFOLIO_EVIDENCE_PENDING
+FINAL_PUBLIC_COPY_PENDING
 FINAL_PRODUCTION_FONT_PENDING
 PRODUCTION_LOGO_PENDING
 REAL_CONTACT_CHANNELS_PENDING
 REAL_CAREER_OPENINGS_PENDING
+RESPONSIVE_ACCESSIBILITY_PERFORMANCE_QA_PENDING
 LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 ```
@@ -62,113 +65,129 @@ Current thesis:
 
 > **A professional Minecraft game studio presented with Hazelight-style visual confidence and media-first simplicity, combined with Blind-Squirrel-style project and capability credibility.**
 
-The accepted route grammar now extends through:
+Accepted route grammar now extends through:
 
 ```text
 Homepage
 → Work
 → Project Detail
 → Studio
+→ Careers
 ```
 
-Do not reopen the visual-direction research unless the project owner explicitly changes direction.
+Contact has been implemented as the final route-level propagation and is waiting for project-owner approval.
 
-## Careers Route
+Do not reopen visual-direction research unless the project owner explicitly changes direction.
 
-`src/routes/careers/+page.svelte` has now been propagated from the accepted visual language.
+## Contact Route
 
-Previous Careers problems:
+`src/routes/contact/+page.svelte` has been rebuilt from the accepted visual language.
+
+Previous Contact problems:
 
 ```text
 hero title scaled up to 10rem
-large section headings repeated mechanically
-General / Application repeated chapter-like split sections
-Application used another dark chapter block
-demo career entries were rendered as visible vacancies while contentIsDemo = true
+Contact channels / Project inquiries repeated large split-section patterns
+Inquiry used another dark chapter block
+contact links used decorative arrow treatment
 ```
 
 Current composition:
 
 ```text
-restrained Careers introduction
-→ studio/culture statement on a neutral secondary surface
-→ Open roles section with a compact section anchor
-→ real openings, when approved, render as clean editorial rows
-→ simple How to apply closing section
+restrained Contact introduction
+→ honest contact-channel surface
+→ approved contact links render as direct typographic rows
+→ empty state remains when no real public channels exist
+→ concise Project inquiries guidance on a neutral secondary surface
 ```
 
-## Demo Vacancy Safety
-
-Demo career data remains available in:
+The page deliberately does not add:
 
 ```text
-src/lib/content/demo-data.ts
+fake contact form
+fabricated email / Discord / social channels
+decorative external-arrow pattern
+dark chapter finale
+new inquiry backend
+CRM / database / form-service dependency
 ```
 
-but the Careers route now uses the publication boundary:
+Existing contact ownership remains:
 
 ```text
-contentIsDemo = true
-→ do not render demo roles as public vacancies
-→ show careersCopy.openings.emptyState instead
+src/lib/content/pages.ts
+→ Contact copy + contactMethods export
 
-contentIsDemo = false + approved careerOpenings
-→ render actual opening rows
+src/lib/content/site.ts
+→ approved public/social identity values where applicable
 ```
 
-This preserves development data without presenting fabricated recruitment claims.
-
-## Careers Review Boundary
+## Contact Review Boundary
 
 Current proof level:
 
 ```text
-Careers source implementation       = completed
-demo vacancy publication guard      = implemented
-content / semantic structure        = reviewed at source level
-actual Svelte runtime               = deferred / unproven
-project-owner visual approval       = pending
+Contact source implementation     = completed
+content / semantic structure      = reviewed at source level
+actual Svelte runtime             = deferred / unproven
+project-owner visual approval     = pending
 ```
 
 Do not claim exact rendered/runtime acceptance while local runtime validation remains deferred.
 
 ## Immediate Next Step
 
-### 1. Review Careers
+### 1. Review Contact
 
-If the project owner approves Careers:
+If the project owner approves Contact:
 
 ```text
-Careers approved
-→ freeze Careers as route baseline
-→ inspect current Contact source
-→ propagate approved visual grammar to Contact only
-→ review Contact
+Contact approved
+→ freeze route-level visual system
+→ stop route redesign work
+→ begin production content/media replacement
 ```
 
-If Careers receives critique:
+If Contact receives critique:
 
 ```text
-identify concrete Careers-specific problem
-→ make smallest Careers-only correction
-→ preserve accepted Homepage / Work / Project Detail / Studio baselines
+identify concrete Contact-specific problem
+→ make smallest Contact-only correction
+→ preserve all accepted route baselines
 ```
 
-### 2. Remaining visual propagation
+### 2. Production replacement order after Contact approval
+
+Start with the evidence that most materially changes the site presentation:
 
 ```text
-Contact
+1. real portfolio inventory + verified project facts
+2. real project screenshots / renders / video posters
+3. final public Home / Work / Studio / Careers / Contact copy
+4. approved public contact + social channels
+5. real career openings, if any
+6. authoritative production logo / exact cyan
+7. final production typography
 ```
 
-After Contact is accepted, route-level visual discovery/propagation is effectively complete and the project can move into production replacement and finalization:
+Use the existing content owners; do not rebuild route architecture when real content arrives.
+
+### 3. Finalization after production content/media
+
+When the project owner re-authorizes technical validation:
 
 ```text
-real portfolio data + media
-→ final studio/career/contact content
-→ production logo + typography
-→ responsive/accessibility/performance QA
-→ build/runtime validation when re-authorized
-→ publication / hosting
+responsive visual QA
+→ accessibility / keyboard / reflow / contrast QA
+→ media crop + loading + performance pass
+→ bun install / lockfile
+→ format / lint / svelte-check / build
+→ actual browser/runtime acceptance
+→ metadata/publication cleanup
+→ disable demo mode / noindex only when content is production-ready
+→ hosting/provider + production adapter
+→ deployed production QA
 ```
 
 ## Preserve These Rules
@@ -176,8 +195,9 @@ real portfolio data + media
 ```text
 Homepage is APPROVED
 Work is APPROVED
-Project Detail direction is accepted to continue
-Studio direction is accepted to continue
+Project Detail direction is accepted
+Studio direction is accepted
+Careers is APPROVED
 real media > invented decoration
 content hierarchy > repeated visual systems
 no numbered chapter progression
@@ -191,22 +211,20 @@ no Work filters/categories initially
 no fabricated contact, client, award, team-size, or recruitment claims
 ```
 
-## Production Content / Media Still Pending
-
-Final replacement owners remain:
+## Production Content / Media Owners
 
 ```text
 src/lib/content/pages.ts
-→ final public copy
+→ final public page copy + contact method presentation data
 
 src/lib/content/projects.ts
 → real portfolio entries and verified project facts
 
 src/lib/content/demo-data.ts
-→ real proof/careers replacement
+→ replace temporary proof / career data with verified data when available
 
 src/lib/content/site.ts
-→ approved public/social/contact values
+→ approved public/social/contact identity values
 
 BrandLockup
 → final production logo
@@ -238,4 +256,4 @@ production adapter selection
 
 ## Next Step
 
-**Review the propagated Careers page. If approved, continue to Contact as the final route-level visual propagation.**
+**Review Contact as the final visually propagated route. If approved, begin production portfolio/content/media intake rather than further route redesign.**
