@@ -1,15 +1,19 @@
 <script lang="ts">
 	import type { ProjectEntry } from '$lib/content/types';
+	import ProjectMediaPlaceholder from './ProjectMediaPlaceholder.svelte';
 
-	let { project }: { project: ProjectEntry } = $props();
+	let {
+		project,
+		headingLevel = 3
+	}: {
+		project: ProjectEntry;
+		headingLevel?: 2 | 3;
+	} = $props();
 </script>
 
 <article class="project-card">
 	<a href={`/work/${project.slug}`}>
-		<div class="project-card__media" aria-hidden="true">
-			<span class="project-card__media-label">Project visual</span>
-			<span class="project-card__star"></span>
-		</div>
+		<ProjectMediaPlaceholder />
 
 		<div class="project-card__copy">
 			<div class="project-card__meta">
@@ -19,7 +23,11 @@
 			</div>
 
 			<div class="project-card__title-row">
-				<h2>{project.title}</h2>
+				{#if headingLevel === 2}
+					<h2>{project.title}</h2>
+				{:else}
+					<h3>{project.title}</h3>
+				{/if}
 				<span class="project-card__arrow" aria-hidden="true">↗</span>
 			</div>
 			<p>{project.summary}</p>
@@ -36,50 +44,6 @@
 		display: grid;
 		gap: 1rem;
 		text-decoration: none;
-	}
-
-	.project-card__media {
-		position: relative;
-		display: grid;
-		align-items: end;
-		aspect-ratio: 16 / 10;
-		overflow: hidden;
-		padding: clamp(1rem, 3vw, 1.5rem);
-		border: 1px solid var(--border);
-		border-radius: var(--radius-md);
-		background:
-			linear-gradient(90deg, rgb(12 13 14 / 7%) 1px, transparent 1px) 0 0 / 2rem 2rem,
-			linear-gradient(rgb(12 13 14 / 7%) 1px, transparent 1px) 0 0 / 2rem 2rem,
-			var(--brand);
-		transition:
-			transform var(--motion-medium) cubic-bezier(0.2, 0.75, 0.2, 1),
-			border-radius var(--motion-medium) ease-out;
-	}
-
-	.project-card__media-label {
-		position: relative;
-		z-index: 2;
-		width: fit-content;
-		padding: 0.45rem 0.65rem;
-		border-radius: 999px;
-		background: var(--ink);
-		color: var(--surface);
-		font-size: 0.7rem;
-		font-weight: 850;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-	}
-
-	.project-card__star {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: min(48%, 10rem);
-		aspect-ratio: 1;
-		background: var(--surface);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-		transform: translate(-50%, -50%) rotate(-8deg);
-		transition: transform var(--motion-medium) cubic-bezier(0.2, 0.75, 0.2, 1);
 	}
 
 	.project-card__copy {
@@ -106,7 +70,8 @@
 		align-items: start;
 	}
 
-	h2 {
+	h2,
+	h3 {
 		margin: 0;
 		font-size: clamp(1.55rem, 3vw, 2.5rem);
 		line-height: 0.98;
@@ -131,17 +96,6 @@
 		margin: 0;
 		color: var(--text-muted);
 		font-size: 0.95rem;
-	}
-
-	a:hover .project-card__media,
-	a:focus-visible .project-card__media {
-		border-radius: calc(var(--radius-md) * 0.65);
-		transform: translateY(-0.2rem);
-	}
-
-	a:hover .project-card__star,
-	a:focus-visible .project-card__star {
-		transform: translate(-50%, -50%) rotate(8deg) scale(1.08);
 	}
 
 	a:hover .project-card__arrow,

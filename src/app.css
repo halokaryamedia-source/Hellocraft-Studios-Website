@@ -8,7 +8,8 @@
 
 	/* Temporary development cyan. Replace from the authoritative Hellocraft brand asset later. */
 	--brand: #29abe2;
-	--brand-strong: #1099d3;
+	/* Darker cyan reserved for small text/details on light surfaces. */
+	--brand-strong: #006c92;
 	--ink: #0c0d0e;
 	--paper: #f7f7f2;
 	--surface: #ffffff;
@@ -45,7 +46,6 @@ body {
 	background: var(--paper);
 	color: var(--ink);
 	line-height: 1.5;
-	overflow-x: hidden;
 }
 
 img,
@@ -66,6 +66,8 @@ select {
 
 a {
 	color: inherit;
+	overflow-wrap: anywhere;
+	text-decoration-skip-ink: auto;
 }
 
 h1,
@@ -74,6 +76,7 @@ h3 {
 	font-family: Arial, 'Helvetica Neue', sans-serif;
 	font-weight: 900;
 	letter-spacing: -0.045em;
+	overflow-wrap: anywhere;
 	text-wrap: balance;
 }
 
@@ -88,8 +91,9 @@ li {
 }
 
 :focus-visible {
-	outline: 3px solid var(--brand);
-	outline-offset: 0.25rem;
+	outline: 3px solid var(--surface);
+	outline-offset: 0.2rem;
+	box-shadow: 0 0 0 6px var(--ink);
 }
 
 .skip-link {
@@ -123,5 +127,12 @@ li {
 		transition-duration: 0.01ms !important;
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
+	}
+}
+
+@media (forced-colors: active) {
+	:focus-visible {
+		outline: 2px solid CanvasText;
+		box-shadow: none;
 	}
 }

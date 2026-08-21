@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ProjectMediaPlaceholder from '$lib/components/work/ProjectMediaPlaceholder.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -37,14 +38,11 @@
 		</div>
 	</section>
 
-	<section class="visual-stage" aria-label="Project media placeholder">
+	<div class="visual-stage">
 		<div class="shell">
-			<div class="project-visual" aria-hidden="true">
-				<span>Project media</span>
-				<div class="project-visual__star"></div>
-			</div>
+			<ProjectMediaPlaceholder variant="hero" label="Project media" />
 		</div>
-	</section>
+	</div>
 
 	{#if project.contribution && project.contribution.length > 0}
 		<section class="section contribution" aria-labelledby="project-contribution-title">
@@ -55,7 +53,7 @@
 				</div>
 				<ol class="contribution-list">
 					{#each project.contribution as item, index (item)}
-						<li><span>{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+						<li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
 					{/each}
 				</ol>
 			</div>
@@ -113,6 +111,7 @@
 		align-items: center;
 		gap: 0.5rem;
 		width: fit-content;
+		min-height: 2rem;
 		font-weight: 800;
 		text-underline-offset: 0.3em;
 	}
@@ -180,42 +179,6 @@
 	.visual-stage {
 		padding-block: clamp(2rem, 5vw, 4rem);
 		background: var(--ink);
-	}
-
-	.project-visual {
-		position: relative;
-		display: grid;
-		align-items: end;
-		min-height: clamp(24rem, 60vw, 54rem);
-		overflow: hidden;
-		padding: clamp(1rem, 3vw, 2rem);
-		border: 1px solid var(--inverse-border);
-		border-radius: var(--radius-md);
-		background:
-			linear-gradient(90deg, rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
-			linear-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
-			#17191b;
-		color: var(--surface);
-	}
-
-	.project-visual > span {
-		position: relative;
-		z-index: 2;
-		font-size: 0.75rem;
-		font-weight: 850;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-	}
-
-	.project-visual__star {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: min(48%, 24rem);
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-		transform: translate(-50%, -50%) rotate(-10deg);
 	}
 
 	.section {
@@ -286,8 +249,10 @@
 
 	.project-links a {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+		min-height: 2.75rem;
 		padding-block: 1rem;
 		border-bottom: 1px solid var(--border);
 		font-weight: 800;

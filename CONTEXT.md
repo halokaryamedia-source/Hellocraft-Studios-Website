@@ -1,30 +1,32 @@
 # Hellocraft Studios Website — Current Context
 
-Stable orientation for branch **`Local`**.
+Stable orientation for branch `Local`.
 
-Durable project meaning lives in `docs/foundation/`; active continuation lives in `docs/knowledge/next-action.md`; detailed routing lives in `AGENTS.md`.
+Active continuation belongs in `docs/knowledge/next-action.md`; durable project meaning belongs in `docs/foundation/`; detailed task routing belongs in `AGENTS.md`.
 
 ## Product identity
 
-> **Hellocraft Studios is a game studio focused on Minecraft.**
+Hellocraft Studios is a **game studio focused on Minecraft**.
 
-Website responsibilities:
+The official website is intended to provide:
 
-- official studio/company identity;
-- real portfolio/proof of work;
-- client/partner credibility and acquisition;
+- clear studio/company identity;
+- portfolio/proof of work;
+- client discoverability/acquisition;
 - collaboration and recruitment paths;
-- understandable communication for both Minecraft-native and non-Minecraft-native visitors.
+- an experience understandable to both Minecraft-native and non-Minecraft-native visitors.
 
-## Approved information architecture
-
-Canonical owner:
+Priority:
 
 ```text
-docs/foundation/07-information-content-architecture.md
+clarity + credibility + real evidence + useful client path
++
+strong visual quality + lightweight delivery
+>
+feature breadth + decorative complexity
 ```
 
-Route tree:
+## Approved route architecture
 
 ```text
 /
@@ -44,86 +46,64 @@ Careers
 Contact
 ```
 
-Home is reached through the brand/logo.
+Home is accessed through the Hellocraft brand/logo.
 
-Initial negative decisions:
+No dedicated Services route and no portfolio filters/categories are part of the initial architecture. They are added only if real content later proves them useful.
+
+Canonical owner:
 
 ```text
-separate Services route = no
-Work filters/categories = no until real inventory earns them
-blog/news                = no current responsibility
+docs/foundation/07-information-content-architecture.md
 ```
 
-The route/page architecture is now intended to stay stable while approved text/media/project data is populated later.
+## Current content mode
 
-## Content ownership
+The project owner explicitly approved temporary dummy content so website presentation can be built before final text/data/media arrives.
+
+Current source contains:
 
 ```text
-src/lib/content/site.ts
-→ identity + navigation
-
 src/lib/content/pages.ts
-→ page copy slots + empty proof/contact/careers collections
+→ temporary development copy
 
 src/lib/content/projects.ts
-→ approved public project entries; currently empty
+→ clearly-labelled Demo Project entries
 
-src/lib/content/types.ts
-→ small shared content contracts
+src/lib/content/demo-data.ts
+→ demo proof + demo career items
+
+src/lib/content/demo.ts
+→ contentIsDemo = true
+
+src/lib/content/demo-copy.ts
+→ visible development-content notice
 ```
 
-Unknown copy uses explicit searchable placeholders such as:
+Dummy content is never portfolio/company evidence. Fake clients, metrics, testimonials, real-looking contact channels, or live hiring claims must not be created.
+
+While demo mode is active the root layout emits `noindex, nofollow`.
+
+Real content later enters through `docs/knowledge/content-intake-contract.md`.
+
+## Current visual direction
+
+Canonical baseline:
+
+> **Playful editorial game studio**
+
+Source direction currently uses:
 
 ```text
-[[HOME_HERO_TITLE]]
-[[STUDIO_APPROACH_BODY]]
-[[CONTACT_INQUIRY_BODY]]
+warm-white canvas
++ near-black structural sections
++ temporary Hellocraft cyan accent
++ large editorial typography
++ restrained star/brand motifs
++ large project-media surfaces
++ CSS-native interaction/motion
 ```
 
-Do not invent copy or facts merely to remove a placeholder.
-
-Authoritative content intake is governed by:
-
-```text
-docs/knowledge/content-intake-contract.md
-```
-
-Portfolio/project evidence and Studio/About facts are still pending owner-supplied data.
-
-## Page responsibility summary
-
-### Home
-
-```text
-identity
-→ selected work
-→ studio snapshot
-→ capability narrative
-→ optional real proof
-→ contact path
-```
-
-### Work
-
-Project listing only initially. No fabricated projects, categories, filters, or metrics.
-
-### Project detail
-
-Flexible model supporting title/summary, optional year/client, contribution, flexible content sections, approved links, and later authoritative media.
-
-### Studio
-
-Studio/About responsibility plus capability narrative and working context. No separate About/Services route initially.
-
-### Careers
-
-Recruitment intro, real openings when supplied, general recruitment context, and application-path placeholder. No invented roles or application fields.
-
-### Contact
-
-Business/contact intro, approved contact methods, and an inquiry-surface placeholder. Exact form/backend behavior remains unresolved and does not block page architecture.
-
-## Visual direction
+The logo supplied by the project owner is authoritative brand evidence. The current cyan and CSS star are development approximations only until the authoritative original/vector logo source is supplied.
 
 Canonical owner:
 
@@ -131,21 +111,26 @@ Canonical owner:
 docs/foundation/04-visual-direction.md
 ```
 
-Adopted thesis:
+Current visual source implementation covers Header, Footer, Home, Work, Project Detail, Studio, Careers, and Contact.
 
-> **Playful editorial game studio**
+## Brand/media replacement surfaces
 
-Direction:
+Current source centralizes development placeholders so real assets do not require route rewrites:
 
-- bold, friendly, graphic Hellocraft character;
-- cyan + neutral structural palette;
-- large real project media as primary evidence;
-- editorial pacing and selective asymmetry;
-- clean surfaces with restrained playful accents;
-- quick purposeful motion;
-- Minecraft identity mainly from real work, not Minecraft UI chrome.
+```text
+src/lib/components/brand/BrandLockup.svelte
+→ current development header/footer lockup
+→ future authoritative wordmark/logo replacement owner
 
-Exact fonts, production color values, spacing/radius values, final crops, and rendered composition still require later real assets and rendered review.
+src/lib/components/brand/BrandSymbol.svelte
+→ current decorative brand-symbol placeholder
+
+src/lib/components/work/ProjectMediaPlaceholder.svelte
+→ current development project-media placeholder
+→ must be replaced/extended when real project assets arrive
+```
+
+Development media placeholders are decorative and hidden from assistive technology. Real content-bearing project images/video must receive semantics based on the actual media.
 
 ## Approved technical baseline
 
@@ -158,15 +143,15 @@ styling                = native CSS + Svelte scoped styles
 shared tokens          = CSS Custom Properties
 quality gate           = bun run validate
 local raster pipeline  = @sveltejs/enhanced-img
-rendering              = static/prerender-first, server-where-needed
+architecture           = static/prerender-first, server-where-needed
 backend                = SvelteKit server only when needed
 separate backend       = none initially
 database               = none initially
 ```
 
-Scaffold source exists. `bun.lock`, install/build/runtime validation, and browser proof are still pending.
+No Tailwind, SCSS, CSS-in-JS, component library, animation library, CMS, database, auth, analytics, image CDN, or media CDN is part of the initial baseline.
 
-## Media / performance
+## Media/performance baseline
 
 Canonical owner:
 
@@ -176,57 +161,72 @@ docs/foundation/03-media-performance-policy.md
 
 Key rules:
 
-- source-imported local assets by default;
-- `static/` only for stable passthrough URLs;
-- `@sveltejs/enhanced-img` for useful local raster optimization;
-- LCP image not lazy-loaded;
-- below-fold media lazy when appropriate;
-- video poster-first / user-initiated by default;
-- self-hosted WOFF2 fonts when licensed;
-- no permanent byte budgets until representative visual media exists.
+- application-referenced local assets use imported/Vite-processed ownership by default;
+- `static/` is for stable passthrough URLs only;
+- local responsive raster media may use `@sveltejs/enhanced-img`;
+- LCP media is not lazy-loaded;
+- below-fold media uses native lazy loading when appropriate;
+- video is poster-first and user-initiated by default;
+- webfonts are self-hosted WOFF2 when licensed/selected;
+- permanent byte budgets are calibrated after representative real media exists.
 
-## Discoverability
+## Accessibility source state
 
-Canonical owner:
+Current source follows native HTML landmarks/controls, has a skip link, `lang="en"` for current English development copy, reduced-motion handling, explicit focus treatment, and semantic heading correction for project cards.
+
+Current audit owner:
 
 ```text
-docs/foundation/05-discoverability-metadata-policy.md
+docs/knowledge/accessibility-source-audit.md
 ```
 
-Use native Svelte head/metadata handling. No SEO or sitemap package initially. Canonical/sitemap/structured-data facts wait for real route/origin/evidence authority.
+This is source evidence only. Browser keyboard behavior, computed contrast, zoom/reflow, assistive-technology behavior, and rendered accessibility remain unproven while runtime testing is deferred.
 
-## Runtime/local boundary
+## Current project-owner deferrals
 
-The project owner explicitly deferred local/runtime testing at the current stage.
-
-Do not run or repeatedly request:
+The project owner currently does **not** want the following work run/prioritized:
 
 ```text
 bun install
+bun.lock generation
 bun run validate
 local preview
 Chrome/runtime dry-run
+hosting/provider selection
+production adapter selection
 ```
 
-until re-authorized.
+Do not repeatedly push these as the active next step until explicitly re-authorized.
 
-Do not fabricate `bun.lock` or build/browser proof.
+Hosting research already exists but is inactive and non-authoritative for current work.
 
-## Hosting boundary
+## Real content still pending
 
-The project owner explicitly deferred hosting/provider work.
+Still awaiting authoritative owner-supplied data:
 
-Existing provider research may remain as historical/current research, but it is **not an active decision track**. Do not install provider adapters, choose a host, create provider projects, or let hosting drive route architecture until the owner reopens that topic.
+- real Portfolio/Project inventory and media;
+- final Studio/About facts and copy;
+- real public contact channels;
+- real Careers/opening information;
+- authoritative logo/vector/brand files;
+- exact final typography and production brand values.
 
-## Current next focus
+Do not recover old conversation project names and treat them as portfolio authority.
 
-Architecture is now prepared for content population.
+## Current development state
 
-Priority owner inputs:
+```text
+technical scaffold source       = created
+information architecture         = approved + implemented
+content-owner architecture       = implemented
+clearly-labelled dummy content   = populated
+visual source system             = implemented
+source accessibility audit       = completed/current pass
+brand replacement surface        = ready
+project-media placeholder owner  = ready
+runtime/build acceptance          = deferred/unproven
+hosting                            = deferred
+real public content               = pending
+```
 
-1. authoritative Portfolio/Project inventory;
-2. Studio/About facts;
-3. public contact channels;
-4. real Careers/opening information.
-
-Populate `src/lib/content/*` and approved media without changing route architecture unless real content proves a structural problem.
+Use `docs/knowledge/next-action.md` for the immediate continuation.

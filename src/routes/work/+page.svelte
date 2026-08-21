@@ -30,7 +30,7 @@
 			{#if projects.length > 0}
 				<div class="project-grid">
 					{#each projects as project (project.slug)}
-						<ProjectCard {project} />
+						<ProjectCard {project} headingLevel={2} />
 					{/each}
 				</div>
 			{:else}

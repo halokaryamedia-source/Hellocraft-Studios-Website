@@ -2,7 +2,7 @@
 
 Canonical information/content architecture for the Hellocraft Studios Website.
 
-This file owns route responsibilities, content ownership, development content handling, and the stable structure that allows the site to be prepared before final copy/media is supplied.
+This file owns **where website responsibilities live, which routes exist, and how content is separated from presentation**. Product facts remain evidence-bound, while temporary demo content is allowed only as an explicitly labelled development aid.
 
 ## Status
 
@@ -10,13 +10,15 @@ This file owns route responsibilities, content ownership, development content ha
 INFORMATION_ARCHITECTURE_APPROVED
 ROUTE_ARCHITECTURE_APPROVED
 CONTENT_OWNER_MODEL_APPROVED
-TEMPORARY_DEMO_CONTENT_APPROVED_FOR_DEVELOPMENT
 PRIMARY_NAVIGATION_APPROVED
+TEMPORARY_DEMO_CONTENT_APPROVED
 NO_SERVICES_PAGE_INITIAL_APPROVED
 NO_PORTFOLIO_FILTER_INITIAL_APPROVED
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 RUNTIME_VALIDATION_DEFERRED_BY_PROJECT_OWNER
 ```
+
+The architecture is deliberately simple so later work is mostly content/media replacement rather than repeated structural redesign.
 
 ## Primary route architecture
 
@@ -38,22 +40,22 @@ Careers
 Contact
 ```
 
-Home is reached through the Hellocraft brand/logo.
+Home is reached through the Hellocraft brand/logo rather than a redundant `Home` item.
 
 ## Route responsibilities
 
 | Route | Responsibility |
 |---|---|
-| `/` | studio identity, selected work, concise studio/capability context, proof slot, contact path |
-| `/work` | browse project entries without requiring taxonomy/filtering |
-| `/work/[slug]` | one flexible project showcase/case-study surface |
-| `/studio` | About/Studio responsibility and capability/context narrative |
-| `/careers` | recruitment context, openings collection, later application path |
-| `/contact` | business/contact destination and later inquiry surface |
+| `/` | establish identity, surface selected work/evidence, explain the studio briefly, and provide a client path |
+| `/work` | browse project evidence without requiring a taxonomy |
+| `/work/[slug]` | show one project's identity, contribution, flexible story/evidence sections, and optional links/media |
+| `/studio` | explain Hellocraft as a studio and provide capability/context without forcing a separate Services page |
+| `/careers` | recruitment information, openings when supplied, and an application path |
+| `/contact` | business/contact destination; exact channel/form behavior remains separate |
 
-Routes such as `/services`, `/blog`, `/news`, `/team`, `/clients`, `/awards`, `/login`, and `/dashboard` are not created merely to make the site appear complete.
+Routes intentionally not created now include `/services`, `/blog`, `/news`, `/team`, `/clients`, `/partners`, `/awards`, `/shop`, `/login`, and `/dashboard`.
 
-A dedicated Services page remains intentionally absent. Capability language belongs in Home/Studio until real project evidence proves a separate service architecture is useful.
+A route is added only when a real current responsibility earns it.
 
 ## Global shell
 
@@ -61,81 +63,70 @@ Every public route shares:
 
 ```text
 skip link
-→ temporary demo-content notice while demo mode is active
+→ development-content notice while demo mode is active
 → site header
 → primary navigation
 → page main content
 → site footer
 ```
 
-## Content ownership
+The header/footer own global navigation and brand access only. Page-specific content stays with its route/content owner.
+
+## Content-source ownership
+
+Current no-CMS ownership:
 
 ```text
 src/lib/content/site.ts
-→ site identity + navigation
+→ stable site identity + navigation configuration
 
 src/lib/content/pages.ts
 → Home / Work / Studio / Careers / Contact copy
 
 src/lib/content/projects.ts
-→ project entries
-
-src/lib/content/types.ts
-→ shared content contracts
-
-src/lib/content/demo.ts
-→ development demo-mode flag
-
-src/lib/content/demo-copy.ts
-→ shared visible demo notice
+→ project entries used by Work/Home/project detail
 
 src/lib/content/demo-data.ts
-→ temporary proof/career collections
+→ development-only proof/career collections
 
-src/lib/content/DEMO_COPY_POLICY.md
-→ development-content guardrails
+src/lib/content/demo.ts
+→ demo-mode switch
+
+src/lib/content/demo-copy.ts
+→ visible development-content notice
+
+src/lib/content/types.ts
+→ small shared content contracts
 ```
 
-Content belongs in these owners rather than being scattered through route components.
+Do not scatter final marketing copy through Svelte route/components when it belongs to these content owners.
 
-## Temporary demo-content policy
+## Temporary demo-content contract
 
-The project owner explicitly approved temporary dummy text/data so the website can be prepared before final copy is supplied.
+The project owner explicitly approved temporary dummy content so the presentation can be developed before final text/data/media arrives.
 
-Therefore development source may contain realistic temporary content for:
-
-- page headings, summaries, calls to action, and supporting paragraphs;
-- demo project cards/detail pages;
-- demo proof-list items;
-- demo career-opening cards.
-
-Guardrails:
+Development content must remain unmistakable:
 
 ```text
-demo content
-→ clearly identified in source as temporary
-→ must not be treated as Hellocraft evidence
-→ must not be presented internally as approved final copy
-→ demo projects must remain explicitly named Demo Project ...
-→ demo roles must remain explicitly named Demo role ...
-→ public contact URLs/emails are never fabricated
-→ verified client/partner/metric claims are never fabricated
+Demo Project ...
+Demo role ...
+Demo proof ...
+TEMPORARY DEVELOPMENT COPY comments
+contentIsDemo = true
+visible demo-content notice
+robots noindex/nofollow guard
 ```
 
-While temporary public-facing content remains, `contentIsDemo` stays `true` and the shared layout displays a visible demo-content notice.
+Dummy content is **not** Hellocraft evidence.
 
-When authoritative content arrives:
+Never fabricate development values that can be mistaken for real public facts, including:
 
-```text
-owner supplies source material
-→ content-intake audit
-→ approve publication facts/copy
-→ replace values in src/lib/content/*
-→ remove demo collections
-→ set contentIsDemo = false only after public-facing demo material is gone
-```
-
-The route architecture should not need to change merely because the wording changes.
+- real-looking client/partner attribution;
+- awards/results/metrics;
+- public email/phone/contact URLs;
+- testimonials;
+- factual company history;
+- live hiring claims.
 
 ## Home architecture `/`
 
@@ -147,99 +138,156 @@ Stable sequence:
 3. Studio snapshot
 4. Capability narrative
 5. Credibility/proof slot
-6. Contact CTA
+6. Contact / project CTA
 ```
 
-During development, Selected Work may show explicitly labelled demo projects to establish media/card rhythm. Before real publication, only evidence-approved projects may remain.
+During demo mode, selected work/proof may use explicitly labelled development data to exercise composition. In production content, only approved evidence may occupy those surfaces.
 
 ## Work architecture `/work`
 
+Stable responsibilities:
+
 ```text
-intro
-→ project list
+page intro
+→ project index
 ```
 
-No categories, filters, or search initially. Those are added only if the real portfolio inventory proves they improve browsing.
+Initial behavior remains:
 
-## Project detail `/work/[slug]`
+- no category tabs;
+- no filters;
+- no search;
+- no final taxonomy.
 
-Flexible fields:
+Explicit `Demo Project` entries are permitted only while development demo mode is active. They must be replaced by approved real project data before demo mode is removed.
+
+Filtering is earned only when the real inventory is large/diverse enough that browsing materially benefits from it.
+
+## Project detail architecture `/work/[slug]`
+
+The detail model supports both small showcases and deeper case studies.
+
+Current core fields:
 
 ```text
 slug
-public title
+public/development title
 summary
 featured flag
 optional year
 optional client/partner
 optional contribution list
-optional flexible sections
-optional links
+optional flexible content sections
+optional external links
 ```
 
-The model supports both short showcases and deeper case studies. It does not require every project to contain metrics, clients, long copy, or identical section counts.
-
-## Studio `/studio`
+Page flow:
 
 ```text
-studio intro
-→ capability narrative
-→ working approach/context
-→ proof slot
-→ contact CTA
+project identity
+→ summary
+→ concise facts when present
+→ project media surface
+→ Hellocraft contribution when present
+→ flexible evidence/story sections
+→ approved project links when present
 ```
 
-A separate About page is not needed initially.
+Real project media is not invented in the data model before actual assets arrive. The development placeholder is centralized in `ProjectMediaPlaceholder.svelte` so future real media can replace one owned surface rather than duplicated route markup.
 
-## Careers `/careers`
+Do not require every real project to contain client, year, metrics, gallery, or long case-study sections.
+
+## Studio architecture `/studio`
+
+Stable sequence:
 
 ```text
-careers intro
-→ openings collection
-→ general recruitment context
-→ application-path surface
+1. Studio intro
+2. capability narrative
+3. working approach/context
+4. credibility/proof
+5. contact CTA
 ```
 
-Temporary demo roles may be used while building the page, but they are not hiring claims. Final role titles/application behavior require separate authority.
+This route owns the broader About/Studio responsibility. A separate `/about` route is not needed initially.
 
-## Contact `/contact`
+## Careers architecture `/careers`
+
+Stable sequence:
 
 ```text
-business/contact intro
-→ approved contact methods
-→ business-inquiry surface
+1. Careers intro
+2. Open roles
+3. General recruitment context
+4. Application path
 ```
 
-Public contact methods remain real-only. No dummy email, social URL, phone number, form provider, or submission endpoint is created.
+Clearly labelled demo roles may be used while development demo mode is active. Real role titles, application fields, CV upload, storage, and applicant tracking require separate authoritative decisions.
+
+## Contact architecture `/contact`
+
+Stable sequence:
+
+```text
+1. Business/contact intro
+2. Approved contact methods
+3. Business inquiry surface
+```
+
+Public contact methods remain real-only even during demo mode. No fake email, phone number, or social URL is created merely to fill the layout.
+
+The page remains valid whether the future inquiry implementation becomes direct links, an external form boundary, or a SvelteKit form action.
 
 ## Reusable component boundary
 
-Current earned shared components:
+Persistent current responsibilities earn components:
 
 ```text
 SiteHeader
 SiteFooter
+BrandSymbol
 ProjectCard
+ProjectMediaPlaceholder
 ```
 
-Do not pre-create a giant component library. Page-local markup remains local until repetition proves a durable shared component responsibility.
+`BrandSymbol` and `ProjectMediaPlaceholder` are replacement surfaces, not claims that temporary graphics are final assets.
 
-## Content-fill workflow
+Do not pre-create a generic design-system component library before repeated real responsibilities exist.
+
+## Real-content replacement workflow
+
+When authoritative content arrives:
 
 ```text
-temporary demo content
-→ build page/layout system
-→ owner supplies authoritative text/data/media
+owner supplies text/data/media
 → content-intake audit
-→ replace content owners
-→ preserve route architecture
-→ restructure only when real content proves a structural problem
+→ approve public facts/permissions
+→ replace temporary values in src/lib/content/*
+→ replace Demo Project entries
+→ replace demo proof/roles
+→ add approved public contact channels
+→ integrate real project media through the media owner
+→ integrate authoritative logo/brand source
+→ remove remaining demo-only content
+→ set contentIsDemo = false
 ```
 
-This is the intended meaning of preparing the website first so later work is mostly replacing text/data/media.
+Route/component architecture should remain stable unless real content proves a structural problem.
 
-## Runtime / hosting boundary
+## Accessibility/media replacement boundary
 
-Local/runtime testing and hosting/provider selection are explicitly deferred by the project owner.
+Development visual placeholders are decorative and hidden from assistive technology.
 
-Current source-level acceptance may establish structure and ownership only. It does not claim build, browser, responsive, accessibility-runtime, performance, or deployment proof.
+When real content-bearing images/video replace them, accessibility semantics must be re-established from the actual media. Do not carry `aria-hidden` from a development placeholder onto meaningful project evidence.
+
+Source-level accessibility audit records live in:
+
+```text
+docs/knowledge/accessibility-source-audit.md
+```
+
+## Hosting/runtime boundary
+
+Hosting/provider selection and local/runtime validation remain explicitly deferred by the project owner.
+
+Current source-level acceptance can establish route ownership, content/source separation, heading/landmark intent, visual token ownership, and absence of fabricated real facts. It cannot establish build/browser/performance/accessibility acceptance until runtime proof is re-authorized.

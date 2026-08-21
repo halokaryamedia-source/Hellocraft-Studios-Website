@@ -1,12 +1,12 @@
 <script lang="ts">
+	import BrandLockup from '$lib/components/brand/BrandLockup.svelte';
 	import { primaryNavigation, siteIdentity } from '$lib/content/site';
 </script>
 
 <header class="site-header">
 	<div class="site-header__inner">
-		<a class="brand" href={siteIdentity.homeHref} aria-label="Hellocraft Studios home">
-			<span class="brand-mark" aria-hidden="true"></span>
-			<span>{siteIdentity.name}</span>
+		<a class="brand" href={siteIdentity.homeHref}>
+			<BrandLockup />
 		</a>
 
 		<nav aria-label="Primary navigation">
@@ -40,26 +40,8 @@
 	.brand {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.7rem;
-		font-family: Arial, 'Helvetica Neue', sans-serif;
-		font-size: clamp(1rem, 1.7vw, 1.25rem);
-		font-weight: 900;
-		letter-spacing: -0.05em;
-		line-height: 1;
+		min-height: 2.75rem;
 		text-decoration: none;
-	}
-
-	.brand-mark {
-		width: 1.65rem;
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-		transition: transform var(--motion-fast) ease-out;
-	}
-
-	.brand:hover .brand-mark,
-	.brand:focus-visible .brand-mark {
-		transform: rotate(12deg) scale(1.06);
 	}
 
 	ul {

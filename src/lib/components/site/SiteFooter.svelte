@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BrandLockup from '$lib/components/brand/BrandLockup.svelte';
 	import { footerCopy } from '$lib/content/pages';
 	import { primaryNavigation, siteIdentity, socialLinks } from '$lib/content/site';
 </script>
@@ -6,8 +7,7 @@
 <footer class="site-footer">
 	<div class="footer-inner">
 		<div class="footer-brand">
-			<div class="footer-mark" aria-hidden="true"></div>
-			<a class="brand" href={siteIdentity.homeHref}>{siteIdentity.name}</a>
+			<a class="brand" href={siteIdentity.homeHref}><BrandLockup scale="large" /></a>
 			<p>{footerCopy.statement}</p>
 		</div>
 
@@ -65,20 +65,8 @@
 		gap: 1rem;
 	}
 
-	.footer-mark {
-		width: clamp(3rem, 6vw, 5.5rem);
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-	}
-
 	.brand {
 		width: fit-content;
-		font-family: Arial, 'Helvetica Neue', sans-serif;
-		font-size: clamp(2rem, 5vw, 4.5rem);
-		font-weight: 900;
-		letter-spacing: -0.06em;
-		line-height: 0.95;
 		text-decoration: none;
 	}
 
@@ -105,13 +93,17 @@
 
 	ul {
 		display: grid;
-		gap: 0.65rem;
+		gap: 0.35rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
 
 	nav a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2rem;
+		padding-block: 0.2rem;
 		color: rgb(255 255 255 / 82%);
 		font-weight: 700;
 		text-decoration-thickness: 1px;

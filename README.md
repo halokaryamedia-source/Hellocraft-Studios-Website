@@ -2,21 +2,20 @@
 
 Official website project for **Hellocraft Studios**, a game studio focused on Minecraft.
 
-## Current state
+## Current project state
 
 ```text
-FOUNDATION_BASELINE_ESTABLISHED
 TECHNICAL_SCAFFOLD_SOURCE_CREATED
 INFORMATION_ARCHITECTURE_APPROVED
-PAGE_ARCHITECTURE_SOURCE_CREATED
-CONTENT_SLOT_MODEL_READY
-PORTFOLIO_CONTENT_PENDING
-STUDIO_CONTENT_PENDING
-LOCAL_RUNTIME_TESTS_DEFERRED
+DEMO_CONTENT_MODE_ACTIVE
+VISUAL_SOURCE_SYSTEM_IMPLEMENTED
+SOURCE_ACCESSIBILITY_PASS_COMPLETED
+REAL_CONTENT_AND_MEDIA_PENDING
+LOCAL_RUNTIME_TESTING_DEFERRED
 HOSTING_DEFERRED
 ```
 
-The repository now contains the route/page/content architecture so later work can focus primarily on inserting authoritative text, project data, and media rather than repeatedly redesigning structure.
+The current priority is to prepare the complete website architecture/presentation first so final work is mostly replacing temporary text/data/media with approved Hellocraft content.
 
 ## Route architecture
 
@@ -29,103 +28,94 @@ The repository now contains the route/page/content architecture so later work ca
 └── contact
 ```
 
-Primary navigation:
+Primary navigation is `Work / Studio / Careers / Contact`. Home is reached through the Hellocraft brand.
+
+## Development content
+
+Temporary copy, Demo Projects, demo proof items, and demo career items are intentionally present for layout/design development.
+
+They are **not** public Hellocraft facts.
+
+The root layout displays a development-content notice and emits `noindex, nofollow` while `contentIsDemo` remains true.
+
+Real public contact channels are not fabricated even in demo mode.
+
+## Content owners
 
 ```text
-Work
-Studio
-Careers
-Contact
-```
-
-No dedicated Services page and no portfolio filters/categories are created initially.
-
-## Content ownership
-
-```text
-src/lib/content/site.ts
-→ identity + navigation
-
 src/lib/content/pages.ts
-→ page copy slots + optional/empty collections
+→ page copy
 
 src/lib/content/projects.ts
-→ approved public projects only
+→ project entries
 
-src/lib/content/types.ts
-→ shared content contracts
+src/lib/content/demo-data.ts
+→ development-only proof/career collections
+
+src/lib/content/site.ts
+→ site identity/navigation
 ```
 
-Pending copy uses searchable placeholders such as:
+Final content should replace these owners without rewriting route structure unless real content proves a structural problem.
+
+## Brand/media replacement surfaces
 
 ```text
-[[HOME_HERO_TITLE]]
-[[WORK_HERO_BODY]]
-[[STUDIO_APPROACH_BODY]]
-[[CAREERS_HERO_TITLE]]
-[[CONTACT_INQUIRY_BODY]]
+src/lib/components/brand/BrandLockup.svelte
+→ header/footer development lockup; future authoritative logo/wordmark owner
+
+src/lib/components/brand/BrandSymbol.svelte
+→ decorative development brand symbol
+
+src/lib/components/work/ProjectMediaPlaceholder.svelte
+→ development project-media surface
 ```
 
-Do not replace placeholders with invented marketing copy or unsupported facts.
-
-## Approved technical baseline
+## Technical baseline
 
 ```text
-framework              = SvelteKit
-UI/runtime             = Svelte 5 + TypeScript
-Svelte convention      = modern runes-first
-package manager        = Bun
-styling                = native CSS + Svelte scoped styles
-shared tokens          = CSS Custom Properties
-quality gate           = bun run validate
-local raster pipeline  = @sveltejs/enhanced-img
-rendering              = static/prerender-first, server-where-needed
-backend                = SvelteKit server only when needed
-database               = none initially
+SvelteKit
+Svelte 5 + TypeScript
+Bun
+Native CSS + scoped Svelte styles
+CSS Custom Properties
+@sveltejs/enhanced-img
+Prettier + ESLint + svelte-check + build quality gate
+static/prerender-first, server-where-needed
 ```
 
-## Current development boundary
+No Tailwind, SCSS, CSS-in-JS, component kit, CMS, database, auth, animation library, or separate backend is part of the initial architecture.
 
-The project owner currently wants **architecture/content preparation before local testing or hosting work**.
+## Current deferred work
 
-Therefore these remain deferred until explicitly reopened:
+The project owner currently defers:
 
 ```text
-bun install / bun.lock
+bun install
+bun.lock generation
 bun run validate
-local preview / browser dry-run
+local preview/browser tests
 hosting/provider selection
-production adapter
+production adapter selection
 ```
 
-Do not fabricate runtime/build/deployment proof.
+Do not claim build/browser/runtime acceptance until those are re-authorized and actually run.
 
-## Canonical documentation
+## Documentation entrypoints
 
 ```text
-docs/foundation/01-project-overview.md
-→ product purpose / audience / positioning
-
-docs/foundation/02-product-requirements.md
-→ product and technical requirements
-
-docs/foundation/03-media-performance-policy.md
-→ media/performance ownership
-
-docs/foundation/04-visual-direction.md
-→ Playful editorial game studio visual baseline
-
-docs/foundation/05-discoverability-metadata-policy.md
-→ metadata/discoverability policy
+CONTEXT.md
+→ stable current orientation
 
 docs/foundation/07-information-content-architecture.md
-→ route/page/content-slot architecture
+→ routes/content architecture
 
-docs/knowledge/content-intake-contract.md
-→ evidence-safe content intake
+docs/foundation/04-visual-direction.md
+→ visual direction
+
+docs/knowledge/accessibility-source-audit.md
+→ current source semantic/accessibility audit
 
 docs/knowledge/next-action.md
-→ active continuation
+→ immediate continuation
 ```
-
-Working authority is branch **`Local`**.

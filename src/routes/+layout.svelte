@@ -8,13 +8,16 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	{#if contentIsDemo}
+		<meta name="robots" content="noindex, nofollow" />
+	{/if}
+</svelte:head>
+
 <a class="skip-link" href="#main-content">Skip to content</a>
 
 {#if contentIsDemo}
-	<aside class="demo-notice" aria-label="Development content status">
-		<span class="demo-notice__mark" aria-hidden="true"></span>
-		<span>{demoCopyNote}</span>
-	</aside>
+	<aside class="demo-notice" aria-label="Development content status">{demoCopyNote}</aside>
 {/if}
 
 <SiteHeader />
@@ -23,25 +26,11 @@
 
 <style>
 	.demo-notice {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.55rem;
-		padding: 0.55rem var(--page-gutter);
-		border-bottom: 1px solid rgb(255 255 255 / 15%);
+		padding: 0.5rem var(--page-gutter);
 		background: var(--ink);
-		color: rgb(255 255 255 / 78%);
-		font-size: 0.7rem;
-		font-weight: 700;
-		line-height: 1.35;
+		color: var(--surface);
+		font-size: 0.75rem;
+		line-height: 1.4;
 		text-align: center;
-	}
-
-	.demo-notice__mark {
-		flex: 0 0 auto;
-		width: 0.75rem;
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
 	}
 </style>
