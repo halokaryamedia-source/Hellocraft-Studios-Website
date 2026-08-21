@@ -1,15 +1,29 @@
 :root {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	color: #111;
-	background: #fff;
+	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	color: #0c0d0e;
+	background: #f7f7f2;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
+	color-scheme: light;
 
-	--page-gutter: clamp(1rem, 4vw, 2rem);
-	--content-max: 88rem;
-	--measure: 46rem;
-	--space-section: clamp(3.5rem, 8vw, 7rem);
-	--surface-secondary: #f1f1f1;
+	/* Temporary development cyan. Replace from the authoritative Hellocraft brand asset later. */
+	--brand: #29abe2;
+	--brand-strong: #1099d3;
+	--ink: #0c0d0e;
+	--paper: #f7f7f2;
+	--surface: #ffffff;
+	--surface-secondary: #e9edef;
+	--text-muted: #667078;
+	--border: rgb(12 13 14 / 18%);
+	--inverse-border: rgb(255 255 255 / 24%);
+	--page-gutter: clamp(1rem, 3vw, 2.75rem);
+	--content-max: 92rem;
+	--measure: 43rem;
+	--space-section: clamp(4.5rem, 9vw, 9rem);
+	--radius-sm: 0.75rem;
+	--radius-md: clamp(1rem, 2vw, 1.75rem);
+	--motion-fast: 180ms;
+	--motion-medium: 320ms;
 }
 
 *,
@@ -20,13 +34,18 @@
 
 html {
 	min-width: 320px;
-	background: #fff;
+	background: var(--paper);
+	scroll-behavior: smooth;
 }
 
 body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
+	background: var(--paper);
+	color: var(--ink);
+	line-height: 1.5;
+	overflow-x: hidden;
 }
 
 img,
@@ -49,22 +68,60 @@ a {
 	color: inherit;
 }
 
+h1,
+h2,
+h3 {
+	font-family: Arial, 'Helvetica Neue', sans-serif;
+	font-weight: 900;
+	letter-spacing: -0.045em;
+	text-wrap: balance;
+}
+
+p,
+li {
+	text-wrap: pretty;
+}
+
+::selection {
+	background: var(--brand);
+	color: var(--ink);
+}
+
 :focus-visible {
-	outline: 2px solid currentColor;
-	outline-offset: 0.2rem;
+	outline: 3px solid var(--brand);
+	outline-offset: 0.25rem;
 }
 
 .skip-link {
 	position: fixed;
 	top: 0.75rem;
 	left: 0.75rem;
-	z-index: 100;
-	padding: 0.65rem 0.9rem;
-	background: #fff;
-	color: #111;
-	transform: translateY(-200%);
+	z-index: 200;
+	padding: 0.7rem 1rem;
+	border-radius: 999px;
+	background: var(--ink);
+	color: var(--surface);
+	font-weight: 800;
+	text-decoration: none;
+	transform: translateY(-220%);
+	transition: transform var(--motion-fast) ease-out;
 }
 
 .skip-link:focus {
 	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
 }

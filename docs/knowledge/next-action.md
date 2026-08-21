@@ -14,10 +14,17 @@ DEMO_PROJECTS_POPULATED
 DEMO_PROOF_ITEMS_POPULATED
 DEMO_CAREER_ITEMS_POPULATED
 PUBLIC_CONTACT_CHANNELS_STILL_REAL_ONLY
-SITE_SHELL_SOURCE_CREATED
-PAGE_ARCHITECTURE_SOURCE_CREATED
-PROJECT_DATA_MODEL_CREATED
 VISUAL_DIRECTION_BASELINE_ESTABLISHED
+VISUAL_SOURCE_BASELINE_IMPLEMENTED
+PLAYFUL_EDITORIAL_DIRECTION_APPLIED
+SITE_SHELL_VISUAL_IMPLEMENTED
+HOME_VISUAL_SOURCE_IMPLEMENTED
+WORK_VISUAL_SOURCE_IMPLEMENTED
+PROJECT_DETAIL_VISUAL_SOURCE_IMPLEMENTED
+STUDIO_VISUAL_SOURCE_IMPLEMENTED
+CAREERS_VISUAL_SOURCE_IMPLEMENTED
+CONTACT_VISUAL_SOURCE_IMPLEMENTED
+RENDERED_VISUAL_ACCEPTANCE_DEFERRED
 MEDIA_POLICY_APPROVED
 DISCOVERABILITY_METADATA_POLICY_APPROVED
 REAL_PORTFOLIO_EVIDENCE_PENDING
@@ -35,100 +42,147 @@ Working authority: **`Local`**.
 
 ## Active project-owner instruction
 
-Prepare the website architecture and presentation first using temporary dummy content. Final Hellocraft text/data/media will follow later.
+Prepare the website architecture and presentation now using temporary dummy content. Final Hellocraft text/data/media will be supplied later.
 
-Hosting/provider work and local/runtime testing remain deferred until explicitly re-authorized.
+Do not resume hosting/provider selection or local/runtime testing until explicitly re-authorized.
 
-## Development content state
+## Visual source baseline
 
-The source now contains realistic temporary content so page hierarchy and visual design can be developed without waiting for final copy.
+Canonical direction:
 
-Owners:
+```text
+docs/foundation/04-visual-direction.md
+```
+
+Implementation notes:
+
+```text
+docs/knowledge/visual-source-implementation.md
+```
+
+The first visual source pass now applies:
+
+```text
+warm-white canvas
++ near-black structural bands
++ temporary Hellocraft cyan accent
++ large editorial typography
++ restrained star motif
++ strong full-width section contrast
++ CSS-native interaction/motion only
++ reduced-motion source handling
+```
+
+The current cyan value is a development approximation only. Replace it from the authoritative original/vector logo asset later.
+
+## Current page presentation
+
+### Global shell
+
+```text
+Demo-content notice
+→ Header / brand mark
+→ Primary navigation
+→ Route content
+→ Large editorial footer
+```
+
+The header remains JS-free and uses a simple responsive layout rather than a hamburger/menu system that is not currently necessary.
+
+### Home
+
+```text
+large identity hero + brand-star visual
+→ selected project grid
+→ editorial Studio split
+→ dark capability band
+→ numbered proof rhythm
+→ large cyan contact CTA
+```
+
+### Work
+
+```text
+dark editorial intro
+→ project count/index
+→ flexible project-card grid
+```
+
+### Project detail
+
+```text
+cyan identity hero
+→ large media placeholder stage
+→ contribution list
+→ alternating flexible editorial sections
+→ optional links
+```
+
+### Studio
+
+```text
+studio hero + brand motif
+→ capability split
+→ dark approach band
+→ proof cards
+→ cyan contact CTA
+```
+
+### Careers
+
+```text
+cyan recruitment hero
+→ structured role list
+→ recruitment context
+→ dark application block
+```
+
+### Contact
+
+```text
+dark contact hero
+→ approved-channel surface
+→ cyan inquiry block
+```
+
+No fake public contact method has been added.
+
+## Content replacement remains isolated
 
 ```text
 src/lib/content/pages.ts
-→ temporary Home / Work / Studio / Careers / Contact copy
+→ temporary copy
 
 src/lib/content/projects.ts
-→ explicitly labelled Demo Project entries
+→ demo project entries
 
 src/lib/content/demo-data.ts
-→ explicitly labelled demo proof/career collections
-
-src/lib/content/demo.ts
-→ contentIsDemo = true
-
-src/lib/content/demo-copy.ts
-→ visible development-content notice
+→ demo proof / role collections
 ```
 
-The root layout displays the temporary-content notice while `contentIsDemo` is true.
+Final copy/data should replace these owners without rewriting route composition unless real content proves a structural problem.
 
-## Safety boundary for dummy content
+## Acceptance boundary
 
-Dummy content is allowed only for development presentation.
+Because runtime/local testing remains deferred, current acceptance is source-level only.
 
-```text
-Demo Project ...
-→ never portfolio evidence
+Current evidence can establish:
 
-Demo role ...
-→ never a live hiring claim
+- visual token ownership and consistency;
+- route/source composition;
+- dummy-content separation;
+- CSS-native motion intent;
+- reduced-motion/focus declarations in source;
+- absence of new UI/motion libraries;
+- absence of fabricated real project/client/contact facts.
 
-Demo proof ...
-→ never credibility evidence
+Do **not** claim yet:
 
-public contact URL / email / phone
-→ never fabricated
-
-client / partner / result / metric
-→ never fabricated
-```
-
-Real content still enters through the content-intake process.
-
-## Current website structure
-
-```text
-/
-├── work
-│   └── [slug]
-├── studio
-├── careers
-└── contact
-```
-
-Home currently has:
-
-```text
-hero
-→ selected demo work
-→ studio snapshot
-→ capability narrative
-→ demo proof rhythm
-→ contact CTA
-```
-
-Work has three demo projects, including featured entries and flexible project-detail sections, so both index and detail layouts have realistic content length to design against.
-
-Careers has clearly labelled demo roles so opening-list structure can be prepared. Contact channels remain empty until real public channels are supplied.
-
-## Real-content replacement workflow
-
-Later:
-
-```text
-owner supplies authoritative content
-→ audit with content-intake contract
-→ replace demo values in src/lib/content/*
-→ replace Demo Project entries with approved projects
-→ replace demo roles/proof with real approved items
-→ add approved contact channels
-→ remove all remaining demo content
-→ set contentIsDemo = false
-```
-
-The route architecture should remain stable unless real content proves a structural problem.
+- browser visual approval;
+- responsive rendered correctness;
+- Svelte compilation/build PASS;
+- keyboard/browser accessibility acceptance;
+- performance acceptance.
 
 ## Deferred tracks
 
@@ -144,8 +198,6 @@ hosting/provider selection
 production adapter selection
 ```
 
-Do not fabricate runtime proof while these remain deferred.
-
 ## Next Step
 
-**Continue preparing the website presentation using the populated dummy content: refine the visual/source implementation of the existing Home, Work, Project Detail, Studio, Careers, Contact, header, and footer according to `04-visual-direction.md`. Keep all real factual content replaceable through `src/lib/content/*`, and do not resume local/runtime or hosting work until the project owner explicitly asks.**
+**Continue non-locally by preparing the remaining asset/content replacement surfaces: integrate the authoritative Hellocraft logo source when supplied, define real project-media fields only when actual assets arrive, and perform source-level accessibility/semantic review of the current visual implementation. Keep final text replaceable through `src/lib/content/*` and keep runtime/hosting tracks deferred.**

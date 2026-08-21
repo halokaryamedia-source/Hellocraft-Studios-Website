@@ -10,130 +10,298 @@
 	<meta name="description" content={project.summary} />
 </svelte:head>
 
-<main id="main-content" class="page">
-	<header class="project-hero">
-		<a class="back-link" href="/work">Work</a>
-		<h1>{project.title}</h1>
-		<p class="summary">{project.summary}</p>
+<main id="main-content">
+	<section class="hero">
+		<div class="shell hero__inner">
+			<a class="back-link" href="/work"><span aria-hidden="true">←</span> Work</a>
+			<div class="hero__grid">
+				<div>
+					<p class="eyebrow">Project / Demo content</p>
+					<h1>{project.title}</h1>
+				</div>
+				<div class="hero__summary">
+					<p>{project.summary}</p>
 
-		{#if project.year || project.client}
-			<dl class="facts">
-				{#if project.year}
-					<div>
-						<dt>Year</dt>
-						<dd>{project.year}</dd>
-					</div>
-				{/if}
-				{#if project.client}
-					<div>
-						<dt>Client / Partner</dt>
-						<dd>{project.client}</dd>
-					</div>
-				{/if}
-			</dl>
-		{/if}
-	</header>
+					{#if project.year || project.client}
+						<dl class="facts">
+							{#if project.year}
+								<div><dt>Year</dt><dd>{project.year}</dd></div>
+							{/if}
+							{#if project.client}
+								<div><dt>Client / Partner</dt><dd>{project.client}</dd></div>
+							{/if}
+						</dl>
+					{/if}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="visual-stage" aria-label="Project media placeholder">
+		<div class="shell">
+			<div class="project-visual" aria-hidden="true">
+				<span>Project media</span>
+				<div class="project-visual__star"></div>
+			</div>
+		</div>
+	</section>
 
 	{#if project.contribution && project.contribution.length > 0}
-		<section class="section" aria-labelledby="project-contribution-title">
-			<h2 id="project-contribution-title">Hellocraft contribution</h2>
-			<ul>
-				{#each project.contribution as item (item)}
-					<li>{item}</li>
-				{/each}
-			</ul>
+		<section class="section contribution" aria-labelledby="project-contribution-title">
+			<div class="shell section-grid">
+				<div>
+					<p class="eyebrow">Contribution</p>
+					<h2 id="project-contribution-title">Hellocraft contribution</h2>
+				</div>
+				<ol class="contribution-list">
+					{#each project.contribution as item, index (item)}
+						<li><span>{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+					{/each}
+				</ol>
+			</div>
 		</section>
 	{/if}
 
-	{#each project.sections ?? [] as section (section.id)}
-		<section class="section" aria-labelledby={`section-${section.id}`}>
-			<h2 id={`section-${section.id}`}>{section.title}</h2>
-			<div class="section-copy">
-				{#each section.body as paragraph, index (`${section.id}-${index}`)}
-					<p>{paragraph}</p>
-				{/each}
+	{#each project.sections ?? [] as section, index (section.id)}
+		<section class="section" class:section-dark={index % 2 === 1} aria-labelledby={`section-${section.id}`}>
+			<div class="shell section-grid">
+				<div>
+					<p class="eyebrow">{String(index + 1).padStart(2, '0')} / Detail</p>
+					<h2 id={`section-${section.id}`}>{section.title}</h2>
+				</div>
+				<div class="section-copy">
+					{#each section.body as paragraph, paragraphIndex (`${section.id}-${paragraphIndex}`)}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
 			</div>
 		</section>
 	{/each}
 
 	{#if project.links && project.links.length > 0}
-		<section class="section" aria-labelledby="project-links-title">
-			<h2 id="project-links-title">Project links</h2>
-			<ul>
-				{#each project.links as link (link.href)}
-					<li>
-						<a href={link.href} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a>
-					</li>
-				{/each}
-			</ul>
+		<section class="section project-links" aria-labelledby="project-links-title">
+			<div class="shell section-grid">
+				<h2 id="project-links-title">Project links</h2>
+				<ul>
+					{#each project.links as link (link.href)}
+						<li><a href={link.href} rel={link.external ? 'noreferrer' : undefined}>{link.label}<span aria-hidden="true">↗</span></a></li>
+					{/each}
+				</ul>
+			</div>
 		</section>
 	{/if}
 </main>
 
 <style>
-	.page {
+	.shell {
 		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
 		margin-inline: auto;
 	}
 
-	.project-hero,
-	.section {
-		padding-block: var(--space-section);
+	.hero {
+		background: var(--brand);
 	}
 
-	.project-hero {
+	.hero__inner {
 		display: grid;
-		gap: 1rem;
+		gap: clamp(3rem, 7vw, 7rem);
+		padding-block: clamp(3rem, 8vw, 8rem);
 	}
 
-	.project-hero h1 {
-		max-width: 16ch;
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: fit-content;
+		font-weight: 800;
+		text-underline-offset: 0.3em;
 	}
 
-	.summary,
-	.section-copy {
+	.hero__grid,
+	.section-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+		gap: clamp(2rem, 8vw, 8rem);
+		align-items: start;
+	}
+
+	.eyebrow {
+		margin: 0 0 0.85rem;
+		font-size: 0.72rem;
+		font-weight: 850;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		max-width: 13ch;
+		margin: 0;
+		font-size: clamp(3.5rem, 9vw, 9rem);
+		line-height: 0.86;
+	}
+
+	.hero__summary {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.hero__summary > p {
 		max-width: var(--measure);
+		margin: 0;
+		font-size: clamp(1.05rem, 2vw, 1.35rem);
 	}
 
 	.facts {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 2rem;
-		margin: 1rem 0 0;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+		margin: 0;
+		padding-top: 1.25rem;
+		border-top: 1px solid rgb(12 13 14 / 28%);
 	}
 
 	.facts div {
 		display: grid;
-		gap: 0.25rem;
+		gap: 0.3rem;
 	}
 
 	dt {
-		font-size: 0.875rem;
+		font-size: 0.7rem;
+		font-weight: 850;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
 	}
 
 	dd {
 		margin: 0;
-		font-weight: 700;
+		font-weight: 800;
+	}
+
+	.visual-stage {
+		padding-block: clamp(2rem, 5vw, 4rem);
+		background: var(--ink);
+	}
+
+	.project-visual {
+		position: relative;
+		display: grid;
+		align-items: end;
+		min-height: clamp(24rem, 60vw, 54rem);
+		overflow: hidden;
+		padding: clamp(1rem, 3vw, 2rem);
+		border: 1px solid var(--inverse-border);
+		border-radius: var(--radius-md);
+		background:
+			linear-gradient(90deg, rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
+			linear-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
+			#17191b;
+		color: var(--surface);
+	}
+
+	.project-visual > span {
+		position: relative;
+		z-index: 2;
+		font-size: 0.75rem;
+		font-weight: 850;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+	}
+
+	.project-visual__star {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: min(48%, 24rem);
+		aspect-ratio: 1;
+		background: var(--brand);
+		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
+		transform: translate(-50%, -50%) rotate(-10deg);
 	}
 
 	.section {
-		display: grid;
-		gap: 1rem;
+		padding-block: var(--space-section);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.section-dark {
+		background: var(--ink);
+		color: var(--surface);
+	}
+
+	.section h2 {
+		max-width: 14ch;
+		margin: 0;
+		font-size: clamp(2.5rem, 6vw, 6rem);
+		line-height: 0.9;
 	}
 
 	.section-copy {
 		display: grid;
+		gap: 1.2rem;
+		max-width: var(--measure);
+	}
+
+	.section-copy p {
+		margin: 0;
+		color: var(--text-muted);
+		font-size: clamp(1rem, 1.6vw, 1.15rem);
+	}
+
+	.section-dark .section-copy p {
+		color: rgb(255 255 255 / 68%);
+	}
+
+	.contribution-list {
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid var(--border);
+		list-style: none;
+	}
+
+	.contribution-list li {
+		display: grid;
+		grid-template-columns: 3rem minmax(0, 1fr);
 		gap: 1rem;
+		padding-block: 1rem;
+		border-bottom: 1px solid var(--border);
 	}
 
-	h1,
-	h2,
-	p,
-	ul {
-		margin-top: 0;
+	.contribution-list span {
+		color: var(--brand-strong);
+		font-weight: 900;
 	}
 
-	.back-link {
-		width: fit-content;
+	.contribution-list p {
+		margin: 0;
+	}
+
+	.project-links ul {
+		display: grid;
+		gap: 0;
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid var(--border);
+		list-style: none;
+	}
+
+	.project-links a {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding-block: 1rem;
+		border-bottom: 1px solid var(--border);
+		font-weight: 800;
+		text-underline-offset: 0.3em;
+	}
+
+	@media (max-width: 58rem) {
+		.hero__grid,
+		.section-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.facts {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>
