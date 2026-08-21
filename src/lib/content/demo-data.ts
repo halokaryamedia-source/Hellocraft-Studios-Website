@@ -3,19 +3,19 @@ import type { CareerOpening } from './types';
 export const demoProofItems = [
 	'Demo proof point — replace with a verified client, partner, result, testimonial, or award.',
 	'Demo proof point — this item exists only to establish list rhythm and spacing.',
-	'Demo proof point — final credibility content must pass the evidence intake process.'
+	'Demo proof point — final credibility content must pass the evidence review process.'
 ];
 
-export const demoStudioProofItems = [
-	'Demo studio proof — replace with an approved studio fact or credibility signal.',
-	'Demo studio proof — temporary content for layout development only.'
+export const demoAboutProofItems = [
+	'Demo About proof — replace with an approved company fact or credibility signal.',
+	'Demo About proof — temporary content for layout development only.'
 ];
 
 export const demoCareerOpenings: CareerOpening[] = [
 	{
 		id: 'demo-role-01',
 		title: 'Demo role — Level Designer',
-		summary: 'Temporary role content used to shape the careers page. Replace with a real approved opening.',
+		summary: 'Temporary role content used to shape the Careers page. Replace with a real approved opening.',
 		location: 'Location TBD',
 		engagement: 'Engagement TBD'
 	},
