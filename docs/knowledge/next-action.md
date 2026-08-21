@@ -9,8 +9,8 @@ Working authority: **`Local`**.
 Latest Homepage implementation commit:
 
 ```text
-bc5a6e1e50001b2402efc52449259708d64b3c3e
-refine(home): align homepage with approved studio references
+93cb653ecdd76bf9193e120c0f21d9e7b5fb1ab8
+refine(home): strengthen hero and project composition
 ```
 
 ## Current Status
@@ -27,6 +27,7 @@ HAZELIGHT_VISUAL_LEAD_APPROVED
 BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
 HOMEPAGE_VISUAL_THESIS_APPROVED
 HOMEPAGE_SOURCE_REBUILD_IMPLEMENTED
+HOMEPAGE_REFINEMENT_PASS_2_IMPLEMENTED
 HOMEPAGE_RENDERED_VISUAL_APPROVAL_PENDING
 REMAINING_ROUTE_VISUAL_PROPAGATION_BLOCKED
 FINAL_PRODUCTION_FONT_PENDING
@@ -78,7 +79,7 @@ Minecraft identity should come primarily from Hellocraft's real project media, n
 
 ## Current Homepage Source State
 
-`src/routes/+page.svelte` has been rebuilt around the approved direction.
+`src/routes/+page.svelte` has now received two bounded visual implementation passes around the approved direction.
 
 Current composition:
 
@@ -88,21 +89,25 @@ Header
 
 Hero
 → Minecraft game studio eyebrow
-→ restrained large statement
+→ large but restrained studio statement
 → supporting copy + Work action
-→ wide dark development media surface reserved for future real project media
+→ one dominant dark development-media surface
+→ one smaller Hellocraft brand/media surface
+→ the two surfaces form one intentional composition instead of one generic full-width rectangle
 
 Selected Work
 → compact section introduction
-→ primary large project surface
-→ secondary project with a different media/copy composition
+→ primary project media intentionally narrower than the full shell
+→ large project title + concise summary
+→ secondary project uses a different copy/media composition and substantially different vertical rhythm
 → no numbered chapters
 → no uniform card grid
 
 Studio / Capability
-→ strong dark field
+→ neutral secondary surface rather than another dark chapter field
 → concise studio statement
 → supporting capability narrative
+→ single structural divider only where content relationship warrants it
 → no decorative chapter system
 
 Contact
@@ -112,7 +117,53 @@ Footer
 → existing shared footer remains unchanged
 ```
 
-Only the Homepage route source was materially changed. Shared Header, Footer, app-wide design tokens, Work, Studio, Careers, Contact, and project-detail routes were intentionally not visually propagated yet.
+Only the Homepage route source was materially changed. Shared Header, Footer, app-wide design tokens, Work, Studio, Careers, Contact, and project-detail routes remain intentionally unpropagated.
+
+## Why Pass 2 Changed the First Rebuild
+
+The first approved-reference implementation still expressed the hero as essentially:
+
+```text
+headline + supporting copy + one large rectangle
+```
+
+That was cleaner than the rejected earlier Homepage, but it still did not use the strongest lesson from Hazelight: visual identity comes from the relationship between a confident statement and game/studio media rather than from headline scale alone.
+
+Pass 2 therefore adopted only these reference-grounded corrections:
+
+```text
+OBSERVED
+→ Hazelight composes statement + multiple media fields as one hero experience
+→ Blind Squirrel lets brand statement and project media share visual weight
+
+ADOPTED
+→ one primary media field + one smaller branded media field
+→ stronger separation between primary and secondary project rhythm
+→ less chapter-like background alternation
+
+REJECTED
+→ literal Hazelight floating-image recreation
+→ Blind Squirrel wave graphics / section numbering
+→ fake HUD, coordinates, Minecraft chrome, generic cards, decorative rails
+```
+
+## Render / Tooling Blocker Encountered
+
+A local visual-preview attempt was made after the project owner asked to continue the Homepage review.
+
+The available container includes Chromium, but the current tool environment could not resolve `github.com`, so the repository could not be cloned into that runtime for preview.
+
+Therefore:
+
+```text
+source-level refinement = completed
+actual browser render in this environment = unavailable
+rendered visual approval = still pending
+```
+
+Do not infer that the browser result is approved from source inspection alone.
+
+This is a tooling/environment limitation for the current session, not a project architecture problem and not a reason to add CI, hosting, or a new dependency.
 
 ## What Was Preserved
 
@@ -138,18 +189,20 @@ no global Minecraft inventory/pixel UI
 
 ### 1. Homepage visual acceptance
 
-The next meaningful step is **visual review of the rebuilt Homepage**, not more reference research and not redesign of the remaining routes.
+The next meaningful step remains **actual visual review of the rebuilt Homepage**, not more reference research and not redesign of the remaining routes.
 
-When rendered/browser review is explicitly re-authorized:
+When a rendered preview is available:
 
 ```text
 render Homepage
 → inspect desktop + mobile composition
 → compare against approved Hazelight / Blind Squirrel traits
-→ identify concrete visual weaknesses
+→ collect concrete project-owner critique
 → make the smallest Homepage-only correction
 → repeat until project owner approves
 ```
+
+If the current assistant environment still cannot render the repository, a project-owner screenshot of the current Local Homepage is sufficient evidence for the next visual critique pass.
 
 Do not claim rendered visual quality from source inspection alone.
 
@@ -180,26 +233,24 @@ Bun        = 1.3.14
 
 The Homepage change uses existing Svelte/component/content patterns and introduces no dependency, backend, state layer, or API.
 
-The project owner still defers:
+The project owner still defers broad technical acceptance work:
 
 ```text
-bun install
 bun.lock generation
-bun run validate
-local runtime/browser acceptance
+full bun run validate gate
 hosting/provider selection
 production adapter selection
 ```
 
-Therefore:
+A visual-only local preview is appropriate when available, but it must not be confused with final technical or deployment acceptance.
+
+Current proof state:
 
 ```text
 source implementation = completed
 rendered/browser acceptance = not yet proven
-build/check proof = still deferred
+full build/check proof = not claimed
 ```
-
-Do not present deferred proof as completed.
 
 ## Content / Media Boundary
 
@@ -240,7 +291,7 @@ When work resumes:
 4. inspect current Homepage source
 5. do NOT repeat external reference research unless the user changes direction
 6. do NOT redesign remaining routes
-7. if visual preview/runtime is authorized, render Homepage only
+7. obtain a rendered Homepage view when possible
 8. collect project-owner critique
 9. make bounded Homepage corrections
 10. stop when Homepage is visually approved
@@ -248,4 +299,4 @@ When work resumes:
 
 ## Next Step
 
-**Review and refine the rebuilt Homepage against the approved Hazelight + Blind Squirrel direction. Keep all remaining routes unchanged until the Homepage receives explicit visual approval.**
+**Obtain an actual rendered view of the current Homepage and critique it against the approved Hazelight + Blind Squirrel direction. Keep all remaining routes unchanged until the Homepage receives explicit visual approval.**
