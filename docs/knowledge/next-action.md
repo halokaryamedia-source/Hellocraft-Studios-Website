@@ -6,11 +6,11 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Project Detail implementation commit:
+Latest Studio implementation commit:
 
 ```text
-ae8a904217f2996749c2958d01e6b64074a2a2be
-refine(project): align detail layout with approved portfolio direction
+ade63c9992a94511b9a401c910aad588aabe415f
+refine(studio): align studio page with approved visual baseline
 ```
 
 ## Current Status
@@ -25,9 +25,9 @@ HAZELIGHT_VISUAL_LEAD_APPROVED
 BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
 HOMEPAGE_VISUAL_BASELINE_APPROVED
 WORK_VISUAL_BASELINE_APPROVED
-PROJECT_DETAIL_VISUAL_PROPAGATION_IMPLEMENTED
-PROJECT_DETAIL_PROJECT_OWNER_APPROVAL_PENDING
-STUDIO_VISUAL_PROPAGATION_PENDING
+PROJECT_DETAIL_ROUTE_BASELINE_APPROVED_TO_CONTINUE
+STUDIO_VISUAL_PROPAGATION_IMPLEMENTED
+STUDIO_PROJECT_OWNER_APPROVAL_PENDING
 CAREERS_VISUAL_PROPAGATION_PENDING
 CONTACT_VISUAL_PROPAGATION_PENDING
 REAL_PROJECT_MEDIA_PENDING
@@ -42,14 +42,17 @@ HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 
 ## Approved Visual Baselines
 
-The project owner explicitly approved:
+The project owner has approved the route direction sufficiently to continue through:
 
 ```text
 Homepage
 → primary visual grammar
 
 Work
-→ approved portfolio-index propagation
+→ portfolio-index interpretation
+
+Project Detail
+→ project-detail interpretation approved to continue propagation
 ```
 
 Reference roles remain:
@@ -74,70 +77,70 @@ Current thesis:
 
 Do not reopen visual-direction research unless the project owner changes direction.
 
-## Work Route — APPROVED
+## Current Studio Route
 
-`src/routes/work/+page.svelte` is now an approved route baseline.
+`src/routes/studio/+page.svelte` has now been rebuilt from the accepted route grammar.
 
-Approved composition:
-
-```text
-restrained Work introduction
-→ one lead project with dominant media
-→ remaining projects as clean media/copy rows
-→ no filters/categories
-→ no repeated uniform card grid
-→ no decorative project numbering
-→ straightforward responsive stack
-```
-
-Do not casually redesign Work while propagating later routes.
-
-## Current Project Detail Route
-
-`src/routes/work/[slug]/+page.svelte` has now been rebuilt from the approved Homepage + Work grammar.
-
-Previous state problems:
+Previous Studio problems:
 
 ```text
-oversized project title up to 9rem
-repeated alternating chapter backgrounds
-large section headings repeated mechanically
-old ProjectMediaPlaceholder call passed unsupported label/index props
-project-link decorative arrow treatment
+hero title scaled up to 10rem
+Capability / Approach repeated the same large split-section formula
+Approach used a dark chapter block that reintroduced rejected dark/light chapter rhythm
+large headings repeated mechanically
+contact closing repeated another oversized section pattern
 ```
 
 Current composition:
 
 ```text
-compact Back to work action
-→ restrained project title + summary/facts
-→ one dominant hero media surface
-→ optional contribution section on neutral secondary surface
-→ project narrative sections separated by content boundaries, not alternating chapter styling
-→ optional project links in a single dark utility surface
-→ simple View all work closing
+restrained Studio introduction
+→ Studio statement + supporting copy
+→ capability narrative on the paper surface
+→ working approach on a neutral secondary surface
+→ optional verified proof only when demo mode is off and real evidence exists
+→ simple closing Contact statement
 ```
 
-The unsupported `label` / `index` placeholder props were removed. The route now uses the current `ProjectMediaPlaceholder` contract:
+The page deliberately does not add:
 
 ```text
-variant
-tone
+fake KPI strips
+service-card grids
+invented team size / client / award claims
+new Services taxonomy
+Minecraft HUD / pixel UI
+numbered chapters
+Blind Squirrel wave graphics
+literal Hazelight layout copying
 ```
 
-Project data remains owned by `src/lib/content/projects.ts`; no real client, year, role, outcome, or media claim was invented.
-
-## Project Detail Review Boundary
-
-The next user-facing decision is **Project Detail visual approval**.
-
-A source-equivalent Chromium layout-proxy attempt was made after implementation, but Chromium stalled in the current tool environment before screenshots were produced.
-
-Therefore current proof is:
+Existing content ownership is preserved:
 
 ```text
-source implementation            = completed
-old placeholder contract mismatch = corrected
+src/lib/content/pages.ts
+→ Studio copy
+
+src/lib/content/demo-data.ts
+→ temporary Studio proof data
+```
+
+The existing proof condition remains important:
+
+```text
+contentIsDemo = true
+→ demo proof items remain hidden from the public presentation
+```
+
+## Studio Review Boundary
+
+A source-equivalent Chromium layout-proxy attempt was made after the Studio implementation, but Chromium again stalled in the current environment before screenshots were produced.
+
+Current proof level:
+
+```text
+Studio source implementation     = completed
+content / semantic structure     = reviewed at source level
 layout screenshot proxy          = unavailable in current environment
 actual Svelte runtime            = deferred / unproven
 project-owner visual approval    = pending
@@ -147,41 +150,41 @@ Do not claim rendered/runtime acceptance from source inspection alone.
 
 ## Immediate Next Step
 
-### 1. Review Project Detail
+### 1. Review Studio
 
-If the project owner approves the Project Detail direction:
+If the project owner approves the Studio direction:
 
 ```text
-Project Detail approved
-→ freeze Project Detail as route baseline
-→ inspect current Studio source
-→ propagate approved visual grammar to Studio only
-→ review Studio before Careers
+Studio approved
+→ freeze Studio as route baseline
+→ inspect current Careers source
+→ propagate approved visual grammar to Careers only
+→ review Careers before Contact
 ```
 
-If Project Detail receives critique:
+If Studio receives critique:
 
 ```text
-identify concrete page-specific problem
-→ make smallest Project-Detail-only correction
-→ preserve approved Homepage and Work baselines
+identify concrete Studio-specific problem
+→ make smallest Studio-only correction
+→ preserve approved Homepage / Work / Project Detail baselines
 ```
 
-### 2. Route propagation order after Project Detail approval
+### 2. Remaining propagation order
 
 ```text
-Studio
-→ Careers
+Careers
 → Contact
 ```
 
-Each route should inherit the accepted grammar while solving its own content relationship rather than cloning the Homepage.
+Each route should solve its own content relationship rather than cloning the Homepage.
 
 ## Preserve These Rules
 
 ```text
 Homepage is APPROVED
 Work is APPROVED
+Project Detail is accepted as the current route baseline for continued propagation
 real media > invented decoration
 content hierarchy > repeated visual systems
 no numbered chapter progression
@@ -192,7 +195,7 @@ no generic card grid when content hierarchy differs
 no invented KPI strip
 no Services route initially
 no Work filters/categories initially
-no fabricated contact or client claims
+no fabricated contact, client, award, or studio-scale claims
 ```
 
 ## Production Content / Media Still Pending
@@ -219,7 +222,7 @@ ProjectMediaPlaceholder / future media owner
 → real project imagery/video
 ```
 
-Real project media is expected to materially improve Homepage, Work, and Project Detail. Adjust crops/proportions from actual media later rather than inventing decorative systems now.
+Real project media is expected to materially improve Homepage, Work, and Project Detail. Final Studio credibility should come from verified studio/project evidence rather than invented marketing metrics.
 
 ## Technical / Deferred Boundary
 
@@ -244,4 +247,4 @@ production adapter selection
 
 ## Next Step
 
-**Get project-owner review of the newly propagated `/work/[slug]` Project Detail. If approved, continue to Studio; otherwise make only the smallest Project-Detail-specific correction.**
+**Get project-owner review of the propagated Studio page. If approved, continue to Careers; otherwise make only the smallest Studio-specific correction.**
