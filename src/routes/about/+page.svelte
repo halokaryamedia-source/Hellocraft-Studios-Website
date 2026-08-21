@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { contentIsDemo } from '$lib/content/demo';
-	import { aboutCopy, studioProofItems } from '$lib/content/pages';
+	import { aboutCopy, aboutExperienceItems } from '$lib/content/pages';
 </script>
 
 <svelte:head>
@@ -22,42 +22,42 @@
 		</div>
 	</section>
 
-	<section class="capabilities" aria-labelledby="about-capabilities-title">
+	<section class="what-we-do" aria-labelledby="about-what-we-do-title">
 		<div class="shell section-layout">
 			<div class="section-heading">
-				<p class="eyebrow">{aboutCopy.capabilities.eyebrow}</p>
-				<h2 id="about-capabilities-title">{aboutCopy.capabilities.title}</h2>
+				<p class="eyebrow">{aboutCopy.whatWeDo.eyebrow}</p>
+				<h2 id="about-what-we-do-title">{aboutCopy.whatWeDo.title}</h2>
 			</div>
 
 			<div class="section-copy section-copy--lead">
-				<p>{aboutCopy.capabilities.body}</p>
+				<p>{aboutCopy.whatWeDo.body}</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="approach" aria-labelledby="about-approach-title">
-		<div class="shell approach__inner">
-			<div class="approach__intro">
-				<p class="eyebrow">{aboutCopy.approach.eyebrow}</p>
-				<h2 id="about-approach-title">{aboutCopy.approach.title}</h2>
+	<section class="how-we-work" aria-labelledby="about-how-we-work-title">
+		<div class="shell how-we-work__inner">
+			<div class="how-we-work__intro">
+				<p class="eyebrow">{aboutCopy.howWeWork.eyebrow}</p>
+				<h2 id="about-how-we-work-title">{aboutCopy.howWeWork.title}</h2>
 			</div>
 
-			<div class="approach__body">
-				<p>{aboutCopy.approach.body}</p>
+			<div class="how-we-work__body">
+				<p>{aboutCopy.howWeWork.body}</p>
 			</div>
 		</div>
 	</section>
 
-	{#if !contentIsDemo && studioProofItems.length > 0}
-		<section class="proof" aria-labelledby="about-proof-title">
+	{#if !contentIsDemo && aboutExperienceItems.length > 0}
+		<section class="experience" aria-labelledby="about-experience-title">
 			<div class="shell section-layout">
 				<div class="section-heading">
-					<p class="eyebrow">Proof</p>
-					<h2 id="about-proof-title">{aboutCopy.proof.title}</h2>
+					<p class="eyebrow">Experience</p>
+					<h2 id="about-experience-title">{aboutCopy.experience.title}</h2>
 				</div>
 
-				<ul class="proof-list">
-					{#each studioProofItems as item (item)}
+				<ul class="experience-list">
+					{#each aboutExperienceItems as item (item)}
 						<li>{item}</li>
 					{/each}
 				</ul>
@@ -95,7 +95,7 @@
 
 	.hero__heading,
 	.section-heading,
-	.approach__intro,
+	.how-we-work__intro,
 	.contact__heading {
 		display: grid;
 		gap: 1rem;
@@ -116,7 +116,7 @@
 
 	.hero__support p,
 	.section-copy p,
-	.approach__body p,
+	.how-we-work__body p,
 	.contact__support p {
 		max-width: var(--measure);
 		margin: 0;
@@ -129,7 +129,7 @@
 		line-height: 1.58;
 	}
 
-	.capabilities {
+	.what-we-do {
 		padding-block: clamp(6rem, 10vw, 9.5rem);
 		background: var(--paper);
 	}
@@ -142,7 +142,7 @@
 	}
 
 	.section-heading h2,
-	.approach__intro h2,
+	.how-we-work__intro h2,
 	.contact__heading h2 {
 		max-width: 14ch;
 		margin: 0;
@@ -155,41 +155,41 @@
 		padding-top: 0.3rem;
 	}
 
-	.approach {
+	.how-we-work {
 		padding-block: clamp(6rem, 10vw, 9rem);
 		background: var(--surface-secondary);
 	}
 
-	.approach__inner {
+	.how-we-work__inner {
 		display: grid;
 		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: end;
 	}
 
-	.approach__body {
+	.how-we-work__body {
 		display: grid;
 		align-content: end;
 		padding-bottom: 0.3rem;
 	}
 
-	.approach__body p {
+	.how-we-work__body p {
 		font-size: clamp(1rem, 1.25vw, 1.1rem);
 	}
 
-	.proof {
+	.experience {
 		padding-block: clamp(5.5rem, 9vw, 8.5rem);
 		background: var(--surface);
 	}
 
-	.proof-list {
+	.experience-list {
 		margin: 0;
 		padding: 0;
 		border-top: 1px solid var(--border);
 		list-style: none;
 	}
 
-	.proof-list li {
+	.experience-list li {
 		padding-block: 1.15rem;
 		border-bottom: 1px solid var(--border);
 		font-size: clamp(1rem, 1.5vw, 1.18rem);
@@ -225,19 +225,19 @@
 	@media (max-width: 60rem) {
 		.hero__inner,
 		.section-layout,
-		.approach__inner {
+		.how-we-work__inner {
 			grid-template-columns: 1fr;
 		}
 
 		.hero__inner,
 		.section-layout,
-		.approach__inner {
+		.how-we-work__inner {
 			gap: 2.75rem;
 		}
 
 		.hero__support,
 		.section-copy,
-		.approach__body,
+		.how-we-work__body,
 		.contact__support {
 			max-width: 38rem;
 		}
@@ -249,7 +249,7 @@
 		}
 
 		.section-heading h2,
-		.approach__intro h2,
+		.how-we-work__intro h2,
 		.contact__heading h2 {
 			font-size: clamp(2.55rem, 11vw, 3.6rem);
 		}
