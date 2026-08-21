@@ -9,14 +9,14 @@
 <style>
 	.brand-lockup {
 		display: inline-block;
-		font-family: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
-		font-size: clamp(1rem, 1.25vw, 1.1rem);
-		font-weight: 720;
-		letter-spacing: -0.025em;
+		font-family: 'Aptos Display', 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+		font-size: clamp(1rem, 1.2vw, 1.08rem);
+		font-weight: 700;
+		letter-spacing: -0.02em;
 		line-height: 1;
 	}
 
 	.brand-lockup--large {
-		font-size: clamp(1.4rem, 2.8vw, 2.35rem);
+		font-size: clamp(1.45rem, 2.7vw, 2.3rem);
 	}
 </style>

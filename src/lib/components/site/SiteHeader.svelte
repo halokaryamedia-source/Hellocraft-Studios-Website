@@ -34,7 +34,7 @@
 		position: relative;
 		z-index: 20;
 		border-bottom: 1px solid var(--border);
-		background: var(--paper);
+		background: var(--surface);
 		color: var(--ink);
 	}
 
@@ -45,7 +45,7 @@
 		gap: 1.25rem 2.5rem;
 		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
 		margin-inline: auto;
-		padding-block: 1rem;
+		padding-block: 1.15rem;
 	}
 
 	.brand {
@@ -60,7 +60,7 @@
 		align-items: center;
 		justify-content: flex-end;
 		flex-wrap: wrap;
-		gap: clamp(1.15rem, 2.5vw, 2.2rem);
+		gap: clamp(1.2rem, 2.8vw, 2.5rem);
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -80,14 +80,14 @@
 
 	nav a::after {
 		position: absolute;
-		right: 0;
-		bottom: 0.3rem;
-		left: 0;
-		height: 2px;
+		bottom: 0.18rem;
+		left: 50%;
+		width: 0.28rem;
+		height: 0.28rem;
+		border-radius: 50%;
 		background: var(--brand);
 		content: '';
-		transform: scaleX(0);
-		transform-origin: left;
+		transform: translateX(-50%) scale(0);
 		transition: transform var(--motion-fast) ease-out;
 	}
 
@@ -100,14 +100,14 @@
 	nav a:hover::after,
 	nav a:focus-visible::after,
 	nav a[aria-current='page']::after {
-		transform: scaleX(1);
+		transform: translateX(-50%) scale(1);
 	}
 
 	@media (max-width: 46rem) {
 		.site-header__inner {
 			align-items: flex-start;
 			flex-direction: column;
-			padding-block: 0.9rem 0.65rem;
+			padding-block: 0.95rem 0.7rem;
 		}
 
 		nav {
@@ -123,7 +123,7 @@
 		ul {
 			width: max-content;
 			justify-content: flex-start;
-			gap: 1.4rem;
+			gap: 1.5rem;
 		}
 	}
 </style>

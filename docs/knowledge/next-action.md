@@ -17,12 +17,15 @@ PROFESSIONAL_GAME_STUDIO_DIRECTION_ADOPTED
 DE_AI_RESTRAINT_PASS_IMPLEMENTED
 HOMEPAGE_HUMAN_COMPOSITION_AUDIT_COMPLETED
 CONTROLLED_HOMEPAGE_REBUILD_IMPLEMENTED
+HOMEPAGE_ELEGANCE_REFINEMENT_IMPLEMENTED
 GLOBAL_BALANCED_HEADING_WRAP_REMOVED
 DEFAULT_INTER_ARIAL_PRESENTATION_REMOVED
 SENTENCE_CASE_UI_LANGUAGE_ADOPTED
 HOMEPAGE_FEATURED_WORK_HIERARCHY_IMPLEMENTED
+HOMEPAGE_SECONDARY_WORK_WEIGHT_REDUCED
 HOMEPAGE_STUDIO_CAPABILITY_CHAPTER_MERGED
-HOMEPAGE_COMPACT_CONTACT_CLOSE_IMPLEMENTED
+HOMEPAGE_CONTAINED_CONTACT_PANEL_IMPLEMENTED
+HOMEPAGE_DEMO_MEDIA_TONAL_COMPOSITION_IMPLEMENTED
 VISIBLE_HOMEPAGE_DUMMY_COPY_REWRITTEN_AS_PUBLIC_DRAFT
 FAKE_PROOF_HIDDEN_DURING_DEMO
 OTHER_PAGE_ROUTE_ARCHITECTURE_HELD_STABLE
@@ -47,9 +50,9 @@ Working authority: **`Local`**.
 
 ## Active project-owner instruction
 
-Keep improving the presentation until it feels professional and convincingly human-designed. Final Hellocraft text/data/media will be supplied later.
+Keep improving the Homepage until it feels professional, elegant, attractive, and convincingly human-designed. Final Hellocraft text/data/media will be supplied later.
 
-The project owner selected **Blind Squirrel Games** as the primary external maturity reference. Previous attempts that manufactured uniqueness through editorial rails, cut corners, repeated huge headings, or other signature devices were rejected.
+Blind Squirrel Games remains the primary external maturity reference. Previous attempts that manufactured uniqueness through editorial rails, cut corners, repeated huge headings, or other signature devices remain rejected.
 
 Do not resume hosting/provider selection or local/runtime testing until explicitly re-authorized.
 
@@ -63,88 +66,86 @@ docs/foundation/04-visual-direction.md
 
 Current working rule:
 
-> **Professional game studio with confident restraint. Content hierarchy, real Hellocraft branding, and project media should create the personality; layout gimmicks should not.**
+> **Professional game studio with confident restraint. Elegance should come from proportion, hierarchy, tonal depth, and real media—not decorative complexity.**
 
-## Homepage audit
+## Homepage audit and refinement
 
-Canonical audit record:
+Audit record:
 
 ```text
 docs/knowledge/homepage-human-composition-audit.md
 ```
 
-Material findings from the rejected preview:
+Current refinement record:
 
 ```text
-headline scale/line-break shape too poster-like
-+ too many display-size headings
-+ Inter body / Arial-Helvetica display fallback
-+ global balanced heading wrapping
-+ all-caps micro-label/action language
-+ repeated mathematical section rhythm
-+ equal project presentation
-+ visible internal dummy copy
-+ oversized blank media fields
+docs/knowledge/homepage-elegance-refinement.md
 ```
 
-The Taste Skill and redesign-existing-projects skill were audited as external reference evidence only. No new Hellocraft project specialist was created because `web-ui-design-development` already owns those responsibilities.
+The Taste Skill and redesign-existing-projects skill were audited as external reference evidence only. No new Hellocraft project specialist was created because `web-ui-design-development` already owns the relevant responsibilities.
 
 ## Current Homepage composition
 
 ```text
 Hero
-→ one sentence-case studio label
-→ one dominant headline with calmer desktop line shape
-→ concise body + one text action
-→ one lower, wider development media field
+→ quiet sentence-case studio label
+→ one dominant headline
+→ supporting copy/action in a deliberate side column
+→ one wide brand-toned development media field
 
 Selected Work
-→ compact section heading
-→ one primary featured project
-→ one clearly secondary project
-→ no repeating equal card/grid rhythm
+→ section title + concise context
+→ one dominant featured study
+→ one materially smaller secondary study
+→ simple captions instead of repeated project-card UI
 
 Studio
+→ softly differentiated neutral surface
 → one main studio statement
 → supporting copy
-→ capability narrative nested as a smaller sub-section
+→ capability narrative nested as a smaller subsection
 
 Contact
-→ compact closing statement + one action
+→ contained dark panel
+→ moderate closing headline
+→ one supporting paragraph + one action
 ```
 
 Proof remains hidden while demo content is active.
 
-## Typography correction
+## Typography / UI language
 
-Current source no longer uses Inter + Arial as the primary presentation pair.
-
-Development audition baseline now prefers:
+Development audition baseline currently uses:
 
 ```text
 body
-→ Segoe UI Variable Text / Segoe UI / system fallback
+→ Aptos / Segoe UI Variable Text / system fallback
 
 display
-→ Segoe UI Variable Display / Segoe UI / system fallback
+→ Aptos Display / Segoe UI Variable Display / system fallback
 ```
 
-This is still a development audition, not a final licensed brand-font decision. The final production font remains pending real logo/brand fit and later rendered acceptance.
+This remains a development audition, not the final production brand font. No font file/package has been added.
 
-Global `text-wrap: balance` on headings was removed. Labels/actions now default to sentence case instead of automatic uppercase treatment.
+Labels, navigation, and actions use sentence case by default. Global balanced heading wrapping remains removed.
 
-## Development content presentation
+## Development media treatment
 
-Visible Homepage copy now reads like draft public copy. Demo status remains protected through:
+Empty dark rectangles were replaced with simple brand-toned color planes for development preview only.
+
+The placeholder deliberately avoids:
 
 ```text
-contentIsDemo = true
-+ development notice
-+ noindex,nofollow
-+ source comments
+HUD overlays
+coordinates
+cut corners
+glows
+mesh gradients
+fake screenshots
+fabricated Minecraft scenes
 ```
 
-Project names remain development-only studies, not portfolio claims.
+Real project imagery will replace the placeholder without requiring a new layout system.
 
 ## Content replacement remains stable
 
@@ -190,4 +191,4 @@ Preview-only visual rendering is allowed when requested, but it is not technical
 
 ## Next Step
 
-**Review the controlled Homepage preview. If the composition is accepted, propagate only the proven typography/hierarchy principles to Work, Studio, Careers, Contact, and Footer. If it is not accepted, revise Homepage only; do not redesign the whole site again.**
+**Review the Homepage elegance refinement. If accepted, propagate only the proven hierarchy, typography, tonal-depth, and media-presentation principles to the remaining routes. If not accepted, continue adjusting Homepage only and do not add another visual gimmick system.**

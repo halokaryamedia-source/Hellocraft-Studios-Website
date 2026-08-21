@@ -8,37 +8,37 @@ import type { LinkItem } from './types';
 export const homeCopy = {
 	hero: {
 		eyebrow: 'Minecraft game studio',
-		title: 'We build Minecraft experiences people want to explore.',
+		title: 'We build Minecraft experiences worth exploring.',
 		body:
-			'Hellocraft Studios focuses on Minecraft worlds, gameplay, and production, turning clear ideas into polished experiences for players and partners.',
-		primaryActionLabel: 'View our work'
+			'Hellocraft brings world design, gameplay thinking, and production together to shape clear, playable experiences.',
+		primaryActionLabel: 'See selected work'
 	},
 	work: {
 		title: 'Selected work',
-		body: 'A closer look at how different Minecraft ideas can become worlds, systems, and playable experiences.',
+		body: 'Development studies for the portfolio layout, shaped around atmosphere, play, and production detail.',
 		emptyState: 'Approved Hellocraft projects will appear here when the portfolio inventory is supplied.',
-		viewAllLabel: 'See all projects'
+		viewAllLabel: 'View all work'
 	},
 	studio: {
-		eyebrow: 'Studio',
-		title: 'Good Minecraft work has to look right, play clearly, and hold together.',
+		eyebrow: 'The studio',
+		title: 'Creative direction and production, kept close from the start.',
 		body:
-			'Hellocraft brings creative direction and practical production into the same process, from the first idea through a playable result.',
-		actionLabel: 'About the studio'
+			'We treat the player experience and the production reality as one problem, so ideas stay clear as they move toward something playable.',
+		actionLabel: 'About Hellocraft'
 	},
 	capabilities: {
-		eyebrow: 'What we do',
-		title: 'Creative and technical work, treated as one experience.',
+		eyebrow: 'How we think',
+		title: 'From world design to playable systems.',
 		body:
-			'We keep creative decisions and technical constraints close together, so the finished experience feels coherent from the player’s point of view.'
+			'Each project can ask for a different mix of creative and technical work. The structure stays flexible so the experience, not a fixed service menu, leads the process.'
 	},
 	proof: {
 		title: 'A place for real proof'
 	},
 	contact: {
 		eyebrow: 'Start a conversation',
-		title: 'Tell us what you want to build.',
-		body: 'Share the idea, scope, or problem. We can start from there.',
+		title: 'Have a Minecraft project in mind?',
+		body: 'Share the idea, the audience, or the problem you are trying to solve. We can start from there.',
 		actionLabel: 'Contact Hellocraft'
 	}
 } as const;

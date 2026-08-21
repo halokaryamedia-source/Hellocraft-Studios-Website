@@ -12,38 +12,43 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="home-title">
 		<div class="shell hero__inner">
-			<div class="hero__heading">
-				<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
-				<h1 id="home-title">{homeCopy.hero.title}</h1>
+			<div class="hero__grid">
+				<div class="hero__heading">
+					<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
+					<h1 id="home-title">{homeCopy.hero.title}</h1>
+				</div>
+
+				<div class="hero__intro">
+					<p>{homeCopy.hero.body}</p>
+					<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
+				</div>
 			</div>
 
-			<div class="hero__intro">
-				<p>{homeCopy.hero.body}</p>
-				<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
-			</div>
-
-			<ProjectMediaPlaceholder variant="hero" index="Demo" label="Featured work" />
+			<ProjectMediaPlaceholder variant="hero" tone="brand" index="Demo" label="Featured work" />
 		</div>
 	</section>
 
 	<section class="work-section" aria-labelledby="home-work-title">
 		<div class="shell">
 			<header class="work-heading">
-				<div>
+				<div class="work-heading__title">
 					<p class="eyebrow">Portfolio preview</p>
 					<h2 id="home-work-title">{homeCopy.work.title}</h2>
 				</div>
-				<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
+				<div class="work-heading__aside">
+					<p>{homeCopy.work.body}</p>
+					<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
+				</div>
 			</header>
 
 			{#if featuredProjects[0]}
 				{@const project = featuredProjects[0]}
 				<article class="featured-project">
 					<a href={`/work/${project.slug}`}>
-						<ProjectMediaPlaceholder index="01" label="Demo project" />
+						<ProjectMediaPlaceholder tone="dark" index="01" label="Development study" />
 						<div class="featured-project__caption">
-							<div>
-								<p class="project-meta">Development study</p>
+							<div class="featured-project__title">
+								<p class="project-meta">Featured study</p>
 								<h3>{project.title}</h3>
 							</div>
 							<div class="project-description">
@@ -59,9 +64,9 @@
 				{@const project = featuredProjects[1]}
 				<article class="secondary-project">
 					<a href={`/work/${project.slug}`}>
-						<ProjectMediaPlaceholder index="02" label="Demo project" />
+						<ProjectMediaPlaceholder tone="neutral" index="02" label="Development study" />
 						<div class="secondary-project__caption">
-							<p class="project-meta">Development study</p>
+							<p class="project-meta">Selected study</p>
 							<h3>{project.title}</h3>
 							<p>{project.summary}</p>
 							<span>View project ↗</span>
@@ -94,14 +99,16 @@
 	</section>
 
 	<section class="contact-section" aria-labelledby="home-contact-title">
-		<div class="shell contact-grid">
-			<div>
-				<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
-				<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
-			</div>
-			<div class="contact-copy">
-				<p>{homeCopy.contact.body}</p>
-				<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
+		<div class="shell">
+			<div class="contact-panel">
+				<div class="contact-heading">
+					<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
+					<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
+				</div>
+				<div class="contact-copy">
+					<p>{homeCopy.contact.body}</p>
+					<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -115,60 +122,78 @@
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2.5rem, 5vw, 4.5rem);
-		padding-block: clamp(4.5rem, 8vw, 7.5rem) clamp(3.5rem, 6vw, 5.5rem);
+		gap: clamp(3rem, 6vw, 5rem);
+		padding-block: clamp(5rem, 9vw, 8rem) clamp(4rem, 7vw, 6rem);
+	}
+
+	.hero__grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+		gap: clamp(3rem, 8vw, 8rem);
+		align-items: end;
 	}
 
 	.hero__heading {
 		display: grid;
-		gap: 1.1rem;
+		gap: 1rem;
 	}
 
 	.hero h1 {
-		max-width: 18ch;
+		max-width: 13ch;
 		margin: 0;
-		font-size: clamp(3.7rem, 6.6vw, 6.65rem);
-		font-weight: 730;
-		line-height: 0.93;
+		font-size: clamp(4rem, 7vw, 7.2rem);
+		font-weight: 700;
+		line-height: 0.92;
 	}
 
 	.hero__intro {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		gap: 2rem;
-		align-items: end;
-		max-width: 70rem;
+		gap: 1.4rem;
+		align-content: end;
+		padding-bottom: 0.35rem;
 	}
 
 	.hero__intro p {
-		max-width: 37rem;
+		max-width: 31rem;
 		margin: 0;
 		color: var(--text-muted);
-		font-size: clamp(1.02rem, 1.5vw, 1.16rem);
+		font-size: clamp(1.02rem, 1.4vw, 1.15rem);
 	}
 
 	.work-section {
-		padding-block: clamp(5rem, 9vw, 9rem);
+		padding-block: clamp(5.5rem, 9vw, 9rem);
+		background: var(--surface);
 	}
 
 	.work-heading {
-		display: flex;
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: end;
-		justify-content: space-between;
-		gap: 2rem;
-		margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
-		padding-bottom: 1.3rem;
+		margin-bottom: clamp(3rem, 6vw, 5rem);
+		padding-bottom: 1.5rem;
 		border-bottom: 1px solid var(--border);
 	}
 
-	.work-heading > div {
+	.work-heading__title,
+	.work-heading__aside {
 		display: grid;
-		gap: 0.6rem;
+		gap: 0.8rem;
+	}
+
+	.work-heading__aside {
+		justify-items: start;
+	}
+
+	.work-heading__aside > p {
+		max-width: 31rem;
+		margin: 0;
+		color: var(--text-muted);
 	}
 
 	.work-heading h2 {
 		margin: 0;
-		font-size: clamp(2.6rem, 5vw, 4.7rem);
+		font-size: clamp(2.8rem, 5vw, 4.8rem);
 		line-height: 0.96;
 	}
 
@@ -178,13 +203,13 @@
 	}
 
 	.featured-project {
-		padding-bottom: clamp(4rem, 8vw, 7rem);
+		padding-bottom: clamp(4.5rem, 8vw, 7rem);
 	}
 
 	.featured-project a,
 	.secondary-project a {
 		display: grid;
-		gap: 1.5rem;
+		gap: 1.65rem;
 		text-decoration: none;
 	}
 
@@ -195,33 +220,34 @@
 		align-items: start;
 	}
 
-	.featured-project__caption > div:first-child,
-	.secondary-project__caption {
+	.featured-project__title,
+	.secondary-project__caption,
+	.project-description {
 		display: grid;
-		gap: 0.65rem;
+		gap: 0.75rem;
 	}
 
 	.project-meta {
 		margin: 0;
 		color: var(--text-muted);
-		font-size: 0.8rem;
+		font-size: 0.84rem;
+		font-weight: 600;
 	}
 
 	.featured-project h3 {
-		max-width: 12ch;
+		max-width: 13ch;
 		margin: 0;
-		font-size: clamp(2.7rem, 5vw, 5rem);
-		line-height: 0.94;
+		font-size: clamp(2.8rem, 5vw, 5rem);
+		line-height: 0.95;
 	}
 
 	.project-description {
-		display: grid;
-		gap: 1rem;
+		gap: 1.15rem;
 	}
 
 	.project-description p,
 	.secondary-project__caption > p:not(.project-meta) {
-		max-width: 32rem;
+		max-width: 31rem;
 		margin: 0;
 		color: var(--text-muted);
 	}
@@ -229,18 +255,18 @@
 	.project-description span,
 	.secondary-project__caption > span {
 		width: fit-content;
-		font-size: 0.88rem;
+		font-size: 0.9rem;
 		font-weight: 650;
 	}
 
 	.secondary-project {
-		width: min(78%, 68rem);
+		width: min(70%, 61rem);
 		margin-left: auto;
-		padding-block: clamp(4rem, 7vw, 6rem);
+		padding-block: clamp(4.5rem, 8vw, 7rem);
 	}
 
 	.secondary-project__caption {
-		grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.8fr);
+		grid-template-columns: minmax(0, 1.05fr) minmax(15rem, 0.8fr);
 		column-gap: clamp(1.5rem, 5vw, 4rem);
 	}
 
@@ -249,21 +275,21 @@
 	}
 
 	.secondary-project h3 {
-		max-width: 12ch;
+		max-width: 13ch;
 		margin: 0;
-		font-size: clamp(2.1rem, 4vw, 3.7rem);
-		line-height: 0.96;
+		font-size: clamp(2.1rem, 3.8vw, 3.5rem);
+		line-height: 0.98;
 	}
 
 	.studio-section {
-		padding-block: clamp(5rem, 9vw, 9rem);
+		padding-block: clamp(5.5rem, 9vw, 8.5rem);
 		border-top: 1px solid var(--border);
-		background: var(--surface);
+		background: var(--surface-secondary);
 	}
 
 	.studio-grid {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+		grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
 		gap: clamp(3rem, 9vw, 9rem);
 		align-items: start;
 	}
@@ -274,15 +300,15 @@
 	}
 
 	.studio-heading h2 {
-		max-width: 13ch;
+		max-width: 14ch;
 		margin: 0;
-		font-size: clamp(2.8rem, 5.4vw, 5.2rem);
-		line-height: 0.94;
+		font-size: clamp(2.8rem, 5vw, 4.8rem);
+		line-height: 0.97;
 	}
 
 	.studio-copy {
 		display: grid;
-		gap: 2.2rem;
+		gap: 2.4rem;
 		padding-top: 0.2rem;
 	}
 
@@ -296,42 +322,50 @@
 
 	.capability-note {
 		display: grid;
-		gap: 0.65rem;
-		padding-top: 1.4rem;
+		gap: 0.75rem;
+		padding-top: 1.5rem;
 		border-top: 1px solid var(--border);
 	}
 
 	.capability-note h3 {
 		max-width: 18ch;
 		margin: 0;
-		font-size: clamp(1.5rem, 2.7vw, 2.35rem);
+		font-size: clamp(1.6rem, 2.6vw, 2.3rem);
 		font-weight: 650;
 		line-height: 1.08;
 	}
 
 	.contact-section {
-		padding-block: clamp(4rem, 7vw, 6rem);
-		border-top: 1px solid var(--border);
+		padding-block: clamp(4.5rem, 8vw, 7rem);
 		background: var(--paper);
 	}
 
-	.contact-grid {
+	.contact-panel {
 		display: grid;
 		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
 		gap: clamp(2.5rem, 8vw, 8rem);
 		align-items: end;
+		padding: clamp(2.25rem, 5vw, 4.5rem);
+		border-top: 3px solid var(--brand);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
-	.contact-grid > div:first-child {
+	.contact-heading {
 		display: grid;
-		gap: 0.75rem;
+		gap: 0.8rem;
 	}
 
-	.contact-grid h2 {
+	.contact-heading .eyebrow,
+	.contact-copy p {
+		color: rgb(255 255 255 / 62%);
+	}
+
+	.contact-heading h2 {
 		max-width: 14ch;
 		margin: 0;
-		font-size: clamp(2.6rem, 5vw, 4.8rem);
-		line-height: 0.97;
+		font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+		line-height: 0.98;
 	}
 
 	.contact-copy {
@@ -340,10 +374,16 @@
 		justify-items: start;
 	}
 
+	.contact-copy .text-link {
+		color: var(--surface);
+	}
+
 	@media (max-width: 64rem) {
+		.hero__grid,
+		.work-heading,
 		.featured-project__caption,
 		.studio-grid,
-		.contact-grid {
+		.contact-panel {
 			grid-template-columns: 1fr;
 		}
 
@@ -357,19 +397,19 @@
 	}
 
 	@media (max-width: 46rem) {
-		.hero__intro,
-		.work-heading {
-			align-items: flex-start;
-			grid-template-columns: 1fr;
-		}
-
-		.work-heading {
-			display: grid;
+		.hero__inner {
+			padding-top: 4rem;
 		}
 
 		.hero h1 {
-			font-size: clamp(3.05rem, 13vw, 4.45rem);
+			font-size: clamp(3.15rem, 13.5vw, 4.7rem);
 			line-height: 0.95;
+		}
+
+		.work-heading h2,
+		.studio-heading h2,
+		.contact-heading h2 {
+			font-size: clamp(2.4rem, 11vw, 3.5rem);
 		}
 	}
 </style>
