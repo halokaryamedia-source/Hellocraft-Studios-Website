@@ -6,26 +6,36 @@ Operational guide for replacing Hellocraft development/demo content with approve
 
 ```text
 SOURCE_ARCHITECTURE_MATURE_FOR_CONTENT_SWAP
+STANDARD_PUBLIC_NAMING_APPROVED
 DEMO_CONTENT_MODE_ACTIVE
 REAL_CONTENT_SWAP_PENDING
 HOSTING_DEFERRED
 RUNTIME_VALIDATION_DEFERRED
 ```
 
-The intended production workflow is now content replacement, not repeated page reconstruction.
-
 ## What should stay stable
 
-Unless real evidence proves a structural problem, preserve:
+Canonical public routes:
 
 ```text
 /
-├── work
+├── portfolio
 │   └── [slug]
-├── studio
+├── about
 ├── careers
 └── contact
 ```
+
+Primary public terminology:
+
+```text
+Portfolio
+About
+Careers
+Contact
+```
+
+Legacy `/work`, `/work/[slug]`, and `/studio` routes exist only as redirects and should not be reintroduced as primary navigation labels.
 
 Preserve the existing global shell, major page sections, visual language, brand/media owner boundaries, and project-detail flexible-section model.
 
@@ -41,9 +51,10 @@ src/lib/content/site.ts
 
 Replace/add only approved values such as:
 
-- final public site/studio name if it changes;
-- final navigation labels if copy changes;
+- final public site/company name if it changes;
 - approved social/public links when available.
+
+Keep standard navigation terminology unless the project owner explicitly changes it.
 
 ### 2. Page text
 
@@ -51,11 +62,11 @@ Replace/add only approved values such as:
 src/lib/content/pages.ts
 ```
 
-This is the main copy replacement surface for:
+Main copy replacement surface for:
 
 - Home;
-- Work intro;
-- Studio;
+- Portfolio;
+- About;
 - Careers;
 - Contact;
 - Footer statement.
@@ -68,7 +79,7 @@ The current strings are temporary development copy. Replace values here rather t
 src/lib/content/projects.ts
 ```
 
-Remove all `Demo Project ...` entries and replace them with projects that passed the content-intake/evidence process.
+Remove all development demo entries and replace them with projects that passed the content-intake/evidence process.
 
 Keep each project limited to fields supported by real evidence:
 
@@ -77,8 +88,8 @@ slug
 title
 summary
 featured
-year?        
-client?      
+year?
+client?
 contribution?
 sections?
 links?
@@ -124,7 +135,7 @@ Also replace temporary development color values in `src/app.css` from the author
 src/lib/components/work/ProjectMediaPlaceholder.svelte
 ```
 
-This is only a decorative development placeholder.
+This is only a decorative development placeholder. The internal component folder name does not define public navigation terminology.
 
 When real media arrives:
 
@@ -134,7 +145,7 @@ actual project image/video
 → approved asset location
 → enhanced-image/media policy
 → real alt/caption/focal-point decision
-→ project card/detail rendering
+→ portfolio/detail rendering
 ```
 
 Do not pre-write alt text before the actual asset is known.
@@ -187,18 +198,17 @@ Project visual
 Project media
 ```
 
-Every remaining match must be deliberately understood; do not blindly replace code comments that still correctly describe development-only mechanics.
+Also verify that `Work` and `Studio` do not remain as unintended public navigation/page labels. Legacy redirects and internal historical comments are acceptable when deliberate.
 
 ## What final text should not force
 
 Final copy should normally **not** require changes to:
 
-- route structure;
+- canonical route structure;
 - header/footer architecture;
 - Home section order;
-- Work card component responsibility;
 - project detail section mechanism;
-- Studio/Careers/Contact route ownership;
+- About/Careers/Contact route ownership;
 - CSS framework/dependency choices;
 - hosting architecture.
 
