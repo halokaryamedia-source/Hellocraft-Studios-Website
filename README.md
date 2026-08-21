@@ -2,76 +2,88 @@
 
 Official website project for **Hellocraft Studios**, a game studio focused on Minecraft.
 
-## Current project state
+## Current status
 
 ```text
-TECHNICAL_SCAFFOLD_SOURCE_CREATED
-INFORMATION_ARCHITECTURE_APPROVED
-DEMO_CONTENT_MODE_ACTIVE
-VISUAL_SOURCE_SYSTEM_IMPLEMENTED
-SOURCE_ACCESSIBILITY_PASS_COMPLETED
-REAL_CONTENT_AND_MEDIA_PENDING
-LOCAL_RUNTIME_TESTING_DEFERRED
-HOSTING_DEFERRED
+page structure        = complete
+page names            = approved
+page design           = approved
+demo content          = active
+real portfolio        = pending
+real project media    = pending
+final public copy     = pending
+final testing         = pending
+hosting               = deferred
 ```
 
-The current priority is to prepare the complete website architecture/presentation first so final work is mostly replacing temporary text/data/media with approved Hellocraft content.
+The website structure and design are ready. The next major work is replacing temporary content with real Hellocraft project information and media.
 
-## Route architecture
+## Public pages
 
 ```text
 /
-├── work
+├── portfolio
 │   └── [slug]
-├── studio
+├── about
 ├── careers
 └── contact
 ```
 
-Primary navigation is `Work / Studio / Careers / Contact`. Home is reached through the Hellocraft brand.
+Main navigation:
+
+```text
+Portfolio
+About
+Careers
+Contact
+```
+
+The logo links to Home.
+
+Old URLs remain only as redirects:
+
+```text
+/work        → /portfolio
+/work/[slug] → /portfolio/[slug]
+/studio      → /about
+```
 
 ## Development content
 
-Temporary copy, Demo Projects, demo proof items, and demo career items are intentionally present for layout/design development.
+Temporary page copy, demo projects, demo experience items, and demo career items are used only to keep the layout functional before real content is supplied.
 
-They are **not** public Hellocraft facts.
+They are **not public Hellocraft facts**.
 
-The root layout displays a development-content notice and emits `noindex, nofollow` while `contentIsDemo` remains true.
+While `contentIsDemo = true`, the website shows a development notice and uses `noindex, nofollow`.
 
-Real public contact channels are not fabricated even in demo mode.
-
-## Content owners
+## Main content files
 
 ```text
 src/lib/content/pages.ts
-→ page copy
+→ page text
 
 src/lib/content/projects.ts
-→ project entries
+→ portfolio projects
 
 src/lib/content/demo-data.ts
-→ development-only proof/career collections
+→ temporary experience/career items
 
 src/lib/content/site.ts
-→ site identity/navigation
+→ site name, navigation, and public links
 ```
 
-Final content should replace these owners without rewriting route structure unless real content proves a structural problem.
-
-## Brand/media replacement surfaces
+## Brand and project media
 
 ```text
 src/lib/components/brand/BrandLockup.svelte
-→ header/footer development lockup; future authoritative logo/wordmark owner
-
 src/lib/components/brand/BrandSymbol.svelte
-→ decorative development brand symbol
+→ logo display
 
-src/lib/components/work/ProjectMediaPlaceholder.svelte
-→ development project-media surface
+src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
+→ temporary project media area
 ```
 
-## Technical baseline
+## Technical setup
 
 ```text
 SvelteKit
@@ -80,13 +92,13 @@ Bun
 Native CSS + scoped Svelte styles
 CSS Custom Properties
 @sveltejs/enhanced-img
-Prettier + ESLint + svelte-check + build quality gate
-static/prerender-first, server-where-needed
+Prettier + ESLint + svelte-check + build checks
+static/prerender-first
 ```
 
-No Tailwind, SCSS, CSS-in-JS, component kit, CMS, database, auth, animation library, or separate backend is part of the initial architecture.
+No Tailwind, SCSS, CSS-in-JS, CMS, database, authentication system, or separate backend is part of the initial setup.
 
-## Current deferred work
+## Deferred technical work
 
 The project owner currently defers:
 
@@ -94,28 +106,34 @@ The project owner currently defers:
 bun install
 bun.lock generation
 bun run validate
-local preview/browser tests
-hosting/provider selection
+full local/browser testing
+hosting provider selection
 production adapter selection
 ```
 
-Do not claim build/browser/runtime acceptance until those are re-authorized and actually run.
+Do not claim build or browser acceptance until those checks are actually run.
 
-## Documentation entrypoints
+## Documentation
 
 ```text
 CONTEXT.md
-→ stable current orientation
+→ current project state
 
-docs/foundation/07-information-content-architecture.md
-→ routes/content architecture
+docs/foundation/07-page-structure.md
+→ page structure and navigation
 
 docs/foundation/04-visual-direction.md
 → visual direction
 
-docs/knowledge/accessibility-source-audit.md
-→ current source semantic/accessibility audit
+docs/knowledge/content-review-guide.md
+→ content review rules
+
+docs/knowledge/content-inventory.md
+→ available/missing real content
+
+docs/knowledge/content-update-guide.md
+→ where final content should be added
 
 docs/knowledge/next-action.md
-→ immediate continuation
+→ immediate next steps
 ```
