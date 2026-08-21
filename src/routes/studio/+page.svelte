@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { contentIsDemo } from '$lib/content/demo';
 	import { studioCopy, studioProofItems } from '$lib/content/pages';
 </script>
 
@@ -9,86 +10,56 @@
 
 <main id="main-content">
 	<section class="hero" aria-labelledby="studio-title">
-		<div class="shell editorial-frame editorial-frame--dark hero__frame">
-			<aside class="editorial-rail" aria-hidden="true">
-				<span>01 / 05</span>
-				<span>Studio</span>
-			</aside>
-			<div class="editorial-body hero__body">
-				<p class="eyebrow">{studioCopy.hero.eyebrow}</p>
-				<h1 id="studio-title">{studioCopy.hero.title}</h1>
-				<p>{studioCopy.hero.body}</p>
-			</div>
+		<div class="shell hero__inner">
+			<p class="eyebrow">{studioCopy.hero.eyebrow}</p>
+			<h1 id="studio-title">{studioCopy.hero.title}</h1>
+			<p class="hero__body">{studioCopy.hero.body}</p>
 		</div>
 	</section>
 
 	<section class="capabilities" aria-labelledby="studio-capabilities-title">
-		<div class="shell editorial-frame">
-			<aside class="editorial-rail" aria-hidden="true">
-				<span>02 / 05</span>
-				<span>Capabilities</span>
-			</aside>
-			<div class="editorial-body split">
-				<div class="split__heading">
-					<p class="eyebrow">{studioCopy.capabilities.eyebrow}</p>
-					<h2 id="studio-capabilities-title">{studioCopy.capabilities.title}</h2>
-				</div>
-				<p>{studioCopy.capabilities.body}</p>
+		<div class="shell split">
+			<div>
+				<p class="eyebrow">{studioCopy.capabilities.eyebrow}</p>
+				<h2 id="studio-capabilities-title">{studioCopy.capabilities.title}</h2>
 			</div>
+			<p>{studioCopy.capabilities.body}</p>
 		</div>
 	</section>
 
 	<section class="approach" aria-labelledby="studio-approach-title">
-		<div class="shell editorial-frame">
-			<aside class="editorial-rail" aria-hidden="true">
-				<span>03 / 05</span>
-				<span>Approach</span>
-			</aside>
-			<div class="editorial-body split">
-				<div class="split__heading">
-					<p class="eyebrow">{studioCopy.approach.eyebrow}</p>
-					<h2 id="studio-approach-title">{studioCopy.approach.title}</h2>
-				</div>
-				<p>{studioCopy.approach.body}</p>
+		<div class="shell split">
+			<div>
+				<p class="eyebrow">{studioCopy.approach.eyebrow}</p>
+				<h2 id="studio-approach-title">{studioCopy.approach.title}</h2>
 			</div>
+			<p>{studioCopy.approach.body}</p>
 		</div>
 	</section>
 
-	{#if studioProofItems.length > 0}
+	{#if !contentIsDemo && studioProofItems.length > 0}
 		<section class="proof" aria-labelledby="studio-proof-title">
-			<div class="shell editorial-frame">
-				<aside class="editorial-rail" aria-hidden="true">
-					<span>04 / 05</span>
-					<span>Proof</span>
-				</aside>
-				<div class="editorial-body proof__inner">
-					<div class="proof__heading">
-						<p class="eyebrow">Credibility</p>
-						<h2 id="studio-proof-title">{studioCopy.proof.title}</h2>
-					</div>
-					<ul>
-						{#each studioProofItems as item, index (item)}
-							<li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
-						{/each}
-					</ul>
+			<div class="shell split">
+				<div>
+					<p class="eyebrow">Proof</p>
+					<h2 id="studio-proof-title">{studioCopy.proof.title}</h2>
 				</div>
+				<ul>
+					{#each studioProofItems as item (item)}
+						<li>{item}</li>
+					{/each}
+				</ul>
 			</div>
 		</section>
 	{/if}
 
 	<section class="contact" aria-labelledby="studio-contact-title">
-		<div class="shell editorial-frame editorial-frame--dark">
-			<aside class="editorial-rail" aria-hidden="true">
-				<span>05 / 05</span>
-				<span>Contact</span>
-			</aside>
-			<div class="editorial-body contact__body">
-				<p class="eyebrow">Contact</p>
-				<h2 id="studio-contact-title">{studioCopy.contact.title}</h2>
-				<div class="contact__footer">
-					<p>{studioCopy.contact.body}</p>
-					<a class="text-link" href="/contact">{studioCopy.contact.actionLabel}</a>
-				</div>
+		<div class="shell contact__inner">
+			<p class="eyebrow">Contact</p>
+			<h2 id="studio-contact-title">{studioCopy.contact.title}</h2>
+			<div class="contact__footer">
+				<p>{studioCopy.contact.body}</p>
+				<a class="text-link" href="/contact">{studioCopy.contact.actionLabel}</a>
 			</div>
 		</div>
 	</section>
@@ -96,32 +67,28 @@
 
 <style>
 	.hero {
-		background: var(--ink);
-		color: var(--surface);
+		border-bottom: 1px solid var(--border);
+		background: var(--paper);
 	}
 
-	.hero__frame {
+	.hero__inner {
+		display: grid;
+		gap: clamp(1.5rem, 4vw, 3rem);
 		padding-block: clamp(5rem, 10vw, 10rem);
 	}
 
-	.hero__body {
-		display: grid;
-		gap: clamp(1.5rem, 4vw, 3.5rem);
-	}
-
 	h1 {
-		max-width: 10.5ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(4.5rem, 11vw, 11rem);
-		line-height: 0.78;
+		font-size: clamp(4.5rem, 10vw, 10rem);
+		line-height: 0.84;
 	}
 
-	.hero__body > p:last-child {
+	.hero__body {
 		max-width: 41rem;
 		margin: 0;
-		padding-top: 1.25rem;
-		border-top: 1px solid var(--inverse-border);
-		color: rgb(255 255 255 / 60%);
+		color: var(--text-muted);
+		font-size: clamp(1rem, 1.5vw, 1.1rem);
 	}
 
 	.capabilities,
@@ -136,27 +103,27 @@
 	}
 
 	.approach {
-		border-block: 1px solid var(--border);
-		background: var(--paper);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.75fr);
+		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
 		gap: clamp(2rem, 8vw, 8rem);
 		align-items: start;
 	}
 
-	.split__heading {
+	.split > div {
 		display: grid;
-		gap: 1rem;
+		gap: 0.8rem;
 	}
 
 	h2 {
-		max-width: 11ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(3rem, 7vw, 7rem);
-		line-height: 0.84;
+		font-size: clamp(3rem, 6.5vw, 6.5rem);
+		line-height: 0.9;
 	}
 
 	.split > p,
@@ -166,16 +133,8 @@
 		color: var(--text-muted);
 	}
 
-	.proof__inner {
-		display: grid;
-		grid-template-columns: minmax(0, 0.72fr) minmax(18rem, 1.28fr);
-		gap: clamp(2rem, 8vw, 8rem);
-	}
-
-	.proof__heading {
-		display: grid;
-		align-content: start;
-		gap: 1rem;
+	.approach .split > p {
+		color: rgb(255 255 255 / 58%);
 	}
 
 	.proof ul {
@@ -186,38 +145,26 @@
 	}
 
 	.proof li {
-		display: grid;
-		grid-template-columns: 3.5rem minmax(0, 1fr);
-		gap: 1.25rem;
-		padding-block: 1.5rem;
+		padding-block: 1.2rem;
 		border-bottom: 1px solid var(--border);
-	}
-
-	.proof li span {
-		color: var(--brand-strong);
-		font-weight: 900;
-	}
-
-	.proof li p {
-		margin: 0;
-		font-size: clamp(1.1rem, 2vw, 1.5rem);
+		font-size: clamp(1rem, 1.8vw, 1.35rem);
 		font-weight: 700;
 	}
 
 	.contact {
 		padding-block: var(--space-section);
-		background: var(--ink);
-		color: var(--surface);
+		border-top: 1px solid var(--border);
+		background: var(--paper);
 	}
 
-	.contact__body {
+	.contact__inner {
 		display: grid;
-		gap: clamp(2rem, 5vw, 4rem);
+		gap: clamp(1.5rem, 4vw, 3rem);
 	}
 
 	.contact h2 {
-		max-width: 11ch;
-		font-size: clamp(4rem, 9.5vw, 9.5rem);
+		max-width: 12ch;
+		font-size: clamp(3.5rem, 8vw, 8rem);
 	}
 
 	.contact__footer {
@@ -226,20 +173,11 @@
 		gap: 2rem;
 		align-items: end;
 		padding-top: 1.25rem;
-		border-top: 1px solid var(--inverse-border);
-	}
-
-	.contact__footer p {
-		color: rgb(255 255 255 / 56%);
-	}
-
-	.contact .text-link {
-		color: var(--surface);
+		border-top: 1px solid var(--border);
 	}
 
 	@media (max-width: 60rem) {
-		.split,
-		.proof__inner {
+		.split {
 			grid-template-columns: 1fr;
 		}
 	}

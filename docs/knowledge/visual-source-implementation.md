@@ -6,141 +6,144 @@ Current source-level implementation notes for the Hellocraft Studios Website.
 
 ```text
 BLIND_SQUIRREL_PRIMARY_REFERENCE_RETAINED
-PROFESSIONAL_GAME_STUDIO_SYSTEM_IMPLEMENTED
-PROJECT_FIRST_EDITORIAL_SEQUENCE_IMPLEMENTED
-HELLOCRAFT_SIGNATURE_GRAMMAR_IMPLEMENTED
-EDITORIAL_RAIL_IMPLEMENTED
-CUT_CORNER_MEDIA_IMPLEMENTED
-CYAN_STRUCTURAL_RAIL_IMPLEMENTED
-UNIFORM_CARD_GRID_REMOVED
-REPEATED_STAR_DECORATION_REMOVED
-PILL_HEAVY_UI_REMOVED
+PROFESSIONAL_GAME_STUDIO_SYSTEM_RETAINED
+DE_AI_RESTRAINT_PASS_IMPLEMENTED
+EDITORIAL_RAIL_REMOVED
+CUT_CORNER_MEDIA_REMOVED
+PRODUCTION_HUD_STYLING_REMOVED
+FAKE_PROOF_HIDDEN_IN_DEMO_MODE
+PROJECT_FIRST_PRESENTATION_RETAINED
 RENDERED_ACCEPTANCE_PENDING
 ```
 
 This file records implementation direction, not a browser approval claim.
 
-## Reference translation
+## Why the previous refinement was rolled back
 
-Primary external reference: **Blind Squirrel Games**.
+The previous source pass added an editorial rail, cut-corner media, coordinate labels, large project numbers, and cyan structural motifs to create a distinct Hellocraft grammar.
 
-Adopted ideas:
+Preview review showed that these devices made the interface feel more AI-designed and self-consciously art-directed.
 
-```text
-oversized confident typography
-numbered editorial progression
-strong dark/light structure
-large project surfaces
-project-first credibility
-straightforward studio/service communication
-minimal decorative UI around game work
-```
+The current correction is therefore subtraction, not another new aesthetic layer.
 
-Hellocraft differentiation is owned durably by `docs/foundation/04-visual-direction.md` through the Hellocraft-specific signature grammar.
+## Current translation of Blind Squirrel
 
-## Hellocraft signature layer
-
-The second refinement pass intentionally moves beyond a generic Blind-Squirrel-inspired studio layout.
-
-Current signature language:
+Keep the useful qualities:
 
 ```text
-editorial rail
-+ cyan structural line
-+ cut-corner project media
-+ restrained hard-edge surfaces
-+ asymmetric media/text relationship
-+ oversized project indices
+confidence
+large clear typography
+project-first hierarchy
+real game-media emphasis
+simple navigation
+strong but controlled dark/light contrast
 ```
 
-The rail is structural rather than decorative: it carries section/index metadata and creates a repeatable rhythm across Home, Work, Studio, and shared footer treatment.
-
-The cut-corner media frame abstracts the angular transitions of the Hellocraft star without repeating a literal star motif.
+Do not mimic its exact branding or add invented Hellocraft equivalents for every Blind Squirrel brand gesture.
 
 ## Global source system
 
-`src/app.css` now owns:
+`src/app.css` now returns to a small global system:
 
 ```text
-near-black structure
 warm neutral canvas
+near-black ink
 cyan accent
-editorial-frame / editorial-rail / editorial-body primitives
-cut-corner size token
-shared shell / eyebrow / section index / text-link primitives
+simple shell
+simple eyebrow
+simple text action
+minimal surface styling
 ```
 
-Rounded/pill treatment is not the default surface language.
+Removed global primitives:
+
+```text
+editorial-frame
+editorial-rail
+editorial-body
+cut-corner token
+signature rail token
+```
+
+## Brand lockup
+
+Until an authoritative logo/vector is supplied, `BrandLockup.svelte` uses a restrained text-only development lockup instead of an invented star symbol.
+
+This avoids presenting a fabricated graphic as if it were the official Hellocraft mark.
 
 ## Header
 
-The header remains dark and JS-free. A short cyan top rail gives it a stronger Hellocraft signature while navigation stays simple uppercase text with a cyan active underline.
+The header is light and quiet:
+
+```text
+text lockup
+→ simple navigation
+→ small cyan active underline
+```
+
+No top rail, pill CTA, decorative mark, or dark poster treatment.
 
 ## Home
 
 Current hierarchy:
 
 ```text
-01 / identity rail
-→ huge studio headline
-→ ruled copy/action deck
-→ offset cinematic cut-corner media
+light hero
+→ label
+→ large headline
+→ concise body + one action
+→ large plain media placeholder
 
-02 / selected work rail
-→ editorial heading
-→ alternating large project showcases
+selected work
+→ simple heading
+→ large stacked project showcases
 
-03 / studio rail
-→ large statement + concise explanation
+studio
+→ one dark statement section
 
-04 / capability rail
-→ dark text-led section
+capabilities
+→ light text-led section
 
-proof rail
-→ restrained ruled evidence list
+proof
+→ hidden while demo mode is active
 
-05 / contact rail
-→ dark closing statement + ruled action deck
+contact
+→ simple light closing section
 ```
+
+The goal is to let real logo/media carry distinctiveness later rather than forcing placeholder graphics to do that job now.
 
 ## Project presentation
 
-`ProjectCard.svelte` is an editorial project showcase rather than a conventional card.
-
-It now uses:
+`ProjectCard.svelte` is now intentionally simple:
 
 ```text
-large media / compact text imbalance
-alternating direction
-large low-contrast project number
-cyan metadata rule
-cut-corner project media
+large media
+→ small metadata row
+→ title + summary/action
 ```
 
-`ProjectMediaPlaceholder.svelte` is a temporary production field with:
+It no longer alternates direction, shows oversized decorative numbers, or uses cyan metadata rails.
 
-```text
-cut top-right / bottom-left corners
-narrow cyan side rail
-subtle production coordinates
-low-contrast HC mark
-```
+`ProjectMediaPlaceholder.svelte` is a neutral dark placeholder with only label/index metadata. No coordinates, HC ghost mark, cut corners, or decorative geometry remain.
 
-Real project imagery will replace the field while preserving the frame responsibility.
+## Work / Project detail
 
-## Work / Studio
+Work uses one vertical project sequence. Project detail uses a clear title/summary hero, large media, and straightforward content sections.
 
-Work and Studio now share the same editorial rail grammar so the identity is not limited to the homepage.
+## Studio / Careers / Contact
 
-Other routes retain the professional dark/light system and can adopt the same rail where later visual review proves it improves the page rather than forcing repetition everywhere.
+These pages use simple text-led sections with only occasional dark fields where contrast improves hierarchy. Section numbering and decorative rails are removed.
+
+Demo proof is hidden from Home and Studio until real approved evidence exists.
 
 ## Footer
 
-The footer uses the same rail grammar instead of a giant decorative word wall. It remains restrained and information-led.
+The footer is a simple dark information surface with the textual development lockup, navigation, optional social links, and a small bottom line.
 
 ## Dependency boundary
 
-No new UI framework, component kit, motion library, font package, or image package was added by this refinement.
+No new UI framework, component kit, motion library, font package, or image package was added by this correction.
 
 ## Deferred proof
 
@@ -148,8 +151,7 @@ Still intentionally unproven until local/runtime/browser work is re-authorized:
 
 - Svelte compilation/build;
 - actual responsive rendering;
-- visual hierarchy in-browser;
-- typography fit at real viewports;
+- final typography fit;
 - keyboard/focus behavior in-browser;
 - actual performance;
 - real project-media crop quality.

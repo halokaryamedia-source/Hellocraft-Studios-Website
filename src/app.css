@@ -1,7 +1,7 @@
 :root {
 	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	color: #090a0c;
-	background: #efede7;
+	color: #111214;
+	background: #f4f2ec;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	color-scheme: light;
@@ -9,20 +9,18 @@
 	/* Temporary development cyan. Replace from the authoritative Hellocraft brand asset later. */
 	--brand: #29abe2;
 	--brand-strong: #006c92;
-	--ink: #090a0c;
-	--ink-soft: #121417;
-	--paper: #efede7;
-	--surface: #faf9f5;
-	--surface-secondary: #e3e0d9;
-	--text-muted: #63676e;
-	--border: rgb(9 10 12 / 22%);
-	--inverse-border: rgb(255 255 255 / 20%);
-	--page-gutter: clamp(1rem, 3vw, 3.25rem);
-	--content-max: 101rem;
-	--measure: 41rem;
-	--space-section: clamp(5.25rem, 10vw, 10.5rem);
-	--rail-width: clamp(4.25rem, 7vw, 7rem);
-	--cut: clamp(0.85rem, 1.8vw, 1.6rem);
+	--ink: #111214;
+	--ink-soft: #1a1b1e;
+	--paper: #f4f2ec;
+	--surface: #fffefa;
+	--surface-secondary: #e8e5de;
+	--text-muted: #62666b;
+	--border: rgb(17 18 20 / 16%);
+	--inverse-border: rgb(255 255 255 / 18%);
+	--page-gutter: clamp(1rem, 3vw, 3rem);
+	--content-max: 92rem;
+	--measure: 40rem;
+	--space-section: clamp(5rem, 9vw, 9rem);
 	--motion-fast: 150ms;
 	--motion-medium: 260ms;
 }
@@ -75,8 +73,8 @@ h2,
 h3 {
 	margin-top: 0;
 	font-family: Arial, 'Helvetica Neue', sans-serif;
-	font-weight: 900;
-	letter-spacing: -0.058em;
+	font-weight: 800;
+	letter-spacing: -0.045em;
 	overflow-wrap: anywhere;
 	text-wrap: balance;
 }
@@ -102,83 +100,25 @@ li {
 	margin-inline: auto;
 }
 
-.editorial-frame {
-	display: grid;
-	grid-template-columns: var(--rail-width) minmax(0, 1fr);
-}
-
-.editorial-rail {
-	position: relative;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	flex-direction: column;
-	gap: 2rem;
-	min-width: 0;
-	padding: 0 1.1rem 0 0;
-	border-right: 1px solid var(--border);
-	font-size: 0.66rem;
-	font-weight: 850;
-	letter-spacing: 0.14em;
-	line-height: 1.2;
-	text-transform: uppercase;
-}
-
-.editorial-rail::after {
-	position: absolute;
-	top: 0;
-	right: -2px;
-	width: 3px;
-	height: clamp(2.75rem, 6vw, 5rem);
-	background: var(--brand);
-	content: '';
-}
-
-.editorial-rail span:last-child {
-	color: var(--text-muted);
-	writing-mode: vertical-rl;
-	transform: rotate(180deg);
-}
-
-.editorial-body {
-	min-width: 0;
-	padding-left: clamp(1.5rem, 4vw, 4.5rem);
-}
-
-.editorial-frame--dark .editorial-rail {
-	border-right-color: var(--inverse-border);
-}
-
-.editorial-frame--dark .editorial-rail span:last-child {
-	color: rgb(255 255 255 / 42%);
-}
-
 .eyebrow {
 	margin: 0;
-	font-size: 0.68rem;
-	font-weight: 850;
-	letter-spacing: 0.17em;
-	text-transform: uppercase;
-}
-
-.section-index {
-	font-variant-numeric: tabular-nums;
 	font-size: 0.7rem;
-	font-weight: 850;
-	letter-spacing: 0.12em;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
 }
 
 .text-link {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.65rem;
+	gap: 0.6rem;
 	width: fit-content;
 	min-height: 2.75rem;
-	padding-bottom: 0.12rem;
+	padding-bottom: 0.1rem;
 	border-bottom: 1px solid currentColor;
 	font-size: 0.8rem;
-	font-weight: 850;
-	letter-spacing: 0.07em;
+	font-weight: 800;
+	letter-spacing: 0.05em;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -190,7 +130,7 @@ li {
 
 .text-link:hover::after,
 .text-link:focus-visible::after {
-	transform: translate(0.2rem, -0.2rem);
+	transform: translate(0.18rem, -0.18rem);
 }
 
 .skip-link {
@@ -209,43 +149,6 @@ li {
 
 .skip-link:focus {
 	transform: translateY(0);
-}
-
-@media (max-width: 48rem) {
-	.editorial-frame {
-		grid-template-columns: 1fr;
-	}
-
-	.editorial-rail {
-		align-items: center;
-		flex-direction: row;
-		padding: 0 0 0.85rem;
-		border-right: 0;
-		border-bottom: 1px solid var(--border);
-	}
-
-	.editorial-frame--dark .editorial-rail {
-		border-bottom-color: var(--inverse-border);
-	}
-
-	.editorial-rail::after {
-		top: auto;
-		right: auto;
-		bottom: -2px;
-		left: 0;
-		width: clamp(3rem, 18vw, 5rem);
-		height: 3px;
-	}
-
-	.editorial-rail span:last-child {
-		writing-mode: horizontal-tb;
-		transform: none;
-	}
-
-	.editorial-body {
-		padding-top: 1.4rem;
-		padding-left: 0;
-	}
 }
 
 @media (prefers-reduced-motion: reduce) {

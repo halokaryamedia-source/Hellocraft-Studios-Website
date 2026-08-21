@@ -14,13 +14,12 @@
 <main id="main-content">
 	<section class="hero">
 		<div class="shell hero__inner">
-			<div class="hero__topline">
-				<a class="back-link" href="/work"><span aria-hidden="true">←</span> Work</a>
-				<p class="eyebrow">Project / Development preview</p>
-			</div>
-
+			<a class="back-link" href="/work"><span aria-hidden="true">←</span> Work</a>
 			<div class="hero__main">
-				<h1>{project.title}</h1>
+				<div>
+					<p class="eyebrow">Project</p>
+					<h1>{project.title}</h1>
+				</div>
 				<div class="hero__summary">
 					<p>{project.summary}</p>
 
@@ -41,7 +40,7 @@
 
 	<div class="visual-stage">
 		<div class="shell">
-			<ProjectMediaPlaceholder variant="hero" label="Project media" index="HC" />
+			<ProjectMediaPlaceholder variant="hero" label="Project media" index="01" />
 		</div>
 	</div>
 
@@ -52,20 +51,20 @@
 					<p class="eyebrow">Contribution</p>
 					<h2 id="project-contribution-title">Hellocraft contribution</h2>
 				</div>
-				<ol class="contribution-list">
-					{#each project.contribution as item, index (item)}
-						<li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><p>{item}</p></li>
+				<ul class="contribution-list">
+					{#each project.contribution as item (item)}
+						<li>{item}</li>
 					{/each}
-				</ol>
+				</ul>
 			</div>
 		</section>
 	{/if}
 
-	{#each project.sections ?? [] as section, index (section.id)}
+	{#each project.sections ?? [] as section (section.id)}
 		<section class="section detail-section" aria-labelledby={`section-${section.id}`}>
 			<div class="shell section-grid">
 				<div class="section-heading">
-					<p class="eyebrow">{String(index + 1).padStart(2, '0')} / Project detail</p>
+					<p class="eyebrow">Project detail</p>
 					<h2 id={`section-${section.id}`}>{section.title}</h2>
 				</div>
 				<div class="section-copy">
@@ -96,63 +95,59 @@
 
 <style>
 	.hero {
-		background: var(--ink);
-		color: var(--surface);
+		border-bottom: 1px solid var(--border);
+		background: var(--paper);
 	}
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(3rem, 7vw, 7rem);
-		padding-block: clamp(3rem, 7vw, 7rem) clamp(4rem, 9vw, 9rem);
-	}
-
-	.hero__topline {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-	}
-
-	.hero__topline .eyebrow {
-		color: rgb(255 255 255 / 56%);
+		gap: clamp(2.5rem, 6vw, 5rem);
+		padding-block: clamp(3rem, 6vw, 5rem) clamp(5rem, 9vw, 9rem);
 	}
 
 	.back-link {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.55rem;
+		width: fit-content;
 		min-height: 2.75rem;
 		font-size: 0.75rem;
-		font-weight: 850;
-		letter-spacing: 0.08em;
+		font-weight: 800;
+		letter-spacing: 0.06em;
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 
-	.hero__main {
+	.hero__main,
+	.section-grid {
 		display: grid;
-		grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+		grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
 		gap: clamp(2rem, 8vw, 8rem);
-		align-items: end;
+		align-items: start;
+	}
+
+	.hero__main > div:first-child {
+		display: grid;
+		gap: 0.8rem;
 	}
 
 	h1 {
-		max-width: 11ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(4.5rem, 11vw, 11rem);
-		line-height: 0.78;
+		font-size: clamp(4rem, 9vw, 9rem);
+		line-height: 0.84;
 	}
 
 	.hero__summary {
 		display: grid;
 		gap: 2rem;
+		align-content: end;
 	}
 
 	.hero__summary > p {
 		max-width: var(--measure);
 		margin: 0;
-		color: rgb(255 255 255 / 62%);
-		font-size: clamp(1rem, 1.6vw, 1.16rem);
+		color: var(--text-muted);
 	}
 
 	.facts {
@@ -161,7 +156,7 @@
 		gap: 1.5rem;
 		margin: 0;
 		padding-top: 1.25rem;
-		border-top: 1px solid var(--inverse-border);
+		border-top: 1px solid var(--border);
 	}
 
 	.facts div {
@@ -170,10 +165,10 @@
 	}
 
 	dt {
-		color: rgb(255 255 255 / 48%);
-		font-size: 0.66rem;
-		font-weight: 850;
-		letter-spacing: 0.12em;
+		color: var(--text-muted);
+		font-size: 0.68rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
 	}
 
@@ -184,44 +179,41 @@
 
 	.visual-stage {
 		padding-block: clamp(2rem, 4vw, 4rem);
-		background: var(--ink);
+		background: var(--paper);
 	}
 
 	.section {
 		padding-block: var(--space-section);
-		border-bottom: 1px solid var(--border);
+		border-top: 1px solid var(--border);
+		background: var(--surface);
 	}
 
-	.section-grid {
-		display: grid;
-		grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 1.25fr);
-		gap: clamp(2rem, 8vw, 8rem);
-		align-items: start;
+	.detail-section:nth-of-type(even) {
+		background: var(--paper);
 	}
 
 	.section-heading {
 		display: grid;
-		gap: 1rem;
+		gap: 0.8rem;
 	}
 
 	.section h2,
 	.project-links h2 {
-		max-width: 11ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(2.75rem, 6.5vw, 6.5rem);
-		line-height: 0.84;
+		font-size: clamp(2.75rem, 6vw, 6rem);
+		line-height: 0.9;
 	}
 
 	.section-copy {
 		display: grid;
-		gap: 1.4rem;
+		gap: 1.25rem;
 		max-width: var(--measure);
 	}
 
 	.section-copy p {
 		margin: 0;
 		color: var(--text-muted);
-		font-size: clamp(1rem, 1.5vw, 1.12rem);
 	}
 
 	.contribution-list {
@@ -232,26 +224,13 @@
 	}
 
 	.contribution-list li {
-		display: grid;
-		grid-template-columns: 3rem minmax(0, 1fr);
-		gap: 1.25rem;
-		padding-block: 1.3rem;
+		padding-block: 1.2rem;
 		border-bottom: 1px solid var(--border);
-	}
-
-	.contribution-list span {
-		color: var(--brand-strong);
-		font-weight: 900;
-	}
-
-	.contribution-list p {
-		margin: 0;
-		font-size: clamp(1rem, 1.7vw, 1.2rem);
+		font-size: clamp(1rem, 1.6vw, 1.18rem);
 	}
 
 	.project-links {
 		padding-block: var(--space-section);
-		border-top: 4px solid var(--brand);
 		background: var(--ink);
 		color: var(--surface);
 	}
@@ -286,11 +265,6 @@
 	}
 
 	@media (max-width: 44rem) {
-		.hero__topline {
-			align-items: flex-start;
-			flex-direction: column;
-		}
-
 		.facts {
 			grid-template-columns: 1fr;
 		}

@@ -10,10 +10,7 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="careers-title">
 		<div class="shell hero__inner">
-			<div class="hero__meta">
-				<span class="section-index">01 / Careers</span>
-				<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
-			</div>
+			<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
 			<h1 id="careers-title">{careersCopy.hero.title}</h1>
 			<p class="hero__body">{careersCopy.hero.body}</p>
 		</div>
@@ -22,16 +19,14 @@
 	<section class="openings" aria-labelledby="career-openings-title">
 		<div class="shell openings__inner">
 			<div class="section-heading">
-				<span class="section-index">02</span>
 				<p class="eyebrow">Roles</p>
 				<h2 id="career-openings-title">{careersCopy.openings.title}</h2>
 			</div>
 
 			{#if careerOpenings.length > 0}
 				<div class="opening-list">
-					{#each careerOpenings as opening, index (opening.id)}
+					{#each careerOpenings as opening (opening.id)}
 						<article class="opening">
-							<span class="opening__index">{String(index + 1).padStart(2, '0')}</span>
 							<div class="opening__copy">
 								<h3>{opening.title}</h3>
 								<p>{opening.summary}</p>
@@ -53,8 +48,7 @@
 
 	<section class="general" aria-labelledby="careers-general-title">
 		<div class="shell split">
-			<div class="section-heading">
-				<span class="section-index">03</span>
+			<div>
 				<p class="eyebrow">{careersCopy.general.eyebrow}</p>
 				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
 			</div>
@@ -64,8 +58,7 @@
 
 	<section class="application" aria-labelledby="careers-application-title">
 		<div class="shell split">
-			<div class="section-heading">
-				<span class="section-index">04</span>
+			<div>
 				<p class="eyebrow">Application</p>
 				<h2 id="careers-application-title">{careersCopy.application.title}</h2>
 			</div>
@@ -76,37 +69,27 @@
 
 <style>
 	.hero {
-		background: var(--ink);
-		color: var(--surface);
+		border-bottom: 1px solid var(--border);
+		background: var(--paper);
 	}
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2.5rem, 6vw, 6rem);
-		padding-block: clamp(5rem, 11vw, 11rem);
-	}
-
-	.hero__meta {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.hero__meta .eyebrow {
-		color: rgb(255 255 255 / 58%);
+		gap: clamp(1.5rem, 4vw, 3rem);
+		padding-block: clamp(5rem, 10vw, 10rem);
 	}
 
 	h1 {
-		max-width: 10ch;
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(5rem, 13vw, 13rem);
-		line-height: 0.75;
+		font-size: clamp(4.5rem, 10vw, 10rem);
+		line-height: 0.84;
 	}
 
 	.hero__body {
 		max-width: 43rem;
 		margin: 0;
-		color: rgb(255 255 255 / 62%);
+		color: var(--text-muted);
 	}
 
 	.openings,
@@ -121,21 +104,22 @@
 
 	.openings__inner {
 		display: grid;
-		grid-template-columns: minmax(0, 0.6fr) minmax(18rem, 1.4fr);
+		grid-template-columns: minmax(0, 0.65fr) minmax(18rem, 1.35fr);
 		gap: clamp(2rem, 8vw, 8rem);
 	}
 
-	.section-heading {
+	.section-heading,
+	.split > div {
 		display: grid;
 		align-content: start;
-		gap: 1rem;
+		gap: 0.8rem;
 	}
 
 	h2 {
-		max-width: 11ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(3rem, 7vw, 7rem);
-		line-height: 0.84;
+		font-size: clamp(3rem, 6.5vw, 6.5rem);
+		line-height: 0.9;
 	}
 
 	.opening-list {
@@ -144,16 +128,11 @@
 
 	.opening {
 		display: grid;
-		grid-template-columns: 3rem minmax(0, 1fr) minmax(11rem, 0.35fr);
+		grid-template-columns: minmax(0, 1fr) minmax(11rem, 0.35fr);
 		gap: clamp(1rem, 4vw, 3rem);
 		align-items: start;
 		padding-block: clamp(1.5rem, 3vw, 2.5rem);
 		border-bottom: 1px solid var(--border);
-	}
-
-	.opening__index {
-		color: var(--brand-strong);
-		font-weight: 900;
 	}
 
 	.opening__copy {
@@ -163,8 +142,8 @@
 
 	.opening h3 {
 		margin: 0;
-		font-size: clamp(1.8rem, 3.8vw, 3.8rem);
-		line-height: 0.9;
+		font-size: clamp(1.8rem, 3.6vw, 3.6rem);
+		line-height: 0.92;
 	}
 
 	.opening__copy p,
@@ -194,7 +173,6 @@
 	}
 
 	.application {
-		border-top: 4px solid var(--brand);
 		background: var(--ink);
 		color: var(--surface);
 	}
@@ -212,11 +190,6 @@
 		color: var(--text-muted);
 	}
 
-	.application .section-heading .eyebrow,
-	.application .section-index {
-		color: var(--brand);
-	}
-
 	.application .split > p {
 		color: rgb(255 255 255 / 58%);
 	}
@@ -230,11 +203,7 @@
 
 	@media (max-width: 46rem) {
 		.opening {
-			grid-template-columns: 2.5rem minmax(0, 1fr);
-		}
-
-		.opening__meta {
-			grid-column: 2;
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

@@ -11,25 +11,24 @@ CONTENT_OWNER_MODEL_APPROVED
 TEMPORARY_DEMO_CONTENT_APPROVED
 DUMMY_PAGE_COPY_POPULATED
 DEMO_PROJECTS_POPULATED
-DEMO_PROOF_ITEMS_POPULATED
 DEMO_CAREER_ITEMS_POPULATED
 PUBLIC_CONTACT_CHANNELS_STILL_REAL_ONLY
 BLIND_SQUIRREL_PRIMARY_REFERENCE_ADOPTED
 PROFESSIONAL_GAME_STUDIO_DIRECTION_ADOPTED
-BLIND_SQUIRREL_INSPIRED_SOURCE_REFACTOR_IMPLEMENTED
-HELLOCRAFT_SIGNATURE_GRAMMAR_ADOPTED
-EDITORIAL_RAIL_IMPLEMENTED
-CUT_CORNER_MEDIA_LANGUAGE_IMPLEMENTED
-CYAN_STRUCTURAL_RAIL_IMPLEMENTED
-PROJECT_FIRST_EDITORIAL_SEQUENCE_IMPLEMENTED
-UNIFORM_CARD_GRID_REMOVED
-REPEATED_STAR_DECORATION_REMOVED
-PILL_HEAVY_UI_REMOVED
-SITE_SHELL_REFINED
-HOME_SIGNATURE_REFINED
-WORK_SIGNATURE_REFINED
-STUDIO_SIGNATURE_REFINED
-PROJECT_MEDIA_SIGNATURE_REFINED
+DE_AI_RESTRAINT_PASS_IMPLEMENTED
+EDITORIAL_RAIL_REMOVED
+CUT_CORNER_MEDIA_REMOVED
+PRODUCTION_HUD_STYLING_REMOVED
+INVENTED_SIGNATURE_GRAMMAR_REJECTED
+FAKE_PROOF_HIDDEN_DURING_DEMO
+PROJECT_FIRST_PRESENTATION_RETAINED
+SITE_SHELL_SIMPLIFIED
+HOME_SIMPLIFIED
+WORK_SIMPLIFIED
+PROJECT_DETAIL_SIMPLIFIED
+STUDIO_SIMPLIFIED
+CAREERS_SIMPLIFIED
+CONTACT_SIMPLIFIED
 SOURCE_ACCESSIBILITY_BASELINE_RETAINED
 BRAND_LOCKUP_REPLACEMENT_SURFACE_READY
 PROJECT_MEDIA_REPLACEMENT_SURFACE_READY
@@ -51,13 +50,13 @@ Working authority: **`Local`**.
 
 ## Active project-owner instruction
 
-Continue improving the website presentation until it feels professional, distinctive, and not like a generic AI/agency template. Final Hellocraft text/data/media will be supplied later.
+Keep improving the presentation until it feels professional and convincingly human-designed. Final Hellocraft text/data/media will be supplied later.
 
-The project owner selected **Blind Squirrel Games** as the primary external visual reference, but the site must retain its own Hellocraft identity rather than reading as a copy.
+The project owner selected **Blind Squirrel Games** as the primary external reference but rejected the previous Hellocraft refinement because the editorial rail/cut-corner/signature treatment looked more AI-generated.
 
 Do not resume hosting/provider selection or local/runtime testing until explicitly re-authorized.
 
-## Current visual direction
+## Current visual correction
 
 Canonical owner:
 
@@ -73,35 +72,65 @@ docs/knowledge/visual-source-implementation.md
 
 Current thesis:
 
-> **Professional cinematic game studio with a Hellocraft-specific editorial rail and cut-media grammar.**
+> **Professional game studio with confident restraint. Distinctiveness should come from the real Hellocraft logo and real project media, not invented design gimmicks.**
 
-## Current distinctive grammar
-
-The source no longer relies only on common professional-game-studio patterns.
-
-Hellocraft-specific visual identifiers now include:
+## Removed from the previous source pass
 
 ```text
-editorial section rail
-→ narrow metadata column + cyan structural line
-
-project media
-→ cut top-right / bottom-left geometry
-→ narrow cyan side rail
-→ restrained production-field treatment while dummy media is active
-
-project showcase
-→ alternating media/text balance
-→ oversized low-contrast project index
-→ cyan metadata rule
-
-surfaces
-→ hard / near-square edges
-→ thin rules
-→ warm neutral + near-black + cyan
+editorial section rails
+cut-corner media grammar
+coordinate / production-HUD labels
+large decorative project indices
+cyan structural rails
+fabricated star symbol in the development lockup
+fake proof promoted during demo mode
 ```
 
-The star motif is not repeated throughout the page; the actual logo remains the brand owner.
+## Current source presentation
+
+```text
+Header
+→ light, quiet brand/navigation shell
+
+Home
+→ light headline-led hero
+→ one large media surface
+→ stacked project showcases
+→ dark Studio statement
+→ simple capability section
+→ proof hidden while demo
+→ restrained contact close
+
+Work
+→ light oversized intro
+→ one vertical project sequence
+
+Project detail
+→ light identity hero
+→ large media
+→ straightforward contribution/detail sections
+
+Studio
+→ light identity hero
+→ simple capability section
+→ one dark approach section
+→ proof hidden while demo
+→ simple contact close
+
+Careers
+→ light recruitment hero
+→ straightforward role rows
+→ context
+→ dark application section
+
+Contact
+→ light contact hero
+→ real-only channel list
+→ dark inquiry section
+
+Footer
+→ compact dark information footer
+```
 
 ## Content replacement remains stable
 
@@ -115,7 +144,7 @@ src/lib/content/projects.ts
 → real approved portfolio entries
 
 src/lib/content/demo-data.ts
-→ replace/remove demo proof and careers items
+→ replace/remove demo careers/proof data
 
 src/lib/content/site.ts
 → public site/social/navigation values
@@ -147,8 +176,8 @@ hosting/provider selection
 production adapter selection
 ```
 
-Preview-only visual rendering is allowed when explicitly requested by the project owner, but it is not technical acceptance.
+Preview-only visual rendering is allowed when requested, but it is not technical acceptance.
 
 ## Next Step
 
-**Preview the refined Hellocraft-signature homepage and review the actual composition. Make only targeted visual corrections from that preview. Keep content owners and route architecture frozen, and keep runtime/hosting work deferred.**
+**Preview the restraint-first homepage/source correction. Review typography scale, whitespace, project-media proportion, and overall professional tone. Make only small targeted visual changes from that preview; do not add another signature design system.**

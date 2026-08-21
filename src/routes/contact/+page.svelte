@@ -10,10 +10,7 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="contact-title">
 		<div class="shell hero__inner">
-			<div class="hero__meta">
-				<span class="section-index">01 / Contact</span>
-				<p class="eyebrow">{contactCopy.hero.eyebrow}</p>
-			</div>
+			<p class="eyebrow">{contactCopy.hero.eyebrow}</p>
 			<h1 id="contact-title">{contactCopy.hero.title}</h1>
 			<p class="hero__body">{contactCopy.hero.body}</p>
 		</div>
@@ -21,8 +18,7 @@
 
 	<section class="methods" aria-labelledby="contact-methods-title">
 		<div class="shell split">
-			<div class="section-heading">
-				<span class="section-index">02</span>
+			<div>
 				<p class="eyebrow">Channels</p>
 				<h2 id="contact-methods-title">{contactCopy.methods.title}</h2>
 			</div>
@@ -45,8 +41,7 @@
 
 	<section class="inquiry" aria-labelledby="contact-inquiry-title">
 		<div class="shell split">
-			<div class="section-heading">
-				<span class="section-index">03</span>
+			<div>
 				<p class="eyebrow">Inquiry</p>
 				<h2 id="contact-inquiry-title">{contactCopy.inquiry.title}</h2>
 			</div>
@@ -57,37 +52,27 @@
 
 <style>
 	.hero {
-		background: var(--ink);
-		color: var(--surface);
+		border-bottom: 1px solid var(--border);
+		background: var(--paper);
 	}
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2.5rem, 6vw, 6rem);
-		padding-block: clamp(5rem, 11vw, 11rem);
-	}
-
-	.hero__meta {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.hero__meta .eyebrow {
-		color: rgb(255 255 255 / 58%);
+		gap: clamp(1.5rem, 4vw, 3rem);
+		padding-block: clamp(5rem, 10vw, 10rem);
 	}
 
 	h1 {
-		max-width: 9ch;
+		max-width: 10ch;
 		margin: 0;
-		font-size: clamp(5rem, 13vw, 13rem);
-		line-height: 0.74;
+		font-size: clamp(4.5rem, 10vw, 10rem);
+		line-height: 0.84;
 	}
 
 	.hero__body {
 		max-width: 43rem;
 		margin: 0;
-		color: rgb(255 255 255 / 62%);
+		color: var(--text-muted);
 	}
 
 	.methods,
@@ -100,8 +85,8 @@
 	}
 
 	.inquiry {
-		border-top: 4px solid var(--brand);
-		background: var(--paper);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.split {
@@ -111,17 +96,16 @@
 		align-items: start;
 	}
 
-	.section-heading {
+	.split > div:first-child {
 		display: grid;
-		align-content: start;
-		gap: 1rem;
+		gap: 0.8rem;
 	}
 
 	h2 {
-		max-width: 11ch;
+		max-width: 12ch;
 		margin: 0;
-		font-size: clamp(3rem, 7vw, 7rem);
-		line-height: 0.84;
+		font-size: clamp(3rem, 6.5vw, 6.5rem);
+		line-height: 0.9;
 	}
 
 	.contact-list {
@@ -142,7 +126,7 @@
 		padding-block: 1rem;
 		border-bottom: 1px solid var(--border);
 		font-size: clamp(1.2rem, 2.5vw, 2rem);
-		font-weight: 850;
+		font-weight: 800;
 		text-decoration: none;
 	}
 
@@ -156,6 +140,10 @@
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
+	}
+
+	.inquiry .split > p {
+		color: rgb(255 255 255 / 58%);
 	}
 
 	@media (max-width: 60rem) {
