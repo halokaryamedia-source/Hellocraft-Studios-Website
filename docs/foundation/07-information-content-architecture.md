@@ -9,6 +9,7 @@ This file owns **where website responsibilities live, which routes exist, and ho
 ```text
 INFORMATION_ARCHITECTURE_APPROVED
 ROUTE_ARCHITECTURE_APPROVED
+STANDARD_PUBLIC_NAMING_APPROVED
 CONTENT_OWNER_MODEL_APPROVED
 PRIMARY_NAVIGATION_APPROVED
 TEMPORARY_DEMO_CONTENT_APPROVED
@@ -18,15 +19,15 @@ HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 RUNTIME_VALIDATION_DEFERRED_BY_PROJECT_OWNER
 ```
 
-The architecture is deliberately simple so later work is mostly content/media replacement rather than repeated structural redesign.
-
 ## Primary route architecture
+
+Canonical public routes use standard website terminology:
 
 ```text
 /
-├── work
+├── portfolio
 │   └── [slug]
-├── studio
+├── about
 ├── careers
 └── contact
 ```
@@ -34,22 +35,34 @@ The architecture is deliberately simple so later work is mostly content/media re
 Primary navigation:
 
 ```text
-Work
-Studio
+Portfolio
+About
 Careers
 Contact
 ```
 
-Home is reached through the Hellocraft brand/logo rather than a redundant `Home` item.
+Home is reached through the Hellocraft brand/logo rather than a redundant `Home` navigation item.
+
+Legacy compatibility routes:
+
+```text
+/work        → /portfolio
+/work/[slug] → /portfolio/[slug]
+/studio      → /about
+```
+
+These legacy names are not primary public terminology.
+
+`Hellocraft Studios` remains the brand/company name. `Studio` is no longer used as the public About-page label.
 
 ## Route responsibilities
 
 | Route | Responsibility |
 |---|---|
-| `/` | establish identity, surface selected work/evidence, explain the studio briefly, and provide a client path |
-| `/work` | browse project evidence without requiring a taxonomy |
-| `/work/[slug]` | show one project's identity, contribution, flexible story/evidence sections, and optional links/media |
-| `/studio` | explain Hellocraft as a studio and provide capability/context without forcing a separate Services page |
+| `/` | establish identity, surface selected portfolio evidence, explain Hellocraft briefly, and provide a client path |
+| `/portfolio` | browse project evidence without requiring a taxonomy |
+| `/portfolio/[slug]` | show one project's identity, contribution, flexible story/evidence sections, and optional links/media |
+| `/about` | explain Hellocraft, its capabilities, approach, and verified credibility without forcing a separate Services page |
 | `/careers` | recruitment information, openings when supplied, and an application path |
 | `/contact` | business/contact destination; exact channel/form behavior remains separate |
 
@@ -81,10 +94,10 @@ src/lib/content/site.ts
 → stable site identity + navigation configuration
 
 src/lib/content/pages.ts
-→ Home / Work / Studio / Careers / Contact copy
+→ Home / Portfolio / About / Careers / Contact copy
 
 src/lib/content/projects.ts
-→ project entries used by Work/Home/project detail
+→ project entries used by Portfolio/Home/project detail
 
 src/lib/content/demo-data.ts
 → development-only proof/career collections
@@ -102,8 +115,6 @@ src/lib/content/types.ts
 Do not scatter final marketing copy through Svelte route/components when it belongs to these content owners.
 
 ## Temporary demo-content contract
-
-The project owner explicitly approved temporary dummy content so the presentation can be developed before final text/data/media arrives.
 
 Development content must remain unmistakable:
 
@@ -134,16 +145,16 @@ Stable sequence:
 
 ```text
 1. Identity / hero
-2. Selected work
-3. Studio snapshot
+2. Featured projects
+3. About snapshot
 4. Capability narrative
 5. Credibility/proof slot
 6. Contact / project CTA
 ```
 
-During demo mode, selected work/proof may use explicitly labelled development data to exercise composition. In production content, only approved evidence may occupy those surfaces.
+During demo mode, selected project/proof surfaces may use explicitly labelled development data. In production content, only approved evidence may occupy those surfaces.
 
-## Work architecture `/work`
+## Portfolio architecture `/portfolio`
 
 Stable responsibilities:
 
@@ -159,11 +170,11 @@ Initial behavior remains:
 - no search;
 - no final taxonomy.
 
-Explicit `Demo Project` entries are permitted only while development demo mode is active. They must be replaced by approved real project data before demo mode is removed.
+Explicit demo project entries are permitted only while development demo mode is active. They must be replaced by approved real project data before demo mode is removed.
 
 Filtering is earned only when the real inventory is large/diverse enough that browsing materially benefits from it.
 
-## Project detail architecture `/work/[slug]`
+## Project detail architecture `/portfolio/[slug]`
 
 The detail model supports both small showcases and deeper case studies.
 
@@ -197,19 +208,19 @@ Real project media is not invented in the data model before actual assets arrive
 
 Do not require every real project to contain client, year, metrics, gallery, or long case-study sections.
 
-## Studio architecture `/studio`
+## About architecture `/about`
 
 Stable sequence:
 
 ```text
-1. Studio intro
+1. About intro
 2. capability narrative
 3. working approach/context
 4. credibility/proof
 5. contact CTA
 ```
 
-This route owns the broader About/Studio responsibility. A separate `/about` route is not needed initially.
+This route owns the company/About responsibility. Do not create another overlapping Studio/About route.
 
 ## Careers architecture `/careers`
 
@@ -217,12 +228,14 @@ Stable sequence:
 
 ```text
 1. Careers intro
-2. Open roles
-3. General recruitment context
+2. recruitment/culture context
+3. Open roles
 4. Application path
 ```
 
-Clearly labelled demo roles may be used while development demo mode is active. Real role titles, application fields, CV upload, storage, and applicant tracking require separate authoritative decisions.
+Demo roles remain development data only and are not rendered publicly while `contentIsDemo = true`.
+
+Real role titles, application fields, CV upload, storage, and applicant tracking require separate authoritative decisions.
 
 ## Contact architecture `/contact`
 
@@ -231,7 +244,7 @@ Stable sequence:
 ```text
 1. Business/contact intro
 2. Approved contact methods
-3. Business inquiry surface
+3. Business inquiry guidance
 ```
 
 Public contact methods remain real-only even during demo mode. No fake email, phone number, or social URL is created merely to fill the layout.
@@ -263,7 +276,7 @@ owner supplies text/data/media
 → content-intake audit
 → approve public facts/permissions
 → replace temporary values in src/lib/content/*
-→ replace Demo Project entries
+→ replace demo project entries
 → replace demo proof/roles
 → add approved public contact channels
 → integrate real project media through the media owner
