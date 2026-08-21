@@ -73,40 +73,38 @@ Minecraft pixel UI as global site chrome
 literal copying of Hazelight or Blind Squirrel layouts/assets
 ```
 
-## Approved Homepage baseline
+## Approved visual baselines
 
-The project owner explicitly **approved the current Homepage visual direction** after the third refinement pass.
-
-Homepage is now the visual baseline for route propagation. Do not redesign it from taste/model memory while propagating other routes.
-
-Current Homepage grammar:
+The project owner explicitly approved:
 
 ```text
-restrained large statement
-media-first hero composition
-one dominant project + differentiated secondary project rhythm
-neutral studio/capability surface
-simple closing Contact statement
-minimal decoration
+Homepage
+Work
 ```
 
-## Current Work route state
+Homepage remains the primary visual grammar. Work is the approved portfolio-index interpretation of that grammar.
 
-`src/routes/work/+page.svelte` has now been propagated from the approved Homepage language.
+Do not redesign either route from model taste while propagating later pages.
 
-Current Work composition:
+## Current Project Detail state
+
+`src/routes/work/[slug]/+page.svelte` has now been visually propagated from the approved Homepage + Work direction.
+
+Current Project Detail composition:
 
 ```text
-restrained Work introduction
-→ lead project with large media + title/copy split
-→ subsequent projects as clean media/copy rows
-→ project hierarchy replaces the previous repeated ProjectCard presentation
-→ straightforward mobile stack
+restrained project introduction
+→ title + summary / optional project facts
+→ one dominant project media stage
+→ optional Hellocraft contribution block
+→ flexible narrative detail sections
+→ optional project-links surface
+→ simple return-to-Work closing
 ```
 
-A source-equivalent desktop/mobile layout proxy has been reviewed. Actual Svelte runtime/browser acceptance remains deferred/unproven.
+The old route also contained a stale `ProjectMediaPlaceholder` call using unsupported `label` and `index` props. That mismatch has been removed; the route now follows the current placeholder contract.
 
-Project Detail, Studio, Careers, and Contact have not yet been visually propagated.
+Project Detail is implemented and pending project-owner visual approval. Studio, Careers, and Contact have not yet been visually propagated.
 
 ## Brand / content state
 
@@ -203,6 +201,8 @@ chrome-devtools-validation
 
 Source-level accessibility foundations are present. Rendered keyboard, reflow, contrast, final visual hierarchy, build, and performance proof remain pending.
 
+A Project Detail layout-proxy screenshot attempt stalled in the current Chromium environment; do not treat source inspection as rendered/runtime proof.
+
 ## Current project-owner boundary
 
 The project owner explicitly deferred:
@@ -228,8 +228,8 @@ content replacement guide            = ready
 dummy content mode                   = active
 Hazelight + Blind Squirrel direction = approved
 Homepage visual baseline             = APPROVED
-Work visual propagation              = implemented / review-ready
-Project Detail visual propagation    = pending
+Work visual baseline                 = APPROVED
+Project Detail visual propagation    = implemented / review-ready
 Studio visual propagation            = pending
 Careers visual propagation           = pending
 Contact visual propagation           = pending
