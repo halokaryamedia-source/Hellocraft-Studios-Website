@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectMediaPlaceholder from '$lib/components/work/ProjectMediaPlaceholder.svelte';
+	import ProjectMediaPlaceholder from '$lib/components/portfolio/ProjectMediaPlaceholder.svelte';
 	import { portfolioCopy } from '$lib/content/pages';
 	import { projects } from '$lib/content/projects';
 </script>
