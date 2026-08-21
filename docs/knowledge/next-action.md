@@ -6,11 +6,11 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Work implementation commit:
+Latest Project Detail implementation commit:
 
 ```text
-5c5f9c46a30f070f1871dd1f4c17306155d60e6f
-refine(work): align portfolio index with approved homepage
+ae8a904217f2996749c2958d01e6b64074a2a2be
+refine(project): align detail layout with approved portfolio direction
 ```
 
 ## Current Status
@@ -24,10 +24,9 @@ TEMPORARY_DEMO_CONTENT_APPROVED
 HAZELIGHT_VISUAL_LEAD_APPROVED
 BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
 HOMEPAGE_VISUAL_BASELINE_APPROVED
-WORK_VISUAL_PROPAGATION_IMPLEMENTED
-WORK_LAYOUT_RENDER_PROXY_REVIEWED
-WORK_PROJECT_OWNER_APPROVAL_PENDING
-PROJECT_DETAIL_VISUAL_PROPAGATION_PENDING
+WORK_VISUAL_BASELINE_APPROVED
+PROJECT_DETAIL_VISUAL_PROPAGATION_IMPLEMENTED
+PROJECT_DETAIL_PROJECT_OWNER_APPROVAL_PENDING
 STUDIO_VISUAL_PROPAGATION_PENDING
 CAREERS_VISUAL_PROPAGATION_PENDING
 CONTACT_VISUAL_PROPAGATION_PENDING
@@ -41,9 +40,17 @@ LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 ```
 
-## Approved Visual Baseline
+## Approved Visual Baselines
 
-The project owner explicitly approved the Homepage after the third visual refinement pass.
+The project owner explicitly approved:
+
+```text
+Homepage
+→ primary visual grammar
+
+Work
+→ approved portfolio-index propagation
+```
 
 Reference roles remain:
 
@@ -67,94 +74,114 @@ Current thesis:
 
 Do not reopen visual-direction research unless the project owner changes direction.
 
-## Current Work Route
+## Work Route — APPROVED
 
-`src/routes/work/+page.svelte` has been rebuilt from the approved Homepage grammar.
+`src/routes/work/+page.svelte` is now an approved route baseline.
 
-Previous state:
-
-```text
-very large Work hero
-+ project count
-+ repeated uniform ProjectCard list
-```
-
-Current state:
+Approved composition:
 
 ```text
-restrained Work hero
-→ concise supporting copy + project count
+restrained Work introduction
 → one lead project with dominant media
-→ title / summary presentation derived from Homepage hierarchy
 → remaining projects as clean media/copy rows
 → no filters/categories
-→ no card grid
+→ no repeated uniform card grid
 → no decorative project numbering
 → straightforward responsive stack
 ```
 
-The change intentionally keeps `projects.ts` as the data owner and `ProjectMediaPlaceholder.svelte` as the development-media owner. No project facts, categories, client claims, or service taxonomy were invented.
+Do not casually redesign Work while propagating later routes.
 
-## Work Layout Review
+## Current Project Detail Route
 
-A source-equivalent static layout proxy was rendered for desktop and mobile after the Work source change.
+`src/routes/work/[slug]/+page.svelte` has now been rebuilt from the approved Homepage + Work grammar.
 
-Observed result:
+Previous state problems:
 
 ```text
-desktop
-→ Work hero reads clearly without overpowering the project list
-→ first project carries the strongest visual weight
-→ subsequent rows remain readable and professional
-→ hierarchy comes from project importance rather than arbitrary offsets
-
-mobile
-→ hero collapses to a clean vertical introduction
-→ media / title / summary / action sequence remains clear
-→ project rows become a straightforward stack
+oversized project title up to 9rem
+repeated alternating chapter backgrounds
+large section headings repeated mechanically
+old ProjectMediaPlaceholder call passed unsupported label/index props
+project-link decorative arrow treatment
 ```
 
-The proxy is composition evidence only. It is not proof of exact Svelte runtime behavior, real logo rendering, final media crops, or production font behavior.
+Current composition:
+
+```text
+compact Back to work action
+→ restrained project title + summary/facts
+→ one dominant hero media surface
+→ optional contribution section on neutral secondary surface
+→ project narrative sections separated by content boundaries, not alternating chapter styling
+→ optional project links in a single dark utility surface
+→ simple View all work closing
+```
+
+The unsupported `label` / `index` placeholder props were removed. The route now uses the current `ProjectMediaPlaceholder` contract:
+
+```text
+variant
+tone
+```
+
+Project data remains owned by `src/lib/content/projects.ts`; no real client, year, role, outcome, or media claim was invented.
+
+## Project Detail Review Boundary
+
+The next user-facing decision is **Project Detail visual approval**.
+
+A source-equivalent Chromium layout-proxy attempt was made after implementation, but Chromium stalled in the current tool environment before screenshots were produced.
+
+Therefore current proof is:
+
+```text
+source implementation            = completed
+old placeholder contract mismatch = corrected
+layout screenshot proxy          = unavailable in current environment
+actual Svelte runtime            = deferred / unproven
+project-owner visual approval    = pending
+```
+
+Do not claim rendered/runtime acceptance from source inspection alone.
 
 ## Immediate Next Step
 
-### 1. Review Work
+### 1. Review Project Detail
 
-The next user-facing decision is **Work page visual approval**.
-
-If the project owner approves the Work direction:
+If the project owner approves the Project Detail direction:
 
 ```text
-Work approved
-→ freeze Work as route baseline
-→ inspect current /work/[slug] source
-→ propagate the approved visual language to Project Detail only
-→ review Project Detail before moving to Studio
+Project Detail approved
+→ freeze Project Detail as route baseline
+→ inspect current Studio source
+→ propagate approved visual grammar to Studio only
+→ review Studio before Careers
 ```
 
-If Work receives critique:
+If Project Detail receives critique:
 
 ```text
-identify only visible concrete problem
-→ make smallest Work-only correction
-→ do not reopen Homepage or global architecture
+identify concrete page-specific problem
+→ make smallest Project-Detail-only correction
+→ preserve approved Homepage and Work baselines
 ```
 
-### 2. Route propagation order after Work approval
+### 2. Route propagation order after Project Detail approval
 
 ```text
-Project Detail [slug]
-→ Studio
+Studio
 → Careers
 → Contact
 ```
 
-Do not propagate all routes at once. Each page should inherit the accepted visual grammar while solving its own content relationship rather than cloning the Homepage layout.
+Each route should inherit the accepted grammar while solving its own content relationship rather than cloning the Homepage.
 
 ## Preserve These Rules
 
 ```text
-Homepage is APPROVED — do not casually redesign it
+Homepage is APPROVED
+Work is APPROVED
 real media > invented decoration
 content hierarchy > repeated visual systems
 no numbered chapter progression
@@ -192,7 +219,7 @@ ProjectMediaPlaceholder / future media owner
 → real project imagery/video
 ```
 
-Real project media is expected to materially improve the Homepage, Work, and Project Detail presentation. Adjust crops/proportions from the actual media later rather than inventing decorative placeholders now.
+Real project media is expected to materially improve Homepage, Work, and Project Detail. Adjust crops/proportions from actual media later rather than inventing decorative systems now.
 
 ## Technical / Deferred Boundary
 
@@ -215,8 +242,6 @@ hosting/provider selection
 production adapter selection
 ```
 
-Therefore do not claim exact runtime, build, performance, or deployment acceptance from layout proxies.
-
 ## Next Step
 
-**Get project-owner review of the newly propagated Work page. If approved, continue to `/work/[slug]` Project Detail; otherwise make only the smallest Work-specific correction.**
+**Get project-owner review of the newly propagated `/work/[slug]` Project Detail. If approved, continue to Studio; otherwise make only the smallest Project-Detail-specific correction.**
