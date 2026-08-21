@@ -51,7 +51,7 @@ Adopted characteristics:
 ```text
 concise confident hero statements
 game/project media as primary visual evidence
-large project surfaces where project evidence warrants them
+large project surfaces where evidence warrants them
 content-led hierarchy rather than decorative systems
 clear studio and capability credibility
 minimal decorative UI around game work
@@ -74,44 +74,88 @@ literal copying of Hazelight or Blind Squirrel layouts/assets
 fabricated client, award, team-size, contact, or recruitment claims
 ```
 
-## Route visual state
+## Approved route baselines
 
-The accepted visual grammar has now been propagated in source across the full route set:
-
-```text
-Homepage       = APPROVED
-Work           = APPROVED
-Project Detail = accepted / propagated
-Studio         = accepted / propagated
-Careers        = APPROVED
-Contact        = implemented / pending final project-owner approval
-```
-
-Homepage remains the primary visual grammar. Each later route is a content-specific interpretation rather than a cloned layout.
-
-Do not reopen visual-direction research or casually redesign accepted routes while replacing production content/media.
-
-## Current Contact state
-
-`src/routes/contact/+page.svelte` is the final route-level visual propagation.
-
-Current Contact composition:
+The project owner has approved/accepted the completed route-level visual system:
 
 ```text
-restrained Contact introduction
-→ honest channel surface
-→ real approved contact links render as direct typographic rows
-→ empty state when no public contact channels are supplied
-→ concise Project inquiries guidance on neutral secondary surface
+Homepage
+Work
+Project Detail
+Studio
+Careers
+Contact
 ```
 
-No fake form, fabricated contact method, backend, CRM, or new dependency was added.
+Homepage remains the primary visual grammar; other routes are route-specific interpretations of that grammar.
+
+Route-level visual discovery is now **closed**. Do not casually redesign accepted routes from model taste.
+
+Real media may later justify bounded crop/proportion/spacing corrections, but should not automatically reopen the visual direction.
+
+## Production content phase
+
+The project has now moved from route propagation into **production content/media intake and replacement**.
+
+Canonical production inventory:
+
+```text
+docs/knowledge/production-content-inventory.md
+```
+
+Operational intake contract:
+
+```text
+docs/knowledge/content-intake-contract.md
+```
+
+Replacement guide:
+
+```text
+docs/knowledge/content-replacement-guide.md
+```
+
+Core rule:
+
+```text
+record all supplied material first
+→ verify evidence
+→ separate publication permission from truth
+→ record unknowns/conflicts
+→ only then choose what appears publicly
+```
+
+`not used` does not mean `not recorded`.
+
+## Current production evidence state
+
+The website repository has been audited.
+
+Current asset inventory contains only development brand raster assets:
+
+```text
+src/lib/assets/brand/hellocraft-logo-cyan.png
+src/lib/assets/brand/hellocraft-logo-white.png
+```
+
+The repository currently does **not** contain real project screenshots/renders/video.
+
+Current project, proof, careers, and page-text content remains development/demo content.
+
+Current public channel state:
+
+```text
+contactMethods = []
+socialLinks    = []
+```
+
+Sibling repositories under the same GitHub owner are not automatically publishable portfolio evidence. Project identity, Hellocraft contribution, client relationship, and publication permission must still be established through intake.
 
 ## Brand / content state
 
-The current Hellocraft logo supplied by the project owner is authoritative brand evidence, but the production vector/original asset is still pending.
+The current Hellocraft logo supplied by the project owner is authoritative brand evidence for development, but the production vector/original asset is still pending.
 
-Current source uses temporary development copy and demo project/career/proof data so presentation can be developed before final content arrives.
+Current source uses temporary development copy and demo project/career/proof data so presentation can remain functional before final content arrives.
 
 ```text
 contentIsDemo = true
@@ -119,13 +163,7 @@ contentIsDemo = true
 
 While demo mode remains active, the site retains a development notice and `noindex, nofollow` guard.
 
-Publication safety currently includes:
-
-```text
-demo career openings do not render as public vacancies
-real public contact channels are not fabricated
-demo proof remains hidden where the route requires verified evidence
-```
+Real public contact channels are not fabricated.
 
 ## Content replacement owners
 
@@ -230,15 +268,18 @@ technical foundation                 = established
 route architecture                   = approved
 content owner model                  = approved
 content replacement guide            = ready
-dummy content mode                   = active
 Hazelight + Blind Squirrel direction = approved
-route-level visual propagation       = complete in source
-Contact visual approval              = pending
-real portfolio evidence/media        = pending
+route-level visual system            = APPROVED / FROZEN
+production content inventory         = established
+website production evidence audit    = completed
+real portfolio facts                 = pending authoritative sources
+real project media                   = pending authoritative sources
 final public copy                    = pending
-production logo / typography         = pending
-responsive/accessibility/performance QA = pending
+real contact/social channels         = pending
+real current careers                 = pending if applicable
+production brand / typography        = pending
+responsive/accessibility/perf QA     = pending
 hosting/runtime proof                = deferred
 ```
 
-After Contact approval, the project becomes primarily a **production content/media replacement → final QA → deployment workflow**, not a route-design or architecture-planning workflow.
+The project is now primarily a **production content/media intake → replacement → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
