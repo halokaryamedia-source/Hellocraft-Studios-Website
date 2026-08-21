@@ -11,7 +11,11 @@ VISUAL_DIRECTION_BASELINE_ESTABLISHED
 BLIND_SQUIRREL_PRIMARY_REFERENCE_ADOPTED
 PROFESSIONAL_GAME_STUDIO_DIRECTION_ADOPTED
 PROJECT_FIRST_MEDIA_DIRECTION_ADOPTED
-HELLCRAFT_BRAND_IDENTITY_RETAINED
+HELLOCRAFT_BRAND_IDENTITY_RETAINED
+HELLOCRAFT_SIGNATURE_GRAMMAR_ADOPTED
+EDITORIAL_RAIL_ADOPTED
+CUT_CORNER_MEDIA_LANGUAGE_ADOPTED
+CYAN_STRUCTURAL_RAIL_ADOPTED
 AI_GENERIC_LANDING_PAGE_PATTERNS_REJECTED
 EXACT_PRODUCTION_VALUES_NOT_FINAL
 RENDERED_VISUAL_ACCEPTANCE_PENDING
@@ -19,7 +23,7 @@ RENDERED_VISUAL_ACCEPTANCE_PENDING
 
 ## Primary visual thesis
 
-> **Professional cinematic game studio** — confident, project-first, technically credible, and visually restrained enough for publishers/partners/brands while retaining Hellocraft's own approachable Minecraft identity.
+> **Professional cinematic game studio with a Hellocraft-specific structural identity** — confident, project-first, technically credible, and visually restrained enough for publishers/partners/brands while retaining Hellocraft's own approachable Minecraft identity.
 
 Hellocraft must feel like a serious game-development studio, not a SaaS/creative-agency landing page with Minecraft images added afterward.
 
@@ -53,6 +57,60 @@ personality  → energetic, approachable, game-oriented
 ```
 
 Translate those characteristics with restraint. The logo can remain expressive while the surrounding UI becomes more mature and structured.
+
+## Hellocraft-specific signature grammar
+
+The site must not depend on Blind Squirrel-like studio conventions alone. Hellocraft needs its own repeatable grammar.
+
+### Editorial rail
+
+Major sections may use a narrow structural metadata rail beside the main content area.
+
+The rail carries small section/index labels and a cyan rule. Its purpose is hierarchy and continuity, not decoration.
+
+```text
+section number / label
+│ cyan structural line
+│
+└→ primary content field
+```
+
+On narrow screens the vertical rail may collapse into a horizontal metadata row.
+
+### Cut-corner media frame
+
+Important project/media surfaces may use restrained diagonal cuts on selected corners rather than generic rounded cards.
+
+This geometry is an abstraction of angular transitions in the Hellocraft star mark, not a literal repetition of the star.
+
+Use it mainly for important media surfaces. Do not apply the cut to every control/text block.
+
+### Cyan structural rail
+
+Hellocraft cyan should often appear as a narrow structural signal:
+
+- rail;
+- active line;
+- project metadata rule;
+- selected edge;
+- small interaction emphasis.
+
+Large cyan fields require a stronger content/hierarchy reason.
+
+### Surface language
+
+Prefer:
+
+```text
+hard / near-square edges
+thin rules
+warm neutral canvas
+near-black fields
+cut media corners
+cyan structural accents
+```
+
+This signature layer differentiates Hellocraft from a generic professional-game-studio template while preserving the maturity learned from Blind Squirrel.
 
 ## Adopted composition language
 
@@ -228,7 +286,7 @@ Still waiting for real evidence/rendered approval:
 - production font family/weights;
 - final image crops/focal points;
 - final media assets;
-- exact spacing/radius values after rendered review;
+- exact spacing values after rendered review;
 - actual client/project proof;
 - final browser visual acceptance.
 

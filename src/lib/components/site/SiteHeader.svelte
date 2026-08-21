@@ -12,6 +12,7 @@
 </script>
 
 <header class="site-header">
+	<div class="site-header__accent" aria-hidden="true"></div>
 	<div class="site-header__inner">
 		<a class="brand" href={siteIdentity.homeHref} aria-label="Hellocraft Studios home">
 			<BrandLockup />
@@ -40,6 +41,11 @@
 		color: var(--surface);
 	}
 
+	.site-header__accent {
+		height: 3px;
+		background: linear-gradient(90deg, var(--brand) 0 11rem, transparent 11rem 100%);
+	}
+
 	.site-header__inner {
 		display: flex;
 		align-items: center;
@@ -47,7 +53,7 @@
 		gap: 1.25rem 2.5rem;
 		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
 		margin-inline: auto;
-		padding-block: 1.15rem;
+		padding-block: 1.05rem;
 	}
 
 	.brand {
@@ -73,10 +79,10 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 2.75rem;
-		color: rgb(255 255 255 / 76%);
-		font-size: 0.75rem;
+		color: rgb(255 255 255 / 72%);
+		font-size: 0.72rem;
 		font-weight: 800;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.1em;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: color var(--motion-fast) ease-out;
@@ -85,7 +91,7 @@
 	nav a::after {
 		position: absolute;
 		right: 0;
-		bottom: 0.35rem;
+		bottom: 0.28rem;
 		left: 0;
 		height: 2px;
 		background: var(--brand);
@@ -108,10 +114,14 @@
 	}
 
 	@media (max-width: 46rem) {
+		.site-header__accent {
+			background: linear-gradient(90deg, var(--brand) 0 5rem, transparent 5rem 100%);
+		}
+
 		.site-header__inner {
 			align-items: flex-start;
 			flex-direction: column;
-			padding-block: 1rem 0.75rem;
+			padding-block: 0.9rem 0.65rem;
 		}
 
 		nav {

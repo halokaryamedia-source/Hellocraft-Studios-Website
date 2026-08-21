@@ -12,115 +12,148 @@
 
 <main id="main-content">
 	<section class="hero" aria-labelledby="home-title">
-		<div class="shell hero__inner">
-			<div class="hero__topline">
-				<span class="section-index">01 / 05</span>
-				<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
+		<div class="shell editorial-frame editorial-frame--dark hero__frame">
+			<aside class="editorial-rail" aria-hidden="true">
+				<span>01 / 05</span>
+				<span>Intro</span>
+			</aside>
+
+			<div class="editorial-body hero__body">
+				<div class="hero__topline">
+					<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
+					<span>Hellocraft / Studio</span>
+				</div>
+
+				<h1 id="home-title">{homeCopy.hero.title}</h1>
+
+				<div class="hero__deck">
+					<p>{homeCopy.hero.body}</p>
+					<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
+				</div>
+
+				<div class="hero__media">
+					<ProjectMediaPlaceholder variant="hero" index="HC" label="Featured work preview" />
+				</div>
 			</div>
-
-			<h1 id="home-title">{homeCopy.hero.title}</h1>
-
-			<div class="hero__footer">
-				<p>{homeCopy.hero.body}</p>
-				<a class="text-link" href="/work">{homeCopy.hero.primaryActionLabel}</a>
-			</div>
-
-			<ProjectMediaPlaceholder variant="hero" index="HC" label="Featured work preview" />
 		</div>
 	</section>
 
 	<section class="work-section" aria-labelledby="home-work-title">
-		<div class="shell">
-			<header class="section-heading">
-				<div class="section-heading__meta">
-					<span class="section-index">02 / 05</span>
-					<p class="eyebrow">Work</p>
-				</div>
-				<div class="section-heading__copy">
-					<h2 id="home-work-title">{homeCopy.work.title}</h2>
+		<div class="shell editorial-frame">
+			<aside class="editorial-rail" aria-hidden="true">
+				<span>02 / 05</span>
+				<span>Work</span>
+			</aside>
+
+			<div class="editorial-body">
+				<header class="section-heading">
+					<div>
+						<p class="eyebrow">Selected work</p>
+						<h2 id="home-work-title">{homeCopy.work.title}</h2>
+					</div>
 					<p>{homeCopy.work.body}</p>
-				</div>
-			</header>
+				</header>
 
-			{#if featuredProjects.length > 0}
-				<div class="project-list">
-					{#each featuredProjects as project, index (project.slug)}
-						<ProjectCard
-							{project}
-							headingLevel={3}
-							index={index + 1}
-							reverse={index % 2 === 1}
-						/>
-					{/each}
-				</div>
-			{:else}
-				<p class="pending-state">{homeCopy.work.emptyState}</p>
-			{/if}
+				{#if featuredProjects.length > 0}
+					<div class="project-list">
+						{#each featuredProjects as project, index (project.slug)}
+							<ProjectCard
+								{project}
+								headingLevel={3}
+								index={index + 1}
+								reverse={index % 2 === 1}
+							/>
+						{/each}
+					</div>
+				{:else}
+					<p class="pending-state">{homeCopy.work.emptyState}</p>
+				{/if}
 
-			<div class="section-action">
-				<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
+				<div class="section-action">
+					<a class="text-link" href="/work">{homeCopy.work.viewAllLabel}</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="studio-section" aria-labelledby="home-studio-title">
-		<div class="shell studio-section__inner">
-			<div class="studio-section__meta">
-				<span class="section-index">03 / 05</span>
-				<p class="eyebrow">{homeCopy.studio.eyebrow}</p>
-			</div>
+		<div class="shell editorial-frame">
+			<aside class="editorial-rail" aria-hidden="true">
+				<span>03 / 05</span>
+				<span>Studio</span>
+			</aside>
 
-			<div class="studio-section__main">
-				<h2 id="home-studio-title">{homeCopy.studio.title}</h2>
-				<div class="studio-section__body">
-					<p>{homeCopy.studio.body}</p>
-					<a class="text-link" href="/studio">{homeCopy.studio.actionLabel}</a>
+			<div class="editorial-body studio-section__body">
+				<p class="eyebrow">{homeCopy.studio.eyebrow}</p>
+				<div class="studio-section__main">
+					<h2 id="home-studio-title">{homeCopy.studio.title}</h2>
+					<div class="studio-section__copy">
+						<p>{homeCopy.studio.body}</p>
+						<a class="text-link" href="/studio">{homeCopy.studio.actionLabel}</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="capabilities-section" aria-labelledby="home-capabilities-title">
-		<div class="shell capabilities-section__inner">
-			<div class="capabilities-section__meta">
-				<span class="section-index">04 / 05</span>
+		<div class="shell editorial-frame editorial-frame--dark">
+			<aside class="editorial-rail" aria-hidden="true">
+				<span>04 / 05</span>
+				<span>Capabilities</span>
+			</aside>
+
+			<div class="editorial-body capabilities-section__body">
 				<p class="eyebrow">{homeCopy.capabilities.eyebrow}</p>
+				<div class="capabilities-section__main">
+					<h2 id="home-capabilities-title">{homeCopy.capabilities.title}</h2>
+					<p>{homeCopy.capabilities.body}</p>
+				</div>
 			</div>
-			<h2 id="home-capabilities-title">{homeCopy.capabilities.title}</h2>
-			<p>{homeCopy.capabilities.body}</p>
 		</div>
 	</section>
 
 	{#if proofItems.length > 0}
 		<section class="proof-section" aria-labelledby="home-proof-title">
-			<div class="shell proof-section__inner">
-				<div class="proof-section__heading">
-					<p class="eyebrow">Proof</p>
-					<h2 id="home-proof-title">{homeCopy.proof.title}</h2>
-				</div>
+			<div class="shell editorial-frame">
+				<aside class="editorial-rail" aria-hidden="true">
+					<span>Proof</span>
+					<span>Evidence</span>
+				</aside>
 
-				<ol class="proof-list">
-					{#each proofItems as item, index (item)}
-						<li>
-							<span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-							<p>{item}</p>
-						</li>
-					{/each}
-				</ol>
+				<div class="editorial-body proof-section__body">
+					<div class="proof-section__heading">
+						<p class="eyebrow">Credibility</p>
+						<h2 id="home-proof-title">{homeCopy.proof.title}</h2>
+					</div>
+
+					<ol class="proof-list">
+						{#each proofItems as item, index (item)}
+							<li>
+								<span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+								<p>{item}</p>
+							</li>
+						{/each}
+					</ol>
+				</div>
 			</div>
 		</section>
 	{/if}
 
 	<section class="contact-section" aria-labelledby="home-contact-title">
-		<div class="shell contact-section__inner">
-			<div class="contact-section__meta">
-				<span class="section-index">05 / 05</span>
+		<div class="shell editorial-frame editorial-frame--dark">
+			<aside class="editorial-rail" aria-hidden="true">
+				<span>05 / 05</span>
+				<span>Contact</span>
+			</aside>
+
+			<div class="editorial-body contact-section__body">
 				<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
-			</div>
-			<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
-			<div class="contact-section__footer">
-				<p>{homeCopy.contact.body}</p>
-				<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
+				<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
+				<div class="contact-section__footer">
+					<p>{homeCopy.contact.body}</p>
+					<a class="text-link" href="/contact">{homeCopy.contact.actionLabel}</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -132,49 +165,62 @@
 		color: var(--surface);
 	}
 
-	.hero__inner {
-		display: grid;
-		gap: clamp(2.25rem, 5vw, 5rem);
-		padding-block: clamp(4rem, 8vw, 8rem) clamp(3rem, 6vw, 5rem);
+	.hero__frame {
+		padding-block: clamp(4.5rem, 8vw, 8.5rem) clamp(3.5rem, 7vw, 6rem);
 	}
 
-	.hero__topline,
-	.section-heading__meta,
-	.studio-section__meta,
-	.capabilities-section__meta,
-	.contact-section__meta {
+	.hero__body {
+		display: grid;
+		gap: clamp(2rem, 4vw, 4rem);
+	}
+
+	.hero__topline {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 1rem;
+		color: rgb(255 255 255 / 52%);
+		font-size: 0.66rem;
+		font-weight: 800;
+		letter-spacing: 0.13em;
+		text-transform: uppercase;
 	}
 
 	.hero__topline .eyebrow {
-		color: rgb(255 255 255 / 62%);
+		color: var(--surface);
 	}
 
 	.hero h1 {
-		max-width: 11ch;
+		max-width: 10.5ch;
 		margin: 0;
-		font-size: clamp(4.5rem, 11vw, 12rem);
-		line-height: 0.78;
+		font-size: clamp(4.25rem, 10.5vw, 11rem);
+		line-height: 0.79;
 	}
 
-	.hero__footer {
+	.hero__deck {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: 2rem;
 		align-items: end;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--inverse-border);
 	}
 
-	.hero__footer p {
-		max-width: 37rem;
+	.hero__deck p {
+		max-width: 36rem;
 		margin: 0;
-		color: rgb(255 255 255 / 62%);
-		font-size: clamp(1rem, 1.5vw, 1.12rem);
+		color: rgb(255 255 255 / 60%);
 	}
 
-	.hero .text-link {
+	.hero .text-link,
+	.contact-section .text-link {
 		color: var(--surface);
+	}
+
+	.hero__media {
+		width: min(100%, 86rem);
+		margin-left: auto;
+		padding-top: clamp(1rem, 3vw, 2rem);
 	}
 
 	.work-section,
@@ -185,18 +231,17 @@
 
 	.section-heading {
 		display: grid;
-		grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.65fr);
+		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.65fr);
 		gap: clamp(2rem, 7vw, 7rem);
+		align-items: end;
 		margin-bottom: clamp(2rem, 4vw, 4rem);
-		padding-bottom: 1.5rem;
+		padding-bottom: 1.6rem;
 		border-bottom: 1px solid var(--border);
 	}
 
-	.section-heading__copy {
+	.section-heading > div {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.7fr);
-		gap: clamp(2rem, 6vw, 6rem);
-		align-items: end;
+		gap: 0.85rem;
 	}
 
 	.section-heading h2,
@@ -205,13 +250,13 @@
 	.proof-section h2,
 	.contact-section h2 {
 		margin: 0;
-		font-size: clamp(3rem, 7vw, 7.5rem);
-		line-height: 0.84;
+		font-size: clamp(3rem, 6.8vw, 7rem);
+		line-height: 0.85;
 	}
 
-	.section-heading__copy p,
-	.studio-section__body p,
-	.capabilities-section__inner > p,
+	.section-heading > p,
+	.studio-section__copy p,
+	.capabilities-section__main > p,
 	.contact-section__footer p {
 		max-width: var(--measure);
 		margin: 0;
@@ -238,19 +283,22 @@
 		background: var(--surface);
 	}
 
-	.studio-section__inner {
+	.studio-section__body,
+	.capabilities-section__body,
+	.contact-section__body {
 		display: grid;
-		gap: clamp(2.5rem, 6vw, 6rem);
+		gap: clamp(2rem, 5vw, 4.5rem);
 	}
 
-	.studio-section__main {
+	.studio-section__main,
+	.capabilities-section__main {
 		display: grid;
-		grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
-		gap: clamp(2rem, 8vw, 8rem);
+		grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.65fr);
+		gap: clamp(2rem, 7vw, 7rem);
 		align-items: end;
 	}
 
-	.studio-section__body {
+	.studio-section__copy {
 		display: grid;
 		gap: 1.5rem;
 	}
@@ -261,20 +309,13 @@
 		color: var(--surface);
 	}
 
-	.capabilities-section__inner {
-		display: grid;
-		grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1.15fr) minmax(18rem, 0.7fr);
-		gap: clamp(2rem, 6vw, 6rem);
-		align-items: start;
+	.capabilities-section__main > p {
+		color: rgb(255 255 255 / 58%);
 	}
 
-	.capabilities-section__inner > p {
-		color: rgb(255 255 255 / 60%);
-	}
-
-	.proof-section__inner {
+	.proof-section__body {
 		display: grid;
-		grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+		grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
 		gap: clamp(2rem, 8vw, 8rem);
 	}
 
@@ -306,25 +347,19 @@
 
 	.proof-list p {
 		margin: 0;
-		font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+		font-size: clamp(1.12rem, 2.1vw, 1.62rem);
 		font-weight: 700;
 	}
 
 	.contact-section {
 		padding-block: var(--space-section);
-		border-top: 4px solid var(--brand);
 		background: var(--ink);
 		color: var(--surface);
 	}
 
-	.contact-section__inner {
-		display: grid;
-		gap: clamp(2rem, 5vw, 4rem);
-	}
-
 	.contact-section h2 {
-		max-width: 12ch;
-		font-size: clamp(4rem, 10vw, 10.5rem);
+		max-width: 11ch;
+		font-size: clamp(4rem, 9.5vw, 10rem);
 	}
 
 	.contact-section__footer {
@@ -332,38 +367,42 @@
 		grid-template-columns: minmax(0, 1fr) auto;
 		gap: 2rem;
 		align-items: end;
+		padding-top: 1.4rem;
+		border-top: 1px solid var(--inverse-border);
 	}
 
 	.contact-section__footer p {
-		color: rgb(255 255 255 / 58%);
-	}
-
-	.contact-section .text-link {
-		color: var(--surface);
+		color: rgb(255 255 255 / 56%);
 	}
 
 	@media (max-width: 64rem) {
 		.section-heading,
-		.capabilities-section__inner,
-		.proof-section__inner {
-			grid-template-columns: 1fr;
-		}
-
-		.section-heading__copy,
-		.studio-section__main {
+		.studio-section__main,
+		.capabilities-section__main,
+		.proof-section__body {
 			grid-template-columns: 1fr;
 		}
 	}
 
 	@media (max-width: 46rem) {
-		.hero__footer,
+		.hero__topline,
+		.hero__deck,
 		.contact-section__footer {
 			grid-template-columns: 1fr;
 			align-items: start;
 		}
 
+		.hero__topline {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
 		.hero h1 {
-			font-size: clamp(3.7rem, 19vw, 6rem);
+			font-size: clamp(3.6rem, 18vw, 5.7rem);
+		}
+
+		.hero__media {
+			width: 100%;
 		}
 	}
 </style>

@@ -5,9 +5,13 @@ Current source-level implementation notes for the Hellocraft Studios Website.
 ## Status
 
 ```text
-BLIND_SQUIRREL_INSPIRED_REFACTOR_IMPLEMENTED_IN_SOURCE
+BLIND_SQUIRREL_PRIMARY_REFERENCE_RETAINED
 PROFESSIONAL_GAME_STUDIO_SYSTEM_IMPLEMENTED
 PROJECT_FIRST_EDITORIAL_SEQUENCE_IMPLEMENTED
+HELLOCRAFT_SIGNATURE_GRAMMAR_IMPLEMENTED
+EDITORIAL_RAIL_IMPLEMENTED
+CUT_CORNER_MEDIA_IMPLEMENTED
+CYAN_STRUCTURAL_RAIL_IMPLEMENTED
 UNIFORM_CARD_GRID_REMOVED
 REPEATED_STAR_DECORATION_REMOVED
 PILL_HEAVY_UI_REMOVED
@@ -32,164 +36,111 @@ straightforward studio/service communication
 minimal decorative UI around game work
 ```
 
-Rejected translation:
+Hellocraft differentiation is owned durably by `docs/foundation/04-visual-direction.md` through the Hellocraft-specific signature grammar.
+
+## Hellocraft signature layer
+
+The second refinement pass intentionally moves beyond a generic Blind-Squirrel-inspired studio layout.
+
+Current signature language:
 
 ```text
-copying exact layouts
-copying slogans/copy
-copying brand graphics
-copying project assets
-copying exact components
+editorial rail
++ cyan structural line
++ cut-corner project media
++ restrained hard-edge surfaces
++ asymmetric media/text relationship
++ oversized project indices
 ```
 
-Hellocraft logo/content architecture remains authoritative.
+The rail is structural rather than decorative: it carries section/index metadata and creates a repeatable rhythm across Home, Work, Studio, and shared footer treatment.
+
+The cut-corner media frame abstracts the angular transitions of the Hellocraft star without repeating a literal star motif.
 
 ## Global source system
 
-`src/app.css` now owns a smaller, more professional global system:
+`src/app.css` now owns:
 
 ```text
 near-black structure
 warm neutral canvas
 cyan accent
-minimal radius
-thin rules
-strong display typography
+editorial-frame / editorial-rail / editorial-body primitives
+cut-corner size token
 shared shell / eyebrow / section index / text-link primitives
 ```
 
-Rounded/pill treatment is no longer the default surface language.
+Rounded/pill treatment is not the default surface language.
 
 ## Header
 
-The header is now:
-
-```text
-dark structural bar
-→ Hellocraft lockup
-→ simple uppercase text navigation
-→ cyan active/hover underline
-```
-
-Contact is not visually forced into a generic pill CTA. Navigation stays source-simple and JS-free.
+The header remains dark and JS-free. A short cyan top rail gives it a stronger Hellocraft signature while navigation stays simple uppercase text with a cyan active underline.
 
 ## Home
 
 Current hierarchy:
 
 ```text
-01 / identity
+01 / identity rail
 → huge studio headline
-→ concise body/action
-→ full-width cinematic development media surface
+→ ruled copy/action deck
+→ offset cinematic cut-corner media
 
-02 / selected work
+02 / selected work rail
 → editorial heading
-→ alternating large project presentations
+→ alternating large project showcases
 
-03 / studio
+03 / studio rail
 → large statement + concise explanation
 
-04 / capabilities
+04 / capability rail
 → dark text-led section
 
-proof
-→ restrained ruled list
+proof rail
+→ restrained ruled evidence list
 
-05 / contact
-→ dark closing statement + cyan top rule
+05 / contact rail
+→ dark closing statement + ruled action deck
 ```
 
-The previous decorative split-hero star composition, equal card grid, cyan closing block, and repeated star markers were removed.
+## Project presentation
 
-## Work
+`ProjectCard.svelte` is an editorial project showcase rather than a conventional card.
 
-`/work` now uses:
-
-```text
-dark oversized intro
-→ count/context line
-→ one editorial project sequence
-```
-
-Projects no longer behave like interchangeable product cards.
-
-## Project card / media placeholder
-
-`ProjectCard.svelte` is now a project showcase row rather than a conventional card.
-
-It supports:
+It now uses:
 
 ```text
-index
-heading level
+large media / compact text imbalance
 alternating direction
+large low-contrast project number
+cyan metadata rule
+cut-corner project media
 ```
 
-`ProjectMediaPlaceholder.svelte` no longer repeats the Hellocraft star. It uses a restrained black/cyan temporary production field that can later be replaced by real project imagery.
-
-## Project detail
-
-Project detail now uses:
+`ProjectMediaPlaceholder.svelte` is a temporary production field with:
 
 ```text
-dark project identity hero
-→ full-width media stage
-→ contribution list
-→ ruled editorial project sections
-→ optional dark project-links close
+cut top-right / bottom-left corners
+narrow cyan side rail
+subtle production coordinates
+low-contrast HC mark
 ```
 
-Alternating dark/light content blocks were removed so project media/copy can become the real visual interest later.
+Real project imagery will replace the field while preserving the frame responsibility.
 
-## Studio
+## Work / Studio
 
-Studio now emphasizes:
+Work and Studio now share the same editorial rail grammar so the identity is not limited to the homepage.
 
-```text
-large dark identity statement
-→ capabilities copy
-→ working approach
-→ restrained proof list
-→ dark contact close
-```
+Other routes retain the professional dark/light system and can adopt the same rail where later visual review proves it improves the page rather than forcing repetition everywhere.
 
-Decorative star art and proof cards were removed.
+## Footer
 
-## Careers
-
-Careers now uses:
-
-```text
-dark studio-grade hero
-→ structured opening rows
-→ recruitment context
-→ dark application close
-```
-
-The previous cyan hero badge and decorative star treatment were removed.
-
-## Contact
-
-Contact now uses:
-
-```text
-dark oversized contact hero
-→ real-only channel list
-→ restrained inquiry section with cyan structural rule
-```
-
-No fake contact method is introduced.
-
-## Footer / error
-
-Footer is now smaller and more disciplined: no giant HELLOCRAFT wordmark wall. A thin cyan rule and simple information/navigation structure close the site.
-
-Error pages use the same dark editorial system rather than a separate playful cyan poster composition.
+The footer uses the same rail grammar instead of a giant decorative word wall. It remains restrained and information-led.
 
 ## Dependency boundary
 
-No new UI framework, component kit, motion library, font package, or image package was added by this refactor.
+No new UI framework, component kit, motion library, font package, or image package was added by this refinement.
 
 ## Deferred proof
 
