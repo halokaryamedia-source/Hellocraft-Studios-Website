@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectMediaPlaceholder from '$lib/components/work/ProjectMediaPlaceholder.svelte';
+	import ProjectMediaPlaceholder from '$lib/components/portfolio/ProjectMediaPlaceholder.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -46,21 +46,21 @@
 		</div>
 	</section>
 
-	<section class="project-visual" aria-label="Project media">
-		<div class="shell project-visual__inner">
+	<section class="project-media" aria-label="Project media">
+		<div class="shell project-media__inner">
 			<ProjectMediaPlaceholder variant="hero" tone={project.featured ? 'dark' : 'neutral'} />
 		</div>
 	</section>
 
 	{#if project.contribution && project.contribution.length > 0}
-		<section class="contribution" aria-labelledby="project-contribution-title">
+		<section class="our-role" aria-labelledby="project-role-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<p class="eyebrow">Contribution</p>
-					<h2 id="project-contribution-title">What Hellocraft contributed.</h2>
+					<p class="eyebrow">Our role</p>
+					<h2 id="project-role-title">What Hellocraft worked on.</h2>
 				</div>
 
-				<ul class="contribution-list">
+				<ul class="role-list">
 					{#each project.contribution as item (item)}
 						<li>{item}</li>
 					{/each}
@@ -70,12 +70,12 @@
 	{/if}
 
 	{#if project.sections && project.sections.length > 0}
-		<div class="project-story">
+		<div class="project-details">
 			{#each project.sections as section (section.id)}
 				<section class="detail-section" aria-labelledby={`section-${section.id}`}>
 					<div class="shell content-grid">
 						<div class="section-heading">
-							<p class="eyebrow">Project detail</p>
+							<p class="eyebrow">Project details</p>
 							<h2 id={`section-${section.id}`}>{section.title}</h2>
 						</div>
 
@@ -94,7 +94,7 @@
 		<section class="project-links" aria-labelledby="project-links-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<p class="eyebrow">Explore</p>
+					<p class="eyebrow">Links</p>
 					<h2 id="project-links-title">Project links</h2>
 				</div>
 
@@ -109,9 +109,9 @@
 		</section>
 	{/if}
 
-	<section class="project-close" aria-label="Return to portfolio">
-		<div class="shell project-close__inner">
-			<p>More Hellocraft projects and development studies.</p>
+	<section class="portfolio-link" aria-label="Return to portfolio">
+		<div class="shell portfolio-link__inner">
+			<p>See more Hellocraft projects.</p>
 			<a class="text-link" href="/portfolio">View portfolio</a>
 		</div>
 	</section>
@@ -207,16 +207,16 @@
 		font-weight: 650;
 	}
 
-	.project-visual {
+	.project-media {
 		padding-block: 0 clamp(5rem, 9vw, 9rem);
 		background: var(--surface);
 	}
 
-	.project-visual__inner {
+	.project-media__inner {
 		overflow: hidden;
 	}
 
-	.contribution {
+	.our-role {
 		padding-block: clamp(5.5rem, 9vw, 8.5rem);
 		background: var(--surface-secondary);
 	}
@@ -229,21 +229,21 @@
 		line-height: 0.98;
 	}
 
-	.contribution-list {
+	.role-list {
 		margin: 0;
 		padding: 0;
 		border-top: 1px solid var(--border);
 		list-style: none;
 	}
 
-	.contribution-list li {
+	.role-list li {
 		padding-block: 1.25rem;
 		border-bottom: 1px solid var(--border);
 		font-size: clamp(1rem, 1.35vw, 1.12rem);
 		line-height: 1.55;
 	}
 
-	.project-story {
+	.project-details {
 		background: var(--paper);
 	}
 
@@ -305,19 +305,19 @@
 		text-underline-offset: 0.28em;
 	}
 
-	.project-close {
+	.portfolio-link {
 		padding-block: clamp(4.5rem, 7vw, 6.5rem);
 		background: var(--surface);
 	}
 
-	.project-close__inner {
+	.portfolio-link__inner {
 		display: flex;
 		align-items: end;
 		justify-content: space-between;
 		gap: 2rem 4rem;
 	}
 
-	.project-close p {
+	.portfolio-link p {
 		max-width: 32rem;
 		margin: 0;
 		color: var(--text-muted);
@@ -337,7 +337,7 @@
 
 		.hero__support,
 		.section-copy,
-		.contribution-list {
+		.role-list {
 			max-width: 40rem;
 		}
 	}
@@ -351,7 +351,7 @@
 			grid-template-columns: 1fr;
 		}
 
-		.project-close__inner {
+		.portfolio-link__inner {
 			align-items: flex-start;
 			flex-direction: column;
 		}
