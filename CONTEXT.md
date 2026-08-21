@@ -38,36 +38,81 @@ Contact
 
 A dedicated Services route and Work filters/categories are intentionally absent initially.
 
-## Current visual direction
+## Approved visual direction
 
-The project owner selected **Hazelight Studios** as the visual lead and **Blind Squirrel Games** as the structural/business reference for the Homepage direction.
+The project owner selected **Hazelight Studios** as the visual lead and **Blind Squirrel Games** as the structural/business reference.
 
 Current thesis:
 
 > **Professional Minecraft game studio** — cinematic, clean, confident, and game-first. Use Hazelight-style media confidence and restraint with Blind-Squirrel-style project/capability credibility, while retaining Hellocraft's own cyan/logo identity and Minecraft focus.
 
-Adopted source characteristics:
+Adopted characteristics:
 
 ```text
-concise confident hero statement
-game/project media as immediate visual evidence
+concise confident hero statements
+game/project media as primary visual evidence
 large project surfaces
-varied project composition rather than uniform cards
-strong but restrained dark/light contrast
+content-led hierarchy rather than decorative systems
 clear studio and capability credibility
 minimal decorative UI around game work
 restrained Hellocraft cyan accent
+responsive layouts that simplify cleanly on mobile
 ```
 
-Rejected generic/reference-copy patterns include split-hero decoration, numbered chapter progression, repeated editorial chapter treatments, uniform card grids, repeated star motifs, pill-heavy UI, fake KPI strips, glassmorphism, bento-by-default, manufactured asymmetry, and Minecraft inventory/pixel UI as site chrome.
+Rejected patterns:
 
-Hazelight and Blind Squirrel are inspiration references, not templates. Do not copy their slogans, assets, exact layouts, branding, numbering systems, or project presentation verbatim.
+```text
+numbered chapter progression
+repeated editorial chapter treatments
+uniform card grids when project hierarchy differs
+fake KPI strips
+glassmorphism / bento-by-default / pill-heavy UI
+manufactured asymmetry
+fake HUD / coordinates / inventory UI
+Minecraft pixel UI as global site chrome
+literal copying of Hazelight or Blind Squirrel layouts/assets
+```
+
+## Approved Homepage baseline
+
+The project owner explicitly **approved the current Homepage visual direction** after the third refinement pass.
+
+Homepage is now the visual baseline for route propagation. Do not redesign it from taste/model memory while propagating other routes.
+
+Current Homepage grammar:
+
+```text
+restrained large statement
+media-first hero composition
+one dominant project + differentiated secondary project rhythm
+neutral studio/capability surface
+simple closing Contact statement
+minimal decoration
+```
+
+## Current Work route state
+
+`src/routes/work/+page.svelte` has now been propagated from the approved Homepage language.
+
+Current Work composition:
+
+```text
+restrained Work introduction
+→ lead project with large media + title/copy split
+→ subsequent projects as clean media/copy rows
+→ project hierarchy replaces the previous repeated ProjectCard presentation
+→ straightforward mobile stack
+```
+
+A source-equivalent desktop/mobile layout proxy has been reviewed. Actual Svelte runtime/browser acceptance remains deferred/unproven.
+
+Project Detail, Studio, Careers, and Contact have not yet been visually propagated.
 
 ## Brand / content state
 
 The current Hellocraft logo supplied by the project owner is authoritative brand evidence, but the production vector/original asset is still pending.
 
-Current source uses temporary development copy and explicit Demo Project / demo careers / demo proof data so the full site presentation can be developed before final content arrives.
+Current source uses temporary development copy and demo project/career/proof data so presentation can be developed before final content arrives.
 
 ```text
 contentIsDemo = true
@@ -100,7 +145,7 @@ src/lib/components/work/ProjectMediaPlaceholder.svelte
 → development media surface; replace/extend with real project media later
 ```
 
-The architecture is now intended to remain stable while final text/data/media replaces these owners.
+The route/content architecture should remain stable while final text/data/media replaces these owners.
 
 ## Approved technical baseline
 
@@ -156,9 +201,7 @@ web-accessibility-validation
 chrome-devtools-validation
 ```
 
-Source-level accessibility review has already hardened headings, focus intent, reflow guards, demo media semantics, and demo noindex behavior.
-
-Rendered keyboard, reflow, contrast, visual hierarchy, build, and performance proof remain pending.
+Source-level accessibility foundations are present. Rendered keyboard, reflow, contrast, final visual hierarchy, build, and performance proof remain pending.
 
 ## Current project-owner boundary
 
@@ -168,7 +211,7 @@ The project owner explicitly deferred:
 bun install
 bun.lock generation
 bun run validate
-local runtime/browser acceptance
+full local runtime/browser acceptance
 hosting/provider selection
 production adapter selection
 ```
@@ -178,19 +221,21 @@ Do not repeatedly push those as the active next step until explicitly re-authori
 ## Current maturity state
 
 ```text
-technical foundation                    = established
-route architecture                      = approved
-content owner model                     = approved
-content replacement guide               = ready
-dummy content mode                      = active
-Hazelight + Blind Squirrel direction    = approved
-Homepage source redesign                = implemented for review
-brand replacement surface               = ready
-project media surface                   = ready
-real text/data/media                    = pending
-Homepage rendered visual acceptance     = pending
-remaining-route visual propagation      = blocked until Homepage approval
-hosting/runtime proof                   = deferred
+technical foundation                 = established
+route architecture                   = approved
+content owner model                  = approved
+content replacement guide            = ready
+dummy content mode                   = active
+Hazelight + Blind Squirrel direction = approved
+Homepage visual baseline             = APPROVED
+Work visual propagation              = implemented / review-ready
+Project Detail visual propagation    = pending
+Studio visual propagation            = pending
+Careers visual propagation           = pending
+Contact visual propagation           = pending
+brand replacement surface            = ready
+real text/data/media                 = pending
+hosting/runtime proof                = deferred
 ```
 
-The project is now primarily a **Homepage visual-review → content/media replacement workflow**, not an architecture-planning workflow.
+The project is now primarily a **route propagation → production content/media → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
