@@ -6,6 +6,7 @@
 FOUNDATION_BASELINE_ESTABLISHED
 PORTFOLIO_EVIDENCE_DEFERRED
 STUDIO_PROFILE_DEFERRED
+CONTENT_INTAKE_CONTRACT_READY
 SVELTEKIT_FULLSTACK_APPROVED
 TYPESCRIPT_DEFAULT_APPROVED
 SVELTE5_RUNES_FIRST_APPROVED
@@ -48,9 +49,9 @@ Working authority: **`Local`**.
 
 ## Project-owner runtime instruction
 
-The project owner explicitly does **not** want local/runtime testing to be run at the current stage.
+The project owner explicitly does **not** want local/runtime testing at the current stage.
 
-Therefore:
+Therefore these remain pending but are not the active next step:
 
 ```text
 bun install
@@ -60,29 +61,15 @@ local preview
 Chrome/runtime dry-run
 ```
 
-remain pending and must not be repeatedly pushed as the active next step until the project owner re-authorizes runtime/local execution.
-
-Do not fabricate `bun.lock`, local build results, browser proof, or runtime acceptance while this boundary remains active.
-
-This deferral does **not** block non-runtime definition/repository work whose correctness can be established from project authority, current source, and current external documentation.
+Do not fabricate runtime/install/browser proof. Resume that track only after the project owner re-authorizes it.
 
 ## Scaffold state retained
 
-The minimal content-agnostic scaffold source exists and remains the approved technical source baseline:
+The minimal content-agnostic SvelteKit source/configuration exists and remains the approved technical source baseline. Runtime acceptance is still unproven.
 
-```text
-SvelteKit + Svelte 5 + TypeScript
-Bun package-manager contract
-runes-first compiler configuration
-Prettier + ESLint + svelte-check + build scripts
-native CSS / CSS Custom Properties
-@sveltejs/enhanced-img integration
-minimal root layout/page
-```
+## Non-local foundations established
 
-Runtime acceptance remains unproven until the deferred gate is eventually run.
-
-## Visual direction — baseline established
+### Visual direction
 
 Canonical owner:
 
@@ -90,32 +77,13 @@ Canonical owner:
 docs/foundation/04-visual-direction.md
 ```
 
-Adopted direction:
+Adopted thesis:
 
-> **Playful editorial game studio** — bold, friendly, graphic, media-led, and recognizably Hellocraft while remaining structured/professional enough for clients, partners, collaborators, and talent.
+> **Playful editorial game studio**
 
-Key constraints:
+This establishes hierarchy/composition/type/color/shape/media/motion direction without pretending rendered visual acceptance has happened.
 
-```text
-Hellocraft cyan + neutral structural palette
-large real project media as evidence
-editorial pacing / selective asymmetry
-bold but readable type roles
-clean surfaces + restrained playful accents
-quick purposeful native-first motion
-Minecraft identity mainly from real work, not Minecraft UI chrome
-```
-
-Still not final without real assets/rendered proof:
-
-- exact production logo/vector variants;
-- exact color values;
-- exact fonts/weights;
-- exact spacing/radius/elevation values;
-- final page compositions;
-- portfolio crop/focal-point decisions.
-
-## Discoverability / metadata — policy established
+### Discoverability / metadata
 
 Canonical owner:
 
@@ -123,68 +91,80 @@ Canonical owner:
 docs/foundation/05-discoverability-metadata-policy.md
 ```
 
-Current direction:
+Current boundary:
 
 ```text
 native <svelte:head>
-→ title / description / canonical / robots / social metadata / JSON-LD
-
-SEO component package
-→ none initially
-
-sitemap package
-→ none initially
-
-canonical / sitemap
-→ wait for real production origin + final public routes
-
-structured data
-→ evidence-backed only
-
-primary internal links
-→ real crawlable <a href>
+no SEO component library initially
+no sitemap library initially
+canonical/sitemap after real domain + public route set
+structured data only from verified facts
 ```
 
-Search/deployed proof remains deferred until a real production target exists.
+### Content intake / audit
+
+Canonical operational owner:
+
+```text
+docs/knowledge/content-intake-contract.md
+```
+
+Every future supplied project/studio item must be recorded before editorial selection, including items that are duplicated, deferred, rejected, internal-only, unverified, or not ultimately published.
+
+The intake contract separates:
+
+```text
+evidence status
+publication status
+editorial/use status
+```
+
+so a true fact is not automatically treated as publishable or selected content.
+
+Portfolio/project inventory and Studio/About facts remain deferred until the project owner supplies authoritative material.
 
 ## Content boundary retained
 
-The project owner previously deferred the authoritative portfolio/project inventory and Studio/About content.
-
 Do not infer:
 
-- portfolio entries or categories;
+- project names from old chat history;
+- client/publisher/partner relationships;
 - final services taxonomy;
-- final navigation;
+- case-study depth;
+- final navigation/information architecture;
 - homepage section order;
-- client/partner claims;
-- case-study outcomes/metrics;
-- structured-data organization facts not actually supplied.
+- metrics/results/testimonials;
+- company dates/team/legal facts;
+- structured-data organization facts.
 
-## Current non-local track
+## Next non-local track
 
-The next useful non-runtime task is to prepare **content intake contracts**, not content invention.
+The next useful non-runtime responsibility is **deployment / production requirement definition**, without choosing a provider yet.
 
-Create a compact intake structure that helps the project owner later supply authoritative data for:
+Define only the criteria the eventual hosting/release solution must satisfy, such as:
 
 ```text
-A. Portfolio / project evidence
-B. Studio / About facts
+static/prerender delivery support
+SvelteKit server capability when future forms require it
+adapter compatibility
+HTTPS/custom-domain support
+redirect/canonical-origin handling
+environment/secrets boundary
+asset caching/compression
+security-header capability
+preview/staging behavior
+logs/observability appropriate to real server features
+rollback/release safety
+cost/maintenance simplicity
 ```
 
-The intake contract may define what evidence is useful, but must **not**:
+Do not select Vercel, Cloudflare, Netlify, Node hosting, or another provider merely because it is popular. Do not activate `website-release-development` until a real target/provider and production integration responsibilities are known.
 
-- create final categories/taxonomy;
-- infer project names from old chats;
-- decide which project deserves a case study before the inventory is supplied;
-- invent company facts or marketing copy;
-- create the `portfolio-content-production` specialist before real recurring content work exists.
-
-The goal is to make later content handoff clean, auditable, and publication-safe.
+This requirement-definition stage may also record which deployment/security questions are intentionally deferred until Contact/Careers behavior exists.
 
 ## Deferred runtime gate
 
-When the project owner later re-authorizes runtime/local proof, resume:
+When runtime/local proof is later re-authorized:
 
 ```text
 bun install
@@ -195,8 +175,6 @@ bun install
 → Chrome DevTools proof
 ```
 
-Do not begin page-specific implementation merely because the runtime gate is deferred. Final page work still requires the corresponding content/information-architecture authority.
-
 ## Next Step
 
-**Continue non-locally by defining a compact authoritative content-intake contract for Portfolio/Project Evidence and Studio/About facts. Keep runtime/local validation deferred, and do not infer final taxonomy, page architecture, or content while the owner-supplied inventories remain pending.**
+**Continue non-locally by defining the provider-neutral deployment/production requirements that an eventual Hellocraft hosting target must satisfy. Keep provider selection, release-specialist activation, and runtime/local testing deferred until their actual responsibilities are known or re-authorized.**
