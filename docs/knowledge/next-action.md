@@ -25,6 +25,11 @@ DEMO_NOINDEX_GUARD_ACTIVE
 BRAND_LOCKUP_REPLACEMENT_SURFACE_READY
 BRAND_SYMBOL_REPLACEMENT_SURFACE_READY
 PROJECT_MEDIA_REPLACEMENT_SURFACE_READY
+CURRENT_NAVIGATION_SEMANTICS_READY
+ROOT_ERROR_SURFACE_READY
+CONTENT_REPLACEMENT_GUIDE_READY
+SOURCE_ARCHITECTURE_MATURE_FOR_CONTENT_SWAP
+NON_RUNTIME_ARCHITECTURE_FROZEN
 REAL_LOGO_SOURCE_PENDING
 REAL_PROJECT_MEDIA_PENDING
 REAL_PORTFOLIO_EVIDENCE_PENDING
@@ -43,11 +48,13 @@ Working authority: **`Local`**.
 
 ## Active project-owner instruction
 
-Continue preparing the website architecture/presentation using clearly-labelled dummy content. Final Hellocraft text/data/media will be supplied later.
+Continue preparing the website until its source architecture is mature enough that later work is primarily **replacing text/data/media**, not rebuilding page structure.
 
-Do **not** resume hosting/provider work or local/runtime testing until explicitly re-authorized.
+Hosting/provider work and local/runtime testing remain explicitly deferred until the project owner re-authorizes them.
 
-## Current route architecture
+## Architecture maturity state
+
+The non-runtime architecture is now frozen as the default baseline:
 
 ```text
 /
@@ -58,141 +65,160 @@ Do **not** resume hosting/provider work or local/runtime testing until explicitl
 └── contact
 ```
 
-Primary navigation remains:
+Global site responsibilities are present:
 
 ```text
-Work
-Studio
-Careers
-Contact
+root layout
+→ demo publication guard
+→ skip link
+→ site header
+→ route content
+→ site footer
+
+primary navigation
+→ current-route aria-current state
+
+root error boundary
+→ branded 404/error presentation
+→ noindex
 ```
 
-No Services route and no Work filters/categories are created initially.
+No Services route, Work filters/categories, blog/news, form backend, CMS, search, component library, or other architecture is added by default.
 
-## Current content owners
+## Stable content owners
 
 ```text
+src/lib/content/site.ts
+→ site identity/navigation/social configuration
+
 src/lib/content/pages.ts
-→ temporary page copy
+→ Home/Work/Studio/Careers/Contact/Footer copy
 
 src/lib/content/projects.ts
-→ explicitly-labelled Demo Project entries
+→ portfolio entries
 
 src/lib/content/demo-data.ts
-→ development-only proof/career collections
+→ development-only proof/career examples
 
 src/lib/content/demo.ts
-→ contentIsDemo switch
+→ demo/publication switch
 
-src/lib/content/site.ts
-→ site identity/navigation
+src/lib/content/types.ts
+→ shared content contracts
 ```
 
-Real contact channels remain real-only and are not fabricated in demo mode.
+Final text should normally be replaced in these owners instead of being embedded directly into page components.
 
-## Current visual source state
-
-The Playful Editorial Game Studio direction is implemented across Header, Footer, Home, Work, Project Detail, Studio, Careers, and Contact using native CSS/Svelte source only.
-
-Current source-level visual language:
+## Stable brand/media owners
 
 ```text
-warm-white canvas
-+ near-black structural sections
-+ temporary cyan accent
-+ oversized editorial typography
-+ restrained star motifs
-+ large project-media surfaces
-+ CSS-native hover/focus/motion
+src/lib/components/brand/BrandLockup.svelte
+→ authoritative header/footer logo/wordmark replacement surface
+
+src/lib/components/brand/BrandSymbol.svelte
+→ current temporary symbol / future brand-symbol owner
+
+src/lib/components/work/ProjectMediaPlaceholder.svelte
+→ development project-media surface
 ```
 
-The current cyan/star are development approximations and must not be treated as the authoritative logo/brand specification.
+Real media/alt/caption/focal-point behavior is defined only when actual project assets are available.
 
-## Source accessibility/semantic audit
+## Current-navigation semantics
 
-Canonical audit record:
+The primary navigation now reads the current SvelteKit page state and exposes:
+
+```text
+aria-current="page"
+```
+
+for the active route. `/work/[slug]` remains represented by Work as the active top-level section.
+
+This follows the current SvelteKit `$app/state` page API. Rendered current-state styling/keyboard proof remains part of the deferred browser phase.
+
+## Error handling surface
+
+The root route now owns a custom `+error.svelte` surface.
+
+It provides:
+
+- a clear 404 state;
+- a generic non-404 error state without exposing arbitrary internal error details;
+- Home and Work recovery links;
+- `noindex` metadata;
+- the current Hellocraft visual language.
+
+The existing project slug loader continues to call SvelteKit `error(404, ...)` for unknown projects, which now resolves into the shared root error surface.
+
+## Production content replacement owner
+
+Canonical operational guide:
+
+```text
+docs/knowledge/content-replacement-guide.md
+```
+
+Replacement flow:
+
+```text
+real owner-supplied content
+→ content-intake/evidence audit
+→ replace pages.ts copy
+→ replace Demo Project data
+→ replace demo proof/career data
+→ add approved contact/social links
+→ integrate authoritative logo/colors
+→ integrate approved project media
+→ search/remove remaining public-facing demo markers
+→ set contentIsDemo = false only after the checklist passes
+```
+
+Route/page architecture stays stable unless the real content demonstrates a concrete structural failure.
+
+## Source accessibility boundary
+
+Canonical source audit:
 
 ```text
 docs/knowledge/accessibility-source-audit.md
 ```
 
-Corrections completed in the current pass:
+Current source includes native landmarks, skip navigation, heading-order corrections, current-route semantics, focus/reflow/reduced-motion guards, and decorative demo-media semantics.
+
+Do not claim rendered keyboard, screen-reader, zoom/reflow, contrast, or formal WCAG acceptance until browser/runtime validation is re-authorized.
+
+## Architecture freeze rule
+
+From this state forward:
 
 ```text
-ProjectCard heading contract
-→ Home cards h3 beneath Selected Work h2
-→ Work cards h2 beneath page h1
+new text arrives
+→ replace content owner
 
-project-detail demo media
-→ no empty named region exposed
-→ development media remains decorative/aria-hidden
+new project arrives
+→ add approved project data/media
 
-focus indication
-→ two-tone universal source ring + forced-colors fallback
+new logo arrives
+→ replace brand owner
 
-small cyan text
-→ darker development accent token on light surfaces
-
-reflow source guard
-→ removed global overflow-x clipping
-→ long headings/links may emergency-wrap
-
-demo publication safety
-→ noindex,nofollow while contentIsDemo = true
+new real requirement appears
+→ change only the smallest owner that cannot represent it
 ```
 
-Rendered keyboard, zoom/reflow, computed contrast, and assistive-technology proof remain deferred.
+Do **not** keep adding structure merely to make the repository look more complete.
 
-## Brand replacement surfaces
+Examples that remain blocked without a real requirement:
 
-```text
-src/lib/components/brand/BrandLockup.svelte
-→ header/footer lockup owner
-→ future authoritative logo/wordmark replacement point
-
-src/lib/components/brand/BrandSymbol.svelte
-→ temporary decorative star owner
-```
-
-When the real logo/vector is supplied, replace the current development graphic at these owned surfaces rather than duplicating brand markup across routes.
-
-## Project-media replacement surface
-
-```text
-src/lib/components/work/ProjectMediaPlaceholder.svelte
-```
-
-Current placeholder is development-only and `aria-hidden` because it contains no real project evidence.
-
-When actual project assets arrive:
-
-```text
-real image/video
-→ content-intake/evidence check
-→ media-policy owner
-→ actual alt/caption/focal-point decisions
-→ replace/extend ProjectMediaPlaceholder with real media owner
-```
-
-Do not invent media metadata/alt text before the real asset exists.
-
-## Demo-content replacement workflow
-
-Later:
-
-```text
-owner supplies authoritative text/data/media
-→ content-intake audit
-→ replace pages.ts copy
-→ replace Demo Project entries
-→ replace demo proof/career items
-→ add approved contact channels
-→ integrate authoritative logo + project media
-→ remove remaining demo-only content
-→ set contentIsDemo = false
-```
-
-Route architecture should remain stable unless real content proves a structural problem.
+- Services page;
+- Team page;
+- blog/news;
+- portfolio filters/search;
+- carousel/gallery system;
+- CMS/admin;
+- application/contact backend;
+- analytics;
+- production hosting/adapter;
+- additional UI/component libraries.
 
 ## Deferred tracks
 
@@ -212,4 +238,4 @@ Do not claim build/browser/runtime/accessibility/performance acceptance while th
 
 ## Next Step
 
-**Continue non-locally with source-level presentation refinement only where it does not require invented real content: keep the current route/content architecture stable, use the centralized brand/media replacement surfaces, and wait for authoritative logo/project media before defining production image fields or alt text. The highest-value new input from the project owner is now the original Hellocraft logo/vector and real project media/content inventory; local/runtime and hosting tracks remain deferred.**
+**The website source architecture is now mature for content replacement. Continue only with authoritative asset/content substitution when inputs are supplied, or with narrowly-scoped source corrections if a concrete defect is found. The next high-value inputs are the final Hellocraft text, authoritative logo/vector/color source, real portfolio project inventory/media, real public contact channels, and real careers data. Local/runtime and hosting work remain deferred.**

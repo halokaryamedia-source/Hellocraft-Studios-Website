@@ -1,6 +1,14 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import BrandLockup from '$lib/components/brand/BrandLockup.svelte';
 	import { primaryNavigation, siteIdentity } from '$lib/content/site';
+
+	const pathname = $derived(page.url.pathname);
+
+	function isCurrent(href: string): boolean {
+		if (href === '/') return pathname === '/';
+		return pathname === href || pathname.startsWith(`${href}/`);
+	}
 </script>
 
 <header class="site-header">
@@ -12,7 +20,11 @@
 		<nav aria-label="Primary navigation">
 			<ul>
 				{#each primaryNavigation as item (item.href)}
-					<li><a href={item.href}>{item.label}</a></li>
+					<li>
+						<a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+							{item.label}
+						</a>
+					</li>
 				{/each}
 			</ul>
 		</nav>
@@ -70,7 +82,8 @@
 	}
 
 	nav a:hover,
-	nav a:focus-visible {
+	nav a:focus-visible,
+	nav a[aria-current='page'] {
 		background: var(--surface-secondary);
 	}
 
@@ -80,7 +93,8 @@
 	}
 
 	li:last-child a:hover,
-	li:last-child a:focus-visible {
+	li:last-child a:focus-visible,
+	li:last-child a[aria-current='page'] {
 		background: var(--brand);
 		color: var(--ink);
 		transform: translateY(-1px);
