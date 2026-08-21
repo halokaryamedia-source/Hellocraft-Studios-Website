@@ -8,21 +8,23 @@ Active continuation belongs in `docs/knowledge/next-action.md`; durable project 
 
 Hellocraft Studios is a **game studio focused on Minecraft**.
 
-The website is the studio's official web presence. Its current approved purposes are:
+The website is the studio's official web presence. Its approved purposes are:
 
-- company profile / official studio identity;
+- company profile / official identity;
 - portfolio / proof of work;
 - discoverability and client acquisition;
-- helping relevant visitors understand what Hellocraft can provide;
-- recruitment/careers when real openings or application context exist.
+- helping visitors understand what Hellocraft can provide;
+- recruitment/careers when real openings exist.
 
-## Current route architecture
+## Canonical public route architecture
+
+Use standard public page names. Do not introduce unusual navigation labels merely for style.
 
 ```text
 /
-├── work
+├── portfolio
 │   └── [slug]
-├── studio
+├── about
 ├── careers
 └── contact
 ```
@@ -30,21 +32,54 @@ The website is the studio's official web presence. Its current approved purposes
 Primary navigation:
 
 ```text
-Work
-Studio
+Portfolio
+About
 Careers
 Contact
 ```
 
-A dedicated Services route and Work filters/categories are intentionally absent initially.
+The Hellocraft logo links to Home, so `Home` does not need a separate primary-navigation item.
+
+Legacy routes remain only for compatibility:
+
+```text
+/work          → /portfolio
+/work/[slug]   → /portfolio/[slug]
+/studio        → /about
+```
+
+Public terminology decision:
+
+```text
+Work   → Portfolio
+Studio → About
+```
+
+`Hellocraft Studios` remains the company/brand name; only the page/navigation terminology was normalized.
+
+A dedicated Services route and Portfolio filters/categories are intentionally absent initially.
 
 ## Approved visual direction
 
-The project owner selected **Hazelight Studios** as the visual lead and **Blind Squirrel Games** as the structural/business reference.
+Reference roles:
+
+```text
+Hazelight Studios
+→ visual lead
+→ game-first confidence
+→ media prominence
+→ restraint / whitespace / typography behavior
+
+Blind Squirrel Games
+→ structural/business reference
+→ company credibility
+→ project + capability communication
+→ client-facing game-development professionalism
+```
 
 Current thesis:
 
-> **Professional Minecraft game studio** — cinematic, clean, confident, and game-first. Use Hazelight-style media confidence and restraint with Blind-Squirrel-style project/capability credibility, while retaining Hellocraft's own cyan/logo identity and Minecraft focus.
+> **Professional Minecraft game studio** — cinematic, clean, confident, and game-first. Use media confidence and restraint with clear project/capability credibility, while retaining Hellocraft's cyan/logo identity and Minecraft focus.
 
 Adopted characteristics:
 
@@ -53,8 +88,8 @@ concise confident hero statements
 game/project media as primary visual evidence
 large project surfaces where evidence warrants them
 content-led hierarchy rather than decorative systems
-clear studio and capability credibility
-minimal decorative UI around game work
+clear About / capability credibility
+minimal decorative UI
 restrained Hellocraft cyan accent
 responsive layouts that simplify cleanly on mobile
 ```
@@ -64,30 +99,31 @@ Rejected patterns:
 ```text
 numbered chapter progression
 repeated editorial chapter treatments
-uniform card grids when content hierarchy differs
+uniform card grids when hierarchy differs
 fake KPI strips
 glassmorphism / bento-by-default / pill-heavy UI
 manufactured asymmetry
 fake HUD / coordinates / inventory UI
 Minecraft pixel UI as global site chrome
-literal copying of Hazelight or Blind Squirrel layouts/assets
+literal copying of reference layouts/assets
 fabricated client, award, team-size, contact, or recruitment claims
+unusual public page names where standard labels are clearer
 ```
 
 ## Approved route baselines
 
-The project owner has approved/accepted the completed route-level visual system:
+The project owner approved/accepted the completed route-level visual system:
 
 ```text
-Homepage
-Work
+Home
+Portfolio
 Project Detail
-Studio
+About
 Careers
 Contact
 ```
 
-Homepage remains the primary visual grammar; other routes are route-specific interpretations of that grammar.
+Home remains the primary visual grammar. Other routes are route-specific interpretations of it.
 
 Route-level visual discovery is now **closed**. Do not casually redesign accepted routes from model taste.
 
@@ -95,7 +131,7 @@ Real media may later justify bounded crop/proportion/spacing corrections, but sh
 
 ## Production content phase
 
-The project has now moved from route propagation into **production content/media intake and replacement**.
+The project is in **production content/media intake and replacement**.
 
 Canonical production inventory:
 
@@ -153,9 +189,7 @@ Sibling repositories under the same GitHub owner are not automatically publishab
 
 ## Brand / content state
 
-The current Hellocraft logo supplied by the project owner is authoritative brand evidence for development, but the production vector/original asset is still pending.
-
-Current source uses temporary development copy and demo project/career/proof data so presentation can remain functional before final content arrives.
+The current Hellocraft logo is accepted as development brand evidence, but the production vector/original asset is still pending.
 
 ```text
 contentIsDemo = true
@@ -169,7 +203,7 @@ Real public contact channels are not fabricated.
 
 ```text
 src/lib/content/pages.ts
-→ Home / Work / Studio / Careers / Contact / footer copy
+→ Home / Portfolio / About / Careers / Contact / footer copy
 
 src/lib/content/projects.ts
 → project list/detail data
@@ -178,7 +212,7 @@ src/lib/content/demo-data.ts
 → temporary proof and careers data
 
 src/lib/content/site.ts
-→ site identity, navigation, approved public/social/contact values
+→ identity, navigation, approved public/social/contact values
 
 src/lib/components/brand/BrandLockup.svelte
 src/lib/components/brand/BrandSymbol.svelte
@@ -188,7 +222,7 @@ src/lib/components/work/ProjectMediaPlaceholder.svelte
 → development media surface; replace/extend with real project media later
 ```
 
-The route/content architecture should remain stable while final text/data/media replaces these owners.
+The content architecture should remain stable while final text/data/media replaces these owners.
 
 ## Approved technical baseline
 
@@ -224,25 +258,9 @@ Current approved direction:
 - project crops/focal points are decided from real media;
 - video is poster-first/user-initiated by default;
 - self-hosted WOFF2 fonts, minimal families/weights;
-- no heavy WebGL/3D/particle dependency without strong evidence;
-- performance measured later from built/browser output.
+- no heavy WebGL/3D/particle dependency without strong evidence.
 
 ## Validation / accessibility state
-
-Project-specific visual specialist:
-
-```text
-web-ui-design-development
-```
-
-Support/evidence skills:
-
-```text
-context7-documentation-validation
-svelte-development-validation
-web-accessibility-validation
-chrome-devtools-validation
-```
 
 Source-level accessibility foundations are present. Rendered keyboard, reflow, contrast, final visual hierarchy, build, and performance proof remain pending.
 
@@ -265,7 +283,9 @@ Do not repeatedly push those as the active next step until explicitly re-authori
 
 ```text
 technical foundation                 = established
+canonical public naming              = Portfolio / About / Careers / Contact
 route architecture                   = approved
+legacy route redirects               = established
 content owner model                  = approved
 content replacement guide            = ready
 Hazelight + Blind Squirrel direction = approved
@@ -282,4 +302,4 @@ responsive/accessibility/perf QA     = pending
 hosting/runtime proof                = deferred
 ```
 
-The project is now primarily a **production content/media intake → replacement → final QA/deployment workflow**, not an architecture-planning or visual-direction-discovery workflow.
+The project is now primarily a **production content/media intake → replacement → final QA/deployment workflow**.
