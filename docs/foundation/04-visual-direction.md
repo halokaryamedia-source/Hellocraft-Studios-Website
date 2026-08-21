@@ -1,233 +1,245 @@
 # Visual Direction
 
-Canonical visual-direction baseline for the Hellocraft Studios Website.
+This file records the approved design direction for the Hellocraft Studios Website.
 
-This file owns durable art-direction rules. Product meaning remains in Product Requirements, media delivery remains in `03-media-performance-policy.md`, and rendered acceptance remains owned by `web-ui-design-development` plus browser proof when later authorized.
+## Current direction
 
-## Status
+The website should feel:
 
 ```text
-VISUAL_DIRECTION_BASELINE_ESTABLISHED
-BLIND_SQUIRREL_PRIMARY_REFERENCE_ADOPTED
-PROFESSIONAL_GAME_STUDIO_DIRECTION_ADOPTED
-PROJECT_FIRST_MEDIA_DIRECTION_ADOPTED
-RESTRAINT_FIRST_DIRECTION_ADOPTED
-INVENTED_SIGNATURE_GRAMMAR_REJECTED
-AI_GENERIC_LANDING_PAGE_PATTERNS_REJECTED
-REAL_MEDIA_EXPECTED_TO_CARRY_DISTINCTIVENESS
-EXACT_PRODUCTION_VALUES_NOT_FINAL
-RENDERED_VISUAL_ACCEPTANCE_PENDING
+clean
+professional
+game-focused
+media-first
+easy to understand
 ```
 
-## Primary visual thesis
+The current design is approved. Real project media may later require small crop, spacing, or proportion changes, but it should not automatically trigger a redesign.
 
-> **Professional game studio with confident restraint** — clear, project-first, credible, and visually mature, while allowing the real Hellocraft logo and Minecraft work to provide the distinctive personality.
+## References
 
-Hellocraft must not look like a generic agency/SaaS landing page. It also must not look like a design exercise trying too hard to appear unique.
+The approved references are:
 
-## Primary external reference
+### Hazelight Studios
 
-The project owner selected **Blind Squirrel Games** as the primary external reference.
+Use as a reference for:
 
-Use it as evidence for:
+- strong game imagery;
+- confident but simple page layouts;
+- generous spacing;
+- clear typography;
+- letting the project media carry most of the visual impact.
 
-- confident headline scale;
-- project/media-first presentation;
-- direct studio/service communication;
-- strong use of real game imagery;
-- restrained interface chrome around visually rich work;
-- a professional game-industry tone.
+### Blind Squirrel Games
 
-Do **not** copy Blind Squirrel's logo, slogan, wave/ribbon graphics, page layouts, project naming, imagery, or exact component styling.
+Use as a reference for:
 
-## Critical correction from earlier iterations
+- clear company information;
+- professional game-development presentation;
+- straightforward project and service information;
+- client-facing credibility.
 
-Earlier Hellocraft iterations added an editorial rail, cut-corner media frames, coordinate-like labels, oversized project numbers, and cyan structural decorations in an attempt to create a unique signature.
+Do not copy either website's branding, wording, graphics, layouts, or assets.
 
-Those devices are now **rejected** as the default direction because they made the website feel more synthetic and AI-designed rather than more authentic.
-
-Current rule:
+## Main design rule
 
 ```text
 real brand
 + real project media
-+ strong typography
-+ disciplined whitespace
++ clear typography
++ good spacing
 + simple layout
-> invented signature devices
 ```
 
-Do not manufacture uniqueness through repeated visual gimmicks.
+should do most of the work.
 
-## Hellocraft brand anchor
+Do not try to make the website look unique by adding unnecessary decorative systems.
 
-The supplied Hellocraft logo remains the primary brand evidence.
+## Hellocraft brand
 
-Observed characteristics:
+The current Hellocraft logo is the brand reference used during development.
+
+Current visual characteristics:
 
 ```text
-palette      → cyan + white + charcoal/black
-symbol       → star containing a hand motif + small star accents
-wordmark     → chunky, irregular, friendly uppercase lettering
-personality  → energetic, approachable, game-oriented
+main colors  = cyan, white, near-black
+personality  = energetic, approachable, game-focused
 ```
 
-Until an authoritative production logo/vector is supplied, the website may use a restrained textual development lockup rather than inventing a replacement symbol that could be mistaken for the official mark.
+The final vector/original logo and exact brand colors are still pending.
 
-## Composition
-
-Prefer simple, deliberate page composition:
-
-```text
-clear page label
-→ decisive headline
-→ concise supporting copy/action
-→ large project media
-→ straightforward content sections
-```
-
-Use:
-
-- large real project imagery once available;
-- substantial whitespace;
-- clear alignment;
-- thin dividers only where they clarify grouping;
-- a small number of full-width dark/light transitions;
-- simple project captions beneath media;
-- asymmetry only when real content benefits from it.
-
-Avoid making every section visually different just to maintain novelty.
-
-## Hero direction
-
-The homepage hero should feel editorial and confident, not like a generated landing-page template.
+## Page layout
 
 Prefer:
 
-- a light/warm neutral primary field;
-- one dominant headline;
-- one concise description;
-- one primary action;
-- one large media surface.
+- clear page titles;
+- short supporting text;
+- large project images;
+- strong alignment;
+- enough whitespace;
+- simple dividers when useful;
+- straightforward sections.
 
-Reject as defaults:
+Avoid:
 
-- decorative split-hero shapes;
-- giant abstract stars;
-- multiple floating accents;
-- two-button SaaS hero patterns;
-- invented production coordinates/technical overlays;
-- forced geometric masks before real imagery exists.
+- decorative numbering;
+- fake coordinates;
+- fake game HUDs;
+- floating decorative shapes;
+- repeated card grids without a content reason;
+- artificial asymmetry;
+- complicated masks or frames;
+- excessive dark/light section switching.
 
-## Project presentation
+## Home
 
-Projects are the main credibility surface.
-
-Preferred model:
+Home should contain:
 
 ```text
-large media
-→ small real metadata
-→ strong project title
-→ concise project summary
-→ simple project action
+Hero
+Featured projects
+About
+What we do
+Contact
 ```
 
-Do not treat projects like product cards. Do not add graphic treatment over detailed game screenshots unless the treatment communicates something real.
+The main project media should be the strongest visual element once real media is available.
 
-Project order and variation should come from real portfolio needs, not a prebuilt alternating pattern.
+## Portfolio
 
-## Studio / capabilities
+Portfolio projects should be shown with:
 
-Capability communication should be direct and text-led.
+```text
+project media
+project title
+short description
+confirmed project details when available
+link to Project Detail
+```
 
-Prefer a strong statement plus concise supporting copy. Lists are appropriate when final capability data exists. Avoid decorative icon grids merely because four-column capability cards are common on agency sites.
+Do not make every project look like a generic card.
 
-## Proof
+## Project Detail
 
-Proof must come from real evidence.
+Project Detail may include:
 
-While demo mode is active, fake proof/KPI content should not be visually promoted on the homepage or Studio page. The proof surface remains structurally available and can appear when real approved evidence exists.
+```text
+project title and summary
+project facts
+project media
+our role
+project details
+project links
+return to portfolio
+```
+
+Only show information that is actually available and approved.
+
+## About
+
+About should explain:
+
+```text
+who Hellocraft is
+what Hellocraft does
+how Hellocraft works
+relevant experience/results when confirmed
+```
+
+Do not use fake statistics, decorative icon grids, or unsupported company claims.
+
+## Careers
+
+Careers should be simple and practical:
+
+```text
+Careers introduction
+Join our team
+Open positions
+How to apply
+```
+
+Only real current openings should be public.
+
+## Contact
+
+Contact should show real public contact information and project inquiry guidance.
+
+Do not create fake email addresses, social links, contact forms, or booking links just to fill the page.
 
 ## Typography
 
-Typography should feel confident and game-industry professional.
+Use:
 
-Direction:
+- clear headings;
+- readable body text;
+- limited font sizes and weights;
+- reasonable line lengths.
 
-- large headings, but not so oversized that every page becomes a poster;
-- readable body copy and comfortable line length;
-- limited typographic roles;
-- the real Hellocraft wordmark should remain the most expressive type element once integrated;
-- avoid novelty font combinations or artificial technical labels.
+Avoid oversized headings on every page and avoid novelty font combinations.
 
-Exact production font family/weights remain unresolved until licensing, WOFF2 cost, rendering, and logo fit are reviewed.
+The final production font is still pending.
 
 ## Color
 
 Use a restrained palette:
 
 ```text
-warm off-white / neutral surface
-near-black
-Hellocraft cyan
-real project imagery
+warm neutral backgrounds
+near-black text/surfaces
+Hellocraft cyan as an accent
+real project media for additional color
 ```
 
-Cyan is an accent, not a requirement for every section. Real project media should supply most secondary color richness.
+Cyan should not be forced into every section.
 
-Exact production colors must later come from authoritative brand assets.
+## Components and surfaces
 
-## Surface language
-
-Prefer flat, simple surfaces:
+Prefer:
 
 ```text
 straight edges
-minimal/no radius by default
+little or no corner rounding
 thin dividers
-large uninterrupted media areas
+large clean media areas
 ```
 
-Reject:
+Avoid:
 
-- cut-corner systems as a global motif;
-- rounded cards everywhere;
-- glassmorphism;
+- glass effects;
 - glow/mesh gradients;
-- bento filler;
-- decorative coordinate systems;
-- floating star patterns;
-- visual "production HUD" styling that is not real product information.
+- bento layouts by default;
+- decorative pixel/HUD styles;
+- rounded cards everywhere.
 
-## Interaction and motion
+## Motion
 
 Motion should be subtle and functional.
 
-Use it for hover/focus feedback and continuity only. Native CSS/Svelte/browser behavior remains first choice. Respect reduced-motion preferences.
+Use it only for useful hover/focus feedback or simple continuity. Respect reduced-motion preferences.
 
-## Responsive direction
+## Responsive behavior
 
-Responsive layout should preserve hierarchy rather than preserve desktop composition at all costs.
+On smaller screens:
 
-- large headings scale down deliberately;
-- project captions stack cleanly;
-- navigation remains understandable and keyboard operable;
-- important media remains visible without artificial crops;
-- no horizontal scrolling for normal reading.
+- headings should scale down;
+- columns should stack cleanly;
+- navigation should remain easy to use;
+- media should remain visible and readable;
+- normal reading should not require horizontal scrolling.
 
-## Accessibility direction
+## Accessibility
 
-- native semantic structure first;
-- visible keyboard focus;
-- sufficient final contrast;
-- decorative placeholders remain hidden from duplicate announcement;
-- real project media gets real content-aware alternatives later;
-- reduced-motion behavior preserves all information.
+- use semantic HTML;
+- keep keyboard focus visible;
+- maintain sufficient contrast;
+- keep decorative placeholders hidden from screen readers;
+- add real alt text/captions after real project media is supplied;
+- preserve all information when reduced motion is enabled.
 
-## Implementation boundary
+## Technical setup
 
-Use the approved native stack:
+Use the existing frontend setup:
 
 ```text
 Svelte 5 / SvelteKit
@@ -236,20 +248,17 @@ native scoped CSS
 CSS Custom Properties
 ```
 
-Do not install a component library, styling framework, motion library, or decorative effect package merely to reproduce reference aesthetics.
+Do not add a component library, CSS framework, motion library, or visual-effects dependency just to match the reference websites.
 
-## Production values still unresolved
+## Still pending
 
-Still waiting for real evidence/rendered approval:
-
-- authoritative vector logo variants;
-- exact brand cyan and supporting neutrals;
-- production font family/weights;
-- final image crops/focal points;
-- real project media;
-- final client/project proof;
-- final browser visual acceptance.
-
-## Proof boundary
-
-This document establishes the art-direction intent. It does not prove the rendered result. Preview-only review may guide source refinement, but build/browser/accessibility/performance acceptance remains pending until runtime testing is re-authorized by the project owner.
+```text
+final vector logo
+exact brand colors
+final font
+real project media
+final media crops
+final public company/project information
+browser/runtime testing
+accessibility/performance testing
+```
