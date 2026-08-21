@@ -19,7 +19,10 @@ MEDIA_POLICY_APPROVED
 ENHANCED_IMG_LOCAL_RASTER_PIPELINE_APPROVED
 VISUAL_DIRECTION_BASELINE_ESTABLISHED
 DISCOVERABILITY_METADATA_POLICY_APPROVED
-NO_SEO_LIBRARY_INITIAL_APPROVED
+DEPLOYMENT_REQUIREMENTS_APPROVED
+PRODUCTION_PROVIDER_NOT_SELECTED
+PRODUCTION_ADAPTER_NOT_SELECTED
+WEBSITE_RELEASE_SPECIALIST_BLOCKED
 STATIC_FIRST_SERVER_WHERE_NEEDED_APPROVED
 NO_SEPARATE_BACKEND_INITIAL_APPROVED
 NO_DATABASE_INITIAL_APPROVED
@@ -47,11 +50,11 @@ PAGE_IMPLEMENTATION_NOT_READY
 
 Working authority: **`Local`**.
 
-## Project-owner runtime instruction
+## Runtime/local boundary
 
 The project owner explicitly does **not** want local/runtime testing at the current stage.
 
-Therefore these remain pending but are not the active next step:
+These remain pending but are not the active next step:
 
 ```text
 bun install
@@ -61,106 +64,114 @@ local preview
 Chrome/runtime dry-run
 ```
 
-Do not fabricate runtime/install/browser proof. Resume that track only after the project owner re-authorizes it.
+Do not fabricate install/build/browser proof. Resume only after explicit re-authorization.
 
-## Scaffold state retained
-
-The minimal content-agnostic SvelteKit source/configuration exists and remains the approved technical source baseline. Runtime acceptance is still unproven.
-
-## Non-local foundations established
+## Non-local foundations now established
 
 ### Visual direction
-
-Canonical owner:
 
 ```text
 docs/foundation/04-visual-direction.md
 ```
 
-Adopted thesis:
-
-> **Playful editorial game studio**
-
-This establishes hierarchy/composition/type/color/shape/media/motion direction without pretending rendered visual acceptance has happened.
+Adopted thesis: **Playful editorial game studio**.
 
 ### Discoverability / metadata
-
-Canonical owner:
 
 ```text
 docs/foundation/05-discoverability-metadata-policy.md
 ```
 
-Current boundary:
-
-```text
-native <svelte:head>
-no SEO component library initially
-no sitemap library initially
-canonical/sitemap after real domain + public route set
-structured data only from verified facts
-```
+Native Svelte head ownership is the default; no SEO or sitemap package is required initially.
 
 ### Content intake / audit
-
-Canonical operational owner:
 
 ```text
 docs/knowledge/content-intake-contract.md
 ```
 
-Every future supplied project/studio item must be recorded before editorial selection, including items that are duplicated, deferred, rejected, internal-only, unverified, or not ultimately published.
+Every future supplied project/studio item is logged before selection, including duplicates, rejected/deferred items, internal-only facts, and unresolved evidence.
 
-The intake contract separates:
+### Deployment / production requirements
 
 ```text
-evidence status
-publication status
-editorial/use status
+docs/foundation/06-deployment-production-requirements.md
 ```
 
-so a true fact is not automatically treated as publishable or selected content.
+Provider-neutral requirements are now defined.
 
-Portfolio/project inventory and Studio/About facts remain deferred until the project owner supplies authoritative material.
+Two production modes remain intentionally possible:
+
+```text
+A. fully/static-prerendered site + external dynamic boundaries
+B. hybrid SvelteKit: static/prerender where possible + server actions/routes where needed
+```
+
+`adapter-auto` remains scaffold-only. Once a real target is chosen, replace it with the explicit matching adapter.
+
+No provider is selected yet.
+
+## Production selection criteria
+
+A future provider comparison must score real candidates against:
+
+```text
+SvelteKit adapter maturity
+static/prerender delivery
+future server/form compatibility
+custom domain + TLS
+redirect/canonical handling
+env/secrets
+asset caching/compression
+security-header/CSP control
+preview workflow
+logs/diagnostics when server features exist
+rollback/release safety
+cost/maintenance
+lock-in / migration difficulty
+```
+
+Do not choose a provider from popularity alone.
 
 ## Content boundary retained
 
+The project owner still has not supplied the authoritative portfolio/project inventory or Studio/About facts.
+
 Do not infer:
 
-- project names from old chat history;
+- project names from old chats;
 - client/publisher/partner relationships;
-- final services taxonomy;
+- services taxonomy;
 - case-study depth;
-- final navigation/information architecture;
-- homepage section order;
-- metrics/results/testimonials;
-- company dates/team/legal facts;
-- structured-data organization facts.
+- final IA/navigation;
+- homepage order;
+- metrics/testimonials;
+- company/team/legal facts.
 
 ## Next non-local track
 
-The next useful non-runtime responsibility is **deployment / production requirement definition**, without choosing a provider yet.
+The next useful non-runtime step is a **provider comparison / shortlist**, not deployment.
 
-Define only the criteria the eventual hosting/release solution must satisfy, such as:
+Compare current realistic SvelteKit hosting targets against `06-deployment-production-requirements.md` while preserving both Mode A and Mode B.
+
+The comparison may include official SvelteKit-supported targets such as:
 
 ```text
-static/prerender delivery support
-SvelteKit server capability when future forms require it
-adapter compatibility
-HTTPS/custom-domain support
-redirect/canonical-origin handling
-environment/secrets boundary
-asset caching/compression
-security-header capability
-preview/staging behavior
-logs/observability appropriate to real server features
-rollback/release safety
-cost/maintenance simplicity
+Cloudflare
+Vercel
+Netlify
+Node-hosted deployment
+static-only hosting where Mode A remains viable
 ```
 
-Do not select Vercel, Cloudflare, Netlify, Node hosting, or another provider merely because it is popular. Do not activate `website-release-development` until a real target/provider and production integration responsibilities are known.
+Rules:
 
-This requirement-definition stage may also record which deployment/security questions are intentionally deferred until Contact/Careers behavior exists.
+- use current official provider/SvelteKit documentation;
+- compare concrete capabilities/cost/limits relevant to Hellocraft;
+- do not pick a winner if unresolved Contact/Careers requirements materially affect the result;
+- distinguish `best now`, `best if server forms remain SvelteKit`, and `best if site becomes fully static` when those differ;
+- do not install or change adapters during research;
+- do not activate `website-release-development` yet.
 
 ## Deferred runtime gate
 
@@ -170,11 +181,11 @@ When runtime/local proof is later re-authorized:
 bun install
 → generate/inspect bun.lock
 → bun run validate
-→ minimal integration dry-run
+→ integration dry-run
 → accessibility validation
 → Chrome DevTools proof
 ```
 
 ## Next Step
 
-**Continue non-locally by defining the provider-neutral deployment/production requirements that an eventual Hellocraft hosting target must satisfy. Keep provider selection, release-specialist activation, and runtime/local testing deferred until their actual responsibilities are known or re-authorized.**
+**Continue non-locally by comparing realistic SvelteKit deployment targets against the approved provider-neutral deployment requirements. Produce a shortlist with tradeoffs, but do not select/install a production adapter or activate release tooling until the unresolved server/form requirements are sufficiently known.**
