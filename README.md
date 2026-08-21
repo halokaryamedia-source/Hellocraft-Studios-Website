@@ -2,37 +2,71 @@
 
 Official website project for **Hellocraft Studios**, a game studio focused on Minecraft.
 
-## Current purpose
-
-The website is intended to:
-
-- present Hellocraft Studios clearly and credibly;
-- show approved real work through a portfolio;
-- help relevant visitors understand what Hellocraft can provide;
-- support discoverability and client acquisition;
-- provide business, collaboration, and recruitment paths when those product surfaces are defined.
-
-## Current positioning
-
-> **Hellocraft Studios is a game studio focused on Minecraft.**
-
-This is the positioning baseline, not final homepage copy.
-
-## Current project state
+## Current state
 
 ```text
 FOUNDATION_BASELINE_ESTABLISHED
-TECHNICAL_FOUNDATION_APPROVED
-CONTENT_AGNOSTIC_SCAFFOLD_SOURCE_CREATED
-BUN_INSTALL_AND_LOCK_PENDING
-SCAFFOLD_VALIDATION_PENDING
-PORTFOLIO_EVIDENCE_PENDING
-PAGE_IMPLEMENTATION_NOT_READY
+TECHNICAL_SCAFFOLD_SOURCE_CREATED
+INFORMATION_ARCHITECTURE_APPROVED
+PAGE_ARCHITECTURE_SOURCE_CREATED
+CONTENT_SLOT_MODEL_READY
+PORTFOLIO_CONTENT_PENDING
+STUDIO_CONTENT_PENDING
+LOCAL_RUNTIME_TESTS_DEFERRED
+HOSTING_DEFERRED
 ```
 
-The repository now contains the minimal SvelteKit technical scaffold. It intentionally does **not** contain final page architecture, portfolio content, services taxonomy, navigation, or final visual design.
+The repository now contains the route/page/content architecture so later work can focus primarily on inserting authoritative text, project data, and media rather than repeatedly redesigning structure.
 
-The first verified Bun install still needs to generate `bun.lock`, after which the mandatory technical gate must pass before the integration dry-run or page-specific implementation begins.
+## Route architecture
+
+```text
+/
+├── work
+│   └── [slug]
+├── studio
+├── careers
+└── contact
+```
+
+Primary navigation:
+
+```text
+Work
+Studio
+Careers
+Contact
+```
+
+No dedicated Services page and no portfolio filters/categories are created initially.
+
+## Content ownership
+
+```text
+src/lib/content/site.ts
+→ identity + navigation
+
+src/lib/content/pages.ts
+→ page copy slots + optional/empty collections
+
+src/lib/content/projects.ts
+→ approved public projects only
+
+src/lib/content/types.ts
+→ shared content contracts
+```
+
+Pending copy uses searchable placeholders such as:
+
+```text
+[[HOME_HERO_TITLE]]
+[[WORK_HERO_BODY]]
+[[STUDIO_APPROACH_BODY]]
+[[CAREERS_HERO_TITLE]]
+[[CONTACT_INQUIRY_BODY]]
+```
+
+Do not replace placeholders with invented marketing copy or unsupported facts.
 
 ## Approved technical baseline
 
@@ -50,50 +84,48 @@ backend                = SvelteKit server only when needed
 database               = none initially
 ```
 
-## Local commands
+## Current development boundary
 
-After Bun is available:
+The project owner currently wants **architecture/content preparation before local testing or hosting work**.
 
-```bash
-bun install
-bun run dev
-bun run validate
-```
-
-`bun run validate` is the mandatory non-mutating acceptance gate:
+Therefore these remain deferred until explicitly reopened:
 
 ```text
-format:check
-→ lint
-→ svelte-check
-→ build
+bun install / bun.lock
+bun run validate
+local preview / browser dry-run
+hosting/provider selection
+production adapter
 ```
 
-Do not treat `bun run format` or another source-mutating fixer as completion proof.
+Do not fabricate runtime/build/deployment proof.
 
-## Repository authority
-
-- Working/development authority: `Local`.
-- Do not silently use the repository default branch or another ref for current work.
-- Durable product/technical policy belongs in `docs/foundation/`.
-- Active continuation belongs in `docs/knowledge/next-action.md`.
-- Stable cross-session orientation belongs in `CONTEXT.md`.
-- Detailed task/skill routing belongs in `AGENTS.md`.
-
-## Current documentation
+## Canonical documentation
 
 ```text
 docs/foundation/01-project-overview.md
-→ durable project purpose, audience, positioning, scope, and unknowns
+→ product purpose / audience / positioning
 
 docs/foundation/02-product-requirements.md
-→ current website requirements, technical baseline, and negative requirements
+→ product and technical requirements
 
 docs/foundation/03-media-performance-policy.md
-→ image/video/font ownership, delivery, and performance-proof policy
+→ media/performance ownership
+
+docs/foundation/04-visual-direction.md
+→ Playful editorial game studio visual baseline
+
+docs/foundation/05-discoverability-metadata-policy.md
+→ metadata/discoverability policy
+
+docs/foundation/07-information-content-architecture.md
+→ route/page/content-slot architecture
+
+docs/knowledge/content-intake-contract.md
+→ evidence-safe content intake
 
 docs/knowledge/next-action.md
-→ one active continuation point
+→ active continuation
 ```
 
-Do not invent project content, services, product behavior, dependencies, or additional architecture merely to make the repository look complete.
+Working authority is branch **`Local`**.
