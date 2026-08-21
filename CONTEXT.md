@@ -40,27 +40,28 @@ A dedicated Services route and Work filters/categories are intentionally absent 
 
 ## Current visual direction
 
-The project owner selected **Blind Squirrel Games** as the primary external visual reference.
+The project owner selected **Hazelight Studios** as the visual lead and **Blind Squirrel Games** as the structural/business reference for the Homepage direction.
 
 Current thesis:
 
-> **Professional cinematic game studio** — confident, project-first, high-contrast, and restrained, while retaining Hellocraft's own cyan/logo identity and Minecraft focus.
+> **Professional Minecraft game studio** — cinematic, clean, confident, and game-first. Use Hazelight-style media confidence and restraint with Blind-Squirrel-style project/capability credibility, while retaining Hellocraft's own cyan/logo identity and Minecraft focus.
 
 Adopted source characteristics:
 
 ```text
-oversized confident typography
-numbered editorial progression
-strong dark/light fields
+concise confident hero statement
+game/project media as immediate visual evidence
 large project surfaces
-alternating project presentation
-restrained cyan accent
+varied project composition rather than uniform cards
+strong but restrained dark/light contrast
+clear studio and capability credibility
 minimal decorative UI around game work
+restrained Hellocraft cyan accent
 ```
 
-Rejected generic patterns include split-hero decoration, uniform card grids, repeated star motifs, pill-heavy UI, fake KPI strips, glassmorphism, bento-by-default, and Minecraft inventory/pixel UI as site chrome.
+Rejected generic/reference-copy patterns include split-hero decoration, numbered chapter progression, repeated editorial chapter treatments, uniform card grids, repeated star motifs, pill-heavy UI, fake KPI strips, glassmorphism, bento-by-default, manufactured asymmetry, and Minecraft inventory/pixel UI as site chrome.
 
-Blind Squirrel is an inspiration reference, not a template. Do not copy its slogans, assets, exact layouts, branding, or project presentation verbatim.
+Hazelight and Blind Squirrel are inspiration references, not templates. Do not copy their slogans, assets, exact layouts, branding, numbering systems, or project presentation verbatim.
 
 ## Brand / content state
 
@@ -177,17 +178,19 @@ Do not repeatedly push those as the active next step until explicitly re-authori
 ## Current maturity state
 
 ```text
-technical foundation          = established
-route architecture            = approved
-content owner model           = approved
-content replacement guide     = ready
-dummy content mode            = active
-Blind-Squirrel-inspired source= implemented
-brand replacement surface     = ready
-project media surface         = ready
-real text/data/media          = pending
-rendered visual acceptance    = deferred
-hosting/runtime proof         = deferred
+technical foundation                    = established
+route architecture                      = approved
+content owner model                     = approved
+content replacement guide               = ready
+dummy content mode                      = active
+Hazelight + Blind Squirrel direction    = approved
+Homepage source redesign                = implemented for review
+brand replacement surface               = ready
+project media surface                   = ready
+real text/data/media                    = pending
+Homepage rendered visual acceptance     = pending
+remaining-route visual propagation      = blocked until Homepage approval
+hosting/runtime proof                   = deferred
 ```
 
-The project is now primarily a **content/media replacement + visual-review workflow**, not an architecture-planning workflow.
+The project is now primarily a **Homepage visual-review → content/media replacement workflow**, not an architecture-planning workflow.
