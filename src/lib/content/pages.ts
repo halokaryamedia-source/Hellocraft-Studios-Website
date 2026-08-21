@@ -2,43 +2,39 @@ import { demoAboutExperienceItems, demoCareerOpenings, demoExperienceItems } fro
 import type { LinkItem } from './types';
 
 // TEMPORARY DEVELOPMENT COPY
-// These strings exist to make page hierarchy, typography, spacing, and content rhythm buildable now.
-// Replace them with approved Hellocraft copy later without changing the page structure.
+// Replace these strings with approved Hellocraft copy when final content is ready.
 
 export const homeCopy = {
 	hero: {
 		eyebrow: 'Minecraft game studio',
-		title: 'We build Minecraft experiences worth exploring.',
-		body:
-			'Hellocraft brings world design, gameplay thinking, and production together to shape clear, playable experiences.',
+		title: 'We create Minecraft games and experiences.',
+		body: 'This website will present Hellocraft projects, company information, and the work behind each project.',
 		primaryActionLabel: 'View portfolio'
 	},
 	portfolio: {
 		title: 'Featured projects',
-		body: 'A development selection exploring atmosphere, play, and production detail across different Minecraft experiences.',
-		emptyState: 'Approved Hellocraft projects will appear here when the portfolio information is supplied.',
+		body: 'Approved Hellocraft projects will be shown here when the final portfolio information and media are supplied.',
+		emptyState: 'Approved Hellocraft projects will appear here.',
 		viewAllLabel: 'View portfolio'
 	},
 	about: {
 		eyebrow: 'About',
-		title: 'Creative direction and production, kept close from the start.',
-		body:
-			'We treat the player experience and the production reality as one problem, so ideas stay clear as they move toward something playable.',
+		title: 'About Hellocraft Studios.',
+		body: 'This section will introduce the company and summarize the type of Minecraft work Hellocraft provides.',
 		actionLabel: 'About Hellocraft'
 	},
 	whatWeDo: {
 		eyebrow: 'What we do',
-		title: 'From world design to playable systems.',
-		body:
-			'Each project can ask for a different mix of creative and technical work. The structure stays flexible so the experience, not a fixed service menu, leads the process.'
+		title: 'What Hellocraft works on.',
+		body: 'Final details will be based on approved company information and the real project portfolio.'
 	},
 	experience: {
 		title: 'Experience and results'
 	},
 	contact: {
 		eyebrow: 'Contact',
-		title: 'Have a Minecraft project in mind?',
-		body: 'Share the idea, the audience, or the problem you are trying to solve. We can start from there.',
+		title: 'Contact Hellocraft Studios.',
+		body: 'Approved business contact details and project inquiry information will be available here.',
 		actionLabel: 'Contact Hellocraft'
 	}
 } as const;
@@ -46,9 +42,8 @@ export const homeCopy = {
 export const portfolioCopy = {
 	hero: {
 		eyebrow: 'Portfolio',
-		title: 'Minecraft projects shaped around play, place, and purpose.',
-		body:
-			'This development selection is being used to establish how Hellocraft projects will be presented before the final portfolio is supplied.'
+		title: 'Minecraft projects by Hellocraft Studios.',
+		body: 'This page will show approved Hellocraft projects, project details, and media when the final portfolio is supplied.'
 	},
 	emptyState: 'Approved projects will appear here.'
 } as const;
@@ -56,28 +51,25 @@ export const portfolioCopy = {
 export const aboutCopy = {
 	hero: {
 		eyebrow: 'About',
-		title: 'A focused team building for Minecraft.',
-		body:
-			'Hellocraft brings creative and technical production together around the experience players actually see, understand, and play.'
+		title: 'About Hellocraft Studios.',
+		body: 'This page will explain the company, its work, and the team behind Hellocraft projects.'
 	},
 	whatWeDo: {
 		eyebrow: 'What we do',
-		title: 'Different projects need different combinations of skills.',
-		body:
-			'Worlds, gameplay, art, and production can overlap in different ways. The final description will be based on the real project portfolio.'
+		title: 'What Hellocraft works on.',
+		body: 'Final information will be based on the approved portfolio and confirmed company information.'
 	},
 	howWeWork: {
 		eyebrow: 'How we work',
-		title: 'Keep the idea clear while production moves forward.',
-		body:
-			'We prefer practical decisions, direct communication, and a close connection between what is being built and how it should feel to play.'
+		title: 'How Hellocraft works.',
+		body: 'Final working-process information will be added after the company information is reviewed and approved.'
 	},
 	experience: {
-		title: 'Experience and credibility'
+		title: 'Experience and results'
 	},
 	contact: {
-		title: 'Build something with Hellocraft.',
-		body: 'If the project needs Minecraft thinking from the start, we can begin with the idea and the constraints around it.',
+		title: 'Work with Hellocraft Studios.',
+		body: 'Use the Contact page for approved business contact details and project inquiries.',
 		actionLabel: 'Contact us'
 	}
 } as const;
@@ -85,9 +77,8 @@ export const aboutCopy = {
 export const careersCopy = {
 	hero: {
 		eyebrow: 'Careers',
-		title: 'Build things people want to play.',
-		body:
-			'This page is being prepared for future Hellocraft openings across the creative and technical work behind Minecraft experiences.'
+		title: 'Careers at Hellocraft Studios.',
+		body: 'Current job openings and application details will be listed here when they are available.'
 	},
 	openings: {
 		title: 'Open positions',
@@ -95,23 +86,20 @@ export const careersCopy = {
 	},
 	general: {
 		eyebrow: 'Join our team',
-		title: 'For people who care about quality, play, and teamwork.',
-		body:
-			'We value people who can think clearly about their part of the work while staying connected to the experience the whole team is building.'
+		title: 'Join the Hellocraft team.',
+		body: 'Final team and recruitment information will be added when it is approved for public use.'
 	},
 	application: {
 		title: 'How to apply',
-		body:
-			'Application details will be published with each approved opening. The current structure is ready without assuming a form or upload workflow yet.'
+		body: 'Application instructions will be included with each real job opening.'
 	}
 } as const;
 
 export const contactCopy = {
 	hero: {
 		eyebrow: 'Contact',
-		title: 'Tell us what you want to build.',
-		body:
-			'Share the idea, audience, scope, or production problem. The approved public contact details will be listed here when they are ready.'
+		title: 'Contact Hellocraft Studios.',
+		body: 'Approved business contact details will be listed on this page.'
 	},
 	methods: {
 		title: 'Contact information',
@@ -119,8 +107,7 @@ export const contactCopy = {
 	},
 	inquiry: {
 		title: 'Project inquiries',
-		body:
-			'A useful project conversation can start with the goal, the audience, the expected experience, and the constraints already known.'
+		body: 'Project inquiry information will explain what details are useful when contacting Hellocraft about a project.'
 	}
 } as const;
 
@@ -132,5 +119,5 @@ export const experienceItems = demoExperienceItems;
 export const aboutExperienceItems = demoAboutExperienceItems;
 export const careerOpenings = demoCareerOpenings;
 
-// Public links are intentionally not fabricated. Add only approved real contact channels.
+// Add only approved real public contact channels.
 export const contactMethods: LinkItem[] = [];
