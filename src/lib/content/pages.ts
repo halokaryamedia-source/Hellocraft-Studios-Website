@@ -1,4 +1,4 @@
-import { demoAboutExperienceItems, demoCareerOpenings, demoExperienceItems } from './demo-data';
+import { demoAboutExperienceItems, demoCareerOpenings } from './demo-data';
 import type { LinkItem } from './types';
 
 // TEMPORARY DEVELOPMENT COPY
@@ -27,9 +27,6 @@ export const homeCopy = {
 		eyebrow: 'What we do',
 		title: 'What Hellocraft works on.',
 		body: 'Final details will be based on approved company information and the real project portfolio.'
-	},
-	experience: {
-		title: 'Experience and results'
 	},
 	contact: {
 		eyebrow: 'Contact',
@@ -115,7 +112,6 @@ export const footerCopy = {
 	statement: 'Hellocraft Studios — a game studio focused on Minecraft.'
 } as const;
 
-export const experienceItems = demoExperienceItems;
 export const aboutExperienceItems = demoAboutExperienceItems;
 export const careerOpenings = demoCareerOpenings;
 
