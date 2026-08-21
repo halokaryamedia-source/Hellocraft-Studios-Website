@@ -10,19 +10,20 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="careers-title">
 		<div class="shell hero__inner">
-			<div class="hero__copy">
+			<div class="hero__meta">
+				<span class="section-index">01 / Careers</span>
 				<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
-				<h1 id="careers-title">{careersCopy.hero.title}</h1>
-				<p>{careersCopy.hero.body}</p>
 			</div>
-			<div class="hero__badge" aria-hidden="true"><span>JOIN<br />THE<br />CRAFT</span></div>
+			<h1 id="careers-title">{careersCopy.hero.title}</h1>
+			<p class="hero__body">{careersCopy.hero.body}</p>
 		</div>
 	</section>
 
 	<section class="openings" aria-labelledby="career-openings-title">
-		<div class="shell">
+		<div class="shell openings__inner">
 			<div class="section-heading">
-				<p class="eyebrow">01 / Roles</p>
+				<span class="section-index">02</span>
+				<p class="eyebrow">Roles</p>
 				<h2 id="career-openings-title">{careersCopy.openings.title}</h2>
 			</div>
 
@@ -39,7 +40,7 @@
 								{#if opening.location || opening.engagement}
 									<p>{opening.location ?? ''}{opening.location && opening.engagement ? ' · ' : ''}{opening.engagement ?? ''}</p>
 								{/if}
-								{#if opening.href}<a href={opening.href}>View role <span aria-hidden="true">↗</span></a>{/if}
+								{#if opening.href}<a class="text-link" href={opening.href}>View role</a>{/if}
 							</div>
 						</article>
 					{/each}
@@ -52,8 +53,9 @@
 
 	<section class="general" aria-labelledby="careers-general-title">
 		<div class="shell split">
-			<div>
-				<p class="eyebrow">02 / {careersCopy.general.eyebrow}</p>
+			<div class="section-heading">
+				<span class="section-index">03</span>
+				<p class="eyebrow">{careersCopy.general.eyebrow}</p>
 				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
 			</div>
 			<p>{careersCopy.general.body}</p>
@@ -61,10 +63,10 @@
 	</section>
 
 	<section class="application" aria-labelledby="careers-application-title">
-		<div class="shell application__inner">
-			<div class="application__star" aria-hidden="true"></div>
-			<div>
-				<p class="eyebrow">03 / Application</p>
+		<div class="shell split">
+			<div class="section-heading">
+				<span class="section-index">04</span>
+				<p class="eyebrow">Application</p>
 				<h2 id="careers-application-title">{careersCopy.application.title}</h2>
 			</div>
 			<p>{careersCopy.application.body}</p>
@@ -73,84 +75,67 @@
 </main>
 
 <style>
-	.shell {
-		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
-		margin-inline: auto;
-	}
-
-	.eyebrow {
-		margin: 0;
-		font-size: 0.72rem;
-		font-weight: 850;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-	}
-
 	.hero {
-		background: var(--brand);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.hero__inner {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.55fr);
-		gap: clamp(2rem, 8vw, 8rem);
-		align-items: center;
-		padding-block: clamp(4rem, 10vw, 10rem);
+		gap: clamp(2.5rem, 6vw, 6rem);
+		padding-block: clamp(5rem, 11vw, 11rem);
 	}
 
-	.hero__copy {
-		display: grid;
-		gap: 1.2rem;
+	.hero__meta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.hero__meta .eyebrow {
+		color: rgb(255 255 255 / 58%);
 	}
 
 	h1 {
 		max-width: 10ch;
 		margin: 0;
-		font-size: clamp(4rem, 10vw, 10rem);
-		line-height: 0.83;
-	}
-
-	.hero__copy > p:last-child {
-		max-width: var(--measure);
-		margin: 0;
-		color: rgb(12 13 14 / 70%);
-	}
-
-	.hero__badge {
-		display: grid;
-		place-items: center;
-		aspect-ratio: 1;
-		border: 1px solid rgb(12 13 14 / 25%);
-		border-radius: 50%;
-		background: var(--surface);
-		transform: rotate(7deg);
-	}
-
-	.hero__badge span {
-		font-family: Arial, 'Helvetica Neue', sans-serif;
-		font-size: clamp(2rem, 5vw, 4.5rem);
-		font-weight: 900;
-		letter-spacing: -0.08em;
+		font-size: clamp(5rem, 13vw, 13rem);
 		line-height: 0.75;
-		text-align: center;
+	}
+
+	.hero__body {
+		max-width: 43rem;
+		margin: 0;
+		color: rgb(255 255 255 / 62%);
 	}
 
 	.openings,
-	.general {
+	.general,
+	.application {
 		padding-block: var(--space-section);
+	}
+
+	.openings {
+		background: var(--surface);
+	}
+
+	.openings__inner {
+		display: grid;
+		grid-template-columns: minmax(0, 0.6fr) minmax(18rem, 1.4fr);
+		gap: clamp(2rem, 8vw, 8rem);
 	}
 
 	.section-heading {
 		display: grid;
-		gap: 0.8rem;
-		margin-bottom: clamp(2rem, 5vw, 4rem);
+		align-content: start;
+		gap: 1rem;
 	}
 
 	h2 {
-		max-width: 13ch;
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(2.5rem, 6vw, 6rem);
-		line-height: 0.9;
+		font-size: clamp(3rem, 7vw, 7rem);
+		line-height: 0.84;
 	}
 
 	.opening-list {
@@ -159,7 +144,7 @@
 
 	.opening {
 		display: grid;
-		grid-template-columns: 3rem minmax(0, 1fr) minmax(12rem, 0.35fr);
+		grid-template-columns: 3rem minmax(0, 1fr) minmax(11rem, 0.35fr);
 		gap: clamp(1rem, 4vw, 3rem);
 		align-items: start;
 		padding-block: clamp(1.5rem, 3vw, 2.5rem);
@@ -173,13 +158,13 @@
 
 	.opening__copy {
 		display: grid;
-		gap: 0.6rem;
+		gap: 0.7rem;
 	}
 
 	.opening h3 {
 		margin: 0;
-		font-size: clamp(1.6rem, 3.5vw, 3.2rem);
-		line-height: 0.95;
+		font-size: clamp(1.8rem, 3.8vw, 3.8rem);
+		line-height: 0.9;
 	}
 
 	.opening__copy p,
@@ -190,35 +175,35 @@
 
 	.opening__meta {
 		display: grid;
-		gap: 0.8rem;
+		gap: 0.75rem;
 		justify-items: start;
 	}
 
-	.opening__meta a {
-		font-weight: 850;
-		text-underline-offset: 0.3em;
+	.opening__meta .text-link {
+		font-size: 0.7rem;
 	}
 
 	.pending-state {
-		padding: 2rem;
-		border: 1px dashed var(--border);
-		border-radius: var(--radius-sm);
+		padding-block: 2rem;
+		border-block: 1px solid var(--border);
+		color: var(--text-muted);
 	}
 
 	.general {
-		border-top: 1px solid var(--border);
-		background: var(--surface);
+		background: var(--paper);
+	}
+
+	.application {
+		border-top: 4px solid var(--brand);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+		grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
 		gap: clamp(2rem, 8vw, 8rem);
-	}
-
-	.split > div {
-		display: grid;
-		gap: 1rem;
+		align-items: start;
 	}
 
 	.split > p {
@@ -227,50 +212,23 @@
 		color: var(--text-muted);
 	}
 
-	.application {
-		padding-block: var(--space-section);
-		background: var(--ink);
-		color: var(--surface);
+	.application .section-heading .eyebrow,
+	.application .section-index {
+		color: var(--brand);
 	}
 
-	.application__inner {
-		display: grid;
-		grid-template-columns: auto minmax(0, 1fr) minmax(18rem, 0.7fr);
-		gap: clamp(1.5rem, 5vw, 5rem);
-		align-items: start;
+	.application .split > p {
+		color: rgb(255 255 255 / 58%);
 	}
 
-	.application__inner > div:nth-child(2) {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.application__inner > p {
-		max-width: var(--measure);
-		margin: 0;
-		color: rgb(255 255 255 / 66%);
-	}
-
-	.application__star {
-		width: clamp(3rem, 6vw, 5rem);
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-	}
-
-	@media (max-width: 60rem) {
-		.hero__inner,
-		.split,
-		.application__inner {
+	@media (max-width: 64rem) {
+		.openings__inner,
+		.split {
 			grid-template-columns: 1fr;
 		}
-
-		.hero__badge {
-			width: min(18rem, 62vw);
-		}
 	}
 
-	@media (max-width: 44rem) {
+	@media (max-width: 46rem) {
 		.opening {
 			grid-template-columns: 2.5rem minmax(0, 1fr);
 		}

@@ -14,12 +14,13 @@
 <main id="main-content">
 	<section class="hero">
 		<div class="shell hero__inner">
-			<a class="back-link" href="/work"><span aria-hidden="true">←</span> Work</a>
-			<div class="hero__grid">
-				<div>
-					<p class="eyebrow">Project / Demo content</p>
-					<h1>{project.title}</h1>
-				</div>
+			<div class="hero__topline">
+				<a class="back-link" href="/work"><span aria-hidden="true">←</span> Work</a>
+				<p class="eyebrow">Project / Development preview</p>
+			</div>
+
+			<div class="hero__main">
+				<h1>{project.title}</h1>
 				<div class="hero__summary">
 					<p>{project.summary}</p>
 
@@ -40,14 +41,14 @@
 
 	<div class="visual-stage">
 		<div class="shell">
-			<ProjectMediaPlaceholder variant="hero" label="Project media" />
+			<ProjectMediaPlaceholder variant="hero" label="Project media" index="HC" />
 		</div>
 	</div>
 
 	{#if project.contribution && project.contribution.length > 0}
 		<section class="section contribution" aria-labelledby="project-contribution-title">
 			<div class="shell section-grid">
-				<div>
+				<div class="section-heading">
 					<p class="eyebrow">Contribution</p>
 					<h2 id="project-contribution-title">Hellocraft contribution</h2>
 				</div>
@@ -61,10 +62,10 @@
 	{/if}
 
 	{#each project.sections ?? [] as section, index (section.id)}
-		<section class="section" class:section-dark={index % 2 === 1} aria-labelledby={`section-${section.id}`}>
+		<section class="section detail-section" aria-labelledby={`section-${section.id}`}>
 			<div class="shell section-grid">
-				<div>
-					<p class="eyebrow">{String(index + 1).padStart(2, '0')} / Detail</p>
+				<div class="section-heading">
+					<p class="eyebrow">{String(index + 1).padStart(2, '0')} / Project detail</p>
 					<h2 id={`section-${section.id}`}>{section.title}</h2>
 				</div>
 				<div class="section-copy">
@@ -77,9 +78,12 @@
 	{/each}
 
 	{#if project.links && project.links.length > 0}
-		<section class="section project-links" aria-labelledby="project-links-title">
+		<section class="project-links" aria-labelledby="project-links-title">
 			<div class="shell section-grid">
-				<h2 id="project-links-title">Project links</h2>
+				<div class="section-heading">
+					<p class="eyebrow">Explore</p>
+					<h2 id="project-links-title">Project links</h2>
+				</div>
 				<ul>
 					{#each project.links as link (link.href)}
 						<li><a href={link.href} rel={link.external ? 'noreferrer' : undefined}>{link.label}<span aria-hidden="true">↗</span></a></li>
@@ -91,52 +95,52 @@
 </main>
 
 <style>
-	.shell {
-		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
-		margin-inline: auto;
-	}
-
 	.hero {
-		background: var(--brand);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.hero__inner {
 		display: grid;
 		gap: clamp(3rem, 7vw, 7rem);
-		padding-block: clamp(3rem, 8vw, 8rem);
+		padding-block: clamp(3rem, 7vw, 7rem) clamp(4rem, 9vw, 9rem);
+	}
+
+	.hero__topline {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.hero__topline .eyebrow {
+		color: rgb(255 255 255 / 56%);
 	}
 
 	.back-link {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.5rem;
-		width: fit-content;
-		min-height: 2rem;
-		font-weight: 800;
-		text-underline-offset: 0.3em;
-	}
-
-	.hero__grid,
-	.section-grid {
-		display: grid;
-		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
-		gap: clamp(2rem, 8vw, 8rem);
-		align-items: start;
-	}
-
-	.eyebrow {
-		margin: 0 0 0.85rem;
-		font-size: 0.72rem;
+		gap: 0.55rem;
+		min-height: 2.75rem;
+		font-size: 0.75rem;
 		font-weight: 850;
-		letter-spacing: 0.12em;
+		letter-spacing: 0.08em;
+		text-decoration: none;
 		text-transform: uppercase;
 	}
 
+	.hero__main {
+		display: grid;
+		grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+		gap: clamp(2rem, 8vw, 8rem);
+		align-items: end;
+	}
+
 	h1 {
-		max-width: 13ch;
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(3.5rem, 9vw, 9rem);
-		line-height: 0.86;
+		font-size: clamp(4.5rem, 11vw, 11rem);
+		line-height: 0.78;
 	}
 
 	.hero__summary {
@@ -147,7 +151,8 @@
 	.hero__summary > p {
 		max-width: var(--measure);
 		margin: 0;
-		font-size: clamp(1.05rem, 2vw, 1.35rem);
+		color: rgb(255 255 255 / 62%);
+		font-size: clamp(1rem, 1.6vw, 1.16rem);
 	}
 
 	.facts {
@@ -156,7 +161,7 @@
 		gap: 1.5rem;
 		margin: 0;
 		padding-top: 1.25rem;
-		border-top: 1px solid rgb(12 13 14 / 28%);
+		border-top: 1px solid var(--inverse-border);
 	}
 
 	.facts div {
@@ -165,9 +170,10 @@
 	}
 
 	dt {
-		font-size: 0.7rem;
+		color: rgb(255 255 255 / 48%);
+		font-size: 0.66rem;
 		font-weight: 850;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
 
@@ -177,7 +183,7 @@
 	}
 
 	.visual-stage {
-		padding-block: clamp(2rem, 5vw, 4rem);
+		padding-block: clamp(2rem, 4vw, 4rem);
 		background: var(--ink);
 	}
 
@@ -186,32 +192,36 @@
 		border-bottom: 1px solid var(--border);
 	}
 
-	.section-dark {
-		background: var(--ink);
-		color: var(--surface);
+	.section-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 0.75fr) minmax(18rem, 1.25fr);
+		gap: clamp(2rem, 8vw, 8rem);
+		align-items: start;
 	}
 
-	.section h2 {
-		max-width: 14ch;
+	.section-heading {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.section h2,
+	.project-links h2 {
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(2.5rem, 6vw, 6rem);
-		line-height: 0.9;
+		font-size: clamp(2.75rem, 6.5vw, 6.5rem);
+		line-height: 0.84;
 	}
 
 	.section-copy {
 		display: grid;
-		gap: 1.2rem;
+		gap: 1.4rem;
 		max-width: var(--measure);
 	}
 
 	.section-copy p {
 		margin: 0;
 		color: var(--text-muted);
-		font-size: clamp(1rem, 1.6vw, 1.15rem);
-	}
-
-	.section-dark .section-copy p {
-		color: rgb(255 255 255 / 68%);
+		font-size: clamp(1rem, 1.5vw, 1.12rem);
 	}
 
 	.contribution-list {
@@ -224,8 +234,8 @@
 	.contribution-list li {
 		display: grid;
 		grid-template-columns: 3rem minmax(0, 1fr);
-		gap: 1rem;
-		padding-block: 1rem;
+		gap: 1.25rem;
+		padding-block: 1.3rem;
 		border-bottom: 1px solid var(--border);
 	}
 
@@ -236,6 +246,14 @@
 
 	.contribution-list p {
 		margin: 0;
+		font-size: clamp(1rem, 1.7vw, 1.2rem);
+	}
+
+	.project-links {
+		padding-block: var(--space-section);
+		border-top: 4px solid var(--brand);
+		background: var(--ink);
+		color: var(--surface);
 	}
 
 	.project-links ul {
@@ -243,7 +261,7 @@
 		gap: 0;
 		margin: 0;
 		padding: 0;
-		border-top: 1px solid var(--border);
+		border-top: 1px solid var(--inverse-border);
 		list-style: none;
 	}
 
@@ -252,17 +270,25 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		min-height: 2.75rem;
+		min-height: 3rem;
 		padding-block: 1rem;
-		border-bottom: 1px solid var(--border);
+		border-bottom: 1px solid var(--inverse-border);
+		color: var(--surface);
 		font-weight: 800;
-		text-underline-offset: 0.3em;
+		text-decoration: none;
 	}
 
-	@media (max-width: 58rem) {
-		.hero__grid,
+	@media (max-width: 60rem) {
+		.hero__main,
 		.section-grid {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 44rem) {
+		.hero__topline {
+			align-items: flex-start;
+			flex-direction: column;
 		}
 
 		.facts {

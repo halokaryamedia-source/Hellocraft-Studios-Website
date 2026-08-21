@@ -12,25 +12,29 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="work-title">
 		<div class="shell hero__inner">
-			<p class="eyebrow">{workCopy.hero.eyebrow}</p>
-			<div class="hero__grid">
-				<h1 id="work-title">{workCopy.hero.title}</h1>
+			<div class="hero__meta">
+				<span class="section-index">01 / Work</span>
+				<p class="eyebrow">Selected projects</p>
+			</div>
+			<h1 id="work-title">{workCopy.hero.title}</h1>
+			<div class="hero__footer">
 				<p>{workCopy.hero.body}</p>
+				<p class="count">{String(projects.length).padStart(2, '0')} projects in development preview</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="projects" aria-label="Projects">
 		<div class="shell">
-			<div class="projects__heading">
-				<p class="eyebrow">Project index</p>
-				<p class="count">{String(projects.length).padStart(2, '0')} entries</p>
-			</div>
-
 			{#if projects.length > 0}
-				<div class="project-grid">
-					{#each projects as project (project.slug)}
-						<ProjectCard {project} headingLevel={2} />
+				<div class="project-list">
+					{#each projects as project, index (project.slug)}
+						<ProjectCard
+							{project}
+							headingLevel={2}
+							index={index + 1}
+							reverse={index % 2 === 1}
+						/>
 					{/each}
 				</div>
 			{:else}
@@ -41,11 +45,6 @@
 </main>
 
 <style>
-	.shell {
-		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
-		margin-inline: auto;
-	}
-
 	.hero {
 		background: var(--ink);
 		color: var(--surface);
@@ -53,92 +52,73 @@
 
 	.hero__inner {
 		display: grid;
-		gap: clamp(2rem, 5vw, 5rem);
-		padding-block: clamp(5rem, 11vw, 10rem);
+		gap: clamp(2.5rem, 6vw, 6rem);
+		padding-block: clamp(5rem, 10vw, 10rem);
 	}
 
-	.hero__grid {
+	.hero__meta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.hero__meta .eyebrow {
+		color: rgb(255 255 255 / 58%);
+	}
+
+	h1 {
+		max-width: 10ch;
+		margin: 0;
+		font-size: clamp(5rem, 13vw, 13rem);
+		line-height: 0.75;
+	}
+
+	.hero__footer {
 		display: grid;
-		grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.7fr);
-		gap: clamp(2rem, 7vw, 7rem);
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 2rem;
 		align-items: end;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--inverse-border);
 	}
 
-	.eyebrow {
+	.hero__footer > p:first-child {
+		max-width: var(--measure);
+		margin: 0;
+		color: rgb(255 255 255 / 62%);
+	}
+
+	.count {
 		margin: 0;
 		color: var(--brand);
-		font-size: 0.72rem;
+		font-size: 0.68rem;
 		font-weight: 850;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
 
-	h1 {
-		max-width: 12ch;
-		margin: 0;
-		font-size: clamp(4rem, 10vw, 10rem);
-		line-height: 0.83;
-	}
-
-	.hero__grid p {
-		max-width: var(--measure);
-		margin: 0;
-		color: rgb(255 255 255 / 66%);
-		font-size: clamp(1rem, 1.7vw, 1.2rem);
-	}
-
 	.projects {
-		padding-block: var(--space-section);
+		padding-block: clamp(2rem, 5vw, 5rem) var(--space-section);
 	}
 
-	.projects__heading {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		margin-bottom: clamp(2rem, 5vw, 4rem);
-		padding-bottom: 1rem;
+	.project-list {
 		border-bottom: 1px solid var(--border);
 	}
 
-	.projects__heading .eyebrow {
-		color: var(--ink);
-	}
-
-	.count {
-		margin: 0;
-		color: var(--text-muted);
-		font-size: 0.8rem;
-		font-weight: 750;
-	}
-
-	.project-grid {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 4vw, 3.5rem);
-	}
-
-	.project-grid :global(.project-card:nth-child(3n)) {
-		grid-column: 1 / -1;
-		width: min(100%, 62rem);
-		margin-inline: auto;
-	}
-
 	.pending-state {
-		padding: 2rem;
-		border: 1px dashed var(--border);
-		border-radius: var(--radius-sm);
+		padding-block: 3rem;
+		border-block: 1px solid var(--border);
+		color: var(--text-muted);
 	}
 
-	@media (max-width: 58rem) {
-		.hero__grid,
-		.project-grid {
+	@media (max-width: 46rem) {
+		.hero__footer {
 			grid-template-columns: 1fr;
+			align-items: start;
 		}
 
-		.project-grid :global(.project-card:nth-child(3n)) {
-			grid-column: auto;
-			width: auto;
+		h1 {
+			font-size: clamp(4.5rem, 22vw, 7rem);
 		}
 	}
 </style>

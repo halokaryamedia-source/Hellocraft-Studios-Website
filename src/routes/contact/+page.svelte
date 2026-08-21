@@ -10,22 +10,20 @@
 <main id="main-content">
 	<section class="hero" aria-labelledby="contact-title">
 		<div class="shell hero__inner">
-			<div class="hero__copy">
+			<div class="hero__meta">
+				<span class="section-index">01 / Contact</span>
 				<p class="eyebrow">{contactCopy.hero.eyebrow}</p>
-				<h1 id="contact-title">{contactCopy.hero.title}</h1>
-				<p>{contactCopy.hero.body}</p>
 			</div>
-			<div class="hero__art" aria-hidden="true">
-				<div class="hero__star"></div>
-				<span>HELLO?</span>
-			</div>
+			<h1 id="contact-title">{contactCopy.hero.title}</h1>
+			<p class="hero__body">{contactCopy.hero.body}</p>
 		</div>
 	</section>
 
 	<section class="methods" aria-labelledby="contact-methods-title">
-		<div class="shell methods__inner">
-			<div>
-				<p class="eyebrow">01 / Channels</p>
+		<div class="shell split">
+			<div class="section-heading">
+				<span class="section-index">02</span>
+				<p class="eyebrow">Channels</p>
 				<h2 id="contact-methods-title">{contactCopy.methods.title}</h2>
 			</div>
 
@@ -38,7 +36,6 @@
 					</ul>
 				{:else}
 					<div class="pending-state">
-						<span aria-hidden="true">✦</span>
 						<p>{contactCopy.methods.emptyState}</p>
 					</div>
 				{/if}
@@ -47,10 +44,10 @@
 	</section>
 
 	<section class="inquiry" aria-labelledby="contact-inquiry-title">
-		<div class="shell inquiry__inner">
-			<div class="inquiry__mark" aria-hidden="true"></div>
-			<div>
-				<p class="eyebrow">02 / Inquiry</p>
+		<div class="shell split">
+			<div class="section-heading">
+				<span class="section-index">03</span>
+				<p class="eyebrow">Inquiry</p>
 				<h2 id="contact-inquiry-title">{contactCopy.inquiry.title}</h2>
 			</div>
 			<p>{contactCopy.inquiry.body}</p>
@@ -59,19 +56,6 @@
 </main>
 
 <style>
-	.shell {
-		width: min(100% - (var(--page-gutter) * 2), var(--content-max));
-		margin-inline: auto;
-	}
-
-	.eyebrow {
-		margin: 0;
-		font-size: 0.72rem;
-		font-weight: 850;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-	}
-
 	.hero {
 		background: var(--ink);
 		color: var(--surface);
@@ -79,88 +63,65 @@
 
 	.hero__inner {
 		display: grid;
-		grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.65fr);
-		gap: clamp(2rem, 8vw, 8rem);
+		gap: clamp(2.5rem, 6vw, 6rem);
+		padding-block: clamp(5rem, 11vw, 11rem);
+	}
+
+	.hero__meta {
+		display: flex;
 		align-items: center;
-		padding-block: clamp(4rem, 10vw, 10rem);
+		gap: 1rem;
 	}
 
-	.hero__copy {
-		display: grid;
-		gap: 1.2rem;
-	}
-
-	.hero .eyebrow {
-		color: var(--brand);
+	.hero__meta .eyebrow {
+		color: rgb(255 255 255 / 58%);
 	}
 
 	h1 {
-		max-width: 10ch;
+		max-width: 9ch;
 		margin: 0;
-		font-size: clamp(4rem, 10vw, 10rem);
-		line-height: 0.82;
+		font-size: clamp(5rem, 13vw, 13rem);
+		line-height: 0.74;
 	}
 
-	.hero__copy > p:last-child {
-		max-width: var(--measure);
+	.hero__body {
+		max-width: 43rem;
 		margin: 0;
-		color: rgb(255 255 255 / 66%);
+		color: rgb(255 255 255 / 62%);
 	}
 
-	.hero__art {
-		position: relative;
-		display: grid;
-		place-items: center;
-		min-height: clamp(20rem, 40vw, 34rem);
-		overflow: hidden;
-		border: 1px solid var(--inverse-border);
-		border-radius: var(--radius-md);
-		background: #17191b;
-	}
-
-	.hero__star {
-		width: min(68%, 20rem);
-		aspect-ratio: 1;
-		background: var(--brand);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-		transform: rotate(-8deg);
-	}
-
-	.hero__art span {
-		position: absolute;
-		right: 1rem;
-		bottom: 1rem;
-		font-family: Arial, 'Helvetica Neue', sans-serif;
-		font-size: clamp(2.5rem, 7vw, 6rem);
-		font-weight: 900;
-		letter-spacing: -0.08em;
-		line-height: 0.8;
+	.methods,
+	.inquiry {
+		padding-block: var(--space-section);
 	}
 
 	.methods {
-		padding-block: var(--space-section);
 		background: var(--surface);
 	}
 
-	.methods__inner,
-	.inquiry__inner {
+	.inquiry {
+		border-top: 4px solid var(--brand);
+		background: var(--paper);
+	}
+
+	.split {
 		display: grid;
-		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+		grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 1.2fr);
 		gap: clamp(2rem, 8vw, 8rem);
 		align-items: start;
 	}
 
-	.methods__inner > div:first-child,
-	.inquiry__inner > div:nth-child(2) {
+	.section-heading {
 		display: grid;
+		align-content: start;
 		gap: 1rem;
 	}
 
 	h2 {
-		max-width: 13ch;
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(2.5rem, 6vw, 6rem);
-		line-height: 0.9;
+		font-size: clamp(3rem, 7vw, 7rem);
+		line-height: 0.84;
 	}
 
 	.contact-list {
@@ -174,61 +135,31 @@
 
 	.contact-list a {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+		min-height: 3rem;
 		padding-block: 1rem;
 		border-bottom: 1px solid var(--border);
-		font-size: clamp(1.1rem, 2vw, 1.5rem);
+		font-size: clamp(1.2rem, 2.5vw, 2rem);
 		font-weight: 850;
-		text-underline-offset: 0.3em;
+		text-decoration: none;
 	}
 
 	.pending-state {
-		display: grid;
-		gap: 1rem;
-		padding: clamp(1.5rem, 4vw, 2.5rem);
-		border: 1px solid var(--border);
-		border-radius: var(--radius-md);
-		background: var(--paper);
+		padding-block: 2rem;
+		border-block: 1px solid var(--border);
 	}
 
-	.pending-state span {
-		color: var(--brand-strong);
-		font-size: 2rem;
-	}
-
-	.pending-state p {
+	.pending-state p,
+	.inquiry .split > p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.inquiry {
-		padding-block: var(--space-section);
-		background: var(--brand);
-	}
-
-	.inquiry__inner {
-		grid-template-columns: auto minmax(0, 1.05fr) minmax(18rem, 0.75fr);
-	}
-
-	.inquiry__inner > p {
-		max-width: var(--measure);
-		margin: 0;
-		color: rgb(12 13 14 / 70%);
-	}
-
-	.inquiry__mark {
-		width: clamp(3rem, 6vw, 5rem);
-		aspect-ratio: 1;
-		background: var(--surface);
-		clip-path: polygon(50% 0%, 61% 34%, 98% 25%, 70% 50%, 98% 76%, 62% 66%, 50% 100%, 39% 66%, 2% 76%, 30% 50%, 2% 25%, 39% 34%);
-	}
-
 	@media (max-width: 60rem) {
-		.hero__inner,
-		.methods__inner,
-		.inquiry__inner {
+		.split {
 			grid-template-columns: 1fr;
 		}
 	}

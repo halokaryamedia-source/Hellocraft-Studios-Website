@@ -1,23 +1,26 @@
 <script lang="ts">
-	import BrandSymbol from '$lib/components/brand/BrandSymbol.svelte';
-
 	let {
 		variant = 'card',
-		label = 'Project visual'
+		label = 'Project media',
+		index = '01'
 	}: {
 		variant?: 'card' | 'hero';
 		label?: string;
+		index?: string;
 	} = $props();
 </script>
 
 <div class="media" class:media--hero={variant === 'hero'} aria-hidden="true">
-	<span class="media__label">{label}</span>
-	<div class="media__symbol">
-		<BrandSymbol
-			size="100%"
-			tone={variant === 'hero' ? 'brand' : 'surface'}
-			rotation={variant === 'hero' ? '-10deg' : '-8deg'}
-		/>
+	<div class="media__topline">
+		<span>{label}</span>
+		<span>{index}</span>
+	</div>
+	<div class="media__field">
+		<span>HC</span>
+	</div>
+	<div class="media__footer">
+		<span>Hellocraft Studios</span>
+		<span>Development preview</span>
 	</div>
 </div>
 
@@ -25,61 +28,84 @@
 	.media {
 		position: relative;
 		display: grid;
-		align-items: end;
+		grid-template-rows: auto minmax(0, 1fr) auto;
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
-		padding: clamp(1rem, 3vw, 1.5rem);
+		padding: clamp(1rem, 2.4vw, 1.5rem);
 		border: 1px solid var(--border);
 		border-radius: var(--radius-md);
-		background:
-			linear-gradient(90deg, rgb(12 13 14 / 7%) 1px, transparent 1px) 0 0 / 2rem 2rem,
-			linear-gradient(rgb(12 13 14 / 7%) 1px, transparent 1px) 0 0 / 2rem 2rem,
-			var(--brand);
+		background: var(--ink-soft);
+		color: var(--surface);
+		transition: transform var(--motion-medium) cubic-bezier(0.2, 0.75, 0.2, 1);
+	}
+
+	.media::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 24%;
+		background: var(--brand);
+		content: '';
+		transform: skewX(-7deg) translateX(18%);
+		transform-origin: top right;
+		transition: width var(--motion-medium) cubic-bezier(0.2, 0.75, 0.2, 1);
+	}
+
+	.media::after {
+		position: absolute;
+		inset: 20% 10%;
+		border: 1px solid rgb(255 255 255 / 10%);
+		content: '';
 	}
 
 	.media--hero {
-		min-height: clamp(24rem, 60vw, 54rem);
+		min-height: clamp(26rem, 54vw, 50rem);
 		aspect-ratio: auto;
-		padding: clamp(1rem, 3vw, 2rem);
+		padding: clamp(1.25rem, 3vw, 2rem);
 		border-color: var(--inverse-border);
-		background:
-			linear-gradient(90deg, rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
-			linear-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px) 0 0 / 3rem 3rem,
-			#17191b;
-		color: var(--surface);
 	}
 
-	.media__label {
+	.media__topline,
+	.media__footer {
 		position: relative;
 		z-index: 2;
-		width: fit-content;
-		padding: 0.45rem 0.65rem;
-		border-radius: 999px;
-		background: var(--ink);
-		color: var(--surface);
-		font-size: 0.7rem;
-		font-weight: 850;
-		letter-spacing: 0.08em;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		font-size: 0.66rem;
+		font-weight: 800;
+		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
 
-	.media--hero .media__label {
-		padding: 0;
-		border-radius: 0;
-		background: transparent;
-		font-size: 0.75rem;
-		letter-spacing: 0.12em;
+	.media__footer {
+		color: rgb(255 255 255 / 58%);
 	}
 
-	.media__symbol {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: min(48%, 10rem);
-		transform: translate(-50%, -50%);
+	.media__field {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		place-items: center;
 	}
 
-	.media--hero .media__symbol {
-		width: min(48%, 24rem);
+	.media__field span {
+		font-family: Arial, 'Helvetica Neue', sans-serif;
+		font-size: clamp(5rem, 16vw, 15rem);
+		font-weight: 900;
+		letter-spacing: -0.1em;
+		line-height: 0.75;
+		color: rgb(255 255 255 / 8%);
+	}
+
+	:global(.project-card a:hover) .media,
+	:global(.project-card a:focus-visible) .media {
+		transform: translateY(-0.2rem);
+	}
+
+	:global(.project-card a:hover) .media::before,
+	:global(.project-card a:focus-visible) .media::before {
+		width: 30%;
 	}
 </style>
