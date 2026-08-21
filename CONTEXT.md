@@ -73,38 +73,37 @@ Minecraft pixel UI as global site chrome
 literal copying of Hazelight or Blind Squirrel layouts/assets
 ```
 
-## Approved visual baselines
+## Approved / accepted route baselines
 
-The project owner explicitly approved:
+The project owner has approved the current direction sufficiently to continue through:
 
 ```text
 Homepage
 Work
+Project Detail
 ```
 
-Homepage remains the primary visual grammar. Work is the approved portfolio-index interpretation of that grammar.
+Homepage remains the primary visual grammar. Work is the approved portfolio-index interpretation. Project Detail is accepted as the current project-detail interpretation for continued propagation.
 
-Do not redesign either route from model taste while propagating later pages.
+Do not redesign these routes from model taste while propagating later pages.
 
-## Current Project Detail state
+## Current Studio state
 
-`src/routes/work/[slug]/+page.svelte` has now been visually propagated from the approved Homepage + Work direction.
+`src/routes/studio/+page.svelte` has now been visually propagated from the accepted route grammar.
 
-Current Project Detail composition:
+Current Studio composition:
 
 ```text
-restrained project introduction
-→ title + summary / optional project facts
-→ one dominant project media stage
-→ optional Hellocraft contribution block
-→ flexible narrative detail sections
-→ optional project-links surface
-→ simple return-to-Work closing
+restrained Studio introduction
+→ capability narrative on the paper surface
+→ working approach on a neutral secondary surface
+→ optional verified proof only outside demo mode
+→ simple Contact closing
 ```
 
-The old route also contained a stale `ProjectMediaPlaceholder` call using unsupported `label` and `index` props. That mismatch has been removed; the route now follows the current placeholder contract.
+The old Studio route used a title up to 10rem and repeated large split sections with a dark chapter block. Those chapter-like patterns have been removed.
 
-Project Detail is implemented and pending project-owner visual approval. Studio, Careers, and Contact have not yet been visually propagated.
+Studio is implemented and pending project-owner review. Careers and Contact have not yet been visually propagated.
 
 ## Brand / content state
 
@@ -201,7 +200,7 @@ chrome-devtools-validation
 
 Source-level accessibility foundations are present. Rendered keyboard, reflow, contrast, final visual hierarchy, build, and performance proof remain pending.
 
-A Project Detail layout-proxy screenshot attempt stalled in the current Chromium environment; do not treat source inspection as rendered/runtime proof.
+Project Detail and Studio layout-proxy screenshot attempts stalled in the current Chromium environment; do not treat source inspection as rendered/runtime proof.
 
 ## Current project-owner boundary
 
@@ -229,8 +228,8 @@ dummy content mode                   = active
 Hazelight + Blind Squirrel direction = approved
 Homepage visual baseline             = APPROVED
 Work visual baseline                 = APPROVED
-Project Detail visual propagation    = implemented / review-ready
-Studio visual propagation            = pending
+Project Detail route baseline        = accepted to continue
+Studio visual propagation            = implemented / review-ready
 Careers visual propagation           = pending
 Contact visual propagation           = pending
 brand replacement surface            = ready
