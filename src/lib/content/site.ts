@@ -6,8 +6,8 @@ export const siteIdentity = {
 } as const;
 
 export const primaryNavigation = [
-	{ label: 'Work', href: '/work' },
-	{ label: 'Studio', href: '/studio' },
+	{ label: 'Portfolio', href: '/portfolio' },
+	{ label: 'About', href: '/about' },
 	{ label: 'Careers', href: '/careers' },
 	{ label: 'Contact', href: '/contact' }
 ] as const satisfies readonly LinkItem[];
