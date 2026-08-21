@@ -6,11 +6,11 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Studio implementation commit:
+Latest Careers implementation commit:
 
 ```text
-ade63c9992a94511b9a401c910aad588aabe415f
-refine(studio): align studio page with approved visual baseline
+aac6f662bb6b6f08587c75e0747ab26be2c87e91
+refine(careers): align careers page with approved visual baseline
 ```
 
 ## Current Status
@@ -26,9 +26,9 @@ BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
 HOMEPAGE_VISUAL_BASELINE_APPROVED
 WORK_VISUAL_BASELINE_APPROVED
 PROJECT_DETAIL_ROUTE_BASELINE_APPROVED_TO_CONTINUE
-STUDIO_VISUAL_PROPAGATION_IMPLEMENTED
-STUDIO_PROJECT_OWNER_APPROVAL_PENDING
-CAREERS_VISUAL_PROPAGATION_PENDING
+STUDIO_ROUTE_BASELINE_APPROVED_TO_CONTINUE
+CAREERS_VISUAL_PROPAGATION_IMPLEMENTED
+CAREERS_PROJECT_OWNER_APPROVAL_PENDING
 CONTACT_VISUAL_PROPAGATION_PENDING
 REAL_PROJECT_MEDIA_PENDING
 REAL_PORTFOLIO_EVIDENCE_PENDING
@@ -40,20 +40,7 @@ LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 ```
 
-## Approved Visual Baselines
-
-The project owner has approved the route direction sufficiently to continue through:
-
-```text
-Homepage
-→ primary visual grammar
-
-Work
-→ portfolio-index interpretation
-
-Project Detail
-→ project-detail interpretation approved to continue propagation
-```
+## Approved Visual Direction
 
 Reference roles remain:
 
@@ -75,127 +62,133 @@ Current thesis:
 
 > **A professional Minecraft game studio presented with Hazelight-style visual confidence and media-first simplicity, combined with Blind-Squirrel-style project and capability credibility.**
 
-Do not reopen visual-direction research unless the project owner changes direction.
+The accepted route grammar now extends through:
 
-## Current Studio Route
+```text
+Homepage
+→ Work
+→ Project Detail
+→ Studio
+```
 
-`src/routes/studio/+page.svelte` has now been rebuilt from the accepted route grammar.
+Do not reopen the visual-direction research unless the project owner explicitly changes direction.
 
-Previous Studio problems:
+## Careers Route
+
+`src/routes/careers/+page.svelte` has now been propagated from the accepted visual language.
+
+Previous Careers problems:
 
 ```text
 hero title scaled up to 10rem
-Capability / Approach repeated the same large split-section formula
-Approach used a dark chapter block that reintroduced rejected dark/light chapter rhythm
-large headings repeated mechanically
-contact closing repeated another oversized section pattern
+large section headings repeated mechanically
+General / Application repeated chapter-like split sections
+Application used another dark chapter block
+demo career entries were rendered as visible vacancies while contentIsDemo = true
 ```
 
 Current composition:
 
 ```text
-restrained Studio introduction
-→ Studio statement + supporting copy
-→ capability narrative on the paper surface
-→ working approach on a neutral secondary surface
-→ optional verified proof only when demo mode is off and real evidence exists
-→ simple closing Contact statement
+restrained Careers introduction
+→ studio/culture statement on a neutral secondary surface
+→ Open roles section with a compact section anchor
+→ real openings, when approved, render as clean editorial rows
+→ simple How to apply closing section
 ```
 
-The page deliberately does not add:
+## Demo Vacancy Safety
+
+Demo career data remains available in:
 
 ```text
-fake KPI strips
-service-card grids
-invented team size / client / award claims
-new Services taxonomy
-Minecraft HUD / pixel UI
-numbered chapters
-Blind Squirrel wave graphics
-literal Hazelight layout copying
-```
-
-Existing content ownership is preserved:
-
-```text
-src/lib/content/pages.ts
-→ Studio copy
-
 src/lib/content/demo-data.ts
-→ temporary Studio proof data
 ```
 
-The existing proof condition remains important:
+but the Careers route now uses the publication boundary:
 
 ```text
 contentIsDemo = true
-→ demo proof items remain hidden from the public presentation
+→ do not render demo roles as public vacancies
+→ show careersCopy.openings.emptyState instead
+
+contentIsDemo = false + approved careerOpenings
+→ render actual opening rows
 ```
 
-## Studio Review Boundary
+This preserves development data without presenting fabricated recruitment claims.
 
-A source-equivalent Chromium layout-proxy attempt was made after the Studio implementation, but Chromium again stalled in the current environment before screenshots were produced.
+## Careers Review Boundary
 
 Current proof level:
 
 ```text
-Studio source implementation     = completed
-content / semantic structure     = reviewed at source level
-layout screenshot proxy          = unavailable in current environment
-actual Svelte runtime            = deferred / unproven
-project-owner visual approval    = pending
+Careers source implementation       = completed
+demo vacancy publication guard      = implemented
+content / semantic structure        = reviewed at source level
+actual Svelte runtime               = deferred / unproven
+project-owner visual approval       = pending
 ```
 
-Do not claim rendered/runtime acceptance from source inspection alone.
+Do not claim exact rendered/runtime acceptance while local runtime validation remains deferred.
 
 ## Immediate Next Step
 
-### 1. Review Studio
+### 1. Review Careers
 
-If the project owner approves the Studio direction:
-
-```text
-Studio approved
-→ freeze Studio as route baseline
-→ inspect current Careers source
-→ propagate approved visual grammar to Careers only
-→ review Careers before Contact
-```
-
-If Studio receives critique:
+If the project owner approves Careers:
 
 ```text
-identify concrete Studio-specific problem
-→ make smallest Studio-only correction
-→ preserve approved Homepage / Work / Project Detail baselines
+Careers approved
+→ freeze Careers as route baseline
+→ inspect current Contact source
+→ propagate approved visual grammar to Contact only
+→ review Contact
 ```
 
-### 2. Remaining propagation order
+If Careers receives critique:
 
 ```text
-Careers
-→ Contact
+identify concrete Careers-specific problem
+→ make smallest Careers-only correction
+→ preserve accepted Homepage / Work / Project Detail / Studio baselines
 ```
 
-Each route should solve its own content relationship rather than cloning the Homepage.
+### 2. Remaining visual propagation
+
+```text
+Contact
+```
+
+After Contact is accepted, route-level visual discovery/propagation is effectively complete and the project can move into production replacement and finalization:
+
+```text
+real portfolio data + media
+→ final studio/career/contact content
+→ production logo + typography
+→ responsive/accessibility/performance QA
+→ build/runtime validation when re-authorized
+→ publication / hosting
+```
 
 ## Preserve These Rules
 
 ```text
 Homepage is APPROVED
 Work is APPROVED
-Project Detail is accepted as the current route baseline for continued propagation
+Project Detail direction is accepted to continue
+Studio direction is accepted to continue
 real media > invented decoration
 content hierarchy > repeated visual systems
 no numbered chapter progression
 no Blind Squirrel wave/brand-graphic copying
-no literal Hazelight floating-image recreation
+no literal Hazelight layout recreation
 no fake HUD / coordinates / inventory UI
 no generic card grid when content hierarchy differs
 no invented KPI strip
 no Services route initially
 no Work filters/categories initially
-no fabricated contact, client, award, or studio-scale claims
+no fabricated contact, client, award, team-size, or recruitment claims
 ```
 
 ## Production Content / Media Still Pending
@@ -222,8 +215,6 @@ ProjectMediaPlaceholder / future media owner
 → real project imagery/video
 ```
 
-Real project media is expected to materially improve Homepage, Work, and Project Detail. Final Studio credibility should come from verified studio/project evidence rather than invented marketing metrics.
-
 ## Technical / Deferred Boundary
 
 Current declared baseline:
@@ -247,4 +238,4 @@ production adapter selection
 
 ## Next Step
 
-**Get project-owner review of the propagated Studio page. If approved, continue to Careers; otherwise make only the smallest Studio-specific correction.**
+**Review the propagated Careers page. If approved, continue to Contact as the final route-level visual propagation.**
