@@ -165,19 +165,22 @@
 	}
 
 	.hero__visual {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.28fr);
-		gap: clamp(1rem, 2.5vw, 2.25rem);
-		align-items: end;
+		position: relative;
+		padding-right: clamp(2rem, 5vw, 5rem);
+		padding-bottom: clamp(1.5rem, 3vw, 3rem);
 	}
 
-	.hero__visual-main,
-	.hero__visual-brand {
+	.hero__visual-main {
+		width: min(100%, 76rem);
 		overflow: hidden;
 	}
 
 	.hero__visual-brand {
-		margin-bottom: clamp(1.25rem, 3vw, 3rem);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: clamp(12rem, 22vw, 20rem);
+		overflow: hidden;
 	}
 
 	.work-section {
@@ -195,10 +198,10 @@
 
 	.work-heading h2 {
 		margin: 0;
-		font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+		font-size: clamp(1.7rem, 2.5vw, 2.3rem);
 		font-weight: 680;
-		line-height: 1.1;
-		letter-spacing: -0.02em;
+		line-height: 1.05;
+		letter-spacing: -0.025em;
 	}
 
 	.work-heading__aside {
@@ -353,15 +356,13 @@
 	}
 
 	.contact-section {
-		padding-block: clamp(6rem, 10vw, 9rem);
+		padding-block: clamp(5.5rem, 8vw, 7.5rem);
 		background: var(--surface);
 	}
 
 	.contact-grid {
 		display: grid;
-		grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
-		gap: clamp(3rem, 9vw, 9rem);
-		align-items: end;
+		gap: clamp(2.75rem, 5vw, 4.5rem);
 	}
 
 	.contact-heading {
@@ -370,21 +371,22 @@
 	}
 
 	.contact-heading h2 {
-		max-width: 13ch;
+		max-width: 17ch;
 		margin: 0;
-		font-size: clamp(2.75rem, 4.7vw, 4.6rem);
+		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
 		font-weight: 680;
 		line-height: 0.99;
 	}
 
 	.contact-copy {
 		display: grid;
-		gap: 1.5rem;
-		justify-items: start;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: clamp(2rem, 7vw, 7rem);
+		align-items: end;
 	}
 
 	.contact-copy p {
-		max-width: var(--measure);
+		max-width: 34rem;
 		margin: 0;
 		color: var(--text-muted);
 		font-size: clamp(1rem, 1.25vw, 1.1rem);
@@ -412,8 +414,7 @@
 		.work-heading,
 		.lead-project__caption,
 		.secondary-project,
-		.studio-grid,
-		.contact-grid {
+		.studio-grid {
 			grid-template-columns: 1fr;
 		}
 
@@ -423,13 +424,12 @@
 		}
 
 		.hero__support,
-		.work-heading__aside,
-		.contact-copy {
+		.work-heading__aside {
 			max-width: 38rem;
 		}
 
 		.hero__visual {
-			grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.34fr);
+			padding-right: clamp(2rem, 6vw, 4rem);
 		}
 
 		.secondary-project {
@@ -457,11 +457,14 @@
 		}
 
 		.hero__visual {
-			grid-template-columns: 1fr;
-			gap: 1rem;
+			padding-right: 0;
+			padding-bottom: 0;
 		}
 
 		.hero__visual-brand {
+			position: relative;
+			right: auto;
+			bottom: auto;
 			width: 58%;
 			margin-top: -1.75rem;
 			margin-bottom: 0;
@@ -479,6 +482,11 @@
 		.studio-heading h2,
 		.contact-heading h2 {
 			font-size: clamp(2.65rem, 11.5vw, 3.7rem);
+		}
+
+		.contact-copy {
+			grid-template-columns: 1fr;
+			align-items: start;
 		}
 	}
 </style>
