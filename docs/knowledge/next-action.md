@@ -6,11 +6,11 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Homepage implementation commit:
+Latest Work implementation commit:
 
 ```text
-4c0d1f9b1732570c6fb2a37803d9608d60c282fd
-refine(home): tune rendered composition and closing
+5c5f9c46a30f070f1871dd1f4c17306155d60e6f
+refine(work): align portfolio index with approved homepage
 ```
 
 ## Current Status
@@ -18,46 +18,45 @@ refine(home): tune rendered composition and closing
 ```text
 FOUNDATION_BASELINE_ESTABLISHED
 CONTENT_INTAKE_CONTRACT_READY
-INFORMATION_ARCHITECTURE_APPROVED
 ROUTE_ARCHITECTURE_APPROVED
 CONTENT_OWNER_MODEL_APPROVED
 TEMPORARY_DEMO_CONTENT_APPROVED
-REFERENCE_RESEARCH_COMPLETED
 HAZELIGHT_VISUAL_LEAD_APPROVED
 BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
-HOMEPAGE_VISUAL_THESIS_APPROVED
-HOMEPAGE_SOURCE_REBUILD_IMPLEMENTED
-HOMEPAGE_REFINEMENT_PASS_2_IMPLEMENTED
-HOMEPAGE_LAYOUT_RENDER_PROXY_REVIEWED
-HOMEPAGE_REFINEMENT_PASS_3_IMPLEMENTED
-HOMEPAGE_ACTUAL_SVELTE_RUNTIME_APPROVAL_PENDING
-REMAINING_ROUTE_VISUAL_PROPAGATION_BLOCKED
-FINAL_PRODUCTION_FONT_PENDING
+HOMEPAGE_VISUAL_BASELINE_APPROVED
+WORK_VISUAL_PROPAGATION_IMPLEMENTED
+WORK_LAYOUT_RENDER_PROXY_REVIEWED
+WORK_PROJECT_OWNER_APPROVAL_PENDING
+PROJECT_DETAIL_VISUAL_PROPAGATION_PENDING
+STUDIO_VISUAL_PROPAGATION_PENDING
+CAREERS_VISUAL_PROPAGATION_PENDING
+CONTACT_VISUAL_PROPAGATION_PENDING
 REAL_PROJECT_MEDIA_PENDING
 REAL_PORTFOLIO_EVIDENCE_PENDING
-REAL_STUDIO_PROFILE_PENDING
+FINAL_PRODUCTION_FONT_PENDING
+PRODUCTION_LOGO_PENDING
 REAL_CONTACT_CHANNELS_PENDING
 REAL_CAREER_OPENINGS_PENDING
-BUN_LOCK_PENDING_INSTALL
 LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 ```
 
-## Approved Visual Direction
+## Approved Visual Baseline
 
-The project owner approved this reference pairing:
+The project owner explicitly approved the Homepage after the third visual refinement pass.
+
+Reference roles remain:
 
 ```text
 Hazelight Studios
 → visual lead
 → game-first confidence
 → media prominence
-→ restrained hero
-→ elegant whitespace and typography behavior
+→ restraint / whitespace / typography behavior
 
 Blind Squirrel Games
 → structural/business reference
-→ clear studio credibility
+→ studio credibility
 → project + capability communication
 → client-facing game-development professionalism
 ```
@@ -66,139 +65,138 @@ Current thesis:
 
 > **A professional Minecraft game studio presented with Hazelight-style visual confidence and media-first simplicity, combined with Blind-Squirrel-style project and capability credibility.**
 
-Short form:
+Do not reopen visual-direction research unless the project owner changes direction.
+
+## Current Work Route
+
+`src/routes/work/+page.svelte` has been rebuilt from the approved Homepage grammar.
+
+Previous state:
 
 ```text
-cinematic
-clean
-confident
-game-first
+very large Work hero
++ project count
++ repeated uniform ProjectCard list
 ```
 
-Minecraft identity should come primarily from real Hellocraft project media, not inventory UI, pixel borders, fake HUDs, coordinates, or global Minecraft-themed chrome.
-
-## Current Homepage Source State
-
-Only `src/routes/+page.svelte` has received the visual redesign/refinement work.
-
-Current composition:
+Current state:
 
 ```text
-Header
-→ existing shared header unchanged
-
-Hero
-→ Minecraft game studio eyebrow
-→ large studio statement + concise support copy
-→ dominant development-media field
-→ smaller Hellocraft brand/media field overlapping the main media composition
-
-Selected Work
-→ visible section anchor
-→ large primary project media
-→ project title + concise description
-→ secondary project uses a different copy/media rhythm
-→ no numbered chapters
-→ no uniform card grid
-
-Studio / Capability
-→ neutral secondary surface
-→ strong studio statement
-→ concise supporting capability narrative
-→ one structural divider only where content relationship warrants it
-
-Contact
-→ single large closing statement
-→ supporting copy + contact action below
-→ avoids repeating another heading-left / copy-right chapter formula
-
-Footer
-→ existing shared footer unchanged
+restrained Work hero
+→ concise supporting copy + project count
+→ one lead project with dominant media
+→ title / summary presentation derived from Homepage hierarchy
+→ remaining projects as clean media/copy rows
+→ no filters/categories
+→ no card grid
+→ no decorative project numbering
+→ straightforward responsive stack
 ```
 
-Shared Header, Footer, app-wide design tokens, Work, Studio, Careers, Contact, and project-detail routes remain intentionally unpropagated.
+The change intentionally keeps `projects.ts` as the data owner and `ProjectMediaPlaceholder.svelte` as the development-media owner. No project facts, categories, client claims, or service taxonomy were invented.
 
-## Pass 3 Evidence and Corrections
+## Work Layout Review
 
-A source-equivalent static Homepage render was produced from the current Homepage structure, app-level visual tokens, Header/Footer structure, and current development copy. Desktop and mobile layouts were rendered for composition review.
+A source-equivalent static layout proxy was rendered for desktop and mobile after the Work source change.
 
-This render is a **layout-review proxy**, not proof of the exact Svelte runtime, because the environment still cannot run the repository itself and the development logo was approximated in the proxy.
-
-The proxy made three source-level weaknesses sufficiently clear to correct:
+Observed result:
 
 ```text
-1. hero brand/media accent looked detached from the dominant media field
-2. Selected Work anchor was too visually quiet after the large hero
-3. Contact repeated the same two-column composition language already used elsewhere
+desktop
+→ Work hero reads clearly without overpowering the project list
+→ first project carries the strongest visual weight
+→ subsequent rows remain readable and professional
+→ hierarchy comes from project importance rather than arbitrary offsets
+
+mobile
+→ hero collapses to a clean vertical introduction
+→ media / title / summary / action sequence remains clear
+→ project rows become a straightforward stack
 ```
 
-Pass 3 adopted:
+The proxy is composition evidence only. It is not proof of exact Svelte runtime behavior, real logo rendering, final media crops, or production font behavior.
+
+## Immediate Next Step
+
+### 1. Review Work
+
+The next user-facing decision is **Work page visual approval**.
+
+If the project owner approves the Work direction:
 
 ```text
-hero brand/media field now overlaps the main media composition
-Selected Work heading is moderately stronger, not oversized
-Contact becomes a simpler closing statement + supporting action layout
-mobile remains a straightforward stack
+Work approved
+→ freeze Work as route baseline
+→ inspect current /work/[slug] source
+→ propagate the approved visual language to Project Detail only
+→ review Project Detail before moving to Studio
 ```
 
-Preserve the negative rules:
+If Work receives critique:
 
 ```text
+identify only visible concrete problem
+→ make smallest Work-only correction
+→ do not reopen Homepage or global architecture
+```
+
+### 2. Route propagation order after Work approval
+
+```text
+Project Detail [slug]
+→ Studio
+→ Careers
+→ Contact
+```
+
+Do not propagate all routes at once. Each page should inherit the accepted visual grammar while solving its own content relationship rather than cloning the Homepage layout.
+
+## Preserve These Rules
+
+```text
+Homepage is APPROVED — do not casually redesign it
+real media > invented decoration
+content hierarchy > repeated visual systems
 no numbered chapter progression
 no Blind Squirrel wave/brand-graphic copying
 no literal Hazelight floating-image recreation
 no fake HUD / coordinates / inventory UI
-no generic card grid
-no decorative rails
+no generic card grid when content hierarchy differs
 no invented KPI strip
-no extra Services route
+no Services route initially
+no Work filters/categories initially
+no fabricated contact or client claims
 ```
 
-## Important Limitation
+## Production Content / Media Still Pending
 
-Current proof level:
+Final replacement owners remain:
 
 ```text
-source implementation                  = completed
-layout-render proxy desktop/mobile     = reviewed
-actual Svelte runtime/browser behavior = not yet proven
-build/check proof                      = still deferred
-final visual approval                  = pending project-owner review / real runtime
+src/lib/content/pages.ts
+→ final public copy
+
+src/lib/content/projects.ts
+→ real portfolio entries and verified project facts
+
+src/lib/content/demo-data.ts
+→ real proof/careers replacement
+
+src/lib/content/site.ts
+→ approved public/social/contact values
+
+BrandLockup
+→ final production logo
+
+ProjectMediaPlaceholder / future media owner
+→ real project imagery/video
 ```
 
-Do not describe the Homepage as finally approved until the project owner explicitly approves the rendered result.
-
-Real media is still expected to materially change and improve the final visual impression. Do not compensate for missing portfolio media with additional decorative systems.
-
-## Immediate Next Step
-
-Continue with **Homepage visual acceptance only**.
-
-When an actual Local Svelte preview or project-owner screenshot is available:
-
-```text
-1. inspect desktop Homepage
-2. inspect mobile Homepage
-3. compare against the approved Hazelight + Blind Squirrel traits
-4. identify only concrete visual problems visible in the render
-5. make the smallest Homepage-only correction
-6. repeat until the project owner explicitly approves the Homepage
-```
-
-Until Homepage approval:
-
-```text
-DO NOT redesign Work
-DO NOT redesign project detail
-DO NOT redesign Studio
-DO NOT redesign Careers
-DO NOT redesign Contact
-DO NOT globally refactor visual tokens merely for consistency
-```
+Real project media is expected to materially improve the Homepage, Work, and Project Detail presentation. Adjust crops/proportions from the actual media later rather than inventing decorative placeholders now.
 
 ## Technical / Deferred Boundary
 
-Current declared baseline remains:
+Current declared baseline:
 
 ```text
 Svelte     = ^5.56.1
@@ -206,17 +204,19 @@ SvelteKit  = ^2.63.0
 Bun        = 1.3.14
 ```
 
-The project owner still defers unless explicitly reopened:
+Still deferred unless explicitly reopened:
 
 ```text
 bun install
 bun.lock generation
 bun run validate
-full local runtime acceptance
+full local runtime/browser acceptance
 hosting/provider selection
 production adapter selection
 ```
 
+Therefore do not claim exact runtime, build, performance, or deployment acceptance from layout proxies.
+
 ## Next Step
 
-**Review the latest Homepage visually. Keep all remaining routes unchanged until explicit Homepage approval.**
+**Get project-owner review of the newly propagated Work page. If approved, continue to `/work/[slug]` Project Detail; otherwise make only the smallest Work-specific correction.**
