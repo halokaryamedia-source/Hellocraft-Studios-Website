@@ -6,11 +6,17 @@ This file is the authoritative resume point for the current Hellocraft Studios W
 
 Working authority: **`Local`**.
 
-Latest Contact implementation commit:
+Latest route implementation before production intake:
 
 ```text
 18daf9dddcb2b095fb497689852b0700f29bafcb
 refine(contact): align contact page with approved visual baseline
+```
+
+Production content inventory established in:
+
+```text
+docs/knowledge/production-content-inventory.md
 ```
 
 ## Current Status
@@ -20,30 +26,32 @@ FOUNDATION_BASELINE_ESTABLISHED
 CONTENT_INTAKE_CONTRACT_READY
 ROUTE_ARCHITECTURE_APPROVED
 CONTENT_OWNER_MODEL_APPROVED
-TEMPORARY_DEMO_CONTENT_APPROVED
 HAZELIGHT_VISUAL_LEAD_APPROVED
 BLIND_SQUIRREL_STRUCTURAL_BUSINESS_REFERENCE_APPROVED
 HOMEPAGE_VISUAL_BASELINE_APPROVED
 WORK_VISUAL_BASELINE_APPROVED
-PROJECT_DETAIL_ROUTE_BASELINE_APPROVED_TO_CONTINUE
-STUDIO_ROUTE_BASELINE_APPROVED_TO_CONTINUE
+PROJECT_DETAIL_ROUTE_BASELINE_ACCEPTED
+STUDIO_ROUTE_BASELINE_ACCEPTED
 CAREERS_ROUTE_BASELINE_APPROVED
-CONTACT_VISUAL_PROPAGATION_IMPLEMENTED
-CONTACT_PROJECT_OWNER_APPROVAL_PENDING
-ROUTE_LEVEL_VISUAL_PROPAGATION_COMPLETE_IN_SOURCE
+CONTACT_ROUTE_BASELINE_APPROVED
+ROUTE_LEVEL_VISUAL_SYSTEM_FROZEN
+PRODUCTION_CONTENT_INVENTORY_ESTABLISHED
+WEBSITE_REPOSITORY_PRODUCTION_EVIDENCE_AUDITED
+REAL_PORTFOLIO_SOURCE_MATERIAL_PENDING
 REAL_PROJECT_MEDIA_PENDING
-REAL_PORTFOLIO_EVIDENCE_PENDING
 FINAL_PUBLIC_COPY_PENDING
-FINAL_PRODUCTION_FONT_PENDING
-PRODUCTION_LOGO_PENDING
 REAL_CONTACT_CHANNELS_PENDING
-REAL_CAREER_OPENINGS_PENDING
+REAL_CAREER_OPENINGS_PENDING_IF_ANY
+PRODUCTION_LOGO_PENDING
+FINAL_PRODUCTION_FONT_PENDING
 RESPONSIVE_ACCESSIBILITY_PERFORMANCE_QA_PENDING
 LOCAL_RUNTIME_TESTS_DEFERRED_BY_PROJECT_OWNER
 HOSTING_TRACK_DEFERRED_BY_PROJECT_OWNER
 ```
 
-## Approved Visual Direction
+## Approved Visual System
+
+The project owner approved the completed route-level direction.
 
 Reference roles remain:
 
@@ -65,7 +73,7 @@ Current thesis:
 
 > **A professional Minecraft game studio presented with Hazelight-style visual confidence and media-first simplicity, combined with Blind-Squirrel-style project and capability credibility.**
 
-Accepted route grammar now extends through:
+Accepted route system:
 
 ```text
 Homepage
@@ -73,169 +81,160 @@ Homepage
 → Project Detail
 → Studio
 → Careers
+→ Contact
 ```
 
-Contact has been implemented as the final route-level propagation and is waiting for project-owner approval.
+Do not reopen route-level visual discovery from model taste. Real media may later justify crop/proportion corrections, but not a new visual direction by default.
 
-Do not reopen visual-direction research unless the project owner explicitly changes direction.
+## Production Source Audit Result
 
-## Contact Route
+The current website repository has been audited for production content/media.
 
-`src/routes/contact/+page.svelte` has been rebuilt from the accepted visual language.
-
-Previous Contact problems:
+Available real/development evidence currently present:
 
 ```text
-hero title scaled up to 10rem
-Contact channels / Project inquiries repeated large split-section patterns
-Inquiry used another dark chapter block
-contact links used decorative arrow treatment
+src/lib/assets/brand/hellocraft-logo-cyan.png
+src/lib/assets/brand/hellocraft-logo-white.png
 ```
 
-Current composition:
+These remain **development raster brand assets**, not authoritative production vector masters.
+
+Not currently present in the website repository:
 
 ```text
-restrained Contact introduction
-→ honest contact-channel surface
-→ approved contact links render as direct typographic rows
-→ empty state remains when no real public channels exist
-→ concise Project inquiries guidance on a neutral secondary surface
+real portfolio project records
+real project screenshots
+real project renders
+real project videos / video posters
+verified public client / partner evidence
+approved public studio proof
+approved public contact channels
+real current career openings
+production vector logo / exact brand specification
+final production typography
 ```
 
-The page deliberately does not add:
+Current `projects.ts`, page copy, proof data, and career data remain development/demo content.
+
+## Canonical Production Inventory
+
+Use:
 
 ```text
-fake contact form
-fabricated email / Discord / social channels
-decorative external-arrow pattern
-dark chapter finale
-new inquiry backend
-CRM / database / form-service dependency
+docs/knowledge/production-content-inventory.md
 ```
 
-Existing contact ownership remains:
+for all authoritative incoming content/media.
+
+Core rule:
 
 ```text
-src/lib/content/pages.ts
-→ Contact copy + contactMethods export
-
-src/lib/content/site.ts
-→ approved public/social identity values where applicable
+received
+→ logged
+→ source identified
+→ duplicate/relationship checked
+→ facts extracted
+→ evidence status assigned
+→ publication status assigned
+→ editorial status assigned
+→ unknowns recorded
+→ only then selected for the public website
 ```
 
-## Contact Review Boundary
+Do not discard supplied material merely because it is not eventually published.
 
-Current proof level:
+## Sibling Repository Boundary
+
+Accessible sibling repositories such as `BuildIT`, `TranslateIT`, `PRD-Creator`, `MotionTracker`, and `Develop-Builder` are **not automatically public Hellocraft portfolio evidence**.
+
+A shared owner does not establish:
 
 ```text
-Contact source implementation     = completed
-content / semantic structure      = reviewed at source level
-actual Svelte runtime             = deferred / unproven
-project-owner visual approval     = pending
+project identity
+Hellocraft contribution
+client relationship
+public disclosure permission
+asset publication permission
 ```
 
-Do not claim exact rendered/runtime acceptance while local runtime validation remains deferred.
+Do not pull material from them into the public website unless their relationship and publication status are established through intake evidence.
 
-## Immediate Next Step
+## Immediate Next Step — Production Intake
 
-### 1. Review Contact
+The next material action is **not more route redesign**.
 
-If the project owner approves Contact:
+Priority intake order:
 
 ```text
-Contact approved
-→ freeze route-level visual system
-→ stop route redesign work
-→ begin production content/media replacement
+P0 — real portfolio project facts
+P0 — real project screenshots / renders / video
+P1 — authoritative Studio facts / credibility evidence
+P1 — approved business contact + social channels
+P2 — real current career openings, if any
+P2 — production logo / exact brand values / final typography
 ```
 
-If Contact receives critique:
+For project intake, unknown values are acceptable. Do not fill gaps by inference.
+
+Useful project evidence includes:
 
 ```text
-identify concrete Contact-specific problem
-→ make smallest Contact-only correction
-→ preserve all accepted route baselines
+public / working project name
+what Hellocraft actually contributed
+what the experience/project was
+client/partner only if disclosure is permitted
+year/date only if authoritative
+public URL if applicable
+screenshots/renders/video
+publication restrictions / credit requirements
 ```
 
-### 2. Production replacement order after Contact approval
+## Production Replacement Order
 
-Start with the evidence that most materially changes the site presentation:
+Once authoritative project material exists:
 
 ```text
-1. real portfolio inventory + verified project facts
-2. real project screenshots / renders / video posters
-3. final public Home / Work / Studio / Careers / Contact copy
-4. approved public contact + social channels
-5. real career openings, if any
-6. authoritative production logo / exact cyan
-7. final production typography
+1. inventory every supplied item
+2. verify/deduplicate and assign publication state
+3. select publishable portfolio projects
+4. replace src/lib/content/projects.ts
+5. integrate real project media through the existing media boundary
+6. replace final Home / Work / Studio / Careers / Contact copy
+7. add approved contact/social channels
+8. replace/remove demo proof and careers data
+9. integrate authoritative production logo/colors/typography
+10. perform publication gate review
 ```
 
-Use the existing content owners; do not rebuild route architecture when real content arrives.
+Do not reconstruct routes merely because real content arrives.
 
-### 3. Finalization after production content/media
+## Demo Mode Gate
 
-When the project owner re-authorizes technical validation:
+Keep:
 
 ```text
-responsive visual QA
-→ accessibility / keyboard / reflow / contrast QA
-→ media crop + loading + performance pass
-→ bun install / lockfile
-→ format / lint / svelte-check / build
-→ actual browser/runtime acceptance
-→ metadata/publication cleanup
-→ disable demo mode / noindex only when content is production-ready
-→ hosting/provider + production adapter
-→ deployed production QA
+contentIsDemo = true
 ```
 
-## Preserve These Rules
+until all public development material has been replaced or deliberately approved.
+
+Minimum release blockers still open:
 
 ```text
-Homepage is APPROVED
-Work is APPROVED
-Project Detail direction is accepted
-Studio direction is accepted
-Careers is APPROVED
-real media > invented decoration
-content hierarchy > repeated visual systems
-no numbered chapter progression
-no Blind Squirrel wave/brand-graphic copying
-no literal Hazelight layout recreation
-no fake HUD / coordinates / inventory UI
-no generic card grid when content hierarchy differs
-no invented KPI strip
-no Services route initially
-no Work filters/categories initially
-no fabricated contact, client, award, team-size, or recruitment claims
+[ ] demo portfolio records removed/replaced
+[ ] real approved project media integrated
+[ ] final public page copy approved
+[ ] real public contact channels integrated
+[ ] demo proof/career content removed or replaced
+[ ] production brand state approved
+[ ] final metadata/publication text ready
 ```
 
-## Production Content / Media Owners
-
-```text
-src/lib/content/pages.ts
-→ final public page copy + contact method presentation data
-
-src/lib/content/projects.ts
-→ real portfolio entries and verified project facts
-
-src/lib/content/demo-data.ts
-→ replace temporary proof / career data with verified data when available
-
-src/lib/content/site.ts
-→ approved public/social/contact identity values
-
-BrandLockup
-→ final production logo
-
-ProjectMediaPlaceholder / future media owner
-→ real project imagery/video
-```
+Until then, preserve the development notice and `noindex, nofollow` behavior.
 
 ## Technical / Deferred Boundary
 
-Current declared baseline:
+Current declared baseline remains:
 
 ```text
 Svelte     = ^5.56.1
@@ -254,6 +253,20 @@ hosting/provider selection
 production adapter selection
 ```
 
+After production content/media is integrated and technical validation is re-authorized:
+
+```text
+responsive visual QA
+→ accessibility / keyboard / reflow / contrast QA
+→ media crop/loading/performance pass
+→ format/lint/svelte-check/build
+→ actual browser/runtime acceptance
+→ metadata/publication cleanup
+→ disable demo mode only when release gate passes
+→ hosting/provider + production adapter
+→ deployed production QA
+```
+
 ## Next Step
 
-**Review Contact as the final visually propagated route. If approved, begin production portfolio/content/media intake rather than further route redesign.**
+**Receive and audit authoritative Hellocraft portfolio/media/studio/contact sources through `production-content-inventory.md`. Do not invent production content and do not resume route redesign.**
