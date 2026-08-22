@@ -11,6 +11,7 @@ page structure        = complete
 public page names     = approved
 page design           = approved
 draft website copy    = reviewed and humanized
+writing style guide   = established
 sample portfolio data = clearly labelled as fictional
 sample career data    = kept separate from real openings
 internal naming       = simplified
@@ -34,6 +35,53 @@ Old URLs remain only as redirects:
 /studio      → /about
 ```
 
+## Writing style
+
+Use:
+
+```text
+docs/foundation/08-writing-style.md
+```
+
+for all public website copy.
+
+The guide is based on communication patterns from established Minecraft creators and studios. Hellocraft should sound like a game studio and creator team, not a generic creative agency.
+
+Preferred voice:
+
+```text
+confident
+clear
+creator-led
+Minecraft-native
+friendly
+practical
+professional
+```
+
+Main reference roles:
+
+```text
+Gamemode One + Noxcrew
+→ concise game-studio / creator voice
+
+Blockworks
+→ project and case-study writing
+
+Everbloom Games
+→ approachable player and Careers language
+
+Shapescape
+→ explaining Minecraft projects to non-Minecraft-native clients
+
+Spark Universe
+→ concise company and role descriptions
+```
+
+Do not copy wording from another studio.
+
+Avoid generic agency terms and unsupported adjectives. Prefer direct verbs such as build, design, develop, create, make, play, and explore.
+
 ## What was fixed in the content review
 
 The draft copy no longer reads like internal documentation or placeholder instructions.
@@ -41,15 +89,15 @@ The draft copy no longer reads like internal documentation or placeholder instru
 Examples of the current public tone:
 
 ```text
-We build Minecraft experiences.
-A Minecraft-focused game studio.
-From custom worlds to playable systems.
-Have a Minecraft project in mind?
+We build Minecraft games and experiences.
+A game studio focused on Minecraft.
+Games, worlds, and systems for Minecraft.
+Tell us about your Minecraft project.
 Careers at Hellocraft Studios.
-Contact Hellocraft Studios.
+Tell us about your project.
 ```
 
-The Portfolio sample data is now explicitly fictional:
+The Portfolio sample data is explicitly fictional:
 
 ```text
 Sample Adventure World
@@ -59,7 +107,7 @@ Sample Environment Build
 
 The Careers sample roles are not shown as real vacancies while demo mode is active.
 
-The 404 page, footer, current URLs, and page labels have also been aligned with the current naming.
+The 404 page, footer, current URLs, and page labels also use the current naming.
 
 ## What does not need to be added now
 
@@ -107,6 +155,19 @@ credits or publication restrictions
 
 Missing information should stay unknown instead of being guessed.
 
+When writing each real Project Detail page, prefer this order when the information exists:
+
+```text
+project / client context
+→ what was needed
+→ what we made
+→ what players experience
+→ our role
+→ verified results
+```
+
+Use simple sentence patterns such as `We built...`, `We designed...`, `Players can...`, and `Our role included...` rather than agency-style claims.
+
 ## How incoming material should be handled
 
 ```text
@@ -147,7 +208,7 @@ src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
 
 ## Draft copy status
 
-The current draft copy is good enough for preview and layout review.
+The current draft copy is good enough for preview and layout review and now follows the Minecraft studio writing guide.
 
 Do not treat it as final marketing copy yet. After the real portfolio is reviewed, refine the wording only where the evidence shows that Hellocraft's actual strengths, project types, or client contexts should be described differently.
 
@@ -202,4 +263,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Collect and review real Hellocraft portfolio information and project media. The page structure, naming, design, and current draft copy do not need another broad redesign before that step.**
+**Collect and review real Hellocraft portfolio information and project media. Write all new public copy using `08-writing-style.md`.**
