@@ -87,9 +87,8 @@ export const aboutCopy = {
 	},
 	howWeWork: {
 		label: 'How we work',
-		title: 'The project comes first.',
-		body:
-			'We shape the scope around what needs to be built, keeping the creative and technical work connected instead of forcing every project into the same package.'
+		title: 'We work around what each project needs.',
+		body: 'We keep the creative and technical work connected throughout the project.'
 	},
 	experience: {
 		title: 'Experience'
