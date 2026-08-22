@@ -9,6 +9,12 @@ import type { ProjectEntry } from './types';
 // Client / partner and year are optional and should appear only when public, confirmed, and useful.
 // Do not add tags, categories, Work Areas, role labels, or technical metadata to the listing by default.
 //
+// SHORT DESCRIPTION RULE — APPROVED
+// Explain what the project is + what players/visitors do or experience.
+// Lead with the project itself, not Hellocraft's contribution or a marketing claim.
+// Keep it to one concise sentence and write only from approved real project information.
+// Avoid generic claims such as "innovative", "immersive", or "custom solution".
+//
 // PROJECT DETAIL WRITING
 // When real projects are added, follow docs/foundation/08-writing-style.md.
 // Prefer this information order when the evidence exists:
