@@ -109,12 +109,15 @@ export const careersCopy = {
 	openings: {
 		title: 'Open positions',
 		emptyState: "We don't have any public openings right now."
-	},
-	application: {
-		title: 'How to apply',
-		body: 'Each opening will include the role details and how to apply.'
 	}
 } as const;
+
+// CAREERS APPLICATION RULE — APPROVED
+// Keep this null unless there are real public openings and those openings share one
+// approved application workflow. If each opening carries its own application link or
+// instructions, keep this null and place the instructions with the real role instead.
+// Do not invent an email address, form, Discord workflow, or recruitment process.
+export const careerApplication: { title: string; body: string } | null = null;
 
 export const contactCopy = {
 	hero: {
