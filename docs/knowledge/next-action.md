@@ -11,7 +11,7 @@ page structure        = complete
 public page names     = approved
 page design           = approved
 draft website copy    = reviewed and humanized
-writing style guide   = established
+writing style guide   = APPROVED
 sample portfolio data = clearly labelled as fictional
 sample career data    = kept separate from real openings
 internal naming       = simplified
@@ -35,7 +35,7 @@ Old URLs remain only as redirects:
 /studio      → /about
 ```
 
-## Writing style
+## Approved writing style
 
 Use:
 
@@ -43,9 +43,11 @@ Use:
 docs/foundation/08-writing-style.md
 ```
 
-for all public website copy.
+for **all new or revised public website copy**.
 
-The guide is based on communication patterns from established Minecraft creators and studios. Hellocraft should sound like a game studio and creator team, not a generic creative agency.
+The project owner approved this direction after reviewing communication patterns from established Minecraft creators and studios.
+
+Hellocraft should sound like a Minecraft game studio and creator team, not a generic creative agency.
 
 Preferred voice:
 
@@ -59,7 +61,7 @@ practical
 professional
 ```
 
-Main reference roles:
+Reference roles:
 
 ```text
 Gamemode One + Noxcrew
@@ -78,36 +80,62 @@ Spark Universe
 → concise company and role descriptions
 ```
 
-Do not copy wording from another studio.
+Reference websites are pattern evidence only. Do **not** copy wording, slogans, claims, or project descriptions from them.
 
 Avoid generic agency terms and unsupported adjectives. Prefer direct verbs such as build, design, develop, create, make, play, and explore.
 
-## What was fixed in the content review
+## Current copy implementation
 
-The draft copy no longer reads like internal documentation or placeholder instructions.
+The current draft copy already follows the approved writing style.
 
-Examples of the current public tone:
+Examples:
 
 ```text
 We build Minecraft games and experiences.
 A game studio focused on Minecraft.
 Games, worlds, and systems for Minecraft.
 Tell us about your Minecraft project.
-Careers at Hellocraft Studios.
+Build Minecraft projects with us.
 Tell us about your project.
 ```
 
-The Portfolio sample data is explicitly fictional:
+Implementation guards are also present in:
 
 ```text
-Sample Adventure World
-Sample Multiplayer Game
-Sample Environment Build
+src/lib/content/pages.ts
+→ all public page copy follows 08-writing-style.md
+
+src/lib/content/projects.ts
+→ real project writing follows the approved project/case-study pattern
+
+docs/foundation/02-product-requirements.md
+→ writing style is a formal product requirement
 ```
 
-The Careers sample roles are not shown as real vacancies while demo mode is active.
+## Project Detail writing pattern
 
-The 404 page, footer, current URLs, and page labels also use the current naming.
+When the information exists, prefer:
+
+```text
+project / client context
+→ what was needed
+→ what we made
+→ what players experience
+→ our role
+→ verified results
+→ useful links / credits
+```
+
+Use direct sentence patterns such as:
+
+```text
+We built...
+We designed...
+Players can...
+Our role included...
+```
+
+Do not create empty sections just to follow the pattern. A smaller project can use a shorter page.
 
 ## What does not need to be added now
 
@@ -155,19 +183,6 @@ credits or publication restrictions
 
 Missing information should stay unknown instead of being guessed.
 
-When writing each real Project Detail page, prefer this order when the information exists:
-
-```text
-project / client context
-→ what was needed
-→ what we made
-→ what players experience
-→ our role
-→ verified results
-```
-
-Use simple sentence patterns such as `We built...`, `We designed...`, `Players can...`, and `Our role included...` rather than agency-style claims.
-
 ## How incoming material should be handled
 
 ```text
@@ -179,6 +194,7 @@ receive files/information
 → confirm whether each item can be public
 → record missing information
 → select what appears on the website
+→ write public copy using 08-writing-style.md
 ```
 
 Material that is not selected for the public website should still remain recorded in:
@@ -186,31 +202,6 @@ Material that is not selected for the public website should still remain recorde
 ```text
 docs/knowledge/content-inventory.md
 ```
-
-## Content update files
-
-```text
-src/lib/content/pages.ts
-→ page text
-
-src/lib/content/projects.ts
-→ portfolio projects
-
-src/lib/content/demo-data.ts
-→ sample experience/career data
-
-src/lib/content/site.ts
-→ navigation, contact, and public links
-
-src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
-→ temporary media area to replace with real project media
-```
-
-## Draft copy status
-
-The current draft copy is good enough for preview and layout review and now follows the Minecraft studio writing guide.
-
-Do not treat it as final marketing copy yet. After the real portfolio is reviewed, refine the wording only where the evidence shows that Hellocraft's actual strengths, project types, or client contexts should be described differently.
 
 ## Demo mode
 
@@ -227,7 +218,7 @@ Before turning demo mode off, confirm:
 ```text
 [ ] sample portfolio entries removed or replaced
 [ ] real project media added
-[ ] final page copy approved
+[ ] final page copy approved against 08-writing-style.md
 [ ] real contact details added
 [ ] sample experience/career data removed or replaced as needed
 [ ] final brand assets approved
@@ -263,4 +254,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Collect and review real Hellocraft portfolio information and project media. Write all new public copy using `08-writing-style.md`.**
+**Collect and review real Hellocraft portfolio information and project media. All new public copy must follow the approved Minecraft studio writing guide.**
