@@ -14,7 +14,7 @@
 		<div class="shell hero__inner">
 			<div class="hero__statement">
 				<div class="hero__heading">
-					<p class="eyebrow">{homeCopy.hero.eyebrow}</p>
+					<p class="eyebrow">{homeCopy.hero.label}</p>
 					<h1 id="home-title">{homeCopy.hero.title}</h1>
 				</div>
 
@@ -84,7 +84,7 @@
 	<section class="about-section" aria-labelledby="home-about-title">
 		<div class="shell about-grid">
 			<div class="about-heading">
-				<p class="eyebrow">{homeCopy.about.eyebrow}</p>
+				<p class="eyebrow">{homeCopy.about.label}</p>
 				<h2 id="home-about-title">{homeCopy.about.title}</h2>
 			</div>
 
@@ -92,7 +92,7 @@
 				<p class="about-intro">{homeCopy.about.body}</p>
 
 				<div class="what-we-do">
-					<p class="eyebrow">{homeCopy.whatWeDo.eyebrow}</p>
+					<p class="eyebrow">{homeCopy.whatWeDo.label}</p>
 					<h3>{homeCopy.whatWeDo.title}</h3>
 					<p>{homeCopy.whatWeDo.body}</p>
 				</div>
@@ -105,7 +105,7 @@
 	<section class="contact-section" aria-labelledby="home-contact-title">
 		<div class="shell contact-grid">
 			<div class="contact-heading">
-				<p class="eyebrow">{homeCopy.contact.eyebrow}</p>
+				<p class="eyebrow">{homeCopy.contact.label}</p>
 				<h2 id="home-contact-title">{homeCopy.contact.title}</h2>
 			</div>
 
