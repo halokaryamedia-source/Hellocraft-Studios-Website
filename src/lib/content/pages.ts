@@ -104,7 +104,7 @@ export const contactCopy = {
 	hero: {
 		label: 'Contact',
 		title: 'Contact Hellocraft Studios.',
-		body: 'For project inquiries, partnerships, or other business questions, use the contact details below.'
+		body: 'Use this page for project inquiries, partnerships, or other business questions.'
 	},
 	methods: {
 		title: 'Contact details',
