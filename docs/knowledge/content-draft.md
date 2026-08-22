@@ -358,31 +358,7 @@ This intentionally reuses the approved Home contact wording so the call to actio
 
 All currently publishable About copy is approved. The Experience content itself remains pending verified public evidence.
 
-## Careers
-
-Status: `WAITING FOR REAL DATA`
-
-Do not maintain or display a speculative role taxonomy.
-
-When a real opening exists, use the real approved job title and write:
-
-```text
-what the person will work on
-actual responsibilities
-expected skills
-work/location arrangement
-how to apply
-```
-
-Valid final state when there are no openings:
-
-```text
-We don't have any public openings right now.
-```
-
-## Contact
-
-Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
+## Contact — APPROVED COPY / WAITING FOR REAL CONTACT DATA
 
 ### Hero — APPROVED
 
@@ -429,18 +405,39 @@ Social links are optional and should appear only when they are real, public, app
 
 The actual email and any public links remain pending confirmed contact data.
 
-### Inquiry guidance — NEXT REVIEW
-
-Useful first-message guidance can include:
+### Inquiry guidance — APPROVED
 
 ```text
-What are you working on?
-Who is it for?
-Where do you need help?
-What constraints are already known?
+What should you include?
+
+A short description of the project, who it's for, and where you need our help.
 ```
 
-This guidance should stay concise and should not become a long intake form unless the real workflow requires one.
+Keep this guidance concise. It should help someone send a useful first message without becoming a long intake form.
+
+All Contact copy that can be finalized without real contact-channel data is approved. Actual contact methods remain pending confirmed public data.
+
+## Careers
+
+Status: `WAITING FOR REAL DATA / NEXT REVIEW`
+
+Do not maintain or display a speculative role taxonomy.
+
+When a real opening exists, use the real approved job title and write:
+
+```text
+what the person will work on
+actual responsibilities
+expected skills
+work/location arrangement
+how to apply
+```
+
+Valid final state when there are no openings:
+
+```text
+We don't have any public openings right now.
+```
 
 ## Current drafting order
 
@@ -449,8 +446,8 @@ This guidance should stay concise and should not become a long intake form unles
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
 4. About — APPROVED; Experience data pending verified evidence
-5. Contact — Hero + Contact Details rule APPROVED; Inquiry guidance next
-6. Careers
+5. Contact — APPROVED copy; real contact channels pending
+6. Careers — next section-by-section review
 7. final site-wide copy pass after real evidence is integrated
 ```
 
