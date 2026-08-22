@@ -52,16 +52,31 @@
 		</div>
 	</section>
 
-	{#if project.contribution && project.contribution.length > 0}
+	{#if project.projectContext && project.projectContext.length > 0}
+		<section class="detail-section" aria-labelledby="project-context-title">
+			<div class="shell content-grid">
+				<div class="section-heading">
+					<h2 id="project-context-title">The project</h2>
+				</div>
+
+				<div class="section-copy">
+					{#each project.projectContext as paragraph, paragraphIndex (`context-${paragraphIndex}`)}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
+			</div>
+		</section>
+	{/if}
+
+	{#if project.ourRole && project.ourRole.length > 0}
 		<section class="our-role" aria-labelledby="project-role-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<p class="section-label">Our role</p>
-					<h2 id="project-role-title">Hellocraft's role in the project.</h2>
+					<h2 id="project-role-title">Our role</h2>
 				</div>
 
 				<ul class="role-list">
-					{#each project.contribution as item (item)}
+					{#each project.ourRole as item (item)}
 						<li>{item}</li>
 					{/each}
 				</ul>
@@ -69,40 +84,64 @@
 		</section>
 	{/if}
 
-	{#if project.sections && project.sections.length > 0}
-		<div class="project-details">
-			{#each project.sections as section (section.id)}
-				<section class="detail-section" aria-labelledby={`section-${section.id}`}>
-					<div class="shell content-grid">
-						<div class="section-heading">
-							<h2 id={`section-${section.id}`}>{section.title}</h2>
-						</div>
+	{#if project.playerExperience && project.playerExperience.length > 0}
+		<section class="detail-section" aria-labelledby="project-experience-title">
+			<div class="shell content-grid">
+				<div class="section-heading">
+					<h2 id="project-experience-title">Player experience</h2>
+				</div>
 
-						<div class="section-copy">
-							{#each section.body as paragraph, paragraphIndex (`${section.id}-${paragraphIndex}`)}
-								<p>{paragraph}</p>
-							{/each}
-						</div>
-					</div>
-				</section>
-			{/each}
-		</div>
+				<div class="section-copy">
+					{#each project.playerExperience as paragraph, paragraphIndex (`experience-${paragraphIndex}`)}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
+			</div>
+		</section>
 	{/if}
 
-	{#if project.links && project.links.length > 0}
+	{#if project.results && project.results.length > 0}
+		<section class="detail-section" aria-labelledby="project-results-title">
+			<div class="shell content-grid">
+				<div class="section-heading">
+					<h2 id="project-results-title">Results</h2>
+				</div>
+
+				<div class="section-copy">
+					{#each project.results as paragraph, paragraphIndex (`results-${paragraphIndex}`)}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
+			</div>
+		</section>
+	{/if}
+
+	{#if (project.credits && project.credits.length > 0) || (project.links && project.links.length > 0)}
 		<section class="project-links" aria-labelledby="project-links-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<h2 id="project-links-title">Links</h2>
+					<h2 id="project-links-title">Credits / Links</h2>
 				</div>
 
-				<ul>
-					{#each project.links as link (link.href)}
-						<li>
-							<a href={link.href} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a>
-						</li>
-					{/each}
-				</ul>
+				<div class="project-links__content">
+					{#if project.credits && project.credits.length > 0}
+						<ul>
+							{#each project.credits as credit (credit)}
+								<li><span>{credit}</span></li>
+							{/each}
+						</ul>
+					{/if}
+
+					{#if project.links && project.links.length > 0}
+						<ul>
+							{#each project.links as link (link.href)}
+								<li>
+									<a href={link.href} rel={link.external ? 'noreferrer' : undefined}>{link.label}</a>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+				</div>
 			</div>
 		</section>
 	{/if}
@@ -241,12 +280,9 @@
 		line-height: 1.55;
 	}
 
-	.project-details {
-		background: var(--paper);
-	}
-
 	.detail-section {
 		padding-block: clamp(5.5rem, 9vw, 8.5rem);
+		background: var(--paper);
 	}
 
 	.detail-section + .detail-section {
@@ -272,6 +308,11 @@
 		color: var(--surface);
 	}
 
+	.project-links__content {
+		display: grid;
+		gap: 2rem;
+	}
+
 	.project-links ul {
 		margin: 0;
 		padding: 0;
@@ -283,7 +324,8 @@
 		border-bottom: 1px solid var(--inverse-border);
 	}
 
-	.project-links a {
+	.project-links a,
+	.project-links span {
 		display: flex;
 		align-items: center;
 		min-height: 3.5rem;
@@ -331,7 +373,8 @@
 
 		.hero__support,
 		.section-copy,
-		.role-list {
+		.role-list,
+		.project-links__content {
 			max-width: 40rem;
 		}
 	}
