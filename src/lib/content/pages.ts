@@ -61,7 +61,7 @@ export const homeCopy = {
 	contact: {
 		label: 'Contact',
 		title: 'Tell us about your Minecraft project.',
-		body: 'Tell us what you want to make, who it is for, and where you need help.',
+		body: "Tell us what you're working on and where we can help.",
 		actionLabel: 'Contact us'
 	}
 } as const;
