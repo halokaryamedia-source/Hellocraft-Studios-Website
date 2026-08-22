@@ -12,8 +12,10 @@ public page names     = approved
 page design           = approved
 writing style guide   = APPROVED
 Home draft copy       = implemented
+Home capability structure = APPROVED / implemented
 Portfolio intro       = implemented
 About draft copy      = implemented
+About capability structure = APPROVED / implemented
 sample portfolio data = clearly labelled as fictional
 sample career data    = kept separate from real openings
 ```
@@ -35,19 +37,55 @@ Use:
 docs/knowledge/content-draft.md
 ```
 
-as the working review document for website copy.
+as the working review document for website copy, capability structure, and role mapping.
 
 Current status:
 
 ```text
-Home                = Draft v1
+Home                = Draft v1 + approved capability structure
 Portfolio intro     = Draft v1
 Portfolio projects  = waiting for real project sources
 Project Detail      = structure ready; waiting for real project sources
-About               = Draft v1
+About               = Draft v1 + approved capability structure
 Contact             = working copy only; final contact data missing
 Careers             = working copy only; final hiring state missing
 ```
+
+## Approved capability structure
+
+Public production capabilities are now fixed to four clear areas:
+
+```text
+Game & Experience Design
+World & Level Design
+Game Development
+3D Art
+```
+
+These are client-facing capability areas, not fixed service packages.
+
+Role mapping for later Careers / Project Detail:
+
+```text
+Core production
+→ Game / Experience Designer
+→ Level Designer / Minecraft Builder
+→ Game Developer
+→ 3D Artist
+
+Supporting production
+→ Project Manager / Producer
+→ QA / Tester
+→ Writer / Narrative
+→ Sound Designer / Music
+→ 2D / UI
+
+Business
+→ Business Development
+→ Marketing
+```
+
+Do not promote supporting or business roles into Home capability categories without a real client-facing reason.
 
 ## Writing style
 
@@ -71,7 +109,26 @@ professional
 
 Reference websites are pattern evidence only. Do not copy wording, slogans, claims, or project descriptions from them.
 
-## Current Home draft
+## Current Home structure
+
+```text
+Hero
+→ who Hellocraft is and what it makes
+
+Featured Projects
+→ proof through real work
+
+What We Do
+→ four approved capability areas
+
+About
+→ who the studio is and the contexts it works in
+
+Contact
+→ start a project conversation
+```
+
+Current Home hero:
 
 ```text
 Minecraft game studio
@@ -81,35 +138,28 @@ We build games and experiences in Minecraft.
 Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.
 ```
 
-Supporting sections use:
+Current What We Do heading:
 
 ```text
-Featured projects
-→ A selection of Minecraft projects showing what we built and the role we played.
-
-About
-→ We build for Minecraft.
-
-What we do
-→ Worlds, gameplay, development, and art.
-
-Contact
-→ Tell us about your Minecraft project.
+We make Minecraft projects from idea to playable experience.
 ```
 
-## Current About draft
+Current About preview:
 
 ```text
-We build Minecraft games, worlds, and experiences.
+A game studio built around Minecraft.
 ```
 
-Supporting sections:
+## Current About structure
 
 ```text
-What we do
-→ What we work on.
+Hero
+→ We build Minecraft games, worlds, and experiences.
 
-How we work
+What We Do
+→ four approved capability areas with descriptions
+
+How We Work
 → The project comes first.
 
 Experience
@@ -220,4 +270,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Continue website content drafting by collecting and reviewing real Hellocraft portfolio information and project media. Home and About Draft v1 are already implemented and should only be refined when real evidence gives a concrete reason.**
+**Continue website content drafting by collecting and reviewing real Hellocraft portfolio information and project media. Home and About now use the approved four-area capability structure and should only be refined when real evidence gives a concrete reason.**
