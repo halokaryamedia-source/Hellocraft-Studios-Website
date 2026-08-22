@@ -100,18 +100,13 @@ What We Do
 About
 → who the studio is and the contexts it works in
 
-Experience / Clients / Results
-→ credibility only when verified evidence exists
-
 Contact
 → start a project conversation
 ```
 
-## Home
+## Home — APPROVED
 
 ### Hero
-
-Status: `APPROVED`
 
 ```text
 Minecraft game studio
@@ -123,11 +118,7 @@ We work on games and adventures, as well as Minecraft projects for events and ex
 View portfolio
 ```
 
-Do not rewrite this Hero without a concrete reason from new company positioning or real portfolio evidence.
-
 ### Featured Projects
-
-Status: `APPROVED`
 
 ```text
 Featured Projects
@@ -137,13 +128,7 @@ Minecraft projects we've worked on.
 View portfolio
 ```
 
-The heading and supporting copy are approved. Do not rename the section or rewrite the sentence without a concrete reason from real portfolio evidence.
-
-Real project names, descriptions, client names, media, and results must still come from approved portfolio sources.
-
-### What we do
-
-Status: `APPROVED`
+### What We Do
 
 ```text
 What we do
@@ -151,11 +136,9 @@ What we do
 We handle both the creative and technical sides of Minecraft projects.
 ```
 
-The section moves directly from this approved intro into the four canonical Work Areas. Do not add a second explanatory sentence unless real content gives a clear reason.
+This intro goes directly into the four canonical Work Areas.
 
 ### About preview
-
-Status: `APPROVED`
 
 ```text
 About
@@ -167,27 +150,27 @@ We make games and adventures, and also work on projects for events and exhibitio
 About Hellocraft
 ```
 
-Do not rewrite this Home preview without a concrete reason from new company positioning or verified portfolio evidence.
-
 ### Contact preview
-
-Status: `CURRENT REVIEW / FINAL REVIEW LATER`
 
 ```text
 Contact
 
 Tell us about your Minecraft project.
 
-Tell us what you want to make, who it is for, and where you need help.
+Tell us what you're working on and where we can help.
 
 Contact us
 ```
 
+All Home section copy above is approved. Do not rewrite it without a concrete reason from new positioning or verified portfolio evidence.
+
 ## Portfolio
 
-Status: `WAITING FOR REAL DATA`
+Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
 
 ### Intro
+
+Current draft:
 
 ```text
 Portfolio
@@ -196,6 +179,8 @@ Selected Minecraft projects.
 
 Each project focuses on what was made, our role, and the player experience.
 ```
+
+The page intro can be reviewed now. Real project names, descriptions, client names, dates, media, roles, and results must come from approved portfolio sources.
 
 ### Project writing pattern
 
@@ -321,17 +306,18 @@ What do you need help with?
 What constraints are already known?
 ```
 
-Do not finalize the contact section until the real public business contact route and approved social links are supplied.
+Do not finalize the Contact page until the real public business contact route and approved social links are supplied.
 
 ## Current drafting order
 
 ```text
-1. Home — section-by-section approval
-2. About — section-by-section approval
-3. real Portfolio projects + Project Detail
-4. Contact
-5. Careers
-6. final site-wide copy pass after real evidence is integrated
+1. Home — APPROVED
+2. Portfolio — current review
+3. Project Detail — after real project information
+4. About
+5. Contact
+6. Careers
+7. final site-wide copy pass after real evidence is integrated
 ```
 
 ## Final content review
