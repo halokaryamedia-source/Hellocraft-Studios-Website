@@ -488,6 +488,25 @@ how to apply
 
 Careers is complete for the current copy/structure stage. Real openings and application data remain pending the actual hiring state.
 
+## Footer — APPROVED
+
+Footer identity uses the brand lockup/name as the primary identity and one concise descriptor beneath it:
+
+```text
+Hellocraft Studios
+Games and experiences in Minecraft.
+```
+
+Do not use the previous sentence-style footer copy:
+
+```text
+Hellocraft Studios — a game studio focused on Minecraft.
+```
+
+The footer should not carry multiple competing taglines. The previous secondary `Minecraft game studio` text in the footer bottom was removed so the approved descriptor remains the single footer message.
+
+Navigation stays simple and uses the approved public page names. Social links remain evidence-only and should appear only when real, approved public links exist.
+
 ## Current drafting order
 
 ```text
@@ -497,7 +516,7 @@ Careers is complete for the current copy/structure stage. Real openings and appl
 4. About — APPROVED; Experience data pending verified evidence
 5. Contact — APPROVED copy; real contact channels pending
 6. Careers — APPROVED structure/copy; real hiring data pending
-7. shared/footer copy review
+7. Footer — APPROVED / implemented
 8. final site-wide copy pass after real evidence is integrated
 ```
 
@@ -518,5 +537,6 @@ Before publication, every page must pass these checks:
 [ ] project descriptions match actual media and project facts
 [ ] contact details are real
 [ ] Careers reflects the current hiring state and real job titles
+[ ] Footer uses only the approved single descriptor
 [ ] metadata describes the real page content
 ```
