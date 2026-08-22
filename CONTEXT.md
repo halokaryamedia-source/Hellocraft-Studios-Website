@@ -69,7 +69,7 @@ easy to understand
 
 Avoid fake game UI, unnecessary effects, fake statistics, generic card grids, unusual page names, and copied layouts.
 
-Current approved pages:
+Approved pages:
 
 ```text
 Home
@@ -90,8 +90,6 @@ Public writing follows:
 docs/foundation/08-writing-style.md
 ```
 
-The project owner approved this as the default writing direction for Hellocraft's public website after reviewing communication patterns from established Minecraft creators and studios.
-
 Hellocraft's voice is:
 
 ```text
@@ -108,30 +106,18 @@ Main rules:
 
 - say what Hellocraft makes early;
 - use `we` and `our` naturally;
-- prefer direct verbs such as build, design, develop, create, make, play, and explore;
-- use Minecraft-specific terms only when they add clarity;
+- prefer direct verbs;
+- use Minecraft terms only when useful;
 - keep headlines short;
 - keep normal section copy compact;
 - let projects and verified results prove quality;
-- avoid generic agency language, exaggerated claims, and adjective-heavy copy.
+- avoid generic agency language and exaggerated claims.
 
-For Project Detail pages, use this pattern when the information exists:
+Reference wording from other studios must not be copied.
 
-```text
-project / client context
-→ what was needed
-→ what we made
-→ what players experience
-→ our role
-→ verified results
-→ useful links / credits
-```
+## Work Areas — APPROVED / SINGLE TERMINOLOGY
 
-Reference wording must not be copied.
-
-## Capability structure — APPROVED
-
-Hellocraft's public production capability structure is now fixed to four clear areas:
+Hellocraft uses one fixed **Work Areas** list across public copy, source code, and documentation:
 
 ```text
 Game & Experience Design
@@ -140,34 +126,27 @@ Game Development
 3D Art
 ```
 
-These are client-facing capability areas, not fixed service packages. A project may use one, several, or all of them.
+These four names are the only permanent taxonomy for the kinds of work Hellocraft communicates publicly.
 
-Role mapping:
+Do not create parallel names such as:
 
 ```text
-Core production
-→ Game / Experience Designer
-→ Level Designer / Minecraft Builder
-→ Game Developer
-→ 3D Artist
-
-Supporting production
-→ Project Manager / Producer
-→ QA / Tester
-→ Writer / Narrative
-→ Sound Designer / Music
-→ 2D / UI
-
-Business
-→ Business Development
-→ Marketing
+capabilities
+core production areas
+service categories
+discipline categories
+Core Production / Supporting Production role groups
 ```
 
-Only the four public capability areas belong in Home / About capability communication by default. Supporting and business roles appear only when a real Project Detail, Careers, or company need requires them.
+A project may use one, several, or all Work Areas.
+
+### Job titles are separate
+
+Work Areas are not job titles.
+
+For Careers and project credits, use the real approved title/responsibility from actual data. Do not keep a speculative permanent role list.
 
 ## Content drafting — ACTIVE
-
-The project has moved from design and writing-style setup into **website content drafting**.
 
 Working draft:
 
@@ -175,31 +154,39 @@ Working draft:
 docs/knowledge/content-draft.md
 ```
 
-Current drafting status:
+Current status:
 
 ```text
 Home company copy      = Draft v1 implemented
-Home capabilities      = approved / implemented
+Home Work Areas        = approved / implemented
 Portfolio intro        = Draft v1 implemented
 Portfolio project copy = waiting for real project sources
 About company copy     = Draft v1 implemented
-About capabilities     = approved / implemented
+About Work Areas       = approved / implemented
 Contact final copy     = waiting for real contact route/details
 Careers final copy     = waiting for real hiring state
 Final site-wide pass   = after real portfolio/media is integrated
 ```
 
-Home structure now follows:
+Home structure:
 
 ```text
 Hero
 → Featured Projects
-→ What We Do / four capabilities
+→ What We Do / Work Areas
 → About
 → Contact
 ```
 
-About carries the deeper company explanation, the same four capabilities with descriptions, How We Work, verified Experience when available, and Contact.
+About structure:
+
+```text
+Hero
+→ What We Do / Work Areas
+→ How We Work
+→ Experience when verified
+→ Contact
+```
 
 Home and About may use only confirmed company-level information. Portfolio project descriptions, clients, dates, results, credits, and media must come from approved project sources.
 
@@ -213,7 +200,7 @@ Sample Multiplayer Game
 Sample Environment Build
 ```
 
-Sample career roles are also clearly labelled and are not published as real openings.
+Sample career roles are not published as real openings.
 
 Current source contains only development logo files:
 
@@ -228,9 +215,9 @@ Current status:
 
 ```text
 Home draft copy       = implemented
-Home capabilities     = implemented
+Home Work Areas       = implemented
 About draft copy      = implemented
-About capabilities    = implemented
+About Work Areas      = implemented
 Portfolio intro       = implemented
 real portfolio        = waiting for sources
 real project media    = waiting for sources
@@ -247,7 +234,7 @@ final font            = pending
 
 ```text
 src/lib/content/pages.ts
-→ Home, Portfolio, About, Careers, Contact, footer text, and the four public capability areas
+→ Home, Portfolio, About, Careers, Contact, footer text, and canonical Work Areas
 
 src/lib/content/projects.ts
 → portfolio project information
@@ -282,9 +269,7 @@ Files that are not selected for the website should still remain recorded in `doc
 
 ## Pages not needed now
 
-Do **not** add generic pages just to make the website look more complete.
-
-Current decisions:
+Do not add generic pages just to make the website look more complete.
 
 ```text
 Services = not needed yet
@@ -292,10 +277,10 @@ Blog = not needed
 Team = not needed as a separate page
 Clients = not needed as a separate page
 custom contact form = not needed until the real contact workflow requires it
-Privacy / Terms = add only when the site's real data collection, analytics, cookies, forms, or legal requirements make them necessary
+Privacy / Terms = add only when real data collection, analytics, cookies, forms, or legal requirements make them necessary
 ```
 
-`About` already carries the current company and "What we do" responsibility.
+`About` already carries company and `What we do` responsibility.
 
 ## Technical setup
 
@@ -314,7 +299,7 @@ database         = none for now
 
 Source-level review is complete for the current stage, but final build/browser testing is still deferred.
 
-Still deferred until the project owner reopens it:
+Still deferred:
 
 ```text
 bun install
@@ -332,7 +317,7 @@ page structure        = complete
 page names            = approved
 page design           = approved
 writing style guide   = APPROVED
-capability structure  = APPROVED
+Work Areas             = APPROVED / canonical
 content drafting      = ACTIVE
 Home draft            = implemented
 About draft           = implemented
@@ -351,4 +336,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is now in the **website content drafting → real portfolio integration** stage. Do not return to broad design, writing-style, or capability-taxonomy exploration unless real content reveals a specific problem.
+The project is now in the **website content drafting → real portfolio integration** stage. Keep the Work Areas terminology unified across all future updates.
