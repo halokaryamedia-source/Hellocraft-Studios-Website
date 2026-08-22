@@ -53,9 +53,9 @@ export const homeCopy = {
 	},
 	about: {
 		label: 'About',
-		title: 'A game studio built around Minecraft.',
+		title: "We're a studio focused on Minecraft.",
 		body:
-			'Hellocraft Studios works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.',
+			'We make games and adventures, and also work on projects for events and exhibitions.',
 		actionLabel: 'About Hellocraft'
 	},
 	contact: {
