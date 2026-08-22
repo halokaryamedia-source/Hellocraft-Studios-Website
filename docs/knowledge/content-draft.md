@@ -10,6 +10,9 @@ Use `docs/foundation/08-writing-style.md` for tone and wording. Use confirmed pr
 READY FOR DRAFT
 → supported by current confirmed company information and safe to use as working website copy
 
+APPROVED
+→ wording has been reviewed and accepted; do not rewrite without a concrete reason
+
 WAITING FOR REAL DATA
 → structure can be prepared, but final wording depends on real portfolio/contact/career evidence
 
@@ -106,21 +109,25 @@ Contact
 
 ## Home
 
-Status: `READY FOR DRAFT / FINAL REVIEW LATER`
-
 ### Hero
+
+Status: `APPROVED`
 
 ```text
 Minecraft game studio
 
-We build games and experiences in Minecraft.
+We make games and experiences in Minecraft.
 
-Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.
+We work on games and adventures, as well as Minecraft projects for events and exhibitions.
 
 View portfolio
 ```
 
+Do not rewrite this Hero without a concrete reason from new company positioning or real portfolio evidence.
+
 ### Featured projects
+
+Status: `READY FOR DRAFT / WAITING FOR REAL DATA`
 
 ```text
 Featured projects
@@ -128,11 +135,11 @@ Featured projects
 A selection of Minecraft projects showing what we built and the role we played.
 ```
 
-Status: `WAITING FOR REAL DATA`
-
 Real project names, descriptions, client names, media, and results must come from approved portfolio sources.
 
 ### What we do
+
+Status: `READY FOR DRAFT / FINAL REVIEW LATER`
 
 ```text
 What we do
@@ -146,6 +153,8 @@ Display the four canonical Work Areas as simple editorial rows, not service card
 
 ### About preview
 
+Status: `READY FOR DRAFT / FINAL REVIEW LATER`
+
 ```text
 About
 
@@ -157,6 +166,8 @@ About Hellocraft
 ```
 
 ### Contact preview
+
+Status: `READY FOR DRAFT / FINAL REVIEW LATER`
 
 ```text
 Contact
@@ -311,8 +322,8 @@ Do not finalize the contact section until the real public business contact route
 ## Current drafting order
 
 ```text
-1. Home company copy + Work Areas
-2. About company copy + Work Areas
+1. Home — section-by-section approval
+2. About — section-by-section approval
 3. real Portfolio projects + Project Detail
 4. Contact
 5. Careers
@@ -325,6 +336,7 @@ Before publication, every page must pass these checks:
 
 ```text
 [ ] wording follows 08-writing-style.md
+[ ] approved copy is not casually rewritten
 [ ] strong claims are supported
 [ ] Work Area names match the canonical four-name list exactly
 [ ] no second capability/service/role taxonomy has been introduced
