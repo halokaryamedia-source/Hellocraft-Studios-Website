@@ -41,7 +41,6 @@
 	<div class="footer-bottom">
 		<div class="shell footer-bottom__inner">
 			<span>Hellocraft Studios</span>
-			<span>Minecraft game studio</span>
 		</div>
 	</div>
 </footer>
@@ -114,7 +113,6 @@
 
 	.footer-bottom__inner {
 		display: flex;
-		justify-content: space-between;
 		gap: 1rem;
 		padding-block: 1.15rem;
 		color: rgb(255 255 255 / 40%);
@@ -138,11 +136,6 @@
 
 		.footer-brand {
 			grid-column: auto;
-		}
-
-		.footer-bottom__inner {
-			align-items: flex-start;
-			flex-direction: column;
 		}
 	}
 </style>
