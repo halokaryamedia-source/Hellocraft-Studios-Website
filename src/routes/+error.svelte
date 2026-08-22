@@ -19,7 +19,7 @@
 	<div class="shell error-page__inner">
 		<div class="error-page__meta">
 			<span class="error-code">{page.status}</span>
-			<p class="eyebrow">Hellocraft Studios</p>
+			<p class="section-label">Hellocraft Studios</p>
 		</div>
 		<h1>{title}</h1>
 		<div class="error-page__footer">
@@ -58,7 +58,7 @@
 		font-weight: 700;
 	}
 
-	.error-page__meta .eyebrow {
+	.error-page__meta .section-label {
 		color: rgb(255 255 255 / 58%);
 	}
 
