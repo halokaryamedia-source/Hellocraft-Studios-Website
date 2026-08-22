@@ -168,19 +168,35 @@ All Home section copy above is approved. Do not rewrite it without a concrete re
 
 Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
 
-### Intro
-
-Current draft:
+### Hero — APPROVED
 
 ```text
 Portfolio
 
-Selected Minecraft projects.
+Projects we've worked on.
 
-Each project focuses on what was made, our role, and the player experience.
+A closer look at what we made and our role in each project.
 ```
 
-The page intro can be reviewed now. Real project names, descriptions, client names, dates, media, roles, and results must come from approved portfolio sources.
+Do not rewrite the Portfolio Hero without a concrete reason from verified portfolio evidence.
+
+### Project listing — CURRENT REVIEW
+
+The next copy decision is how each project should be presented on the Portfolio page.
+
+The listing should remain simple and should use only real approved data. Depending on what exists for each project, it may show:
+
+```text
+Project name
+Short description
+Client / partner — only when public and useful
+Year — only when confirmed and useful
+View project
+```
+
+Do not add categories, labels, or metadata just to make the listing look more complete.
+
+Real project names, descriptions, client names, dates, media, roles, and results must come from approved portfolio sources.
 
 ### Project writing pattern
 
