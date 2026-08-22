@@ -38,6 +38,9 @@ docs/foundation/06-deployment-production-requirements.md
 
 docs/foundation/07-page-structure.md
 → public pages, navigation, and page responsibilities
+
+docs/foundation/08-writing-style.md
+→ public writing style based on established Minecraft studio communication patterns
 ```
 
 ## Working guides
