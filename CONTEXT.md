@@ -139,23 +139,31 @@ Minecraft projects we've worked on.
 View portfolio
 ```
 
-Do not casually rewrite either approved section.
+### Home What We Do — APPROVED
+
+```text
+What we do
+
+We handle both the creative and technical sides of Minecraft projects.
+```
+
+This intro goes directly into the four canonical Work Areas. Do not add a second explanatory sentence without a concrete reason.
+
+Do not casually rewrite approved Home sections.
 
 ### Current review section
 
 ```text
-Home What We Do
+Home About preview
 ```
-
-The four Work Areas are already approved and implemented. Only the section wording is still being reviewed.
 
 ## Current content status
 
 ```text
 Home Hero                       = APPROVED / implemented
 Home Featured Projects          = APPROVED / implemented
-Home What We Do                 = current review
-Home About preview              = draft
+Home What We Do                 = APPROVED / implemented
+Home About preview              = current review
 Home Contact preview            = draft
 Home Work Areas                 = APPROVED / implemented
 Portfolio intro                 = Draft v1 implemented
@@ -218,4 +226,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue Home copy review at **What We Do**. Preserve the approved Hero, Featured Projects, and canonical Work Areas decisions.
+Continue Home copy review at **About preview**. Preserve the approved Hero, Featured Projects, What We Do, and canonical Work Areas decisions.
