@@ -19,6 +19,7 @@ Project Detail structure           = APPROVED / implemented
 About Hero                         = APPROVED / implemented
 About What We Do                   = APPROVED / implemented
 About How We Work                  = APPROVED / implemented
+About Experience rule              = APPROVED / evidence-only
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -147,9 +148,17 @@ We work around what each project needs.
 We keep the creative and technical work connected throughout the project.
 ```
 
-The next section is **About — Experience**.
+Approved Experience rule:
 
-Experience must remain hidden/empty until there is verified public evidence. Valid evidence can include approved client/partner names, project history, verified results, or other concrete company experience. Do not invent credibility copy or metrics.
+```text
+Experience is evidence-only.
+Keep it hidden/empty until verified public evidence exists.
+Do not add generic marketing copy, invented client names, project counts, awards, years, or metrics.
+```
+
+The current About implementation already hides Experience while `contentIsDemo` is enabled and no real experience data exists.
+
+The next section is **About — Contact close**.
 
 ## Writing style
 
@@ -203,4 +212,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review the About `Experience` section rule. Keep it evidence-only and do not publish placeholders, invented credibility claims, client names, project counts, awards, or metrics. Preserve all approved About, Home, Portfolio, Project Detail, and Work Areas decisions.**
+**Review and approve the About `Contact close` copy. Preserve the approved About Hero, What We Do, How We Work, evidence-only Experience rule, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
