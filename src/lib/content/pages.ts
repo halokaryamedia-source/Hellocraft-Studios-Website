@@ -110,11 +110,6 @@ export const careersCopy = {
 		title: 'Open positions',
 		emptyState: "We don't have any public openings right now."
 	},
-	general: {
-		label: 'Careers',
-		title: 'Build Minecraft projects with us.',
-		body: 'Each real opening will describe the work, skills, and responsibilities for that role.'
-	},
 	application: {
 		title: 'How to apply',
 		body: 'Each opening will include the role details and how to apply.'
