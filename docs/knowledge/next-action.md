@@ -18,11 +18,11 @@ Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
 About                              = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
-Contact Hero                       = APPROVED / implemented
+Contact                            = APPROVED copy / implemented
 Contact Details rule               = APPROVED / evidence-only
-Contact Inquiry guidance           = APPROVED / implemented
 Careers Hero                       = APPROVED / implemented
 Careers General Intro              = REMOVED / APPROVED
+Careers How to Apply rule          = APPROVED / conditional
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -41,60 +41,7 @@ Game Development
 
 Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
-## Approved Contact copy
-
-```text
-Contact
-
-Tell us about your project.
-
-Tell us what you're working on and how we can help.
-```
-
-Contact methods rule:
-
-```text
-Use only real approved public contact channels.
-One real business email is enough if that is the actual workflow.
-Social links are optional and appear only when real, public, approved, and useful.
-Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
-```
-
-Inquiry guidance:
-
-```text
-What should you include?
-
-A short description of the project, who it's for, and where you need our help.
-```
-
-The actual email and any public links still wait for confirmed contact data.
-
-## Portfolio and Project Detail
-
-Portfolio structure and Project Detail structure are approved. Final project content still requires real approved project facts and media.
-
-Project Detail order:
-
-```text
-Project
-→ The Project
-→ Our Role
-→ Player Experience — optional
-→ Results — optional / verified only
-→ Credits / Links — optional
-→ View Portfolio
-```
-
-Do not maintain `What We Made` as a separate permanent section.
-
-## About
-
-About copy is approved for the current content stage. `Experience` remains evidence-only and hidden until verified public material exists.
-
-## Careers — current review
-
-Approved Hero:
+## Careers — approved current state
 
 ```text
 Careers
@@ -104,43 +51,34 @@ Join Hellocraft Studios.
 Open roles and application details will be posted here when we're hiring.
 ```
 
-Approved no-openings state:
+No-opening state:
 
 ```text
+Open positions
+
 We don't have any public openings right now.
 ```
 
-The separate generic Careers intro has been **removed by design**. Do not restore `Build Minecraft projects with us.` or another generic filler section. The page now follows:
+The generic Careers intro was removed by design.
+
+`How to apply` is conditional:
 
 ```text
-Hero
-→ Open positions
-→ How to apply
+no openings
+→ do not show it
+
+role-specific application workflow
+→ keep instructions with the real role
+
+one shared workflow for all current roles
+→ show How to apply only with real approved instructions
 ```
 
-Important rule:
+The source uses optional `careerApplication`; it remains `null` until a real shared workflow is needed.
 
-```text
-Work Areas are not job titles.
-Do not invent a permanent role taxonomy.
-Use real job titles and responsibilities only when a real opening exists.
-```
+Do not invent openings, titles, email addresses, forms, Discord processes, or recruitment instructions.
 
-The next Careers section to review is **How to apply**. It must reflect the real hiring workflow and must not invent application instructions.
-
-## Writing style
-
-All new or revised public copy must follow:
-
-```text
-docs/foundation/08-writing-style.md
-```
-
-Hellocraft should sound confident, clear, creator-led, Minecraft-native, friendly, practical, professional, and human.
-
-Avoid generic agency language and polished marketing phrases that sound generated rather than spoken by a real studio team.
-
-## Real production content still needed
+## Production content still needed
 
 ```text
 real portfolio project facts
@@ -148,6 +86,7 @@ project screenshots / renders / video
 approved client / partner attribution
 verified results where relevant
 real business email and approved public links
+verified About Experience evidence
 real hiring state / openings when applicable
 final logo/vector
 final font
@@ -179,4 +118,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review the Careers `How to apply` section. Preserve the approved Careers Hero, approved no-openings state, and the decision to remove the generic Careers intro. Do not invent application instructions, job openings, or job titles.**
+**Review shared site copy, beginning with the Footer statement. Preserve all approved Home, Portfolio, Project Detail, About, Contact, Careers, and Work Areas decisions. Do not reopen approved page copy without a concrete reason.**
