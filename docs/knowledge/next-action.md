@@ -21,6 +21,7 @@ About What We Do                   = APPROVED / implemented
 About How We Work                  = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
 About Contact close                = APPROVED / implemented
+Contact Hero                       = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -169,6 +170,26 @@ Contact us
 
 About is complete for the current content stage. Only real Experience evidence remains pending.
 
+## Contact — current review
+
+Approved Hero:
+
+```text
+Contact
+
+Tell us about your project.
+
+Tell us what you're working on and how we can help.
+```
+
+Do not rewrite the Hero without a concrete reason from a real change in the public contact workflow or company positioning.
+
+The next section is **Contact methods**.
+
+Only real approved public contact channels may be shown. Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
+
+If the final contact route is only one email address, keep the page simple rather than adding unnecessary channels.
+
 ## Writing style
 
 All new or revised public copy must follow:
@@ -196,22 +217,6 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
-## Contact — next review
-
-Current Contact copy is still draft. Review it section by section before real contact channels are added.
-
-Current Hero draft:
-
-```text
-Contact
-
-Tell us about your project.
-
-For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
-```
-
-Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
-
 ## Demo mode
 
 Keep:
@@ -237,4 +242,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Start the Contact page section-by-section review with the Contact Hero. Preserve all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact methods still wait for confirmed public contact data.**
+**Review the Contact `Contact methods` section. Keep it structure-only until the real public business contact channel(s) are confirmed. Preserve the approved Contact Hero and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions.**
