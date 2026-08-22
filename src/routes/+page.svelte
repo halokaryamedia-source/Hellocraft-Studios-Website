@@ -86,7 +86,6 @@
 			<header class="work-areas-heading">
 				<p class="section-label">{homeCopy.whatWeDo.label}</p>
 				<h2 id="home-work-areas-title">{homeCopy.whatWeDo.title}</h2>
-				<p>{homeCopy.whatWeDo.body}</p>
 			</header>
 
 			<div class="work-area-list">
@@ -331,12 +330,6 @@
 		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
 		font-weight: 680;
 		line-height: 0.98;
-	}
-
-	.work-areas-heading > p:last-child {
-		max-width: 31rem;
-		margin: 0;
-		color: var(--text-muted);
 	}
 
 	.work-area-list {
