@@ -252,13 +252,21 @@ We keep the creative and technical work connected throughout the project.
 
 Keep this language simple and do not replace it with agency-style process language unless a real operational need requires more detail.
 
+### Experience — APPROVED RULE / WAITING FOR REAL DATA
+
+Experience is evidence-only and must remain hidden/empty until verified public evidence exists.
+
+Valid evidence may include approved public clients or partners, real project history, verified results, or other documented company experience.
+
+Do not add generic marketing paragraphs, invented credibility claims, client names/logos, project counts, years of experience, awards, or metrics to fill the section.
+
+The current About implementation already follows this rule: Experience is rendered only when demo mode is off and real experience items exist.
+
 ### Current review section
 
 ```text
-About — Experience
+About — Contact close
 ```
-
-The Experience section is evidence-only. It must remain hidden/empty until verified public evidence exists. Valid evidence may include approved clients, partners, project history, verified results, or other concrete company experience. Do not invent client names, project counts, metrics, awards, or credibility statements to fill it.
 
 ## Current content status
 
@@ -273,8 +281,8 @@ Project Detail final copy    = waiting for real project sources
 About Hero                   = APPROVED / implemented
 About What We Do             = APPROVED / implemented
 About How We Work            = APPROVED / implemented
-About Experience             = next review / waiting for verified public evidence
-About Contact close          = draft
+About Experience rule        = APPROVED / evidence-only / waiting for real data
+About Contact close          = current review
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
@@ -337,4 +345,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **About — Experience**. Keep it evidence-only and hidden/empty until verified public material exists. Preserve all approved About, Home, Portfolio, Project Detail, and Work Areas decisions.
+Continue with **About — Contact close**. Preserve the approved About Hero, What We Do, How We Work, evidence-only Experience rule, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
