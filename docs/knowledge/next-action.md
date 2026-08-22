@@ -18,9 +18,9 @@ Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
 About                              = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
-Contact Hero                       = APPROVED / implemented
+Contact                            = APPROVED copy / implemented
 Contact Details rule               = APPROVED / evidence-only
-Contact Inquiry guidance           = APPROVED / implemented
+Careers Hero                       = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -37,36 +37,45 @@ Game Development
 3D Art
 ```
 
-Work Areas are not job titles. Careers and project credits use real approved titles from real data.
+Work Areas are not job titles. Careers and project credits use real approved titles from actual data only.
 
-## Approved Contact copy
-
-```text
-Contact
-
-Tell us about your project.
-
-Tell us what you're working on and how we can help.
-```
-
-Contact methods rule:
+## Approved Careers Hero
 
 ```text
-Use only real approved public contact channels.
-One real business email is enough if that is the actual workflow.
-Social links are optional and appear only when real, public, approved, and useful.
-Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
+Careers
+
+Join Hellocraft Studios.
+
+Open roles and application details will be posted here when we're hiring.
 ```
 
-Inquiry guidance:
+Do not rewrite this without a concrete reason from a real change in hiring approach or company positioning.
+
+## Careers no-openings state
+
+Keep the safe public state:
 
 ```text
-What should you include?
-
-A short description of the project, who it's for, and where you need our help.
+We don't have any public openings right now.
 ```
 
-The actual email and any public links still wait for confirmed contact data.
+Do not invent job openings, titles, responsibilities, locations, or application links.
+
+## Current Careers review
+
+The next section is the Careers **general intro**.
+
+Current draft:
+
+```text
+Careers
+
+Build Minecraft projects with us.
+
+Each real opening will describe the work, skills, and responsibilities for that role.
+```
+
+Review this next. It must not imply a current vacancy or introduce a permanent role taxonomy.
 
 ## Portfolio and Project Detail
 
@@ -88,25 +97,11 @@ Do not maintain `What We Made` as a separate permanent section.
 
 ## About
 
-About copy is approved for the current content stage. `Experience` remains evidence-only and hidden until verified public material exists.
+About copy is approved for the current content stage. Experience remains evidence-only and hidden until verified public material exists.
 
-## Careers — next review
+## Contact
 
-Careers is the next page to review section by section.
-
-Important rule:
-
-```text
-Work Areas are not job titles.
-Do not invent a permanent role taxonomy.
-Use real job titles and responsibilities only when a real opening exists.
-```
-
-A valid public state when there are no openings is:
-
-```text
-We don't have any public openings right now.
-```
+Contact copy is approved for the current content stage. Real email/social channels remain pending confirmed public data.
 
 ## Writing style
 
@@ -159,4 +154,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Start the Careers page section-by-section review, beginning with the Careers Hero and no-openings state. Preserve all approved Home, Portfolio, Project Detail, About, Contact, and Work Areas decisions. Do not invent job openings or job titles.**
+**Review the Careers general intro (`Build Minecraft projects with us.`). Preserve the approved Careers Hero, no-openings state, and all approved Home, Portfolio, Project Detail, About, Contact, and Work Areas decisions. Do not invent job openings or job titles.**
