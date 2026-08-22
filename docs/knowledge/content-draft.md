@@ -11,7 +11,7 @@ READY FOR DRAFT
 → supported by current confirmed company information and safe to use as working website copy
 
 APPROVED
-→ wording has been reviewed and accepted; do not rewrite without a concrete reason
+→ wording or structure has been reviewed and accepted; do not rewrite without a concrete reason
 
 WAITING FOR REAL DATA
 → structure can be prepared, but final wording depends on real portfolio/contact/career evidence
@@ -83,27 +83,6 @@ real opening / real project credit
 
 If no real opening or credit exists, do not invent a role simply to complete a taxonomy.
 
-## Role of each Home section
-
-Each section has one clear responsibility:
-
-```text
-Hero
-→ who Hellocraft is and what it makes
-
-Featured Projects
-→ proof through real work
-
-What We Do
-→ the four canonical Work Areas
-
-About
-→ who the studio is and the contexts it works in
-
-Contact
-→ start a project conversation
-```
-
 ## Home — APPROVED
 
 ### Hero
@@ -166,7 +145,7 @@ All Home section copy above is approved. Do not rewrite it without a concrete re
 
 ## Portfolio
 
-Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
+Status: `APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA`
 
 ### Hero — APPROVED
 
@@ -180,25 +159,49 @@ A closer look at what we made and our role in each project.
 
 Do not rewrite the Portfolio Hero without a concrete reason from verified portfolio evidence.
 
-### Project listing — CURRENT REVIEW
+### Project listing — APPROVED
 
-The next copy decision is how each project should be presented on the Portfolio page.
+Each Portfolio listing stays simple.
 
-The listing should remain simple and should use only real approved data. Depending on what exists for each project, it may show:
+Required:
 
 ```text
+Project media
 Project name
 Short description
-Client / partner — only when public and useful
-Year — only when confirmed and useful
 View project
 ```
 
-Do not add categories, labels, or metadata just to make the listing look more complete.
+Optional only when the information is confirmed, public, and useful:
 
-Real project names, descriptions, client names, dates, media, roles, and results must come from approved portfolio sources.
+```text
+Client / partner
+Year
+```
 
-### Project writing pattern
+Do not show these by default on the Portfolio listing:
+
+```text
+Work Areas
+role / contribution labels
+tags
+categories
+technical details
+long descriptions
+extra metadata
+```
+
+Those details belong on Project Detail when the real project information supports them.
+
+The current Portfolio route already follows this structure. Real project names, descriptions, client names, dates, and media must come from approved portfolio sources.
+
+### Short project description — NEXT COPY REVIEW
+
+The next Portfolio copy decision is the rule for the one-sentence project description shown under each project name.
+
+It should explain the project clearly without turning the listing into a case study. Final wording must come from real project information.
+
+### Project Detail writing pattern
 
 For each real project, use only the sections supported by available evidence:
 
@@ -328,7 +331,7 @@ Do not finalize the Contact page until the real public business contact route an
 
 ```text
 1. Home — APPROVED
-2. Portfolio — current review
+2. Portfolio — Hero + listing structure APPROVED; short-description rule next
 3. Project Detail — after real project information
 4. About
 5. Contact
