@@ -13,7 +13,7 @@
 	<section class="hero" aria-labelledby="portfolio-title">
 		<div class="shell hero__inner">
 			<div class="hero__heading">
-				<p class="eyebrow">{portfolioCopy.hero.eyebrow}</p>
+				<p class="eyebrow">{portfolioCopy.hero.label}</p>
 				<h1 id="portfolio-title">{portfolioCopy.hero.title}</h1>
 			</div>
 
@@ -234,6 +234,7 @@
 	}
 
 	.project-row__copy {
+		display: grid;
 		gap: 1.15rem;
 	}
 
