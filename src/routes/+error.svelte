@@ -5,8 +5,8 @@
 	const title = $derived(isNotFound ? 'Page not found' : 'Something went wrong');
 	const body = $derived(
 		isNotFound
-			? 'The page you are looking for does not exist or may have moved.'
-			: 'This page could not be displayed. You can return to the site or continue browsing our work.'
+			? 'The page may have moved, or the address may be incorrect.'
+			: 'The page could not be loaded. You can return to the homepage or continue to the portfolio.'
 	);
 </script>
 
@@ -18,15 +18,15 @@
 <main id="main-content" class="error-page">
 	<div class="shell error-page__inner">
 		<div class="error-page__meta">
-			<span class="section-index">{page.status}</span>
+			<span class="error-code">{page.status}</span>
 			<p class="eyebrow">Hellocraft Studios</p>
 		</div>
 		<h1>{title}</h1>
 		<div class="error-page__footer">
 			<p>{body}</p>
 			<div class="actions">
-				<a class="text-link" href="/">Back to home</a>
-				<a class="text-link" href="/work">View work</a>
+				<a class="text-link" href="/">Home</a>
+				<a class="text-link" href="/portfolio">Portfolio</a>
 			</div>
 		</div>
 	</div>
@@ -42,8 +42,8 @@
 
 	.error-page__inner {
 		display: grid;
-		gap: clamp(2.5rem, 7vw, 7rem);
-		padding-block: clamp(5rem, 12vw, 12rem);
+		gap: clamp(2.5rem, 7vw, 6rem);
+		padding-block: clamp(5rem, 10vw, 9rem);
 	}
 
 	.error-page__meta {
@@ -52,15 +52,21 @@
 		gap: 1rem;
 	}
 
+	.error-code {
+		color: rgb(255 255 255 / 75%);
+		font-size: 0.82rem;
+		font-weight: 700;
+	}
+
 	.error-page__meta .eyebrow {
 		color: rgb(255 255 255 / 58%);
 	}
 
 	h1 {
-		max-width: 10ch;
+		max-width: 11ch;
 		margin: 0;
-		font-size: clamp(5rem, 13vw, 13rem);
-		line-height: 0.75;
+		font-size: clamp(4rem, 8vw, 8rem);
+		line-height: 0.9;
 	}
 
 	.error-page__footer {
