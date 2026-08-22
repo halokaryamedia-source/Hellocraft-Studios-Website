@@ -149,12 +149,24 @@ We handle both the creative and technical sides of Minecraft projects.
 
 This intro goes directly into the four canonical Work Areas. Do not add a second explanatory sentence without a concrete reason.
 
+### Home About preview — APPROVED
+
+```text
+About
+
+We're a studio focused on Minecraft.
+
+We make games and adventures, and also work on projects for events and exhibitions.
+
+About Hellocraft
+```
+
 Do not casually rewrite approved Home sections.
 
 ### Current review section
 
 ```text
-Home About preview
+Home Contact preview
 ```
 
 ## Current content status
@@ -163,8 +175,8 @@ Home About preview
 Home Hero                       = APPROVED / implemented
 Home Featured Projects          = APPROVED / implemented
 Home What We Do                 = APPROVED / implemented
-Home About preview              = current review
-Home Contact preview            = draft
+Home About preview              = APPROVED / implemented
+Home Contact preview            = current review
 Home Work Areas                 = APPROVED / implemented
 Portfolio intro                 = Draft v1 implemented
 Portfolio project copy          = waiting for real project sources
@@ -226,4 +238,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue Home copy review at **About preview**. Preserve the approved Hero, Featured Projects, What We Do, and canonical Work Areas decisions.
+Continue Home copy review at **Contact preview**. Preserve the approved Hero, Featured Projects, What We Do, About preview, and canonical Work Areas decisions.
