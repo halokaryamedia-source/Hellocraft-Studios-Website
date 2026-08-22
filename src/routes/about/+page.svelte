@@ -27,7 +27,6 @@
 			<div class="section-heading">
 				<p class="section-label">{aboutCopy.whatWeDo.label}</p>
 				<h2 id="about-what-we-do-title">{aboutCopy.whatWeDo.title}</h2>
-				<p>{aboutCopy.whatWeDo.body}</p>
 			</div>
 
 			<div class="work-area-list">
