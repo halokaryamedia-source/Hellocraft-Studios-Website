@@ -14,6 +14,7 @@ writing style guide                = APPROVED
 Home Hero                          = APPROVED / implemented
 Home Featured Projects             = APPROVED / implemented
 Home What We Do                    = APPROVED / implemented
+Home About preview                 = APPROVED / implemented
 Home Work Areas                    = APPROVED / implemented
 About draft                        = implemented
 Portfolio intro                    = implemented
@@ -62,8 +63,8 @@ Current status:
 Home Hero                       = APPROVED
 Home Featured Projects          = APPROVED
 Home What We Do                 = APPROVED
-Home About preview              = current review section
-Home Contact preview            = draft
+Home About preview              = APPROVED
+Home Contact preview            = current review section
 Portfolio intro                 = Draft v1
 Portfolio projects              = waiting for real project sources
 Project Detail                  = structure ready; waiting for real project sources
@@ -87,6 +88,11 @@ View portfolio
 
 What We Do
 We handle both the creative and technical sides of Minecraft projects.
+
+About
+We're a studio focused on Minecraft.
+We make games and adventures, and also work on projects for events and exhibitions.
+About Hellocraft
 ```
 
 The What We Do intro goes directly into the four Work Areas. Do not add a second explanatory sentence without a concrete reason.
@@ -189,4 +195,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Home `About` preview copy. Preserve the approved Hero, Featured Projects, What We Do, and Work Areas.**
+**Review and approve the Home `Contact` preview copy. Preserve the approved Hero, Featured Projects, What We Do, About preview, and Work Areas.**
