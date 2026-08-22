@@ -15,13 +15,15 @@ import type { ProjectEntry } from './types';
 // Keep it to one concise sentence and write only from approved real project information.
 // Avoid generic claims such as "innovative", "immersive", or "custom solution".
 //
-// PROJECT DETAIL WRITING
-// When real projects are added, follow docs/foundation/08-writing-style.md.
-// Prefer this information order when the evidence exists:
-// project/client context -> what was needed -> what we made -> player experience
-// -> Hellocraft's role -> verified results -> useful links/credits.
-// Use direct sentence patterns such as "We built...", "We designed...",
-// "Players can...", and "Our role included...". Do not invent missing facts.
+// PROJECT DETAIL STRUCTURE — APPROVED
+// Keep one clear information order when the evidence exists:
+// Project -> Our Role -> Player Experience -> Results -> Credits / Links.
+// The Project explains what the project is and the useful context around it.
+// Our Role explains what Hellocraft actually designed, built, developed, or otherwise handled.
+// Do not create a separate permanent "What We Made" section; that information belongs in Our Role.
+// Player Experience, Results, Credits, and Links are optional and appear only when real approved data supports them.
+// Not every project needs every section, and short showcases are valid.
+// Follow docs/foundation/08-writing-style.md and do not invent missing facts.
 
 export const projects: ProjectEntry[] = [
 	{
@@ -30,23 +32,13 @@ export const projects: ProjectEntry[] = [
 		summary:
 			'A fictional Minecraft adventure used to preview how exploration, story, and player progression can be presented on the site.',
 		featured: true,
-		contribution: ['Sample role: world and level design', 'Sample role: gameplay planning'],
-		sections: [
-			{
-				id: 'overview',
-				title: 'Overview',
-				body: [
-					'This is a sample project used only to preview the portfolio page. Real project information and media will replace it before launch.',
-					'The final project pages can stay short or include more detail depending on the material available for each project.'
-				]
-			},
-			{
-				id: 'experience',
-				title: 'Player experience',
-				body: [
-					'This sample section shows how a project can explain the intended player experience without requiring every project to use the same format.'
-				]
-			}
+		projectContext: [
+			'This is a sample project used only to preview the portfolio page. Real project information and media will replace it before launch.',
+			'The final project pages can stay short or include more detail depending on the material available for each project.'
+		],
+		ourRole: ['Sample role: world and level design', 'Sample role: gameplay planning'],
+		playerExperience: [
+			'This sample section shows how a project can explain the intended player experience without requiring every project to use the same format.'
 		]
 	},
 	{
@@ -55,16 +47,10 @@ export const projects: ProjectEntry[] = [
 		summary:
 			'A fictional multiplayer game used to preview objectives, rounds, player feedback, and project information.',
 		featured: true,
-		contribution: ['Sample role: gameplay and level development'],
-		sections: [
-			{
-				id: 'overview',
-				title: 'Overview',
-				body: [
-					'This sample keeps the page short to show that not every portfolio project needs a long case study.'
-				]
-			}
-		]
+		projectContext: [
+			'This sample keeps the page short to show that not every portfolio project needs a long case study.'
+		],
+		ourRole: ['Sample role: gameplay and level development']
 	},
 	{
 		slug: 'sample-environment-build',
@@ -72,14 +58,8 @@ export const projects: ProjectEntry[] = [
 		summary:
 			'A fictional environment project used to preview landmarks, atmosphere, traversal, and visual presentation.',
 		featured: false,
-		sections: [
-			{
-				id: 'overview',
-				title: 'Overview',
-				body: [
-					'This sample shows the simplest project-page format: a short introduction, media, and a concise overview.'
-				]
-			}
+		projectContext: [
+			'This sample shows the simplest project-page format: a short introduction, media, and a concise project overview.'
 		]
 	}
 ];
