@@ -143,21 +143,19 @@ Real project names, descriptions, client names, media, and results must still co
 
 ### What we do
 
-Status: `READY FOR DRAFT / FINAL REVIEW LATER`
+Status: `APPROVED`
 
 ```text
 What we do
 
-We make Minecraft projects from idea to playable experience.
-
-We work across four areas. The mix changes with the project.
+We handle both the creative and technical sides of Minecraft projects.
 ```
 
-Display the four canonical Work Areas as simple editorial rows, not service cards.
+The section moves directly from this approved intro into the four canonical Work Areas. Do not add a second explanatory sentence unless real content gives a clear reason.
 
 ### About preview
 
-Status: `READY FOR DRAFT / FINAL REVIEW LATER`
+Status: `CURRENT REVIEW / FINAL REVIEW LATER`
 
 ```text
 About
