@@ -125,7 +125,7 @@ export const contactCopy = {
 	hero: {
 		label: 'Contact',
 		title: 'Tell us about your project.',
-		body: 'For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.'
+		body: "Tell us what you're working on and how we can help."
 	},
 	methods: {
 		title: 'Contact details',
