@@ -294,21 +294,19 @@ We make games and adventures, and work on projects for events and exhibitions.
 
 Do not rewrite the About Hero without a concrete reason from new company positioning or verified evidence.
 
-### What we do — CURRENT REVIEW
-
-Current draft:
+### What We Do — APPROVED
 
 ```text
 What we do
 
-Four areas of work.
-
-Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.
+We handle both the creative and technical sides of Minecraft projects.
 ```
 
-Display the same four canonical Work Areas with the same names and descriptions used on Home.
+This wording is intentionally the same as Home. It goes directly into the same four canonical Work Areas.
 
-### How we work
+Do not add a second supporting sentence that repeats the four Work Area names, and do not create a different definition of What We Do on About.
+
+### How We Work — CURRENT REVIEW
 
 Current draft:
 
@@ -389,7 +387,7 @@ Do not finalize the Contact page until the real public business contact route an
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — Hero APPROVED; What We Do next
+4. About — Hero + What We Do APPROVED; How We Work next
 5. Contact
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
