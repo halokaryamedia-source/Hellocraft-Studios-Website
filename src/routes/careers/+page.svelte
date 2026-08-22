@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { contentIsDemo } from '$lib/content/demo';
-	import { careerOpenings, careersCopy } from '$lib/content/pages';
+	import { careerApplication, careerOpenings, careersCopy } from '$lib/content/pages';
 </script>
 
 <svelte:head>
@@ -56,18 +56,20 @@
 		</div>
 	</section>
 
-	<section class="application" aria-labelledby="careers-application-title">
-		<div class="shell application__inner">
-			<div class="application__heading">
-				<p class="section-label">Applications</p>
-				<h2 id="careers-application-title">{careersCopy.application.title}</h2>
-			</div>
+	{#if !contentIsDemo && careerOpenings.length > 0 && careerApplication}
+		<section class="application" aria-labelledby="careers-application-title">
+			<div class="shell application__inner">
+				<div class="application__heading">
+					<p class="section-label">Applications</p>
+					<h2 id="careers-application-title">{careerApplication.title}</h2>
+				</div>
 
-			<div class="application__copy">
-				<p>{careersCopy.application.body}</p>
+				<div class="application__copy">
+					<p>{careerApplication.body}</p>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	{/if}
 </main>
 
 <style>
