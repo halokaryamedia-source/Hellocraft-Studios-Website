@@ -7,7 +7,10 @@ import type { LinkItem } from './types';
 // The working copy is tracked in docs/knowledge/content-draft.md.
 // Replace or refine factual details when final company and portfolio material is approved.
 
-export const capabilityAreas = [
+// CANONICAL WORK AREAS
+// Use these same four names everywhere: Home, About, project attribution, and internal documentation.
+// Job titles are separate and must come from real hiring/project data; do not create a second role taxonomy.
+export const workAreas = [
 	{
 		title: 'Game & Experience Design',
 		body:
@@ -47,7 +50,7 @@ export const homeCopy = {
 	whatWeDo: {
 		label: 'What we do',
 		title: 'We make Minecraft projects from idea to playable experience.',
-		body: 'Our work is organised around four core production areas. The mix changes with the project.'
+		body: 'We work across four areas. The mix changes with the project.'
 	},
 	about: {
 		label: 'About',
@@ -82,7 +85,7 @@ export const aboutCopy = {
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'Four core areas of production.',
+		title: 'Four areas of work.',
 		body:
 			'Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.'
 	},
@@ -113,10 +116,9 @@ export const careersCopy = {
 		emptyState: "We don't have any public openings right now."
 	},
 	general: {
-		label: 'Roles',
+		label: 'Careers',
 		title: 'Build Minecraft projects with us.',
-		body:
-			'Our work can involve Minecraft building and level design, game development, and 3D art, depending on what the team needs.'
+		body: 'Each real opening will describe the work, skills, and responsibilities for that role.'
 	},
 	application: {
 		title: 'How to apply',
