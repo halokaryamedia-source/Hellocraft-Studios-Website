@@ -45,6 +45,7 @@ Do not add Services, Blog, Team, Clients, Awards, Shop, Login, Dashboard, or oth
 Home should quickly explain what Hellocraft is and give visitors clear paths to:
 
 - selected projects;
+- What We Do / Work Areas;
 - About;
 - Contact.
 
@@ -98,31 +99,51 @@ The structure may be shorter when a project has less material. Do not manufactur
 
 About should explain Hellocraft in plain language.
 
-Current confirmed scope supports Minecraft work that can involve:
+It should introduce the company, show the same canonical Work Areas used on Home, explain how Hellocraft approaches projects, and show verified company experience when evidence is available.
 
-- custom worlds and environments;
-- gameplay;
-- game development;
-- technical systems;
-- 3D art.
+## Work Areas
 
-These are examples of project work, not a fixed public Services package.
+Use **Work Areas** as the single fixed term for the kinds of work Hellocraft communicates across Home, About, source code, and documentation.
 
-About may also show verified company experience, clients, partners, results, or other credibility information when those facts are approved for public use.
+The canonical Work Areas are:
+
+```text
+Game & Experience Design
+World & Level Design
+Game Development
+3D Art
+```
+
+Use these exact names everywhere. A project may involve one, several, or all Work Areas.
+
+Do not maintain parallel taxonomies named:
+
+```text
+capabilities
+core production areas
+services
+disciplines
+Core Production / Supporting Production role groups
+```
+
+Work Areas are **not job titles**. Careers and project credits must use real approved titles/responsibilities from actual hiring or project data rather than a speculative permanent role list.
 
 ## Careers
 
 Careers should show real openings only when Hellocraft is actively hiring.
 
-Current talent areas may include:
-
-- Minecraft building and level design;
-- game development;
-- 3D art, including relevant modeling, texturing, or animation work.
-
 If there are no public openings, say so clearly. Do not publish sample roles as real jobs.
 
-Each real opening should provide the role details and a clear way to apply.
+Each real opening should provide:
+
+- the real approved job title;
+- what the person will work on;
+- actual responsibilities;
+- expected skills;
+- work/location arrangement when applicable;
+- a clear way to apply.
+
+Do not create a permanent job-role taxonomy merely to mirror the four Work Areas.
 
 ## Contact
 
@@ -308,8 +329,10 @@ Before the site is public, confirm at minimum:
 - sample portfolio data has been replaced;
 - real approved project media is integrated;
 - public copy has been reviewed against `08-writing-style.md`;
+- Work Area names match the canonical four-name list;
+- no parallel capability/service/role taxonomy has been introduced;
 - contact/social links are real;
-- career content reflects the current hiring state;
+- career content reflects the current hiring state and real job titles;
 - final logo/brand assets are approved;
 - final metadata is ready;
 - responsive and accessibility checks are complete;
