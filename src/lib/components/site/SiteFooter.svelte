@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="footer-nav">
-			<p class="footer-label">Explore</p>
+			<p class="footer-label">Pages</p>
 			<nav aria-label="Footer navigation">
 				<ul>
 					{#each primaryNavigation as item (item.href)}
@@ -41,7 +41,7 @@
 	<div class="footer-bottom">
 		<div class="shell footer-bottom__inner">
 			<span>Hellocraft Studios</span>
-			<span>Game studio focused on Minecraft</span>
+			<span>Minecraft game studio</span>
 		</div>
 	</div>
 </footer>
