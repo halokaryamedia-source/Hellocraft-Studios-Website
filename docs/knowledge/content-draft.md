@@ -155,21 +155,23 @@ The section moves directly from this approved intro into the four canonical Work
 
 ### About preview
 
-Status: `CURRENT REVIEW / FINAL REVIEW LATER`
+Status: `APPROVED`
 
 ```text
 About
 
-A game studio built around Minecraft.
+We're a studio focused on Minecraft.
 
-Hellocraft Studios works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.
+We make games and adventures, and also work on projects for events and exhibitions.
 
 About Hellocraft
 ```
 
+Do not rewrite this Home preview without a concrete reason from new company positioning or verified portfolio evidence.
+
 ### Contact preview
 
-Status: `READY FOR DRAFT / FINAL REVIEW LATER`
+Status: `CURRENT REVIEW / FINAL REVIEW LATER`
 
 ```text
 Contact
