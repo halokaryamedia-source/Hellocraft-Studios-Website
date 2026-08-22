@@ -143,9 +143,7 @@ Contact us
 
 All Home section copy above is approved. Do not rewrite it without a concrete reason from new positioning or verified portfolio evidence.
 
-## Portfolio
-
-Status: `APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA`
+## Portfolio — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
 ### Hero — APPROVED
 
@@ -160,8 +158,6 @@ A closer look at what we made and our role in each project.
 Do not rewrite the Portfolio Hero without a concrete reason from verified portfolio evidence.
 
 ### Project listing — APPROVED
-
-Each Portfolio listing stays simple.
 
 Required:
 
@@ -193,8 +189,6 @@ extra metadata
 
 Those details belong on Project Detail when the real project information supports them.
 
-The current Portfolio route already follows this structure. Real project names, descriptions, client names, dates, and media must come from approved portfolio sources.
-
 ### Short project description — APPROVED
 
 Each listing uses one concise sentence based on real approved project information.
@@ -209,13 +203,7 @@ what players / visitors do or experience
 
 Lead with the project itself, not Hellocraft's contribution.
 
-Good pattern:
-
-```text
-A Minecraft adventure built around exploration, puzzles, and story.
-```
-
-Avoid opening with marketing claims or agency language such as:
+Avoid opening with generic marketing claims or agency language such as:
 
 ```text
 innovative
@@ -224,44 +212,79 @@ custom solution
 Hellocraft developed...
 ```
 
-The short description should explain the project before explaining Hellocraft's role. Hellocraft's contribution belongs on Project Detail.
+## Project Detail — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
-### Project Detail writing pattern — NEXT REVIEW
+The reusable Project Detail structure is approved and implemented in source.
 
-For each real project, use only the sections supported by available evidence:
+Use this order when the real evidence supports each section:
 
 ```text
-Project name
+Back to Portfolio
+
+Project
+PROJECT NAME
 Short description
-Client / partner — only when public
-Year — only when confirmed and useful
+Client / Partner — optional
+Year — optional
 
-The project
-→ what was needed / project context
+Main Project Media
 
-What we made
-→ what Hellocraft built or developed
+The Project
+→ what the project is
+→ useful context / objective
 
-Player experience
+Our Role
+→ what Hellocraft actually designed, built, developed, or handled
+
+Player Experience — optional
 → what players do, see, learn, or experience
 
-Our role
-→ Hellocraft's actual contribution, using real project responsibility terms
-
-Results
+Results — optional
 → verified results only
 
-Links / credits
-→ when useful
+Credits / Links — optional
+→ credits and useful public links only
+
+View Portfolio
 ```
 
-A short showcase is valid. Do not create sections only to make every project page equally long.
+### Important Project Detail rules
+
+`What We Made` is **not** a separate permanent section.
+
+Do not create both:
+
+```text
+What We Made
+Our Role
+```
+
+because they overlap. Information about what Hellocraft made belongs inside **Our Role**.
+
+The source model uses explicit fields rather than a free-form section list:
+
+```text
+projectContext
+ourRole
+playerExperience
+results
+credits
+links
+```
+
+This keeps the approved order stable and prevents future terminology drift.
+
+`Player Experience`, `Results`, `Credits`, and `Links` are optional. A short project showcase is valid; do not create empty or weak sections just to make every project page the same length.
+
+Final project-specific wording, client attribution, dates, results, credits, and media must come from approved real project evidence.
 
 ## About
 
 Status: `READY FOR DRAFT / FINAL REVIEW LATER`
 
 ### Hero
+
+Current draft:
 
 ```text
 About
@@ -272,6 +295,8 @@ Hellocraft Studios works across Minecraft game content, custom worlds, and proje
 ```
 
 ### What we do
+
+Current draft:
 
 ```text
 What we do
@@ -284,6 +309,8 @@ Our work covers game and experience design, world and level design, game develop
 Display the same four canonical Work Areas with the same names and descriptions used on Home.
 
 ### How we work
+
+Current draft:
 
 ```text
 How we work
@@ -300,6 +327,8 @@ Status: `WAITING FOR REAL DATA`
 Use only approved company/project evidence such as real clients, partners, project experience, results, or other public credibility information.
 
 ### Contact close
+
+Current draft:
 
 ```text
 Planning a Minecraft project?
@@ -335,6 +364,8 @@ We don't have any public openings right now.
 
 Status: `WAITING FOR REAL DATA`
 
+Current draft:
+
 ```text
 Tell us about your project.
 
@@ -356,9 +387,9 @@ Do not finalize the Contact page until the real public business contact route an
 
 ```text
 1. Home — APPROVED
-2. Portfolio — Hero + listing structure + short-description rule APPROVED
-3. Project Detail — structure review next; final copy waits for real project information
-4. About
+2. Portfolio — structure + writing rules APPROVED; real projects pending
+3. Project Detail — structure APPROVED / implemented; real projects pending
+4. About — next section-by-section review
 5. Contact
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
@@ -374,6 +405,7 @@ Before publication, every page must pass these checks:
 [ ] strong claims are supported
 [ ] Work Area names match the canonical four-name list exactly
 [ ] no second capability/service/role taxonomy has been introduced
+[ ] no separate What We Made + Our Role duplication is introduced
 [ ] client/partner names are approved for public use
 [ ] sample/demo content is removed
 [ ] project descriptions match actual media and project facts
