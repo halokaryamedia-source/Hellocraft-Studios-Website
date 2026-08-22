@@ -4,39 +4,40 @@ import type { LinkItem } from './types';
 // DRAFT WEBSITE COPY
 // All public copy in this file must follow docs/foundation/08-writing-style.md.
 // Keep the voice direct, creator-led, Minecraft-native, and evidence-based.
+// The working copy is tracked in docs/knowledge/content-draft.md.
 // Replace or refine factual details when final company and portfolio material is approved.
 
 export const homeCopy = {
 	hero: {
 		label: 'Minecraft game studio',
-		title: 'We build Minecraft games and experiences.',
+		title: 'We build games and experiences in Minecraft.',
 		body:
-			'Hellocraft Studios designs and develops custom Minecraft projects, from worlds and gameplay to technical systems and 3D art.',
+			'Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.',
 		primaryActionLabel: 'View portfolio'
 	},
 	portfolio: {
 		title: 'Featured projects',
-		body: 'Explore selected Minecraft projects from Hellocraft Studios.',
+		body: 'A selection of Minecraft projects showing what we built and the role we played.',
 		emptyState: 'Projects will be added here.',
 		viewAllLabel: 'View portfolio'
 	},
 	about: {
 		label: 'About',
-		title: 'A game studio focused on Minecraft.',
+		title: 'We build for Minecraft.',
 		body:
-			'We make Minecraft games and custom worlds, and we also build projects for events, exhibitions, and other public experiences.',
+			'Hellocraft Studios works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.',
 		actionLabel: 'About Hellocraft'
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'Games, worlds, and systems for Minecraft.',
+		title: 'Worlds, gameplay, development, and art.',
 		body:
-			'Some projects need world design and gameplay. Others need game development, technical systems, or 3D art. The mix depends on the project.'
+			'Every project needs a different mix. Our work can include world and level design, gameplay, game development, technical systems, and 3D art.'
 	},
 	contact: {
 		label: 'Contact',
 		title: 'Tell us about your Minecraft project.',
-		body: 'Tell us what you are building, who it is for, and where you need help.',
+		body: 'Tell us what you want to make, who it is for, and where you need help.',
 		actionLabel: 'Contact us'
 	}
 } as const;
@@ -45,7 +46,7 @@ export const portfolioCopy = {
 	hero: {
 		label: 'Portfolio',
 		title: 'Selected Minecraft projects.',
-		body: 'Each project page shows what was made, Hellocraft\'s role, and the work behind it.'
+		body: 'Each project focuses on what was made, our role, and the player experience.'
 	},
 	emptyState: 'No projects have been published yet.'
 } as const;
@@ -53,21 +54,21 @@ export const portfolioCopy = {
 export const aboutCopy = {
 	hero: {
 		label: 'About',
-		title: 'We make Minecraft games, worlds, and experiences.',
+		title: 'We build Minecraft games, worlds, and experiences.',
 		body:
 			'Hellocraft Studios works across Minecraft game content, custom worlds, and projects for events, exhibitions, and other public experiences.'
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'The work changes with the project.',
+		title: 'What we work on.',
 		body:
-			'Depending on the project, our work can include world and level design, gameplay, game development, technical systems, and 3D art.'
+			'Our work can include world and level design, gameplay, game development, technical systems, and 3D art. The mix depends on the project.'
 	},
 	howWeWork: {
 		label: 'How we work',
-		title: 'The scope follows the project.',
+		title: 'The project comes first.',
 		body:
-			'We focus on the parts the project actually needs instead of forcing every client into the same package.'
+			'We shape the scope around what needs to be built, keeping the creative and technical work connected instead of forcing every project into the same package.'
 	},
 	experience: {
 		title: 'Experience'
