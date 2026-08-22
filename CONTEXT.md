@@ -111,11 +111,8 @@ docs/knowledge/content-draft.md
 
 ```text
 Minecraft game studio
-
 We make games and experiences in Minecraft.
-
 We work on games and adventures, as well as Minecraft projects for events and exhibitions.
-
 View portfolio
 ```
 
@@ -129,8 +126,6 @@ View portfolio
 What we do
 We handle both the creative and technical sides of Minecraft projects.
 ```
-
-This intro goes directly into the four canonical Work Areas.
 
 ```text
 About
@@ -148,27 +143,42 @@ Contact us
 
 Do not casually rewrite approved Home copy.
 
-## Current review section
-
-```text
-Portfolio page intro
-```
-
-Current Portfolio draft:
+## Portfolio Hero — APPROVED / IMPLEMENTED
 
 ```text
 Portfolio
-Selected Minecraft projects.
-Each project focuses on what was made, our role, and the player experience.
+
+Projects we've worked on.
+
+A closer look at what we made and our role in each project.
 ```
 
-The intro can be reviewed now. Real project names, descriptions, client names, dates, media, roles, results, and credits must come from approved project sources.
+Do not casually rewrite the approved Portfolio Hero.
+
+## Current review section
+
+```text
+Portfolio project listing
+```
+
+The project listing should remain simple and use only approved real data. Depending on what is available, it may show:
+
+```text
+Project name
+Short description
+Client / partner — only when public and useful
+Year — only when confirmed and useful
+View project
+```
+
+Do not add categories, tags, or metadata only to make the page look fuller.
 
 ## Current content status
 
 ```text
 Home                         = APPROVED / implemented
-Portfolio intro              = current review
+Portfolio Hero               = APPROVED / implemented
+Portfolio project listing    = current review
 Portfolio project copy       = waiting for real project sources
 Project Detail               = waiting for real project sources
 About                        = Draft v1 + Work Areas implemented
@@ -228,4 +238,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Home is complete. Continue copy review with the **Portfolio page intro** while preserving all approved Home and Work Areas decisions.
+Continue Portfolio copy review at the **project listing structure**. Preserve all approved Home, Portfolio Hero, and Work Areas decisions.
