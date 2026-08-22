@@ -7,6 +7,29 @@ import type { LinkItem } from './types';
 // The working copy is tracked in docs/knowledge/content-draft.md.
 // Replace or refine factual details when final company and portfolio material is approved.
 
+export const capabilityAreas = [
+	{
+		title: 'Game & Experience Design',
+		body:
+			'We shape the concept, gameplay, objectives, and player experience around what the project needs.'
+	},
+	{
+		title: 'World & Level Design',
+		body:
+			'We design and build Minecraft worlds, environments, levels, and spaces around how players move and play.'
+	},
+	{
+		title: 'Game Development',
+		body:
+			'We develop gameplay systems, mechanics, technical features, and the logic that makes each experience work.'
+	},
+	{
+		title: '3D Art',
+		body:
+			'We create models, textures, and animation for custom Minecraft content when the project needs them.'
+	}
+] as const;
+
 export const homeCopy = {
 	hero: {
 		label: 'Minecraft game studio',
@@ -21,18 +44,17 @@ export const homeCopy = {
 		emptyState: 'Projects will be added here.',
 		viewAllLabel: 'View portfolio'
 	},
+	whatWeDo: {
+		label: 'What we do',
+		title: 'We make Minecraft projects from idea to playable experience.',
+		body: 'Our work is organised around four core production areas. The mix changes with the project.'
+	},
 	about: {
 		label: 'About',
-		title: 'We build for Minecraft.',
+		title: 'A game studio built around Minecraft.',
 		body:
 			'Hellocraft Studios works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.',
 		actionLabel: 'About Hellocraft'
-	},
-	whatWeDo: {
-		label: 'What we do',
-		title: 'Worlds, gameplay, development, and art.',
-		body:
-			'Every project needs a different mix. Our work can include world and level design, gameplay, game development, technical systems, and 3D art.'
 	},
 	contact: {
 		label: 'Contact',
@@ -60,9 +82,9 @@ export const aboutCopy = {
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'What we work on.',
+		title: 'Four core areas of production.',
 		body:
-			'Our work can include world and level design, gameplay, game development, technical systems, and 3D art. The mix depends on the project.'
+			'Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.'
 	},
 	howWeWork: {
 		label: 'How we work',
