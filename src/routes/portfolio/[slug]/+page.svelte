@@ -18,7 +18,7 @@
 
 			<div class="hero__main">
 				<div class="hero__heading">
-					<p class="eyebrow">Project</p>
+					<p class="section-label">Project</p>
 					<h1 id="project-title">{project.title}</h1>
 				</div>
 
@@ -56,7 +56,7 @@
 		<section class="our-role" aria-labelledby="project-role-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<p class="eyebrow">Our role</p>
+					<p class="section-label">Our role</p>
 					<h2 id="project-role-title">Hellocraft's role in the project.</h2>
 				</div>
 
