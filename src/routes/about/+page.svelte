@@ -12,7 +12,7 @@
 	<section class="hero" aria-labelledby="about-title">
 		<div class="shell hero__inner">
 			<div class="hero__heading">
-				<p class="eyebrow">{aboutCopy.hero.label}</p>
+				<p class="section-label">{aboutCopy.hero.label}</p>
 				<h1 id="about-title">{aboutCopy.hero.title}</h1>
 			</div>
 
@@ -25,7 +25,7 @@
 	<section class="what-we-do" aria-labelledby="about-what-we-do-title">
 		<div class="shell section-layout">
 			<div class="section-heading">
-				<p class="eyebrow">{aboutCopy.whatWeDo.label}</p>
+				<p class="section-label">{aboutCopy.whatWeDo.label}</p>
 				<h2 id="about-what-we-do-title">{aboutCopy.whatWeDo.title}</h2>
 			</div>
 
@@ -38,7 +38,7 @@
 	<section class="how-we-work" aria-labelledby="about-how-we-work-title">
 		<div class="shell how-we-work__inner">
 			<div class="how-we-work__intro">
-				<p class="eyebrow">{aboutCopy.howWeWork.label}</p>
+				<p class="section-label">{aboutCopy.howWeWork.label}</p>
 				<h2 id="about-how-we-work-title">{aboutCopy.howWeWork.title}</h2>
 			</div>
 
@@ -52,7 +52,7 @@
 		<section class="experience" aria-labelledby="about-experience-title">
 			<div class="shell section-layout">
 				<div class="section-heading">
-					<p class="eyebrow">Experience</p>
+					<p class="section-label">Experience</p>
 					<h2 id="about-experience-title">{aboutCopy.experience.title}</h2>
 				</div>
 
@@ -68,7 +68,7 @@
 	<section class="contact" aria-labelledby="about-contact-title">
 		<div class="shell contact__inner">
 			<div class="contact__heading">
-				<p class="eyebrow">Contact</p>
+				<p class="section-label">Contact</p>
 				<h2 id="about-contact-title">{aboutCopy.contact.title}</h2>
 			</div>
 
