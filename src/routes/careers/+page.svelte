@@ -12,7 +12,7 @@
 	<section class="hero" aria-labelledby="careers-title">
 		<div class="shell hero__inner">
 			<div class="hero__heading">
-				<p class="eyebrow">{careersCopy.hero.eyebrow}</p>
+				<p class="eyebrow">{careersCopy.hero.label}</p>
 				<h1 id="careers-title">{careersCopy.hero.title}</h1>
 			</div>
 
@@ -25,7 +25,7 @@
 	<section class="general" aria-labelledby="careers-general-title">
 		<div class="shell section-layout">
 			<div class="section-heading">
-				<p class="eyebrow">{careersCopy.general.eyebrow}</p>
+				<p class="eyebrow">{careersCopy.general.label}</p>
 				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
 			</div>
 
@@ -38,7 +38,6 @@
 	<section class="openings" aria-labelledby="career-openings-title">
 		<div class="shell openings__inner">
 			<div class="openings__heading">
-				<p class="eyebrow">Roles</p>
 				<h2 id="career-openings-title">{careersCopy.openings.title}</h2>
 			</div>
 
@@ -73,7 +72,7 @@
 	<section class="application" aria-labelledby="careers-application-title">
 		<div class="shell application__inner">
 			<div class="application__heading">
-				<p class="eyebrow">Application</p>
+				<p class="eyebrow">Applications</p>
 				<h2 id="careers-application-title">{careersCopy.application.title}</h2>
 			</div>
 
