@@ -43,7 +43,7 @@ export const homeCopy = {
 	},
 	portfolio: {
 		title: 'Featured projects',
-		body: 'A selection of Minecraft projects showing what we built and the role we played.',
+		body: "Minecraft projects we've worked on.",
 		emptyState: 'Projects will be added here.',
 		viewAllLabel: 'View portfolio'
 	},
