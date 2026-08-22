@@ -100,6 +100,7 @@ Minecraft-native
 friendly
 practical
 professional
+human
 ```
 
 Main rules:
@@ -111,7 +112,8 @@ Main rules:
 - keep headlines short;
 - keep normal section copy compact;
 - let projects and verified results prove quality;
-- avoid generic agency language and exaggerated claims.
+- avoid generic agency language and exaggerated claims;
+- professional copy should still sound like it was written by a real studio team, not a generated marketing template.
 
 Reference wording from other studios must not be copied.
 
@@ -157,16 +159,40 @@ docs/knowledge/content-draft.md
 Current status:
 
 ```text
-Home company copy      = Draft v1 implemented
-Home Work Areas        = approved / implemented
-Portfolio intro        = Draft v1 implemented
-Portfolio project copy = waiting for real project sources
-About company copy     = Draft v1 implemented
-About Work Areas       = approved / implemented
-Contact final copy     = waiting for real contact route/details
-Careers final copy     = waiting for real hiring state
-Final site-wide pass   = after real portfolio/media is integrated
+Home Hero                       = APPROVED / implemented
+Home Featured Projects heading = APPROVED / implemented
+Home Featured Projects support = under review
+Home Work Areas                 = APPROVED / implemented
+Portfolio intro                 = Draft v1 implemented
+Portfolio project copy          = waiting for real project sources
+About company copy              = Draft v1 implemented
+About Work Areas                = approved / implemented
+Contact final copy              = waiting for real contact route/details
+Careers final copy              = waiting for real hiring state
+Final site-wide pass            = after real portfolio/media is integrated
 ```
+
+### Approved Home Hero
+
+```text
+Minecraft game studio
+
+We make games and experiences in Minecraft.
+
+We work on games and adventures, as well as Minecraft projects for events and exhibitions.
+
+View portfolio
+```
+
+Do not rewrite the approved Hero without a concrete reason from new positioning or verified portfolio evidence.
+
+### Approved Home Featured Projects heading
+
+```text
+Featured Projects
+```
+
+The heading is approved. The supporting sentence under it is still under review. Do not replace the heading with `Our Work`, `Our Creations`, or another alternative without a concrete reason.
 
 Home structure:
 
@@ -214,18 +240,19 @@ The website repository does not yet contain real project screenshots, renders, o
 Current status:
 
 ```text
-Home draft copy       = implemented
-Home Work Areas       = implemented
-About draft copy      = implemented
-About Work Areas      = implemented
-Portfolio intro       = implemented
-real portfolio        = waiting for sources
-real project media    = waiting for sources
-contact details       = missing
-social links          = missing
-career openings       = none confirmed
-final logo/vector     = pending
-final font            = pending
+Home Hero                 = approved / implemented
+Featured Projects heading = approved / implemented
+Home Work Areas           = implemented
+About draft copy          = implemented
+About Work Areas          = implemented
+Portfolio intro           = implemented
+real portfolio            = waiting for sources
+real project media        = waiting for sources
+contact details           = missing
+social links              = missing
+career openings           = none confirmed
+final logo/vector         = pending
+final font                = pending
 ```
 
 `contentIsDemo = true` remains enabled. The site keeps its preview notice and `noindex, nofollow` until production content is ready.
@@ -319,7 +346,8 @@ page design           = approved
 writing style guide   = APPROVED
 Work Areas             = APPROVED / canonical
 content drafting      = ACTIVE
-Home draft            = implemented
+Home Hero             = APPROVED
+Featured Projects     = heading APPROVED; support copy under review
 About draft           = implemented
 Portfolio intro       = implemented
 real portfolio        = next major input
@@ -336,4 +364,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is now in the **website content drafting → real portfolio integration** stage. Keep the Work Areas terminology unified across all future updates.
+The project is now in the **website content drafting → real portfolio integration** stage. Keep the Work Areas terminology unified and preserve approved copy decisions across future updates.
