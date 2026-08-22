@@ -11,7 +11,7 @@
 	<section class="hero" aria-labelledby="contact-title">
 		<div class="shell hero__inner">
 			<div class="hero__heading">
-				<p class="eyebrow">{contactCopy.hero.label}</p>
+				<p class="section-label">{contactCopy.hero.label}</p>
 				<h1 id="contact-title">{contactCopy.hero.title}</h1>
 			</div>
 
@@ -24,7 +24,7 @@
 	<section class="methods" aria-labelledby="contact-methods-title">
 		<div class="shell methods__inner">
 			<div class="methods__heading">
-				<p class="eyebrow">Contact</p>
+				<p class="section-label">Contact</p>
 				<h2 id="contact-methods-title">{contactCopy.methods.title}</h2>
 			</div>
 
@@ -47,7 +47,7 @@
 	<section class="inquiry" aria-labelledby="contact-inquiry-title">
 		<div class="shell inquiry__inner">
 			<div class="inquiry__heading">
-				<p class="eyebrow">Project enquiries</p>
+				<p class="section-label">Project enquiries</p>
 				<h2 id="contact-inquiry-title">{contactCopy.inquiry.title}</h2>
 			</div>
 
