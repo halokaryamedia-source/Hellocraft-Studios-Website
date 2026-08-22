@@ -11,7 +11,8 @@ page structure      = complete
 public page names   = approved
 page design         = approved
 writing style guide = APPROVED
-Home draft          = implemented
+Home Hero           = APPROVED / implemented
+Home Work Areas     = APPROVED / implemented
 About draft         = implemented
 Portfolio intro     = implemented
 Work Areas          = APPROVED / implemented
@@ -41,39 +42,9 @@ Game Development
 3D Art
 ```
 
-Use these exact names in:
+Use these exact names in Home, About, internal source names, documentation, and project attribution when relevant.
 
-```text
-Home
-About
-internal source names
-documentation
-project attribution when relevant
-```
-
-Do not maintain parallel terms such as:
-
-```text
-capabilities
-core production areas
-services taxonomy
-disciplines taxonomy
-Core Production / Supporting Production role groups
-```
-
-### Job titles
-
-Work Areas are **not** job titles.
-
-For Careers or project credits:
-
-```text
-real opening / real project data
-→ use the real approved job title
-→ describe the real responsibility
-```
-
-Do not create a permanent role taxonomy before real hiring/project data exists.
+Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
 ## Working content draft
 
@@ -86,14 +57,32 @@ docs/knowledge/content-draft.md
 Current status:
 
 ```text
-Home                = Draft v1 + Work Areas implemented
-Portfolio intro     = Draft v1
-Portfolio projects  = waiting for real project sources
-Project Detail      = structure ready; waiting for real project sources
-About               = Draft v1 + Work Areas implemented
-Contact             = working copy only; final contact data missing
-Careers             = working copy only; final hiring state missing
+Home Hero            = APPROVED
+Home Featured Projects = current review section
+Home What We Do      = draft / Work Areas implemented
+Home About preview   = draft
+Home Contact preview = draft
+Portfolio intro      = Draft v1
+Portfolio projects   = waiting for real project sources
+Project Detail       = structure ready; waiting for real project sources
+About                = Draft v1 + Work Areas implemented
+Contact              = working copy only; final contact data missing
+Careers              = working copy only; final hiring state missing
 ```
+
+## Approved Home Hero
+
+```text
+Minecraft game studio
+
+We make games and experiences in Minecraft.
+
+We work on games and adventures, as well as Minecraft projects for events and exhibitions.
+
+View portfolio
+```
+
+Do not rewrite this without a concrete reason from new company positioning or real portfolio evidence.
 
 ## Writing style
 
@@ -113,7 +102,10 @@ Minecraft-native
 friendly
 practical
 professional
+human
 ```
+
+Professional does not mean corporate or artificial. Avoid polished marketing phrases that sound generated rather than spoken by a real studio team.
 
 Reference websites are pattern evidence only. Do not copy their wording, slogans, claims, or project descriptions.
 
@@ -157,9 +149,9 @@ Contact
 
 ## Portfolio and Project Detail
 
-The next major input is **real Hellocraft project material**.
+Real portfolio content still requires approved Hellocraft project material.
 
-For each project, useful information includes:
+For each project, collect:
 
 ```text
 project name
@@ -184,28 +176,6 @@ project / client context
 → useful links / credits
 ```
 
-Use real project responsibility terms. Do not force project credits into a made-up job taxonomy.
-
-## Incoming material workflow
-
-```text
-receive files/information
-→ record every item
-→ group by project or subject
-→ identify duplicates
-→ check facts
-→ confirm public/private status
-→ record missing information
-→ select what appears on the website
-→ write public copy using 08-writing-style.md
-```
-
-Keep unselected supplied material recorded in:
-
-```text
-docs/knowledge/content-inventory.md
-```
-
 ## Demo mode
 
 Keep:
@@ -215,18 +185,6 @@ contentIsDemo = true
 ```
 
 until production content is ready.
-
-Before turning it off:
-
-```text
-[ ] sample portfolio entries removed/replaced
-[ ] real project media added
-[ ] final copy approved
-[ ] real contact details added
-[ ] sample experience/career data removed/replaced as needed
-[ ] final brand assets approved
-[ ] final metadata ready
-```
 
 ## Deferred technical work
 
@@ -243,4 +201,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Continue content drafting with real Hellocraft portfolio information and project media. Keep the four Work Areas as the single shared terminology across source, public copy, and documentation.**
+**Review and approve the Home `Featured Projects` section copy. Do not revisit the approved Home Hero unless a concrete new fact requires it.**
