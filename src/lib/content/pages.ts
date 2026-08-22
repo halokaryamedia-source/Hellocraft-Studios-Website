@@ -49,8 +49,7 @@ export const homeCopy = {
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'We make Minecraft projects from idea to playable experience.',
-		body: 'We work across four areas. The mix changes with the project.'
+		title: 'We handle both the creative and technical sides of Minecraft projects.'
 	},
 	about: {
 		label: 'About',
