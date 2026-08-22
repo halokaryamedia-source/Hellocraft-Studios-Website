@@ -1,30 +1,30 @@
 import type { CareerOpening } from './types';
 
 export const demoAboutExperienceItems = [
-	'Demo About experience item — replace with an approved company fact or result.',
-	'Demo About experience item — temporary content for layout development only.'
+	'Sample company experience item — replace with a verified public fact.',
+	'Sample result or credibility item — replace with approved evidence.'
 ];
 
 export const demoCareerOpenings: CareerOpening[] = [
 	{
-		id: 'demo-role-01',
-		title: 'Demo role — Level Designer',
-		summary: 'Temporary role content used to shape the Careers page. Replace with a real approved opening.',
-		location: 'Location TBD',
-		engagement: 'Engagement TBD'
+		id: 'sample-role-01',
+		title: 'Sample Level Designer Role',
+		summary: 'Sample opening used only to preview the Careers layout.',
+		location: 'Location to be confirmed',
+		engagement: 'Work type to be confirmed'
 	},
 	{
-		id: 'demo-role-02',
-		title: 'Demo role — Game Developer',
-		summary: 'Temporary role content used to test longer descriptions, metadata, and repeated opening layout.',
-		location: 'Location TBD',
-		engagement: 'Engagement TBD'
+		id: 'sample-role-02',
+		title: 'Sample Game Developer Role',
+		summary: 'Sample opening used only to preview longer role information.',
+		location: 'Location to be confirmed',
+		engagement: 'Work type to be confirmed'
 	},
 	{
-		id: 'demo-role-03',
-		title: 'Demo role — 3D Artist',
-		summary: 'Temporary role content only. Final title, scope, location, and application path remain pending.',
-		location: 'Location TBD',
-		engagement: 'Engagement TBD'
+		id: 'sample-role-03',
+		title: 'Sample 3D Artist Role',
+		summary: 'Sample opening used only to preview the Careers layout.',
+		location: 'Location to be confirmed',
+		engagement: 'Work type to be confirmed'
 	}
 ];
