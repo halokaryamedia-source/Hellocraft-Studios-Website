@@ -90,7 +90,7 @@ Current confirmed scope supports Minecraft work that can involve:
 - gameplay;
 - game development;
 - technical systems;
-- supporting 3D art.
+- 3D art.
 
 These are examples of project work, not a fixed public Services package.
 
@@ -114,7 +114,7 @@ Each real opening should provide the role details and a clear way to apply.
 
 Contact should provide approved public business contact details.
 
-The page may support project enquiries, partnerships, and other business questions.
+The page may support project inquiries, partnerships, and other business questions.
 
 Do not invent email addresses, phone numbers, Discord links, social profiles, booking links, office addresses, or contact forms.
 
