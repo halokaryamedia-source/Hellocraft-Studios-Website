@@ -99,14 +99,6 @@ Do not create parallel terms such as capabilities, core production areas, servic
 
 Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
-## Content drafting — ACTIVE
-
-Working draft:
-
-```text
-docs/knowledge/content-draft.md
-```
-
 ## Home — APPROVED / IMPLEMENTED
 
 ```text
@@ -143,7 +135,9 @@ Contact us
 
 Do not casually rewrite approved Home copy.
 
-## Portfolio Hero — APPROVED / IMPLEMENTED
+## Portfolio — CURRENT STAGE
+
+### Hero — APPROVED / IMPLEMENTED
 
 ```text
 Portfolio
@@ -153,33 +147,52 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-Do not casually rewrite the approved Portfolio Hero.
+### Project listing structure — APPROVED / IMPLEMENTED
 
-## Current review section
-
-```text
-Portfolio project listing
-```
-
-The project listing should remain simple and use only approved real data. Depending on what is available, it may show:
+Required:
 
 ```text
+Project media
 Project name
 Short description
-Client / partner — only when public and useful
-Year — only when confirmed and useful
 View project
 ```
 
-Do not add categories, tags, or metadata only to make the page look fuller.
+Optional only when confirmed, public, and useful:
+
+```text
+Client / partner
+Year
+```
+
+Do not show by default:
+
+```text
+Work Areas
+role / contribution labels
+tags
+categories
+technical details
+long descriptions
+extra metadata
+```
+
+The current Portfolio route already follows this rule.
+
+### Current review
+
+The next decision is how the **one-sentence short description** under each project name should be written.
+
+It should explain the project clearly, stay concise, and sound professional and human. Final descriptions must come from approved real project information.
 
 ## Current content status
 
 ```text
 Home                         = APPROVED / implemented
 Portfolio Hero               = APPROVED / implemented
-Portfolio project listing    = current review
-Portfolio project copy       = waiting for real project sources
+Portfolio listing structure  = APPROVED / implemented
+Portfolio short descriptions = current review rule
+Portfolio project content    = waiting for real project sources
 Project Detail               = waiting for real project sources
 About                        = Draft v1 + Work Areas implemented
 Contact final copy           = waiting for real contact details
@@ -198,7 +211,7 @@ src/lib/content/pages.ts
 → Home, Portfolio, About, Careers, Contact, footer text, and Work Areas
 
 src/lib/content/projects.ts
-→ portfolio project information
+→ portfolio project information and approved listing/data rules
 
 docs/knowledge/content-draft.md
 → working website copy and approval status
@@ -231,11 +244,11 @@ Still deferred until explicitly reopened:
 bun install
 bun.lock generation
 bun run validate
-full browser/runtime testing
-hosting provider selection
+full browser testing
+hosting selection
 production adapter selection
 ```
 
 ## Immediate continuation
 
-Continue Portfolio copy review at the **project listing structure**. Preserve all approved Home, Portfolio Hero, and Work Areas decisions.
+Continue Portfolio copy review at the **short project description rule**. Preserve all approved Home, Portfolio Hero, Portfolio listing structure, and Work Areas decisions.
