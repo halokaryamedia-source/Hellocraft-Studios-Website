@@ -18,9 +18,11 @@ Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
 About                              = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
-Contact                            = APPROVED copy / implemented
+Contact Hero                       = APPROVED / implemented
 Contact Details rule               = APPROVED / evidence-only
+Contact Inquiry guidance           = APPROVED / implemented
 Careers Hero                       = APPROVED / implemented
+Careers General Intro              = REMOVED / APPROVED
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -37,45 +39,36 @@ Game Development
 3D Art
 ```
 
-Work Areas are not job titles. Careers and project credits use real approved titles from actual data only.
+Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
-## Approved Careers Hero
-
-```text
-Careers
-
-Join Hellocraft Studios.
-
-Open roles and application details will be posted here when we're hiring.
-```
-
-Do not rewrite this without a concrete reason from a real change in hiring approach or company positioning.
-
-## Careers no-openings state
-
-Keep the safe public state:
+## Approved Contact copy
 
 ```text
-We don't have any public openings right now.
+Contact
+
+Tell us about your project.
+
+Tell us what you're working on and how we can help.
 ```
 
-Do not invent job openings, titles, responsibilities, locations, or application links.
-
-## Current Careers review
-
-The next section is the Careers **general intro**.
-
-Current draft:
+Contact methods rule:
 
 ```text
-Careers
-
-Build Minecraft projects with us.
-
-Each real opening will describe the work, skills, and responsibilities for that role.
+Use only real approved public contact channels.
+One real business email is enough if that is the actual workflow.
+Social links are optional and appear only when real, public, approved, and useful.
+Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
 ```
 
-Review this next. It must not imply a current vacancy or introduce a permanent role taxonomy.
+Inquiry guidance:
+
+```text
+What should you include?
+
+A short description of the project, who it's for, and where you need our help.
+```
+
+The actual email and any public links still wait for confirmed contact data.
 
 ## Portfolio and Project Detail
 
@@ -97,11 +90,43 @@ Do not maintain `What We Made` as a separate permanent section.
 
 ## About
 
-About copy is approved for the current content stage. Experience remains evidence-only and hidden until verified public material exists.
+About copy is approved for the current content stage. `Experience` remains evidence-only and hidden until verified public material exists.
 
-## Contact
+## Careers — current review
 
-Contact copy is approved for the current content stage. Real email/social channels remain pending confirmed public data.
+Approved Hero:
+
+```text
+Careers
+
+Join Hellocraft Studios.
+
+Open roles and application details will be posted here when we're hiring.
+```
+
+Approved no-openings state:
+
+```text
+We don't have any public openings right now.
+```
+
+The separate generic Careers intro has been **removed by design**. Do not restore `Build Minecraft projects with us.` or another generic filler section. The page now follows:
+
+```text
+Hero
+→ Open positions
+→ How to apply
+```
+
+Important rule:
+
+```text
+Work Areas are not job titles.
+Do not invent a permanent role taxonomy.
+Use real job titles and responsibilities only when a real opening exists.
+```
+
+The next Careers section to review is **How to apply**. It must reflect the real hiring workflow and must not invent application instructions.
 
 ## Writing style
 
@@ -154,4 +179,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review the Careers general intro (`Build Minecraft projects with us.`). Preserve the approved Careers Hero, no-openings state, and all approved Home, Portfolio, Project Detail, About, Contact, and Work Areas decisions. Do not invent job openings or job titles.**
+**Review the Careers `How to apply` section. Preserve the approved Careers Hero, approved no-openings state, and the decision to remove the generic Careers intro. Do not invent application instructions, job openings, or job titles.**
