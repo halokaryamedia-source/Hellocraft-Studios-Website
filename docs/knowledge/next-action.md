@@ -16,13 +16,11 @@ Portfolio Hero                     = APPROVED / implemented
 Portfolio listing structure        = APPROVED / implemented
 Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
-About Hero                         = APPROVED / implemented
-About What We Do                   = APPROVED / implemented
-About How We Work                  = APPROVED / implemented
+About                              = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
-About Contact close                = APPROVED / implemented
 Contact Hero                       = APPROVED / implemented
 Contact Details rule               = APPROVED / evidence-only
+Contact Inquiry guidance           = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -41,139 +39,7 @@ Game Development
 
 Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
-## Portfolio — approved structure
-
-Hero:
-
-```text
-Portfolio
-
-Projects we've worked on.
-
-A closer look at what we made and our role in each project.
-```
-
-Project listing:
-
-```text
-Project media
-Project name
-Short description
-View project
-```
-
-Optional only when confirmed, public, and useful:
-
-```text
-Client / partner
-Year
-```
-
-Short descriptions explain:
-
-```text
-what the project is
-+
-what players / visitors do or experience
-```
-
-Lead with the project itself, not Hellocraft's contribution or a marketing claim.
-
-## Project Detail — APPROVED / implemented
-
-Use this order when real evidence supports the section:
-
-```text
-Project
-→ project name + short description + optional client/year
-→ main media
-
-The Project
-→ what the project is and useful context
-
-Our Role
-→ what Hellocraft actually designed, built, developed, or handled
-
-Player Experience
-→ optional
-
-Results
-→ optional; verified only
-
-Credits / Links
-→ optional
-
-View Portfolio
-```
-
-Do **not** maintain `What We Made` as a separate permanent section. What Hellocraft made belongs inside `Our Role`.
-
-The source model uses explicit fields:
-
-```text
-projectContext
-ourRole
-playerExperience
-results
-credits
-links
-```
-
-Final Project Detail copy still waits for real approved project information and media.
-
-## About — APPROVED
-
-Approved Hero:
-
-```text
-About
-
-We're a game studio focused on Minecraft.
-
-We make games and adventures, and work on projects for events and exhibitions.
-```
-
-Approved What We Do:
-
-```text
-What we do
-
-We handle both the creative and technical sides of Minecraft projects.
-```
-
-Approved How We Work:
-
-```text
-How we work
-
-We work around what each project needs.
-
-We keep the creative and technical work connected throughout the project.
-```
-
-Approved Experience rule:
-
-```text
-Experience is evidence-only.
-Keep it hidden/empty until verified public evidence exists.
-Do not add generic marketing copy, invented client names, project counts, awards, years, or metrics.
-```
-
-Approved Contact close:
-
-```text
-Planning a Minecraft project?
-
-Tell us what you're working on and where we can help.
-
-Contact us
-```
-
-About is complete for the current content stage. Only real Experience evidence remains pending.
-
-## Contact — current review
-
-Approved Hero:
+## Approved Contact copy
 
 ```text
 Contact
@@ -183,7 +49,7 @@ Tell us about your project.
 Tell us what you're working on and how we can help.
 ```
 
-Approved Contact Details rule:
+Contact methods rule:
 
 ```text
 Use only real approved public contact channels.
@@ -192,9 +58,55 @@ Social links are optional and appear only when real, public, approved, and usefu
 Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
 ```
 
+Inquiry guidance:
+
+```text
+What should you include?
+
+A short description of the project, who it's for, and where you need our help.
+```
+
 The actual email and any public links still wait for confirmed contact data.
 
-The next Contact section is **Inquiry guidance**.
+## Portfolio and Project Detail
+
+Portfolio structure and Project Detail structure are approved. Final project content still requires real approved project facts and media.
+
+Project Detail order:
+
+```text
+Project
+→ The Project
+→ Our Role
+→ Player Experience — optional
+→ Results — optional / verified only
+→ Credits / Links — optional
+→ View Portfolio
+```
+
+Do not maintain `What We Made` as a separate permanent section.
+
+## About
+
+About copy is approved for the current content stage. `Experience` remains evidence-only and hidden until verified public material exists.
+
+## Careers — next review
+
+Careers is the next page to review section by section.
+
+Important rule:
+
+```text
+Work Areas are not job titles.
+Do not invent a permanent role taxonomy.
+Use real job titles and responsibilities only when a real opening exists.
+```
+
+A valid public state when there are no openings is:
+
+```text
+We don't have any public openings right now.
+```
 
 ## Writing style
 
@@ -208,19 +120,18 @@ Hellocraft should sound confident, clear, creator-led, Minecraft-native, friendl
 
 Avoid generic agency language and polished marketing phrases that sound generated rather than spoken by a real studio team.
 
-## Real portfolio input still needed
-
-For each project, collect:
+## Real production content still needed
 
 ```text
-project name
-what Hellocraft worked on
-short project description
-client/partner if public
-year/date if confirmed
-public link if available
-screenshots/renders/video
-credits or publication restrictions
+real portfolio project facts
+project screenshots / renders / video
+approved client / partner attribution
+verified results where relevant
+real business email and approved public links
+real hiring state / openings when applicable
+final logo/vector
+final font
+final SEO/social metadata
 ```
 
 ## Demo mode
@@ -248,4 +159,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Contact `Inquiry guidance` copy. Keep it concise and useful rather than turning it into a long intake form. Preserve the approved Contact Hero, Contact Details rule, and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions.**
+**Start the Careers page section-by-section review, beginning with the Careers Hero and no-openings state. Preserve all approved Home, Portfolio, Project Detail, About, Contact, and Work Areas decisions. Do not invent job openings or job titles.**
