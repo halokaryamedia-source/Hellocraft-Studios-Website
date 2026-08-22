@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ProjectMediaPlaceholder from '$lib/components/portfolio/ProjectMediaPlaceholder.svelte';
-	import { capabilityAreas, homeCopy } from '$lib/content/pages';
+	import { homeCopy, workAreas } from '$lib/content/pages';
 	import { featuredProjects } from '$lib/content/projects';
 </script>
 
@@ -81,19 +81,19 @@
 		</div>
 	</section>
 
-	<section class="capabilities-section" aria-labelledby="home-capabilities-title">
-		<div class="shell capabilities-layout">
-			<header class="capabilities-heading">
+	<section class="work-areas-section" aria-labelledby="home-work-areas-title">
+		<div class="shell work-areas-layout">
+			<header class="work-areas-heading">
 				<p class="section-label">{homeCopy.whatWeDo.label}</p>
-				<h2 id="home-capabilities-title">{homeCopy.whatWeDo.title}</h2>
+				<h2 id="home-work-areas-title">{homeCopy.whatWeDo.title}</h2>
 				<p>{homeCopy.whatWeDo.body}</p>
 			</header>
 
-			<div class="capability-list">
-				{#each capabilityAreas as capability (capability.title)}
-					<article class="capability-row">
-						<h3>{capability.title}</h3>
-						<p>{capability.body}</p>
+			<div class="work-area-list">
+				{#each workAreas as workArea (workArea.title)}
+					<article class="work-area-row">
+						<h3>{workArea.title}</h3>
+						<p>{workArea.body}</p>
 					</article>
 				{/each}
 			</div>
@@ -308,24 +308,24 @@
 		line-height: 0.99;
 	}
 
-	.capabilities-section {
+	.work-areas-section {
 		padding-block: clamp(6rem, 10vw, 9.5rem);
 		background: var(--surface-secondary);
 	}
 
-	.capabilities-layout {
+	.work-areas-layout {
 		display: grid;
 		grid-template-columns: minmax(0, 0.82fr) minmax(20rem, 1.18fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: start;
 	}
 
-	.capabilities-heading {
+	.work-areas-heading {
 		display: grid;
 		gap: 1rem;
 	}
 
-	.capabilities-heading h2 {
+	.work-areas-heading h2 {
 		max-width: 13ch;
 		margin: 0;
 		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
@@ -333,17 +333,17 @@
 		line-height: 0.98;
 	}
 
-	.capabilities-heading > p:last-child {
+	.work-areas-heading > p:last-child {
 		max-width: 31rem;
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.capability-list {
+	.work-area-list {
 		border-top: 1px solid var(--border);
 	}
 
-	.capability-row {
+	.work-area-row {
 		display: grid;
 		grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
 		gap: clamp(1.5rem, 4vw, 4rem);
@@ -351,14 +351,14 @@
 		border-bottom: 1px solid var(--border);
 	}
 
-	.capability-row h3 {
+	.work-area-row h3 {
 		margin: 0;
 		font-size: clamp(1.35rem, 2vw, 1.9rem);
 		font-weight: 660;
 		line-height: 1.05;
 	}
 
-	.capability-row p {
+	.work-area-row p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
@@ -454,20 +454,20 @@
 		.portfolio-heading,
 		.lead-project__caption,
 		.secondary-project,
-		.capabilities-layout,
+		.work-areas-layout,
 		.about-grid {
 			grid-template-columns: 1fr;
 		}
 
 		.hero__statement,
-		.capabilities-layout,
+		.work-areas-layout,
 		.about-grid {
 			gap: 2.75rem;
 		}
 
 		.hero__support,
 		.portfolio-heading__aside,
-		.capabilities-heading,
+		.work-areas-heading,
 		.about-copy {
 			max-width: 38rem;
 		}
@@ -523,13 +523,13 @@
 			padding-top: 6rem;
 		}
 
-		.capabilities-heading h2,
+		.work-areas-heading h2,
 		.about-heading h2,
 		.contact-heading h2 {
 			font-size: clamp(2.55rem, 11.5vw, 3.7rem);
 		}
 
-		.capability-row {
+		.work-area-row {
 			grid-template-columns: 1fr;
 			gap: 0.75rem;
 		}
