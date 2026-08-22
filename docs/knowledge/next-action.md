@@ -20,63 +20,33 @@ About                              = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
 Contact                            = APPROVED copy / implemented
 Contact Details rule               = APPROVED / evidence-only
-Careers Hero                       = APPROVED / implemented
-Careers General Intro              = REMOVED / APPROVED
+Careers                            = APPROVED structure/copy
 Careers How to Apply rule          = APPROVED / conditional
+Footer                             = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
 ```
 
-## One terminology system
+## Approved Footer
 
-Use **Work Areas** as the single fixed term for Hellocraft's areas of work:
-
-```text
-Game & Experience Design
-World & Level Design
-Game Development
-3D Art
-```
-
-Work Areas are not job titles. Careers and project credits use real approved titles from real data.
-
-## Careers — approved current state
+Footer identity:
 
 ```text
-Careers
-
-Join Hellocraft Studios.
-
-Open roles and application details will be posted here when we're hiring.
+Hellocraft Studios
+Games and experiences in Minecraft.
 ```
 
-No-opening state:
+Use the brand lockup/name as the primary identity and `Games and experiences in Minecraft.` as the single footer descriptor.
+
+Do not restore either of these as additional footer taglines:
 
 ```text
-Open positions
-
-We don't have any public openings right now.
+Hellocraft Studios — a game studio focused on Minecraft.
+Minecraft game studio
 ```
 
-The generic Careers intro was removed by design.
-
-`How to apply` is conditional:
-
-```text
-no openings
-→ do not show it
-
-role-specific application workflow
-→ keep instructions with the real role
-
-one shared workflow for all current roles
-→ show How to apply only with real approved instructions
-```
-
-The source uses optional `careerApplication`; it remains `null` until a real shared workflow is needed.
-
-Do not invent openings, titles, email addresses, forms, Discord processes, or recruitment instructions.
+Footer navigation uses the approved public page names. Social links appear only when real approved public links exist.
 
 ## Production content still needed
 
@@ -118,4 +88,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review shared site copy, beginning with the Footer statement. Preserve all approved Home, Portfolio, Project Detail, About, Contact, Careers, and Work Areas decisions. Do not reopen approved page copy without a concrete reason.**
+**The reusable public copy and structure review is complete for Home, Portfolio, Project Detail, About, Contact, Careers, Work Areas, and Footer. Next, collect and audit real production content before the final site-wide copy pass. Preserve all approved wording and structure unless verified real evidence creates a concrete reason to change it.**
