@@ -11,14 +11,10 @@ page structure                     = complete
 public page names                  = approved
 page design                        = approved
 writing style guide                = APPROVED
-Home Hero                          = APPROVED / implemented
-Home Featured Projects             = APPROVED / implemented
-Home What We Do                    = APPROVED / implemented
-Home About preview                 = APPROVED / implemented
-Home Contact preview               = APPROVED / implemented
+Home                               = APPROVED / implemented
+Portfolio Hero                     = APPROVED / implemented
 Home Work Areas                    = APPROVED / implemented
 About draft                        = implemented
-Portfolio intro                    = implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -62,7 +58,8 @@ Current status:
 
 ```text
 Home                         = APPROVED / implemented
-Portfolio intro              = next review section
+Portfolio Hero               = APPROVED / implemented
+Portfolio project listing    = current review section
 Portfolio projects           = waiting for real project sources
 Project Detail               = structure ready; waiting for real project sources
 About                        = Draft v1 + Work Areas implemented
@@ -70,34 +67,33 @@ Contact                      = working copy only; final contact data missing
 Careers                      = working copy only; final hiring state missing
 ```
 
-## Approved Home copy
+## Approved Portfolio Hero
 
 ```text
-Hero
-Minecraft game studio
-We make games and experiences in Minecraft.
-We work on games and adventures, as well as Minecraft projects for events and exhibitions.
-View portfolio
+Portfolio
 
-Featured Projects
-Minecraft projects we've worked on.
-View portfolio
+Projects we've worked on.
 
-What We Do
-We handle both the creative and technical sides of Minecraft projects.
-
-About
-We're a studio focused on Minecraft.
-We make games and adventures, and also work on projects for events and exhibitions.
-About Hellocraft
-
-Contact
-Tell us about your Minecraft project.
-Tell us what you're working on and where we can help.
-Contact us
+A closer look at what we made and our role in each project.
 ```
 
-The What We Do intro goes directly into the four Work Areas. Do not add a second explanatory sentence without a concrete reason.
+Do not rewrite this without a concrete reason from verified portfolio evidence.
+
+## Portfolio listing rule
+
+The next decision is the copy structure for each project shown on the Portfolio page.
+
+Keep it simple. Depending on verified data, a project listing may use:
+
+```text
+Project name
+Short description
+Client / partner — only when public and useful
+Year — only when confirmed and useful
+View project
+```
+
+Do not add categories, tags, or metadata just to fill space.
 
 ## Writing style
 
@@ -107,41 +103,9 @@ All new or revised public copy must follow:
 docs/foundation/08-writing-style.md
 ```
 
-Hellocraft should sound:
-
-```text
-confident
-clear
-creator-led
-Minecraft-native
-friendly
-practical
-professional
-human
-```
+Hellocraft should sound confident, clear, creator-led, Minecraft-native, friendly, practical, professional, and human.
 
 Professional does not mean corporate or artificial. Avoid polished marketing phrases that sound generated rather than spoken by a real studio team.
-
-Reference websites are pattern evidence only. Do not copy their wording, slogans, claims, or project descriptions.
-
-## Home structure
-
-```text
-Hero
-→ who Hellocraft is and what it makes
-
-Featured Projects
-→ proof through real work
-
-What We Do
-→ the four canonical Work Areas
-
-About
-→ who the studio is and the contexts it works in
-
-Contact
-→ start a project conversation
-```
 
 ## Portfolio and Project Detail
 
@@ -197,4 +161,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Start the Portfolio page copy review. Preserve the approved Home copy and Work Areas.**
+**Review and approve the project listing copy structure for the Portfolio page. Preserve the approved Home, Portfolio Hero, and Work Areas.**
