@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ProjectMediaPlaceholder from '$lib/components/portfolio/ProjectMediaPlaceholder.svelte';
-	import { homeCopy } from '$lib/content/pages';
+	import { capabilityAreas, homeCopy } from '$lib/content/pages';
 	import { featuredProjects } from '$lib/content/projects';
 </script>
 
@@ -81,6 +81,25 @@
 		</div>
 	</section>
 
+	<section class="capabilities-section" aria-labelledby="home-capabilities-title">
+		<div class="shell capabilities-layout">
+			<header class="capabilities-heading">
+				<p class="section-label">{homeCopy.whatWeDo.label}</p>
+				<h2 id="home-capabilities-title">{homeCopy.whatWeDo.title}</h2>
+				<p>{homeCopy.whatWeDo.body}</p>
+			</header>
+
+			<div class="capability-list">
+				{#each capabilityAreas as capability (capability.title)}
+					<article class="capability-row">
+						<h3>{capability.title}</h3>
+						<p>{capability.body}</p>
+					</article>
+				{/each}
+			</div>
+		</div>
+	</section>
+
 	<section class="about-section" aria-labelledby="home-about-title">
 		<div class="shell about-grid">
 			<div class="about-heading">
@@ -90,13 +109,6 @@
 
 			<div class="about-copy">
 				<p class="about-intro">{homeCopy.about.body}</p>
-
-				<div class="what-we-do">
-					<p class="section-label">{homeCopy.whatWeDo.label}</p>
-					<h3>{homeCopy.whatWeDo.title}</h3>
-					<p>{homeCopy.whatWeDo.body}</p>
-				</div>
-
 				<a class="text-link" href="/about">{homeCopy.about.actionLabel}</a>
 			</div>
 		</div>
@@ -296,10 +308,65 @@
 		line-height: 0.99;
 	}
 
-	.about-section {
+	.capabilities-section {
 		padding-block: clamp(6rem, 10vw, 9.5rem);
 		background: var(--surface-secondary);
-		color: var(--ink);
+	}
+
+	.capabilities-layout {
+		display: grid;
+		grid-template-columns: minmax(0, 0.82fr) minmax(20rem, 1.18fr);
+		gap: clamp(4rem, 10vw, 10rem);
+		align-items: start;
+	}
+
+	.capabilities-heading {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.capabilities-heading h2 {
+		max-width: 13ch;
+		margin: 0;
+		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
+		font-weight: 680;
+		line-height: 0.98;
+	}
+
+	.capabilities-heading > p:last-child {
+		max-width: 31rem;
+		margin: 0;
+		color: var(--text-muted);
+	}
+
+	.capability-list {
+		border-top: 1px solid var(--border);
+	}
+
+	.capability-row {
+		display: grid;
+		grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
+		gap: clamp(1.5rem, 4vw, 4rem);
+		padding-block: clamp(1.6rem, 2.7vw, 2.4rem);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.capability-row h3 {
+		margin: 0;
+		font-size: clamp(1.35rem, 2vw, 1.9rem);
+		font-weight: 660;
+		line-height: 1.05;
+	}
+
+	.capability-row p {
+		max-width: var(--measure);
+		margin: 0;
+		color: var(--text-muted);
+	}
+
+	.about-section {
+		padding-block: clamp(6rem, 10vw, 9rem);
+		background: var(--surface);
 	}
 
 	.about-grid {
@@ -309,50 +376,34 @@
 		align-items: start;
 	}
 
-	.about-heading {
+	.about-heading,
+	.contact-heading {
 		display: grid;
-		gap: 1.1rem;
+		gap: 1rem;
 	}
 
-	.about-heading h2 {
-		max-width: 13.5ch;
+	.about-heading h2,
+	.contact-heading h2 {
+		max-width: 15ch;
 		margin: 0;
-		font-size: clamp(2.9rem, 4.9vw, 4.8rem);
+		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
 		font-weight: 680;
-		line-height: 0.98;
+		line-height: 0.99;
 	}
 
 	.about-copy {
 		display: grid;
-		gap: clamp(2.75rem, 5vw, 4.5rem);
-		padding-top: 0.4rem;
-	}
-
-	.about-intro,
-	.what-we-do > p:last-child {
-		max-width: var(--measure);
-		margin: 0;
-		color: var(--text-muted);
+		gap: 1.7rem;
+		justify-items: start;
+		padding-top: 0.3rem;
 	}
 
 	.about-intro {
+		max-width: var(--measure);
+		margin: 0;
+		color: var(--text-muted);
 		font-size: clamp(1.08rem, 1.4vw, 1.22rem);
 		line-height: 1.58;
-	}
-
-	.what-we-do {
-		display: grid;
-		gap: 0.9rem;
-		padding-top: 1.75rem;
-		border-top: 1px solid var(--border);
-	}
-
-	.what-we-do h3 {
-		max-width: 18ch;
-		margin: 0;
-		font-size: clamp(1.75rem, 2.7vw, 2.55rem);
-		font-weight: 640;
-		line-height: 1.05;
 	}
 
 	.contact-section {
@@ -363,19 +414,8 @@
 	.contact-grid {
 		display: grid;
 		gap: clamp(2.75rem, 5vw, 4.5rem);
-	}
-
-	.contact-heading {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.contact-heading h2 {
-		max-width: 17ch;
-		margin: 0;
-		font-size: clamp(2.8rem, 4.8vw, 4.7rem);
-		font-weight: 680;
-		line-height: 0.99;
+		padding-top: clamp(2rem, 4vw, 3rem);
+		border-top: 1px solid var(--border);
 	}
 
 	.contact-copy {
@@ -414,17 +454,21 @@
 		.portfolio-heading,
 		.lead-project__caption,
 		.secondary-project,
+		.capabilities-layout,
 		.about-grid {
 			grid-template-columns: 1fr;
 		}
 
 		.hero__statement,
+		.capabilities-layout,
 		.about-grid {
 			gap: 2.75rem;
 		}
 
 		.hero__support,
-		.portfolio-heading__aside {
+		.portfolio-heading__aside,
+		.capabilities-heading,
+		.about-copy {
 			max-width: 38rem;
 		}
 
@@ -479,9 +523,15 @@
 			padding-top: 6rem;
 		}
 
+		.capabilities-heading h2,
 		.about-heading h2,
 		.contact-heading h2 {
-			font-size: clamp(2.65rem, 11.5vw, 3.7rem);
+			font-size: clamp(2.55rem, 11.5vw, 3.7rem);
+		}
+
+		.capability-row {
+			grid-template-columns: 1fr;
+			gap: 0.75rem;
 		}
 
 		.contact-copy {
