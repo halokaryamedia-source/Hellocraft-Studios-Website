@@ -125,17 +125,25 @@ View portfolio
 
 Do not rewrite this Hero without a concrete reason from new company positioning or real portfolio evidence.
 
-### Featured projects
+### Featured Projects
 
-Status: `READY FOR DRAFT / WAITING FOR REAL DATA`
+Heading status: `APPROVED`
 
 ```text
-Featured projects
+Featured Projects
+```
 
+Do not rename this section to `Our Work`, `Our Creations`, or another alternative without a concrete reason.
+
+Supporting copy status: `CURRENT REVIEW / WAITING FOR REAL DATA`
+
+Current draft:
+
+```text
 A selection of Minecraft projects showing what we built and the role we played.
 ```
 
-Real project names, descriptions, client names, media, and results must come from approved portfolio sources.
+The supporting sentence is not approved yet. Real project names, descriptions, client names, media, and results must come from approved portfolio sources.
 
 ### What we do
 
