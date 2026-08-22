@@ -22,6 +22,7 @@ About How We Work                  = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
 About Contact close                = APPROVED / implemented
 Contact Hero                       = APPROVED / implemented
+Contact Details rule               = APPROVED / evidence-only
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -182,13 +183,18 @@ Tell us about your project.
 Tell us what you're working on and how we can help.
 ```
 
-Do not rewrite the Hero without a concrete reason from a real change in the public contact workflow or company positioning.
+Approved Contact Details rule:
 
-The next section is **Contact methods**.
+```text
+Use only real approved public contact channels.
+One real business email is enough if that is the actual workflow.
+Social links are optional and appear only when real, public, approved, and useful.
+Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
+```
 
-Only real approved public contact channels may be shown. Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
+The actual email and any public links still wait for confirmed contact data.
 
-If the final contact route is only one email address, keep the page simple rather than adding unnecessary channels.
+The next Contact section is **Inquiry guidance**.
 
 ## Writing style
 
@@ -242,4 +248,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review the Contact `Contact methods` section. Keep it structure-only until the real public business contact channel(s) are confirmed. Preserve the approved Contact Hero and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions.**
+**Review and approve the Contact `Inquiry guidance` copy. Keep it concise and useful rather than turning it into a long intake form. Preserve the approved Contact Hero, Contact Details rule, and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions.**
