@@ -417,9 +417,7 @@ Keep this guidance concise. It should help someone send a useful first message w
 
 All Contact copy that can be finalized without real contact-channel data is approved. Actual contact methods remain pending confirmed public data.
 
-## Careers
-
-Status: `CURRENT REVIEW / WAITING FOR REAL HIRING DATA`
+## Careers — APPROVED STRUCTURE / WAITING FOR REAL HIRING DATA
 
 ### Hero — APPROVED
 
@@ -441,7 +439,7 @@ Build Minecraft projects with us.
 
 The Hero already introduces the page, and each real job listing should explain its own work, skills, and responsibilities. The Careers page therefore moves directly from Hero to Open positions.
 
-### Open positions
+### Open positions — APPROVED RULE
 
 ```text
 Open positions
@@ -455,9 +453,28 @@ We don't have any public openings right now.
 
 Do not invent openings, job titles, or role categories.
 
-### How to apply — NEXT REVIEW
+### How to apply — APPROVED CONDITIONAL RULE
 
-The application section should follow the real hiring workflow. Do not create application instructions that do not exist.
+`How to apply` is not a permanent section and must not appear when there are no real openings.
+
+Use these rules:
+
+```text
+no real openings
+→ do not show How to apply
+
+real openings + each role has its own application instructions/link
+→ keep application instructions with each role
+→ do not show a separate How to apply section
+
+real openings + all roles share one approved application workflow
+→ a shared How to apply section may appear
+→ use only the real approved instructions
+```
+
+Do not invent an application email, form, Discord process, recruitment workflow, or other instructions.
+
+The source implements this with an optional `careerApplication` value. It remains `null` until real public openings exist and a shared application workflow is actually needed.
 
 When a real opening exists, use the real approved job title and write only from actual data:
 
@@ -469,6 +486,8 @@ work/location arrangement
 how to apply
 ```
 
+Careers is complete for the current copy/structure stage. Real openings and application data remain pending the actual hiring state.
+
 ## Current drafting order
 
 ```text
@@ -477,8 +496,9 @@ how to apply
 3. Project Detail — structure APPROVED / implemented; real projects pending
 4. About — APPROVED; Experience data pending verified evidence
 5. Contact — APPROVED copy; real contact channels pending
-6. Careers — Hero APPROVED; General Intro REMOVED; How to Apply next
-7. final site-wide copy pass after real evidence is integrated
+6. Careers — APPROVED structure/copy; real hiring data pending
+7. shared/footer copy review
+8. final site-wide copy pass after real evidence is integrated
 ```
 
 ## Final content review
