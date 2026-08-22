@@ -396,25 +396,40 @@ Tell us what you're working on and how we can help.
 
 Do not rewrite the Contact Hero without a concrete reason from a real change in the public contact workflow or company positioning.
 
-### Contact methods — NEXT REVIEW / WAITING FOR REAL DATA
+### Contact details — APPROVED RULE / WAITING FOR REAL DATA
 
-Only real, approved public contact channels may appear here.
+Keep contact methods simple and evidence-only.
 
-Do not invent:
+Use only real, approved public contact channels. The final section may be as simple as:
 
 ```text
-email addresses
+Contact details
+
+Email
+[real business email]
+
+Social
+[approved public link(s) only when useful]
+```
+
+One real business email is enough if that is the actual public workflow. Do not add extra channels merely to make the page look fuller.
+
+Do not invent or require:
+
+```text
 phone numbers
 Discord accounts
-social links
 booking links
 office addresses
 contact forms
+extra social accounts
 ```
 
-If the final business contact route is one email address, a simple direct email link is enough. Do not create extra channels merely to make the page look fuller.
+Social links are optional and should appear only when they are real, public, approved, and useful.
 
-### Inquiry guidance — DRAFT
+The actual email and any public links remain pending confirmed contact data.
+
+### Inquiry guidance — NEXT REVIEW
 
 Useful first-message guidance can include:
 
@@ -434,7 +449,7 @@ This guidance should stay concise and should not become a long intake form unles
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
 4. About — APPROVED; Experience data pending verified evidence
-5. Contact — Hero APPROVED; Contact methods next
+5. Contact — Hero + Contact Details rule APPROVED; Inquiry guidance next
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
 ```
