@@ -17,6 +17,115 @@ FINAL REVIEW LATER
 → wording is usable now but must be checked again after real project/media information is integrated
 ```
 
+## Approved public capability structure
+
+Hellocraft's public production capabilities are organised into four clear areas:
+
+```text
+Game & Experience Design
+World & Level Design
+Game Development
+3D Art
+```
+
+These are client-facing capability areas, not four fixed service packages. A project may use one, several, or all of them.
+
+### Game & Experience Design
+
+```text
+We shape the concept, gameplay, objectives, and player experience around what the project needs.
+```
+
+Typical work may include game concepts, gameplay design, objectives, puzzles/minigames, progression, player experience, and narrative/gameplay flow when relevant.
+
+### World & Level Design
+
+```text
+We design and build Minecraft worlds, environments, levels, and spaces around how players move and play.
+```
+
+Typical work may include Minecraft building, world design, level design, environment design, player flow, traversal, and progression through spaces.
+
+### Game Development
+
+```text
+We develop gameplay systems, mechanics, technical features, and the logic that makes each experience work.
+```
+
+Typical work may include gameplay systems, scripting, game logic, multiplayer systems, custom mechanics, and technical implementation.
+
+### 3D Art
+
+```text
+We create models, textures, and animation for custom Minecraft content when the project needs them.
+```
+
+Typical work may include 3D modeling, texturing, animation, and Minecraft-compatible custom assets.
+
+## Production role map
+
+The capability names above are what clients need to understand. Individual job roles remain more specific.
+
+### Core production roles
+
+```text
+Game / Experience Designer
+Level Designer / Minecraft Builder
+Game Developer
+3D Artist
+```
+
+These roles map directly to the four public capability areas.
+
+### Supporting production roles
+
+Use only when a project or hiring need actually requires them:
+
+```text
+Project Manager / Producer
+QA / Tester
+Writer / Narrative
+Sound Designer / Music
+2D / UI
+```
+
+Supporting roles should not become Home capability categories merely to make the studio look larger.
+
+### Business roles
+
+```text
+Business Development
+Marketing
+```
+
+These are company/business functions, not production capabilities.
+
+## Role of each Home section
+
+Each section should have one clear job:
+
+```text
+Hero
+→ who Hellocraft is and what it makes
+
+Featured Projects
+→ proof through real work
+
+What We Do
+→ the four production capability areas
+
+About
+→ who the studio is and the contexts it works in
+
+Experience / Clients / Results
+→ credibility only when verified evidence exists
+
+Contact
+→ start a project conversation
+```
+
+Do not make one section try to explain all of these responsibilities at once.
+
 ## Home
 
 Status: `READY FOR DRAFT / FINAL REVIEW LATER`
@@ -65,6 +174,28 @@ Status: `WAITING FOR REAL DATA`
 
 Real project names, descriptions, client names, media, and results must come from approved portfolio sources.
 
+### What we do
+
+Label:
+
+```text
+What we do
+```
+
+Heading:
+
+```text
+We make Minecraft projects from idea to playable experience.
+```
+
+Body:
+
+```text
+Our work is organised around four core production areas. The mix changes with the project.
+```
+
+Display the four approved capability areas as simple editorial rows, not service cards.
+
 ### About preview
 
 Label:
@@ -76,7 +207,7 @@ About
 Heading:
 
 ```text
-We build for Minecraft.
+A game studio built around Minecraft.
 ```
 
 Body:
@@ -90,28 +221,6 @@ Action:
 ```text
 About Hellocraft
 ```
-
-### What we do
-
-Label:
-
-```text
-What we do
-```
-
-Heading:
-
-```text
-Worlds, gameplay, development, and art.
-```
-
-Body:
-
-```text
-Every project needs a different mix. Our work can include world and level design, gameplay, game development, technical systems, and 3D art.
-```
-
-This is a company-level description, not a fixed Services package.
 
 ### Contact preview
 
@@ -229,14 +338,16 @@ What we do
 Headline:
 
 ```text
-What we work on.
+Four core areas of production.
 ```
 
 Body:
 
 ```text
-Our work can include world and level design, gameplay, game development, technical systems, and 3D art. The mix depends on the project.
+Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.
 ```
+
+Display the same four capability areas with their approved descriptions.
 
 ### How we work
 
@@ -292,6 +403,20 @@ Status: `WAITING FOR REAL DATA`
 
 The page structure is ready. Do not finalize recruitment copy until the current hiring state and application method are confirmed.
 
+Careers may use specific role names rather than the four public capability categories. Examples, only when real hiring needs support them:
+
+```text
+Game / Experience Designer
+Level Designer / Minecraft Builder
+Game Developer
+3D Artist
+Project Manager / Producer
+QA / Tester
+Writer / Narrative
+Sound Designer / Music
+2D / UI
+```
+
 Valid final state when there are no openings:
 
 ```text
@@ -330,8 +455,8 @@ Do not finalize the contact section until the real public business email/contact
 ## Current drafting order
 
 ```text
-1. Home company-level copy
-2. About company-level copy
+1. Home company-level copy + capability structure
+2. About company-level copy + capability structure
 3. real Portfolio projects + Project Detail
 4. Contact
 5. Careers
@@ -345,6 +470,7 @@ Before publication, every page must pass these checks:
 ```text
 [ ] wording follows 08-writing-style.md
 [ ] strong claims are supported
+[ ] capability language matches the approved four-area structure
 [ ] client/partner names are approved for public use
 [ ] sample/demo content is removed
 [ ] project descriptions match the actual media and project facts
