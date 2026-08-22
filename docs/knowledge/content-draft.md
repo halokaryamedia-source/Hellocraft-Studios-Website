@@ -384,26 +384,48 @@ We don't have any public openings right now.
 
 Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
 
-Current draft:
+### Hero — APPROVED
 
 ```text
 Contact
 
 Tell us about your project.
 
-For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
+Tell us what you're working on and how we can help.
 ```
 
-Useful first-message guidance:
+Do not rewrite the Contact Hero without a concrete reason from a real change in the public contact workflow or company positioning.
+
+### Contact methods — NEXT REVIEW / WAITING FOR REAL DATA
+
+Only real, approved public contact channels may appear here.
+
+Do not invent:
 
 ```text
-What do you want to make?
+email addresses
+phone numbers
+Discord accounts
+social links
+booking links
+office addresses
+contact forms
+```
+
+If the final business contact route is one email address, a simple direct email link is enough. Do not create extra channels merely to make the page look fuller.
+
+### Inquiry guidance — DRAFT
+
+Useful first-message guidance can include:
+
+```text
+What are you working on?
 Who is it for?
-What do you need help with?
+Where do you need help?
 What constraints are already known?
 ```
 
-Do not finalize real contact methods until the public business contact route and approved social links are supplied.
+This guidance should stay concise and should not become a long intake form unless the real workflow requires one.
 
 ## Current drafting order
 
@@ -412,7 +434,7 @@ Do not finalize real contact methods until the public business contact route and
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
 4. About — APPROVED; Experience data pending verified evidence
-5. Contact — next section-by-section review
+5. Contact — Hero APPROVED; Contact methods next
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
 ```
