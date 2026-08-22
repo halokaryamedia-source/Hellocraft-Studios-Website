@@ -46,8 +46,6 @@ Old addresses remain only for compatibility:
 /studio      → /about
 ```
 
-Do not use `Work` or `Studio` as current page names. `Hellocraft Studios` remains the company name.
-
 ## Design
 
 The current page design is approved.
@@ -57,30 +55,9 @@ Reference direction:
 - Hazelight Studios for strong game imagery, spacing, and visual confidence;
 - Blind Squirrel Games for clear company and project communication.
 
-The website should remain:
+Keep the website clean, professional, game-focused, media-first, and easy to understand.
 
-```text
-clean
-professional
-game-focused
-media-first
-easy to understand
-```
-
-Avoid fake game UI, unnecessary effects, fake statistics, generic card grids, unusual page names, and copied layouts.
-
-Approved pages:
-
-```text
-Home
-Portfolio
-Project Detail
-About
-Careers
-Contact
-```
-
-Do not redesign them without a concrete reason from real content or media.
+Do not reopen broad design work without a concrete reason from real content or media.
 
 ## Writing style — APPROVED
 
@@ -103,23 +80,13 @@ professional
 human
 ```
 
-Main rules:
-
-- say what Hellocraft makes early;
-- use `we` and `our` naturally;
-- prefer direct verbs;
-- use Minecraft terms only when useful;
-- keep headlines short;
-- keep normal section copy compact;
-- let projects and verified results prove quality;
-- avoid generic agency language and exaggerated claims;
-- professional copy should still sound like it was written by a real studio team, not a generated marketing template.
+Professional copy should still sound like it was written by a real studio team. Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
 
 Reference wording from other studios must not be copied.
 
 ## Work Areas — APPROVED / SINGLE TERMINOLOGY
 
-Hellocraft uses one fixed **Work Areas** list across public copy, source code, and documentation:
+Use one fixed **Work Areas** list everywhere:
 
 ```text
 Game & Experience Design
@@ -128,25 +95,9 @@ Game Development
 3D Art
 ```
 
-These four names are the only permanent taxonomy for the kinds of work Hellocraft communicates publicly.
+Do not create parallel terms such as capabilities, core production areas, service categories, disciplines, or permanent role groups.
 
-Do not create parallel names such as:
-
-```text
-capabilities
-core production areas
-service categories
-discipline categories
-Core Production / Supporting Production role groups
-```
-
-A project may use one, several, or all Work Areas.
-
-### Job titles are separate
-
-Work Areas are not job titles.
-
-For Careers and project credits, use the real approved title/responsibility from actual data. Do not keep a speculative permanent role list.
+Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
 ## Content drafting — ACTIVE
 
@@ -156,23 +107,17 @@ Working draft:
 docs/knowledge/content-draft.md
 ```
 
-Current status:
+Current Home structure:
 
 ```text
-Home Hero                       = APPROVED / implemented
-Home Featured Projects heading = APPROVED / implemented
-Home Featured Projects support = under review
-Home Work Areas                 = APPROVED / implemented
-Portfolio intro                 = Draft v1 implemented
-Portfolio project copy          = waiting for real project sources
-About company copy              = Draft v1 implemented
-About Work Areas                = approved / implemented
-Contact final copy              = waiting for real contact route/details
-Careers final copy              = waiting for real hiring state
-Final site-wide pass            = after real portfolio/media is integrated
+Hero
+→ Featured Projects
+→ What We Do / Work Areas
+→ About
+→ Contact
 ```
 
-### Approved Home Hero
+### Home Hero — APPROVED
 
 ```text
 Minecraft game studio
@@ -184,96 +129,62 @@ We work on games and adventures, as well as Minecraft projects for events and ex
 View portfolio
 ```
 
-Do not rewrite the approved Hero without a concrete reason from new positioning or verified portfolio evidence.
-
-### Approved Home Featured Projects heading
+### Home Featured Projects — APPROVED
 
 ```text
 Featured Projects
+
+Minecraft projects we've worked on.
+
+View portfolio
 ```
 
-The heading is approved. The supporting sentence under it is still under review. Do not replace the heading with `Our Work`, `Our Creations`, or another alternative without a concrete reason.
+Do not casually rewrite either approved section.
 
-Home structure:
+### Current review section
 
 ```text
-Hero
-→ Featured Projects
-→ What We Do / Work Areas
-→ About
-→ Contact
+Home What We Do
 ```
 
-About structure:
+The four Work Areas are already approved and implemented. Only the section wording is still being reviewed.
+
+## Current content status
 
 ```text
-Hero
-→ What We Do / Work Areas
-→ How We Work
-→ Experience when verified
-→ Contact
+Home Hero                       = APPROVED / implemented
+Home Featured Projects          = APPROVED / implemented
+Home What We Do                 = current review
+Home About preview              = draft
+Home Contact preview            = draft
+Home Work Areas                 = APPROVED / implemented
+Portfolio intro                 = Draft v1 implemented
+Portfolio project copy          = waiting for real project sources
+About company copy              = Draft v1 implemented
+About Work Areas                = APPROVED / implemented
+Contact final copy              = waiting for real contact details
+Careers final copy              = waiting for real hiring state
+Final site-wide pass            = after real portfolio/media is integrated
 ```
 
-Home and About may use only confirmed company-level information. Portfolio project descriptions, clients, dates, results, credits, and media must come from approved project sources.
+Sample portfolio entries remain fictional and are only for layout preview. Real project screenshots, renders, video, client attribution, results, dates, and credits must come from approved project sources.
 
-## Current content
-
-Sample portfolio entries remain clearly fictional and exist only for layout preview:
-
-```text
-Sample Adventure World
-Sample Multiplayer Game
-Sample Environment Build
-```
-
-Sample career roles are not published as real openings.
-
-Current source contains only development logo files:
-
-```text
-src/lib/assets/brand/hellocraft-logo-cyan.png
-src/lib/assets/brand/hellocraft-logo-white.png
-```
-
-The website repository does not yet contain real project screenshots, renders, or videos.
-
-Current status:
-
-```text
-Home Hero                 = approved / implemented
-Featured Projects heading = approved / implemented
-Home Work Areas           = implemented
-About draft copy          = implemented
-About Work Areas          = implemented
-Portfolio intro           = implemented
-real portfolio            = waiting for sources
-real project media        = waiting for sources
-contact details           = missing
-social links              = missing
-career openings           = none confirmed
-final logo/vector         = pending
-final font                = pending
-```
-
-`contentIsDemo = true` remains enabled. The site keeps its preview notice and `noindex, nofollow` until production content is ready.
+`contentIsDemo = true` remains enabled until production content is ready.
 
 ## Main content files
 
 ```text
 src/lib/content/pages.ts
-→ Home, Portfolio, About, Careers, Contact, footer text, and canonical Work Areas
+→ Home, Portfolio, About, Careers, Contact, footer text, and Work Areas
 
 src/lib/content/projects.ts
 → portfolio project information
 
-src/lib/content/demo-data.ts
-→ sample About experience and career data
+docs/knowledge/content-draft.md
+→ working website copy and approval status
 
-src/lib/content/site.ts
-→ site name, navigation, and public links
-
-src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
-→ temporary project media area
+docs/knowledge/next-action.md
+→ immediate continuation state
 ```
 
 ## Content review rule
@@ -290,78 +201,21 @@ record it
 → write public copy using 08-writing-style.md
 ```
 
-Do not guess missing clients, dates, results, permissions, or project details.
+Do not guess missing clients, dates, results, permissions, roles, or project details.
 
-Files that are not selected for the website should still remain recorded in `docs/knowledge/content-inventory.md`.
+## Deferred technical work
 
-## Pages not needed now
-
-Do not add generic pages just to make the website look more complete.
-
-```text
-Services = not needed yet
-Blog = not needed
-Team = not needed as a separate page
-Clients = not needed as a separate page
-custom contact form = not needed until the real contact workflow requires it
-Privacy / Terms = add only when real data collection, analytics, cookies, forms, or legal requirements make them necessary
-```
-
-`About` already carries company and `What we do` responsibility.
-
-## Technical setup
-
-```text
-framework        = SvelteKit
-UI               = Svelte 5 + TypeScript
-package manager  = Bun
-styling          = native CSS with Svelte scoped styles
-image handling   = Vite imports + @sveltejs/enhanced-img when useful
-site structure   = static/prerender-first
-separate backend = none for now
-database         = none for now
-```
-
-## Testing status
-
-Source-level review is complete for the current stage, but final build/browser testing is still deferred.
-
-Still deferred:
+Still deferred until explicitly reopened:
 
 ```text
 bun install
 bun.lock generation
 bun run validate
-full browser testing
-hosting selection
+full browser/runtime testing
+hosting provider selection
 production adapter selection
 ```
 
-## Current project status
+## Immediate continuation
 
-```text
-page structure        = complete
-page names            = approved
-page design           = approved
-writing style guide   = APPROVED
-Work Areas             = APPROVED / canonical
-content drafting      = ACTIVE
-Home Hero             = APPROVED
-Featured Projects     = heading APPROVED; support copy under review
-About draft           = implemented
-Portfolio intro       = implemented
-real portfolio        = next major input
-real project media    = next major input
-Contact final copy    = pending real contact data
-Careers final copy    = pending real hiring state
-final copy pass       = after real evidence
-final brand assets    = pending
-SEO/social metadata   = finish after domain/media are known
-responsive QA         = pending
-accessibility QA      = pending
-performance QA        = pending
-runtime/build testing = deferred
-hosting               = deferred
-```
-
-The project is now in the **website content drafting → real portfolio integration** stage. Keep the Work Areas terminology unified and preserve approved copy decisions across future updates.
+Continue Home copy review at **What We Do**. Preserve the approved Hero, Featured Projects, and canonical Work Areas decisions.
