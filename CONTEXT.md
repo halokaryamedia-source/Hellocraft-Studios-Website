@@ -46,9 +46,7 @@ Old addresses remain only for compatibility:
 /studio      → /about
 ```
 
-## Design
-
-The current page design is approved.
+## Design — APPROVED
 
 Reference direction:
 
@@ -81,8 +79,6 @@ human
 ```
 
 Professional copy should still sound like it was written by a real studio team. Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
-
-Reference wording from other studios must not be copied.
 
 ## Work Areas — APPROVED / SINGLE TERMINOLOGY
 
@@ -137,7 +133,7 @@ Do not casually rewrite approved Home copy.
 
 ## Portfolio — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
-### Hero — APPROVED / IMPLEMENTED
+### Hero
 
 ```text
 Portfolio
@@ -147,7 +143,7 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-### Project listing structure — APPROVED / IMPLEMENTED
+### Listing structure
 
 Required:
 
@@ -165,21 +161,9 @@ Client / partner
 Year
 ```
 
-Do not show by default:
+Do not show tags, categories, Work Areas, role labels, technical details, long descriptions, or extra metadata by default.
 
-```text
-Work Areas
-role / contribution labels
-tags
-categories
-technical details
-long descriptions
-extra metadata
-```
-
-The current Portfolio route already follows this rule.
-
-### Short project description — APPROVED
+### Short project description
 
 Use one concise sentence that explains:
 
@@ -191,17 +175,58 @@ what players / visitors do or experience
 
 Lead with the project itself. Do not lead with Hellocraft's contribution or a marketing claim.
 
-Avoid generic wording such as `innovative`, `immersive`, `custom solution`, or opening with `Hellocraft developed...`.
+## Project Detail — APPROVED STRUCTURE / IMPLEMENTED
 
-Final wording must come from approved real project information.
+Use this order when real evidence supports the section:
+
+```text
+Back to Portfolio
+
+Project
+PROJECT NAME
+Short description
+Client / Partner — optional
+Year — optional
+
+Main Project Media
+
+The Project
+→ what the project is and useful context
+
+Our Role
+→ what Hellocraft actually designed, built, developed, or handled
+
+Player Experience — optional
+Results — optional / verified only
+Credits / Links — optional
+
+View Portfolio
+```
+
+Do not maintain `What We Made` as a separate permanent section. That content belongs inside **Our Role** so the site does not repeat the same information under two names.
+
+The project content model now uses explicit fields:
+
+```text
+projectContext
+ourRole
+playerExperience
+results
+credits
+links
+```
+
+The old generic `sections[]` and `contribution` model is no longer used for Project Detail.
+
+Final project-specific copy, clients, dates, results, credits, links, and media still require approved real project evidence.
 
 ## Current review section
 
 ```text
-Project Detail structure
+About page — Hero
 ```
 
-The reusable Project Detail structure can be reviewed now. Final project-specific copy, client attribution, dates, results, credits, and media still require real approved project evidence.
+The existing About copy is still Draft v1 and should now be reviewed section by section using the same professional + human tone established on Home.
 
 ## Current content status
 
@@ -211,9 +236,9 @@ Portfolio Hero               = APPROVED / implemented
 Portfolio listing structure  = APPROVED / implemented
 Portfolio short descriptions = APPROVED rule
 Portfolio project content    = waiting for real project sources
-Project Detail structure     = next review
+Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
-About                        = Draft v1 + Work Areas implemented
+About                        = next section-by-section review
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
@@ -230,7 +255,13 @@ src/lib/content/pages.ts
 → Home, Portfolio, About, Careers, Contact, footer text, and Work Areas
 
 src/lib/content/projects.ts
-→ portfolio project information and approved listing/description rules
+→ portfolio project data + approved Portfolio/Project Detail rules
+
+src/lib/content/types.ts
+→ explicit Project Detail content fields
+
+src/routes/portfolio/[slug]/+page.svelte
+→ approved Project Detail rendering order
 
 docs/knowledge/content-draft.md
 → working website copy and approval status
@@ -270,4 +301,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **Project Detail structure review**. Preserve all approved Home, Portfolio, and Work Areas decisions. Final Project Detail facts still wait for real approved project material.
+Start the **About page Hero review**. Preserve all approved Home, Portfolio, Project Detail, and Work Areas decisions.
