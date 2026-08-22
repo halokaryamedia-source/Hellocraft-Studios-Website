@@ -95,7 +95,7 @@ export const aboutCopy = {
 	},
 	contact: {
 		title: 'Planning a Minecraft project?',
-		body: 'Tell us what you want to make and where you need help.',
+		body: "Tell us what you're working on and where we can help.",
 		actionLabel: 'Contact us'
 	}
 } as const;
