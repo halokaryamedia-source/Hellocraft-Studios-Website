@@ -107,17 +107,7 @@ Working draft:
 docs/knowledge/content-draft.md
 ```
 
-Current Home structure:
-
-```text
-Hero
-→ Featured Projects
-→ What We Do / Work Areas
-→ About
-→ Contact
-```
-
-### Home Hero — APPROVED
+## Home — APPROVED / IMPLEMENTED
 
 ```text
 Minecraft game studio
@@ -129,62 +119,62 @@ We work on games and adventures, as well as Minecraft projects for events and ex
 View portfolio
 ```
 
-### Home Featured Projects — APPROVED
-
 ```text
 Featured Projects
-
 Minecraft projects we've worked on.
-
 View portfolio
 ```
 
-### Home What We Do — APPROVED
-
 ```text
 What we do
-
 We handle both the creative and technical sides of Minecraft projects.
 ```
 
-This intro goes directly into the four canonical Work Areas. Do not add a second explanatory sentence without a concrete reason.
-
-### Home About preview — APPROVED
+This intro goes directly into the four canonical Work Areas.
 
 ```text
 About
-
 We're a studio focused on Minecraft.
-
 We make games and adventures, and also work on projects for events and exhibitions.
-
 About Hellocraft
 ```
 
-Do not casually rewrite approved Home sections.
+```text
+Contact
+Tell us about your Minecraft project.
+Tell us what you're working on and where we can help.
+Contact us
+```
 
-### Current review section
+Do not casually rewrite approved Home copy.
+
+## Current review section
 
 ```text
-Home Contact preview
+Portfolio page intro
 ```
+
+Current Portfolio draft:
+
+```text
+Portfolio
+Selected Minecraft projects.
+Each project focuses on what was made, our role, and the player experience.
+```
+
+The intro can be reviewed now. Real project names, descriptions, client names, dates, media, roles, results, and credits must come from approved project sources.
 
 ## Current content status
 
 ```text
-Home Hero                       = APPROVED / implemented
-Home Featured Projects          = APPROVED / implemented
-Home What We Do                 = APPROVED / implemented
-Home About preview              = APPROVED / implemented
-Home Contact preview            = current review
-Home Work Areas                 = APPROVED / implemented
-Portfolio intro                 = Draft v1 implemented
-Portfolio project copy          = waiting for real project sources
-About company copy              = Draft v1 implemented
-About Work Areas                = APPROVED / implemented
-Contact final copy              = waiting for real contact details
-Careers final copy              = waiting for real hiring state
-Final site-wide pass            = after real portfolio/media is integrated
+Home                         = APPROVED / implemented
+Portfolio intro              = current review
+Portfolio project copy       = waiting for real project sources
+Project Detail               = waiting for real project sources
+About                        = Draft v1 + Work Areas implemented
+Contact final copy           = waiting for real contact details
+Careers final copy           = waiting for real hiring state
+Final site-wide pass         = after real portfolio/media is integrated
 ```
 
 Sample portfolio entries remain fictional and are only for layout preview. Real project screenshots, renders, video, client attribution, results, dates, and credits must come from approved project sources.
@@ -238,4 +228,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue Home copy review at **Contact preview**. Preserve the approved Hero, Featured Projects, What We Do, About preview, and canonical Work Areas decisions.
+Home is complete. Continue copy review with the **Portfolio page intro** while preserving all approved Home and Work Areas decisions.
