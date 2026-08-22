@@ -2,7 +2,9 @@ import { demoAboutExperienceItems, demoCareerOpenings } from './demo-data';
 import type { LinkItem } from './types';
 
 // DRAFT WEBSITE COPY
-// Keep this copy clear and factual. Replace or refine it when final company and portfolio material is approved.
+// All public copy in this file must follow docs/foundation/08-writing-style.md.
+// Keep the voice direct, creator-led, Minecraft-native, and evidence-based.
+// Replace or refine factual details when final company and portfolio material is approved.
 
 export const homeCopy = {
 	hero: {
