@@ -5,11 +5,12 @@ This file tracks the real content and media available for the Hellocraft Studios
 ## Current status
 
 ```text
-page design       = approved
-content review    = active
-real portfolio    = not supplied yet
-real project media= not supplied yet
-demo mode         = still active
+page design        = approved
+draft page copy    = reviewed and humanized
+sample portfolio   = active for preview only
+real portfolio     = not supplied yet
+real project media = not supplied yet
+demo mode          = still active
 ```
 
 ## Website source
@@ -22,12 +23,15 @@ Branch: Local
 Current findings:
 
 - page structure and design are ready;
-- page text is still development copy;
-- portfolio entries are demo records;
-- experience and career items are demo records;
+- public-facing draft copy has been rewritten in clear, normal website language;
+- portfolio entries are clearly labelled fictional samples;
+- About experience and career examples remain sample data;
+- sample career roles are not published as real openings;
 - public contact details are empty;
 - social links are empty;
-- no real project screenshots/renders/video are stored in this website repository.
+- no real project screenshots, renders, or videos are stored in this website repository.
+
+The current copy is suitable for preview and layout review, but it is **not final production copy**. Real portfolio and company material may justify further wording changes later.
 
 ## Current brand files
 
@@ -52,26 +56,28 @@ Source:
 src/lib/content/projects.ts
 ```
 
-Current demo records:
+Current fictional sample records:
 
 ```text
-Concept World Study
-Multiplayer Gameplay Study
-Environment Study
+Sample Adventure World
+Sample Multiplayer Game
+Sample Environment Build
 ```
 
-These are **not approved real portfolio projects**. Keep them only for development layout until real project information replaces them.
+These are **not real Hellocraft portfolio projects**. They exist only to preview the Portfolio and Project Detail layouts.
 
 ## Current project media
 
 ```text
-real screenshots    = none
-real renders        = none
-real videos         = none
-real video posters  = none
+real screenshots   = none
+real renders       = none
+real videos        = none
+real video posters = none
 ```
 
-Do not replace placeholders with invented images or material taken from unrelated repositories.
+`src/lib/components/portfolio/ProjectMediaPlaceholder.svelte` remains a temporary visual placeholder.
+
+Do not replace it with invented artwork or material taken from unrelated repositories.
 
 ## Current About information
 
@@ -82,28 +88,37 @@ src/lib/content/pages.ts
 src/lib/content/demo-data.ts
 ```
 
-The current About copy and experience items are temporary.
+The About page now uses a factual draft based on confirmed project positioning:
 
-Real About content still needs confirmed information about what Hellocraft does and any public experience/results that may be shown.
+- Hellocraft Studios is focused on Minecraft;
+- Minecraft is used as both a game platform and creative medium;
+- project work may include custom worlds, gameplay, game development, technical systems, and supporting 3D art;
+- project context can include normal game content as well as events, exhibitions, and other public experiences.
+
+The `Experience` section remains hidden while demo mode is active because verified public experience/results have not yet been supplied.
+
+Final About wording should be refined after the real project inventory is reviewed.
 
 ## Current Careers information
 
-Demo roles exist only for development layout:
+Sample roles exist only for layout testing:
 
 ```text
-Level Designer
-Game Developer
-3D Artist
+Sample Level Designer Role
+Sample Game Developer Role
+Sample 3D Artist Role
 ```
 
-They are not real openings and are not shown publicly while demo mode is active.
+They are not real openings and are not shown as public vacancies while demo mode is active.
 
-Current status:
+Current public state:
 
 ```text
-real job openings = none supplied
+real job openings  = none supplied
 application method = none supplied
 ```
+
+The page correctly states that there are no public openings right now.
 
 ## Current contact and social information
 
@@ -121,7 +136,7 @@ public Discord/community link
 other public contact route
 ```
 
-Do not invent these values.
+The Contact page currently uses a launch placeholder message instead of fabricated contact details.
 
 ## Current font
 
@@ -220,7 +235,7 @@ When real material is supplied:
 4. confirm public/private status
 5. select portfolio projects and media
 6. update project information and media
-7. update page text
+7. refine page text from the real evidence
 8. add contact/social details
 9. add real careers only if active
 10. update final brand assets
