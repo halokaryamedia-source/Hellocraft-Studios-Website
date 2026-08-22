@@ -103,8 +103,8 @@ export const aboutCopy = {
 export const careersCopy = {
 	hero: {
 		label: 'Careers',
-		title: 'Careers at Hellocraft Studios.',
-		body: 'When we are hiring, current openings and application details will be listed here.'
+		title: 'Join Hellocraft Studios.',
+		body: "Open roles and application details will be posted here when we're hiring."
 	},
 	openings: {
 		title: 'Open positions',
