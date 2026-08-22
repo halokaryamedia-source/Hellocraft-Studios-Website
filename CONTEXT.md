@@ -6,7 +6,7 @@ Use `docs/knowledge/next-action.md` for the immediate next step. Detailed approv
 
 ## Website purpose
 
-Hellocraft Studios is a **game studio focused on Minecraft**.
+Hellocraft Studios is a game studio focused on Minecraft.
 
 The website should:
 
@@ -60,11 +60,6 @@ media-first
 easy to understand
 ```
 
-References:
-
-- Hazelight Studios for strong game imagery, spacing, and visual confidence;
-- Blind Squirrel Games for clear company and project communication.
-
 ## Writing style — APPROVED
 
 Public writing follows:
@@ -104,8 +99,6 @@ Do not create parallel capability/service/discipline taxonomies.
 Work Areas are not job titles. Careers and project credits use real approved titles from actual data.
 
 ## Home — APPROVED / IMPLEMENTED
-
-Approved content includes:
 
 ```text
 Minecraft game studio
@@ -168,8 +161,6 @@ Year
 ```
 
 Short descriptions explain what the project is + what players/visitors do or experience. Lead with the project itself.
-
-Do not show tags, categories, Work Areas, role labels, technical details, long descriptions, or extra metadata by default.
 
 ## Project Detail — APPROVED STRUCTURE / IMPLEMENTED
 
@@ -248,8 +239,6 @@ One real business email is enough if that is the actual workflow.
 Social links are optional and appear only when real, public, approved, and useful.
 ```
 
-Do not invent phone, Discord, booking, office address, forms, or extra channels to fill space.
-
 Inquiry guidance:
 
 ```text
@@ -283,20 +272,20 @@ Hero
 → Open positions
 ```
 
-`How to apply` is conditional, not permanent:
+`How to apply` is conditional, not permanent. Source uses optional `careerApplication`, currently `null`.
+
+## Footer — APPROVED / IMPLEMENTED
+
+Footer identity is intentionally concise:
 
 ```text
-no openings
-→ hidden
-
-role-specific application workflow
-→ instructions stay with that real role
-
-one shared workflow for all current roles
-→ shared How to apply section may appear with real approved instructions
+Hellocraft Studios
+Games and experiences in Minecraft.
 ```
 
-Source uses optional `careerApplication`, currently `null`. Do not invent application emails, forms, Discord processes, job titles, or recruitment instructions.
+The brand lockup/name is the primary identity. `Games and experiences in Minecraft.` is the single footer descriptor.
+
+Do not restore the old sentence-style descriptor or add `Minecraft game studio` as a second footer tagline. Footer navigation uses approved public page names. Social links remain evidence-only.
 
 ## Current content status
 
@@ -308,8 +297,9 @@ About                        = APPROVED / Experience evidence pending
 Contact                      = APPROVED copy / real contact methods pending
 Careers                      = APPROVED structure/copy / real hiring data pending
 Work Areas                   = APPROVED / implemented
-Shared/footer copy           = next review
-Final site-wide pass         = after real evidence is integrated
+Footer                       = APPROVED / implemented
+Reusable public copy review  = complete
+Final site-wide pass         = after real production evidence is integrated
 ```
 
 Sample portfolio entries remain fictional and exist only for layout preview. Sample career data is separated from real openings.
@@ -339,11 +329,11 @@ Still deferred until explicitly reopened:
 bun install
 bun.lock generation
 bun run validate
-full browser/runtime testing
+full browser testing
 hosting selection
 production adapter selection
 ```
 
 ## Immediate continuation
 
-Continue with **shared site copy review, beginning with the Footer statement**. Preserve all approved page copy and structure unless a concrete new fact requires a change.
+The reusable public copy and structure review is complete. Next, collect and audit real production content, then perform the final site-wide copy pass. Preserve approved wording and structure unless verified real evidence creates a concrete reason to change them.
