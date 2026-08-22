@@ -2,7 +2,7 @@
 
 ## Current state
 
-The Hellocraft Studios Website on branch `Local` is ready for real portfolio and media content.
+The Hellocraft Studios Website on branch `Local` has entered the **website content drafting** stage.
 
 Completed for the current stage:
 
@@ -10,12 +10,12 @@ Completed for the current stage:
 page structure        = complete
 public page names     = approved
 page design           = approved
-draft website copy    = reviewed and humanized
 writing style guide   = APPROVED
+Home draft copy       = implemented
+Portfolio intro       = implemented
+About draft copy      = implemented
 sample portfolio data = clearly labelled as fictional
 sample career data    = kept separate from real openings
-internal naming       = simplified
-current project docs  = updated
 ```
 
 Main navigation:
@@ -27,29 +27,37 @@ Careers
 Contact
 ```
 
-Old URLs remain only as redirects:
-
-```text
-/work        → /portfolio
-/work/[slug] → /portfolio/[slug]
-/studio      → /about
-```
-
-## Approved writing style
+## Working content draft
 
 Use:
+
+```text
+docs/knowledge/content-draft.md
+```
+
+as the working review document for website copy.
+
+Current status:
+
+```text
+Home                = Draft v1
+Portfolio intro     = Draft v1
+Portfolio projects  = waiting for real project sources
+Project Detail      = structure ready; waiting for real project sources
+About               = Draft v1
+Contact             = working copy only; final contact data missing
+Careers             = working copy only; final hiring state missing
+```
+
+## Writing style
+
+All new or revised public website copy must follow:
 
 ```text
 docs/foundation/08-writing-style.md
 ```
 
-for **all new or revised public website copy**.
-
-The project owner approved this direction after reviewing communication patterns from established Minecraft creators and studios.
-
-Hellocraft should sound like a Minecraft game studio and creator team, not a generic creative agency.
-
-Preferred voice:
+Hellocraft should sound:
 
 ```text
 confident
@@ -61,112 +69,59 @@ practical
 professional
 ```
 
-Reference roles:
+Reference websites are pattern evidence only. Do not copy wording, slogans, claims, or project descriptions from them.
+
+## Current Home draft
 
 ```text
-Gamemode One + Noxcrew
-→ concise game-studio / creator voice
+Minecraft game studio
 
-Blockworks
-→ project and case-study writing
+We build games and experiences in Minecraft.
 
-Everbloom Games
-→ approachable player and Careers language
-
-Shapescape
-→ explaining Minecraft projects to non-Minecraft-native clients
-
-Spark Universe
-→ concise company and role descriptions
+Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.
 ```
 
-Reference websites are pattern evidence only. Do **not** copy wording, slogans, claims, or project descriptions from them.
-
-Avoid generic agency terms and unsupported adjectives. Prefer direct verbs such as build, design, develop, create, make, play, and explore.
-
-## Current copy implementation
-
-The current draft copy already follows the approved writing style.
-
-Examples:
+Supporting sections use:
 
 ```text
-We build Minecraft games and experiences.
-A game studio focused on Minecraft.
-Games, worlds, and systems for Minecraft.
-Tell us about your Minecraft project.
-Build Minecraft projects with us.
-Tell us about your project.
+Featured projects
+→ A selection of Minecraft projects showing what we built and the role we played.
+
+About
+→ We build for Minecraft.
+
+What we do
+→ Worlds, gameplay, development, and art.
+
+Contact
+→ Tell us about your Minecraft project.
 ```
 
-Implementation guards are also present in:
+## Current About draft
 
 ```text
-src/lib/content/pages.ts
-→ all public page copy follows 08-writing-style.md
-
-src/lib/content/projects.ts
-→ real project writing follows the approved project/case-study pattern
-
-docs/foundation/02-product-requirements.md
-→ writing style is a formal product requirement
+We build Minecraft games, worlds, and experiences.
 ```
 
-## Project Detail writing pattern
-
-When the information exists, prefer:
+Supporting sections:
 
 ```text
-project / client context
-→ what was needed
-→ what we made
-→ what players experience
-→ our role
-→ verified results
-→ useful links / credits
+What we do
+→ What we work on.
+
+How we work
+→ The project comes first.
+
+Experience
+→ waiting for real public evidence
+
+Contact
+→ Planning a Minecraft project?
 ```
 
-Use direct sentence patterns such as:
+## Portfolio and Project Detail
 
-```text
-We built...
-We designed...
-Players can...
-Our role included...
-```
-
-Do not create empty sections just to follow the pattern. A smaller project can use a shorter page.
-
-## What does not need to be added now
-
-Do not add these just to make the site look more complete:
-
-```text
-Services page
-Blog
-Team page
-Clients page
-custom contact form
-CMS
-login/dashboard
-```
-
-Privacy/Terms pages should be added only when actual forms, analytics, cookies, data collection, or other legal requirements make them necessary.
-
-## Immediate next task
-
-The next major task is to receive and review **real Hellocraft portfolio material**.
-
-Priority order:
-
-```text
-1. real project information
-2. project screenshots / renders / videos
-3. confirmed About/company information
-4. contact and social details
-5. career openings, if any
-6. final logo/colors/font
-```
+The next major content input is **real Hellocraft project material**.
 
 For each project, useful information includes:
 
@@ -181,7 +136,19 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
-Missing information should stay unknown instead of being guessed.
+When enough evidence exists, write Project Detail in this order where useful:
+
+```text
+project / client context
+→ what was needed
+→ what we made
+→ what players experience
+→ our role
+→ verified results
+→ useful links / credits
+```
+
+A shorter showcase is valid when there is less material. Do not add empty sections to make every project page the same length.
 
 ## How incoming material should be handled
 
@@ -201,6 +168,19 @@ Material that is not selected for the public website should still remain recorde
 
 ```text
 docs/knowledge/content-inventory.md
+```
+
+## What remains after Portfolio
+
+```text
+1. refine About from real portfolio/company evidence
+2. add real Contact and social information
+3. confirm Careers hiring state and application method
+4. integrate final logo/colors/font
+5. run final site-wide copy review
+6. complete responsive/accessibility/performance/build/browser QA
+7. finish SEO/social metadata
+8. deploy
 ```
 
 ## Demo mode
@@ -225,23 +205,9 @@ Before turning demo mode off, confirm:
 [ ] final metadata ready
 ```
 
-## Later finalization
+## Deferred technical work
 
-After real content/media is integrated and technical validation is re-authorised:
-
-```text
-responsive review
-→ accessibility review
-→ media/loading/performance review
-→ format/lint/Svelte checks/build
-→ browser testing
-→ final SEO/social metadata
-→ turn off demo mode when ready
-→ hosting setup
-→ deployed website review
-```
-
-The following are still deferred until explicitly reopened:
+Still deferred until explicitly reopened:
 
 ```text
 bun install
@@ -254,4 +220,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Collect and review real Hellocraft portfolio information and project media. All new public copy must follow the approved Minecraft studio writing guide.**
+**Continue website content drafting by collecting and reviewing real Hellocraft portfolio information and project media. Home and About Draft v1 are already implemented and should only be refined when real evidence gives a concrete reason.**
