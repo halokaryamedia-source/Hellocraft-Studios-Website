@@ -1,188 +1,141 @@
 # Project Overview
 
-## Project
+## What this project is
 
-**Hellocraft Studios Website** is the official website for Hellocraft Studios.
+The Hellocraft Studios Website is the official website for **Hellocraft Studios**, a game studio focused on Minecraft.
 
-Hellocraft Studios is currently positioned as:
+The website should make the company easy to understand, show real work, support business enquiries, and provide career information when Hellocraft is hiring.
 
-> **A game studio focused on Minecraft.**
+## Main goals
 
-This is the project-definition baseline, not final marketing copy or a locked homepage tagline.
+The website has four main jobs:
 
-## Purpose
+1. **Company information** — explain who Hellocraft is and what kind of Minecraft work it does.
+2. **Portfolio** — show real projects as the main evidence of Hellocraft's work and experience.
+3. **Business enquiries** — give potential clients and partners a clear way to contact Hellocraft.
+4. **Careers** — show current opportunities when real openings exist.
 
-The website exists to serve four connected business purposes:
+The site should stay focused on these jobs rather than adding features or pages without a clear need.
 
-1. **Company profile** — provide a clear, credible official presence for Hellocraft Studios.
-2. **Portfolio** — show real work as evidence of the studio's ability and experience.
-3. **Discoverability and client acquisition** — help relevant visitors find Hellocraft and move toward a business inquiry.
-4. **Service/capability understanding** — help potential clients understand what Hellocraft can provide without requiring them to already understand Minecraft production terminology.
+## Who the website is for
 
-The website should not behave as a portfolio gallery with no business path, nor as a generic traffic/community site where visitor volume is the primary goal.
+The main business audience includes:
 
-## Studio focus
+- Minecraft publishers and production partners;
+- server and platform operators;
+- brands using Minecraft for campaigns or experiences;
+- public, cultural, and event organisations using Minecraft for events, museums, exhibitions, festivals, or similar projects.
 
-Hellocraft works around Minecraft as a game platform and creative medium. Current scope includes conventional Minecraft content and projects for Minecraft-native markets, while also allowing Minecraft to be used for non-traditional gaming contexts such as public events, museums, gallery/exhibition work, festivals, and related experiences.
+The website should also work for:
 
-Do not narrow the public positioning to `Minecraft Bedrock` unless a later page or technical context specifically benefits from that detail.
+- Minecraft creators, agencies, and other collaborators;
+- people interested in working with Hellocraft;
+- Minecraft players and community visitors.
 
-## Primary audience
+The language should be clear enough for people who know Minecraft well and for clients who may not know Minecraft production terminology.
 
-### Marketplace publishers / partners
+## Current page structure
 
-Organizations or partners looking for Minecraft content production.
-
-### Server / platform operators
-
-Minecraft platforms or operators that need custom content, games, worlds, systems, or other project-specific production.
-
-### Brands
-
-Brands that want to create a Minecraft experience for a campaign, IP, activation, audience, or other business purpose.
-
-### Public / cultural / event clients
-
-Organizations using Minecraft in contexts such as:
-
-- public events;
-- museums;
-- galleries / exhibitions;
-- festivals.
-
-Hellocraft has prior experience in this broader public/event/exhibition area, but the exact portfolio list and public attribution will be supplied separately by the project owner.
-
-## Collaboration audience
-
-The site should also support potential collaboration with:
-
-- Minecraft creators;
-- publishers;
-- agencies;
-- production partners.
-
-A collaborator may also be a client in another project. Do not force mutually exclusive user categories when real relationships overlap.
-
-## Talent / recruitment audience
-
-Recruitment is an important website responsibility, not an incidental footer-only concern.
-
-Current talent scope includes people working in areas such as:
-
-- Minecraft building / level design;
-- development;
-- 3D art / modeling, including relevant texturing and animation skills.
-
-Exact public-facing job titles and hiring structure remain undecided.
-
-## General visitors
-
-Secondary general visitors include:
-
-- Minecraft players;
-- Minecraft creators;
-- Minecraft community members.
-
-They matter for awareness, sharing, reputation, and community credibility, but their needs must not override the primary business/client information hierarchy.
-
-## Audience knowledge boundary
-
-The website must work for both:
+The public website uses standard page names:
 
 ```text
-Minecraft-native visitor
-→ may already understand Marketplace, server, game-production, or Minecraft terminology
-
-non-Minecraft-native client
-→ may only understand the brand/event/exhibition/business outcome they want
+/
+├── portfolio
+│   └── [slug]
+├── about
+├── careers
+└── contact
 ```
 
-The site therefore needs plain, concrete language. Avoid jargon-heavy, vague, or inflated agency-style phrasing that makes the studio harder to understand.
-
-## Reference websites
-
-Minecraft studio websites were reviewed to understand common patterns, including examples such as Noxcrew, Blockworks, Spark Universe, Blockception, Cyclone, Shapescape, Everbloom Games, Gamemode One, and Oreville Studios.
-
-These references may demonstrate useful patterns such as:
+Main navigation:
 
 ```text
-studio identity
-→ real work
-→ clients / partners / proof
-→ studio explanation
-→ business contact
-→ careers
+Portfolio
+About
+Careers
+Contact
 ```
 
-They are **references, not requirements**. Hellocraft must not copy another studio's taxonomy, claims, page structure, wording, or capabilities without Hellocraft-specific evidence.
+The Hellocraft logo links to Home.
 
-## Current scope
-
-Current definition work includes:
-
-- studio purpose;
-- audience;
-- positioning baseline;
-- evidence-first planning for portfolio/content;
-- eventual business inquiry and recruitment surfaces.
-
-## Explicit non-goals / deferred decisions
-
-The following are intentionally **not decided yet**:
-
-- portfolio/project list and attribution;
-- portfolio categories or filters;
-- which work becomes a case study;
-- final services/capabilities taxonomy;
-- whether a dedicated Services page exists;
-- final navigation/information architecture;
-- homepage structure/order;
-- final tagline and marketing copy;
-- visual style/design system;
-- exact careers roles/application model;
-- exact business inquiry fields;
-- CMS requirements;
-- SEO/analytics implementation;
-- framework, frontend architecture, backend, database, hosting, deployment, or other technical stack.
-
-## Portfolio evidence boundary
-
-The project owner explicitly chose to defer project inventory and will provide the list later.
-
-Until then:
-
-- do not invent Hellocraft projects;
-- do not automatically import project names from prior chat history;
-- do not assume MIVUBI or other historical work is attributable to Hellocraft;
-- do not create final portfolio taxonomy from guessed project contexts;
-- do not make client/partner claims without supplied or verified evidence.
-
-## Success boundary
-
-At the current project scope, the finished website should eventually make it easy for a relevant visitor to understand:
+Old addresses remain only to keep existing links working:
 
 ```text
-Who is Hellocraft?
-What kind of studio is it?
-What has it actually made?
-Why is it credible for my project?
-Can it help with what I need?
-How do I start a conversation or work with the studio?
+/work          → /portfolio
+/work/[slug]   → /portfolio/[slug]
+/studio        → /about
 ```
 
-Recruitment-oriented visitors should likewise be able to understand how to explore opportunities with Hellocraft once the careers model is defined.
+## Current design direction
 
-## High-impact unknowns
+The page design is approved.
 
-Current material unknowns are:
+The website should feel like a professional game studio: clear, media-led, confident, and simple. Real project images should provide most of the visual character instead of decorative website effects.
 
-1. the authoritative project/portfolio inventory and public-attribution permissions;
-2. the natural content groupings that emerge from that evidence;
-3. the right portfolio/showcase vs case-study model;
-4. the simplest client-facing explanation of what Hellocraft provides;
-5. final information architecture;
-6. visual direction;
-7. functional requirements;
-8. technical architecture.
+The main reference points are Hazelight Studios for visual confidence and Blind Squirrel Games for clear company and project communication. Their layouts and brand graphics should not be copied.
 
-These should be resolved in that general order unless new evidence materially changes the sequence.
+## Current technical setup
+
+The approved setup is:
+
+```text
+SvelteKit
+Svelte 5 + TypeScript
+Bun
+native CSS + scoped Svelte styles
+CSS custom properties
+static/prerender-first where possible
+SvelteKit server features only when needed
+no separate backend or database by default
+```
+
+Local build and browser testing are still deferred until the project owner re-authorises them.
+
+## What is still missing
+
+The main missing production material is:
+
+- the real Hellocraft portfolio and approved project facts;
+- real project screenshots, renders, and video;
+- approved client/partner attribution where public use is allowed;
+- final company wording based on confirmed facts;
+- real public contact and social links;
+- real career openings, if any;
+- the final logo/vector source and exact brand colours;
+- final production typography;
+- final SEO/social metadata once the production domain and media are known.
+
+## Content rules
+
+- Do not invent projects, clients, results, testimonials, team size, awards, or contact details.
+- Do not automatically treat old conversations or sibling repositories as public portfolio evidence.
+- Record supplied material before deciding whether it should be published.
+- A true internal fact is not automatically approved for public use.
+- Unknown information should stay unknown until it is confirmed.
+- Use plain language and avoid vague agency or technical jargon in public copy.
+
+## Portfolio rule
+
+The portfolio is the main evidence of Hellocraft's ability.
+
+A project can be shown as a short showcase or a more detailed project page depending on the real material available. Not every project needs a client name, metric, long case study, or the same page structure.
+
+No final portfolio categories or filters should be added until the real project list shows that they are useful.
+
+## What Hellocraft provides
+
+A fixed public Services list is not approved yet.
+
+Current project/company information supports work around Minecraft worlds, gameplay, game development, technical systems, and 3D art, but these should not automatically become separate service pages or packages. The final explanation should be based on real portfolio evidence and what clients actually need to understand.
+
+## Success check
+
+The finished website should make these questions easy to answer:
+
+- Who is Hellocraft Studios?
+- What kind of Minecraft work does it do?
+- What has it actually made?
+- What did Hellocraft contribute to those projects?
+- Is Hellocraft relevant to my project?
+- How do I contact the company?
+- Are there current job openings?
