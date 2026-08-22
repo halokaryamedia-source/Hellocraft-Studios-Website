@@ -3,6 +3,13 @@ import type { ProjectEntry } from './types';
 // SAMPLE PORTFOLIO DATA
 // These fictional entries are used only to preview the portfolio layout.
 // Replace them with approved Hellocraft projects before launch.
+//
+// When real projects are added, follow docs/foundation/08-writing-style.md.
+// Prefer this information order when the evidence exists:
+// project/client context -> what was needed -> what we made -> player experience
+// -> Hellocraft's role -> verified results -> useful links/credits.
+// Use direct sentence patterns such as "We built...", "We designed...",
+// "Players can...", and "Our role included...". Do not invent missing facts.
 
 export const projects: ProjectEntry[] = [
 	{
