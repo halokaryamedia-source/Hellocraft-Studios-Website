@@ -13,6 +13,7 @@ page design                        = approved
 writing style guide                = APPROVED
 Home Hero                          = APPROVED / implemented
 Home Featured Projects             = APPROVED / implemented
+Home What We Do                    = APPROVED / implemented
 Home Work Areas                    = APPROVED / implemented
 About draft                        = implemented
 Portfolio intro                    = implemented
@@ -60,8 +61,8 @@ Current status:
 ```text
 Home Hero                       = APPROVED
 Home Featured Projects          = APPROVED
-Home What We Do                 = current review section
-Home About preview              = draft
+Home What We Do                 = APPROVED
+Home About preview              = current review section
 Home Contact preview            = draft
 Portfolio intro                 = Draft v1
 Portfolio projects              = waiting for real project sources
@@ -71,29 +72,24 @@ Contact                         = working copy only; final contact data missing
 Careers                         = working copy only; final hiring state missing
 ```
 
-## Approved Home Hero
+## Approved Home copy so far
 
 ```text
+Hero
 Minecraft game studio
-
 We make games and experiences in Minecraft.
-
 We work on games and adventures, as well as Minecraft projects for events and exhibitions.
-
 View portfolio
-```
 
-## Approved Home Featured Projects
-
-```text
 Featured Projects
-
 Minecraft projects we've worked on.
-
 View portfolio
+
+What We Do
+We handle both the creative and technical sides of Minecraft projects.
 ```
 
-Do not rewrite either approved Home section without a concrete reason from new positioning or verified portfolio evidence.
+The What We Do intro goes directly into the four Work Areas. Do not add a second explanatory sentence without a concrete reason.
 
 ## Writing style
 
@@ -193,4 +189,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Home `What We Do` section copy. Preserve the approved Hero and Featured Projects copy.**
+**Review and approve the Home `About` preview copy. Preserve the approved Hero, Featured Projects, What We Do, and Work Areas.**
