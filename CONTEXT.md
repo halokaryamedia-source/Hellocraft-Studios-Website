@@ -129,6 +129,42 @@ project / client context
 
 Reference wording must not be copied.
 
+## Capability structure — APPROVED
+
+Hellocraft's public production capability structure is now fixed to four clear areas:
+
+```text
+Game & Experience Design
+World & Level Design
+Game Development
+3D Art
+```
+
+These are client-facing capability areas, not fixed service packages. A project may use one, several, or all of them.
+
+Role mapping:
+
+```text
+Core production
+→ Game / Experience Designer
+→ Level Designer / Minecraft Builder
+→ Game Developer
+→ 3D Artist
+
+Supporting production
+→ Project Manager / Producer
+→ QA / Tester
+→ Writer / Narrative
+→ Sound Designer / Music
+→ 2D / UI
+
+Business
+→ Business Development
+→ Marketing
+```
+
+Only the four public capability areas belong in Home / About capability communication by default. Supporting and business roles appear only when a real Project Detail, Careers, or company need requires them.
+
 ## Content drafting — ACTIVE
 
 The project has moved from design and writing-style setup into **website content drafting**.
@@ -143,13 +179,27 @@ Current drafting status:
 
 ```text
 Home company copy      = Draft v1 implemented
+Home capabilities      = approved / implemented
 Portfolio intro        = Draft v1 implemented
 Portfolio project copy = waiting for real project sources
 About company copy     = Draft v1 implemented
+About capabilities     = approved / implemented
 Contact final copy     = waiting for real contact route/details
 Careers final copy     = waiting for real hiring state
 Final site-wide pass   = after real portfolio/media is integrated
 ```
+
+Home structure now follows:
+
+```text
+Hero
+→ Featured Projects
+→ What We Do / four capabilities
+→ About
+→ Contact
+```
+
+About carries the deeper company explanation, the same four capabilities with descriptions, How We Work, verified Experience when available, and Contact.
 
 Home and About may use only confirmed company-level information. Portfolio project descriptions, clients, dates, results, credits, and media must come from approved project sources.
 
@@ -178,7 +228,9 @@ Current status:
 
 ```text
 Home draft copy       = implemented
+Home capabilities     = implemented
 About draft copy      = implemented
+About capabilities    = implemented
 Portfolio intro       = implemented
 real portfolio        = waiting for sources
 real project media    = waiting for sources
@@ -195,7 +247,7 @@ final font            = pending
 
 ```text
 src/lib/content/pages.ts
-→ Home, Portfolio, About, Careers, Contact, and footer text
+→ Home, Portfolio, About, Careers, Contact, footer text, and the four public capability areas
 
 src/lib/content/projects.ts
 → portfolio project information
@@ -280,6 +332,7 @@ page structure        = complete
 page names            = approved
 page design           = approved
 writing style guide   = APPROVED
+capability structure  = APPROVED
 content drafting      = ACTIVE
 Home draft            = implemented
 About draft           = implemented
@@ -298,4 +351,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is now in the **website content drafting → real portfolio integration** stage. Do not return to broad design or writing-style exploration unless real content reveals a specific problem.
+The project is now in the **website content drafting → real portfolio integration** stage. Do not return to broad design, writing-style, or capability-taxonomy exploration unless real content reveals a specific problem.
