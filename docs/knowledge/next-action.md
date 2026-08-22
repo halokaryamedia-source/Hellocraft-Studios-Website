@@ -15,6 +15,7 @@ Home Hero                          = APPROVED / implemented
 Home Featured Projects             = APPROVED / implemented
 Home What We Do                    = APPROVED / implemented
 Home About preview                 = APPROVED / implemented
+Home Contact preview               = APPROVED / implemented
 Home Work Areas                    = APPROVED / implemented
 About draft                        = implemented
 Portfolio intro                    = implemented
@@ -60,20 +61,16 @@ docs/knowledge/content-draft.md
 Current status:
 
 ```text
-Home Hero                       = APPROVED
-Home Featured Projects          = APPROVED
-Home What We Do                 = APPROVED
-Home About preview              = APPROVED
-Home Contact preview            = current review section
-Portfolio intro                 = Draft v1
-Portfolio projects              = waiting for real project sources
-Project Detail                  = structure ready; waiting for real project sources
-About                           = Draft v1 + Work Areas implemented
-Contact                         = working copy only; final contact data missing
-Careers                         = working copy only; final hiring state missing
+Home                         = APPROVED / implemented
+Portfolio intro              = next review section
+Portfolio projects           = waiting for real project sources
+Project Detail               = structure ready; waiting for real project sources
+About                        = Draft v1 + Work Areas implemented
+Contact                      = working copy only; final contact data missing
+Careers                      = working copy only; final hiring state missing
 ```
 
-## Approved Home copy so far
+## Approved Home copy
 
 ```text
 Hero
@@ -93,6 +90,11 @@ About
 We're a studio focused on Minecraft.
 We make games and adventures, and also work on projects for events and exhibitions.
 About Hellocraft
+
+Contact
+Tell us about your Minecraft project.
+Tell us what you're working on and where we can help.
+Contact us
 ```
 
 The What We Do intro goes directly into the four Work Areas. Do not add a second explanatory sentence without a concrete reason.
@@ -195,4 +197,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Home `Contact` preview copy. Preserve the approved Hero, Featured Projects, What We Do, About preview, and Work Areas.**
+**Start the Portfolio page copy review. Preserve the approved Home copy and Work Areas.**
