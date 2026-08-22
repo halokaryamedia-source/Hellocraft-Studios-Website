@@ -9,7 +9,7 @@ export const homeCopy = {
 		label: 'Minecraft game studio',
 		title: 'We build Minecraft experiences.',
 		body:
-			'Hellocraft Studios is a game studio focused on Minecraft, bringing creative and technical production together for playable projects and experiences.',
+			'Hellocraft Studios designs and develops Minecraft projects, from custom worlds and gameplay to technical systems and 3D art.',
 		primaryActionLabel: 'View portfolio'
 	},
 	portfolio: {
@@ -22,14 +22,14 @@ export const homeCopy = {
 		label: 'About',
 		title: 'A Minecraft-focused game studio.',
 		body:
-			'Hellocraft works with Minecraft as both a game platform and a creative medium, from game content to public and cultural experiences.',
+			'Hellocraft works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.',
 		actionLabel: 'About Hellocraft'
 	},
 	whatWeDo: {
 		label: 'What we do',
 		title: 'From custom worlds to playable systems.',
 		body:
-			'Each project can need a different mix of world design, gameplay, development, and art. We keep the scope flexible around what the project actually needs.'
+			'Depending on the project, our work can include world design, gameplay, game development, technical systems, and 3D art.'
 	},
 	contact: {
 		label: 'Contact',
@@ -44,7 +44,7 @@ export const portfolioCopy = {
 		label: 'Portfolio',
 		title: 'Minecraft projects by Hellocraft Studios.',
 		body:
-			'A selection of Minecraft projects, with room for the brief, our role, project media, and the details that matter.'
+			'A selection of Minecraft projects showing what was made, Hellocraft\'s role, and the work behind each project.'
 	},
 	emptyState: 'No projects have been published yet.'
 } as const;
@@ -54,13 +54,13 @@ export const aboutCopy = {
 		label: 'About',
 		title: 'Hellocraft Studios is focused on Minecraft.',
 		body:
-			'We work with Minecraft as both a game platform and a creative medium, across traditional game content and projects for events, exhibitions, and other public experiences.'
+			'We work on Minecraft games and custom worlds, as well as projects for events, exhibitions, and other public experiences.'
 	},
 	whatWeDo: {
 		label: 'What we do',
 		title: 'Different projects need different kinds of work.',
 		body:
-			'Depending on the brief, that can include custom worlds, gameplay, game development, technical systems, and supporting 3D art.'
+			'Depending on the project, our work can include custom worlds, gameplay, game development, technical systems, and 3D art.'
 	},
 	howWeWork: {
 		label: 'How we work',
@@ -104,7 +104,7 @@ export const contactCopy = {
 	hero: {
 		label: 'Contact',
 		title: 'Contact Hellocraft Studios.',
-		body: 'For project enquiries, partnerships, or other business questions, use the contact details below.'
+		body: 'For project inquiries, partnerships, or other business questions, use the contact details below.'
 	},
 	methods: {
 		title: 'Contact details',
