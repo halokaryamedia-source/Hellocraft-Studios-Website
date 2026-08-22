@@ -36,9 +36,9 @@ export const workAreas = [
 export const homeCopy = {
 	hero: {
 		label: 'Minecraft game studio',
-		title: 'We build games and experiences in Minecraft.',
+		title: 'We make games and experiences in Minecraft.',
 		body:
-			'Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.',
+			'We work on games and adventures, as well as Minecraft projects for events and exhibitions.',
 		primaryActionLabel: 'View portfolio'
 	},
 	portfolio: {
