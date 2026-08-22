@@ -47,7 +47,7 @@
 	<section class="inquiry" aria-labelledby="contact-inquiry-title">
 		<div class="shell inquiry__inner">
 			<div class="inquiry__heading">
-				<p class="section-label">Project enquiries</p>
+				<p class="section-label">Project inquiries</p>
 				<h2 id="contact-inquiry-title">{contactCopy.inquiry.title}</h2>
 			</div>
 
