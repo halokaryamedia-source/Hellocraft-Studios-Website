@@ -82,7 +82,7 @@ Contact
 
 Do not redesign them without a concrete reason from real content or media.
 
-## Writing style
+## Writing style — APPROVED
 
 Public writing follows:
 
@@ -90,9 +90,9 @@ Public writing follows:
 docs/foundation/08-writing-style.md
 ```
 
-The guide was derived from current official communication patterns used by established Minecraft creators and studios, including Noxcrew, Gamemode One, Blockworks, Everbloom Games, Shapescape, Spark Universe, and Blockception.
+The project owner approved this as the default writing direction for Hellocraft's public website after reviewing communication patterns from established Minecraft creators and studios, including Noxcrew, Gamemode One, Blockworks, Everbloom Games, Shapescape, Spark Universe, and Blockception.
 
-Hellocraft's preferred voice is:
+Hellocraft's voice is:
 
 ```text
 confident
@@ -115,7 +115,7 @@ Main rules:
 - let projects and verified results prove quality;
 - avoid generic agency language, exaggerated claims, and adjective-heavy copy.
 
-For Project Detail pages, use a simple client/project structure when the information exists:
+For Project Detail pages, use this pattern when the information exists:
 
 ```text
 project / client context
@@ -124,13 +124,23 @@ project / client context
 → what players experience
 → our role
 → verified results
+→ useful links / credits
 ```
 
-Gamemode One and Noxcrew are useful references for concise game-studio voice; Blockworks is the main reference for project/case-study writing; Shapescape is useful when speaking to non-Minecraft-native clients. Do not copy their wording.
+Gamemode One and Noxcrew are useful references for concise game-studio voice; Blockworks is the main reference for project/case-study writing; Everbloom is useful for player/Careers language; Shapescape is useful when speaking to non-Minecraft-native clients. Reference wording must not be copied.
+
+The writing guide is enforced through:
+
+```text
+docs/foundation/02-product-requirements.md
+src/lib/content/pages.ts
+src/lib/content/projects.ts
+docs/knowledge/next-action.md
+```
 
 ## Copy review
 
-The public-facing draft copy has been reviewed and rewritten in clear, normal website language and then aligned with the Minecraft studio writing guide.
+The public-facing draft copy has been reviewed, humanized, and aligned with the approved Minecraft studio writing guide.
 
 Current copy is suitable for preview and content fitting. It is **not final production copy** because real portfolio evidence, final company facts, and public contact information are still missing.
 
@@ -220,6 +230,7 @@ record it
 → confirm whether it can be public
 → note missing information
 → choose what goes on the website
+→ write public copy using 08-writing-style.md
 ```
 
 Do not guess missing clients, dates, results, permissions, or project details.
@@ -277,7 +288,7 @@ production adapter selection
 page structure        = complete
 page names            = approved
 page design           = approved
-writing style guide   = established
+writing style guide   = APPROVED
 copy humanization     = complete for current draft
 sample data clarity   = complete
 real portfolio        = next major input
@@ -294,4 +305,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is ready to move into **real portfolio and media intake**. No additional generic pages or broad redesign are needed before that step.
+The project is ready to move into **real portfolio and media intake**. No additional generic pages, writing-style exploration, or broad redesign are needed before that step.
