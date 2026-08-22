@@ -2,27 +2,24 @@
 
 This file is the working copy draft for the Hellocraft Studios Website.
 
-Use `docs/foundation/08-writing-style.md` for tone and wording. Use confirmed project/company evidence only. This file is for content review before final publication.
+Use `docs/foundation/08-writing-style.md` for tone and wording. Use confirmed project/company evidence only. Approved wording or structure must not be casually rewritten.
 
 ## Status labels
 
 ```text
-READY FOR DRAFT
-→ supported by current confirmed company information and safe to use as working website copy
-
 APPROVED
-→ wording or structure has been reviewed and accepted; do not rewrite without a concrete reason
+→ reviewed and accepted; change only for a concrete new reason
 
 WAITING FOR REAL DATA
-→ structure can be prepared, but final wording depends on real portfolio/contact/career evidence
+→ structure/rule is ready, but public content needs verified real evidence
 
 FINAL REVIEW LATER
-→ wording is usable now but must be checked again after real project/media information is integrated
+→ usable now, but check again after real portfolio/media/contact data is integrated
 ```
 
-## Canonical Work Areas
+## Canonical Work Areas — APPROVED
 
-Hellocraft uses **one fixed Work Areas list** everywhere in the website source and project documentation:
+Use one fixed Work Areas list everywhere:
 
 ```text
 Game & Experience Design
@@ -33,7 +30,7 @@ Game Development
 
 Do not rename these as capabilities, services, production areas, departments, disciplines, or another parallel taxonomy.
 
-A project may involve one, several, or all Work Areas.
+Work Areas are not job titles. Careers and project credits use real approved job titles/responsibilities only when actual data exists.
 
 ### Game & Experience Design
 
@@ -41,15 +38,11 @@ A project may involve one, several, or all Work Areas.
 We shape the concept, gameplay, objectives, and player experience around what the project needs.
 ```
 
-May include game concepts, gameplay design, objectives, puzzles/minigames, progression, player experience, and narrative/gameplay flow when relevant.
-
 ### World & Level Design
 
 ```text
 We design and build Minecraft worlds, environments, levels, and spaces around how players move and play.
 ```
-
-May include Minecraft building, world design, level design, environment design, player flow, traversal, and progression through spaces.
 
 ### Game Development
 
@@ -57,31 +50,11 @@ May include Minecraft building, world design, level design, environment design, 
 We develop gameplay systems, mechanics, technical features, and the logic that makes each experience work.
 ```
 
-May include gameplay systems, scripting, game logic, multiplayer systems, custom mechanics, and technical implementation.
-
 ### 3D Art
 
 ```text
 We create models, textures, and animation for custom Minecraft content when the project needs them.
 ```
-
-May include 3D modeling, texturing, animation, and Minecraft-compatible custom assets.
-
-## Job title rule
-
-**Work Areas are not job titles.**
-
-Do not maintain a second permanent list of Core Production, Supporting Production, Business Roles, or similar role groups.
-
-For Careers and project credits:
-
-```text
-real opening / real project credit
-→ use the approved job title from that real data
-→ describe its actual responsibility
-```
-
-If no real opening or credit exists, do not invent a role simply to complete a taxonomy.
 
 ## Home — APPROVED
 
@@ -141,11 +114,9 @@ Tell us what you're working on and where we can help.
 Contact us
 ```
 
-All Home section copy above is approved. Do not rewrite it without a concrete reason from new positioning or verified portfolio evidence.
-
 ## Portfolio — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
-### Hero — APPROVED
+### Hero
 
 ```text
 Portfolio
@@ -155,9 +126,7 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-Do not rewrite the Portfolio Hero without a concrete reason from verified portfolio evidence.
-
-### Project listing — APPROVED
+### Listing structure
 
 Required:
 
@@ -168,14 +137,14 @@ Short description
 View project
 ```
 
-Optional only when the information is confirmed, public, and useful:
+Optional only when confirmed, public, and useful:
 
 ```text
 Client / partner
 Year
 ```
 
-Do not show these by default on the Portfolio listing:
+Do not show by default:
 
 ```text
 Work Areas
@@ -187,13 +156,9 @@ long descriptions
 extra metadata
 ```
 
-Those details belong on Project Detail when the real project information supports them.
+### Short project description rule
 
-### Short project description — APPROVED
-
-Each listing uses one concise sentence based on real approved project information.
-
-Write it as:
+Use one concise sentence explaining:
 
 ```text
 what the project is
@@ -201,22 +166,11 @@ what the project is
 what players / visitors do or experience
 ```
 
-Lead with the project itself, not Hellocraft's contribution.
-
-Avoid opening with generic marketing claims or agency language such as:
-
-```text
-innovative
-immersive
-custom solution
-Hellocraft developed...
-```
+Lead with the project itself, not Hellocraft's contribution or a marketing claim. Avoid generic wording such as `innovative`, `immersive`, `custom solution`, or opening with `Hellocraft developed...`.
 
 ## Project Detail — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
-The reusable Project Detail structure is approved and implemented in source.
-
-Use this order when the real evidence supports each section:
+Use this order when real evidence supports each section:
 
 ```text
 Back to Portfolio
@@ -230,38 +184,21 @@ Year — optional
 Main Project Media
 
 The Project
-→ what the project is
-→ useful context / objective
+→ what the project is and useful context/objective
 
 Our Role
 → what Hellocraft actually designed, built, developed, or handled
 
 Player Experience — optional
-→ what players do, see, learn, or experience
-
-Results — optional
-→ verified results only
-
+Results — optional / verified only
 Credits / Links — optional
-→ credits and useful public links only
 
 View Portfolio
 ```
 
-### Important Project Detail rules
+`What We Made` is not a separate permanent section. Content about what Hellocraft made belongs inside **Our Role**.
 
-`What We Made` is **not** a separate permanent section.
-
-Do not create both:
-
-```text
-What We Made
-Our Role
-```
-
-because they overlap. Information about what Hellocraft made belongs inside **Our Role**.
-
-The source model uses explicit fields rather than a free-form section list:
+The source model uses explicit fields:
 
 ```text
 projectContext
@@ -272,15 +209,11 @@ credits
 links
 ```
 
-This keeps the approved order stable and prevents future terminology drift.
-
-`Player Experience`, `Results`, `Credits`, and `Links` are optional. A short project showcase is valid; do not create empty or weak sections just to make every project page the same length.
-
-Final project-specific wording, client attribution, dates, results, credits, and media must come from approved real project evidence.
+Do not create empty/weak sections merely to make every project page the same length.
 
 ## About — APPROVED
 
-### Hero — APPROVED
+### Hero
 
 ```text
 About
@@ -290,9 +223,7 @@ We're a game studio focused on Minecraft.
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-Do not rewrite the About Hero without a concrete reason from new company positioning or verified evidence.
-
-### What We Do — APPROVED
+### What We Do
 
 ```text
 What we do
@@ -300,11 +231,9 @@ What we do
 We handle both the creative and technical sides of Minecraft projects.
 ```
 
-This wording is intentionally the same as Home. It goes directly into the same four canonical Work Areas.
+Use the same four canonical Work Areas as Home, without a second supporting sentence that repeats them.
 
-Do not add a second supporting sentence that repeats the four Work Area names, and do not create a different definition of What We Do on About.
-
-### How We Work — APPROVED
+### How We Work
 
 ```text
 How we work
@@ -314,37 +243,15 @@ We work around what each project needs.
 We keep the creative and technical work connected throughout the project.
 ```
 
-Keep this language simple. Do not replace it with agency-style process language such as `shape the scope`, `tailored approach`, or `package` unless a real operational need later requires more detail.
-
 ### Experience — APPROVED RULE / WAITING FOR REAL DATA
 
-Experience is **evidence-only**. Keep the section hidden/empty until verified public evidence exists.
+Experience is evidence-only. Keep it hidden/empty until verified public evidence exists.
 
-Valid content may include only concrete, approved evidence such as:
+Valid content may include approved public clients/partners, real project history, verified results/metrics, or other documented company experience.
 
-```text
-public client / partner names
-real project history
-verified results or metrics
-other documented company experience
-```
+Do not invent or publish unverified client names/logos, project counts, years of experience, awards, metrics, or credibility claims.
 
-Do not add a generic marketing paragraph just to introduce the section.
-
-Do not invent or publish unverified:
-
-```text
-client logos or names
-project counts
-years of experience
-awards
-metrics
-credibility claims
-```
-
-The section should remain absent when no approved evidence is available. The current About implementation already follows this rule by rendering Experience only when demo mode is off and real experience items exist.
-
-### Contact close — APPROVED
+### Contact close
 
 ```text
 Planning a Minecraft project?
@@ -354,13 +261,9 @@ Tell us what you're working on and where we can help.
 Contact us
 ```
 
-This intentionally reuses the approved Home contact wording so the call to action stays consistent across the website.
-
-All currently publishable About copy is approved. The Experience content itself remains pending verified public evidence.
-
 ## Contact — APPROVED COPY / WAITING FOR REAL CONTACT DATA
 
-### Hero — APPROVED
+### Hero
 
 ```text
 Contact
@@ -370,42 +273,17 @@ Tell us about your project.
 Tell us what you're working on and how we can help.
 ```
 
-Do not rewrite the Contact Hero without a concrete reason from a real change in the public contact workflow or company positioning.
-
-### Contact details — APPROVED RULE / WAITING FOR REAL DATA
+### Contact Details — APPROVED RULE
 
 Keep contact methods simple and evidence-only.
 
-Use only real, approved public contact channels. The final section may be as simple as:
+One real business email is enough if that is the actual workflow. Social links are optional and appear only when real, public, approved, and useful.
 
-```text
-Contact details
+Do not add phone, Discord, booking links, office addresses, contact forms, or extra channels merely to fill space.
 
-Email
-[real business email]
+Actual email/social data remains pending.
 
-Social
-[approved public link(s) only when useful]
-```
-
-One real business email is enough if that is the actual public workflow. Do not add extra channels merely to make the page look fuller.
-
-Do not invent or require:
-
-```text
-phone numbers
-Discord accounts
-booking links
-office addresses
-contact forms
-extra social accounts
-```
-
-Social links are optional and should appear only when they are real, public, approved, and useful.
-
-The actual email and any public links remain pending confirmed contact data.
-
-### Inquiry guidance — APPROVED
+### Inquiry guidance
 
 ```text
 What should you include?
@@ -413,60 +291,100 @@ What should you include?
 A short description of the project, who it's for, and where you need our help.
 ```
 
-Keep this guidance concise. It should help someone send a useful first message without becoming a long intake form.
+## Careers — CURRENT REVIEW / WAITING FOR REAL HIRING DATA
 
-All Contact copy that can be finalized without real contact-channel data is approved. Actual contact methods remain pending confirmed public data.
+Do not maintain or display a speculative role taxonomy. Use real job titles and responsibilities only when a real opening exists.
 
-## Careers
-
-Status: `WAITING FOR REAL DATA / NEXT REVIEW`
-
-Do not maintain or display a speculative role taxonomy.
-
-When a real opening exists, use the real approved job title and write:
+### Hero — APPROVED
 
 ```text
-what the person will work on
-actual responsibilities
-expected skills
-work/location arrangement
-how to apply
+Careers
+
+Join Hellocraft Studios.
+
+Open roles and application details will be posted here when we're hiring.
 ```
 
-Valid final state when there are no openings:
+Do not rewrite the Careers Hero without a concrete reason from a real change in hiring approach or company positioning.
+
+### No-openings state
+
+Keep the current safe public state when there are no openings:
 
 ```text
 We don't have any public openings right now.
 ```
+
+Do not create fake/sample openings in public mode.
+
+### General intro — NEXT REVIEW
+
+Current draft:
+
+```text
+Careers
+
+Build Minecraft projects with us.
+
+Each real opening will describe the work, skills, and responsibilities for that role.
+```
+
+Review this next. It should not imply a permanent role taxonomy or a current vacancy.
+
+### Open positions rule
+
+When a real opening exists, use only real approved data:
+
+```text
+actual job title
+short role summary
+actual responsibilities
+expected skills
+location / work arrangement when relevant
+engagement type when relevant
+application link/process
+```
+
+### How to apply — DRAFT / DEPENDS ON REAL OPENINGS
+
+Current draft:
+
+```text
+How to apply
+
+Each opening will include the role details and how to apply.
+```
+
+Final wording must match the real application workflow.
 
 ## Current drafting order
 
 ```text
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
-3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — APPROVED; Experience data pending verified evidence
+3. Project Detail — structure APPROVED; real projects pending
+4. About — APPROVED; Experience data pending
 5. Contact — APPROVED copy; real contact channels pending
-6. Careers — next section-by-section review
+6. Careers — Hero APPROVED; General intro next
 7. final site-wide copy pass after real evidence is integrated
 ```
 
 ## Final content review
 
-Before publication, every page must pass these checks:
+Before publication:
 
 ```text
 [ ] wording follows 08-writing-style.md
 [ ] approved copy is not casually rewritten
 [ ] strong claims are supported
-[ ] Work Area names match the canonical four-name list exactly
-[ ] no second capability/service/role taxonomy has been introduced
-[ ] no separate What We Made + Our Role duplication is introduced
+[ ] Work Area names match the canonical list exactly
+[ ] no second capability/service/role taxonomy exists
+[ ] no separate What We Made + Our Role duplication exists
 [ ] client/partner names are approved for public use
 [ ] Experience contains verified public evidence only
 [ ] sample/demo content is removed
-[ ] project descriptions match actual media and project facts
+[ ] project copy matches actual media and facts
 [ ] contact details are real
-[ ] Careers reflects the current hiring state and real job titles
-[ ] metadata describes the real page content
+[ ] Careers reflects actual hiring state and real job titles
+[ ] metadata matches real page content
 ```
