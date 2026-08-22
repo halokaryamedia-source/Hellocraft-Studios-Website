@@ -13,27 +13,16 @@ page design                        = approved
 writing style guide                = APPROVED
 Home                               = APPROVED / implemented
 Portfolio Hero                     = APPROVED / implemented
-Home Work Areas                    = APPROVED / implemented
-About draft                        = implemented
+Portfolio listing structure        = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
+About draft                        = implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
 ```
 
-Main navigation:
-
-```text
-Portfolio
-About
-Careers
-Contact
-```
-
 ## One terminology system
 
-Use **Work Areas** as the single fixed term for Hellocraft's areas of work.
-
-Canonical list:
+Use **Work Areas** as the single fixed term for Hellocraft's areas of work:
 
 ```text
 Game & Experience Design
@@ -42,30 +31,7 @@ Game Development
 3D Art
 ```
 
-Use these exact names in Home, About, internal source names, documentation, and project attribution when relevant.
-
 Work Areas are not job titles. Careers and project credits use real approved titles from real data.
-
-## Working content draft
-
-Use:
-
-```text
-docs/knowledge/content-draft.md
-```
-
-Current status:
-
-```text
-Home                         = APPROVED / implemented
-Portfolio Hero               = APPROVED / implemented
-Portfolio project listing    = current review section
-Portfolio projects           = waiting for real project sources
-Project Detail               = structure ready; waiting for real project sources
-About                        = Draft v1 + Work Areas implemented
-Contact                      = working copy only; final contact data missing
-Careers                      = working copy only; final hiring state missing
-```
 
 ## Approved Portfolio Hero
 
@@ -77,23 +43,43 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-Do not rewrite this without a concrete reason from verified portfolio evidence.
+## Approved Portfolio listing structure
 
-## Portfolio listing rule
-
-The next decision is the copy structure for each project shown on the Portfolio page.
-
-Keep it simple. Depending on verified data, a project listing may use:
+Required for each project listing:
 
 ```text
+Project media
 Project name
 Short description
-Client / partner — only when public and useful
-Year — only when confirmed and useful
 View project
 ```
 
-Do not add categories, tags, or metadata just to fill space.
+Optional only when confirmed, public, and useful:
+
+```text
+Client / partner
+Year
+```
+
+Do not add by default:
+
+```text
+Work Areas
+role / contribution labels
+tags
+categories
+technical details
+long descriptions
+extra metadata
+```
+
+The current Portfolio route already matches this structure.
+
+## Current review section
+
+The next Portfolio decision is the **short project description rule**.
+
+Each listing needs one concise sentence that explains what the project is. It should be professional, human, and easy to understand without becoming a case study. Final descriptions must be written from real approved project information.
 
 ## Writing style
 
@@ -107,9 +93,7 @@ Hellocraft should sound confident, clear, creator-led, Minecraft-native, friendl
 
 Professional does not mean corporate or artificial. Avoid polished marketing phrases that sound generated rather than spoken by a real studio team.
 
-## Portfolio and Project Detail
-
-Real portfolio content still requires approved Hellocraft project material.
+## Real portfolio input still needed
 
 For each project, collect:
 
@@ -124,17 +108,7 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
-When enough evidence exists, write Project Detail in this order where useful:
-
-```text
-project / client context
-→ what was needed
-→ what we made
-→ what players experience
-→ our role
-→ verified results
-→ useful links / credits
-```
+Project Detail is written later from the real project evidence.
 
 ## Demo mode
 
@@ -161,4 +135,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the project listing copy structure for the Portfolio page. Preserve the approved Home, Portfolio Hero, and Work Areas.**
+**Review and approve how the one-sentence short description for each Portfolio project should be written. Preserve the approved Home, Portfolio Hero, Portfolio listing structure, and Work Areas.**
