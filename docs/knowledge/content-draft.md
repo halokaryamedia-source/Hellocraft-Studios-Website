@@ -280,21 +280,21 @@ Final project-specific wording, client attribution, dates, results, credits, and
 
 ## About
 
-Status: `READY FOR DRAFT / FINAL REVIEW LATER`
+Status: `CURRENT REVIEW / FINAL REVIEW LATER`
 
-### Hero
-
-Current draft:
+### Hero — APPROVED
 
 ```text
 About
 
-We build Minecraft games, worlds, and experiences.
+We're a game studio focused on Minecraft.
 
-Hellocraft Studios works across Minecraft game content, custom worlds, and projects for events, exhibitions, and other public experiences.
+We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-### What we do
+Do not rewrite the About Hero without a concrete reason from new company positioning or verified evidence.
+
+### What we do — CURRENT REVIEW
 
 Current draft:
 
@@ -389,7 +389,7 @@ Do not finalize the Contact page until the real public business contact route an
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — next section-by-section review
+4. About — Hero APPROVED; What We Do next
 5. Contact
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
