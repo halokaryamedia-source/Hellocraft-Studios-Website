@@ -1,68 +1,64 @@
 import type { ProjectEntry } from './types';
 
-// DEVELOPMENT-ONLY PROJECT DATA
-// These entries exist solely to develop Work/Home/project-detail layouts.
-// They are not Hellocraft portfolio evidence and must be replaced through the content-intake process.
+// SAMPLE PORTFOLIO DATA
+// These fictional entries are used only to preview the portfolio layout.
+// Replace them with approved Hellocraft projects before launch.
 
 export const projects: ProjectEntry[] = [
 	{
-		slug: 'demo-project-01',
-		title: 'Concept World Study',
+		slug: 'sample-adventure-world',
+		title: 'Sample Adventure World',
 		summary:
-			'A story-led Minecraft concept shaped around exploration, environmental storytelling, and clear player progression.',
+			'A fictional Minecraft adventure used to preview how exploration, story, and player progression can be presented on the site.',
 		featured: true,
-		contribution: [
-			'Demo contribution item — replace with Hellocraft’s verified role.',
-			'Demo contribution item — used only to test repeated list content.'
-		],
-		sections: [
-			{
-				id: 'overview',
-				title: 'Project overview',
-				body: [
-					'This is temporary project-detail copy. It provides a realistic paragraph length so the editorial layout can be prepared before real project evidence is supplied.',
-					'The final version may become a short showcase or a deeper case study depending on the actual project material.'
-				]
-			},
-			{
-				id: 'experience',
-				title: 'Experience direction',
-				body: [
-					'This second section exists to exercise the flexible project-section model. It does not describe a real Hellocraft project.',
-					'Replace these paragraphs with approved facts, process, challenges, outcomes, or supporting evidence when available.'
-				]
-			}
-		]
-	},
-	{
-		slug: 'demo-project-02',
-		title: 'Multiplayer Gameplay Study',
-		summary:
-			'A multiplayer-focused development concept exploring readable objectives, replayable rounds, and clear player feedback.',
-		featured: true,
-		contribution: ['Demo contribution — replace with a verified project responsibility.'],
+		contribution: ['Sample role: world and level design', 'Sample role: gameplay planning'],
 		sections: [
 			{
 				id: 'overview',
 				title: 'Overview',
 				body: [
-					'Temporary copy for the second demo project. Its purpose is structural variation rather than content authority.'
+					'This is a sample project used only to preview the portfolio page. Real project information and media will replace it before launch.',
+					'The final project pages can stay short or include more detail depending on the material available for each project.'
+				]
+			},
+			{
+				id: 'experience',
+				title: 'Player experience',
+				body: [
+					'This sample section shows how a project can explain the intended player experience without requiring every project to use the same format.'
 				]
 			}
 		]
 	},
 	{
-		slug: 'demo-project-03',
-		title: 'Environment Study',
+		slug: 'sample-multiplayer-game',
+		title: 'Sample Multiplayer Game',
 		summary:
-			'A world-design concept focused on memorable landmarks, traversal, atmosphere, and a clear sense of place.',
+			'A fictional multiplayer game used to preview objectives, rounds, player feedback, and project information.',
+		featured: true,
+		contribution: ['Sample role: gameplay and level development'],
+		sections: [
+			{
+				id: 'overview',
+				title: 'Overview',
+				body: [
+					'This sample keeps the page short to show that not every portfolio project needs a long case study.'
+				]
+			}
+		]
+	},
+	{
+		slug: 'sample-environment-build',
+		title: 'Sample Environment Build',
+		summary:
+			'A fictional environment project used to preview landmarks, atmosphere, traversal, and visual presentation.',
 		featured: false,
 		sections: [
 			{
 				id: 'overview',
 				title: 'Overview',
 				body: [
-					'This project is intentionally minimal to prove that the detail architecture does not require every project to become a long case study.'
+					'This sample shows the simplest project-page format: a short introduction, media, and a concise overview.'
 				]
 			}
 		]
