@@ -276,23 +276,29 @@ The Contact close intentionally uses the same approved supporting sentence as Ho
 
 All currently publishable About copy is approved. Only real Experience evidence remains pending.
 
-## Current review section
+## Contact — CURRENT REVIEW
 
-```text
-Contact page — Hero
-```
-
-Current Contact Hero draft:
+### Hero — APPROVED / IMPLEMENTED
 
 ```text
 Contact
 
 Tell us about your project.
 
-For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
+Tell us what you're working on and how we can help.
 ```
 
-Review this page section by section. Real contact methods must not be invented and remain pending confirmed public contact data.
+Do not rewrite the Contact Hero without a concrete reason from a real change in company positioning or the public contact workflow.
+
+### Current review section
+
+```text
+Contact methods
+```
+
+Only real approved public contact channels may be displayed. Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
+
+If Hellocraft ultimately uses only one public email address, keep the page simple rather than adding extra contact methods just to fill space.
 
 ## Current content status
 
@@ -306,8 +312,9 @@ Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
 About                        = APPROVED / implemented
 About Experience data        = waiting for verified public evidence
-Contact Hero                 = next review
-Contact methods              = waiting for confirmed public data
+Contact Hero                 = APPROVED / implemented
+Contact methods              = current review / waiting for confirmed public data
+Contact inquiry guidance     = draft
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
 ```
@@ -369,4 +376,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Start the **Contact page Hero review**. Preserve all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels still wait for confirmed public data.
+Continue with **Contact methods**. Preserve the approved Contact Hero and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels remain pending confirmed public data.
