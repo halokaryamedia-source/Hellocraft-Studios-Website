@@ -2,22 +2,21 @@
 
 ## Current state
 
-The Hellocraft Studios Website on branch `Local` has entered the **website content drafting** stage.
+The Hellocraft Studios Website on branch `Local` is in the **website content drafting** stage.
 
-Completed for the current stage:
+Completed:
 
 ```text
-page structure        = complete
-public page names     = approved
-page design           = approved
-writing style guide   = APPROVED
-Home draft copy       = implemented
-Home capability structure = APPROVED / implemented
-Portfolio intro       = implemented
-About draft copy      = implemented
-About capability structure = APPROVED / implemented
-sample portfolio data = clearly labelled as fictional
-sample career data    = kept separate from real openings
+page structure      = complete
+public page names   = approved
+page design         = approved
+writing style guide = APPROVED
+Home draft          = implemented
+About draft         = implemented
+Portfolio intro     = implemented
+Work Areas          = APPROVED / implemented
+sample project data = clearly fictional
+sample career data  = separated from real openings
 ```
 
 Main navigation:
@@ -29,31 +28,11 @@ Careers
 Contact
 ```
 
-## Working content draft
+## One terminology system
 
-Use:
+Use **Work Areas** as the single fixed term for Hellocraft's areas of work.
 
-```text
-docs/knowledge/content-draft.md
-```
-
-as the working review document for website copy, capability structure, and role mapping.
-
-Current status:
-
-```text
-Home                = Draft v1 + approved capability structure
-Portfolio intro     = Draft v1
-Portfolio projects  = waiting for real project sources
-Project Detail      = structure ready; waiting for real project sources
-About               = Draft v1 + approved capability structure
-Contact             = working copy only; final contact data missing
-Careers             = working copy only; final hiring state missing
-```
-
-## Approved capability structure
-
-Public production capabilities are now fixed to four clear areas:
+Canonical list:
 
 ```text
 Game & Experience Design
@@ -62,34 +41,63 @@ Game Development
 3D Art
 ```
 
-These are client-facing capability areas, not fixed service packages.
-
-Role mapping for later Careers / Project Detail:
+Use these exact names in:
 
 ```text
-Core production
-→ Game / Experience Designer
-→ Level Designer / Minecraft Builder
-→ Game Developer
-→ 3D Artist
-
-Supporting production
-→ Project Manager / Producer
-→ QA / Tester
-→ Writer / Narrative
-→ Sound Designer / Music
-→ 2D / UI
-
-Business
-→ Business Development
-→ Marketing
+Home
+About
+internal source names
+documentation
+project attribution when relevant
 ```
 
-Do not promote supporting or business roles into Home capability categories without a real client-facing reason.
+Do not maintain parallel terms such as:
+
+```text
+capabilities
+core production areas
+services taxonomy
+disciplines taxonomy
+Core Production / Supporting Production role groups
+```
+
+### Job titles
+
+Work Areas are **not** job titles.
+
+For Careers or project credits:
+
+```text
+real opening / real project data
+→ use the real approved job title
+→ describe the real responsibility
+```
+
+Do not create a permanent role taxonomy before real hiring/project data exists.
+
+## Working content draft
+
+Use:
+
+```text
+docs/knowledge/content-draft.md
+```
+
+Current status:
+
+```text
+Home                = Draft v1 + Work Areas implemented
+Portfolio intro     = Draft v1
+Portfolio projects  = waiting for real project sources
+Project Detail      = structure ready; waiting for real project sources
+About               = Draft v1 + Work Areas implemented
+Contact             = working copy only; final contact data missing
+Careers             = working copy only; final hiring state missing
+```
 
 ## Writing style
 
-All new or revised public website copy must follow:
+All new or revised public copy must follow:
 
 ```text
 docs/foundation/08-writing-style.md
@@ -107,9 +115,9 @@ practical
 professional
 ```
 
-Reference websites are pattern evidence only. Do not copy wording, slogans, claims, or project descriptions from them.
+Reference websites are pattern evidence only. Do not copy their wording, slogans, claims, or project descriptions.
 
-## Current Home structure
+## Home structure
 
 ```text
 Hero
@@ -119,7 +127,7 @@ Featured Projects
 → proof through real work
 
 What We Do
-→ four approved capability areas
+→ the four canonical Work Areas
 
 About
 → who the studio is and the contexts it works in
@@ -128,50 +136,28 @@ Contact
 → start a project conversation
 ```
 
-Current Home hero:
-
-```text
-Minecraft game studio
-
-We build games and experiences in Minecraft.
-
-Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.
-```
-
-Current What We Do heading:
-
-```text
-We make Minecraft projects from idea to playable experience.
-```
-
-Current About preview:
-
-```text
-A game studio built around Minecraft.
-```
-
-## Current About structure
+## About structure
 
 ```text
 Hero
-→ We build Minecraft games, worlds, and experiences.
+→ company introduction
 
 What We Do
-→ four approved capability areas with descriptions
+→ the same four canonical Work Areas
 
 How We Work
-→ The project comes first.
+→ project approach
 
 Experience
-→ waiting for real public evidence
+→ verified public evidence only
 
 Contact
-→ Planning a Minecraft project?
+→ project conversation
 ```
 
 ## Portfolio and Project Detail
 
-The next major content input is **real Hellocraft project material**.
+The next major input is **real Hellocraft project material**.
 
 For each project, useful information includes:
 
@@ -179,7 +165,7 @@ For each project, useful information includes:
 project name
 what Hellocraft worked on
 short project description
-client/partner if it can be published
+client/partner if public
 year/date if confirmed
 public link if available
 screenshots/renders/video
@@ -198,39 +184,26 @@ project / client context
 → useful links / credits
 ```
 
-A shorter showcase is valid when there is less material. Do not add empty sections to make every project page the same length.
+Use real project responsibility terms. Do not force project credits into a made-up job taxonomy.
 
-## How incoming material should be handled
+## Incoming material workflow
 
 ```text
 receive files/information
 → record every item
-→ group items by project or subject
+→ group by project or subject
 → identify duplicates
 → check facts
-→ confirm whether each item can be public
+→ confirm public/private status
 → record missing information
 → select what appears on the website
 → write public copy using 08-writing-style.md
 ```
 
-Material that is not selected for the public website should still remain recorded in:
+Keep unselected supplied material recorded in:
 
 ```text
 docs/knowledge/content-inventory.md
-```
-
-## What remains after Portfolio
-
-```text
-1. refine About from real portfolio/company evidence
-2. add real Contact and social information
-3. confirm Careers hiring state and application method
-4. integrate final logo/colors/font
-5. run final site-wide copy review
-6. complete responsive/accessibility/performance/build/browser QA
-7. finish SEO/social metadata
-8. deploy
 ```
 
 ## Demo mode
@@ -243,14 +216,14 @@ contentIsDemo = true
 
 until production content is ready.
 
-Before turning demo mode off, confirm:
+Before turning it off:
 
 ```text
-[ ] sample portfolio entries removed or replaced
+[ ] sample portfolio entries removed/replaced
 [ ] real project media added
-[ ] final page copy approved against 08-writing-style.md
+[ ] final copy approved
 [ ] real contact details added
-[ ] sample experience/career data removed or replaced as needed
+[ ] sample experience/career data removed/replaced as needed
 [ ] final brand assets approved
 [ ] final metadata ready
 ```
@@ -270,4 +243,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Continue website content drafting by collecting and reviewing real Hellocraft portfolio information and project media. Home and About now use the approved four-area capability structure and should only be refined when real evidence gives a concrete reason.**
+**Continue content drafting with real Hellocraft portfolio information and project media. Keep the four Work Areas as the single shared terminology across source, public copy, and documentation.**
