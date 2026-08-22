@@ -14,6 +14,7 @@ writing style guide                = APPROVED
 Home                               = APPROVED / implemented
 Portfolio Hero                     = APPROVED / implemented
 Portfolio listing structure        = APPROVED / implemented
+Portfolio short-description rule   = APPROVED
 Work Areas                         = APPROVED / implemented
 About draft                        = implemented
 sample project data                = clearly fictional
@@ -73,13 +74,21 @@ long descriptions
 extra metadata
 ```
 
-The current Portfolio route already matches this structure.
+## Approved short-description rule
 
-## Current review section
+Write one concise sentence that explains:
 
-The next Portfolio decision is the **short project description rule**.
+```text
+what the project is
++
+what players / visitors do or experience
+```
 
-Each listing needs one concise sentence that explains what the project is. It should be professional, human, and easy to understand without becoming a case study. Final descriptions must be written from real approved project information.
+Lead with the project itself, not Hellocraft's contribution or a marketing claim.
+
+Avoid generic wording such as `innovative`, `immersive`, `custom solution`, or opening with `Hellocraft developed...`.
+
+Final project descriptions must come from real approved project information.
 
 ## Writing style
 
@@ -108,7 +117,7 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
-Project Detail is written later from the real project evidence.
+Final Project Detail copy is written from real project evidence.
 
 ## Demo mode
 
@@ -135,4 +144,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve how the one-sentence short description for each Portfolio project should be written. Preserve the approved Home, Portfolio Hero, Portfolio listing structure, and Work Areas.**
+**Review and approve the Project Detail page structure. This review can define the reusable structure now, but all factual copy still waits for real approved project information. Preserve all approved Home, Portfolio, and Work Areas decisions.**
