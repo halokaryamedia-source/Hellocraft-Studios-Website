@@ -2,7 +2,9 @@
 
 ## Current state
 
-The Hellocraft Studios Website on branch `Local` is in the **website content drafting** stage.
+The Hellocraft Studios Website on branch `Local` is in the **production content intake and audit** stage.
+
+The reusable public copy and structure review is complete.
 
 Completed:
 
@@ -48,7 +50,11 @@ Minecraft game studio
 
 Footer navigation uses the approved public page names. Social links appear only when real approved public links exist.
 
-## Production content still needed
+## Production content intake
+
+The next work is to collect, record, and audit real production material before replacing demo content.
+
+Needed:
 
 ```text
 real portfolio project facts
@@ -62,6 +68,21 @@ final logo/vector
 final font
 final SEO/social metadata
 ```
+
+For every supplied item:
+
+```text
+record it first
+→ preserve filename / source / provenance
+→ identify the project or page it belongs to
+→ check duplicates and revisions
+→ separate factual truth from publication permission
+→ record unknown or conflicting information
+→ keep unused material documented
+→ only then decide what should appear on the website
+```
+
+Do not treat sibling repositories, internal documents, project history, client names, metrics, or media as automatically publishable evidence.
 
 ## Demo mode
 
@@ -88,4 +109,4 @@ production adapter selection
 
 ## Immediate next step
 
-**The reusable public copy and structure review is complete for Home, Portfolio, Project Detail, About, Contact, Careers, Work Areas, and Footer. Next, collect and audit real production content before the final site-wide copy pass. Preserve all approved wording and structure unless verified real evidence creates a concrete reason to change it.**
+**Receive and audit the real production content. Start with a complete inventory before selecting projects or rewriting approved copy. Preserve all approved wording and structure unless verified real evidence creates a concrete reason to change it.**
