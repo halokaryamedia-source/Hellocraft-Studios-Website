@@ -135,7 +135,7 @@ Contact us
 
 Do not casually rewrite approved Home copy.
 
-## Portfolio — CURRENT STAGE
+## Portfolio — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
 ### Hero — APPROVED / IMPLEMENTED
 
@@ -179,11 +179,29 @@ extra metadata
 
 The current Portfolio route already follows this rule.
 
-### Current review
+### Short project description — APPROVED
 
-The next decision is how the **one-sentence short description** under each project name should be written.
+Use one concise sentence that explains:
 
-It should explain the project clearly, stay concise, and sound professional and human. Final descriptions must come from approved real project information.
+```text
+what the project is
++
+what players / visitors do or experience
+```
+
+Lead with the project itself. Do not lead with Hellocraft's contribution or a marketing claim.
+
+Avoid generic wording such as `innovative`, `immersive`, `custom solution`, or opening with `Hellocraft developed...`.
+
+Final wording must come from approved real project information.
+
+## Current review section
+
+```text
+Project Detail structure
+```
+
+The reusable Project Detail structure can be reviewed now. Final project-specific copy, client attribution, dates, results, credits, and media still require real approved project evidence.
 
 ## Current content status
 
@@ -191,9 +209,10 @@ It should explain the project clearly, stay concise, and sound professional and 
 Home                         = APPROVED / implemented
 Portfolio Hero               = APPROVED / implemented
 Portfolio listing structure  = APPROVED / implemented
-Portfolio short descriptions = current review rule
+Portfolio short descriptions = APPROVED rule
 Portfolio project content    = waiting for real project sources
-Project Detail               = waiting for real project sources
+Project Detail structure     = next review
+Project Detail final copy    = waiting for real project sources
 About                        = Draft v1 + Work Areas implemented
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
@@ -211,7 +230,7 @@ src/lib/content/pages.ts
 → Home, Portfolio, About, Careers, Contact, footer text, and Work Areas
 
 src/lib/content/projects.ts
-→ portfolio project information and approved listing/data rules
+→ portfolio project information and approved listing/description rules
 
 docs/knowledge/content-draft.md
 → working website copy and approval status
@@ -251,4 +270,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue Portfolio copy review at the **short project description rule**. Preserve all approved Home, Portfolio Hero, Portfolio listing structure, and Work Areas decisions.
+Continue with **Project Detail structure review**. Preserve all approved Home, Portfolio, and Work Areas decisions. Final Project Detail facts still wait for real approved project material.
