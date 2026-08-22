@@ -133,7 +133,7 @@ export const contactCopy = {
 	},
 	inquiry: {
 		title: 'What should you include?',
-		body: 'A useful first message can include what you want to make, who it is for, and any constraints you already know.'
+		body: "A short description of the project, who it's for, and where you need our help."
 	}
 } as const;
 
