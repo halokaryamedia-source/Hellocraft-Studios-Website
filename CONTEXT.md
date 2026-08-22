@@ -1,24 +1,22 @@
 # Hellocraft Studios Website — Current Context
 
-This file summarizes the current state of the Hellocraft Studios Website on branch `Local`.
+Current state of the Hellocraft Studios Website on branch `Local`.
 
-Use `docs/knowledge/next-action.md` for the immediate next steps. Project rules stay in `AGENTS.md` and `docs/foundation/`.
+Use `docs/knowledge/next-action.md` for the immediate next step. Project rules live in `AGENTS.md` and `docs/foundation/`.
 
 ## Website purpose
 
 Hellocraft Studios is a **game studio focused on Minecraft**.
 
-The website is intended to:
+The website should:
 
-- introduce Hellocraft Studios;
-- show the portfolio;
-- help potential clients understand the team and its work;
-- provide contact information;
-- show job openings when real openings exist.
+- introduce the company clearly;
+- show real projects as the main evidence of its work;
+- help potential clients understand whether Hellocraft is relevant to their project;
+- provide business contact information;
+- show career opportunities when real openings exist.
 
 ## Public pages
-
-Use standard website page names:
 
 ```text
 /
@@ -40,7 +38,7 @@ Contact
 
 The logo links to Home.
 
-Old URLs are kept only so existing links do not break:
+Old addresses remain only for compatibility:
 
 ```text
 /work        → /portfolio
@@ -50,14 +48,14 @@ Old URLs are kept only so existing links do not break:
 
 Do not use `Work` or `Studio` as current page names. `Hellocraft Studios` remains the company name.
 
-## Approved design
+## Design
 
 The current page design is approved.
 
 Reference direction:
 
 - Hazelight Studios for strong game imagery, spacing, and visual confidence;
-- Blind Squirrel Games for clear company and project information.
+- Blind Squirrel Games for clear company and project communication.
 
 The website should remain:
 
@@ -69,15 +67,7 @@ media-first
 easy to understand
 ```
 
-Avoid:
-
-- unusual page names;
-- fake game HUD or inventory UI;
-- decorative numbering systems;
-- generic card grids when the content does not need them;
-- fake statistics or client claims;
-- unnecessary visual effects;
-- copying another studio's exact design.
+Avoid fake game UI, unnecessary effects, fake statistics, generic card grids, unusual page names, and copied layouts.
 
 Current approved pages:
 
@@ -90,11 +80,45 @@ Careers
 Contact
 ```
 
-Do not redesign these pages without a clear reason from real content or media.
+Do not redesign them without a concrete reason from real content or media.
+
+## Copy review
+
+The public-facing draft copy has been reviewed and rewritten in clear, normal website language.
+
+Current copy is suitable for preview and content fitting. It is **not final production copy** because real portfolio evidence, final company facts, and public contact information are still missing.
+
+Important copy decisions:
+
+- use direct language;
+- explain what Hellocraft does without agency jargon;
+- use normal labels such as `Portfolio`, `About`, `Careers`, `Contact`, `What we do`, and `How we work`;
+- keep sample/development wording out of normal public copy where possible;
+- keep preview/sample status explicit in the separate preview notice and sample data.
+
+Internal section naming also uses clear terms such as:
+
+```text
+portfolio
+about
+whatWeDo
+howWeWork
+experience
+contact
+section-label
+```
 
 ## Current content
 
-The page layouts are ready, but most public content is still temporary development content.
+Sample portfolio entries are clearly fictional and exist only for layout preview:
+
+```text
+Sample Adventure World
+Sample Multiplayer Game
+Sample Environment Build
+```
+
+Sample career roles are also clearly labelled and are not published as real openings.
 
 Current source contains only development logo files:
 
@@ -103,22 +127,22 @@ src/lib/assets/brand/hellocraft-logo-cyan.png
 src/lib/assets/brand/hellocraft-logo-white.png
 ```
 
-The repository does not yet contain real project screenshots, renders, or videos.
+The website repository does not yet contain real project screenshots, renders, or videos.
 
 Current status:
 
 ```text
-portfolio project information = temporary
-project media                 = missing
-About information             = temporary
-contact details               = missing
-social links                  = missing
-career openings               = none confirmed
-final logo/vector             = pending
-final font                    = pending
+draft page copy      = reviewed / suitable for preview
+real portfolio       = waiting for sources
+real project media   = waiting for sources
+contact details      = missing
+social links         = missing
+career openings      = none confirmed
+final logo/vector    = pending
+final font           = pending
 ```
 
-`contentIsDemo = true` remains enabled until public content is ready. While it is enabled, the website keeps its development notice and `noindex, nofollow` setting.
+`contentIsDemo = true` remains enabled. The site keeps its preview notice and `noindex, nofollow` until production content is ready.
 
 ## Main content files
 
@@ -130,28 +154,13 @@ src/lib/content/projects.ts
 → portfolio project information
 
 src/lib/content/demo-data.ts
-→ temporary experience items and career examples
+→ sample About experience and career data
 
 src/lib/content/site.ts
 → site name, navigation, and public links
 
 src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
 → temporary project media area
-
-src/lib/components/brand/BrandLockup.svelte
-src/lib/components/brand/BrandSymbol.svelte
-→ logo display
-```
-
-Internal section names should also stay plain and understandable. Current examples include:
-
-```text
-portfolio
-about
-whatWeDo
-howWeWork
-experience
-contact
 ```
 
 ## Content review rule
@@ -162,16 +171,33 @@ When real material is supplied:
 record it
 → identify what it belongs to
 → check facts and duplicates
-→ confirm whether it can be published
+→ confirm whether it can be public
 → note missing information
 → choose what goes on the website
 ```
 
 Do not guess missing clients, dates, results, permissions, or project details.
 
-Files that are not selected for the website should still remain recorded in the content inventory.
+Files that are not selected for the website should still remain recorded in `docs/knowledge/content-inventory.md`.
 
-## Current technical setup
+## Pages not needed now
+
+Do **not** add generic pages just to make the website look more complete.
+
+Current decisions:
+
+```text
+Services = not needed yet
+Blog = not needed
+Team = not needed as a separate page
+Clients = not needed as a separate page
+custom contact form = not needed until the real contact workflow requires it
+Privacy / Terms = add only when the site's real data collection, analytics, cookies, forms, or legal requirements make them necessary
+```
+
+`About` already carries the current company and "What we do" responsibility.
+
+## Technical setup
 
 ```text
 framework        = SvelteKit
@@ -184,21 +210,11 @@ separate backend = none for now
 database         = none for now
 ```
 
-## Media rules
-
-- use real project media when available;
-- use local/imported assets by default;
-- do not lazy-load the main first-screen image;
-- below-the-fold images may load lazily;
-- decide crops after seeing the real image;
-- use video posters and user-initiated playback by default;
-- avoid heavy 3D/WebGL effects unless the project truly needs them.
-
 ## Testing status
 
-Source-level review has been done, but final runtime testing is still pending.
+Source-level review is complete for the current stage, but final build/browser testing is still deferred.
 
-The following remain deferred until the project owner reopens them:
+Still deferred until the project owner reopens it:
 
 ```text
 bun install
@@ -215,12 +231,15 @@ production adapter selection
 page structure        = complete
 page names            = approved
 page design           = approved
-portfolio information = waiting for real sources
-project media         = waiting for real sources
-public page copy      = pending
+copy humanization     = complete for current draft
+sample data clarity   = complete
+real portfolio        = next major input
+real project media    = next major input
+final copy             = refine after real evidence
 contact/social links  = pending
 career openings       = pending if needed
 final brand assets    = pending
+SEO/social metadata   = finish after domain/media are known
 responsive QA         = pending
 accessibility QA      = pending
 performance QA        = pending
@@ -228,4 +247,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is now in the **content preparation and finalization** stage. The next major task is to add real portfolio information and real project media, then complete testing and deployment.
+The project is ready to move into **real portfolio and media intake**. No additional generic pages or broad redesign are needed before that step.
