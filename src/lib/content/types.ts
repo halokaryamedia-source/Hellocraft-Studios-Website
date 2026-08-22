@@ -10,12 +10,6 @@ export type IntroBlock = {
 	body?: string;
 };
 
-export type ProjectSection = {
-	id: string;
-	title: string;
-	body: string[];
-};
-
 export type ProjectEntry = {
 	slug: string;
 	title: string;
@@ -23,8 +17,11 @@ export type ProjectEntry = {
 	featured?: boolean;
 	year?: string;
 	client?: string;
-	contribution?: string[];
-	sections?: ProjectSection[];
+	projectContext?: string[];
+	ourRole?: string[];
+	playerExperience?: string[];
+	results?: string[];
+	credits?: string[];
 	links?: LinkItem[];
 };
 
