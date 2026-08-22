@@ -90,7 +90,7 @@ Public writing follows:
 docs/foundation/08-writing-style.md
 ```
 
-The project owner approved this as the default writing direction for Hellocraft's public website after reviewing communication patterns from established Minecraft creators and studios, including Noxcrew, Gamemode One, Blockworks, Everbloom Games, Shapescape, Spark Universe, and Blockception.
+The project owner approved this as the default writing direction for Hellocraft's public website after reviewing communication patterns from established Minecraft creators and studios.
 
 Hellocraft's voice is:
 
@@ -127,46 +127,35 @@ project / client context
 → useful links / credits
 ```
 
-Gamemode One and Noxcrew are useful references for concise game-studio voice; Blockworks is the main reference for project/case-study writing; Everbloom is useful for player/Careers language; Shapescape is useful when speaking to non-Minecraft-native clients. Reference wording must not be copied.
+Reference wording must not be copied.
 
-The writing guide is enforced through:
+## Content drafting — ACTIVE
 
-```text
-docs/foundation/02-product-requirements.md
-src/lib/content/pages.ts
-src/lib/content/projects.ts
-docs/knowledge/next-action.md
-```
+The project has moved from design and writing-style setup into **website content drafting**.
 
-## Copy review
-
-The public-facing draft copy has been reviewed, humanized, and aligned with the approved Minecraft studio writing guide.
-
-Current copy is suitable for preview and content fitting. It is **not final production copy** because real portfolio evidence, final company facts, and public contact information are still missing.
-
-Important copy decisions:
-
-- use direct language;
-- explain what Hellocraft does without agency jargon;
-- use normal labels such as `Portfolio`, `About`, `Careers`, `Contact`, `What we do`, and `How we work`;
-- keep sample/development wording out of normal public copy where possible;
-- keep preview/sample status explicit in the separate preview notice and sample data.
-
-Internal section naming also uses clear terms such as:
+Working draft:
 
 ```text
-portfolio
-about
-whatWeDo
-howWeWork
-experience
-contact
-section-label
+docs/knowledge/content-draft.md
 ```
+
+Current drafting status:
+
+```text
+Home company copy      = Draft v1 implemented
+Portfolio intro        = Draft v1 implemented
+Portfolio project copy = waiting for real project sources
+About company copy     = Draft v1 implemented
+Contact final copy     = waiting for real contact route/details
+Careers final copy     = waiting for real hiring state
+Final site-wide pass   = after real portfolio/media is integrated
+```
+
+Home and About may use only confirmed company-level information. Portfolio project descriptions, clients, dates, results, credits, and media must come from approved project sources.
 
 ## Current content
 
-Sample portfolio entries are clearly fictional and exist only for layout preview:
+Sample portfolio entries remain clearly fictional and exist only for layout preview:
 
 ```text
 Sample Adventure World
@@ -188,14 +177,16 @@ The website repository does not yet contain real project screenshots, renders, o
 Current status:
 
 ```text
-draft page copy      = reviewed / suitable for preview
-real portfolio       = waiting for sources
-real project media   = waiting for sources
-contact details      = missing
-social links         = missing
-career openings      = none confirmed
-final logo/vector    = pending
-final font           = pending
+Home draft copy       = implemented
+About draft copy      = implemented
+Portfolio intro       = implemented
+real portfolio        = waiting for sources
+real project media    = waiting for sources
+contact details       = missing
+social links          = missing
+career openings       = none confirmed
+final logo/vector     = pending
+final font            = pending
 ```
 
 `contentIsDemo = true` remains enabled. The site keeps its preview notice and `noindex, nofollow` until production content is ready.
@@ -289,13 +280,15 @@ page structure        = complete
 page names            = approved
 page design           = approved
 writing style guide   = APPROVED
-copy humanization     = complete for current draft
-sample data clarity   = complete
+content drafting      = ACTIVE
+Home draft            = implemented
+About draft           = implemented
+Portfolio intro       = implemented
 real portfolio        = next major input
 real project media    = next major input
-final copy             = refine after real evidence
-contact/social links  = pending
-career openings       = pending if needed
+Contact final copy    = pending real contact data
+Careers final copy    = pending real hiring state
+final copy pass       = after real evidence
 final brand assets    = pending
 SEO/social metadata   = finish after domain/media are known
 responsive QA         = pending
@@ -305,4 +298,4 @@ runtime/build testing = deferred
 hosting               = deferred
 ```
 
-The project is ready to move into **real portfolio and media intake**. No additional generic pages, writing-style exploration, or broad redesign are needed before that step.
+The project is now in the **website content drafting → real portfolio integration** stage. Do not return to broad design or writing-style exploration unless real content reveals a specific problem.
