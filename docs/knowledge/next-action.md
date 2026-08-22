@@ -16,8 +16,8 @@ Portfolio Hero                     = APPROVED / implemented
 Portfolio listing structure        = APPROVED / implemented
 Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
+About Hero                         = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
-About draft                        = implemented / next review
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
 ```
@@ -102,7 +102,7 @@ View Portfolio
 
 Do **not** maintain `What We Made` as a separate permanent section. What Hellocraft made belongs inside `Our Role`.
 
-The source model now uses explicit fields:
+The source model uses explicit fields:
 
 ```text
 projectContext
@@ -114,6 +114,22 @@ links
 ```
 
 Final Project Detail copy still waits for real approved project information and media.
+
+## About — current review
+
+Approved Hero:
+
+```text
+About
+
+We're a game studio focused on Minecraft.
+
+We make games and adventures, and work on projects for events and exhibitions.
+```
+
+Do not rewrite this without a concrete reason from new company positioning or verified evidence.
+
+The next section to review is **About — What We Do**. It must use the same canonical Work Areas already approved for Home.
 
 ## Writing style
 
@@ -167,4 +183,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Start the About page section-by-section copy review, beginning with the About Hero. Preserve all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
+**Review and approve the About `What We Do` section copy. Preserve the approved About Hero and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
