@@ -57,7 +57,7 @@
 			<div class="shell content-grid">
 				<div class="section-heading">
 					<p class="eyebrow">Our role</p>
-					<h2 id="project-role-title">What Hellocraft worked on.</h2>
+					<h2 id="project-role-title">Hellocraft's role in the project.</h2>
 				</div>
 
 				<ul class="role-list">
@@ -75,7 +75,6 @@
 				<section class="detail-section" aria-labelledby={`section-${section.id}`}>
 					<div class="shell content-grid">
 						<div class="section-heading">
-							<p class="eyebrow">Project details</p>
 							<h2 id={`section-${section.id}`}>{section.title}</h2>
 						</div>
 
@@ -94,8 +93,7 @@
 		<section class="project-links" aria-labelledby="project-links-title">
 			<div class="shell content-grid">
 				<div class="section-heading">
-					<p class="eyebrow">Links</p>
-					<h2 id="project-links-title">Project links</h2>
+					<h2 id="project-links-title">Links</h2>
 				</div>
 
 				<ul>
@@ -111,7 +109,7 @@
 
 	<section class="portfolio-link" aria-label="Return to portfolio">
 		<div class="shell portfolio-link__inner">
-			<p>See more Hellocraft projects.</p>
+			<p>See more projects from Hellocraft Studios.</p>
 			<a class="text-link" href="/portfolio">View portfolio</a>
 		</div>
 	</section>
@@ -272,10 +270,6 @@
 		padding-block: clamp(5.5rem, 9vw, 8rem);
 		background: var(--ink);
 		color: var(--surface);
-	}
-
-	.project-links .eyebrow {
-		color: rgb(255 253 248 / 55%);
 	}
 
 	.project-links ul {
