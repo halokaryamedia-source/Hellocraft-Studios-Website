@@ -7,18 +7,18 @@ The Hellocraft Studios Website on branch `Local` is in the **website content dra
 Completed:
 
 ```text
-page structure          = complete
-public page names       = approved
-page design             = approved
-writing style guide     = APPROVED
-Home Hero               = APPROVED / implemented
-Home Featured Projects heading = APPROVED / implemented
-Home Work Areas         = APPROVED / implemented
-About draft             = implemented
-Portfolio intro         = implemented
-Work Areas              = APPROVED / implemented
-sample project data     = clearly fictional
-sample career data      = separated from real openings
+page structure                     = complete
+public page names                  = approved
+page design                        = approved
+writing style guide                = APPROVED
+Home Hero                          = APPROVED / implemented
+Home Featured Projects             = APPROVED / implemented
+Home Work Areas                    = APPROVED / implemented
+About draft                        = implemented
+Portfolio intro                    = implemented
+Work Areas                         = APPROVED / implemented
+sample project data                = clearly fictional
+sample career data                 = separated from real openings
 ```
 
 Main navigation:
@@ -59,9 +59,8 @@ Current status:
 
 ```text
 Home Hero                       = APPROVED
-Home Featured Projects heading = APPROVED
-Home Featured Projects support = current review section
-Home What We Do                 = draft / Work Areas implemented
+Home Featured Projects          = APPROVED
+Home What We Do                 = current review section
 Home About preview              = draft
 Home Contact preview            = draft
 Portfolio intro                 = Draft v1
@@ -84,15 +83,17 @@ We work on games and adventures, as well as Minecraft projects for events and ex
 View portfolio
 ```
 
-Do not rewrite this without a concrete reason from new company positioning or real portfolio evidence.
-
-## Approved Home Featured Projects heading
+## Approved Home Featured Projects
 
 ```text
 Featured Projects
+
+Minecraft projects we've worked on.
+
+View portfolio
 ```
 
-Do not rename it to `Our Work`, `Our Creations`, or another alternative without a concrete reason. The supporting sentence under this heading is still under review and is not approved yet.
+Do not rewrite either approved Home section without a concrete reason from new positioning or verified portfolio evidence.
 
 ## Writing style
 
@@ -136,25 +137,6 @@ About
 
 Contact
 → start a project conversation
-```
-
-## About structure
-
-```text
-Hero
-→ company introduction
-
-What We Do
-→ the same four canonical Work Areas
-
-How We Work
-→ project approach
-
-Experience
-→ verified public evidence only
-
-Contact
-→ project conversation
 ```
 
 ## Portfolio and Project Detail
@@ -211,4 +193,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the supporting sentence under the Home `Featured Projects` heading. Do not revisit the approved Home Hero or `Featured Projects` heading unless a concrete new fact requires it.**
+**Review and approve the Home `What We Do` section copy. Preserve the approved Hero and Featured Projects copy.**
