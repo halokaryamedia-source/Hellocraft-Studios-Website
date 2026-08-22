@@ -136,7 +136,7 @@ export const contactCopy = {
 } as const;
 
 export const footerCopy = {
-	statement: 'Hellocraft Studios — a game studio focused on Minecraft.'
+	statement: 'Games and experiences in Minecraft.'
 } as const;
 
 export const aboutExperienceItems = demoAboutExperienceItems;
