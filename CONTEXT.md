@@ -230,15 +230,21 @@ We're a game studio focused on Minecraft.
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-Do not rewrite this without a concrete reason from new company positioning or verified evidence.
+### What We Do — APPROVED / IMPLEMENTED
+
+```text
+What we do
+
+We handle both the creative and technical sides of Minecraft projects.
+```
+
+The About section uses the same wording and the same four canonical Work Areas as Home. Do not create a second definition, repeat the Work Area names in supporting copy, or introduce another taxonomy.
 
 ### Current review section
 
 ```text
-About — What We Do
+About — How We Work
 ```
-
-This section must use the same four canonical Work Areas already approved for Home. Review only the section-level wording; do not create another capability/service taxonomy.
 
 ## Current content status
 
@@ -251,8 +257,8 @@ Portfolio project content    = waiting for real project sources
 Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
 About Hero                   = APPROVED / implemented
-About What We Do             = current review
-About How We Work            = draft
+About What We Do             = APPROVED / implemented
+About How We Work            = current review
 About Experience             = waiting for verified public evidence
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
@@ -316,4 +322,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **About — What We Do**. Preserve the approved About Hero and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
+Continue with **About — How We Work**. Preserve the approved About Hero, About What We Do, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
