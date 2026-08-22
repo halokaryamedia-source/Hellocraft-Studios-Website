@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { contentIsDemo } from '$lib/content/demo';
-	import { aboutCopy, aboutExperienceItems, capabilityAreas } from '$lib/content/pages';
+	import { aboutCopy, aboutExperienceItems, workAreas } from '$lib/content/pages';
 </script>
 
 <svelte:head>
@@ -30,11 +30,11 @@
 				<p>{aboutCopy.whatWeDo.body}</p>
 			</div>
 
-			<div class="capability-list">
-				{#each capabilityAreas as capability (capability.title)}
-					<article class="capability-row">
-						<h3>{capability.title}</h3>
-						<p>{capability.body}</p>
+			<div class="work-area-list">
+				{#each workAreas as workArea (workArea.title)}
+					<article class="work-area-row">
+						<h3>{workArea.title}</h3>
+						<p>{workArea.body}</p>
 					</article>
 				{/each}
 			</div>
@@ -124,7 +124,7 @@
 	.section-heading > p:last-child,
 	.how-we-work__body p,
 	.contact__support p,
-	.capability-row p {
+	.work-area-row p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
@@ -157,12 +157,12 @@
 		line-height: 0.98;
 	}
 
-	.capability-list,
+	.work-area-list,
 	.experience-list {
 		border-top: 1px solid var(--border);
 	}
 
-	.capability-row {
+	.work-area-row {
 		display: grid;
 		grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
 		gap: clamp(1.5rem, 4vw, 4rem);
@@ -170,7 +170,7 @@
 		border-bottom: 1px solid var(--border);
 	}
 
-	.capability-row h3 {
+	.work-area-row h3 {
 		margin: 0;
 		font-size: clamp(1.35rem, 2vw, 1.9rem);
 		font-weight: 660;
@@ -275,7 +275,7 @@
 			font-size: clamp(2.55rem, 11vw, 3.6rem);
 		}
 
-		.capability-row {
+		.work-area-row {
 			grid-template-columns: 1fr;
 			gap: 0.75rem;
 		}
