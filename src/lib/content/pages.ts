@@ -83,9 +83,7 @@ export const aboutCopy = {
 	},
 	whatWeDo: {
 		label: 'What we do',
-		title: 'Four areas of work.',
-		body:
-			'Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.'
+		title: 'We handle both the creative and technical sides of Minecraft projects.'
 	},
 	howWeWork: {
 		label: 'How we work',
