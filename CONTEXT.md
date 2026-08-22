@@ -240,11 +240,25 @@ We handle both the creative and technical sides of Minecraft projects.
 
 The About section uses the same wording and the same four canonical Work Areas as Home. Do not create a second definition, repeat the Work Area names in supporting copy, or introduce another taxonomy.
 
+### How We Work — APPROVED / IMPLEMENTED
+
+```text
+How we work
+
+We work around what each project needs.
+
+We keep the creative and technical work connected throughout the project.
+```
+
+Keep this language simple and do not replace it with agency-style process language unless a real operational need requires more detail.
+
 ### Current review section
 
 ```text
-About — How We Work
+About — Experience
 ```
+
+The Experience section is evidence-only. It must remain hidden/empty until verified public evidence exists. Valid evidence may include approved clients, partners, project history, verified results, or other concrete company experience. Do not invent client names, project counts, metrics, awards, or credibility statements to fill it.
 
 ## Current content status
 
@@ -258,8 +272,9 @@ Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
 About Hero                   = APPROVED / implemented
 About What We Do             = APPROVED / implemented
-About How We Work            = current review
-About Experience             = waiting for verified public evidence
+About How We Work            = APPROVED / implemented
+About Experience             = next review / waiting for verified public evidence
+About Contact close          = draft
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
@@ -322,4 +337,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **About — How We Work**. Preserve the approved About Hero, About What We Do, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
+Continue with **About — Experience**. Keep it evidence-only and hidden/empty until verified public material exists. Preserve all approved About, Home, Portfolio, Project Detail, and Work Areas decisions.
