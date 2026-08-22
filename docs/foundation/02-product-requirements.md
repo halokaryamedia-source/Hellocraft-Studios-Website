@@ -80,6 +80,20 @@ Do not invent:
 
 Do not add filters or categories until the real project list shows that they improve browsing.
 
+For Project Detail writing, use the pattern in `docs/foundation/08-writing-style.md`. When the information exists, prefer:
+
+```text
+project / client context
+→ what was needed
+→ what we made
+→ what players experience
+→ Hellocraft's role
+→ verified results
+→ useful links / credits
+```
+
+The structure may be shorter when a project has less material. Do not manufacture sections merely to fill a template.
+
 ## About
 
 About should explain Hellocraft in plain language.
@@ -122,14 +136,36 @@ A custom form, CRM, booking system, or database should be added only if the real
 
 ## Public copy
 
+All public website copy must follow:
+
+```text
+docs/foundation/08-writing-style.md
+```
+
+That guide is the writing authority for Home, Portfolio, Project Detail, About, Careers, Contact, CTA labels, and normal public-facing metadata copy.
+
+The preferred voice is:
+
+```text
+confident
+clear
+creator-led
+Minecraft-native
+friendly
+practical
+professional
+```
+
 Use direct, human language.
 
 Prefer:
 
-- clear nouns and verbs;
+- `we` and `our` when the team is speaking;
+- clear nouns and active verbs;
 - short explanations;
-- concrete project information;
-- normal website terms such as Portfolio, About, Careers, Contact, What we do, and How we work.
+- concrete Minecraft and project information;
+- normal website terms such as Portfolio, About, Careers, Contact, What we do, and How we work;
+- project evidence over reputation adjectives.
 
 Avoid:
 
@@ -137,9 +173,12 @@ Avoid:
 - exaggerated claims;
 - unnecessary technical terminology;
 - invented slogans that obscure what Hellocraft does;
-- internal development language in public-facing copy.
+- internal development language in public-facing copy;
+- generic phrases that could appear unchanged on unrelated agency websites.
 
 The copy should make sense to both Minecraft-native visitors and clients who do not know Minecraft production terminology.
+
+Established Minecraft studio websites may be used as communication references, but their wording, slogans, claims, and project descriptions must not be copied.
 
 ## Content accuracy
 
@@ -268,7 +307,7 @@ Before the site is public, confirm at minimum:
 
 - sample portfolio data has been replaced;
 - real approved project media is integrated;
-- public copy has been reviewed;
+- public copy has been reviewed against `08-writing-style.md`;
 - contact/social links are real;
 - career content reflects the current hiring state;
 - final logo/brand assets are approved;
