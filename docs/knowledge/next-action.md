@@ -17,6 +17,7 @@ Portfolio listing structure        = APPROVED / implemented
 Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
 About Hero                         = APPROVED / implemented
+About What We Do                   = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -127,9 +128,17 @@ We're a game studio focused on Minecraft.
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-Do not rewrite this without a concrete reason from new company positioning or verified evidence.
+Approved What We Do:
 
-The next section to review is **About — What We Do**. It must use the same canonical Work Areas already approved for Home.
+```text
+What we do
+
+We handle both the creative and technical sides of Minecraft projects.
+```
+
+This uses the same section wording and the same four canonical Work Areas as Home. Do not create a second definition or repeat the Work Area names in supporting copy.
+
+The next section to review is **About — How We Work**.
 
 ## Writing style
 
@@ -183,4 +192,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the About `What We Do` section copy. Preserve the approved About Hero and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
+**Review and approve the About `How We Work` section copy. Preserve the approved About Hero, About What We Do, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
