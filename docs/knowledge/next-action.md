@@ -15,8 +15,9 @@ Home                               = APPROVED / implemented
 Portfolio Hero                     = APPROVED / implemented
 Portfolio listing structure        = APPROVED / implemented
 Portfolio short-description rule   = APPROVED
+Project Detail structure           = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
-About draft                        = implemented
+About draft                        = implemented / next review
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
 ```
@@ -34,7 +35,9 @@ Game Development
 
 Work Areas are not job titles. Careers and project credits use real approved titles from real data.
 
-## Approved Portfolio Hero
+## Portfolio — approved structure
+
+Hero:
 
 ```text
 Portfolio
@@ -44,9 +47,7 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-## Approved Portfolio listing structure
-
-Required for each project listing:
+Project listing:
 
 ```text
 Project media
@@ -62,21 +63,7 @@ Client / partner
 Year
 ```
 
-Do not add by default:
-
-```text
-Work Areas
-role / contribution labels
-tags
-categories
-technical details
-long descriptions
-extra metadata
-```
-
-## Approved short-description rule
-
-Write one concise sentence that explains:
+Short descriptions explain:
 
 ```text
 what the project is
@@ -86,9 +73,47 @@ what players / visitors do or experience
 
 Lead with the project itself, not Hellocraft's contribution or a marketing claim.
 
-Avoid generic wording such as `innovative`, `immersive`, `custom solution`, or opening with `Hellocraft developed...`.
+## Project Detail — APPROVED / implemented
 
-Final project descriptions must come from real approved project information.
+Use this order when real evidence supports the section:
+
+```text
+Project
+→ project name + short description + optional client/year
+→ main media
+
+The Project
+→ what the project is and useful context
+
+Our Role
+→ what Hellocraft actually designed, built, developed, or handled
+
+Player Experience
+→ optional
+
+Results
+→ optional; verified only
+
+Credits / Links
+→ optional
+
+View Portfolio
+```
+
+Do **not** maintain `What We Made` as a separate permanent section. What Hellocraft made belongs inside `Our Role`.
+
+The source model now uses explicit fields:
+
+```text
+projectContext
+ourRole
+playerExperience
+results
+credits
+links
+```
+
+Final Project Detail copy still waits for real approved project information and media.
 
 ## Writing style
 
@@ -100,7 +125,7 @@ docs/foundation/08-writing-style.md
 
 Hellocraft should sound confident, clear, creator-led, Minecraft-native, friendly, practical, professional, and human.
 
-Professional does not mean corporate or artificial. Avoid polished marketing phrases that sound generated rather than spoken by a real studio team.
+Avoid generic agency language and polished marketing phrases that sound generated rather than spoken by a real studio team.
 
 ## Real portfolio input still needed
 
@@ -116,8 +141,6 @@ public link if available
 screenshots/renders/video
 credits or publication restrictions
 ```
-
-Final Project Detail copy is written from real project evidence.
 
 ## Demo mode
 
@@ -144,4 +167,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Project Detail page structure. This review can define the reusable structure now, but all factual copy still waits for real approved project information. Preserve all approved Home, Portfolio, and Work Areas decisions.**
+**Start the About page section-by-section copy review, beginning with the About Hero. Preserve all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
