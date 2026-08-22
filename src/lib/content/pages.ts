@@ -78,9 +78,8 @@ export const portfolioCopy = {
 export const aboutCopy = {
 	hero: {
 		label: 'About',
-		title: 'We build Minecraft games, worlds, and experiences.',
-		body:
-			'Hellocraft Studios works across Minecraft game content, custom worlds, and projects for events, exhibitions, and other public experiences.'
+		title: "We're a game studio focused on Minecraft.",
+		body: 'We make games and adventures, and work on projects for events and exhibitions.'
 	},
 	whatWeDo: {
 		label: 'What we do',
