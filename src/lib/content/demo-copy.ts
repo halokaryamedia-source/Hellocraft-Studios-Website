@@ -1,4 +1,3 @@
-// Temporary development copy used to build page rhythm and visual hierarchy.
-// This file contains no authoritative Hellocraft marketing claims.
+// Shown only while sample content is active.
 
-export const demoCopyNote = 'Temporary demo content — final Hellocraft copy and project data pending.';
+export const demoCopyNote = 'Preview content — sample projects are shown until the final portfolio and contact details are added.';
