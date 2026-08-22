@@ -18,6 +18,7 @@ Portfolio short-description rule   = APPROVED
 Project Detail structure           = APPROVED / implemented
 About Hero                         = APPROVED / implemented
 About What We Do                   = APPROVED / implemented
+About How We Work                  = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -136,9 +137,19 @@ What we do
 We handle both the creative and technical sides of Minecraft projects.
 ```
 
-This uses the same section wording and the same four canonical Work Areas as Home. Do not create a second definition or repeat the Work Area names in supporting copy.
+Approved How We Work:
 
-The next section to review is **About — How We Work**.
+```text
+How we work
+
+We work around what each project needs.
+
+We keep the creative and technical work connected throughout the project.
+```
+
+The next section is **About — Experience**.
+
+Experience must remain hidden/empty until there is verified public evidence. Valid evidence can include approved client/partner names, project history, verified results, or other concrete company experience. Do not invent credibility copy or metrics.
 
 ## Writing style
 
@@ -192,4 +203,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the About `How We Work` section copy. Preserve the approved About Hero, About What We Do, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
+**Review the About `Experience` section rule. Keep it evidence-only and do not publish placeholders, invented credibility claims, client names, project counts, awards, or metrics. Preserve all approved About, Home, Portfolio, Project Detail, and Work Areas decisions.**
