@@ -2,15 +2,19 @@
 
 ## Current state
 
-The Hellocraft Studios Website on branch `Local` now uses the standard public page names:
+The Hellocraft Studios Website on branch `Local` is ready for real portfolio and media content.
+
+Completed for the current stage:
 
 ```text
-Home
-Portfolio
-Project Detail
-About
-Careers
-Contact
+page structure        = complete
+public page names     = approved
+page design           = approved
+draft website copy    = reviewed and humanized
+sample portfolio data = clearly labelled as fictional
+sample career data    = kept separate from real openings
+internal naming       = simplified
+current project docs  = updated
 ```
 
 Main navigation:
@@ -30,57 +34,59 @@ Old URLs remain only as redirects:
 /studio      → /about
 ```
 
-## Completed
+## What was fixed in the content review
+
+The draft copy no longer reads like internal documentation or placeholder instructions.
+
+Examples of the current public tone:
 
 ```text
-page structure        = complete
-page names            = approved
-page design           = approved
-old page duplicates   = removed
-standard internal names = applied
-content inventory     = created
+We build Minecraft experiences.
+A Minecraft-focused game studio.
+From custom worlds to playable systems.
+Have a Minecraft project in mind?
+Careers at Hellocraft Studios.
+Contact Hellocraft Studios.
 ```
 
-The source now uses straightforward internal names such as:
+The Portfolio sample data is now explicitly fictional:
 
 ```text
-portfolio
-about
-whatWeDo
-howWeWork
-experience
-contact
+Sample Adventure World
+Sample Multiplayer Game
+Sample Environment Build
 ```
 
-Do not reintroduce `Work`, `Studio`, `visual propagation`, `route baseline`, or similar terms as current project language unless they are specifically referring to an old URL or historical note.
+The Careers sample roles are not shown as real vacancies while demo mode is active.
 
-## Current content status
+The 404 page, footer, current URLs, and page labels have also been aligned with the current naming.
 
-Still missing or temporary:
+## What does not need to be added now
+
+Do not add these just to make the site look more complete:
 
 ```text
-real portfolio project information
-real project screenshots / renders / videos
-final Home / Portfolio / About / Careers / Contact copy
-public contact details
-public social links
-real current job openings, if any
-final logo/vector files
-final font choice
+Services page
+Blog
+Team page
+Clients page
+custom contact form
+CMS
+login/dashboard
 ```
 
-The current website repository only contains development logo PNG files. Project media is still placeholder content.
+Privacy/Terms pages should be added only when actual forms, analytics, cookies, data collection, or other legal requirements make them necessary.
 
-## Next task
+## Immediate next task
 
-The next major task is to review real Hellocraft material before putting it on the website.
+The next major task is to receive and review **real Hellocraft portfolio material**.
 
 Priority order:
 
 ```text
-1. portfolio project information
+1. real project information
 2. project screenshots / renders / videos
-3. About/company information
+3. confirmed About/company information
 4. contact and social details
 5. career openings, if any
 6. final logo/colors/font
@@ -99,24 +105,28 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
-Missing information should stay marked as unknown instead of being guessed.
+Missing information should stay unknown instead of being guessed.
 
-## How incoming content should be handled
+## How incoming material should be handled
 
 ```text
 receive files/information
 → record every item
 → group items by project or subject
-→ remove duplicates from the working set
+→ identify duplicates
 → check facts
 → confirm whether each item can be public
 → record missing information
 → select what appears on the website
 ```
 
-Material that is not selected for the public website should still remain recorded.
+Material that is not selected for the public website should still remain recorded in:
 
-## Files used for content updates
+```text
+docs/knowledge/content-inventory.md
+```
+
+## Content update files
 
 ```text
 src/lib/content/pages.ts
@@ -126,14 +136,20 @@ src/lib/content/projects.ts
 → portfolio projects
 
 src/lib/content/demo-data.ts
-→ temporary experience/career data
+→ sample experience/career data
 
 src/lib/content/site.ts
 → navigation, contact, and public links
 
 src/lib/components/portfolio/ProjectMediaPlaceholder.svelte
-→ temporary media area that will be replaced by real project media
+→ temporary media area to replace with real project media
 ```
+
+## Draft copy status
+
+The current draft copy is good enough for preview and layout review.
+
+Do not treat it as final marketing copy yet. After the real portfolio is reviewed, refine the wording only where the evidence shows that Hellocraft's actual strengths, project types, or client contexts should be described differently.
 
 ## Demo mode
 
@@ -143,23 +159,23 @@ Keep:
 contentIsDemo = true
 ```
 
-until the public website no longer contains temporary development content.
+until production content is ready.
 
 Before turning demo mode off, confirm:
 
 ```text
-[ ] demo portfolio entries removed or replaced
+[ ] sample portfolio entries removed or replaced
 [ ] real project media added
 [ ] final page copy approved
 [ ] real contact details added
-[ ] demo experience/career items removed or replaced
+[ ] sample experience/career data removed or replaced as needed
 [ ] final brand assets approved
 [ ] final metadata ready
 ```
 
-## Testing and deployment
+## Later finalization
 
-Final testing remains pending. When the project owner reopens technical validation, continue with:
+After real content/media is integrated and technical validation is re-authorised:
 
 ```text
 responsive review
@@ -167,7 +183,7 @@ responsive review
 → media/loading/performance review
 → format/lint/Svelte checks/build
 → browser testing
-→ final metadata cleanup
+→ final SEO/social metadata
 → turn off demo mode when ready
 → hosting setup
 → deployed website review
@@ -186,4 +202,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Collect and review real Hellocraft portfolio material. Do not redesign the approved pages unless real content reveals a specific layout problem.**
+**Collect and review real Hellocraft portfolio information and project media. The page structure, naming, design, and current draft copy do not need another broad redesign before that step.**
