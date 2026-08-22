@@ -195,13 +195,38 @@ Those details belong on Project Detail when the real project information support
 
 The current Portfolio route already follows this structure. Real project names, descriptions, client names, dates, and media must come from approved portfolio sources.
 
-### Short project description — NEXT COPY REVIEW
+### Short project description — APPROVED
 
-The next Portfolio copy decision is the rule for the one-sentence project description shown under each project name.
+Each listing uses one concise sentence based on real approved project information.
 
-It should explain the project clearly without turning the listing into a case study. Final wording must come from real project information.
+Write it as:
 
-### Project Detail writing pattern
+```text
+what the project is
++
+what players / visitors do or experience
+```
+
+Lead with the project itself, not Hellocraft's contribution.
+
+Good pattern:
+
+```text
+A Minecraft adventure built around exploration, puzzles, and story.
+```
+
+Avoid opening with marketing claims or agency language such as:
+
+```text
+innovative
+immersive
+custom solution
+Hellocraft developed...
+```
+
+The short description should explain the project before explaining Hellocraft's role. Hellocraft's contribution belongs on Project Detail.
+
+### Project Detail writing pattern — NEXT REVIEW
 
 For each real project, use only the sections supported by available evidence:
 
@@ -331,8 +356,8 @@ Do not finalize the Contact page until the real public business contact route an
 
 ```text
 1. Home — APPROVED
-2. Portfolio — Hero + listing structure APPROVED; short-description rule next
-3. Project Detail — after real project information
+2. Portfolio — Hero + listing structure + short-description rule APPROVED
+3. Project Detail — structure review next; final copy waits for real project information
 4. About
 5. Contact
 6. Careers
