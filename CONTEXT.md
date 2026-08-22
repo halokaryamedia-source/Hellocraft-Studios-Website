@@ -290,15 +290,25 @@ Tell us what you're working on and how we can help.
 
 Do not rewrite the Contact Hero without a concrete reason from a real change in company positioning or the public contact workflow.
 
+### Contact Details — APPROVED RULE / WAITING FOR REAL DATA
+
+Keep the contact section simple and evidence-only.
+
+Only real approved public contact channels may be displayed. One real business email is enough if that is Hellocraft's actual public workflow.
+
+Social links are optional and should appear only when they are real, public, approved, and useful.
+
+Do not add phone numbers, Discord accounts, booking links, office addresses, contact forms, or extra social channels merely to make the page look fuller.
+
+The actual email and any public links still wait for confirmed contact data.
+
 ### Current review section
 
 ```text
-Contact methods
+Contact — Inquiry guidance
 ```
 
-Only real approved public contact channels may be displayed. Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
-
-If Hellocraft ultimately uses only one public email address, keep the page simple rather than adding extra contact methods just to fill space.
+Keep this guidance short and useful. It should help someone send a good first message without turning the page into a long intake form.
 
 ## Current content status
 
@@ -313,8 +323,8 @@ Project Detail final copy    = waiting for real project sources
 About                        = APPROVED / implemented
 About Experience data        = waiting for verified public evidence
 Contact Hero                 = APPROVED / implemented
-Contact methods              = current review / waiting for confirmed public data
-Contact inquiry guidance     = draft
+Contact Details rule         = APPROVED / evidence-only / waiting for real data
+Contact inquiry guidance     = current review
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
 ```
@@ -376,4 +386,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **Contact methods**. Preserve the approved Contact Hero and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels remain pending confirmed public data.
+Continue with **Contact — Inquiry guidance**. Preserve the approved Contact Hero, Contact Details rule, and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels remain pending confirmed public data.
