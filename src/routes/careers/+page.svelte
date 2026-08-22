@@ -22,19 +22,6 @@
 		</div>
 	</section>
 
-	<section class="general" aria-labelledby="careers-general-title">
-		<div class="shell section-layout">
-			<div class="section-heading">
-				<p class="section-label">{careersCopy.general.label}</p>
-				<h2 id="careers-general-title">{careersCopy.general.title}</h2>
-			</div>
-
-			<div class="section-copy section-copy--lead">
-				<p>{careersCopy.general.body}</p>
-			</div>
-		</div>
-	</section>
-
 	<section class="openings" aria-labelledby="career-openings-title">
 		<div class="shell openings__inner">
 			<div class="openings__heading">
@@ -97,7 +84,6 @@
 	}
 
 	.hero__heading,
-	.section-heading,
 	.openings__heading,
 	.application__heading {
 		display: grid;
@@ -118,43 +104,15 @@
 	}
 
 	.hero__support p,
-	.section-copy p,
 	.application__copy p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.hero__support p,
-	.section-copy--lead p {
+	.hero__support p {
 		font-size: clamp(1.05rem, 1.4vw, 1.22rem);
 		line-height: 1.58;
-	}
-
-	.general {
-		padding-block: clamp(6rem, 10vw, 9.5rem);
-		background: var(--surface-secondary);
-	}
-
-	.section-layout {
-		display: grid;
-		grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
-		gap: clamp(4rem, 10vw, 10rem);
-		align-items: start;
-	}
-
-	.section-heading h2,
-	.openings__heading h2,
-	.application__heading h2 {
-		max-width: 15ch;
-		margin: 0;
-		font-size: clamp(2.75rem, 4.7vw, 4.6rem);
-		font-weight: 680;
-		line-height: 0.98;
-	}
-
-	.section-copy {
-		padding-top: 0.3rem;
 	}
 
 	.openings {
@@ -167,6 +125,15 @@
 		grid-template-columns: minmax(12rem, 0.48fr) minmax(0, 1.52fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: start;
+	}
+
+	.openings__heading h2,
+	.application__heading h2 {
+		max-width: 15ch;
+		margin: 0;
+		font-size: clamp(2.75rem, 4.7vw, 4.6rem);
+		font-weight: 680;
+		line-height: 0.98;
 	}
 
 	.openings__heading h2 {
@@ -256,19 +223,16 @@
 
 	@media (max-width: 64rem) {
 		.hero__inner,
-		.section-layout,
 		.openings__inner,
 		.application__inner {
 			grid-template-columns: 1fr;
 		}
 
-		.hero__inner,
-		.section-layout {
+		.hero__inner {
 			gap: 2.75rem;
 		}
 
 		.hero__support,
-		.section-copy,
 		.application__copy {
 			max-width: 38rem;
 		}
@@ -284,7 +248,6 @@
 			line-height: 0.95;
 		}
 
-		.section-heading h2,
 		.application__heading h2 {
 			font-size: clamp(2.6rem, 11vw, 3.7rem);
 		}
