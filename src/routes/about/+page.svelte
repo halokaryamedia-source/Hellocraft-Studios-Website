@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { contentIsDemo } from '$lib/content/demo';
-	import { aboutCopy, aboutExperienceItems } from '$lib/content/pages';
+	import { aboutCopy, aboutExperienceItems, capabilityAreas } from '$lib/content/pages';
 </script>
 
 <svelte:head>
@@ -27,10 +27,16 @@
 			<div class="section-heading">
 				<p class="section-label">{aboutCopy.whatWeDo.label}</p>
 				<h2 id="about-what-we-do-title">{aboutCopy.whatWeDo.title}</h2>
+				<p>{aboutCopy.whatWeDo.body}</p>
 			</div>
 
-			<div class="section-copy section-copy--lead">
-				<p>{aboutCopy.whatWeDo.body}</p>
+			<div class="capability-list">
+				{#each capabilityAreas as capability (capability.title)}
+					<article class="capability-row">
+						<h3>{capability.title}</h3>
+						<p>{capability.body}</p>
+					</article>
+				{/each}
 			</div>
 		</div>
 	</section>
@@ -115,16 +121,16 @@
 	}
 
 	.hero__support p,
-	.section-copy p,
+	.section-heading > p:last-child,
 	.how-we-work__body p,
-	.contact__support p {
+	.contact__support p,
+	.capability-row p {
 		max-width: var(--measure);
 		margin: 0;
 		color: var(--text-muted);
 	}
 
-	.hero__support p,
-	.section-copy--lead p {
+	.hero__support p {
 		font-size: clamp(1.05rem, 1.4vw, 1.22rem);
 		line-height: 1.58;
 	}
@@ -136,7 +142,7 @@
 
 	.section-layout {
 		display: grid;
-		grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+		grid-template-columns: minmax(0, 0.82fr) minmax(20rem, 1.18fr);
 		gap: clamp(4rem, 10vw, 10rem);
 		align-items: start;
 	}
@@ -151,8 +157,24 @@
 		line-height: 0.98;
 	}
 
-	.section-copy {
-		padding-top: 0.3rem;
+	.capability-list,
+	.experience-list {
+		border-top: 1px solid var(--border);
+	}
+
+	.capability-row {
+		display: grid;
+		grid-template-columns: minmax(12rem, 0.7fr) minmax(0, 1.3fr);
+		gap: clamp(1.5rem, 4vw, 4rem);
+		padding-block: clamp(1.6rem, 2.7vw, 2.4rem);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.capability-row h3 {
+		margin: 0;
+		font-size: clamp(1.35rem, 2vw, 1.9rem);
+		font-weight: 660;
+		line-height: 1.05;
 	}
 
 	.how-we-work {
@@ -185,7 +207,6 @@
 	.experience-list {
 		margin: 0;
 		padding: 0;
-		border-top: 1px solid var(--border);
 		list-style: none;
 	}
 
@@ -236,7 +257,7 @@
 		}
 
 		.hero__support,
-		.section-copy,
+		.section-heading,
 		.how-we-work__body,
 		.contact__support {
 			max-width: 38rem;
@@ -252,6 +273,11 @@
 		.how-we-work__intro h2,
 		.contact__heading h2 {
 			font-size: clamp(2.55rem, 11vw, 3.6rem);
+		}
+
+		.capability-row {
+			grid-template-columns: 1fr;
+			gap: 0.75rem;
 		}
 
 		.contact__support {
