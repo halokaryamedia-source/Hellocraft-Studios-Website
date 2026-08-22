@@ -17,9 +17,9 @@ FINAL REVIEW LATER
 → wording is usable now but must be checked again after real project/media information is integrated
 ```
 
-## Approved public capability structure
+## Canonical Work Areas
 
-Hellocraft's public production capabilities are organised into four clear areas:
+Hellocraft uses **one fixed Work Areas list** everywhere in the website source and project documentation:
 
 ```text
 Game & Experience Design
@@ -28,7 +28,9 @@ Game Development
 3D Art
 ```
 
-These are client-facing capability areas, not four fixed service packages. A project may use one, several, or all of them.
+Do not rename these as capabilities, services, production areas, departments, disciplines, or another parallel taxonomy.
+
+A project may involve one, several, or all Work Areas.
 
 ### Game & Experience Design
 
@@ -36,7 +38,7 @@ These are client-facing capability areas, not four fixed service packages. A pro
 We shape the concept, gameplay, objectives, and player experience around what the project needs.
 ```
 
-Typical work may include game concepts, gameplay design, objectives, puzzles/minigames, progression, player experience, and narrative/gameplay flow when relevant.
+May include game concepts, gameplay design, objectives, puzzles/minigames, progression, player experience, and narrative/gameplay flow when relevant.
 
 ### World & Level Design
 
@@ -44,7 +46,7 @@ Typical work may include game concepts, gameplay design, objectives, puzzles/min
 We design and build Minecraft worlds, environments, levels, and spaces around how players move and play.
 ```
 
-Typical work may include Minecraft building, world design, level design, environment design, player flow, traversal, and progression through spaces.
+May include Minecraft building, world design, level design, environment design, player flow, traversal, and progression through spaces.
 
 ### Game Development
 
@@ -52,7 +54,7 @@ Typical work may include Minecraft building, world design, level design, environ
 We develop gameplay systems, mechanics, technical features, and the logic that makes each experience work.
 ```
 
-Typical work may include gameplay systems, scripting, game logic, multiplayer systems, custom mechanics, and technical implementation.
+May include gameplay systems, scripting, game logic, multiplayer systems, custom mechanics, and technical implementation.
 
 ### 3D Art
 
@@ -60,49 +62,27 @@ Typical work may include gameplay systems, scripting, game logic, multiplayer sy
 We create models, textures, and animation for custom Minecraft content when the project needs them.
 ```
 
-Typical work may include 3D modeling, texturing, animation, and Minecraft-compatible custom assets.
+May include 3D modeling, texturing, animation, and Minecraft-compatible custom assets.
 
-## Production role map
+## Job title rule
 
-The capability names above are what clients need to understand. Individual job roles remain more specific.
+**Work Areas are not job titles.**
 
-### Core production roles
+Do not maintain a second permanent list of Core Production, Supporting Production, Business Roles, or similar role groups.
 
-```text
-Game / Experience Designer
-Level Designer / Minecraft Builder
-Game Developer
-3D Artist
-```
-
-These roles map directly to the four public capability areas.
-
-### Supporting production roles
-
-Use only when a project or hiring need actually requires them:
+For Careers and project credits:
 
 ```text
-Project Manager / Producer
-QA / Tester
-Writer / Narrative
-Sound Designer / Music
-2D / UI
+real opening / real project credit
+→ use the approved job title from that real data
+→ describe its actual responsibility
 ```
 
-Supporting roles should not become Home capability categories merely to make the studio look larger.
-
-### Business roles
-
-```text
-Business Development
-Marketing
-```
-
-These are company/business functions, not production capabilities.
+If no real opening or credit exists, do not invent a role simply to complete a taxonomy.
 
 ## Role of each Home section
 
-Each section should have one clear job:
+Each section has one clear responsibility:
 
 ```text
 Hero
@@ -112,7 +92,7 @@ Featured Projects
 → proof through real work
 
 What We Do
-→ the four production capability areas
+→ the four canonical Work Areas
 
 About
 → who the studio is and the contexts it works in
@@ -124,49 +104,27 @@ Contact
 → start a project conversation
 ```
 
-Do not make one section try to explain all of these responsibilities at once.
-
 ## Home
 
 Status: `READY FOR DRAFT / FINAL REVIEW LATER`
 
 ### Hero
 
-Label:
-
 ```text
 Minecraft game studio
-```
 
-Headline:
-
-```text
 We build games and experiences in Minecraft.
-```
 
-Body:
-
-```text
 Hellocraft Studios designs and develops Minecraft projects across custom worlds, gameplay, technical systems, and 3D art.
-```
 
-Primary action:
-
-```text
 View portfolio
 ```
 
 ### Featured projects
 
-Heading:
-
 ```text
 Featured projects
-```
 
-Intro:
-
-```text
 A selection of Minecraft projects showing what we built and the role we played.
 ```
 
@@ -176,75 +134,37 @@ Real project names, descriptions, client names, media, and results must come fro
 
 ### What we do
 
-Label:
-
 ```text
 What we do
-```
 
-Heading:
-
-```text
 We make Minecraft projects from idea to playable experience.
+
+We work across four areas. The mix changes with the project.
 ```
 
-Body:
-
-```text
-Our work is organised around four core production areas. The mix changes with the project.
-```
-
-Display the four approved capability areas as simple editorial rows, not service cards.
+Display the four canonical Work Areas as simple editorial rows, not service cards.
 
 ### About preview
 
-Label:
-
 ```text
 About
-```
 
-Heading:
-
-```text
 A game studio built around Minecraft.
-```
 
-Body:
-
-```text
 Hellocraft Studios works on Minecraft games, custom worlds, and projects for events, exhibitions, and other public experiences.
-```
 
-Action:
-
-```text
 About Hellocraft
 ```
 
 ### Contact preview
 
-Label:
-
 ```text
 Contact
-```
 
-Heading:
-
-```text
 Tell us about your Minecraft project.
-```
 
-Body:
-
-```text
 Tell us what you want to make, who it is for, and where you need help.
-```
 
-Action:
-
-```text
 Contact us
 ```
 
@@ -254,21 +174,11 @@ Status: `WAITING FOR REAL DATA`
 
 ### Intro
 
-Label:
-
 ```text
 Portfolio
-```
 
-Headline:
-
-```text
 Selected Minecraft projects.
-```
 
-Body:
-
-```text
 Each project focuses on what was made, our role, and the player experience.
 ```
 
@@ -292,7 +202,7 @@ Player experience
 → what players do, see, learn, or experience
 
 Our role
-→ Hellocraft's specific contribution
+→ Hellocraft's actual contribution, using real project responsibility terms
 
 Results
 → verified results only
@@ -301,7 +211,7 @@ Links / credits
 → when useful
 ```
 
-A short showcase is valid. Do not manufacture sections simply to make every project page look equally long.
+A short showcase is valid. Do not create sections only to make every project page equally long.
 
 ## About
 
@@ -309,63 +219,33 @@ Status: `READY FOR DRAFT / FINAL REVIEW LATER`
 
 ### Hero
 
-Label:
-
 ```text
 About
-```
 
-Headline:
-
-```text
 We build Minecraft games, worlds, and experiences.
-```
 
-Body:
-
-```text
 Hellocraft Studios works across Minecraft game content, custom worlds, and projects for events, exhibitions, and other public experiences.
 ```
 
 ### What we do
 
-Label:
-
 ```text
 What we do
-```
 
-Headline:
+Four areas of work.
 
-```text
-Four core areas of production.
-```
-
-Body:
-
-```text
 Our work covers game and experience design, world and level design, game development, and 3D art. The mix depends on the project.
 ```
 
-Display the same four capability areas with their approved descriptions.
+Display the same four canonical Work Areas with the same names and descriptions used on Home.
 
 ### How we work
 
-Label:
-
 ```text
 How we work
-```
 
-Headline:
-
-```text
 The project comes first.
-```
 
-Body:
-
-```text
 We shape the scope around what needs to be built, keeping the creative and technical work connected instead of forcing every project into the same package.
 ```
 
@@ -373,27 +253,15 @@ We shape the scope around what needs to be built, keeping the creative and techn
 
 Status: `WAITING FOR REAL DATA`
 
-Use this section only for approved company/project evidence such as real clients, partners, project experience, results, or other public credibility information.
-
-Do not publish generic claims such as `experienced`, `trusted`, or `award-winning` without evidence.
+Use only approved company/project evidence such as real clients, partners, project experience, results, or other public credibility information.
 
 ### Contact close
 
-Headline:
-
 ```text
 Planning a Minecraft project?
-```
 
-Body:
-
-```text
 Tell us what you want to make and where you need help.
-```
 
-Action:
-
-```text
 Contact us
 ```
 
@@ -401,20 +269,16 @@ Contact us
 
 Status: `WAITING FOR REAL DATA`
 
-The page structure is ready. Do not finalize recruitment copy until the current hiring state and application method are confirmed.
+Do not maintain or display a speculative role taxonomy.
 
-Careers may use specific role names rather than the four public capability categories. Examples, only when real hiring needs support them:
+When a real opening exists, use the real approved job title and write:
 
 ```text
-Game / Experience Designer
-Level Designer / Minecraft Builder
-Game Developer
-3D Artist
-Project Manager / Producer
-QA / Tester
-Writer / Narrative
-Sound Designer / Music
-2D / UI
+what the person will work on
+actual responsibilities
+expected skills
+work/location arrangement
+how to apply
 ```
 
 Valid final state when there are no openings:
@@ -423,25 +287,17 @@ Valid final state when there are no openings:
 We don't have any public openings right now.
 ```
 
-When a real role exists, write what the person will actually work on, the expected skills, work/location arrangement, and how to apply. Avoid generic culture claims.
-
 ## Contact
 
 Status: `WAITING FOR REAL DATA`
 
-Working headline:
-
 ```text
 Tell us about your project.
-```
 
-Working body:
-
-```text
 For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
 ```
 
-Project inquiry guidance:
+Useful first-message guidance:
 
 ```text
 What do you want to make?
@@ -450,13 +306,13 @@ What do you need help with?
 What constraints are already known?
 ```
 
-Do not finalize the contact section until the real public business email/contact route and approved social links are supplied.
+Do not finalize the contact section until the real public business contact route and approved social links are supplied.
 
 ## Current drafting order
 
 ```text
-1. Home company-level copy + capability structure
-2. About company-level copy + capability structure
+1. Home company copy + Work Areas
+2. About company copy + Work Areas
 3. real Portfolio projects + Project Detail
 4. Contact
 5. Careers
@@ -470,11 +326,12 @@ Before publication, every page must pass these checks:
 ```text
 [ ] wording follows 08-writing-style.md
 [ ] strong claims are supported
-[ ] capability language matches the approved four-area structure
+[ ] Work Area names match the canonical four-name list exactly
+[ ] no second capability/service/role taxonomy has been introduced
 [ ] client/partner names are approved for public use
 [ ] sample/demo content is removed
-[ ] project descriptions match the actual media and project facts
+[ ] project descriptions match actual media and project facts
 [ ] contact details are real
-[ ] careers reflects the current hiring state
+[ ] Careers reflects the current hiring state and real job titles
 [ ] metadata describes the real page content
 ```
