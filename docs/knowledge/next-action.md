@@ -7,17 +7,18 @@ The Hellocraft Studios Website on branch `Local` is in the **website content dra
 Completed:
 
 ```text
-page structure      = complete
-public page names   = approved
-page design         = approved
-writing style guide = APPROVED
-Home Hero           = APPROVED / implemented
-Home Work Areas     = APPROVED / implemented
-About draft         = implemented
-Portfolio intro     = implemented
-Work Areas          = APPROVED / implemented
-sample project data = clearly fictional
-sample career data  = separated from real openings
+page structure          = complete
+public page names       = approved
+page design             = approved
+writing style guide     = APPROVED
+Home Hero               = APPROVED / implemented
+Home Featured Projects heading = APPROVED / implemented
+Home Work Areas         = APPROVED / implemented
+About draft             = implemented
+Portfolio intro         = implemented
+Work Areas              = APPROVED / implemented
+sample project data     = clearly fictional
+sample career data      = separated from real openings
 ```
 
 Main navigation:
@@ -57,17 +58,18 @@ docs/knowledge/content-draft.md
 Current status:
 
 ```text
-Home Hero            = APPROVED
-Home Featured Projects = current review section
-Home What We Do      = draft / Work Areas implemented
-Home About preview   = draft
-Home Contact preview = draft
-Portfolio intro      = Draft v1
-Portfolio projects   = waiting for real project sources
-Project Detail       = structure ready; waiting for real project sources
-About                = Draft v1 + Work Areas implemented
-Contact              = working copy only; final contact data missing
-Careers              = working copy only; final hiring state missing
+Home Hero                       = APPROVED
+Home Featured Projects heading = APPROVED
+Home Featured Projects support = current review section
+Home What We Do                 = draft / Work Areas implemented
+Home About preview              = draft
+Home Contact preview            = draft
+Portfolio intro                 = Draft v1
+Portfolio projects              = waiting for real project sources
+Project Detail                  = structure ready; waiting for real project sources
+About                           = Draft v1 + Work Areas implemented
+Contact                         = working copy only; final contact data missing
+Careers                         = working copy only; final hiring state missing
 ```
 
 ## Approved Home Hero
@@ -83,6 +85,14 @@ View portfolio
 ```
 
 Do not rewrite this without a concrete reason from new company positioning or real portfolio evidence.
+
+## Approved Home Featured Projects heading
+
+```text
+Featured Projects
+```
+
+Do not rename it to `Our Work`, `Our Creations`, or another alternative without a concrete reason. The supporting sentence under this heading is still under review and is not approved yet.
 
 ## Writing style
 
@@ -201,4 +211,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the Home `Featured Projects` section copy. Do not revisit the approved Home Hero unless a concrete new fact requires it.**
+**Review and approve the supporting sentence under the Home `Featured Projects` heading. Do not revisit the approved Home Hero or `Featured Projects` heading unless a concrete new fact requires it.**
