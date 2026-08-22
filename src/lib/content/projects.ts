@@ -4,6 +4,12 @@ import type { ProjectEntry } from './types';
 // These fictional entries are used only to preview the portfolio layout.
 // Replace them with approved Hellocraft projects before launch.
 //
+// PORTFOLIO LISTING RULE — APPROVED
+// Keep each listing simple: project name + short description + media + View project.
+// Client / partner and year are optional and should appear only when public, confirmed, and useful.
+// Do not add tags, categories, Work Areas, role labels, or technical metadata to the listing by default.
+//
+// PROJECT DETAIL WRITING
 // When real projects are added, follow docs/foundation/08-writing-style.md.
 // Prefer this information order when the evidence exists:
 // project/client context -> what was needed -> what we made -> player experience
