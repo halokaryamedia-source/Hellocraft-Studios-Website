@@ -20,6 +20,7 @@ About Hero                         = APPROVED / implemented
 About What We Do                   = APPROVED / implemented
 About How We Work                  = APPROVED / implemented
 About Experience rule              = APPROVED / evidence-only
+About Contact close                = APPROVED / implemented
 Work Areas                         = APPROVED / implemented
 sample project data                = clearly fictional
 sample career data                 = separated from real openings
@@ -118,7 +119,7 @@ links
 
 Final Project Detail copy still waits for real approved project information and media.
 
-## About — current review
+## About — APPROVED
 
 Approved Hero:
 
@@ -156,9 +157,17 @@ Keep it hidden/empty until verified public evidence exists.
 Do not add generic marketing copy, invented client names, project counts, awards, years, or metrics.
 ```
 
-The current About implementation already hides Experience while `contentIsDemo` is enabled and no real experience data exists.
+Approved Contact close:
 
-The next section is **About — Contact close**.
+```text
+Planning a Minecraft project?
+
+Tell us what you're working on and where we can help.
+
+Contact us
+```
+
+About is complete for the current content stage. Only real Experience evidence remains pending.
 
 ## Writing style
 
@@ -187,6 +196,22 @@ screenshots/renders/video
 credits or publication restrictions
 ```
 
+## Contact — next review
+
+Current Contact copy is still draft. Review it section by section before real contact channels are added.
+
+Current Hero draft:
+
+```text
+Contact
+
+Tell us about your project.
+
+For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
+```
+
+Do not invent email addresses, phone numbers, Discord accounts, social links, booking links, office addresses, or forms.
+
 ## Demo mode
 
 Keep:
@@ -212,4 +237,4 @@ production adapter selection
 
 ## Immediate next step
 
-**Review and approve the About `Contact close` copy. Preserve the approved About Hero, What We Do, How We Work, evidence-only Experience rule, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.**
+**Start the Contact page section-by-section review with the Contact Hero. Preserve all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact methods still wait for confirmed public contact data.**
