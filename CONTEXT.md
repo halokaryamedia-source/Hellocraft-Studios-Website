@@ -82,9 +82,55 @@ Contact
 
 Do not redesign them without a concrete reason from real content or media.
 
+## Writing style
+
+Public writing follows:
+
+```text
+docs/foundation/08-writing-style.md
+```
+
+The guide was derived from current official communication patterns used by established Minecraft creators and studios, including Noxcrew, Gamemode One, Blockworks, Everbloom Games, Shapescape, Spark Universe, and Blockception.
+
+Hellocraft's preferred voice is:
+
+```text
+confident
+clear
+creator-led
+Minecraft-native
+friendly
+practical
+professional
+```
+
+Main rules:
+
+- say what Hellocraft makes early;
+- use `we` and `our` naturally;
+- prefer direct verbs such as build, design, develop, create, make, play, and explore;
+- use Minecraft-specific terms only when they add clarity;
+- keep headlines short;
+- keep normal section copy compact;
+- let projects and verified results prove quality;
+- avoid generic agency language, exaggerated claims, and adjective-heavy copy.
+
+For Project Detail pages, use a simple client/project structure when the information exists:
+
+```text
+project / client context
+→ what was needed
+→ what we made
+→ what players experience
+→ our role
+→ verified results
+```
+
+Gamemode One and Noxcrew are useful references for concise game-studio voice; Blockworks is the main reference for project/case-study writing; Shapescape is useful when speaking to non-Minecraft-native clients. Do not copy their wording.
+
 ## Copy review
 
-The public-facing draft copy has been reviewed and rewritten in clear, normal website language.
+The public-facing draft copy has been reviewed and rewritten in clear, normal website language and then aligned with the Minecraft studio writing guide.
 
 Current copy is suitable for preview and content fitting. It is **not final production copy** because real portfolio evidence, final company facts, and public contact information are still missing.
 
@@ -231,6 +277,7 @@ production adapter selection
 page structure        = complete
 page names            = approved
 page design           = approved
+writing style guide   = established
 copy humanization     = complete for current draft
 sample data clarity   = complete
 real portfolio        = next major input
