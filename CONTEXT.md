@@ -205,7 +205,7 @@ View Portfolio
 
 Do not maintain `What We Made` as a separate permanent section. That content belongs inside **Our Role** so the site does not repeat the same information under two names.
 
-The project content model now uses explicit fields:
+The project content model uses explicit fields:
 
 ```text
 projectContext
@@ -216,17 +216,29 @@ credits
 links
 ```
 
-The old generic `sections[]` and `contribution` model is no longer used for Project Detail.
-
 Final project-specific copy, clients, dates, results, credits, links, and media still require approved real project evidence.
 
-## Current review section
+## About — CURRENT REVIEW
+
+### Hero — APPROVED / IMPLEMENTED
 
 ```text
-About page — Hero
+About
+
+We're a game studio focused on Minecraft.
+
+We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-The existing About copy is still Draft v1 and should now be reviewed section by section using the same professional + human tone established on Home.
+Do not rewrite this without a concrete reason from new company positioning or verified evidence.
+
+### Current review section
+
+```text
+About — What We Do
+```
+
+This section must use the same four canonical Work Areas already approved for Home. Review only the section-level wording; do not create another capability/service taxonomy.
 
 ## Current content status
 
@@ -238,7 +250,10 @@ Portfolio short descriptions = APPROVED rule
 Portfolio project content    = waiting for real project sources
 Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
-About                        = next section-by-section review
+About Hero                   = APPROVED / implemented
+About What We Do             = current review
+About How We Work            = draft
+About Experience             = waiting for verified public evidence
 Contact final copy           = waiting for real contact details
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
@@ -301,4 +316,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Start the **About page Hero review**. Preserve all approved Home, Portfolio, Project Detail, and Work Areas decisions.
+Continue with **About — What We Do**. Preserve the approved About Hero and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
