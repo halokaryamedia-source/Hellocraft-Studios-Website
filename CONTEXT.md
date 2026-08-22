@@ -2,7 +2,7 @@
 
 Current state of the Hellocraft Studios Website on branch `Local`.
 
-Use `docs/knowledge/next-action.md` for the immediate next step. Project rules live in `AGENTS.md` and `docs/foundation/`.
+Use `docs/knowledge/next-action.md` for the immediate next step. Detailed approved copy and rules are tracked in `docs/knowledge/content-draft.md`. Durable project rules live in `AGENTS.md` and `docs/foundation/`.
 
 ## Website purpose
 
@@ -14,7 +14,7 @@ The website should:
 - show real projects as the main evidence of its work;
 - help potential clients understand whether Hellocraft is relevant to their project;
 - provide business contact information;
-- show career opportunities when real openings exist.
+- show career opportunities only when real openings exist.
 
 ## Public pages
 
@@ -36,9 +36,9 @@ Careers
 Contact
 ```
 
-The logo links to Home.
+Logo = Home.
 
-Old addresses remain only for compatibility:
+Legacy redirects:
 
 ```text
 /work        → /portfolio
@@ -48,14 +48,22 @@ Old addresses remain only for compatibility:
 
 ## Design — APPROVED
 
-Reference direction:
+Keep the current route designs. Do not reopen broad redesign work unless real content or media creates a concrete need.
+
+Direction:
+
+```text
+clean
+professional
+game-focused
+media-first
+easy to understand
+```
+
+References:
 
 - Hazelight Studios for strong game imagery, spacing, and visual confidence;
 - Blind Squirrel Games for clear company and project communication.
-
-Keep the website clean, professional, game-focused, media-first, and easy to understand.
-
-Do not reopen broad design work without a concrete reason from real content or media.
 
 ## Writing style — APPROVED
 
@@ -65,7 +73,7 @@ Public writing follows:
 docs/foundation/08-writing-style.md
 ```
 
-Hellocraft's voice is:
+Target voice:
 
 ```text
 confident
@@ -78,7 +86,7 @@ professional
 human
 ```
 
-Professional copy should sound like it was written by a real studio team. Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
+Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
 
 ## Work Areas — APPROVED / SINGLE TERMINOLOGY
 
@@ -96,6 +104,8 @@ Do not create parallel capability/service/discipline taxonomies.
 Work Areas are not job titles. Careers and project credits use real approved titles from actual data.
 
 ## Home — APPROVED / IMPLEMENTED
+
+Approved content includes:
 
 ```text
 Minecraft game studio
@@ -137,9 +147,7 @@ Hero:
 
 ```text
 Portfolio
-
 Projects we've worked on.
-
 A closer look at what we made and our role in each project.
 ```
 
@@ -159,47 +167,28 @@ Client / partner
 Year
 ```
 
-Short descriptions explain:
-
-```text
-what the project is
-+
-what players / visitors do or experience
-```
+Short descriptions explain what the project is + what players/visitors do or experience. Lead with the project itself.
 
 Do not show tags, categories, Work Areas, role labels, technical details, long descriptions, or extra metadata by default.
 
 ## Project Detail — APPROVED STRUCTURE / IMPLEMENTED
 
-Use this order when real evidence supports each section:
+Order:
 
 ```text
-Back to Portfolio
-
-Project
-PROJECT NAME
-Short description
-Client / Partner — optional
-Year — optional
-
-Main Project Media
-
+Project header + optional client/year
+Main media
 The Project
-→ what the project is and useful context
-
 Our Role
-→ what Hellocraft actually designed, built, developed, or handled
-
 Player Experience — optional
 Results — optional / verified only
 Credits / Links — optional
-
 View Portfolio
 ```
 
 Do not maintain `What We Made` as a separate permanent section. That content belongs inside **Our Role**.
 
-The project content model uses explicit fields:
+Explicit source fields:
 
 ```text
 projectContext
@@ -210,41 +199,34 @@ credits
 links
 ```
 
-Final project-specific copy, clients, dates, results, credits, links, and media still require approved real project evidence.
+Final project-specific copy and media still require approved real project evidence.
 
 ## About — APPROVED / IMPLEMENTED
 
 ```text
 About
-
 We're a game studio focused on Minecraft.
-
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
 ```text
 What we do
-
 We handle both the creative and technical sides of Minecraft projects.
 ```
 
 ```text
 How we work
-
 We work around what each project needs.
-
 We keep the creative and technical work connected throughout the project.
 ```
 
-Experience is evidence-only and must remain hidden/empty until verified public evidence exists. Do not add invented client names/logos, project counts, years of experience, awards, metrics, or generic credibility copy.
+Experience is evidence-only and remains hidden until verified public material exists.
 
 Contact close:
 
 ```text
 Planning a Minecraft project?
-
 Tell us what you're working on and where we can help.
-
 Contact us
 ```
 
@@ -254,9 +236,7 @@ Hero:
 
 ```text
 Contact
-
 Tell us about your project.
-
 Tell us what you're working on and how we can help.
 ```
 
@@ -266,110 +246,90 @@ Contact Details rule:
 Use only real approved public contact channels.
 One real business email is enough if that is the actual workflow.
 Social links are optional and appear only when real, public, approved, and useful.
-Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
 ```
+
+Do not invent phone, Discord, booking, office address, forms, or extra channels to fill space.
 
 Inquiry guidance:
 
 ```text
 What should you include?
-
 A short description of the project, who it's for, and where you need our help.
 ```
 
-All Contact copy that can be finalized without actual contact-channel data is approved. The real email and any public links are still pending.
+## Careers — APPROVED STRUCTURE / WAITING FOR REAL HIRING DATA
 
-## Careers — CURRENT REVIEW / WAITING FOR REAL HIRING DATA
-
-Hero — APPROVED / IMPLEMENTED:
+Hero:
 
 ```text
 Careers
-
 Join Hellocraft Studios.
-
 Open roles and application details will be posted here when we're hiring.
 ```
 
-No-openings state:
+No-opening state:
 
 ```text
+Open positions
 We don't have any public openings right now.
 ```
 
-The separate generic Careers intro has been **removed by design**. Do not restore `Build Minecraft projects with us.` or replace it with another filler section. The approved page structure is now:
+The generic Careers intro was removed by design.
+
+Default page structure while there are no openings:
 
 ```text
 Hero
 → Open positions
-→ How to apply
 ```
 
-Do not create a speculative role taxonomy. Use actual job titles, responsibilities, work arrangement, and application details only when a real opening exists.
+`How to apply` is conditional, not permanent:
 
-The current review section is **How to apply**. Its wording and behavior must follow the real hiring workflow; do not invent application instructions.
+```text
+no openings
+→ hidden
+
+role-specific application workflow
+→ instructions stay with that real role
+
+one shared workflow for all current roles
+→ shared How to apply section may appear with real approved instructions
+```
+
+Source uses optional `careerApplication`, currently `null`. Do not invent application emails, forms, Discord processes, job titles, or recruitment instructions.
 
 ## Current content status
 
 ```text
 Home                         = APPROVED / implemented
-Portfolio Hero               = APPROVED / implemented
-Portfolio listing structure  = APPROVED / implemented
-Portfolio short descriptions = APPROVED rule
-Portfolio project content    = waiting for real project sources
-Project Detail structure     = APPROVED / implemented
-Project Detail final copy    = waiting for real project sources
-About                        = APPROVED / implemented
-About Experience data        = waiting for verified public evidence
-Contact                      = APPROVED copy / implemented
-Contact methods              = waiting for confirmed public data
-Careers Hero                 = APPROVED / implemented
-Careers General Intro        = REMOVED / APPROVED
-Careers How to apply         = current review / waiting for real hiring workflow
-Final site-wide pass         = after real portfolio/media is integrated
+Portfolio structure          = APPROVED / real project data pending
+Project Detail structure     = APPROVED / implemented / real project data pending
+About                        = APPROVED / Experience evidence pending
+Contact                      = APPROVED copy / real contact methods pending
+Careers                      = APPROVED structure/copy / real hiring data pending
+Work Areas                   = APPROVED / implemented
+Shared/footer copy           = next review
+Final site-wide pass         = after real evidence is integrated
 ```
 
 Sample portfolio entries remain fictional and exist only for layout preview. Sample career data is separated from real openings.
 
 `contentIsDemo = true` remains enabled until production content is ready.
 
-## Main content files
+## Production content still needed
 
 ```text
-src/lib/content/pages.ts
-→ Home, Portfolio, About, Careers, Contact, footer text, and Work Areas
-
-src/lib/content/projects.ts
-→ portfolio project data + approved Portfolio/Project Detail rules
-
-src/lib/content/types.ts
-→ explicit Project Detail content fields
-
-src/routes/portfolio/[slug]/+page.svelte
-→ approved Project Detail rendering order
-
-docs/knowledge/content-draft.md
-→ working website copy and approval status
-
-docs/knowledge/next-action.md
-→ immediate continuation state
+real portfolio project facts
+project screenshots / renders / video
+approved client / partner attribution
+verified results where relevant
+verified About Experience evidence
+real business email and approved public links
+real hiring state / openings when applicable
+final logo/vector
+final font
+final SEO/social metadata
 ```
-
-## Content review rule
-
-When real material is supplied:
-
-```text
-record it
-→ identify what it belongs to
-→ check facts and duplicates
-→ confirm whether it can be public
-→ note missing information
-→ choose what goes on the website
-→ write public copy using 08-writing-style.md
-```
-
-Do not guess missing clients, dates, results, permissions, roles, contact details, hiring details, or project facts.
 
 ## Deferred technical work
 
@@ -379,11 +339,11 @@ Still deferred until explicitly reopened:
 bun install
 bun.lock generation
 bun run validate
-full browser testing
+full browser/runtime testing
 hosting selection
 production adapter selection
 ```
 
 ## Immediate continuation
 
-Continue with **Careers — How to apply**. Preserve the approved Careers Hero, approved no-openings state, and the decision to remove the generic Careers intro. Do not invent application instructions, job openings, or job titles.
+Continue with **shared site copy review, beginning with the Footer statement**. Preserve all approved page copy and structure unless a concrete new fact requires a change.
