@@ -318,13 +318,35 @@ We keep the creative and technical work connected throughout the project.
 
 Keep this language simple. Do not replace it with agency-style process language such as `shape the scope`, `tailored approach`, or `package` unless a real operational need later requires more detail.
 
-### Experience — NEXT REVIEW / WAITING FOR REAL DATA
+### Experience — APPROVED RULE / WAITING FOR REAL DATA
 
-The section may exist only when there is verified public evidence. Valid evidence can include approved clients, partners, project history, results, or other concrete company experience.
+Experience is **evidence-only**. Keep the section hidden/empty until verified public evidence exists.
 
-Do not invent credibility copy, logos, metrics, awards, client names, or project counts to fill this section.
+Valid content may include only concrete, approved evidence such as:
 
-### Contact close
+```text
+public client / partner names
+real project history
+verified results or metrics
+other documented company experience
+```
+
+Do not add a generic marketing paragraph just to introduce the section.
+
+Do not invent or publish unverified:
+
+```text
+client logos or names
+project counts
+years of experience
+awards
+metrics
+credibility claims
+```
+
+The section should remain absent when no approved evidence is available. The current About implementation already follows this rule by rendering Experience only when demo mode is off and real experience items exist.
+
+### Contact close — NEXT REVIEW
 
 Current draft:
 
@@ -387,7 +409,7 @@ Do not finalize the Contact page until the real public business contact route an
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — Hero + What We Do + How We Work APPROVED; Experience next
+4. About — Hero + What We Do + How We Work + Experience rule APPROVED; Contact close next
 5. Contact
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
@@ -405,6 +427,7 @@ Before publication, every page must pass these checks:
 [ ] no second capability/service/role taxonomy has been introduced
 [ ] no separate What We Made + Our Role duplication is introduced
 [ ] client/partner names are approved for public use
+[ ] Experience contains verified public evidence only
 [ ] sample/demo content is removed
 [ ] project descriptions match actual media and project facts
 [ ] contact details are real
