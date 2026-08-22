@@ -278,9 +278,7 @@ This keeps the approved order stable and prevents future terminology drift.
 
 Final project-specific wording, client attribution, dates, results, credits, and media must come from approved real project evidence.
 
-## About
-
-Status: `CURRENT REVIEW / FINAL REVIEW LATER`
+## About — APPROVED
 
 ### Hero — APPROVED
 
@@ -346,17 +344,19 @@ credibility claims
 
 The section should remain absent when no approved evidence is available. The current About implementation already follows this rule by rendering Experience only when demo mode is off and real experience items exist.
 
-### Contact close — NEXT REVIEW
-
-Current draft:
+### Contact close — APPROVED
 
 ```text
 Planning a Minecraft project?
 
-Tell us what you want to make and where you need help.
+Tell us what you're working on and where we can help.
 
 Contact us
 ```
+
+This intentionally reuses the approved Home contact wording so the call to action stays consistent across the website.
+
+All currently publishable About copy is approved. The Experience content itself remains pending verified public evidence.
 
 ## Careers
 
@@ -382,11 +382,13 @@ We don't have any public openings right now.
 
 ## Contact
 
-Status: `WAITING FOR REAL DATA`
+Status: `CURRENT REVIEW / WAITING FOR REAL DATA`
 
 Current draft:
 
 ```text
+Contact
+
 Tell us about your project.
 
 For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
@@ -401,7 +403,7 @@ What do you need help with?
 What constraints are already known?
 ```
 
-Do not finalize the Contact page until the real public business contact route and approved social links are supplied.
+Do not finalize real contact methods until the public business contact route and approved social links are supplied.
 
 ## Current drafting order
 
@@ -409,8 +411,8 @@ Do not finalize the Contact page until the real public business contact route an
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — Hero + What We Do + How We Work + Experience rule APPROVED; Contact close next
-5. Contact
+4. About — APPROVED; Experience data pending verified evidence
+5. Contact — next section-by-section review
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
 ```
