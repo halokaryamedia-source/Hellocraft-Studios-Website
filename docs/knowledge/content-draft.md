@@ -127,23 +127,19 @@ Do not rewrite this Hero without a concrete reason from new company positioning 
 
 ### Featured Projects
 
-Heading status: `APPROVED`
+Status: `APPROVED`
 
 ```text
 Featured Projects
+
+Minecraft projects we've worked on.
+
+View portfolio
 ```
 
-Do not rename this section to `Our Work`, `Our Creations`, or another alternative without a concrete reason.
+The heading and supporting copy are approved. Do not rename the section or rewrite the sentence without a concrete reason from real portfolio evidence.
 
-Supporting copy status: `CURRENT REVIEW / WAITING FOR REAL DATA`
-
-Current draft:
-
-```text
-A selection of Minecraft projects showing what we built and the role we played.
-```
-
-The supporting sentence is not approved yet. Real project names, descriptions, client names, media, and results must come from approved portfolio sources.
+Real project names, descriptions, client names, media, and results must still come from approved portfolio sources.
 
 ### What we do
 
