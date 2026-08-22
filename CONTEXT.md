@@ -78,7 +78,7 @@ professional
 human
 ```
 
-Professional copy should still sound like it was written by a real studio team. Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
+Professional copy should sound like it was written by a real studio team. Avoid generic agency language, exaggerated claims, and polished marketing phrases that feel generated.
 
 ## Work Areas — APPROVED / SINGLE TERMINOLOGY
 
@@ -91,9 +91,9 @@ Game Development
 3D Art
 ```
 
-Do not create parallel terms such as capabilities, core production areas, service categories, disciplines, or permanent role groups.
+Do not create parallel capability/service/discipline taxonomies.
 
-Work Areas are not job titles. Careers and project credits use real approved titles from real data.
+Work Areas are not job titles. Careers and project credits use real approved titles from actual data.
 
 ## Home — APPROVED / IMPLEMENTED
 
@@ -133,7 +133,7 @@ Do not casually rewrite approved Home copy.
 
 ## Portfolio — APPROVED STRUCTURE / WAITING FOR REAL PROJECT DATA
 
-### Hero
+Hero:
 
 ```text
 Portfolio
@@ -143,9 +143,7 @@ Projects we've worked on.
 A closer look at what we made and our role in each project.
 ```
 
-### Listing structure
-
-Required:
+Listing structure:
 
 ```text
 Project media
@@ -161,11 +159,7 @@ Client / partner
 Year
 ```
 
-Do not show tags, categories, Work Areas, role labels, technical details, long descriptions, or extra metadata by default.
-
-### Short project description
-
-Use one concise sentence that explains:
+Short descriptions explain:
 
 ```text
 what the project is
@@ -173,11 +167,11 @@ what the project is
 what players / visitors do or experience
 ```
 
-Lead with the project itself. Do not lead with Hellocraft's contribution or a marketing claim.
+Do not show tags, categories, Work Areas, role labels, technical details, long descriptions, or extra metadata by default.
 
 ## Project Detail — APPROVED STRUCTURE / IMPLEMENTED
 
-Use this order when real evidence supports the section:
+Use this order when real evidence supports each section:
 
 ```text
 Back to Portfolio
@@ -203,7 +197,7 @@ Credits / Links — optional
 View Portfolio
 ```
 
-Do not maintain `What We Made` as a separate permanent section. That content belongs inside **Our Role** so the site does not repeat the same information under two names.
+Do not maintain `What We Made` as a separate permanent section. That content belongs inside **Our Role**.
 
 The project content model uses explicit fields:
 
@@ -220,8 +214,6 @@ Final project-specific copy, clients, dates, results, credits, links, and media 
 
 ## About — APPROVED / IMPLEMENTED
 
-### Hero
-
 ```text
 About
 
@@ -230,17 +222,11 @@ We're a game studio focused on Minecraft.
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-### What We Do
-
 ```text
 What we do
 
 We handle both the creative and technical sides of Minecraft projects.
 ```
-
-The About section uses the same wording and the same four canonical Work Areas as Home. Do not create a second definition, repeat the Work Area names in supporting copy, or introduce another taxonomy.
-
-### How We Work
 
 ```text
 How we work
@@ -250,19 +236,9 @@ We work around what each project needs.
 We keep the creative and technical work connected throughout the project.
 ```
 
-Keep this language simple and do not replace it with agency-style process language unless a real operational need requires more detail.
+Experience is evidence-only and must remain hidden/empty until verified public evidence exists. Do not add invented client names/logos, project counts, years of experience, awards, metrics, or generic credibility copy.
 
-### Experience — APPROVED RULE / WAITING FOR REAL DATA
-
-Experience is evidence-only and must remain hidden/empty until verified public evidence exists.
-
-Valid evidence may include approved public clients or partners, real project history, verified results, or other documented company experience.
-
-Do not add generic marketing paragraphs, invented credibility claims, client names/logos, project counts, years of experience, awards, or metrics to fill the section.
-
-The current About implementation already follows this rule: Experience is rendered only when demo mode is off and real experience items exist.
-
-### Contact close
+Contact close:
 
 ```text
 Planning a Minecraft project?
@@ -272,13 +248,9 @@ Tell us what you're working on and where we can help.
 Contact us
 ```
 
-The Contact close intentionally uses the same approved supporting sentence as Home.
+## Contact — APPROVED COPY / WAITING FOR REAL CONTACT DATA
 
-All currently publishable About copy is approved. Only real Experience evidence remains pending.
-
-## Contact — CURRENT REVIEW
-
-### Hero — APPROVED / IMPLEMENTED
+Hero:
 
 ```text
 Contact
@@ -288,27 +260,36 @@ Tell us about your project.
 Tell us what you're working on and how we can help.
 ```
 
-Do not rewrite the Contact Hero without a concrete reason from a real change in company positioning or the public contact workflow.
-
-### Contact Details — APPROVED RULE / WAITING FOR REAL DATA
-
-Keep the contact section simple and evidence-only.
-
-Only real approved public contact channels may be displayed. One real business email is enough if that is Hellocraft's actual public workflow.
-
-Social links are optional and should appear only when they are real, public, approved, and useful.
-
-Do not add phone numbers, Discord accounts, booking links, office addresses, contact forms, or extra social channels merely to make the page look fuller.
-
-The actual email and any public links still wait for confirmed contact data.
-
-### Current review section
+Contact Details rule:
 
 ```text
-Contact — Inquiry guidance
+Use only real approved public contact channels.
+One real business email is enough if that is the actual workflow.
+Social links are optional and appear only when real, public, approved, and useful.
+Do not add phone, Discord, booking, office address, form, or extra channels merely to fill space.
 ```
 
-Keep this guidance short and useful. It should help someone send a good first message without turning the page into a long intake form.
+Inquiry guidance:
+
+```text
+What should you include?
+
+A short description of the project, who it's for, and where you need our help.
+```
+
+All Contact copy that can be finalized without actual contact-channel data is approved. The real email and any public links are still pending.
+
+## Careers — NEXT REVIEW / WAITING FOR REAL HIRING DATA
+
+Careers is now the next page to review.
+
+Do not create a speculative role taxonomy. Use actual job titles, responsibilities, work arrangement, and application details only when a real opening exists.
+
+A valid public no-openings state is:
+
+```text
+We don't have any public openings right now.
+```
 
 ## Current content status
 
@@ -322,14 +303,13 @@ Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
 About                        = APPROVED / implemented
 About Experience data        = waiting for verified public evidence
-Contact Hero                 = APPROVED / implemented
-Contact Details rule         = APPROVED / evidence-only / waiting for real data
-Contact inquiry guidance     = current review
-Careers final copy           = waiting for real hiring state
+Contact                      = APPROVED copy / implemented
+Contact methods              = waiting for confirmed public data
+Careers                      = next section-by-section review / waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
 ```
 
-Sample portfolio entries remain fictional and are only for layout preview. Real project screenshots, renders, video, client attribution, results, dates, and credits must come from approved project sources.
+Sample portfolio entries remain fictional and exist only for layout preview. Sample career data is separated from real openings.
 
 `contentIsDemo = true` remains enabled until production content is ready.
 
@@ -369,7 +349,7 @@ record it
 → write public copy using 08-writing-style.md
 ```
 
-Do not guess missing clients, dates, results, permissions, roles, contact details, or project details.
+Do not guess missing clients, dates, results, permissions, roles, contact details, hiring details, or project facts.
 
 ## Deferred technical work
 
@@ -386,4 +366,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **Contact — Inquiry guidance**. Preserve the approved Contact Hero, Contact Details rule, and all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels remain pending confirmed public data.
+Start the **Careers page review**, beginning with the Careers Hero and the no-openings state. Preserve all approved Home, Portfolio, Project Detail, About, Contact, and Work Areas decisions. Do not invent job openings or job titles.
