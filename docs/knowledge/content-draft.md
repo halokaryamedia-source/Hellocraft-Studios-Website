@@ -306,23 +306,23 @@ This wording is intentionally the same as Home. It goes directly into the same f
 
 Do not add a second supporting sentence that repeats the four Work Area names, and do not create a different definition of What We Do on About.
 
-### How We Work — CURRENT REVIEW
-
-Current draft:
+### How We Work — APPROVED
 
 ```text
 How we work
 
-The project comes first.
+We work around what each project needs.
 
-We shape the scope around what needs to be built, keeping the creative and technical work connected instead of forcing every project into the same package.
+We keep the creative and technical work connected throughout the project.
 ```
 
-### Experience
+Keep this language simple. Do not replace it with agency-style process language such as `shape the scope`, `tailored approach`, or `package` unless a real operational need later requires more detail.
 
-Status: `WAITING FOR REAL DATA`
+### Experience — NEXT REVIEW / WAITING FOR REAL DATA
 
-Use only approved company/project evidence such as real clients, partners, project experience, results, or other public credibility information.
+The section may exist only when there is verified public evidence. Valid evidence can include approved clients, partners, project history, results, or other concrete company experience.
+
+Do not invent credibility copy, logos, metrics, awards, client names, or project counts to fill this section.
 
 ### Contact close
 
@@ -387,7 +387,7 @@ Do not finalize the Contact page until the real public business contact route an
 1. Home — APPROVED
 2. Portfolio — structure + writing rules APPROVED; real projects pending
 3. Project Detail — structure APPROVED / implemented; real projects pending
-4. About — Hero + What We Do APPROVED; How We Work next
+4. About — Hero + What We Do + How We Work APPROVED; Experience next
 5. Contact
 6. Careers
 7. final site-wide copy pass after real evidence is integrated
