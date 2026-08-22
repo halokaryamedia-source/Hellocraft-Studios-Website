@@ -69,8 +69,8 @@ export const homeCopy = {
 export const portfolioCopy = {
 	hero: {
 		label: 'Portfolio',
-		title: 'Selected Minecraft projects.',
-		body: 'Each project focuses on what was made, our role, and the player experience.'
+		title: "Projects we've worked on.",
+		body: 'A closer look at what we made and our role in each project.'
 	},
 	emptyState: 'No projects have been published yet.'
 } as const;
