@@ -218,9 +218,9 @@ links
 
 Final project-specific copy, clients, dates, results, credits, links, and media still require approved real project evidence.
 
-## About — CURRENT REVIEW
+## About — APPROVED / IMPLEMENTED
 
-### Hero — APPROVED / IMPLEMENTED
+### Hero
 
 ```text
 About
@@ -230,7 +230,7 @@ We're a game studio focused on Minecraft.
 We make games and adventures, and work on projects for events and exhibitions.
 ```
 
-### What We Do — APPROVED / IMPLEMENTED
+### What We Do
 
 ```text
 What we do
@@ -240,7 +240,7 @@ We handle both the creative and technical sides of Minecraft projects.
 
 The About section uses the same wording and the same four canonical Work Areas as Home. Do not create a second definition, repeat the Work Area names in supporting copy, or introduce another taxonomy.
 
-### How We Work — APPROVED / IMPLEMENTED
+### How We Work
 
 ```text
 How we work
@@ -262,11 +262,37 @@ Do not add generic marketing paragraphs, invented credibility claims, client nam
 
 The current About implementation already follows this rule: Experience is rendered only when demo mode is off and real experience items exist.
 
-### Current review section
+### Contact close
 
 ```text
-About — Contact close
+Planning a Minecraft project?
+
+Tell us what you're working on and where we can help.
+
+Contact us
 ```
+
+The Contact close intentionally uses the same approved supporting sentence as Home.
+
+All currently publishable About copy is approved. Only real Experience evidence remains pending.
+
+## Current review section
+
+```text
+Contact page — Hero
+```
+
+Current Contact Hero draft:
+
+```text
+Contact
+
+Tell us about your project.
+
+For Minecraft projects, partnerships, or other business questions, this is the place to reach Hellocraft.
+```
+
+Review this page section by section. Real contact methods must not be invented and remain pending confirmed public contact data.
 
 ## Current content status
 
@@ -278,12 +304,10 @@ Portfolio short descriptions = APPROVED rule
 Portfolio project content    = waiting for real project sources
 Project Detail structure     = APPROVED / implemented
 Project Detail final copy    = waiting for real project sources
-About Hero                   = APPROVED / implemented
-About What We Do             = APPROVED / implemented
-About How We Work            = APPROVED / implemented
-About Experience rule        = APPROVED / evidence-only / waiting for real data
-About Contact close          = current review
-Contact final copy           = waiting for real contact details
+About                        = APPROVED / implemented
+About Experience data        = waiting for verified public evidence
+Contact Hero                 = next review
+Contact methods              = waiting for confirmed public data
 Careers final copy           = waiting for real hiring state
 Final site-wide pass         = after real portfolio/media is integrated
 ```
@@ -328,7 +352,7 @@ record it
 → write public copy using 08-writing-style.md
 ```
 
-Do not guess missing clients, dates, results, permissions, roles, or project details.
+Do not guess missing clients, dates, results, permissions, roles, contact details, or project details.
 
 ## Deferred technical work
 
@@ -345,4 +369,4 @@ production adapter selection
 
 ## Immediate continuation
 
-Continue with **About — Contact close**. Preserve the approved About Hero, What We Do, How We Work, evidence-only Experience rule, and all approved Home, Portfolio, Project Detail, and Work Areas decisions.
+Start the **Contact page Hero review**. Preserve all approved Home, Portfolio, Project Detail, About, and Work Areas decisions. Real contact channels still wait for confirmed public data.
